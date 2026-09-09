@@ -1,0 +1,1008 @@
+{
+  "pack_id": "nature100_a",
+  "title": "Nature A — Land & Plants",
+  "module_id": "word_master",
+  "seconds": 15,
+  "items": [
+    {
+      "item_id": "nature",
+      "question": "the natural world",
+      "correct": "nature",
+      "wrong": [
+        "tree",
+        "forest"
+      ],
+      "word": "nature"
+    },
+    {
+      "item_id": "tree",
+      "question": "a tall plant with a trunk",
+      "correct": "tree",
+      "wrong": [
+        "nature",
+        "forest"
+      ],
+      "word": "tree"
+    },
+    {
+      "item_id": "forest",
+      "question": "a large area full of trees",
+      "correct": "forest",
+      "wrong": [
+        "nature",
+        "tree"
+      ],
+      "word": "forest"
+    },
+    {
+      "item_id": "wood",
+      "question": "the hard material from trees",
+      "correct": "wood",
+      "wrong": [
+        "nature",
+        "tree"
+      ],
+      "word": "wood"
+    },
+    {
+      "item_id": "leaf",
+      "question": "green part of a plant",
+      "correct": "leaf",
+      "wrong": [
+        "nature",
+        "tree"
+      ],
+      "word": "leaf"
+    },
+    {
+      "item_id": "branch",
+      "question": "part of a tree",
+      "correct": "branch",
+      "wrong": [
+        "nature",
+        "tree"
+      ],
+      "word": "branch"
+    },
+    {
+      "item_id": "trunk",
+      "question": "trunk",
+      "correct": "trunk",
+      "wrong": [
+        "nature",
+        "tree"
+      ],
+      "word": "trunk"
+    },
+    {
+      "item_id": "root",
+      "question": "plant part under ground",
+      "correct": "root",
+      "wrong": [
+        "nature",
+        "tree"
+      ],
+      "word": "root"
+    },
+    {
+      "item_id": "bark",
+      "question": "bark",
+      "correct": "bark",
+      "wrong": [
+        "nature",
+        "tree"
+      ],
+      "word": "bark"
+    },
+    {
+      "item_id": "seed",
+      "question": "seed",
+      "correct": "seed",
+      "wrong": [
+        "nature",
+        "tree"
+      ],
+      "word": "seed"
+    },
+    {
+      "item_id": "flower",
+      "question": "the colorful part of a plant",
+      "correct": "flower",
+      "wrong": [
+        "nature",
+        "tree"
+      ],
+      "word": "flower"
+    },
+    {
+      "item_id": "petal",
+      "question": "petal",
+      "correct": "petal",
+      "wrong": [
+        "nature",
+        "tree"
+      ],
+      "word": "petal"
+    },
+    {
+      "item_id": "stem",
+      "question": "stop it from spreading",
+      "correct": "stem",
+      "wrong": [
+        "nature",
+        "tree"
+      ],
+      "word": "stem"
+    },
+    {
+      "item_id": "bud",
+      "question": "bud",
+      "correct": "bud",
+      "wrong": [
+        "nature",
+        "tree"
+      ],
+      "word": "bud"
+    },
+    {
+      "item_id": "bloom",
+      "question": "bloom",
+      "correct": "bloom",
+      "wrong": [
+        "nature",
+        "tree"
+      ],
+      "word": "bloom"
+    },
+    {
+      "item_id": "grass",
+      "question": "green plants on the ground",
+      "correct": "grass",
+      "wrong": [
+        "nature",
+        "tree"
+      ],
+      "word": "grass"
+    },
+    {
+      "item_id": "meadow",
+      "question": "meadow",
+      "correct": "meadow",
+      "wrong": [
+        "nature",
+        "tree"
+      ],
+      "word": "meadow"
+    },
+    {
+      "item_id": "field",
+      "question": "a large open grassy area",
+      "correct": "field",
+      "wrong": [
+        "nature",
+        "tree"
+      ],
+      "word": "field"
+    },
+    {
+      "item_id": "hill",
+      "question": "a small raised land",
+      "correct": "hill",
+      "wrong": [
+        "nature",
+        "tree"
+      ],
+      "word": "hill"
+    },
+    {
+      "item_id": "mountain",
+      "question": "very high land with rocks",
+      "correct": "mountain",
+      "wrong": [
+        "nature",
+        "tree"
+      ],
+      "word": "mountain"
+    },
+    {
+      "item_id": "valley",
+      "question": "low land between hills",
+      "correct": "valley",
+      "wrong": [
+        "nature",
+        "tree"
+      ],
+      "word": "valley"
+    },
+    {
+      "item_id": "canyon",
+      "question": "canyon",
+      "correct": "canyon",
+      "wrong": [
+        "nature",
+        "tree"
+      ],
+      "word": "canyon"
+    },
+    {
+      "item_id": "cliff",
+      "question": "cliff",
+      "correct": "cliff",
+      "wrong": [
+        "nature",
+        "tree"
+      ],
+      "word": "cliff"
+    },
+    {
+      "item_id": "rock",
+      "question": "big hard stone on the ground",
+      "correct": "rock",
+      "wrong": [
+        "nature",
+        "tree"
+      ],
+      "word": "rock"
+    },
+    {
+      "item_id": "stone",
+      "question": "a small hard piece of rock",
+      "correct": "stone",
+      "wrong": [
+        "nature",
+        "tree"
+      ],
+      "word": "stone"
+    },
+    {
+      "item_id": "pebble",
+      "question": "pebble",
+      "correct": "pebble",
+      "wrong": [
+        "nature",
+        "tree"
+      ],
+      "word": "pebble"
+    },
+    {
+      "item_id": "sand",
+      "question": "tiny grains on a beach",
+      "correct": "sand",
+      "wrong": [
+        "nature",
+        "tree"
+      ],
+      "word": "sand"
+    },
+    {
+      "item_id": "soil",
+      "question": "dirt for growing plants",
+      "correct": "soil",
+      "wrong": [
+        "nature",
+        "tree"
+      ],
+      "word": "soil"
+    },
+    {
+      "item_id": "dirt",
+      "question": "dirt",
+      "correct": "dirt",
+      "wrong": [
+        "nature",
+        "tree"
+      ],
+      "word": "dirt"
+    },
+    {
+      "item_id": "mud",
+      "question": "mud",
+      "correct": "mud",
+      "wrong": [
+        "nature",
+        "tree"
+      ],
+      "word": "mud"
+    },
+    {
+      "item_id": "river",
+      "question": "long flowing body of water",
+      "correct": "river",
+      "wrong": [
+        "nature",
+        "tree"
+      ],
+      "word": "river"
+    },
+    {
+      "item_id": "stream",
+      "question": "small flowing river",
+      "correct": "stream",
+      "wrong": [
+        "nature",
+        "tree"
+      ],
+      "word": "stream"
+    },
+    {
+      "item_id": "lake",
+      "question": "big still water inland",
+      "correct": "lake",
+      "wrong": [
+        "nature",
+        "tree"
+      ],
+      "word": "lake"
+    },
+    {
+      "item_id": "pond",
+      "question": "pond",
+      "correct": "pond",
+      "wrong": [
+        "nature",
+        "tree"
+      ],
+      "word": "pond"
+    },
+    {
+      "item_id": "waterfall",
+      "question": "waterfall",
+      "correct": "waterfall",
+      "wrong": [
+        "nature",
+        "tree"
+      ],
+      "word": "waterfall"
+    },
+    {
+      "item_id": "spring",
+      "question": "season after winter",
+      "correct": "spring",
+      "wrong": [
+        "nature",
+        "tree"
+      ],
+      "word": "spring"
+    },
+    {
+      "item_id": "creek",
+      "question": "creek",
+      "correct": "creek",
+      "wrong": [
+        "nature",
+        "tree"
+      ],
+      "word": "creek"
+    },
+    {
+      "item_id": "bank",
+      "question": "a place to keep money",
+      "correct": "bank",
+      "wrong": [
+        "nature",
+        "tree"
+      ],
+      "word": "bank"
+    },
+    {
+      "item_id": "shore",
+      "question": "shore",
+      "correct": "shore",
+      "wrong": [
+        "nature",
+        "tree"
+      ],
+      "word": "shore"
+    },
+    {
+      "item_id": "island",
+      "question": "land surrounded by water",
+      "correct": "island",
+      "wrong": [
+        "nature",
+        "tree"
+      ],
+      "word": "island"
+    },
+    {
+      "item_id": "desert",
+      "question": "desert",
+      "correct": "desert",
+      "wrong": [
+        "nature",
+        "tree"
+      ],
+      "word": "desert"
+    },
+    {
+      "item_id": "oasis",
+      "question": "oasis",
+      "correct": "oasis",
+      "wrong": [
+        "nature",
+        "tree"
+      ],
+      "word": "oasis"
+    },
+    {
+      "item_id": "plain",
+      "question": "simple and not fancy",
+      "correct": "plain",
+      "wrong": [
+        "nature",
+        "tree"
+      ],
+      "word": "plain"
+    },
+    {
+      "item_id": "prairie",
+      "question": "prairie",
+      "correct": "prairie",
+      "wrong": [
+        "nature",
+        "tree"
+      ],
+      "word": "prairie"
+    },
+    {
+      "item_id": "savanna",
+      "question": "savanna",
+      "correct": "savanna",
+      "wrong": [
+        "nature",
+        "tree"
+      ],
+      "word": "savanna"
+    },
+    {
+      "item_id": "jungle",
+      "question": "jungle",
+      "correct": "jungle",
+      "wrong": [
+        "nature",
+        "tree"
+      ],
+      "word": "jungle"
+    },
+    {
+      "item_id": "rainforest",
+      "question": "rainforest",
+      "correct": "rainforest",
+      "wrong": [
+        "nature",
+        "tree"
+      ],
+      "word": "rainforest"
+    },
+    {
+      "item_id": "swamp",
+      "question": "swamp",
+      "correct": "swamp",
+      "wrong": [
+        "nature",
+        "tree"
+      ],
+      "word": "swamp"
+    },
+    {
+      "item_id": "marsh",
+      "question": "marsh",
+      "correct": "marsh",
+      "wrong": [
+        "nature",
+        "tree"
+      ],
+      "word": "marsh"
+    },
+    {
+      "item_id": "wetland",
+      "question": "wetland",
+      "correct": "wetland",
+      "wrong": [
+        "nature",
+        "tree"
+      ],
+      "word": "wetland"
+    },
+    {
+      "item_id": "plant",
+      "question": "a living thing that grows in soil",
+      "correct": "plant",
+      "wrong": [
+        "nature",
+        "tree"
+      ],
+      "word": "plant"
+    },
+    {
+      "item_id": "bush",
+      "question": "bush",
+      "correct": "bush",
+      "wrong": [
+        "nature",
+        "tree"
+      ],
+      "word": "bush"
+    },
+    {
+      "item_id": "shrub",
+      "question": "shrub",
+      "correct": "shrub",
+      "wrong": [
+        "nature",
+        "tree"
+      ],
+      "word": "shrub"
+    },
+    {
+      "item_id": "vine",
+      "question": "vine",
+      "correct": "vine",
+      "wrong": [
+        "nature",
+        "tree"
+      ],
+      "word": "vine"
+    },
+    {
+      "item_id": "moss",
+      "question": "moss",
+      "correct": "moss",
+      "wrong": [
+        "nature",
+        "tree"
+      ],
+      "word": "moss"
+    },
+    {
+      "item_id": "fern",
+      "question": "fern",
+      "correct": "fern",
+      "wrong": [
+        "nature",
+        "tree"
+      ],
+      "word": "fern"
+    },
+    {
+      "item_id": "cactus",
+      "question": "cactus",
+      "correct": "cactus",
+      "wrong": [
+        "nature",
+        "tree"
+      ],
+      "word": "cactus"
+    },
+    {
+      "item_id": "bamboo",
+      "question": "bamboo",
+      "correct": "bamboo",
+      "wrong": [
+        "nature",
+        "tree"
+      ],
+      "word": "bamboo"
+    },
+    {
+      "item_id": "palm",
+      "question": "palm",
+      "correct": "palm",
+      "wrong": [
+        "nature",
+        "tree"
+      ],
+      "word": "palm"
+    },
+    {
+      "item_id": "oak",
+      "question": "oak",
+      "correct": "oak",
+      "wrong": [
+        "nature",
+        "tree"
+      ],
+      "word": "oak"
+    },
+    {
+      "item_id": "pine",
+      "question": "pine",
+      "correct": "pine",
+      "wrong": [
+        "nature",
+        "tree"
+      ],
+      "word": "pine"
+    },
+    {
+      "item_id": "maple",
+      "question": "maple",
+      "correct": "maple",
+      "wrong": [
+        "nature",
+        "tree"
+      ],
+      "word": "maple"
+    },
+    {
+      "item_id": "cherryblossom",
+      "question": "cherry blossom",
+      "correct": "cherry blossom",
+      "wrong": [
+        "nature",
+        "tree"
+      ],
+      "word": "cherry blossom"
+    },
+    {
+      "item_id": "rose",
+      "question": "pretty flower with thorns",
+      "correct": "rose",
+      "wrong": [
+        "nature",
+        "tree"
+      ],
+      "word": "rose"
+    },
+    {
+      "item_id": "tulip",
+      "question": "tulip",
+      "correct": "tulip",
+      "wrong": [
+        "nature",
+        "tree"
+      ],
+      "word": "tulip"
+    },
+    {
+      "item_id": "sunflower",
+      "question": "sunflower",
+      "correct": "sunflower",
+      "wrong": [
+        "nature",
+        "tree"
+      ],
+      "word": "sunflower"
+    },
+    {
+      "item_id": "daisy",
+      "question": "daisy",
+      "correct": "daisy",
+      "wrong": [
+        "nature",
+        "tree"
+      ],
+      "word": "daisy"
+    },
+    {
+      "item_id": "lily",
+      "question": "lily",
+      "correct": "lily",
+      "wrong": [
+        "nature",
+        "tree"
+      ],
+      "word": "lily"
+    },
+    {
+      "item_id": "orchid",
+      "question": "orchid",
+      "correct": "orchid",
+      "wrong": [
+        "nature",
+        "tree"
+      ],
+      "word": "orchid"
+    },
+    {
+      "item_id": "weed",
+      "question": "weed",
+      "correct": "weed",
+      "wrong": [
+        "nature",
+        "tree"
+      ],
+      "word": "weed"
+    },
+    {
+      "item_id": "fruittree",
+      "question": "fruit tree",
+      "correct": "fruit tree",
+      "wrong": [
+        "nature",
+        "tree"
+      ],
+      "word": "fruit tree"
+    },
+    {
+      "item_id": "vegetablegarden",
+      "question": "vegetable garden",
+      "correct": "vegetable garden",
+      "wrong": [
+        "nature",
+        "tree"
+      ],
+      "word": "vegetable garden"
+    },
+    {
+      "item_id": "herbgarden",
+      "question": "herb garden",
+      "correct": "herb garden",
+      "wrong": [
+        "nature",
+        "tree"
+      ],
+      "word": "herb garden"
+    },
+    {
+      "item_id": "greenhouse",
+      "question": "greenhouse",
+      "correct": "greenhouse",
+      "wrong": [
+        "nature",
+        "tree"
+      ],
+      "word": "greenhouse"
+    },
+    {
+      "item_id": "nursery",
+      "question": "nursery",
+      "correct": "nursery",
+      "wrong": [
+        "nature",
+        "tree"
+      ],
+      "word": "nursery"
+    },
+    {
+      "item_id": "compost",
+      "question": "compost",
+      "correct": "compost",
+      "wrong": [
+        "nature",
+        "tree"
+      ],
+      "word": "compost"
+    },
+    {
+      "item_id": "mulch",
+      "question": "mulch",
+      "correct": "mulch",
+      "wrong": [
+        "nature",
+        "tree"
+      ],
+      "word": "mulch"
+    },
+    {
+      "item_id": "water",
+      "question": "clear liquid we drink",
+      "correct": "water",
+      "wrong": [
+        "nature",
+        "tree"
+      ],
+      "word": "water"
+    },
+    {
+      "item_id": "sunlight",
+      "question": "sunlight",
+      "correct": "sunlight",
+      "wrong": [
+        "nature",
+        "tree"
+      ],
+      "word": "sunlight"
+    },
+    {
+      "item_id": "shade",
+      "question": "shade",
+      "correct": "shade",
+      "wrong": [
+        "nature",
+        "tree"
+      ],
+      "word": "shade"
+    },
+    {
+      "item_id": "season",
+      "question": "one of four parts of the year",
+      "correct": "season",
+      "wrong": [
+        "nature",
+        "tree"
+      ],
+      "word": "season"
+    },
+    {
+      "item_id": "growth",
+      "question": "the process of getting bigger",
+      "correct": "growth",
+      "wrong": [
+        "nature",
+        "tree"
+      ],
+      "word": "growth"
+    },
+    {
+      "item_id": "harvest",
+      "question": "harvest",
+      "correct": "harvest",
+      "wrong": [
+        "nature",
+        "tree"
+      ],
+      "word": "harvest"
+    },
+    {
+      "item_id": "wild",
+      "question": "living free in nature",
+      "correct": "wild",
+      "wrong": [
+        "nature",
+        "tree"
+      ],
+      "word": "wild"
+    },
+    {
+      "item_id": "native",
+      "question": "born or grown in that place",
+      "correct": "native",
+      "wrong": [
+        "nature",
+        "tree"
+      ],
+      "word": "native"
+    },
+    {
+      "item_id": "exotic",
+      "question": "unusual from far away",
+      "correct": "exotic",
+      "wrong": [
+        "nature",
+        "tree"
+      ],
+      "word": "exotic"
+    },
+    {
+      "item_id": "endangered",
+      "question": "endangered",
+      "correct": "endangered",
+      "wrong": [
+        "nature",
+        "tree"
+      ],
+      "word": "endangered"
+    },
+    {
+      "item_id": "habitat",
+      "question": "habitat",
+      "correct": "habitat",
+      "wrong": [
+        "nature",
+        "tree"
+      ],
+      "word": "habitat"
+    },
+    {
+      "item_id": "ecosystem",
+      "question": "ecosystem",
+      "correct": "ecosystem",
+      "wrong": [
+        "nature",
+        "tree"
+      ],
+      "word": "ecosystem"
+    },
+    {
+      "item_id": "environment",
+      "question": "natural world around us",
+      "correct": "environment",
+      "wrong": [
+        "nature",
+        "tree"
+      ],
+      "word": "environment"
+    },
+    {
+      "item_id": "pollution",
+      "question": "dirty air or water",
+      "correct": "pollution",
+      "wrong": [
+        "nature",
+        "tree"
+      ],
+      "word": "pollution"
+    },
+    {
+      "item_id": "conservation",
+      "question": "keeping nature safe",
+      "correct": "conservation",
+      "wrong": [
+        "nature",
+        "tree"
+      ],
+      "word": "conservation"
+    },
+    {
+      "item_id": "recycle",
+      "question": "recycle",
+      "correct": "recycle",
+      "wrong": [
+        "nature",
+        "tree"
+      ],
+      "word": "recycle"
+    },
+    {
+      "item_id": "protect",
+      "question": "to keep someone safe",
+      "correct": "protect",
+      "wrong": [
+        "nature",
+        "tree"
+      ],
+      "word": "protect"
+    },
+    {
+      "item_id": "preserve",
+      "question": "keep something safe and fresh",
+      "correct": "preserve",
+      "wrong": [
+        "nature",
+        "tree"
+      ],
+      "word": "preserve"
+    },
+    {
+      "item_id": "nationalpark",
+      "question": "national park",
+      "correct": "national park",
+      "wrong": [
+        "nature",
+        "tree"
+      ],
+      "word": "national park"
+    },
+    {
+      "item_id": "trail",
+      "question": "follow along behind someone",
+      "correct": "trail",
+      "wrong": [
+        "nature",
+        "tree"
+      ],
+      "word": "trail"
+    },
+    {
+      "item_id": "camp",
+      "question": "place with outdoor tents",
+      "correct": "camp",
+      "wrong": [
+        "nature",
+        "tree"
+      ],
+      "word": "camp"
+    },
+    {
+      "item_id": "picnic",
+      "question": "picnic",
+      "correct": "picnic",
+      "wrong": [
+        "nature",
+        "tree"
+      ],
+      "word": "picnic"
+    },
+    {
+      "item_id": "hike",
+      "question": "hike",
+      "correct": "hike",
+      "wrong": [
+        "nature",
+        "tree"
+      ],
+      "word": "hike"
+    }
+  ]
+}

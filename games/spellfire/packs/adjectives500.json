@@ -1,0 +1,1008 @@
+{
+  "pack_id": "adjectives500",
+  "title": "B1 Adjectives 401–500",
+  "module_id": "word_master",
+  "seconds": 15,
+  "items": [
+    {
+      "item_id": "smooth",
+      "question": "flat and even surface",
+      "correct": "smooth",
+      "wrong": [
+        "dominant",
+        "conscious"
+      ],
+      "word": "smooth"
+    },
+    {
+      "item_id": "dominant",
+      "question": "most powerful or important",
+      "correct": "dominant",
+      "wrong": [
+        "smooth",
+        "conscious"
+      ],
+      "word": "dominant"
+    },
+    {
+      "item_id": "conscious",
+      "question": "aware and thinking clearly",
+      "correct": "conscious",
+      "wrong": [
+        "smooth",
+        "dominant"
+      ],
+      "word": "conscious"
+    },
+    {
+      "item_id": "electric",
+      "question": "powered by electricity",
+      "correct": "electric",
+      "wrong": [
+        "smooth",
+        "dominant"
+      ],
+      "word": "electric"
+    },
+    {
+      "item_id": "strategic",
+      "question": "planned to reach a goal",
+      "correct": "strategic",
+      "wrong": [
+        "smooth",
+        "dominant"
+      ],
+      "word": "strategic"
+    },
+    {
+      "item_id": "disabled",
+      "question": "unable to use a body part",
+      "correct": "disabled",
+      "wrong": [
+        "smooth",
+        "dominant"
+      ],
+      "word": "disabled"
+    },
+    {
+      "item_id": "remote",
+      "question": "far away from other places",
+      "correct": "remote",
+      "wrong": [
+        "smooth",
+        "dominant"
+      ],
+      "word": "remote"
+    },
+    {
+      "item_id": "outstanding",
+      "question": "much better than others",
+      "correct": "outstanding",
+      "wrong": [
+        "smooth",
+        "dominant"
+      ],
+      "word": "outstanding"
+    },
+    {
+      "item_id": "theoretical",
+      "question": "based on ideas not practice",
+      "correct": "theoretical",
+      "wrong": [
+        "smooth",
+        "dominant"
+      ],
+      "word": "theoretical"
+    },
+    {
+      "item_id": "worried",
+      "question": "feeling nervous or troubled",
+      "correct": "worried",
+      "wrong": [
+        "smooth",
+        "dominant"
+      ],
+      "word": "worried"
+    },
+    {
+      "item_id": "clinical",
+      "question": "related to medical treatment",
+      "correct": "clinical",
+      "wrong": [
+        "smooth",
+        "dominant"
+      ],
+      "word": "clinical"
+    },
+    {
+      "item_id": "live",
+      "question": "happening right now on TV",
+      "correct": "live",
+      "wrong": [
+        "smooth",
+        "dominant"
+      ],
+      "word": "live"
+    },
+    {
+      "item_id": "awful",
+      "question": "very bad or unpleasant",
+      "correct": "awful",
+      "wrong": [
+        "smooth",
+        "dominant"
+      ],
+      "word": "awful"
+    },
+    {
+      "item_id": "honest",
+      "question": "always telling the truth",
+      "correct": "honest",
+      "wrong": [
+        "smooth",
+        "dominant"
+      ],
+      "word": "honest"
+    },
+    {
+      "item_id": "impressive",
+      "question": "making people feel amazed",
+      "correct": "impressive",
+      "wrong": [
+        "smooth",
+        "dominant"
+      ],
+      "word": "impressive"
+    },
+    {
+      "item_id": "pink",
+      "question": "light red color",
+      "correct": "pink",
+      "wrong": [
+        "smooth",
+        "dominant"
+      ],
+      "word": "pink"
+    },
+    {
+      "item_id": "visible",
+      "question": "able to be seen",
+      "correct": "visible",
+      "wrong": [
+        "smooth",
+        "dominant"
+      ],
+      "word": "visible"
+    },
+    {
+      "item_id": "accurate",
+      "question": "exactly correct or right",
+      "correct": "accurate",
+      "wrong": [
+        "smooth",
+        "dominant"
+      ],
+      "word": "accurate"
+    },
+    {
+      "item_id": "constitutional",
+      "question": "related to a country’s laws",
+      "correct": "constitutional",
+      "wrong": [
+        "smooth",
+        "dominant"
+      ],
+      "word": "constitutional"
+    },
+    {
+      "item_id": "developing",
+      "question": "growing or becoming better",
+      "correct": "developing",
+      "wrong": [
+        "smooth",
+        "dominant"
+      ],
+      "word": "developing"
+    },
+    {
+      "item_id": "distant",
+      "question": "far away in space",
+      "correct": "distant",
+      "wrong": [
+        "smooth",
+        "dominant"
+      ],
+      "word": "distant"
+    },
+    {
+      "item_id": "fixed",
+      "question": "not moving or changing",
+      "correct": "fixed",
+      "wrong": [
+        "smooth",
+        "dominant"
+      ],
+      "word": "fixed"
+    },
+    {
+      "item_id": "precise",
+      "question": "exactly correct or exact",
+      "correct": "precise",
+      "wrong": [
+        "smooth",
+        "dominant"
+      ],
+      "word": "precise"
+    },
+    {
+      "item_id": "residential",
+      "question": "where people live in homes",
+      "correct": "residential",
+      "wrong": [
+        "smooth",
+        "dominant"
+      ],
+      "word": "residential"
+    },
+    {
+      "item_id": "silly",
+      "question": "funny in a playful way",
+      "correct": "silly",
+      "wrong": [
+        "smooth",
+        "dominant"
+      ],
+      "word": "silly"
+    },
+    {
+      "item_id": "musical",
+      "question": "relating to music",
+      "correct": "musical",
+      "wrong": [
+        "smooth",
+        "dominant"
+      ],
+      "word": "musical"
+    },
+    {
+      "item_id": "cool",
+      "question": "a little cold",
+      "correct": "cool",
+      "wrong": [
+        "smooth",
+        "dominant"
+      ],
+      "word": "cool"
+    },
+    {
+      "item_id": "supposed",
+      "question": "expected or planned",
+      "correct": "supposed",
+      "wrong": [
+        "smooth",
+        "dominant"
+      ],
+      "word": "supposed"
+    },
+    {
+      "item_id": "specialist",
+      "question": "very skilled in one area",
+      "correct": "specialist",
+      "wrong": [
+        "smooth",
+        "dominant"
+      ],
+      "word": "specialist"
+    },
+    {
+      "item_id": "minimum",
+      "question": "the smallest amount",
+      "correct": "minimum",
+      "wrong": [
+        "smooth",
+        "dominant"
+      ],
+      "word": "minimum"
+    },
+    {
+      "item_id": "monetary",
+      "question": "about money",
+      "correct": "monetary",
+      "wrong": [
+        "smooth",
+        "dominant"
+      ],
+      "word": "monetary"
+    },
+    {
+      "item_id": "isolated",
+      "question": "alone and far away",
+      "correct": "isolated",
+      "wrong": [
+        "smooth",
+        "dominant"
+      ],
+      "word": "isolated"
+    },
+    {
+      "item_id": "fat",
+      "question": "having a lot of body",
+      "correct": "fat",
+      "wrong": [
+        "smooth",
+        "dominant"
+      ],
+      "word": "fat"
+    },
+    {
+      "item_id": "junior",
+      "question": "younger or lower in rank",
+      "correct": "junior",
+      "wrong": [
+        "smooth",
+        "dominant"
+      ],
+      "word": "junior"
+    },
+    {
+      "item_id": "unemployed",
+      "question": "without a paid job",
+      "correct": "unemployed",
+      "wrong": [
+        "smooth",
+        "dominant"
+      ],
+      "word": "unemployed"
+    },
+    {
+      "item_id": "violent",
+      "question": "using strong force to hurt",
+      "correct": "violent",
+      "wrong": [
+        "smooth",
+        "dominant"
+      ],
+      "word": "violent"
+    },
+    {
+      "item_id": "dirty",
+      "question": "covered with mud or dust",
+      "correct": "dirty",
+      "wrong": [
+        "smooth",
+        "dominant"
+      ],
+      "word": "dirty"
+    },
+    {
+      "item_id": "psychological",
+      "question": "about the mind and feelings",
+      "correct": "psychological",
+      "wrong": [
+        "smooth",
+        "dominant"
+      ],
+      "word": "psychological"
+    },
+    {
+      "item_id": "straight",
+      "question": "with no bends or curves",
+      "correct": "straight",
+      "wrong": [
+        "smooth",
+        "dominant"
+      ],
+      "word": "straight"
+    },
+    {
+      "item_id": "pleasant",
+      "question": "giving a nice happy feeling",
+      "correct": "pleasant",
+      "wrong": [
+        "smooth",
+        "dominant"
+      ],
+      "word": "pleasant"
+    },
+    {
+      "item_id": "inevitable",
+      "question": "cannot be stopped or avoided",
+      "correct": "inevitable",
+      "wrong": [
+        "smooth",
+        "dominant"
+      ],
+      "word": "inevitable"
+    },
+    {
+      "item_id": "known",
+      "question": "already learned or seen",
+      "correct": "known",
+      "wrong": [
+        "smooth",
+        "dominant"
+      ],
+      "word": "known"
+    },
+    {
+      "item_id": "pretty",
+      "question": "nice to look at",
+      "correct": "pretty",
+      "wrong": [
+        "smooth",
+        "dominant"
+      ],
+      "word": "pretty"
+    },
+    {
+      "item_id": "grateful",
+      "question": "feeling thankful",
+      "correct": "grateful",
+      "wrong": [
+        "smooth",
+        "dominant"
+      ],
+      "word": "grateful"
+    },
+    {
+      "item_id": "sensible",
+      "question": "making good choices",
+      "correct": "sensible",
+      "wrong": [
+        "smooth",
+        "dominant"
+      ],
+      "word": "sensible"
+    },
+    {
+      "item_id": "favourite",
+      "question": "most liked by someone",
+      "correct": "favourite",
+      "wrong": [
+        "smooth",
+        "dominant"
+      ],
+      "word": "favourite"
+    },
+    {
+      "item_id": "running",
+      "question": "moving fast on foot",
+      "correct": "running",
+      "wrong": [
+        "smooth",
+        "dominant"
+      ],
+      "word": "running"
+    },
+    {
+      "item_id": "socalled",
+      "question": "called by that name",
+      "correct": "so-called",
+      "wrong": [
+        "smooth",
+        "dominant"
+      ],
+      "word": "so-called"
+    },
+    {
+      "item_id": "blind",
+      "question": "unable to see anything",
+      "correct": "blind",
+      "wrong": [
+        "smooth",
+        "dominant"
+      ],
+      "word": "blind"
+    },
+    {
+      "item_id": "square",
+      "question": "having four equal sides",
+      "correct": "square",
+      "wrong": [
+        "smooth",
+        "dominant"
+      ],
+      "word": "square"
+    },
+    {
+      "item_id": "deaf",
+      "question": "cannot hear sounds",
+      "correct": "deaf",
+      "wrong": [
+        "smooth",
+        "dominant"
+      ],
+      "word": "deaf"
+    },
+    {
+      "item_id": "continuous",
+      "question": "going on without stopping",
+      "correct": "continuous",
+      "wrong": [
+        "smooth",
+        "dominant"
+      ],
+      "word": "continuous"
+    },
+    {
+      "item_id": "extraordinary",
+      "question": "very unusual and amazing",
+      "correct": "extraordinary",
+      "wrong": [
+        "smooth",
+        "dominant"
+      ],
+      "word": "extraordinary"
+    },
+    {
+      "item_id": "evident",
+      "question": "easy to see and understand",
+      "correct": "evident",
+      "wrong": [
+        "smooth",
+        "dominant"
+      ],
+      "word": "evident"
+    },
+    {
+      "item_id": "universal",
+      "question": "true for everyone everywhere",
+      "correct": "universal",
+      "wrong": [
+        "smooth",
+        "dominant"
+      ],
+      "word": "universal"
+    },
+    {
+      "item_id": "desperate",
+      "question": "feeling very worried and hopeless",
+      "correct": "desperate",
+      "wrong": [
+        "smooth",
+        "dominant"
+      ],
+      "word": "desperate"
+    },
+    {
+      "item_id": "overseas",
+      "question": "in or to a country across the sea",
+      "correct": "overseas",
+      "wrong": [
+        "smooth",
+        "dominant"
+      ],
+      "word": "overseas"
+    },
+    {
+      "item_id": "occasional",
+      "question": "happening from time to time",
+      "correct": "occasional",
+      "wrong": [
+        "smooth",
+        "dominant"
+      ],
+      "word": "occasional"
+    },
+    {
+      "item_id": "underlying",
+      "question": "basic and hidden under the surface",
+      "correct": "underlying",
+      "wrong": [
+        "smooth",
+        "dominant"
+      ],
+      "word": "underlying"
+    },
+    {
+      "item_id": "ultimate",
+      "question": "being the last or greatest possible",
+      "correct": "ultimate",
+      "wrong": [
+        "smooth",
+        "dominant"
+      ],
+      "word": "ultimate"
+    },
+    {
+      "item_id": "clever",
+      "question": "smart and quick thinker",
+      "correct": "clever",
+      "wrong": [
+        "smooth",
+        "dominant"
+      ],
+      "word": "clever"
+    },
+    {
+      "item_id": "broken",
+      "question": "not whole or working",
+      "correct": "broken",
+      "wrong": [
+        "smooth",
+        "dominant"
+      ],
+      "word": "broken"
+    },
+    {
+      "item_id": "raw",
+      "question": "not cooked or ready",
+      "correct": "raw",
+      "wrong": [
+        "smooth",
+        "dominant"
+      ],
+      "word": "raw"
+    },
+    {
+      "item_id": "sophisticated",
+      "question": "smart and stylish design",
+      "correct": "sophisticated",
+      "wrong": [
+        "smooth",
+        "dominant"
+      ],
+      "word": "sophisticated"
+    },
+    {
+      "item_id": "asleep",
+      "question": "resting with eyes closed",
+      "correct": "asleep",
+      "wrong": [
+        "smooth",
+        "dominant"
+      ],
+      "word": "asleep"
+    },
+    {
+      "item_id": "welcome",
+      "question": "happy to see someone",
+      "correct": "welcome",
+      "wrong": [
+        "smooth",
+        "dominant"
+      ],
+      "word": "welcome"
+    },
+    {
+      "item_id": "linguistic",
+      "question": "about words and language",
+      "correct": "linguistic",
+      "wrong": [
+        "smooth",
+        "dominant"
+      ],
+      "word": "linguistic"
+    },
+    {
+      "item_id": "forward",
+      "question": "toward the front",
+      "correct": "forward",
+      "wrong": [
+        "smooth",
+        "dominant"
+      ],
+      "word": "forward"
+    },
+    {
+      "item_id": "multiple",
+      "question": "more than one",
+      "correct": "multiple",
+      "wrong": [
+        "smooth",
+        "dominant"
+      ],
+      "word": "multiple"
+    },
+    {
+      "item_id": "outer",
+      "question": "on the outside",
+      "correct": "outer",
+      "wrong": [
+        "smooth",
+        "dominant"
+      ],
+      "word": "outer"
+    },
+    {
+      "item_id": "patient",
+      "question": "calm while waiting",
+      "correct": "patient",
+      "wrong": [
+        "smooth",
+        "dominant"
+      ],
+      "word": "patient"
+    },
+    {
+      "item_id": "vulnerable",
+      "question": "easy to hurt or harm",
+      "correct": "vulnerable",
+      "wrong": [
+        "smooth",
+        "dominant"
+      ],
+      "word": "vulnerable"
+    },
+    {
+      "item_id": "creative",
+      "question": "good at making new things",
+      "correct": "creative",
+      "wrong": [
+        "smooth",
+        "dominant"
+      ],
+      "word": "creative"
+    },
+    {
+      "item_id": "just",
+      "question": "fair and treating everyone equally",
+      "correct": "just",
+      "wrong": [
+        "smooth",
+        "dominant"
+      ],
+      "word": "just"
+    },
+    {
+      "item_id": "judicial",
+      "question": "relating to judges and courts",
+      "correct": "judicial",
+      "wrong": [
+        "smooth",
+        "dominant"
+      ],
+      "word": "judicial"
+    },
+    {
+      "item_id": "illegal",
+      "question": "not allowed by law",
+      "correct": "illegal",
+      "wrong": [
+        "smooth",
+        "dominant"
+      ],
+      "word": "illegal"
+    },
+    {
+      "item_id": "plain",
+      "question": "simple and not fancy",
+      "correct": "plain",
+      "wrong": [
+        "smooth",
+        "dominant"
+      ],
+      "word": "plain"
+    },
+    {
+      "item_id": "strict",
+      "question": "following rules very closely",
+      "correct": "strict",
+      "wrong": [
+        "smooth",
+        "dominant"
+      ],
+      "word": "strict"
+    },
+    {
+      "item_id": "fit",
+      "question": "the right size for you",
+      "correct": "fit",
+      "wrong": [
+        "smooth",
+        "dominant"
+      ],
+      "word": "fit"
+    },
+    {
+      "item_id": "bitter",
+      "question": "having a strong bad taste",
+      "correct": "bitter",
+      "wrong": [
+        "smooth",
+        "dominant"
+      ],
+      "word": "bitter"
+    },
+    {
+      "item_id": "flexible",
+      "question": "can bend or stretch easily",
+      "correct": "flexible",
+      "wrong": [
+        "smooth",
+        "dominant"
+      ],
+      "word": "flexible"
+    },
+    {
+      "item_id": "informal",
+      "question": "not formal or official",
+      "correct": "informal",
+      "wrong": [
+        "smooth",
+        "dominant"
+      ],
+      "word": "informal"
+    },
+    {
+      "item_id": "stable",
+      "question": "steady and not likely to fall",
+      "correct": "stable",
+      "wrong": [
+        "smooth",
+        "dominant"
+      ],
+      "word": "stable"
+    },
+    {
+      "item_id": "wise",
+      "question": "smart and makes good choices",
+      "correct": "wise",
+      "wrong": [
+        "smooth",
+        "dominant"
+      ],
+      "word": "wise"
+    },
+    {
+      "item_id": "frequent",
+      "question": "happens often or many times",
+      "correct": "frequent",
+      "wrong": [
+        "smooth",
+        "dominant"
+      ],
+      "word": "frequent"
+    },
+    {
+      "item_id": "intense",
+      "question": "very strong or powerful",
+      "correct": "intense",
+      "wrong": [
+        "smooth",
+        "dominant"
+      ],
+      "word": "intense"
+    },
+    {
+      "item_id": "loose",
+      "question": "not tight or firm",
+      "correct": "loose",
+      "wrong": [
+        "smooth",
+        "dominant"
+      ],
+      "word": "loose"
+    },
+    {
+      "item_id": "retail",
+      "question": "sold in stores to people",
+      "correct": "retail",
+      "wrong": [
+        "smooth",
+        "dominant"
+      ],
+      "word": "retail"
+    },
+    {
+      "item_id": "lost",
+      "question": "unable to find the way",
+      "correct": "lost",
+      "wrong": [
+        "smooth",
+        "dominant"
+      ],
+      "word": "lost"
+    },
+    {
+      "item_id": "steady",
+      "question": "not shaking or moving much",
+      "correct": "steady",
+      "wrong": [
+        "smooth",
+        "dominant"
+      ],
+      "word": "steady"
+    },
+    {
+      "item_id": "back",
+      "question": "at the rear side",
+      "correct": "back",
+      "wrong": [
+        "smooth",
+        "dominant"
+      ],
+      "word": "back"
+    },
+    {
+      "item_id": "experimental",
+      "question": "trying new ideas",
+      "correct": "experimental",
+      "wrong": [
+        "smooth",
+        "dominant"
+      ],
+      "word": "experimental"
+    },
+    {
+      "item_id": "rational",
+      "question": "thinking with clear reason",
+      "correct": "rational",
+      "wrong": [
+        "smooth",
+        "dominant"
+      ],
+      "word": "rational"
+    },
+    {
+      "item_id": "inadequate",
+      "question": "not enough or not good enough",
+      "correct": "inadequate",
+      "wrong": [
+        "smooth",
+        "dominant"
+      ],
+      "word": "inadequate"
+    },
+    {
+      "item_id": "increasing",
+      "question": "getting bigger or more",
+      "correct": "increasing",
+      "wrong": [
+        "smooth",
+        "dominant"
+      ],
+      "word": "increasing"
+    },
+    {
+      "item_id": "spiritual",
+      "question": "about the soul or spirit",
+      "correct": "spiritual",
+      "wrong": [
+        "smooth",
+        "dominant"
+      ],
+      "word": "spiritual"
+    },
+    {
+      "item_id": "logical",
+      "question": "makes sense and follows reason",
+      "correct": "logical",
+      "wrong": [
+        "smooth",
+        "dominant"
+      ],
+      "word": "logical"
+    },
+    {
+      "item_id": "generous",
+      "question": "happy to share and give",
+      "correct": "generous",
+      "wrong": [
+        "smooth",
+        "dominant"
+      ],
+      "word": "generous"
+    },
+    {
+      "item_id": "bottom",
+      "question": "at the lowest part",
+      "correct": "bottom",
+      "wrong": [
+        "smooth",
+        "dominant"
+      ],
+      "word": "bottom"
+    },
+    {
+      "item_id": "modest",
+      "question": "not showing off or bragging",
+      "correct": "modest",
+      "wrong": [
+        "smooth",
+        "dominant"
+      ],
+      "word": "modest"
+    }
+  ]
+}

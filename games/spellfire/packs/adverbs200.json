@@ -1,0 +1,1008 @@
+{
+  "pack_id": "adverbs200",
+  "title": "B1 Adverbs 101–200",
+  "module_id": "word_master",
+  "seconds": 15,
+  "items": [
+    {
+      "item_id": "apart",
+      "question": "separated from each other",
+      "correct": "apart",
+      "wrong": [
+        "easily",
+        "little"
+      ],
+      "word": "apart"
+    },
+    {
+      "item_id": "easily",
+      "question": "with little effort",
+      "correct": "easily",
+      "wrong": [
+        "apart",
+        "little"
+      ],
+      "word": "easily"
+    },
+    {
+      "item_id": "little",
+      "question": "not much or not a lot",
+      "correct": "little",
+      "wrong": [
+        "apart",
+        "easily"
+      ],
+      "word": "little"
+    },
+    {
+      "item_id": "best",
+      "question": "in the most excellent way",
+      "correct": "best",
+      "wrong": [
+        "apart",
+        "easily"
+      ],
+      "word": "best"
+    },
+    {
+      "item_id": "immediately",
+      "question": "right away or at once",
+      "correct": "immediately",
+      "wrong": [
+        "apart",
+        "easily"
+      ],
+      "word": "immediately"
+    },
+    {
+      "item_id": "tomorrow",
+      "question": "the day after today",
+      "correct": "tomorrow",
+      "wrong": [
+        "apart",
+        "easily"
+      ],
+      "word": "tomorrow"
+    },
+    {
+      "item_id": "eventually",
+      "question": "after a long time",
+      "correct": "eventually",
+      "wrong": [
+        "apart",
+        "easily"
+      ],
+      "word": "eventually"
+    },
+    {
+      "item_id": "highly",
+      "question": "to a very great degree",
+      "correct": "highly",
+      "wrong": [
+        "apart",
+        "easily"
+      ],
+      "word": "highly"
+    },
+    {
+      "item_id": "fully",
+      "question": "to the complete amount",
+      "correct": "fully",
+      "wrong": [
+        "apart",
+        "easily"
+      ],
+      "word": "fully"
+    },
+    {
+      "item_id": "slightly",
+      "question": "by a very small amount",
+      "correct": "slightly",
+      "wrong": [
+        "apart",
+        "easily"
+      ],
+      "word": "slightly"
+    },
+    {
+      "item_id": "ahead",
+      "question": "in front or forward",
+      "correct": "ahead",
+      "wrong": [
+        "apart",
+        "easily"
+      ],
+      "word": "ahead"
+    },
+    {
+      "item_id": "hardly",
+      "question": "almost not at all",
+      "correct": "hardly",
+      "wrong": [
+        "apart",
+        "easily"
+      ],
+      "word": "hardly"
+    },
+    {
+      "item_id": "otherwise",
+      "question": "in a different way",
+      "correct": "otherwise",
+      "wrong": [
+        "apart",
+        "easily"
+      ],
+      "word": "otherwise"
+    },
+    {
+      "item_id": "directly",
+      "question": "in a straight line",
+      "correct": "directly",
+      "wrong": [
+        "apart",
+        "easily"
+      ],
+      "word": "directly"
+    },
+    {
+      "item_id": "completely",
+      "question": "in every way",
+      "correct": "completely",
+      "wrong": [
+        "apart",
+        "easily"
+      ],
+      "word": "completely"
+    },
+    {
+      "item_id": "below",
+      "question": "in a lower place",
+      "correct": "below",
+      "wrong": [
+        "apart",
+        "easily"
+      ],
+      "word": "below"
+    },
+    {
+      "item_id": "through",
+      "question": "from one side to the other",
+      "correct": "through",
+      "wrong": [
+        "apart",
+        "easily"
+      ],
+      "word": "through"
+    },
+    {
+      "item_id": "normally",
+      "question": "in the usual way",
+      "correct": "normally",
+      "wrong": [
+        "apart",
+        "easily"
+      ],
+      "word": "normally"
+    },
+    {
+      "item_id": "along",
+      "question": "moving forward beside something",
+      "correct": "along",
+      "wrong": [
+        "apart",
+        "easily"
+      ],
+      "word": "along"
+    },
+    {
+      "item_id": "slowly",
+      "question": "at a slow speed",
+      "correct": "slowly",
+      "wrong": [
+        "apart",
+        "easily"
+      ],
+      "word": "slowly"
+    },
+    {
+      "item_id": "relatively",
+      "question": "in comparison to others",
+      "correct": "relatively",
+      "wrong": [
+        "apart",
+        "easily"
+      ],
+      "word": "relatively"
+    },
+    {
+      "item_id": "late",
+      "question": "after the expected time",
+      "correct": "late",
+      "wrong": [
+        "apart",
+        "easily"
+      ],
+      "word": "late"
+    },
+    {
+      "item_id": "apparently",
+      "question": "as it seems or appears",
+      "correct": "apparently",
+      "wrong": [
+        "apart",
+        "easily"
+      ],
+      "word": "apparently"
+    },
+    {
+      "item_id": "close",
+      "question": "with little space between",
+      "correct": "close",
+      "wrong": [
+        "apart",
+        "easily"
+      ],
+      "word": "close"
+    },
+    {
+      "item_id": "merely",
+      "question": "only and nothing more",
+      "correct": "merely",
+      "wrong": [
+        "apart",
+        "easily"
+      ],
+      "word": "merely"
+    },
+    {
+      "item_id": "largely",
+      "question": "mostly or mainly",
+      "correct": "largely",
+      "wrong": [
+        "apart",
+        "easily"
+      ],
+      "word": "largely"
+    },
+    {
+      "item_id": "straight",
+      "question": "in a straight line",
+      "correct": "straight",
+      "wrong": [
+        "apart",
+        "easily"
+      ],
+      "word": "straight"
+    },
+    {
+      "item_id": "nevertheless",
+      "question": "even so or despite that",
+      "correct": "nevertheless",
+      "wrong": [
+        "apart",
+        "easily"
+      ],
+      "word": "nevertheless"
+    },
+    {
+      "item_id": "possibly",
+      "question": "maybe or perhaps",
+      "correct": "possibly",
+      "wrong": [
+        "apart",
+        "easily"
+      ],
+      "word": "possibly"
+    },
+    {
+      "item_id": "carefully",
+      "question": "with great care",
+      "correct": "carefully",
+      "wrong": [
+        "apart",
+        "easily"
+      ],
+      "word": "carefully"
+    },
+    {
+      "item_id": "mainly",
+      "question": "mostly or chiefly",
+      "correct": "mainly",
+      "wrong": [
+        "apart",
+        "easily"
+      ],
+      "word": "mainly"
+    },
+    {
+      "item_id": "currently",
+      "question": "at the present time",
+      "correct": "currently",
+      "wrong": [
+        "apart",
+        "easily"
+      ],
+      "word": "currently"
+    },
+    {
+      "item_id": "somewhere",
+      "question": "in or to an unknown place",
+      "correct": "somewhere",
+      "wrong": [
+        "apart",
+        "easily"
+      ],
+      "word": "somewhere"
+    },
+    {
+      "item_id": "entirely",
+      "question": "completely or wholly",
+      "correct": "entirely",
+      "wrong": [
+        "apart",
+        "easily"
+      ],
+      "word": "entirely"
+    },
+    {
+      "item_id": "previously",
+      "question": "at an earlier time",
+      "correct": "previously",
+      "wrong": [
+        "apart",
+        "easily"
+      ],
+      "word": "previously"
+    },
+    {
+      "item_id": "tonight",
+      "question": "this evening or night",
+      "correct": "tonight",
+      "wrong": [
+        "apart",
+        "easily"
+      ],
+      "word": "tonight"
+    },
+    {
+      "item_id": "extremely",
+      "question": "very very much",
+      "correct": "extremely",
+      "wrong": [
+        "apart",
+        "easily"
+      ],
+      "word": "extremely"
+    },
+    {
+      "item_id": "fairly",
+      "question": "quite but not very",
+      "correct": "fairly",
+      "wrong": [
+        "apart",
+        "easily"
+      ],
+      "word": "fairly"
+    },
+    {
+      "item_id": "increasingly",
+      "question": "more and more",
+      "correct": "increasingly",
+      "wrong": [
+        "apart",
+        "easily"
+      ],
+      "word": "increasingly"
+    },
+    {
+      "item_id": "equally",
+      "question": "in the same way",
+      "correct": "equally",
+      "wrong": [
+        "apart",
+        "easily"
+      ],
+      "word": "equally"
+    },
+    {
+      "item_id": "surely",
+      "question": "with no doubt",
+      "correct": "surely",
+      "wrong": [
+        "apart",
+        "easily"
+      ],
+      "word": "surely"
+    },
+    {
+      "item_id": "before",
+      "question": "at an earlier time",
+      "correct": "before",
+      "wrong": [
+        "apart",
+        "easily"
+      ],
+      "word": "before"
+    },
+    {
+      "item_id": "alone",
+      "question": "without any other person",
+      "correct": "alone",
+      "wrong": [
+        "apart",
+        "easily"
+      ],
+      "word": "alone"
+    },
+    {
+      "item_id": "twice",
+      "question": "two times in total",
+      "correct": "twice",
+      "wrong": [
+        "apart",
+        "easily"
+      ],
+      "word": "twice"
+    },
+    {
+      "item_id": "high",
+      "question": "at a great height",
+      "correct": "high",
+      "wrong": [
+        "apart",
+        "easily"
+      ],
+      "word": "high"
+    },
+    {
+      "item_id": "totally",
+      "question": "completely and fully",
+      "correct": "totally",
+      "wrong": [
+        "apart",
+        "easily"
+      ],
+      "word": "totally"
+    },
+    {
+      "item_id": "frequently",
+      "question": "happening many times",
+      "correct": "frequently",
+      "wrong": [
+        "apart",
+        "easily"
+      ],
+      "word": "frequently"
+    },
+    {
+      "item_id": "absolutely",
+      "question": "completely and without doubt",
+      "correct": "absolutely",
+      "wrong": [
+        "apart",
+        "easily"
+      ],
+      "word": "absolutely"
+    },
+    {
+      "item_id": "partly",
+      "question": "only in some part",
+      "correct": "partly",
+      "wrong": [
+        "apart",
+        "easily"
+      ],
+      "word": "partly"
+    },
+    {
+      "item_id": "seriously",
+      "question": "in a careful and thoughtful way",
+      "correct": "seriously",
+      "wrong": [
+        "apart",
+        "easily"
+      ],
+      "word": "seriously"
+    },
+    {
+      "item_id": "elsewhere",
+      "question": "in another place",
+      "correct": "elsewhere",
+      "wrong": [
+        "apart",
+        "easily"
+      ],
+      "word": "elsewhere"
+    },
+    {
+      "item_id": "necessarily",
+      "question": "must be true",
+      "correct": "necessarily",
+      "wrong": [
+        "apart",
+        "easily"
+      ],
+      "word": "necessarily"
+    },
+    {
+      "item_id": "properly",
+      "question": "in the right way",
+      "correct": "properly",
+      "wrong": [
+        "apart",
+        "easily"
+      ],
+      "word": "properly"
+    },
+    {
+      "item_id": "widely",
+      "question": "over a large area",
+      "correct": "widely",
+      "wrong": [
+        "apart",
+        "easily"
+      ],
+      "word": "widely"
+    },
+    {
+      "item_id": "fast",
+      "question": "at high speed",
+      "correct": "fast",
+      "wrong": [
+        "apart",
+        "easily"
+      ],
+      "word": "fast"
+    },
+    {
+      "item_id": "closely",
+      "question": "in a very near way",
+      "correct": "closely",
+      "wrong": [
+        "apart",
+        "easily"
+      ],
+      "word": "closely"
+    },
+    {
+      "item_id": "pretty",
+      "question": "quite or rather",
+      "correct": "pretty",
+      "wrong": [
+        "apart",
+        "easily"
+      ],
+      "word": "pretty"
+    },
+    {
+      "item_id": "under",
+      "question": "in a lower position",
+      "correct": "under",
+      "wrong": [
+        "apart",
+        "easily"
+      ],
+      "word": "under"
+    },
+    {
+      "item_id": "neither",
+      "question": "not one and not the other",
+      "correct": "neither",
+      "wrong": [
+        "apart",
+        "easily"
+      ],
+      "word": "neither"
+    },
+    {
+      "item_id": "outside",
+      "question": "in the area beyond a building",
+      "correct": "outside",
+      "wrong": [
+        "apart",
+        "easily"
+      ],
+      "word": "outside"
+    },
+    {
+      "item_id": "effectively",
+      "question": "in a way that works well",
+      "correct": "effectively",
+      "wrong": [
+        "apart",
+        "easily"
+      ],
+      "word": "effectively"
+    },
+    {
+      "item_id": "meanwhile",
+      "question": "at the same time as something else",
+      "correct": "meanwhile",
+      "wrong": [
+        "apart",
+        "easily"
+      ],
+      "word": "meanwhile"
+    },
+    {
+      "item_id": "hence",
+      "question": "for this reason; therefore",
+      "correct": "hence",
+      "wrong": [
+        "apart",
+        "easily"
+      ],
+      "word": "hence"
+    },
+    {
+      "item_id": "alright",
+      "question": "in a good or acceptable way",
+      "correct": "alright",
+      "wrong": [
+        "apart",
+        "easily"
+      ],
+      "word": "alright"
+    },
+    {
+      "item_id": "somewhat",
+      "question": "to a small degree; a little",
+      "correct": "somewhat",
+      "wrong": [
+        "apart",
+        "easily"
+      ],
+      "word": "somewhat"
+    },
+    {
+      "item_id": "inside",
+      "question": "into a closed space",
+      "correct": "inside",
+      "wrong": [
+        "apart",
+        "easily"
+      ],
+      "word": "inside"
+    },
+    {
+      "item_id": "unfortunately",
+      "question": "in a sad way",
+      "correct": "unfortunately",
+      "wrong": [
+        "apart",
+        "easily"
+      ],
+      "word": "unfortunately"
+    },
+    {
+      "item_id": "strongly",
+      "question": "with much force",
+      "correct": "strongly",
+      "wrong": [
+        "apart",
+        "easily"
+      ],
+      "word": "strongly"
+    },
+    {
+      "item_id": "rapidly",
+      "question": "at a fast speed",
+      "correct": "rapidly",
+      "wrong": [
+        "apart",
+        "easily"
+      ],
+      "word": "rapidly"
+    },
+    {
+      "item_id": "deep",
+      "question": "far down from the top",
+      "correct": "deep",
+      "wrong": [
+        "apart",
+        "easily"
+      ],
+      "word": "deep"
+    },
+    {
+      "item_id": "afterwards",
+      "question": "later in time",
+      "correct": "afterwards",
+      "wrong": [
+        "apart",
+        "easily"
+      ],
+      "word": "afterwards"
+    },
+    {
+      "item_id": "similarly",
+      "question": "in a like way",
+      "correct": "similarly",
+      "wrong": [
+        "apart",
+        "easily"
+      ],
+      "word": "similarly"
+    },
+    {
+      "item_id": "originally",
+      "question": "at the first time",
+      "correct": "originally",
+      "wrong": [
+        "apart",
+        "easily"
+      ],
+      "word": "originally"
+    },
+    {
+      "item_id": "somehow",
+      "question": "in some way",
+      "correct": "somehow",
+      "wrong": [
+        "apart",
+        "easily"
+      ],
+      "word": "somehow"
+    },
+    {
+      "item_id": "that",
+      "question": "to that degree",
+      "correct": "that",
+      "wrong": [
+        "apart",
+        "easily"
+      ],
+      "word": "that"
+    },
+    {
+      "item_id": "perfectly",
+      "question": "in the best way",
+      "correct": "perfectly",
+      "wrong": [
+        "apart",
+        "easily"
+      ],
+      "word": "perfectly"
+    },
+    {
+      "item_id": "easy",
+      "question": "without any trouble",
+      "correct": "easy",
+      "wrong": [
+        "apart",
+        "easily"
+      ],
+      "word": "easy"
+    },
+    {
+      "item_id": "virtually",
+      "question": "almost completely",
+      "correct": "virtually",
+      "wrong": [
+        "apart",
+        "easily"
+      ],
+      "word": "virtually"
+    },
+    {
+      "item_id": "badly",
+      "question": "in a bad way",
+      "correct": "badly",
+      "wrong": [
+        "apart",
+        "easily"
+      ],
+      "word": "badly"
+    },
+    {
+      "item_id": "moreover",
+      "question": "in addition to that",
+      "correct": "moreover",
+      "wrong": [
+        "apart",
+        "easily"
+      ],
+      "word": "moreover"
+    },
+    {
+      "item_id": "rarely",
+      "question": "not very often",
+      "correct": "rarely",
+      "wrong": [
+        "apart",
+        "easily"
+      ],
+      "word": "rarely"
+    },
+    {
+      "item_id": "significantly",
+      "question": "by a large amount",
+      "correct": "significantly",
+      "wrong": [
+        "apart",
+        "easily"
+      ],
+      "word": "significantly"
+    },
+    {
+      "item_id": "naturally",
+      "question": "in a natural way",
+      "correct": "naturally",
+      "wrong": [
+        "apart",
+        "easily"
+      ],
+      "word": "naturally"
+    },
+    {
+      "item_id": "quietly",
+      "question": "with very little sound",
+      "correct": "quietly",
+      "wrong": [
+        "apart",
+        "easily"
+      ],
+      "word": "quietly"
+    },
+    {
+      "item_id": "anywhere",
+      "question": "in any possible place",
+      "correct": "anywhere",
+      "wrong": [
+        "apart",
+        "easily"
+      ],
+      "word": "anywhere"
+    },
+    {
+      "item_id": "heavily",
+      "question": "with great weight",
+      "correct": "heavily",
+      "wrong": [
+        "apart",
+        "easily"
+      ],
+      "word": "heavily"
+    },
+    {
+      "item_id": "gently",
+      "question": "in a soft, kind way",
+      "correct": "gently",
+      "wrong": [
+        "apart",
+        "easily"
+      ],
+      "word": "gently"
+    },
+    {
+      "item_id": "sure",
+      "question": "without any doubt",
+      "correct": "sure",
+      "wrong": [
+        "apart",
+        "easily"
+      ],
+      "word": "sure"
+    },
+    {
+      "item_id": "like",
+      "question": "in the same way as",
+      "correct": "like",
+      "wrong": [
+        "apart",
+        "easily"
+      ],
+      "word": "like"
+    },
+    {
+      "item_id": "firmly",
+      "question": "with a strong, steady hold",
+      "correct": "firmly",
+      "wrong": [
+        "apart",
+        "easily"
+      ],
+      "word": "firmly"
+    },
+    {
+      "item_id": "occasionally",
+      "question": "not very often",
+      "correct": "occasionally",
+      "wrong": [
+        "apart",
+        "easily"
+      ],
+      "word": "occasionally"
+    },
+    {
+      "item_id": "abroad",
+      "question": "in another country",
+      "correct": "abroad",
+      "wrong": [
+        "apart",
+        "easily"
+      ],
+      "word": "abroad"
+    },
+    {
+      "item_id": "mostly",
+      "question": "almost all the time",
+      "correct": "mostly",
+      "wrong": [
+        "apart",
+        "easily"
+      ],
+      "word": "mostly"
+    },
+    {
+      "item_id": "regularly",
+      "question": "at steady times again",
+      "correct": "regularly",
+      "wrong": [
+        "apart",
+        "easily"
+      ],
+      "word": "regularly"
+    },
+    {
+      "item_id": "shortly",
+      "question": "in a very short time",
+      "correct": "shortly",
+      "wrong": [
+        "apart",
+        "easily"
+      ],
+      "word": "shortly"
+    },
+    {
+      "item_id": "initially",
+      "question": "at the very beginning",
+      "correct": "initially",
+      "wrong": [
+        "apart",
+        "easily"
+      ],
+      "word": "initially"
+    },
+    {
+      "item_id": "short",
+      "question": "for a small amount of time",
+      "correct": "short",
+      "wrong": [
+        "apart",
+        "easily"
+      ],
+      "word": "short"
+    },
+    {
+      "item_id": "specifically",
+      "question": "in a very exact way",
+      "correct": "specifically",
+      "wrong": [
+        "apart",
+        "easily"
+      ],
+      "word": "specifically"
+    },
+    {
+      "item_id": "deeply",
+      "question": "in a strong and full way",
+      "correct": "deeply",
+      "wrong": [
+        "apart",
+        "easily"
+      ],
+      "word": "deeply"
+    },
+    {
+      "item_id": "subsequently",
+      "question": "right after something else",
+      "correct": "subsequently",
+      "wrong": [
+        "apart",
+        "easily"
+      ],
+      "word": "subsequently"
+    }
+  ]
+}

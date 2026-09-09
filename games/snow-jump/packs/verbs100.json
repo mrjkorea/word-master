@@ -1,0 +1,1008 @@
+{
+  "pack_id": "verbs100",
+  "title": "A1 Verbs 1–100",
+  "module_id": "word_master",
+  "seconds": 15,
+  "items": [
+    {
+      "item_id": "be",
+      "question": "to exist or live",
+      "correct": "be",
+      "wrong": [
+        "have",
+        "do"
+      ],
+      "word": "be"
+    },
+    {
+      "item_id": "have",
+      "question": "to own or possess",
+      "correct": "have",
+      "wrong": [
+        "be",
+        "do"
+      ],
+      "word": "have"
+    },
+    {
+      "item_id": "do",
+      "question": "to perform an action",
+      "correct": "do",
+      "wrong": [
+        "be",
+        "have"
+      ],
+      "word": "do"
+    },
+    {
+      "item_id": "say",
+      "question": "to speak words",
+      "correct": "say",
+      "wrong": [
+        "be",
+        "have"
+      ],
+      "word": "say"
+    },
+    {
+      "item_id": "go",
+      "question": "to move or travel",
+      "correct": "go",
+      "wrong": [
+        "be",
+        "have"
+      ],
+      "word": "go"
+    },
+    {
+      "item_id": "get",
+      "question": "to receive or obtain something",
+      "correct": "get",
+      "wrong": [
+        "be",
+        "have"
+      ],
+      "word": "get"
+    },
+    {
+      "item_id": "make",
+      "question": "to create or build something",
+      "correct": "make",
+      "wrong": [
+        "be",
+        "have"
+      ],
+      "word": "make"
+    },
+    {
+      "item_id": "see",
+      "question": "to look at something with eyes",
+      "correct": "see",
+      "wrong": [
+        "be",
+        "have"
+      ],
+      "word": "see"
+    },
+    {
+      "item_id": "know",
+      "question": "to understand or have information",
+      "correct": "know",
+      "wrong": [
+        "be",
+        "have"
+      ],
+      "word": "know"
+    },
+    {
+      "item_id": "take",
+      "question": "to move or carry something",
+      "correct": "take",
+      "wrong": [
+        "be",
+        "have"
+      ],
+      "word": "take"
+    },
+    {
+      "item_id": "think",
+      "question": "use your mind to consider",
+      "correct": "think",
+      "wrong": [
+        "be",
+        "have"
+      ],
+      "word": "think"
+    },
+    {
+      "item_id": "come",
+      "question": "move toward a place",
+      "correct": "come",
+      "wrong": [
+        "be",
+        "have"
+      ],
+      "word": "come"
+    },
+    {
+      "item_id": "give",
+      "question": "hand something to someone",
+      "correct": "give",
+      "wrong": [
+        "be",
+        "have"
+      ],
+      "word": "give"
+    },
+    {
+      "item_id": "look",
+      "question": "use your eyes to see",
+      "correct": "look",
+      "wrong": [
+        "be",
+        "have"
+      ],
+      "word": "look"
+    },
+    {
+      "item_id": "use",
+      "question": "do something with a tool",
+      "correct": "use",
+      "wrong": [
+        "be",
+        "have"
+      ],
+      "word": "use"
+    },
+    {
+      "item_id": "find",
+      "question": "to discover something hidden",
+      "correct": "find",
+      "wrong": [
+        "be",
+        "have"
+      ],
+      "word": "find"
+    },
+    {
+      "item_id": "want",
+      "question": "to wish for or desire something",
+      "correct": "want",
+      "wrong": [
+        "be",
+        "have"
+      ],
+      "word": "want"
+    },
+    {
+      "item_id": "tell",
+      "question": "to say words to someone",
+      "correct": "tell",
+      "wrong": [
+        "be",
+        "have"
+      ],
+      "word": "tell"
+    },
+    {
+      "item_id": "put",
+      "question": "to place or set something down",
+      "correct": "put",
+      "wrong": [
+        "be",
+        "have"
+      ],
+      "word": "put"
+    },
+    {
+      "item_id": "work",
+      "question": "to do a job or task",
+      "correct": "work",
+      "wrong": [
+        "be",
+        "have"
+      ],
+      "word": "work"
+    },
+    {
+      "item_id": "become",
+      "question": "change into something else",
+      "correct": "become",
+      "wrong": [
+        "be",
+        "have"
+      ],
+      "word": "become"
+    },
+    {
+      "item_id": "mean",
+      "question": "show what something says",
+      "correct": "mean",
+      "wrong": [
+        "be",
+        "have"
+      ],
+      "word": "mean"
+    },
+    {
+      "item_id": "leave",
+      "question": "go away from a place",
+      "correct": "leave",
+      "wrong": [
+        "be",
+        "have"
+      ],
+      "word": "leave"
+    },
+    {
+      "item_id": "seem",
+      "question": "look or appear a certain way",
+      "correct": "seem",
+      "wrong": [
+        "be",
+        "have"
+      ],
+      "word": "seem"
+    },
+    {
+      "item_id": "need",
+      "question": "must have something now",
+      "correct": "need",
+      "wrong": [
+        "be",
+        "have"
+      ],
+      "word": "need"
+    },
+    {
+      "item_id": "feel",
+      "question": "to sense with your body",
+      "correct": "feel",
+      "wrong": [
+        "be",
+        "have"
+      ],
+      "word": "feel"
+    },
+    {
+      "item_id": "may",
+      "question": "to be possible or allowed",
+      "correct": "may",
+      "wrong": [
+        "be",
+        "have"
+      ],
+      "word": "may"
+    },
+    {
+      "item_id": "ask",
+      "question": "to say a question out loud",
+      "correct": "ask",
+      "wrong": [
+        "be",
+        "have"
+      ],
+      "word": "ask"
+    },
+    {
+      "item_id": "show",
+      "question": "to let others see something",
+      "correct": "show",
+      "wrong": [
+        "be",
+        "have"
+      ],
+      "word": "show"
+    },
+    {
+      "item_id": "try",
+      "question": "to make an effort to do",
+      "correct": "try",
+      "wrong": [
+        "be",
+        "have"
+      ],
+      "word": "try"
+    },
+    {
+      "item_id": "call",
+      "question": "to shout someone's name",
+      "correct": "call",
+      "wrong": [
+        "be",
+        "have"
+      ],
+      "word": "call"
+    },
+    {
+      "item_id": "keep",
+      "question": "to hold something safe",
+      "correct": "keep",
+      "wrong": [
+        "be",
+        "have"
+      ],
+      "word": "keep"
+    },
+    {
+      "item_id": "provide",
+      "question": "to give something needed",
+      "correct": "provide",
+      "wrong": [
+        "be",
+        "have"
+      ],
+      "word": "provide"
+    },
+    {
+      "item_id": "hold",
+      "question": "to grasp with hands",
+      "correct": "hold",
+      "wrong": [
+        "be",
+        "have"
+      ],
+      "word": "hold"
+    },
+    {
+      "item_id": "follow",
+      "question": "to go after someone",
+      "correct": "follow",
+      "wrong": [
+        "be",
+        "have"
+      ],
+      "word": "follow"
+    },
+    {
+      "item_id": "turn",
+      "question": "to move around a center",
+      "correct": "turn",
+      "wrong": [
+        "be",
+        "have"
+      ],
+      "word": "turn"
+    },
+    {
+      "item_id": "bring",
+      "question": "to carry something here",
+      "correct": "bring",
+      "wrong": [
+        "be",
+        "have"
+      ],
+      "word": "bring"
+    },
+    {
+      "item_id": "begin",
+      "question": "to start doing something",
+      "correct": "begin",
+      "wrong": [
+        "be",
+        "have"
+      ],
+      "word": "begin"
+    },
+    {
+      "item_id": "like",
+      "question": "to feel good about something",
+      "correct": "like",
+      "wrong": [
+        "be",
+        "have"
+      ],
+      "word": "like"
+    },
+    {
+      "item_id": "write",
+      "question": "to make words with a pen",
+      "correct": "write",
+      "wrong": [
+        "be",
+        "have"
+      ],
+      "word": "write"
+    },
+    {
+      "item_id": "start",
+      "question": "to begin something new",
+      "correct": "start",
+      "wrong": [
+        "be",
+        "have"
+      ],
+      "word": "start"
+    },
+    {
+      "item_id": "run",
+      "question": "to move fast with legs",
+      "correct": "run",
+      "wrong": [
+        "be",
+        "have"
+      ],
+      "word": "run"
+    },
+    {
+      "item_id": "set",
+      "question": "to put something down",
+      "correct": "set",
+      "wrong": [
+        "be",
+        "have"
+      ],
+      "word": "set"
+    },
+    {
+      "item_id": "help",
+      "question": "to give support to someone",
+      "correct": "help",
+      "wrong": [
+        "be",
+        "have"
+      ],
+      "word": "help"
+    },
+    {
+      "item_id": "play",
+      "question": "to have fun with games",
+      "correct": "play",
+      "wrong": [
+        "be",
+        "have"
+      ],
+      "word": "play"
+    },
+    {
+      "item_id": "move",
+      "question": "to change place or position",
+      "correct": "move",
+      "wrong": [
+        "be",
+        "have"
+      ],
+      "word": "move"
+    },
+    {
+      "item_id": "pay",
+      "question": "to give money for something",
+      "correct": "pay",
+      "wrong": [
+        "be",
+        "have"
+      ],
+      "word": "pay"
+    },
+    {
+      "item_id": "hear",
+      "question": "to notice sounds with ears",
+      "correct": "hear",
+      "wrong": [
+        "be",
+        "have"
+      ],
+      "word": "hear"
+    },
+    {
+      "item_id": "meet",
+      "question": "to come together with someone",
+      "correct": "meet",
+      "wrong": [
+        "be",
+        "have"
+      ],
+      "word": "meet"
+    },
+    {
+      "item_id": "include",
+      "question": "to have something as part",
+      "correct": "include",
+      "wrong": [
+        "be",
+        "have"
+      ],
+      "word": "include"
+    },
+    {
+      "item_id": "believe",
+      "question": "think something is true",
+      "correct": "believe",
+      "wrong": [
+        "be",
+        "have"
+      ],
+      "word": "believe"
+    },
+    {
+      "item_id": "allow",
+      "question": "to let someone do something",
+      "correct": "allow",
+      "wrong": [
+        "be",
+        "have"
+      ],
+      "word": "allow"
+    },
+    {
+      "item_id": "lead",
+      "question": "to go in front and guide",
+      "correct": "lead",
+      "wrong": [
+        "be",
+        "have"
+      ],
+      "word": "lead"
+    },
+    {
+      "item_id": "stand",
+      "question": "to be on your feet",
+      "correct": "stand",
+      "wrong": [
+        "be",
+        "have"
+      ],
+      "word": "stand"
+    },
+    {
+      "item_id": "live",
+      "question": "to have your home somewhere",
+      "correct": "live",
+      "wrong": [
+        "be",
+        "have"
+      ],
+      "word": "live"
+    },
+    {
+      "item_id": "happen",
+      "question": "take place or occur",
+      "correct": "happen",
+      "wrong": [
+        "be",
+        "have"
+      ],
+      "word": "happen"
+    },
+    {
+      "item_id": "carry",
+      "question": "hold and move something",
+      "correct": "carry",
+      "wrong": [
+        "be",
+        "have"
+      ],
+      "word": "carry"
+    },
+    {
+      "item_id": "talk",
+      "question": "speak words to someone",
+      "correct": "talk",
+      "wrong": [
+        "be",
+        "have"
+      ],
+      "word": "talk"
+    },
+    {
+      "item_id": "sit",
+      "question": "rest on your bottom",
+      "correct": "sit",
+      "wrong": [
+        "be",
+        "have"
+      ],
+      "word": "sit"
+    },
+    {
+      "item_id": "appear",
+      "question": "come into sight suddenly",
+      "correct": "appear",
+      "wrong": [
+        "be",
+        "have"
+      ],
+      "word": "appear"
+    },
+    {
+      "item_id": "continue",
+      "question": "to keep going on",
+      "correct": "continue",
+      "wrong": [
+        "be",
+        "have"
+      ],
+      "word": "continue"
+    },
+    {
+      "item_id": "let",
+      "question": "to allow someone to do",
+      "correct": "let",
+      "wrong": [
+        "be",
+        "have"
+      ],
+      "word": "let"
+    },
+    {
+      "item_id": "produce",
+      "question": "to make or grow something",
+      "correct": "produce",
+      "wrong": [
+        "be",
+        "have"
+      ],
+      "word": "produce"
+    },
+    {
+      "item_id": "involve",
+      "question": "to include or need something",
+      "correct": "involve",
+      "wrong": [
+        "be",
+        "have"
+      ],
+      "word": "involve"
+    },
+    {
+      "item_id": "require",
+      "question": "to need something necessary",
+      "correct": "require",
+      "wrong": [
+        "be",
+        "have"
+      ],
+      "word": "require"
+    },
+    {
+      "item_id": "suggest",
+      "question": "to give an idea",
+      "correct": "suggest",
+      "wrong": [
+        "be",
+        "have"
+      ],
+      "word": "suggest"
+    },
+    {
+      "item_id": "consider",
+      "question": "to think about something",
+      "correct": "consider",
+      "wrong": [
+        "be",
+        "have"
+      ],
+      "word": "consider"
+    },
+    {
+      "item_id": "read",
+      "question": "to look at words and understand",
+      "correct": "read",
+      "wrong": [
+        "be",
+        "have"
+      ],
+      "word": "read"
+    },
+    {
+      "item_id": "change",
+      "question": "to make something different",
+      "correct": "change",
+      "wrong": [
+        "be",
+        "have"
+      ],
+      "word": "change"
+    },
+    {
+      "item_id": "offer",
+      "question": "to give something to someone",
+      "correct": "offer",
+      "wrong": [
+        "be",
+        "have"
+      ],
+      "word": "offer"
+    },
+    {
+      "item_id": "lose",
+      "question": "to not have something anymore",
+      "correct": "lose",
+      "wrong": [
+        "be",
+        "have"
+      ],
+      "word": "lose"
+    },
+    {
+      "item_id": "add",
+      "question": "to put something with other things",
+      "correct": "add",
+      "wrong": [
+        "be",
+        "have"
+      ],
+      "word": "add"
+    },
+    {
+      "item_id": "expect",
+      "question": "to think something will happen",
+      "correct": "expect",
+      "wrong": [
+        "be",
+        "have"
+      ],
+      "word": "expect"
+    },
+    {
+      "item_id": "remember",
+      "question": "to keep something in your mind",
+      "correct": "remember",
+      "wrong": [
+        "be",
+        "have"
+      ],
+      "word": "remember"
+    },
+    {
+      "item_id": "remain",
+      "question": "to stay after other things go",
+      "correct": "remain",
+      "wrong": [
+        "be",
+        "have"
+      ],
+      "word": "remain"
+    },
+    {
+      "item_id": "fall",
+      "question": "to drop down suddenly",
+      "correct": "fall",
+      "wrong": [
+        "be",
+        "have"
+      ],
+      "word": "fall"
+    },
+    {
+      "item_id": "speak",
+      "question": "to say words out loud",
+      "correct": "speak",
+      "wrong": [
+        "be",
+        "have"
+      ],
+      "word": "speak"
+    },
+    {
+      "item_id": "open",
+      "question": "to move something to show inside",
+      "correct": "open",
+      "wrong": [
+        "be",
+        "have"
+      ],
+      "word": "open"
+    },
+    {
+      "item_id": "buy",
+      "question": "to give money for something",
+      "correct": "buy",
+      "wrong": [
+        "be",
+        "have"
+      ],
+      "word": "buy"
+    },
+    {
+      "item_id": "stop",
+      "question": "to finish moving or doing",
+      "correct": "stop",
+      "wrong": [
+        "be",
+        "have"
+      ],
+      "word": "stop"
+    },
+    {
+      "item_id": "send",
+      "question": "to make something go somewhere",
+      "correct": "send",
+      "wrong": [
+        "be",
+        "have"
+      ],
+      "word": "send"
+    },
+    {
+      "item_id": "decide",
+      "question": "to choose what to do",
+      "correct": "decide",
+      "wrong": [
+        "be",
+        "have"
+      ],
+      "word": "decide"
+    },
+    {
+      "item_id": "win",
+      "question": "to finish first in a game",
+      "correct": "win",
+      "wrong": [
+        "be",
+        "have"
+      ],
+      "word": "win"
+    },
+    {
+      "item_id": "understand",
+      "question": "to know what something means",
+      "correct": "understand",
+      "wrong": [
+        "be",
+        "have"
+      ],
+      "word": "understand"
+    },
+    {
+      "item_id": "develop",
+      "question": "to grow or become better",
+      "correct": "develop",
+      "wrong": [
+        "be",
+        "have"
+      ],
+      "word": "develop"
+    },
+    {
+      "item_id": "receive",
+      "question": "to get something given",
+      "correct": "receive",
+      "wrong": [
+        "be",
+        "have"
+      ],
+      "word": "receive"
+    },
+    {
+      "item_id": "return",
+      "question": "to give something back",
+      "correct": "return",
+      "wrong": [
+        "be",
+        "have"
+      ],
+      "word": "return"
+    },
+    {
+      "item_id": "build",
+      "question": "to make something by putting parts together",
+      "correct": "build",
+      "wrong": [
+        "be",
+        "have"
+      ],
+      "word": "build"
+    },
+    {
+      "item_id": "spend",
+      "question": "to use money to buy things",
+      "correct": "spend",
+      "wrong": [
+        "be",
+        "have"
+      ],
+      "word": "spend"
+    },
+    {
+      "item_id": "describe",
+      "question": "to tell what something is like",
+      "correct": "describe",
+      "wrong": [
+        "be",
+        "have"
+      ],
+      "word": "describe"
+    },
+    {
+      "item_id": "agree",
+      "question": "to say yes together",
+      "correct": "agree",
+      "wrong": [
+        "be",
+        "have"
+      ],
+      "word": "agree"
+    },
+    {
+      "item_id": "increase",
+      "question": "to become bigger or more",
+      "correct": "increase",
+      "wrong": [
+        "be",
+        "have"
+      ],
+      "word": "increase"
+    },
+    {
+      "item_id": "learn",
+      "question": "to get new knowledge or skill",
+      "correct": "learn",
+      "wrong": [
+        "be",
+        "have"
+      ],
+      "word": "learn"
+    },
+    {
+      "item_id": "reach",
+      "question": "to stretch and touch something",
+      "correct": "reach",
+      "wrong": [
+        "be",
+        "have"
+      ],
+      "word": "reach"
+    },
+    {
+      "item_id": "lie",
+      "question": "to rest flat on a surface",
+      "correct": "lie",
+      "wrong": [
+        "be",
+        "have"
+      ],
+      "word": "lie"
+    },
+    {
+      "item_id": "walk",
+      "question": "to move on foot",
+      "correct": "walk",
+      "wrong": [
+        "be",
+        "have"
+      ],
+      "word": "walk"
+    },
+    {
+      "item_id": "die",
+      "question": "to stop living",
+      "correct": "die",
+      "wrong": [
+        "be",
+        "have"
+      ],
+      "word": "die"
+    },
+    {
+      "item_id": "draw",
+      "question": "to make a picture",
+      "correct": "draw",
+      "wrong": [
+        "be",
+        "have"
+      ],
+      "word": "draw"
+    },
+    {
+      "item_id": "hope",
+      "question": "to wish for something good",
+      "correct": "hope",
+      "wrong": [
+        "be",
+        "have"
+      ],
+      "word": "hope"
+    },
+    {
+      "item_id": "create",
+      "question": "to make something new",
+      "correct": "create",
+      "wrong": [
+        "be",
+        "have"
+      ],
+      "word": "create"
+    }
+  ]
+}

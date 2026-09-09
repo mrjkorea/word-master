@@ -1,0 +1,1008 @@
+{
+  "pack_id": "verbs500",
+  "title": "B1 Verbs 401–500",
+  "module_id": "word_master",
+  "seconds": 15,
+  "items": [
+    {
+      "item_id": "accompany",
+      "question": "go with someone",
+      "correct": "accompany",
+      "wrong": [
+        "earn",
+        "attach"
+      ],
+      "word": "accompany"
+    },
+    {
+      "item_id": "earn",
+      "question": "get money for work",
+      "correct": "earn",
+      "wrong": [
+        "accompany",
+        "attach"
+      ],
+      "word": "earn"
+    },
+    {
+      "item_id": "attach",
+      "question": "stick one thing to another",
+      "correct": "attach",
+      "wrong": [
+        "accompany",
+        "earn"
+      ],
+      "word": "attach"
+    },
+    {
+      "item_id": "count",
+      "question": "say numbers in order",
+      "correct": "count",
+      "wrong": [
+        "accompany",
+        "earn"
+      ],
+      "word": "count"
+    },
+    {
+      "item_id": "appeal",
+      "question": "ask in a kind way",
+      "correct": "appeal",
+      "wrong": [
+        "accompany",
+        "earn"
+      ],
+      "word": "appeal"
+    },
+    {
+      "item_id": "hate",
+      "question": "strongly dislike something",
+      "correct": "hate",
+      "wrong": [
+        "accompany",
+        "earn"
+      ],
+      "word": "hate"
+    },
+    {
+      "item_id": "rest",
+      "question": "stop working and relax",
+      "correct": "rest",
+      "wrong": [
+        "accompany",
+        "earn"
+      ],
+      "word": "rest"
+    },
+    {
+      "item_id": "switch",
+      "question": "change from one thing to another",
+      "correct": "switch",
+      "wrong": [
+        "accompany",
+        "earn"
+      ],
+      "word": "switch"
+    },
+    {
+      "item_id": "damage",
+      "question": "hurt or break something",
+      "correct": "damage",
+      "wrong": [
+        "accompany",
+        "earn"
+      ],
+      "word": "damage"
+    },
+    {
+      "item_id": "search",
+      "question": "look carefully to find something",
+      "correct": "search",
+      "wrong": [
+        "accompany",
+        "earn"
+      ],
+      "word": "search"
+    },
+    {
+      "item_id": "steal",
+      "question": "take something without asking",
+      "correct": "steal",
+      "wrong": [
+        "accompany",
+        "earn"
+      ],
+      "word": "steal"
+    },
+    {
+      "item_id": "explore",
+      "question": "go and look around a new place",
+      "correct": "explore",
+      "wrong": [
+        "accompany",
+        "earn"
+      ],
+      "word": "explore"
+    },
+    {
+      "item_id": "surround",
+      "question": "be all around something",
+      "correct": "surround",
+      "wrong": [
+        "accompany",
+        "earn"
+      ],
+      "word": "surround"
+    },
+    {
+      "item_id": "question",
+      "question": "ask someone about something",
+      "correct": "question",
+      "wrong": [
+        "accompany",
+        "earn"
+      ],
+      "word": "question"
+    },
+    {
+      "item_id": "withdraw",
+      "question": "pull something back or away",
+      "correct": "withdraw",
+      "wrong": [
+        "accompany",
+        "earn"
+      ],
+      "word": "withdraw"
+    },
+    {
+      "item_id": "paint",
+      "question": "to put color on something",
+      "correct": "paint",
+      "wrong": [
+        "accompany",
+        "earn"
+      ],
+      "word": "paint"
+    },
+    {
+      "item_id": "judge",
+      "question": "to decide if something is good or bad",
+      "correct": "judge",
+      "wrong": [
+        "accompany",
+        "earn"
+      ],
+      "word": "judge"
+    },
+    {
+      "item_id": "separate",
+      "question": "to pull things apart",
+      "correct": "separate",
+      "wrong": [
+        "accompany",
+        "earn"
+      ],
+      "word": "separate"
+    },
+    {
+      "item_id": "connect",
+      "question": "to join things together",
+      "correct": "connect",
+      "wrong": [
+        "accompany",
+        "earn"
+      ],
+      "word": "connect"
+    },
+    {
+      "item_id": "owe",
+      "question": "to need to give money back",
+      "correct": "owe",
+      "wrong": [
+        "accompany",
+        "earn"
+      ],
+      "word": "owe"
+    },
+    {
+      "item_id": "knock",
+      "question": "hit a door to get attention",
+      "correct": "knock",
+      "wrong": [
+        "accompany",
+        "earn"
+      ],
+      "word": "knock"
+    },
+    {
+      "item_id": "pursue",
+      "question": "chase or follow something",
+      "correct": "pursue",
+      "wrong": [
+        "accompany",
+        "earn"
+      ],
+      "word": "pursue"
+    },
+    {
+      "item_id": "occupy",
+      "question": "take and use a space",
+      "correct": "occupy",
+      "wrong": [
+        "accompany",
+        "earn"
+      ],
+      "word": "occupy"
+    },
+    {
+      "item_id": "house",
+      "question": "provide a home for people",
+      "correct": "house",
+      "wrong": [
+        "accompany",
+        "earn"
+      ],
+      "word": "house"
+    },
+    {
+      "item_id": "stretch",
+      "question": "extend arms or legs",
+      "correct": "stretch",
+      "wrong": [
+        "accompany",
+        "earn"
+      ],
+      "word": "stretch"
+    },
+    {
+      "item_id": "view",
+      "question": "to look at something",
+      "correct": "view",
+      "wrong": [
+        "accompany",
+        "earn"
+      ],
+      "word": "view"
+    },
+    {
+      "item_id": "expand",
+      "question": "to make something bigger",
+      "correct": "expand",
+      "wrong": [
+        "accompany",
+        "earn"
+      ],
+      "word": "expand"
+    },
+    {
+      "item_id": "back",
+      "question": "to help or support someone",
+      "correct": "back",
+      "wrong": [
+        "accompany",
+        "earn"
+      ],
+      "word": "back"
+    },
+    {
+      "item_id": "light",
+      "question": "to make something start burning",
+      "correct": "light",
+      "wrong": [
+        "accompany",
+        "earn"
+      ],
+      "word": "light"
+    },
+    {
+      "item_id": "challenge",
+      "question": "to try something hard",
+      "correct": "challenge",
+      "wrong": [
+        "accompany",
+        "earn"
+      ],
+      "word": "challenge"
+    },
+    {
+      "item_id": "list",
+      "question": "write things one after another",
+      "correct": "list",
+      "wrong": [
+        "accompany",
+        "earn"
+      ],
+      "word": "list"
+    },
+    {
+      "item_id": "suit",
+      "question": "match clothes or needs",
+      "correct": "suit",
+      "wrong": [
+        "accompany",
+        "earn"
+      ],
+      "word": "suit"
+    },
+    {
+      "item_id": "elect",
+      "question": "choose someone by voting",
+      "correct": "elect",
+      "wrong": [
+        "accompany",
+        "earn"
+      ],
+      "word": "elect"
+    },
+    {
+      "item_id": "tie",
+      "question": "fasten with a knot or string",
+      "correct": "tie",
+      "wrong": [
+        "accompany",
+        "earn"
+      ],
+      "word": "tie"
+    },
+    {
+      "item_id": "exclude",
+      "question": "leave someone or something out",
+      "correct": "exclude",
+      "wrong": [
+        "accompany",
+        "earn"
+      ],
+      "word": "exclude"
+    },
+    {
+      "item_id": "review",
+      "question": "look at again",
+      "correct": "review",
+      "wrong": [
+        "accompany",
+        "earn"
+      ],
+      "word": "review"
+    },
+    {
+      "item_id": "appreciate",
+      "question": "feel thankful for",
+      "correct": "appreciate",
+      "wrong": [
+        "accompany",
+        "earn"
+      ],
+      "word": "appreciate"
+    },
+    {
+      "item_id": "permit",
+      "question": "allow someone to do",
+      "correct": "permit",
+      "wrong": [
+        "accompany",
+        "earn"
+      ],
+      "word": "permit"
+    },
+    {
+      "item_id": "benefit",
+      "question": "help or improve",
+      "correct": "benefit",
+      "wrong": [
+        "accompany",
+        "earn"
+      ],
+      "word": "benefit"
+    },
+    {
+      "item_id": "engage",
+      "question": "take part in",
+      "correct": "engage",
+      "wrong": [
+        "accompany",
+        "earn"
+      ],
+      "word": "engage"
+    },
+    {
+      "item_id": "abandon",
+      "question": "leave something behind",
+      "correct": "abandon",
+      "wrong": [
+        "accompany",
+        "earn"
+      ],
+      "word": "abandon"
+    },
+    {
+      "item_id": "blame",
+      "question": "say someone did something wrong",
+      "correct": "blame",
+      "wrong": [
+        "accompany",
+        "earn"
+      ],
+      "word": "blame"
+    },
+    {
+      "item_id": "clean",
+      "question": "make something free from dirt",
+      "correct": "clean",
+      "wrong": [
+        "accompany",
+        "earn"
+      ],
+      "word": "clean"
+    },
+    {
+      "item_id": "quote",
+      "question": "repeat words someone else said",
+      "correct": "quote",
+      "wrong": [
+        "accompany",
+        "earn"
+      ],
+      "word": "quote"
+    },
+    {
+      "item_id": "rule",
+      "question": "have power over a place",
+      "correct": "rule",
+      "wrong": [
+        "accompany",
+        "earn"
+      ],
+      "word": "rule"
+    },
+    {
+      "item_id": "dominate",
+      "question": "to control or rule over",
+      "correct": "dominate",
+      "wrong": [
+        "accompany",
+        "earn"
+      ],
+      "word": "dominate"
+    },
+    {
+      "item_id": "glance",
+      "question": "to look quickly at something",
+      "correct": "glance",
+      "wrong": [
+        "accompany",
+        "earn"
+      ],
+      "word": "glance"
+    },
+    {
+      "item_id": "trust",
+      "question": "to believe someone is honest",
+      "correct": "trust",
+      "wrong": [
+        "accompany",
+        "earn"
+      ],
+      "word": "trust"
+    },
+    {
+      "item_id": "interpret",
+      "question": "to explain the meaning of something",
+      "correct": "interpret",
+      "wrong": [
+        "accompany",
+        "earn"
+      ],
+      "word": "interpret"
+    },
+    {
+      "item_id": "land",
+      "question": "to come down to the ground",
+      "correct": "land",
+      "wrong": [
+        "accompany",
+        "earn"
+      ],
+      "word": "land"
+    },
+    {
+      "item_id": "mix",
+      "question": "to blend things together",
+      "correct": "mix",
+      "wrong": [
+        "accompany",
+        "earn"
+      ],
+      "word": "mix"
+    },
+    {
+      "item_id": "acknowledge",
+      "question": "to show you heard someone",
+      "correct": "acknowledge",
+      "wrong": [
+        "accompany",
+        "earn"
+      ],
+      "word": "acknowledge"
+    },
+    {
+      "item_id": "register",
+      "question": "to put your name on a list",
+      "correct": "register",
+      "wrong": [
+        "accompany",
+        "earn"
+      ],
+      "word": "register"
+    },
+    {
+      "item_id": "complain",
+      "question": "to say you are unhappy",
+      "correct": "complain",
+      "wrong": [
+        "accompany",
+        "earn"
+      ],
+      "word": "complain"
+    },
+    {
+      "item_id": "dismiss",
+      "question": "to tell someone to leave",
+      "correct": "dismiss",
+      "wrong": [
+        "accompany",
+        "earn"
+      ],
+      "word": "dismiss"
+    },
+    {
+      "item_id": "shift",
+      "question": "move something to another place",
+      "correct": "shift",
+      "wrong": [
+        "accompany",
+        "earn"
+      ],
+      "word": "shift"
+    },
+    {
+      "item_id": "analyse",
+      "question": "study something carefully to understand it",
+      "correct": "analyse",
+      "wrong": [
+        "accompany",
+        "earn"
+      ],
+      "word": "analyse"
+    },
+    {
+      "item_id": "restore",
+      "question": "bring something back to its original state",
+      "correct": "restore",
+      "wrong": [
+        "accompany",
+        "earn"
+      ],
+      "word": "restore"
+    },
+    {
+      "item_id": "convince",
+      "question": "make someone agree or believe something",
+      "correct": "convince",
+      "wrong": [
+        "accompany",
+        "earn"
+      ],
+      "word": "convince"
+    },
+    {
+      "item_id": "oppose",
+      "question": "disagree with or act against something",
+      "correct": "oppose",
+      "wrong": [
+        "accompany",
+        "earn"
+      ],
+      "word": "oppose"
+    },
+    {
+      "item_id": "defend",
+      "question": "to protect from harm",
+      "correct": "defend",
+      "wrong": [
+        "accompany",
+        "earn"
+      ],
+      "word": "defend"
+    },
+    {
+      "item_id": "alter",
+      "question": "to change something slightly",
+      "correct": "alter",
+      "wrong": [
+        "accompany",
+        "earn"
+      ],
+      "word": "alter"
+    },
+    {
+      "item_id": "arrest",
+      "question": "to take someone to jail",
+      "correct": "arrest",
+      "wrong": [
+        "accompany",
+        "earn"
+      ],
+      "word": "arrest"
+    },
+    {
+      "item_id": "bother",
+      "question": "to annoy or disturb someone",
+      "correct": "bother",
+      "wrong": [
+        "accompany",
+        "earn"
+      ],
+      "word": "bother"
+    },
+    {
+      "item_id": "accuse",
+      "question": "to say someone did wrong",
+      "correct": "accuse",
+      "wrong": [
+        "accompany",
+        "earn"
+      ],
+      "word": "accuse"
+    },
+    {
+      "item_id": "possess",
+      "question": "to own or have something",
+      "correct": "possess",
+      "wrong": [
+        "accompany",
+        "earn"
+      ],
+      "word": "possess"
+    },
+    {
+      "item_id": "restrict",
+      "question": "to limit or control something",
+      "correct": "restrict",
+      "wrong": [
+        "accompany",
+        "earn"
+      ],
+      "word": "restrict"
+    },
+    {
+      "item_id": "distinguish",
+      "question": "to see or show a difference",
+      "correct": "distinguish",
+      "wrong": [
+        "accompany",
+        "earn"
+      ],
+      "word": "distinguish"
+    },
+    {
+      "item_id": "incorporate",
+      "question": "to include or combine things",
+      "correct": "incorporate",
+      "wrong": [
+        "accompany",
+        "earn"
+      ],
+      "word": "incorporate"
+    },
+    {
+      "item_id": "reckon",
+      "question": "to think or believe something",
+      "correct": "reckon",
+      "wrong": [
+        "accompany",
+        "earn"
+      ],
+      "word": "reckon"
+    },
+    {
+      "item_id": "proceed",
+      "question": "to move forward",
+      "correct": "proceed",
+      "wrong": [
+        "accompany",
+        "earn"
+      ],
+      "word": "proceed"
+    },
+    {
+      "item_id": "assist",
+      "question": "to help someone",
+      "correct": "assist",
+      "wrong": [
+        "accompany",
+        "earn"
+      ],
+      "word": "assist"
+    },
+    {
+      "item_id": "stress",
+      "question": "to give special importance",
+      "correct": "stress",
+      "wrong": [
+        "accompany",
+        "earn"
+      ],
+      "word": "stress"
+    },
+    {
+      "item_id": "justify",
+      "question": "to show something is right",
+      "correct": "justify",
+      "wrong": [
+        "accompany",
+        "earn"
+      ],
+      "word": "justify"
+    },
+    {
+      "item_id": "suspect",
+      "question": "to think someone did wrong",
+      "correct": "suspect",
+      "wrong": [
+        "accompany",
+        "earn"
+      ],
+      "word": "suspect"
+    },
+    {
+      "item_id": "construct",
+      "question": "to build something",
+      "correct": "construct",
+      "wrong": [
+        "accompany",
+        "earn"
+      ],
+      "word": "construct"
+    },
+    {
+      "item_id": "trade",
+      "question": "to swap things",
+      "correct": "trade",
+      "wrong": [
+        "accompany",
+        "earn"
+      ],
+      "word": "trade"
+    },
+    {
+      "item_id": "wake",
+      "question": "to stop sleeping",
+      "correct": "wake",
+      "wrong": [
+        "accompany",
+        "earn"
+      ],
+      "word": "wake"
+    },
+    {
+      "item_id": "implement",
+      "question": "to put a plan into action",
+      "correct": "implement",
+      "wrong": [
+        "accompany",
+        "earn"
+      ],
+      "word": "implement"
+    },
+    {
+      "item_id": "print",
+      "question": "to make words on paper",
+      "correct": "print",
+      "wrong": [
+        "accompany",
+        "earn"
+      ],
+      "word": "print"
+    },
+    {
+      "item_id": "calculate",
+      "question": "to find an answer with math",
+      "correct": "calculate",
+      "wrong": [
+        "accompany",
+        "earn"
+      ],
+      "word": "calculate"
+    },
+    {
+      "item_id": "guess",
+      "question": "to say an answer without knowing",
+      "correct": "guess",
+      "wrong": [
+        "accompany",
+        "earn"
+      ],
+      "word": "guess"
+    },
+    {
+      "item_id": "constitute",
+      "question": "to make up or form something",
+      "correct": "constitute",
+      "wrong": [
+        "accompany",
+        "earn"
+      ],
+      "word": "constitute"
+    },
+    {
+      "item_id": "cope",
+      "question": "to deal with a problem well",
+      "correct": "cope",
+      "wrong": [
+        "accompany",
+        "earn"
+      ],
+      "word": "cope"
+    },
+    {
+      "item_id": "cast",
+      "question": "to throw something with your hand",
+      "correct": "cast",
+      "wrong": [
+        "accompany",
+        "earn"
+      ],
+      "word": "cast"
+    },
+    {
+      "item_id": "resolve",
+      "question": "to find an answer",
+      "correct": "resolve",
+      "wrong": [
+        "accompany",
+        "earn"
+      ],
+      "word": "resolve"
+    },
+    {
+      "item_id": "solve",
+      "question": "to find the answer",
+      "correct": "solve",
+      "wrong": [
+        "accompany",
+        "earn"
+      ],
+      "word": "solve"
+    },
+    {
+      "item_id": "feed",
+      "question": "to give food to someone",
+      "correct": "feed",
+      "wrong": [
+        "accompany",
+        "earn"
+      ],
+      "word": "feed"
+    },
+    {
+      "item_id": "submit",
+      "question": "to give work to a teacher",
+      "correct": "submit",
+      "wrong": [
+        "accompany",
+        "earn"
+      ],
+      "word": "submit"
+    },
+    {
+      "item_id": "relax",
+      "question": "to rest and feel calm",
+      "correct": "relax",
+      "wrong": [
+        "accompany",
+        "earn"
+      ],
+      "word": "relax"
+    },
+    {
+      "item_id": "purchase",
+      "question": "to buy something",
+      "correct": "purchase",
+      "wrong": [
+        "accompany",
+        "earn"
+      ],
+      "word": "purchase"
+    },
+    {
+      "item_id": "specify",
+      "question": "to say exactly what you want",
+      "correct": "specify",
+      "wrong": [
+        "accompany",
+        "earn"
+      ],
+      "word": "specify"
+    },
+    {
+      "item_id": "monitor",
+      "question": "to watch or check something",
+      "correct": "monitor",
+      "wrong": [
+        "accompany",
+        "earn"
+      ],
+      "word": "monitor"
+    },
+    {
+      "item_id": "pour",
+      "question": "to make liquid flow out",
+      "correct": "pour",
+      "wrong": [
+        "accompany",
+        "earn"
+      ],
+      "word": "pour"
+    },
+    {
+      "item_id": "urge",
+      "question": "to strongly encourage someone",
+      "correct": "urge",
+      "wrong": [
+        "accompany",
+        "earn"
+      ],
+      "word": "urge"
+    },
+    {
+      "item_id": "locate",
+      "question": "find the place of",
+      "correct": "locate",
+      "wrong": [
+        "accompany",
+        "earn"
+      ],
+      "word": "locate"
+    },
+    {
+      "item_id": "struggle",
+      "question": "try very hard",
+      "correct": "struggle",
+      "wrong": [
+        "accompany",
+        "earn"
+      ],
+      "word": "struggle"
+    },
+    {
+      "item_id": "convert",
+      "question": "change one thing into another",
+      "correct": "convert",
+      "wrong": [
+        "accompany",
+        "earn"
+      ],
+      "word": "convert"
+    },
+    {
+      "item_id": "please",
+      "question": "make someone happy",
+      "correct": "please",
+      "wrong": [
+        "accompany",
+        "earn"
+      ],
+      "word": "please"
+    },
+    {
+      "item_id": "sort",
+      "question": "put things into groups",
+      "correct": "sort",
+      "wrong": [
+        "accompany",
+        "earn"
+      ],
+      "word": "sort"
+    }
+  ]
+}

@@ -1,0 +1,1008 @@
+{
+  "pack_id": "adverbs100",
+  "title": "A2 Adverbs 1–100",
+  "module_id": "word_master",
+  "seconds": 15,
+  "items": [
+    {
+      "item_id": "not",
+      "question": "negative word",
+      "correct": "not",
+      "wrong": [
+        "out",
+        "up"
+      ],
+      "word": "not"
+    },
+    {
+      "item_id": "out",
+      "question": "away from inside",
+      "correct": "out",
+      "wrong": [
+        "not",
+        "up"
+      ],
+      "word": "out"
+    },
+    {
+      "item_id": "up",
+      "question": "toward a higher place",
+      "correct": "up",
+      "wrong": [
+        "not",
+        "out"
+      ],
+      "word": "up"
+    },
+    {
+      "item_id": "so",
+      "question": "for that reason",
+      "correct": "so",
+      "wrong": [
+        "not",
+        "out"
+      ],
+      "word": "so"
+    },
+    {
+      "item_id": "then",
+      "question": "at a later time",
+      "correct": "then",
+      "wrong": [
+        "not",
+        "out"
+      ],
+      "word": "then"
+    },
+    {
+      "item_id": "more",
+      "question": "to a greater amount",
+      "correct": "more",
+      "wrong": [
+        "not",
+        "out"
+      ],
+      "word": "more"
+    },
+    {
+      "item_id": "now",
+      "question": "at this moment",
+      "correct": "now",
+      "wrong": [
+        "not",
+        "out"
+      ],
+      "word": "now"
+    },
+    {
+      "item_id": "just",
+      "question": "only a moment ago",
+      "correct": "just",
+      "wrong": [
+        "not",
+        "out"
+      ],
+      "word": "just"
+    },
+    {
+      "item_id": "also",
+      "question": "in addition to something",
+      "correct": "also",
+      "wrong": [
+        "not",
+        "out"
+      ],
+      "word": "also"
+    },
+    {
+      "item_id": "well",
+      "question": "in a good way",
+      "correct": "well",
+      "wrong": [
+        "not",
+        "out"
+      ],
+      "word": "well"
+    },
+    {
+      "item_id": "only",
+      "question": "just one thing",
+      "correct": "only",
+      "wrong": [
+        "not",
+        "out"
+      ],
+      "word": "only"
+    },
+    {
+      "item_id": "very",
+      "question": "to a high degree",
+      "correct": "very",
+      "wrong": [
+        "not",
+        "out"
+      ],
+      "word": "very"
+    },
+    {
+      "item_id": "how",
+      "question": "in what way or manner",
+      "correct": "how",
+      "wrong": [
+        "not",
+        "out"
+      ],
+      "word": "how"
+    },
+    {
+      "item_id": "when",
+      "question": "at what time or moment",
+      "correct": "when",
+      "wrong": [
+        "not",
+        "out"
+      ],
+      "word": "when"
+    },
+    {
+      "item_id": "as",
+      "question": "in the same way",
+      "correct": "as",
+      "wrong": [
+        "not",
+        "out"
+      ],
+      "word": "as"
+    },
+    {
+      "item_id": "even",
+      "question": "also or as well",
+      "correct": "even",
+      "wrong": [
+        "not",
+        "out"
+      ],
+      "word": "even"
+    },
+    {
+      "item_id": "there",
+      "question": "in or at that place",
+      "correct": "there",
+      "wrong": [
+        "not",
+        "out"
+      ],
+      "word": "there"
+    },
+    {
+      "item_id": "down",
+      "question": "from higher to lower",
+      "correct": "down",
+      "wrong": [
+        "not",
+        "out"
+      ],
+      "word": "down"
+    },
+    {
+      "item_id": "back",
+      "question": "toward the rear",
+      "correct": "back",
+      "wrong": [
+        "not",
+        "out"
+      ],
+      "word": "back"
+    },
+    {
+      "item_id": "still",
+      "question": "up to this moment",
+      "correct": "still",
+      "wrong": [
+        "not",
+        "out"
+      ],
+      "word": "still"
+    },
+    {
+      "item_id": "here",
+      "question": "in this place",
+      "correct": "here",
+      "wrong": [
+        "not",
+        "out"
+      ],
+      "word": "here"
+    },
+    {
+      "item_id": "too",
+      "question": "also or as well",
+      "correct": "too",
+      "wrong": [
+        "not",
+        "out"
+      ],
+      "word": "too"
+    },
+    {
+      "item_id": "on",
+      "question": "on top of something",
+      "correct": "on",
+      "wrong": [
+        "not",
+        "out"
+      ],
+      "word": "on"
+    },
+    {
+      "item_id": "where",
+      "question": "at what place",
+      "correct": "where",
+      "wrong": [
+        "not",
+        "out"
+      ],
+      "word": "where"
+    },
+    {
+      "item_id": "over",
+      "question": "above or across",
+      "correct": "over",
+      "wrong": [
+        "not",
+        "out"
+      ],
+      "word": "over"
+    },
+    {
+      "item_id": "much",
+      "question": "a lot",
+      "correct": "much",
+      "wrong": [
+        "not",
+        "out"
+      ],
+      "word": "much"
+    },
+    {
+      "item_id": "however",
+      "question": "but or yet",
+      "correct": "however",
+      "wrong": [
+        "not",
+        "out"
+      ],
+      "word": "however"
+    },
+    {
+      "item_id": "again",
+      "question": "one more time",
+      "correct": "again",
+      "wrong": [
+        "not",
+        "out"
+      ],
+      "word": "again"
+    },
+    {
+      "item_id": "never",
+      "question": "not at any time",
+      "correct": "never",
+      "wrong": [
+        "not",
+        "out"
+      ],
+      "word": "never"
+    },
+    {
+      "item_id": "all",
+      "question": "the whole amount",
+      "correct": "all",
+      "wrong": [
+        "not",
+        "out"
+      ],
+      "word": "all"
+    },
+    {
+      "item_id": "most",
+      "question": "more than any other",
+      "correct": "most",
+      "wrong": [
+        "not",
+        "out"
+      ],
+      "word": "most"
+    },
+    {
+      "item_id": "about",
+      "question": "close to a number",
+      "correct": "about",
+      "wrong": [
+        "not",
+        "out"
+      ],
+      "word": "about"
+    },
+    {
+      "item_id": "in",
+      "question": "inside a place",
+      "correct": "in",
+      "wrong": [
+        "not",
+        "out"
+      ],
+      "word": "in"
+    },
+    {
+      "item_id": "why",
+      "question": "for what reason",
+      "correct": "why",
+      "wrong": [
+        "not",
+        "out"
+      ],
+      "word": "why"
+    },
+    {
+      "item_id": "away",
+      "question": "to a distant place",
+      "correct": "away",
+      "wrong": [
+        "not",
+        "out"
+      ],
+      "word": "away"
+    },
+    {
+      "item_id": "really",
+      "question": "in a true way",
+      "correct": "really",
+      "wrong": [
+        "not",
+        "out"
+      ],
+      "word": "really"
+    },
+    {
+      "item_id": "off",
+      "question": "away from a place",
+      "correct": "off",
+      "wrong": [
+        "not",
+        "out"
+      ],
+      "word": "off"
+    },
+    {
+      "item_id": "always",
+      "question": "at every time",
+      "correct": "always",
+      "wrong": [
+        "not",
+        "out"
+      ],
+      "word": "always"
+    },
+    {
+      "item_id": "next",
+      "question": "right after this",
+      "correct": "next",
+      "wrong": [
+        "not",
+        "out"
+      ],
+      "word": "next"
+    },
+    {
+      "item_id": "rather",
+      "question": "a little bit",
+      "correct": "rather",
+      "wrong": [
+        "not",
+        "out"
+      ],
+      "word": "rather"
+    },
+    {
+      "item_id": "quite",
+      "question": "very or completely",
+      "correct": "quite",
+      "wrong": [
+        "not",
+        "out"
+      ],
+      "word": "quite"
+    },
+    {
+      "item_id": "right",
+      "question": "exactly or directly",
+      "correct": "right",
+      "wrong": [
+        "not",
+        "out"
+      ],
+      "word": "right"
+    },
+    {
+      "item_id": "often",
+      "question": "many times or frequently",
+      "correct": "often",
+      "wrong": [
+        "not",
+        "out"
+      ],
+      "word": "often"
+    },
+    {
+      "item_id": "yet",
+      "question": "up to this time",
+      "correct": "yet",
+      "wrong": [
+        "not",
+        "out"
+      ],
+      "word": "yet"
+    },
+    {
+      "item_id": "perhaps",
+      "question": "maybe or possibly",
+      "correct": "perhaps",
+      "wrong": [
+        "not",
+        "out"
+      ],
+      "word": "perhaps"
+    },
+    {
+      "item_id": "already",
+      "question": "before now or expected time",
+      "correct": "already",
+      "wrong": [
+        "not",
+        "out"
+      ],
+      "word": "already"
+    },
+    {
+      "item_id": "least",
+      "question": "the smallest amount or degree",
+      "correct": "least",
+      "wrong": [
+        "not",
+        "out"
+      ],
+      "word": "least"
+    },
+    {
+      "item_id": "almost",
+      "question": "very nearly but not quite",
+      "correct": "almost",
+      "wrong": [
+        "not",
+        "out"
+      ],
+      "word": "almost"
+    },
+    {
+      "item_id": "long",
+      "question": "for a great amount of time",
+      "correct": "long",
+      "wrong": [
+        "not",
+        "out"
+      ],
+      "word": "long"
+    },
+    {
+      "item_id": "together",
+      "question": "with each other at the same time",
+      "correct": "together",
+      "wrong": [
+        "not",
+        "out"
+      ],
+      "word": "together"
+    },
+    {
+      "item_id": "later",
+      "question": "after this time",
+      "correct": "later",
+      "wrong": [
+        "not",
+        "out"
+      ],
+      "word": "later"
+    },
+    {
+      "item_id": "less",
+      "question": "not as much",
+      "correct": "less",
+      "wrong": [
+        "not",
+        "out"
+      ],
+      "word": "less"
+    },
+    {
+      "item_id": "both",
+      "question": "the two together",
+      "correct": "both",
+      "wrong": [
+        "not",
+        "out"
+      ],
+      "word": "both"
+    },
+    {
+      "item_id": "once",
+      "question": "one single time",
+      "correct": "once",
+      "wrong": [
+        "not",
+        "out"
+      ],
+      "word": "once"
+    },
+    {
+      "item_id": "probably",
+      "question": "very likely true",
+      "correct": "probably",
+      "wrong": [
+        "not",
+        "out"
+      ],
+      "word": "probably"
+    },
+    {
+      "item_id": "ever",
+      "question": "at any time",
+      "correct": "ever",
+      "wrong": [
+        "not",
+        "out"
+      ],
+      "word": "ever"
+    },
+    {
+      "item_id": "no",
+      "question": "not at all",
+      "correct": "no",
+      "wrong": [
+        "not",
+        "out"
+      ],
+      "word": "no"
+    },
+    {
+      "item_id": "far",
+      "question": "a long distance away",
+      "correct": "far",
+      "wrong": [
+        "not",
+        "out"
+      ],
+      "word": "far"
+    },
+    {
+      "item_id": "actually",
+      "question": "in fact or really",
+      "correct": "actually",
+      "wrong": [
+        "not",
+        "out"
+      ],
+      "word": "actually"
+    },
+    {
+      "item_id": "today",
+      "question": "on this present day",
+      "correct": "today",
+      "wrong": [
+        "not",
+        "out"
+      ],
+      "word": "today"
+    },
+    {
+      "item_id": "enough",
+      "question": "as much as needed",
+      "correct": "enough",
+      "wrong": [
+        "not",
+        "out"
+      ],
+      "word": "enough"
+    },
+    {
+      "item_id": "therefore",
+      "question": "for that reason",
+      "correct": "therefore",
+      "wrong": [
+        "not",
+        "out"
+      ],
+      "word": "therefore"
+    },
+    {
+      "item_id": "around",
+      "question": "in a circle nearby",
+      "correct": "around",
+      "wrong": [
+        "not",
+        "out"
+      ],
+      "word": "around"
+    },
+    {
+      "item_id": "soon",
+      "question": "in a short time",
+      "correct": "soon",
+      "wrong": [
+        "not",
+        "out"
+      ],
+      "word": "soon"
+    },
+    {
+      "item_id": "particularly",
+      "question": "more than others",
+      "correct": "particularly",
+      "wrong": [
+        "not",
+        "out"
+      ],
+      "word": "particularly"
+    },
+    {
+      "item_id": "early",
+      "question": "before the usual time",
+      "correct": "early",
+      "wrong": [
+        "not",
+        "out"
+      ],
+      "word": "early"
+    },
+    {
+      "item_id": "else",
+      "question": "in a different way",
+      "correct": "else",
+      "wrong": [
+        "not",
+        "out"
+      ],
+      "word": "else"
+    },
+    {
+      "item_id": "sometimes",
+      "question": "not every time",
+      "correct": "sometimes",
+      "wrong": [
+        "not",
+        "out"
+      ],
+      "word": "sometimes"
+    },
+    {
+      "item_id": "thus",
+      "question": "for that reason",
+      "correct": "thus",
+      "wrong": [
+        "not",
+        "out"
+      ],
+      "word": "thus"
+    },
+    {
+      "item_id": "further",
+      "question": "to a greater distance",
+      "correct": "further",
+      "wrong": [
+        "not",
+        "out"
+      ],
+      "word": "further"
+    },
+    {
+      "item_id": "ago",
+      "question": "time before now",
+      "correct": "ago",
+      "wrong": [
+        "not",
+        "out"
+      ],
+      "word": "ago"
+    },
+    {
+      "item_id": "yesterday",
+      "question": "the day before today",
+      "correct": "yesterday",
+      "wrong": [
+        "not",
+        "out"
+      ],
+      "word": "yesterday"
+    },
+    {
+      "item_id": "usually",
+      "question": "most of the time",
+      "correct": "usually",
+      "wrong": [
+        "not",
+        "out"
+      ],
+      "word": "usually"
+    },
+    {
+      "item_id": "indeed",
+      "question": "yes, that is true",
+      "correct": "indeed",
+      "wrong": [
+        "not",
+        "out"
+      ],
+      "word": "indeed"
+    },
+    {
+      "item_id": "certainly",
+      "question": "yes, without any doubt",
+      "correct": "certainly",
+      "wrong": [
+        "not",
+        "out"
+      ],
+      "word": "certainly"
+    },
+    {
+      "item_id": "home",
+      "question": "to the place you live",
+      "correct": "home",
+      "wrong": [
+        "not",
+        "out"
+      ],
+      "word": "home"
+    },
+    {
+      "item_id": "simply",
+      "question": "in a very easy way",
+      "correct": "simply",
+      "wrong": [
+        "not",
+        "out"
+      ],
+      "word": "simply"
+    },
+    {
+      "item_id": "especially",
+      "question": "more than other things",
+      "correct": "especially",
+      "wrong": [
+        "not",
+        "out"
+      ],
+      "word": "especially"
+    },
+    {
+      "item_id": "better",
+      "question": "in a more good way",
+      "correct": "better",
+      "wrong": [
+        "not",
+        "out"
+      ],
+      "word": "better"
+    },
+    {
+      "item_id": "either",
+      "question": "also or as well",
+      "correct": "either",
+      "wrong": [
+        "not",
+        "out"
+      ],
+      "word": "either"
+    },
+    {
+      "item_id": "clearly",
+      "question": "easy to see or understand",
+      "correct": "clearly",
+      "wrong": [
+        "not",
+        "out"
+      ],
+      "word": "clearly"
+    },
+    {
+      "item_id": "instead",
+      "question": "in place of something else",
+      "correct": "instead",
+      "wrong": [
+        "not",
+        "out"
+      ],
+      "word": "instead"
+    },
+    {
+      "item_id": "round",
+      "question": "in a circle or around something",
+      "correct": "round",
+      "wrong": [
+        "not",
+        "out"
+      ],
+      "word": "round"
+    },
+    {
+      "item_id": "to",
+      "question": "in the direction of something",
+      "correct": "to",
+      "wrong": [
+        "not",
+        "out"
+      ],
+      "word": "to"
+    },
+    {
+      "item_id": "finally",
+      "question": "after a long time or at the end",
+      "correct": "finally",
+      "wrong": [
+        "not",
+        "out"
+      ],
+      "word": "finally"
+    },
+    {
+      "item_id": "please",
+      "question": "a polite word",
+      "correct": "please",
+      "wrong": [
+        "not",
+        "out"
+      ],
+      "word": "please"
+    },
+    {
+      "item_id": "forward",
+      "question": "toward the front",
+      "correct": "forward",
+      "wrong": [
+        "not",
+        "out"
+      ],
+      "word": "forward"
+    },
+    {
+      "item_id": "quickly",
+      "question": "at a fast speed",
+      "correct": "quickly",
+      "wrong": [
+        "not",
+        "out"
+      ],
+      "word": "quickly"
+    },
+    {
+      "item_id": "recently",
+      "question": "a short time ago",
+      "correct": "recently",
+      "wrong": [
+        "not",
+        "out"
+      ],
+      "word": "recently"
+    },
+    {
+      "item_id": "anyway",
+      "question": "no matter what",
+      "correct": "anyway",
+      "wrong": [
+        "not",
+        "out"
+      ],
+      "word": "anyway"
+    },
+    {
+      "item_id": "suddenly",
+      "question": "happening very fast and without warning",
+      "correct": "suddenly",
+      "wrong": [
+        "not",
+        "out"
+      ],
+      "word": "suddenly"
+    },
+    {
+      "item_id": "generally",
+      "question": "in most cases or usually",
+      "correct": "generally",
+      "wrong": [
+        "not",
+        "out"
+      ],
+      "word": "generally"
+    },
+    {
+      "item_id": "nearly",
+      "question": "almost but not completely",
+      "correct": "nearly",
+      "wrong": [
+        "not",
+        "out"
+      ],
+      "word": "nearly"
+    },
+    {
+      "item_id": "obviously",
+      "question": "easy to see or understand",
+      "correct": "obviously",
+      "wrong": [
+        "not",
+        "out"
+      ],
+      "word": "obviously"
+    },
+    {
+      "item_id": "though",
+      "question": "however or in spite of that",
+      "correct": "though",
+      "wrong": [
+        "not",
+        "out"
+      ],
+      "word": "though"
+    },
+    {
+      "item_id": "hard",
+      "question": "with great effort",
+      "correct": "hard",
+      "wrong": [
+        "not",
+        "out"
+      ],
+      "word": "hard"
+    },
+    {
+      "item_id": "okay",
+      "question": "in an acceptable way",
+      "correct": "okay",
+      "wrong": [
+        "not",
+        "out"
+      ],
+      "word": "okay"
+    },
+    {
+      "item_id": "exactly",
+      "question": "in a precise way",
+      "correct": "exactly",
+      "wrong": [
+        "not",
+        "out"
+      ],
+      "word": "exactly"
+    },
+    {
+      "item_id": "above",
+      "question": "at a higher place",
+      "correct": "above",
+      "wrong": [
+        "not",
+        "out"
+      ],
+      "word": "above"
+    },
+    {
+      "item_id": "maybe",
+      "question": "perhaps or possibly",
+      "correct": "maybe",
+      "wrong": [
+        "not",
+        "out"
+      ],
+      "word": "maybe"
+    }
+  ]
+}

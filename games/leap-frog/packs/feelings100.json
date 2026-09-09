@@ -1,0 +1,1008 @@
+{
+  "pack_id": "feelings100",
+  "title": "Feelings & Attitudes",
+  "module_id": "word_master",
+  "seconds": 15,
+  "items": [
+    {
+      "item_id": "happy",
+      "question": "feeling very glad inside",
+      "correct": "happy",
+      "wrong": [
+        "sad",
+        "angry"
+      ],
+      "word": "happy"
+    },
+    {
+      "item_id": "sad",
+      "question": "feeling unhappy",
+      "correct": "sad",
+      "wrong": [
+        "happy",
+        "angry"
+      ],
+      "word": "sad"
+    },
+    {
+      "item_id": "angry",
+      "question": "feeling or showing strong anger",
+      "correct": "angry",
+      "wrong": [
+        "happy",
+        "sad"
+      ],
+      "word": "angry"
+    },
+    {
+      "item_id": "scared",
+      "question": "feeling afraid of something",
+      "correct": "scared",
+      "wrong": [
+        "happy",
+        "sad"
+      ],
+      "word": "scared"
+    },
+    {
+      "item_id": "surprised",
+      "question": "feeling sudden wonder",
+      "correct": "surprised",
+      "wrong": [
+        "happy",
+        "sad"
+      ],
+      "word": "surprised"
+    },
+    {
+      "item_id": "excited",
+      "question": "excited",
+      "correct": "excited",
+      "wrong": [
+        "happy",
+        "sad"
+      ],
+      "word": "excited"
+    },
+    {
+      "item_id": "bored",
+      "question": "tired of nothing fun",
+      "correct": "bored",
+      "wrong": [
+        "happy",
+        "sad"
+      ],
+      "word": "bored"
+    },
+    {
+      "item_id": "tired",
+      "question": "needing rest or sleep",
+      "correct": "tired",
+      "wrong": [
+        "happy",
+        "sad"
+      ],
+      "word": "tired"
+    },
+    {
+      "item_id": "sleepy",
+      "question": "sleepy",
+      "correct": "sleepy",
+      "wrong": [
+        "happy",
+        "sad"
+      ],
+      "word": "sleepy"
+    },
+    {
+      "item_id": "hungry",
+      "question": "wanting food now",
+      "correct": "hungry",
+      "wrong": [
+        "happy",
+        "sad"
+      ],
+      "word": "hungry"
+    },
+    {
+      "item_id": "thirsty",
+      "question": "thirsty",
+      "correct": "thirsty",
+      "wrong": [
+        "happy",
+        "sad"
+      ],
+      "word": "thirsty"
+    },
+    {
+      "item_id": "nervous",
+      "question": "worried and unable to relax",
+      "correct": "nervous",
+      "wrong": [
+        "happy",
+        "sad"
+      ],
+      "word": "nervous"
+    },
+    {
+      "item_id": "worried",
+      "question": "feeling nervous or troubled",
+      "correct": "worried",
+      "wrong": [
+        "happy",
+        "sad"
+      ],
+      "word": "worried"
+    },
+    {
+      "item_id": "anxious",
+      "question": "worried about something bad",
+      "correct": "anxious",
+      "wrong": [
+        "happy",
+        "sad"
+      ],
+      "word": "anxious"
+    },
+    {
+      "item_id": "calm",
+      "question": "quiet and not upset",
+      "correct": "calm",
+      "wrong": [
+        "happy",
+        "sad"
+      ],
+      "word": "calm"
+    },
+    {
+      "item_id": "relaxed",
+      "question": "relaxed",
+      "correct": "relaxed",
+      "wrong": [
+        "happy",
+        "sad"
+      ],
+      "word": "relaxed"
+    },
+    {
+      "item_id": "stressed",
+      "question": "stressed",
+      "correct": "stressed",
+      "wrong": [
+        "happy",
+        "sad"
+      ],
+      "word": "stressed"
+    },
+    {
+      "item_id": "confused",
+      "question": "confused",
+      "correct": "confused",
+      "wrong": [
+        "happy",
+        "sad"
+      ],
+      "word": "confused"
+    },
+    {
+      "item_id": "curious",
+      "question": "wanting to know more",
+      "correct": "curious",
+      "wrong": [
+        "happy",
+        "sad"
+      ],
+      "word": "curious"
+    },
+    {
+      "item_id": "proud",
+      "question": "feeling very happy about something",
+      "correct": "proud",
+      "wrong": [
+        "happy",
+        "sad"
+      ],
+      "word": "proud"
+    },
+    {
+      "item_id": "ashamed",
+      "question": "sorry and embarrassed",
+      "correct": "ashamed",
+      "wrong": [
+        "happy",
+        "sad"
+      ],
+      "word": "ashamed"
+    },
+    {
+      "item_id": "embarrassed",
+      "question": "shy after a mistake",
+      "correct": "embarrassed",
+      "wrong": [
+        "happy",
+        "sad"
+      ],
+      "word": "embarrassed"
+    },
+    {
+      "item_id": "lonely",
+      "question": "sad from being alone",
+      "correct": "lonely",
+      "wrong": [
+        "happy",
+        "sad"
+      ],
+      "word": "lonely"
+    },
+    {
+      "item_id": "grateful",
+      "question": "feeling thankful",
+      "correct": "grateful",
+      "wrong": [
+        "happy",
+        "sad"
+      ],
+      "word": "grateful"
+    },
+    {
+      "item_id": "thankful",
+      "question": "thankful",
+      "correct": "thankful",
+      "wrong": [
+        "happy",
+        "sad"
+      ],
+      "word": "thankful"
+    },
+    {
+      "item_id": "hopeful",
+      "question": "hopeful",
+      "correct": "hopeful",
+      "wrong": [
+        "happy",
+        "sad"
+      ],
+      "word": "hopeful"
+    },
+    {
+      "item_id": "hopeless",
+      "question": "hopeless",
+      "correct": "hopeless",
+      "wrong": [
+        "happy",
+        "sad"
+      ],
+      "word": "hopeless"
+    },
+    {
+      "item_id": "confident",
+      "question": "sure you can do it",
+      "correct": "confident",
+      "wrong": [
+        "happy",
+        "sad"
+      ],
+      "word": "confident"
+    },
+    {
+      "item_id": "shy",
+      "question": "quiet and a bit scared",
+      "correct": "shy",
+      "wrong": [
+        "happy",
+        "sad"
+      ],
+      "word": "shy"
+    },
+    {
+      "item_id": "brave",
+      "question": "not afraid of danger",
+      "correct": "brave",
+      "wrong": [
+        "happy",
+        "sad"
+      ],
+      "word": "brave"
+    },
+    {
+      "item_id": "afraid",
+      "question": "feeling scared",
+      "correct": "afraid",
+      "wrong": [
+        "happy",
+        "sad"
+      ],
+      "word": "afraid"
+    },
+    {
+      "item_id": "furious",
+      "question": "very very angry",
+      "correct": "furious",
+      "wrong": [
+        "happy",
+        "sad"
+      ],
+      "word": "furious"
+    },
+    {
+      "item_id": "annoyed",
+      "question": "annoyed",
+      "correct": "annoyed",
+      "wrong": [
+        "happy",
+        "sad"
+      ],
+      "word": "annoyed"
+    },
+    {
+      "item_id": "frustrated",
+      "question": "frustrated",
+      "correct": "frustrated",
+      "wrong": [
+        "happy",
+        "sad"
+      ],
+      "word": "frustrated"
+    },
+    {
+      "item_id": "disappointed",
+      "question": "disappointed",
+      "correct": "disappointed",
+      "wrong": [
+        "happy",
+        "sad"
+      ],
+      "word": "disappointed"
+    },
+    {
+      "item_id": "satisfied",
+      "question": "satisfied",
+      "correct": "satisfied",
+      "wrong": [
+        "happy",
+        "sad"
+      ],
+      "word": "satisfied"
+    },
+    {
+      "item_id": "content",
+      "question": "happy and satisfied",
+      "correct": "content",
+      "wrong": [
+        "happy",
+        "sad"
+      ],
+      "word": "content"
+    },
+    {
+      "item_id": "miserable",
+      "question": "very unhappy and sad",
+      "correct": "miserable",
+      "wrong": [
+        "happy",
+        "sad"
+      ],
+      "word": "miserable"
+    },
+    {
+      "item_id": "cheerful",
+      "question": "happy and bright",
+      "correct": "cheerful",
+      "wrong": [
+        "happy",
+        "sad"
+      ],
+      "word": "cheerful"
+    },
+    {
+      "item_id": "friendly",
+      "question": "kind and nice to others",
+      "correct": "friendly",
+      "wrong": [
+        "happy",
+        "sad"
+      ],
+      "word": "friendly"
+    },
+    {
+      "item_id": "kind",
+      "question": "nice and caring",
+      "correct": "kind",
+      "wrong": [
+        "happy",
+        "sad"
+      ],
+      "word": "kind"
+    },
+    {
+      "item_id": "mean",
+      "question": "average amount or value",
+      "correct": "mean",
+      "wrong": [
+        "happy",
+        "sad"
+      ],
+      "word": "mean"
+    },
+    {
+      "item_id": "rude",
+      "question": "not polite or kind",
+      "correct": "rude",
+      "wrong": [
+        "happy",
+        "sad"
+      ],
+      "word": "rude"
+    },
+    {
+      "item_id": "polite",
+      "question": "using nice manners",
+      "correct": "polite",
+      "wrong": [
+        "happy",
+        "sad"
+      ],
+      "word": "polite"
+    },
+    {
+      "item_id": "honest",
+      "question": "always telling the truth",
+      "correct": "honest",
+      "wrong": [
+        "happy",
+        "sad"
+      ],
+      "word": "honest"
+    },
+    {
+      "item_id": "dishonest",
+      "question": "dishonest",
+      "correct": "dishonest",
+      "wrong": [
+        "happy",
+        "sad"
+      ],
+      "word": "dishonest"
+    },
+    {
+      "item_id": "patient",
+      "question": "calm while waiting",
+      "correct": "patient",
+      "wrong": [
+        "happy",
+        "sad"
+      ],
+      "word": "patient"
+    },
+    {
+      "item_id": "impatient",
+      "question": "impatient",
+      "correct": "impatient",
+      "wrong": [
+        "happy",
+        "sad"
+      ],
+      "word": "impatient"
+    },
+    {
+      "item_id": "generous",
+      "question": "happy to share and give",
+      "correct": "generous",
+      "wrong": [
+        "happy",
+        "sad"
+      ],
+      "word": "generous"
+    },
+    {
+      "item_id": "selfish",
+      "question": "selfish",
+      "correct": "selfish",
+      "wrong": [
+        "happy",
+        "sad"
+      ],
+      "word": "selfish"
+    },
+    {
+      "item_id": "loyal",
+      "question": "always true to you",
+      "correct": "loyal",
+      "wrong": [
+        "happy",
+        "sad"
+      ],
+      "word": "loyal"
+    },
+    {
+      "item_id": "faithful",
+      "question": "always true and loyal",
+      "correct": "faithful",
+      "wrong": [
+        "happy",
+        "sad"
+      ],
+      "word": "faithful"
+    },
+    {
+      "item_id": "jealous",
+      "question": "jealous",
+      "correct": "jealous",
+      "wrong": [
+        "happy",
+        "sad"
+      ],
+      "word": "jealous"
+    },
+    {
+      "item_id": "relieved",
+      "question": "feeling calm after worry is gone",
+      "correct": "relieved",
+      "wrong": [
+        "happy",
+        "sad"
+      ],
+      "word": "relieved"
+    },
+    {
+      "item_id": "envious",
+      "question": "envious",
+      "correct": "envious",
+      "wrong": [
+        "happy",
+        "sad"
+      ],
+      "word": "envious"
+    },
+    {
+      "item_id": "optimistic",
+      "question": "hoping for good things",
+      "correct": "optimistic",
+      "wrong": [
+        "happy",
+        "sad"
+      ],
+      "word": "optimistic"
+    },
+    {
+      "item_id": "pessimistic",
+      "question": "pessimistic",
+      "correct": "pessimistic",
+      "wrong": [
+        "happy",
+        "sad"
+      ],
+      "word": "pessimistic"
+    },
+    {
+      "item_id": "positive",
+      "question": "good and hopeful",
+      "correct": "positive",
+      "wrong": [
+        "happy",
+        "sad"
+      ],
+      "word": "positive"
+    },
+    {
+      "item_id": "negative",
+      "question": "not good or happy",
+      "correct": "negative",
+      "wrong": [
+        "happy",
+        "sad"
+      ],
+      "word": "negative"
+    },
+    {
+      "item_id": "serious",
+      "question": "not joking or playful",
+      "correct": "serious",
+      "wrong": [
+        "happy",
+        "sad"
+      ],
+      "word": "serious"
+    },
+    {
+      "item_id": "funny",
+      "question": "makes people laugh",
+      "correct": "funny",
+      "wrong": [
+        "happy",
+        "sad"
+      ],
+      "word": "funny"
+    },
+    {
+      "item_id": "silly",
+      "question": "funny in a playful way",
+      "correct": "silly",
+      "wrong": [
+        "happy",
+        "sad"
+      ],
+      "word": "silly"
+    },
+    {
+      "item_id": "smart",
+      "question": "clever and quick thinking",
+      "correct": "smart",
+      "wrong": [
+        "happy",
+        "sad"
+      ],
+      "word": "smart"
+    },
+    {
+      "item_id": "stupid",
+      "question": "not thinking well",
+      "correct": "stupid",
+      "wrong": [
+        "happy",
+        "sad"
+      ],
+      "word": "stupid"
+    },
+    {
+      "item_id": "clever",
+      "question": "smart and quick thinker",
+      "correct": "clever",
+      "wrong": [
+        "happy",
+        "sad"
+      ],
+      "word": "clever"
+    },
+    {
+      "item_id": "foolish",
+      "question": "silly not wise",
+      "correct": "foolish",
+      "wrong": [
+        "happy",
+        "sad"
+      ],
+      "word": "foolish"
+    },
+    {
+      "item_id": "wise",
+      "question": "smart and makes good choices",
+      "correct": "wise",
+      "wrong": [
+        "happy",
+        "sad"
+      ],
+      "word": "wise"
+    },
+    {
+      "item_id": "naive",
+      "question": "naive",
+      "correct": "naive",
+      "wrong": [
+        "happy",
+        "sad"
+      ],
+      "word": "naive"
+    },
+    {
+      "item_id": "mature",
+      "question": "fully grown and ready",
+      "correct": "mature",
+      "wrong": [
+        "happy",
+        "sad"
+      ],
+      "word": "mature"
+    },
+    {
+      "item_id": "immature",
+      "question": "immature",
+      "correct": "immature",
+      "wrong": [
+        "happy",
+        "sad"
+      ],
+      "word": "immature"
+    },
+    {
+      "item_id": "love",
+      "question": "a strong feeling of care",
+      "correct": "love",
+      "wrong": [
+        "happy",
+        "sad"
+      ],
+      "word": "love"
+    },
+    {
+      "item_id": "hate",
+      "question": "strongly dislike something",
+      "correct": "hate",
+      "wrong": [
+        "happy",
+        "sad"
+      ],
+      "word": "hate"
+    },
+    {
+      "item_id": "like",
+      "question": "almost the same",
+      "correct": "like",
+      "wrong": [
+        "happy",
+        "sad"
+      ],
+      "word": "like"
+    },
+    {
+      "item_id": "dislike",
+      "question": "dislike",
+      "correct": "dislike",
+      "wrong": [
+        "happy",
+        "sad"
+      ],
+      "word": "dislike"
+    },
+    {
+      "item_id": "prefer",
+      "question": "like one thing more than another",
+      "correct": "prefer",
+      "wrong": [
+        "happy",
+        "sad"
+      ],
+      "word": "prefer"
+    },
+    {
+      "item_id": "enjoy",
+      "question": "to like something very much",
+      "correct": "enjoy",
+      "wrong": [
+        "happy",
+        "sad"
+      ],
+      "word": "enjoy"
+    },
+    {
+      "item_id": "mind",
+      "question": "the thinking part of you",
+      "correct": "mind",
+      "wrong": [
+        "happy",
+        "sad"
+      ],
+      "word": "mind"
+    },
+    {
+      "item_id": "care",
+      "question": "looking after someone",
+      "correct": "care",
+      "wrong": [
+        "happy",
+        "sad"
+      ],
+      "word": "care"
+    },
+    {
+      "item_id": "worry",
+      "question": "to feel troubled or anxious",
+      "correct": "worry",
+      "wrong": [
+        "happy",
+        "sad"
+      ],
+      "word": "worry"
+    },
+    {
+      "item_id": "trust",
+      "question": "believing someone is honest",
+      "correct": "trust",
+      "wrong": [
+        "happy",
+        "sad"
+      ],
+      "word": "trust"
+    },
+    {
+      "item_id": "doubt",
+      "question": "not being sure",
+      "correct": "doubt",
+      "wrong": [
+        "happy",
+        "sad"
+      ],
+      "word": "doubt"
+    },
+    {
+      "item_id": "believe",
+      "question": "think something is true",
+      "correct": "believe",
+      "wrong": [
+        "happy",
+        "sad"
+      ],
+      "word": "believe"
+    },
+    {
+      "item_id": "agree",
+      "question": "to say yes together",
+      "correct": "agree",
+      "wrong": [
+        "happy",
+        "sad"
+      ],
+      "word": "agree"
+    },
+    {
+      "item_id": "disagree",
+      "question": "have a different opinion",
+      "correct": "disagree",
+      "wrong": [
+        "happy",
+        "sad"
+      ],
+      "word": "disagree"
+    },
+    {
+      "item_id": "accept",
+      "question": "agree to take or receive",
+      "correct": "accept",
+      "wrong": [
+        "happy",
+        "sad"
+      ],
+      "word": "accept"
+    },
+    {
+      "item_id": "reject",
+      "question": "to say no to something",
+      "correct": "reject",
+      "wrong": [
+        "happy",
+        "sad"
+      ],
+      "word": "reject"
+    },
+    {
+      "item_id": "respect",
+      "question": "a feeling of honor for someone",
+      "correct": "respect",
+      "wrong": [
+        "happy",
+        "sad"
+      ],
+      "word": "respect"
+    },
+    {
+      "item_id": "admire",
+      "question": "look at with respect",
+      "correct": "admire",
+      "wrong": [
+        "happy",
+        "sad"
+      ],
+      "word": "admire"
+    },
+    {
+      "item_id": "envy",
+      "question": "envy",
+      "correct": "envy",
+      "wrong": [
+        "happy",
+        "sad"
+      ],
+      "word": "envy"
+    },
+    {
+      "item_id": "pity",
+      "question": "pity",
+      "correct": "pity",
+      "wrong": [
+        "happy",
+        "sad"
+      ],
+      "word": "pity"
+    },
+    {
+      "item_id": "sympathy",
+      "question": "sympathy",
+      "correct": "sympathy",
+      "wrong": [
+        "happy",
+        "sad"
+      ],
+      "word": "sympathy"
+    },
+    {
+      "item_id": "empathy",
+      "question": "empathy",
+      "correct": "empathy",
+      "wrong": [
+        "happy",
+        "sad"
+      ],
+      "word": "empathy"
+    },
+    {
+      "item_id": "compassion",
+      "question": "compassion",
+      "correct": "compassion",
+      "wrong": [
+        "happy",
+        "sad"
+      ],
+      "word": "compassion"
+    },
+    {
+      "item_id": "courage",
+      "question": "courage",
+      "correct": "courage",
+      "wrong": [
+        "happy",
+        "sad"
+      ],
+      "word": "courage"
+    },
+    {
+      "item_id": "fear",
+      "question": "feeling of being scared",
+      "correct": "fear",
+      "wrong": [
+        "happy",
+        "sad"
+      ],
+      "word": "fear"
+    },
+    {
+      "item_id": "joy",
+      "question": "joy",
+      "correct": "joy",
+      "wrong": [
+        "happy",
+        "sad"
+      ],
+      "word": "joy"
+    },
+    {
+      "item_id": "sorrow",
+      "question": "sorrow",
+      "correct": "sorrow",
+      "wrong": [
+        "happy",
+        "sad"
+      ],
+      "word": "sorrow"
+    },
+    {
+      "item_id": "grief",
+      "question": "grief",
+      "correct": "grief",
+      "wrong": [
+        "happy",
+        "sad"
+      ],
+      "word": "grief"
+    },
+    {
+      "item_id": "relief",
+      "question": "feeling better after pain",
+      "correct": "relief",
+      "wrong": [
+        "happy",
+        "sad"
+      ],
+      "word": "relief"
+    },
+    {
+      "item_id": "regret",
+      "question": "feel sorry about",
+      "correct": "regret",
+      "wrong": [
+        "happy",
+        "sad"
+      ],
+      "word": "regret"
+    }
+  ]
+}

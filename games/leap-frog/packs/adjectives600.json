@@ -1,0 +1,1008 @@
+{
+  "pack_id": "adjectives600",
+  "title": "B2 Adjectives 501–600",
+  "module_id": "word_master",
+  "seconds": 15,
+  "items": [
+    {
+      "item_id": "acute",
+      "question": "very sharp or strong",
+      "correct": "acute",
+      "wrong": [
+        "bare",
+        "valid"
+      ],
+      "word": "acute"
+    },
+    {
+      "item_id": "bare",
+      "question": "without any covering",
+      "correct": "bare",
+      "wrong": [
+        "acute",
+        "valid"
+      ],
+      "word": "bare"
+    },
+    {
+      "item_id": "valid",
+      "question": "correct and acceptable",
+      "correct": "valid",
+      "wrong": [
+        "acute",
+        "bare"
+      ],
+      "word": "valid"
+    },
+    {
+      "item_id": "depending",
+      "question": "relying on something else",
+      "correct": "depending",
+      "wrong": [
+        "acute",
+        "bare"
+      ],
+      "word": "depending"
+    },
+    {
+      "item_id": "classic",
+      "question": "simple and always liked",
+      "correct": "classic",
+      "wrong": [
+        "acute",
+        "bare"
+      ],
+      "word": "classic"
+    },
+    {
+      "item_id": "ethnic",
+      "question": "of a certain culture group",
+      "correct": "ethnic",
+      "wrong": [
+        "acute",
+        "bare"
+      ],
+      "word": "ethnic"
+    },
+    {
+      "item_id": "automatic",
+      "question": "working by itself without help",
+      "correct": "automatic",
+      "wrong": [
+        "acute",
+        "bare"
+      ],
+      "word": "automatic"
+    },
+    {
+      "item_id": "liable",
+      "question": "responsible to pay or fix",
+      "correct": "liable",
+      "wrong": [
+        "acute",
+        "bare"
+      ],
+      "word": "liable"
+    },
+    {
+      "item_id": "well",
+      "question": "in good health and not sick",
+      "correct": "well",
+      "wrong": [
+        "acute",
+        "bare"
+      ],
+      "word": "well"
+    },
+    {
+      "item_id": "revolutionary",
+      "question": "causing big new changes in society",
+      "correct": "revolutionary",
+      "wrong": [
+        "acute",
+        "bare"
+      ],
+      "word": "revolutionary"
+    },
+    {
+      "item_id": "sole",
+      "question": "only one",
+      "correct": "sole",
+      "wrong": [
+        "acute",
+        "bare"
+      ],
+      "word": "sole"
+    },
+    {
+      "item_id": "reliable",
+      "question": "can be trusted",
+      "correct": "reliable",
+      "wrong": [
+        "acute",
+        "bare"
+      ],
+      "word": "reliable"
+    },
+    {
+      "item_id": "medieval",
+      "question": "from the Middle Ages",
+      "correct": "medieval",
+      "wrong": [
+        "acute",
+        "bare"
+      ],
+      "word": "medieval"
+    },
+    {
+      "item_id": "established",
+      "question": "long time in place",
+      "correct": "established",
+      "wrong": [
+        "acute",
+        "bare"
+      ],
+      "word": "established"
+    },
+    {
+      "item_id": "intellectual",
+      "question": "likes thinking and learning",
+      "correct": "intellectual",
+      "wrong": [
+        "acute",
+        "bare"
+      ],
+      "word": "intellectual"
+    },
+    {
+      "item_id": "pregnant",
+      "question": "having a baby inside",
+      "correct": "pregnant",
+      "wrong": [
+        "acute",
+        "bare"
+      ],
+      "word": "pregnant"
+    },
+    {
+      "item_id": "electrical",
+      "question": "using or about electricity",
+      "correct": "electrical",
+      "wrong": [
+        "acute",
+        "bare"
+      ],
+      "word": "electrical"
+    },
+    {
+      "item_id": "socialist",
+      "question": "about sharing things equally",
+      "correct": "socialist",
+      "wrong": [
+        "acute",
+        "bare"
+      ],
+      "word": "socialist"
+    },
+    {
+      "item_id": "exact",
+      "question": "completely correct or precise",
+      "correct": "exact",
+      "wrong": [
+        "acute",
+        "bare"
+      ],
+      "word": "exact"
+    },
+    {
+      "item_id": "mutual",
+      "question": "shared by two people or groups",
+      "correct": "mutual",
+      "wrong": [
+        "acute",
+        "bare"
+      ],
+      "word": "mutual"
+    },
+    {
+      "item_id": "curious",
+      "question": "wanting to know more",
+      "correct": "curious",
+      "wrong": [
+        "acute",
+        "bare"
+      ],
+      "word": "curious"
+    },
+    {
+      "item_id": "identical",
+      "question": "exactly the same",
+      "correct": "identical",
+      "wrong": [
+        "acute",
+        "bare"
+      ],
+      "word": "identical"
+    },
+    {
+      "item_id": "satisfactory",
+      "question": "good enough to be happy",
+      "correct": "satisfactory",
+      "wrong": [
+        "acute",
+        "bare"
+      ],
+      "word": "satisfactory"
+    },
+    {
+      "item_id": "electoral",
+      "question": "about choosing leaders by vote",
+      "correct": "electoral",
+      "wrong": [
+        "acute",
+        "bare"
+      ],
+      "word": "electoral"
+    },
+    {
+      "item_id": "urgent",
+      "question": "needing action right now",
+      "correct": "urgent",
+      "wrong": [
+        "acute",
+        "bare"
+      ],
+      "word": "urgent"
+    },
+    {
+      "item_id": "distinctive",
+      "question": "special and easy to notice",
+      "correct": "distinctive",
+      "wrong": [
+        "acute",
+        "bare"
+      ],
+      "word": "distinctive"
+    },
+    {
+      "item_id": "marginal",
+      "question": "very small and not important",
+      "correct": "marginal",
+      "wrong": [
+        "acute",
+        "bare"
+      ],
+      "word": "marginal"
+    },
+    {
+      "item_id": "structural",
+      "question": "about the way something is built",
+      "correct": "structural",
+      "wrong": [
+        "acute",
+        "bare"
+      ],
+      "word": "structural"
+    },
+    {
+      "item_id": "encouraging",
+      "question": "giving hope or support",
+      "correct": "encouraging",
+      "wrong": [
+        "acute",
+        "bare"
+      ],
+      "word": "encouraging"
+    },
+    {
+      "item_id": "above",
+      "question": "higher than something else",
+      "correct": "above",
+      "wrong": [
+        "acute",
+        "bare"
+      ],
+      "word": "above"
+    },
+    {
+      "item_id": "contrary",
+      "question": "opposite to what is expected",
+      "correct": "contrary",
+      "wrong": [
+        "acute",
+        "bare"
+      ],
+      "word": "contrary"
+    },
+    {
+      "item_id": "fun",
+      "question": "enjoyable and making you happy",
+      "correct": "fun",
+      "wrong": [
+        "acute",
+        "bare"
+      ],
+      "word": "fun"
+    },
+    {
+      "item_id": "everyday",
+      "question": "happening or used every day",
+      "correct": "everyday",
+      "wrong": [
+        "acute",
+        "bare"
+      ],
+      "word": "everyday"
+    },
+    {
+      "item_id": "determined",
+      "question": "having a strong will to succeed",
+      "correct": "determined",
+      "wrong": [
+        "acute",
+        "bare"
+      ],
+      "word": "determined"
+    },
+    {
+      "item_id": "controversial",
+      "question": "causing strong disagreement among people",
+      "correct": "controversial",
+      "wrong": [
+        "acute",
+        "bare"
+      ],
+      "word": "controversial"
+    },
+    {
+      "item_id": "organic",
+      "question": "grown without chemicals",
+      "correct": "organic",
+      "wrong": [
+        "acute",
+        "bare"
+      ],
+      "word": "organic"
+    },
+    {
+      "item_id": "historic",
+      "question": "important in history",
+      "correct": "historic",
+      "wrong": [
+        "acute",
+        "bare"
+      ],
+      "word": "historic"
+    },
+    {
+      "item_id": "desirable",
+      "question": "wanted by many people",
+      "correct": "desirable",
+      "wrong": [
+        "acute",
+        "bare"
+      ],
+      "word": "desirable"
+    },
+    {
+      "item_id": "presidential",
+      "question": "of or for a president",
+      "correct": "presidential",
+      "wrong": [
+        "acute",
+        "bare"
+      ],
+      "word": "presidential"
+    },
+    {
+      "item_id": "unexpected",
+      "question": "not expected or planned",
+      "correct": "unexpected",
+      "wrong": [
+        "acute",
+        "bare"
+      ],
+      "word": "unexpected"
+    },
+    {
+      "item_id": "gross",
+      "question": "very unpleasant or disgusting",
+      "correct": "gross",
+      "wrong": [
+        "acute",
+        "bare"
+      ],
+      "word": "gross"
+    },
+    {
+      "item_id": "superb",
+      "question": "excellent or of very high quality",
+      "correct": "superb",
+      "wrong": [
+        "acute",
+        "bare"
+      ],
+      "word": "superb"
+    },
+    {
+      "item_id": "innocent",
+      "question": "not guilty or without blame",
+      "correct": "innocent",
+      "wrong": [
+        "acute",
+        "bare"
+      ],
+      "word": "innocent"
+    },
+    {
+      "item_id": "statistical",
+      "question": "related to collecting and analyzing numbers",
+      "correct": "statistical",
+      "wrong": [
+        "acute",
+        "bare"
+      ],
+      "word": "statistical"
+    },
+    {
+      "item_id": "marked",
+      "question": "clearly noticeable or easy to see",
+      "correct": "marked",
+      "wrong": [
+        "acute",
+        "bare"
+      ],
+      "word": "marked"
+    },
+    {
+      "item_id": "gastric",
+      "question": "relating to the stomach",
+      "correct": "gastric",
+      "wrong": [
+        "acute",
+        "bare"
+      ],
+      "word": "gastric"
+    },
+    {
+      "item_id": "collective",
+      "question": "done by a group together",
+      "correct": "collective",
+      "wrong": [
+        "acute",
+        "bare"
+      ],
+      "word": "collective"
+    },
+    {
+      "item_id": "naked",
+      "question": "without any clothes on",
+      "correct": "naked",
+      "wrong": [
+        "acute",
+        "bare"
+      ],
+      "word": "naked"
+    },
+    {
+      "item_id": "reluctant",
+      "question": "not wanting to do something",
+      "correct": "reluctant",
+      "wrong": [
+        "acute",
+        "bare"
+      ],
+      "word": "reluctant"
+    },
+    {
+      "item_id": "experienced",
+      "question": "having done something many times",
+      "correct": "experienced",
+      "wrong": [
+        "acute",
+        "bare"
+      ],
+      "word": "experienced"
+    },
+    {
+      "item_id": "nearby",
+      "question": "close in distance",
+      "correct": "nearby",
+      "wrong": [
+        "acute",
+        "bare"
+      ],
+      "word": "nearby"
+    },
+    {
+      "item_id": "exclusive",
+      "question": "only for some people",
+      "correct": "exclusive",
+      "wrong": [
+        "acute",
+        "bare"
+      ],
+      "word": "exclusive"
+    },
+    {
+      "item_id": "convenient",
+      "question": "easy to use or reach",
+      "correct": "convenient",
+      "wrong": [
+        "acute",
+        "bare"
+      ],
+      "word": "convenient"
+    },
+    {
+      "item_id": "sheer",
+      "question": "very steep or complete",
+      "correct": "sheer",
+      "wrong": [
+        "acute",
+        "bare"
+      ],
+      "word": "sheer"
+    },
+    {
+      "item_id": "ruling",
+      "question": "most important or powerful",
+      "correct": "ruling",
+      "wrong": [
+        "acute",
+        "bare"
+      ],
+      "word": "ruling"
+    },
+    {
+      "item_id": "uncertain",
+      "question": "not sure or clear",
+      "correct": "uncertain",
+      "wrong": [
+        "acute",
+        "bare"
+      ],
+      "word": "uncertain"
+    },
+    {
+      "item_id": "fellow",
+      "question": "being a friend or partner",
+      "correct": "fellow",
+      "wrong": [
+        "acute",
+        "bare"
+      ],
+      "word": "fellow"
+    },
+    {
+      "item_id": "diplomatic",
+      "question": "speaking in a careful polite way",
+      "correct": "diplomatic",
+      "wrong": [
+        "acute",
+        "bare"
+      ],
+      "word": "diplomatic"
+    },
+    {
+      "item_id": "mixed",
+      "question": "made of different kinds together",
+      "correct": "mixed",
+      "wrong": [
+        "acute",
+        "bare"
+      ],
+      "word": "mixed"
+    },
+    {
+      "item_id": "magnificent",
+      "question": "very beautiful and impressive",
+      "correct": "magnificent",
+      "wrong": [
+        "acute",
+        "bare"
+      ],
+      "word": "magnificent"
+    },
+    {
+      "item_id": "tremendous",
+      "question": "very very big",
+      "correct": "tremendous",
+      "wrong": [
+        "acute",
+        "bare"
+      ],
+      "word": "tremendous"
+    },
+    {
+      "item_id": "institutional",
+      "question": "of a big organization",
+      "correct": "institutional",
+      "wrong": [
+        "acute",
+        "bare"
+      ],
+      "word": "institutional"
+    },
+    {
+      "item_id": "straightforward",
+      "question": "easy to understand",
+      "correct": "straightforward",
+      "wrong": [
+        "acute",
+        "bare"
+      ],
+      "word": "straightforward"
+    },
+    {
+      "item_id": "fulltime",
+      "question": "working all day",
+      "correct": "full-time",
+      "wrong": [
+        "acute",
+        "bare"
+      ],
+      "word": "full-time"
+    },
+    {
+      "item_id": "still",
+      "question": "not moving at all",
+      "correct": "still",
+      "wrong": [
+        "acute",
+        "bare"
+      ],
+      "word": "still"
+    },
+    {
+      "item_id": "biological",
+      "question": "living things science",
+      "correct": "biological",
+      "wrong": [
+        "acute",
+        "bare"
+      ],
+      "word": "biological"
+    },
+    {
+      "item_id": "functional",
+      "question": "works well for use",
+      "correct": "functional",
+      "wrong": [
+        "acute",
+        "bare"
+      ],
+      "word": "functional"
+    },
+    {
+      "item_id": "mechanical",
+      "question": "made of moving parts",
+      "correct": "mechanical",
+      "wrong": [
+        "acute",
+        "bare"
+      ],
+      "word": "mechanical"
+    },
+    {
+      "item_id": "expert",
+      "question": "very skilled person",
+      "correct": "expert",
+      "wrong": [
+        "acute",
+        "bare"
+      ],
+      "word": "expert"
+    },
+    {
+      "item_id": "minute",
+      "question": "very very small",
+      "correct": "minute",
+      "wrong": [
+        "acute",
+        "bare"
+      ],
+      "word": "minute"
+    },
+    {
+      "item_id": "equivalent",
+      "question": "same in value or amount",
+      "correct": "equivalent",
+      "wrong": [
+        "acute",
+        "bare"
+      ],
+      "word": "equivalent"
+    },
+    {
+      "item_id": "unfair",
+      "question": "not treating people equally",
+      "correct": "unfair",
+      "wrong": [
+        "acute",
+        "bare"
+      ],
+      "word": "unfair"
+    },
+    {
+      "item_id": "prominent",
+      "question": "easy to see or notice",
+      "correct": "prominent",
+      "wrong": [
+        "acute",
+        "bare"
+      ],
+      "word": "prominent"
+    },
+    {
+      "item_id": "subtle",
+      "question": "hard to notice or see",
+      "correct": "subtle",
+      "wrong": [
+        "acute",
+        "bare"
+      ],
+      "word": "subtle"
+    },
+    {
+      "item_id": "capital",
+      "question": "most important or main",
+      "correct": "capital",
+      "wrong": [
+        "acute",
+        "bare"
+      ],
+      "word": "capital"
+    },
+    {
+      "item_id": "unhappy",
+      "question": "not feeling happy",
+      "correct": "unhappy",
+      "wrong": [
+        "acute",
+        "bare"
+      ],
+      "word": "unhappy"
+    },
+    {
+      "item_id": "aggressive",
+      "question": "ready to fight or attack",
+      "correct": "aggressive",
+      "wrong": [
+        "acute",
+        "bare"
+      ],
+      "word": "aggressive"
+    },
+    {
+      "item_id": "superior",
+      "question": "better or higher than others",
+      "correct": "superior",
+      "wrong": [
+        "acute",
+        "bare"
+      ],
+      "word": "superior"
+    },
+    {
+      "item_id": "painful",
+      "question": "causing hurt or pain",
+      "correct": "painful",
+      "wrong": [
+        "acute",
+        "bare"
+      ],
+      "word": "painful"
+    },
+    {
+      "item_id": "imperial",
+      "question": "relating to an empire or emperor",
+      "correct": "imperial",
+      "wrong": [
+        "acute",
+        "bare"
+      ],
+      "word": "imperial"
+    },
+    {
+      "item_id": "spectacular",
+      "question": "very beautiful and amazing",
+      "correct": "spectacular",
+      "wrong": [
+        "acute",
+        "bare"
+      ],
+      "word": "spectacular"
+    },
+    {
+      "item_id": "artificial",
+      "question": "made by people not nature",
+      "correct": "artificial",
+      "wrong": [
+        "acute",
+        "bare"
+      ],
+      "word": "artificial"
+    },
+    {
+      "item_id": "oral",
+      "question": "spoken not written down",
+      "correct": "oral",
+      "wrong": [
+        "acute",
+        "bare"
+      ],
+      "word": "oral"
+    },
+    {
+      "item_id": "spare",
+      "question": "extra one kept for later",
+      "correct": "spare",
+      "wrong": [
+        "acute",
+        "bare"
+      ],
+      "word": "spare"
+    },
+    {
+      "item_id": "intelligent",
+      "question": "quick to understand and learn",
+      "correct": "intelligent",
+      "wrong": [
+        "acute",
+        "bare"
+      ],
+      "word": "intelligent"
+    },
+    {
+      "item_id": "explicit",
+      "question": "clear and direct",
+      "correct": "explicit",
+      "wrong": [
+        "acute",
+        "bare"
+      ],
+      "word": "explicit"
+    },
+    {
+      "item_id": "hungry",
+      "question": "wanting food now",
+      "correct": "hungry",
+      "wrong": [
+        "acute",
+        "bare"
+      ],
+      "word": "hungry"
+    },
+    {
+      "item_id": "objective",
+      "question": "fair and not personal",
+      "correct": "objective",
+      "wrong": [
+        "acute",
+        "bare"
+      ],
+      "word": "objective"
+    },
+    {
+      "item_id": "subject",
+      "question": "based on personal feeling",
+      "correct": "subject",
+      "wrong": [
+        "acute",
+        "bare"
+      ],
+      "word": "subject"
+    },
+    {
+      "item_id": "romantic",
+      "question": "full of love and feeling",
+      "correct": "romantic",
+      "wrong": [
+        "acute",
+        "bare"
+      ],
+      "word": "romantic"
+    },
+    {
+      "item_id": "parttime",
+      "question": "job done for only some hours",
+      "correct": "part-time",
+      "wrong": [
+        "acute",
+        "bare"
+      ],
+      "word": "part-time"
+    },
+    {
+      "item_id": "workingclass",
+      "question": "people who work with their hands",
+      "correct": "working-class",
+      "wrong": [
+        "acute",
+        "bare"
+      ],
+      "word": "working-class"
+    },
+    {
+      "item_id": "legislative",
+      "question": "having power to make laws",
+      "correct": "legislative",
+      "wrong": [
+        "acute",
+        "bare"
+      ],
+      "word": "legislative"
+    },
+    {
+      "item_id": "nasty",
+      "question": "very unpleasant or mean",
+      "correct": "nasty",
+      "wrong": [
+        "acute",
+        "bare"
+      ],
+      "word": "nasty"
+    },
+    {
+      "item_id": "native",
+      "question": "born or grown in that place",
+      "correct": "native",
+      "wrong": [
+        "acute",
+        "bare"
+      ],
+      "word": "native"
+    },
+    {
+      "item_id": "amazing",
+      "question": "very surprising and great",
+      "correct": "amazing",
+      "wrong": [
+        "acute",
+        "bare"
+      ],
+      "word": "amazing"
+    },
+    {
+      "item_id": "comparable",
+      "question": "almost the same in size or value",
+      "correct": "comparable",
+      "wrong": [
+        "acute",
+        "bare"
+      ],
+      "word": "comparable"
+    },
+    {
+      "item_id": "successive",
+      "question": "happening one after another",
+      "correct": "successive",
+      "wrong": [
+        "acute",
+        "bare"
+      ],
+      "word": "successive"
+    },
+    {
+      "item_id": "loud",
+      "question": "making a lot of noise",
+      "correct": "loud",
+      "wrong": [
+        "acute",
+        "bare"
+      ],
+      "word": "loud"
+    },
+    {
+      "item_id": "unnecessary",
+      "question": "not needed or useful",
+      "correct": "unnecessary",
+      "wrong": [
+        "acute",
+        "bare"
+      ],
+      "word": "unnecessary"
+    }
+  ]
+}

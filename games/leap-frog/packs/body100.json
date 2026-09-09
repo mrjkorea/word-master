@@ -1,0 +1,1008 @@
+{
+  "pack_id": "body100",
+  "title": "Body & Health",
+  "module_id": "word_master",
+  "seconds": 15,
+  "items": [
+    {
+      "item_id": "head",
+      "question": "main or most important",
+      "correct": "head",
+      "wrong": [
+        "face",
+        "eye"
+      ],
+      "word": "head"
+    },
+    {
+      "item_id": "face",
+      "question": "the front of the head",
+      "correct": "face",
+      "wrong": [
+        "head",
+        "eye"
+      ],
+      "word": "face"
+    },
+    {
+      "item_id": "eye",
+      "question": "the part of the face we see with",
+      "correct": "eye",
+      "wrong": [
+        "head",
+        "face"
+      ],
+      "word": "eye"
+    },
+    {
+      "item_id": "ear",
+      "question": "body part for hearing",
+      "correct": "ear",
+      "wrong": [
+        "head",
+        "face"
+      ],
+      "word": "ear"
+    },
+    {
+      "item_id": "nose",
+      "question": "face part for smelling",
+      "correct": "nose",
+      "wrong": [
+        "head",
+        "face"
+      ],
+      "word": "nose"
+    },
+    {
+      "item_id": "mouth",
+      "question": "the opening on the face for eating and speaking",
+      "correct": "mouth",
+      "wrong": [
+        "head",
+        "face"
+      ],
+      "word": "mouth"
+    },
+    {
+      "item_id": "tooth",
+      "question": "hard white chewing bone",
+      "correct": "tooth",
+      "wrong": [
+        "head",
+        "face"
+      ],
+      "word": "tooth"
+    },
+    {
+      "item_id": "tongue",
+      "question": "tongue",
+      "correct": "tongue",
+      "wrong": [
+        "head",
+        "face"
+      ],
+      "word": "tongue"
+    },
+    {
+      "item_id": "lip",
+      "question": "soft edge of the mouth",
+      "correct": "lip",
+      "wrong": [
+        "head",
+        "face"
+      ],
+      "word": "lip"
+    },
+    {
+      "item_id": "cheek",
+      "question": "side of your face",
+      "correct": "cheek",
+      "wrong": [
+        "head",
+        "face"
+      ],
+      "word": "cheek"
+    },
+    {
+      "item_id": "hair",
+      "question": "thin thread on head",
+      "correct": "hair",
+      "wrong": [
+        "head",
+        "face"
+      ],
+      "word": "hair"
+    },
+    {
+      "item_id": "neck",
+      "question": "part between head and body",
+      "correct": "neck",
+      "wrong": [
+        "head",
+        "face"
+      ],
+      "word": "neck"
+    },
+    {
+      "item_id": "shoulder",
+      "question": "body part between neck and arm",
+      "correct": "shoulder",
+      "wrong": [
+        "head",
+        "face"
+      ],
+      "word": "shoulder"
+    },
+    {
+      "item_id": "arm",
+      "question": "body part between hand and shoulder",
+      "correct": "arm",
+      "wrong": [
+        "head",
+        "face"
+      ],
+      "word": "arm"
+    },
+    {
+      "item_id": "elbow",
+      "question": "elbow",
+      "correct": "elbow",
+      "wrong": [
+        "head",
+        "face"
+      ],
+      "word": "elbow"
+    },
+    {
+      "item_id": "wrist",
+      "question": "wrist",
+      "correct": "wrist",
+      "wrong": [
+        "head",
+        "face"
+      ],
+      "word": "wrist"
+    },
+    {
+      "item_id": "hand",
+      "question": "the part of the body at the end of the arm",
+      "correct": "hand",
+      "wrong": [
+        "head",
+        "face"
+      ],
+      "word": "hand"
+    },
+    {
+      "item_id": "finger",
+      "question": "part of the hand",
+      "correct": "finger",
+      "wrong": [
+        "head",
+        "face"
+      ],
+      "word": "finger"
+    },
+    {
+      "item_id": "thumb",
+      "question": "thumb",
+      "correct": "thumb",
+      "wrong": [
+        "head",
+        "face"
+      ],
+      "word": "thumb"
+    },
+    {
+      "item_id": "nail",
+      "question": "nail",
+      "correct": "nail",
+      "wrong": [
+        "head",
+        "face"
+      ],
+      "word": "nail"
+    },
+    {
+      "item_id": "chest",
+      "question": "big box for storing",
+      "correct": "chest",
+      "wrong": [
+        "head",
+        "face"
+      ],
+      "word": "chest"
+    },
+    {
+      "item_id": "back",
+      "question": "at the rear side",
+      "correct": "back",
+      "wrong": [
+        "head",
+        "face"
+      ],
+      "word": "back"
+    },
+    {
+      "item_id": "stomach",
+      "question": "place where food goes",
+      "correct": "stomach",
+      "wrong": [
+        "head",
+        "face"
+      ],
+      "word": "stomach"
+    },
+    {
+      "item_id": "waist",
+      "question": "waist",
+      "correct": "waist",
+      "wrong": [
+        "head",
+        "face"
+      ],
+      "word": "waist"
+    },
+    {
+      "item_id": "hip",
+      "question": "hip",
+      "correct": "hip",
+      "wrong": [
+        "head",
+        "face"
+      ],
+      "word": "hip"
+    },
+    {
+      "item_id": "leg",
+      "question": "a part of the body for walking",
+      "correct": "leg",
+      "wrong": [
+        "head",
+        "face"
+      ],
+      "word": "leg"
+    },
+    {
+      "item_id": "knee",
+      "question": "the bend in your leg",
+      "correct": "knee",
+      "wrong": [
+        "head",
+        "face"
+      ],
+      "word": "knee"
+    },
+    {
+      "item_id": "ankle",
+      "question": "ankle",
+      "correct": "ankle",
+      "wrong": [
+        "head",
+        "face"
+      ],
+      "word": "ankle"
+    },
+    {
+      "item_id": "foot",
+      "question": "the part of the body at the end of the leg",
+      "correct": "foot",
+      "wrong": [
+        "head",
+        "face"
+      ],
+      "word": "foot"
+    },
+    {
+      "item_id": "toe",
+      "question": "toe",
+      "correct": "toe",
+      "wrong": [
+        "head",
+        "face"
+      ],
+      "word": "toe"
+    },
+    {
+      "item_id": "skin",
+      "question": "the outer covering of the body",
+      "correct": "skin",
+      "wrong": [
+        "head",
+        "face"
+      ],
+      "word": "skin"
+    },
+    {
+      "item_id": "bone",
+      "question": "hard part inside you",
+      "correct": "bone",
+      "wrong": [
+        "head",
+        "face"
+      ],
+      "word": "bone"
+    },
+    {
+      "item_id": "muscle",
+      "question": "body part for strength",
+      "correct": "muscle",
+      "wrong": [
+        "head",
+        "face"
+      ],
+      "word": "muscle"
+    },
+    {
+      "item_id": "blood",
+      "question": "red liquid inside body",
+      "correct": "blood",
+      "wrong": [
+        "head",
+        "face"
+      ],
+      "word": "blood"
+    },
+    {
+      "item_id": "heart",
+      "question": "the organ that pumps blood",
+      "correct": "heart",
+      "wrong": [
+        "head",
+        "face"
+      ],
+      "word": "heart"
+    },
+    {
+      "item_id": "lung",
+      "question": "lung",
+      "correct": "lung",
+      "wrong": [
+        "head",
+        "face"
+      ],
+      "word": "lung"
+    },
+    {
+      "item_id": "brain",
+      "question": "the thinking part inside the head",
+      "correct": "brain",
+      "wrong": [
+        "head",
+        "face"
+      ],
+      "word": "brain"
+    },
+    {
+      "item_id": "liver",
+      "question": "liver",
+      "correct": "liver",
+      "wrong": [
+        "head",
+        "face"
+      ],
+      "word": "liver"
+    },
+    {
+      "item_id": "kidney",
+      "question": "kidney",
+      "correct": "kidney",
+      "wrong": [
+        "head",
+        "face"
+      ],
+      "word": "kidney"
+    },
+    {
+      "item_id": "nerve",
+      "question": "nerve",
+      "correct": "nerve",
+      "wrong": [
+        "head",
+        "face"
+      ],
+      "word": "nerve"
+    },
+    {
+      "item_id": "sick",
+      "question": "not feeling well",
+      "correct": "sick",
+      "wrong": [
+        "head",
+        "face"
+      ],
+      "word": "sick"
+    },
+    {
+      "item_id": "ill",
+      "question": "not healthy",
+      "correct": "ill",
+      "wrong": [
+        "head",
+        "face"
+      ],
+      "word": "ill"
+    },
+    {
+      "item_id": "fever",
+      "question": "fever",
+      "correct": "fever",
+      "wrong": [
+        "head",
+        "face"
+      ],
+      "word": "fever"
+    },
+    {
+      "item_id": "cough",
+      "question": "cough",
+      "correct": "cough",
+      "wrong": [
+        "head",
+        "face"
+      ],
+      "word": "cough"
+    },
+    {
+      "item_id": "cold",
+      "question": "very cool to touch",
+      "correct": "cold",
+      "wrong": [
+        "head",
+        "face"
+      ],
+      "word": "cold"
+    },
+    {
+      "item_id": "flu",
+      "question": "flu",
+      "correct": "flu",
+      "wrong": [
+        "head",
+        "face"
+      ],
+      "word": "flu"
+    },
+    {
+      "item_id": "pain",
+      "question": "a hurt feeling in the body",
+      "correct": "pain",
+      "wrong": [
+        "head",
+        "face"
+      ],
+      "word": "pain"
+    },
+    {
+      "item_id": "hurt",
+      "question": "cause pain or injury",
+      "correct": "hurt",
+      "wrong": [
+        "head",
+        "face"
+      ],
+      "word": "hurt"
+    },
+    {
+      "item_id": "ache",
+      "question": "ache",
+      "correct": "ache",
+      "wrong": [
+        "head",
+        "face"
+      ],
+      "word": "ache"
+    },
+    {
+      "item_id": "injury",
+      "question": "hurt or damage to the body",
+      "correct": "injury",
+      "wrong": [
+        "head",
+        "face"
+      ],
+      "word": "injury"
+    },
+    {
+      "item_id": "wound",
+      "question": "hurt and make a cut",
+      "correct": "wound",
+      "wrong": [
+        "head",
+        "face"
+      ],
+      "word": "wound"
+    },
+    {
+      "item_id": "cut",
+      "question": "a small open mark on skin",
+      "correct": "cut",
+      "wrong": [
+        "head",
+        "face"
+      ],
+      "word": "cut"
+    },
+    {
+      "item_id": "bruise",
+      "question": "bruise",
+      "correct": "bruise",
+      "wrong": [
+        "head",
+        "face"
+      ],
+      "word": "bruise"
+    },
+    {
+      "item_id": "burn",
+      "question": "to destroy with fire",
+      "correct": "burn",
+      "wrong": [
+        "head",
+        "face"
+      ],
+      "word": "burn"
+    },
+    {
+      "item_id": "fracture",
+      "question": "fracture",
+      "correct": "fracture",
+      "wrong": [
+        "head",
+        "face"
+      ],
+      "word": "fracture"
+    },
+    {
+      "item_id": "sprain",
+      "question": "sprain",
+      "correct": "sprain",
+      "wrong": [
+        "head",
+        "face"
+      ],
+      "word": "sprain"
+    },
+    {
+      "item_id": "allergy",
+      "question": "allergy",
+      "correct": "allergy",
+      "wrong": [
+        "head",
+        "face"
+      ],
+      "word": "allergy"
+    },
+    {
+      "item_id": "asthma",
+      "question": "asthma",
+      "correct": "asthma",
+      "wrong": [
+        "head",
+        "face"
+      ],
+      "word": "asthma"
+    },
+    {
+      "item_id": "diabetes",
+      "question": "diabetes",
+      "correct": "diabetes",
+      "wrong": [
+        "head",
+        "face"
+      ],
+      "word": "diabetes"
+    },
+    {
+      "item_id": "cancer",
+      "question": "serious illness in body",
+      "correct": "cancer",
+      "wrong": [
+        "head",
+        "face"
+      ],
+      "word": "cancer"
+    },
+    {
+      "item_id": "doctor",
+      "question": "medical person who helps sick people",
+      "correct": "doctor",
+      "wrong": [
+        "head",
+        "face"
+      ],
+      "word": "doctor"
+    },
+    {
+      "item_id": "nurse",
+      "question": "a helper for sick people",
+      "correct": "nurse",
+      "wrong": [
+        "head",
+        "face"
+      ],
+      "word": "nurse"
+    },
+    {
+      "item_id": "hospital",
+      "question": "place where doctors help sick people",
+      "correct": "hospital",
+      "wrong": [
+        "head",
+        "face"
+      ],
+      "word": "hospital"
+    },
+    {
+      "item_id": "clinic",
+      "question": "clinic",
+      "correct": "clinic",
+      "wrong": [
+        "head",
+        "face"
+      ],
+      "word": "clinic"
+    },
+    {
+      "item_id": "pharmacy",
+      "question": "pharmacy",
+      "correct": "pharmacy",
+      "wrong": [
+        "head",
+        "face"
+      ],
+      "word": "pharmacy"
+    },
+    {
+      "item_id": "medicine",
+      "question": "stuff that makes you better",
+      "correct": "medicine",
+      "wrong": [
+        "head",
+        "face"
+      ],
+      "word": "medicine"
+    },
+    {
+      "item_id": "pill",
+      "question": "pill",
+      "correct": "pill",
+      "wrong": [
+        "head",
+        "face"
+      ],
+      "word": "pill"
+    },
+    {
+      "item_id": "vaccine",
+      "question": "vaccine",
+      "correct": "vaccine",
+      "wrong": [
+        "head",
+        "face"
+      ],
+      "word": "vaccine"
+    },
+    {
+      "item_id": "injection",
+      "question": "injection",
+      "correct": "injection",
+      "wrong": [
+        "head",
+        "face"
+      ],
+      "word": "injection"
+    },
+    {
+      "item_id": "surgery",
+      "question": "surgery",
+      "correct": "surgery",
+      "wrong": [
+        "head",
+        "face"
+      ],
+      "word": "surgery"
+    },
+    {
+      "item_id": "checkup",
+      "question": "checkup",
+      "correct": "checkup",
+      "wrong": [
+        "head",
+        "face"
+      ],
+      "word": "checkup"
+    },
+    {
+      "item_id": "xray",
+      "question": "xray",
+      "correct": "xray",
+      "wrong": [
+        "head",
+        "face"
+      ],
+      "word": "xray"
+    },
+    {
+      "item_id": "bandage",
+      "question": "bandage",
+      "correct": "bandage",
+      "wrong": [
+        "head",
+        "face"
+      ],
+      "word": "bandage"
+    },
+    {
+      "item_id": "cast",
+      "question": "to throw something with your hand",
+      "correct": "cast",
+      "wrong": [
+        "head",
+        "face"
+      ],
+      "word": "cast"
+    },
+    {
+      "item_id": "crutch",
+      "question": "crutch",
+      "correct": "crutch",
+      "wrong": [
+        "head",
+        "face"
+      ],
+      "word": "crutch"
+    },
+    {
+      "item_id": "wheelchair",
+      "question": "wheelchair",
+      "correct": "wheelchair",
+      "wrong": [
+        "head",
+        "face"
+      ],
+      "word": "wheelchair"
+    },
+    {
+      "item_id": "ambulance",
+      "question": "ambulance",
+      "correct": "ambulance",
+      "wrong": [
+        "head",
+        "face"
+      ],
+      "word": "ambulance"
+    },
+    {
+      "item_id": "emergency",
+      "question": "sudden dangerous problem",
+      "correct": "emergency",
+      "wrong": [
+        "head",
+        "face"
+      ],
+      "word": "emergency"
+    },
+    {
+      "item_id": "healthy",
+      "question": "having good health",
+      "correct": "healthy",
+      "wrong": [
+        "head",
+        "face"
+      ],
+      "word": "healthy"
+    },
+    {
+      "item_id": "exercise",
+      "question": "physical activity to stay healthy",
+      "correct": "exercise",
+      "wrong": [
+        "head",
+        "face"
+      ],
+      "word": "exercise"
+    },
+    {
+      "item_id": "diet",
+      "question": "the food you eat",
+      "correct": "diet",
+      "wrong": [
+        "head",
+        "face"
+      ],
+      "word": "diet"
+    },
+    {
+      "item_id": "vitamin",
+      "question": "vitamin",
+      "correct": "vitamin",
+      "wrong": [
+        "head",
+        "face"
+      ],
+      "word": "vitamin"
+    },
+    {
+      "item_id": "protein",
+      "question": "food that builds muscle",
+      "correct": "protein",
+      "wrong": [
+        "head",
+        "face"
+      ],
+      "word": "protein"
+    },
+    {
+      "item_id": "calorie",
+      "question": "calorie",
+      "correct": "calorie",
+      "wrong": [
+        "head",
+        "face"
+      ],
+      "word": "calorie"
+    },
+    {
+      "item_id": "sleep",
+      "question": "rest you take at night",
+      "correct": "sleep",
+      "wrong": [
+        "head",
+        "face"
+      ],
+      "word": "sleep"
+    },
+    {
+      "item_id": "rest",
+      "question": "time to stop and relax",
+      "correct": "rest",
+      "wrong": [
+        "head",
+        "face"
+      ],
+      "word": "rest"
+    },
+    {
+      "item_id": "stress",
+      "question": "worry that feels heavy",
+      "correct": "stress",
+      "wrong": [
+        "head",
+        "face"
+      ],
+      "word": "stress"
+    },
+    {
+      "item_id": "relax",
+      "question": "to rest and feel calm",
+      "correct": "relax",
+      "wrong": [
+        "head",
+        "face"
+      ],
+      "word": "relax"
+    },
+    {
+      "item_id": "yoga",
+      "question": "yoga",
+      "correct": "yoga",
+      "wrong": [
+        "head",
+        "face"
+      ],
+      "word": "yoga"
+    },
+    {
+      "item_id": "stretch",
+      "question": "extend arms or legs",
+      "correct": "stretch",
+      "wrong": [
+        "head",
+        "face"
+      ],
+      "word": "stretch"
+    },
+    {
+      "item_id": "dentist",
+      "question": "dentist",
+      "correct": "dentist",
+      "wrong": [
+        "head",
+        "face"
+      ],
+      "word": "dentist"
+    },
+    {
+      "item_id": "toothbrush",
+      "question": "toothbrush",
+      "correct": "toothbrush",
+      "wrong": [
+        "head",
+        "face"
+      ],
+      "word": "toothbrush"
+    },
+    {
+      "item_id": "toothpaste",
+      "question": "toothpaste",
+      "correct": "toothpaste",
+      "wrong": [
+        "head",
+        "face"
+      ],
+      "word": "toothpaste"
+    },
+    {
+      "item_id": "soap",
+      "question": "soap",
+      "correct": "soap",
+      "wrong": [
+        "head",
+        "face"
+      ],
+      "word": "soap"
+    },
+    {
+      "item_id": "shampoo",
+      "question": "shampoo",
+      "correct": "shampoo",
+      "wrong": [
+        "head",
+        "face"
+      ],
+      "word": "shampoo"
+    },
+    {
+      "item_id": "towel",
+      "question": "towel",
+      "correct": "towel",
+      "wrong": [
+        "head",
+        "face"
+      ],
+      "word": "towel"
+    },
+    {
+      "item_id": "mirror",
+      "question": "glass that shows your face",
+      "correct": "mirror",
+      "wrong": [
+        "head",
+        "face"
+      ],
+      "word": "mirror"
+    },
+    {
+      "item_id": "scale",
+      "question": "a tool to measure weight",
+      "correct": "scale",
+      "wrong": [
+        "head",
+        "face"
+      ],
+      "word": "scale"
+    },
+    {
+      "item_id": "thermometer",
+      "question": "thermometer",
+      "correct": "thermometer",
+      "wrong": [
+        "head",
+        "face"
+      ],
+      "word": "thermometer"
+    },
+    {
+      "item_id": "mask",
+      "question": "mask",
+      "correct": "mask",
+      "wrong": [
+        "head",
+        "face"
+      ],
+      "word": "mask"
+    }
+  ]
+}

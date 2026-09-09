@@ -1,0 +1,1008 @@
+{
+  "pack_id": "adjectives100",
+  "title": "A1 Adjectives 1–100",
+  "module_id": "word_master",
+  "seconds": 15,
+  "items": [
+    {
+      "item_id": "last",
+      "question": "the one at the end",
+      "correct": "last",
+      "wrong": [
+        "other",
+        "new"
+      ],
+      "word": "last"
+    },
+    {
+      "item_id": "other",
+      "question": "not this one but another",
+      "correct": "other",
+      "wrong": [
+        "last",
+        "new"
+      ],
+      "word": "other"
+    },
+    {
+      "item_id": "new",
+      "question": "made or bought just now",
+      "correct": "new",
+      "wrong": [
+        "last",
+        "other"
+      ],
+      "word": "new"
+    },
+    {
+      "item_id": "good",
+      "question": "nice or pleasing to have",
+      "correct": "good",
+      "wrong": [
+        "last",
+        "other"
+      ],
+      "word": "good"
+    },
+    {
+      "item_id": "old",
+      "question": "having lived or existed long",
+      "correct": "old",
+      "wrong": [
+        "last",
+        "other"
+      ],
+      "word": "old"
+    },
+    {
+      "item_id": "great",
+      "question": "very good or excellent",
+      "correct": "great",
+      "wrong": [
+        "last",
+        "other"
+      ],
+      "word": "great"
+    },
+    {
+      "item_id": "high",
+      "question": "far above the ground",
+      "correct": "high",
+      "wrong": [
+        "last",
+        "other"
+      ],
+      "word": "high"
+    },
+    {
+      "item_id": "small",
+      "question": "little in size",
+      "correct": "small",
+      "wrong": [
+        "last",
+        "other"
+      ],
+      "word": "small"
+    },
+    {
+      "item_id": "different",
+      "question": "not the same",
+      "correct": "different",
+      "wrong": [
+        "last",
+        "other"
+      ],
+      "word": "different"
+    },
+    {
+      "item_id": "large",
+      "question": "big in size",
+      "correct": "large",
+      "wrong": [
+        "last",
+        "other"
+      ],
+      "word": "large"
+    },
+    {
+      "item_id": "local",
+      "question": "nearby or in the area",
+      "correct": "local",
+      "wrong": [
+        "last",
+        "other"
+      ],
+      "word": "local"
+    },
+    {
+      "item_id": "social",
+      "question": "about people together",
+      "correct": "social",
+      "wrong": [
+        "last",
+        "other"
+      ],
+      "word": "social"
+    },
+    {
+      "item_id": "long",
+      "question": "not short in length",
+      "correct": "long",
+      "wrong": [
+        "last",
+        "other"
+      ],
+      "word": "long"
+    },
+    {
+      "item_id": "important",
+      "question": "needed or very special",
+      "correct": "important",
+      "wrong": [
+        "last",
+        "other"
+      ],
+      "word": "important"
+    },
+    {
+      "item_id": "young",
+      "question": "not old, still little",
+      "correct": "young",
+      "wrong": [
+        "last",
+        "other"
+      ],
+      "word": "young"
+    },
+    {
+      "item_id": "national",
+      "question": "of one whole country",
+      "correct": "national",
+      "wrong": [
+        "last",
+        "other"
+      ],
+      "word": "national"
+    },
+    {
+      "item_id": "possible",
+      "question": "able to happen or be done",
+      "correct": "possible",
+      "wrong": [
+        "last",
+        "other"
+      ],
+      "word": "possible"
+    },
+    {
+      "item_id": "big",
+      "question": "large in size",
+      "correct": "big",
+      "wrong": [
+        "last",
+        "other"
+      ],
+      "word": "big"
+    },
+    {
+      "item_id": "right",
+      "question": "correct or true",
+      "correct": "right",
+      "wrong": [
+        "last",
+        "other"
+      ],
+      "word": "right"
+    },
+    {
+      "item_id": "early",
+      "question": "before the usual time",
+      "correct": "early",
+      "wrong": [
+        "last",
+        "other"
+      ],
+      "word": "early"
+    },
+    {
+      "item_id": "public",
+      "question": "open to everyone",
+      "correct": "public",
+      "wrong": [
+        "last",
+        "other"
+      ],
+      "word": "public"
+    },
+    {
+      "item_id": "only",
+      "question": "just one thing",
+      "correct": "only",
+      "wrong": [
+        "last",
+        "other"
+      ],
+      "word": "only"
+    },
+    {
+      "item_id": "able",
+      "question": "having the power to do",
+      "correct": "able",
+      "wrong": [
+        "last",
+        "other"
+      ],
+      "word": "able"
+    },
+    {
+      "item_id": "political",
+      "question": "about government and laws",
+      "correct": "political",
+      "wrong": [
+        "last",
+        "other"
+      ],
+      "word": "political"
+    },
+    {
+      "item_id": "particular",
+      "question": "one specific thing",
+      "correct": "particular",
+      "wrong": [
+        "last",
+        "other"
+      ],
+      "word": "particular"
+    },
+    {
+      "item_id": "full",
+      "question": "completely filled up",
+      "correct": "full",
+      "wrong": [
+        "last",
+        "other"
+      ],
+      "word": "full"
+    },
+    {
+      "item_id": "far",
+      "question": "a long distance away",
+      "correct": "far",
+      "wrong": [
+        "last",
+        "other"
+      ],
+      "word": "far"
+    },
+    {
+      "item_id": "late",
+      "question": "after the right time",
+      "correct": "late",
+      "wrong": [
+        "last",
+        "other"
+      ],
+      "word": "late"
+    },
+    {
+      "item_id": "available",
+      "question": "ready to be used",
+      "correct": "available",
+      "wrong": [
+        "last",
+        "other"
+      ],
+      "word": "available"
+    },
+    {
+      "item_id": "little",
+      "question": "very small in size",
+      "correct": "little",
+      "wrong": [
+        "last",
+        "other"
+      ],
+      "word": "little"
+    },
+    {
+      "item_id": "low",
+      "question": "near the ground",
+      "correct": "low",
+      "wrong": [
+        "last",
+        "other"
+      ],
+      "word": "low"
+    },
+    {
+      "item_id": "bad",
+      "question": "not good or nice",
+      "correct": "bad",
+      "wrong": [
+        "last",
+        "other"
+      ],
+      "word": "bad"
+    },
+    {
+      "item_id": "main",
+      "question": "most important one",
+      "correct": "main",
+      "wrong": [
+        "last",
+        "other"
+      ],
+      "word": "main"
+    },
+    {
+      "item_id": "major",
+      "question": "very important or big",
+      "correct": "major",
+      "wrong": [
+        "last",
+        "other"
+      ],
+      "word": "major"
+    },
+    {
+      "item_id": "economic",
+      "question": "about money and trade",
+      "correct": "economic",
+      "wrong": [
+        "last",
+        "other"
+      ],
+      "word": "economic"
+    },
+    {
+      "item_id": "general",
+      "question": "usual or common for many",
+      "correct": "general",
+      "wrong": [
+        "last",
+        "other"
+      ],
+      "word": "general"
+    },
+    {
+      "item_id": "real",
+      "question": "actually existing, not fake",
+      "correct": "real",
+      "wrong": [
+        "last",
+        "other"
+      ],
+      "word": "real"
+    },
+    {
+      "item_id": "likely",
+      "question": "probably going to happen",
+      "correct": "likely",
+      "wrong": [
+        "last",
+        "other"
+      ],
+      "word": "likely"
+    },
+    {
+      "item_id": "certain",
+      "question": "completely sure or true",
+      "correct": "certain",
+      "wrong": [
+        "last",
+        "other"
+      ],
+      "word": "certain"
+    },
+    {
+      "item_id": "special",
+      "question": "different and better than usual",
+      "correct": "special",
+      "wrong": [
+        "last",
+        "other"
+      ],
+      "word": "special"
+    },
+    {
+      "item_id": "difficult",
+      "question": "hard to do",
+      "correct": "difficult",
+      "wrong": [
+        "last",
+        "other"
+      ],
+      "word": "difficult"
+    },
+    {
+      "item_id": "international",
+      "question": "between many countries",
+      "correct": "international",
+      "wrong": [
+        "last",
+        "other"
+      ],
+      "word": "international"
+    },
+    {
+      "item_id": "clear",
+      "question": "easy to see through",
+      "correct": "clear",
+      "wrong": [
+        "last",
+        "other"
+      ],
+      "word": "clear"
+    },
+    {
+      "item_id": "sure",
+      "question": "feeling no doubt",
+      "correct": "sure",
+      "wrong": [
+        "last",
+        "other"
+      ],
+      "word": "sure"
+    },
+    {
+      "item_id": "black",
+      "question": "the darkest color",
+      "correct": "black",
+      "wrong": [
+        "last",
+        "other"
+      ],
+      "word": "black"
+    },
+    {
+      "item_id": "white",
+      "question": "color of snow",
+      "correct": "white",
+      "wrong": [
+        "last",
+        "other"
+      ],
+      "word": "white"
+    },
+    {
+      "item_id": "common",
+      "question": "seen very often",
+      "correct": "common",
+      "wrong": [
+        "last",
+        "other"
+      ],
+      "word": "common"
+    },
+    {
+      "item_id": "strong",
+      "question": "having great power",
+      "correct": "strong",
+      "wrong": [
+        "last",
+        "other"
+      ],
+      "word": "strong"
+    },
+    {
+      "item_id": "whole",
+      "question": "all of something",
+      "correct": "whole",
+      "wrong": [
+        "last",
+        "other"
+      ],
+      "word": "whole"
+    },
+    {
+      "item_id": "free",
+      "question": "not held or trapped",
+      "correct": "free",
+      "wrong": [
+        "last",
+        "other"
+      ],
+      "word": "free"
+    },
+    {
+      "item_id": "similar",
+      "question": "almost the same",
+      "correct": "similar",
+      "wrong": [
+        "last",
+        "other"
+      ],
+      "word": "similar"
+    },
+    {
+      "item_id": "necessary",
+      "question": "must be done",
+      "correct": "necessary",
+      "wrong": [
+        "last",
+        "other"
+      ],
+      "word": "necessary"
+    },
+    {
+      "item_id": "central",
+      "question": "in the middle",
+      "correct": "central",
+      "wrong": [
+        "last",
+        "other"
+      ],
+      "word": "central"
+    },
+    {
+      "item_id": "true",
+      "question": "correct and real",
+      "correct": "true",
+      "wrong": [
+        "last",
+        "other"
+      ],
+      "word": "true"
+    },
+    {
+      "item_id": "open",
+      "question": "not closed",
+      "correct": "open",
+      "wrong": [
+        "last",
+        "other"
+      ],
+      "word": "open"
+    },
+    {
+      "item_id": "short",
+      "question": "not long in length",
+      "correct": "short",
+      "wrong": [
+        "last",
+        "other"
+      ],
+      "word": "short"
+    },
+    {
+      "item_id": "personal",
+      "question": "belonging to one person",
+      "correct": "personal",
+      "wrong": [
+        "last",
+        "other"
+      ],
+      "word": "personal"
+    },
+    {
+      "item_id": "single",
+      "question": "only one in number",
+      "correct": "single",
+      "wrong": [
+        "last",
+        "other"
+      ],
+      "word": "single"
+    },
+    {
+      "item_id": "easy",
+      "question": "not hard to do",
+      "correct": "easy",
+      "wrong": [
+        "last",
+        "other"
+      ],
+      "word": "easy"
+    },
+    {
+      "item_id": "private",
+      "question": "not open to everyone",
+      "correct": "private",
+      "wrong": [
+        "last",
+        "other"
+      ],
+      "word": "private"
+    },
+    {
+      "item_id": "financial",
+      "question": "about money matters",
+      "correct": "financial",
+      "wrong": [
+        "last",
+        "other"
+      ],
+      "word": "financial"
+    },
+    {
+      "item_id": "poor",
+      "question": "having very little money",
+      "correct": "poor",
+      "wrong": [
+        "last",
+        "other"
+      ],
+      "word": "poor"
+    },
+    {
+      "item_id": "foreign",
+      "question": "from another country",
+      "correct": "foreign",
+      "wrong": [
+        "last",
+        "other"
+      ],
+      "word": "foreign"
+    },
+    {
+      "item_id": "human",
+      "question": "of or like people",
+      "correct": "human",
+      "wrong": [
+        "last",
+        "other"
+      ],
+      "word": "human"
+    },
+    {
+      "item_id": "simple",
+      "question": "easy and not complicated",
+      "correct": "simple",
+      "wrong": [
+        "last",
+        "other"
+      ],
+      "word": "simple"
+    },
+    {
+      "item_id": "recent",
+      "question": "happened not long ago",
+      "correct": "recent",
+      "wrong": [
+        "last",
+        "other"
+      ],
+      "word": "recent"
+    },
+    {
+      "item_id": "wide",
+      "question": "measuring a lot from side to side",
+      "correct": "wide",
+      "wrong": [
+        "last",
+        "other"
+      ],
+      "word": "wide"
+    },
+    {
+      "item_id": "various",
+      "question": "of several different kinds",
+      "correct": "various",
+      "wrong": [
+        "last",
+        "other"
+      ],
+      "word": "various"
+    },
+    {
+      "item_id": "due",
+      "question": "expected to happen at a certain time",
+      "correct": "due",
+      "wrong": [
+        "last",
+        "other"
+      ],
+      "word": "due"
+    },
+    {
+      "item_id": "hard",
+      "question": "not easy to press or break",
+      "correct": "hard",
+      "wrong": [
+        "last",
+        "other"
+      ],
+      "word": "hard"
+    },
+    {
+      "item_id": "royal",
+      "question": "of a king or queen",
+      "correct": "royal",
+      "wrong": [
+        "last",
+        "other"
+      ],
+      "word": "royal"
+    },
+    {
+      "item_id": "fine",
+      "question": "very good or nice",
+      "correct": "fine",
+      "wrong": [
+        "last",
+        "other"
+      ],
+      "word": "fine"
+    },
+    {
+      "item_id": "natural",
+      "question": "from nature, not made by people",
+      "correct": "natural",
+      "wrong": [
+        "last",
+        "other"
+      ],
+      "word": "natural"
+    },
+    {
+      "item_id": "wrong",
+      "question": "not correct or right",
+      "correct": "wrong",
+      "wrong": [
+        "last",
+        "other"
+      ],
+      "word": "wrong"
+    },
+    {
+      "item_id": "final",
+      "question": "last or coming at the end",
+      "correct": "final",
+      "wrong": [
+        "last",
+        "other"
+      ],
+      "word": "final"
+    },
+    {
+      "item_id": "following",
+      "question": "the one that comes next",
+      "correct": "following",
+      "wrong": [
+        "last",
+        "other"
+      ],
+      "word": "following"
+    },
+    {
+      "item_id": "present",
+      "question": "here right now",
+      "correct": "present",
+      "wrong": [
+        "last",
+        "other"
+      ],
+      "word": "present"
+    },
+    {
+      "item_id": "nice",
+      "question": "good and pleasant",
+      "correct": "nice",
+      "wrong": [
+        "last",
+        "other"
+      ],
+      "word": "nice"
+    },
+    {
+      "item_id": "modern",
+      "question": "new and up-to-date",
+      "correct": "modern",
+      "wrong": [
+        "last",
+        "other"
+      ],
+      "word": "modern"
+    },
+    {
+      "item_id": "close",
+      "question": "near in distance",
+      "correct": "close",
+      "wrong": [
+        "last",
+        "other"
+      ],
+      "word": "close"
+    },
+    {
+      "item_id": "current",
+      "question": "happening right now",
+      "correct": "current",
+      "wrong": [
+        "last",
+        "other"
+      ],
+      "word": "current"
+    },
+    {
+      "item_id": "legal",
+      "question": "allowed by the law",
+      "correct": "legal",
+      "wrong": [
+        "last",
+        "other"
+      ],
+      "word": "legal"
+    },
+    {
+      "item_id": "red",
+      "question": "the color of a strawberry",
+      "correct": "red",
+      "wrong": [
+        "last",
+        "other"
+      ],
+      "word": "red"
+    },
+    {
+      "item_id": "happy",
+      "question": "feeling very glad inside",
+      "correct": "happy",
+      "wrong": [
+        "last",
+        "other"
+      ],
+      "word": "happy"
+    },
+    {
+      "item_id": "concerned",
+      "question": "feeling worried about something",
+      "correct": "concerned",
+      "wrong": [
+        "last",
+        "other"
+      ],
+      "word": "concerned"
+    },
+    {
+      "item_id": "individual",
+      "question": "one single person",
+      "correct": "individual",
+      "wrong": [
+        "last",
+        "other"
+      ],
+      "word": "individual"
+    },
+    {
+      "item_id": "normal",
+      "question": "usual and expected",
+      "correct": "normal",
+      "wrong": [
+        "last",
+        "other"
+      ],
+      "word": "normal"
+    },
+    {
+      "item_id": "previous",
+      "question": "happening or coming before",
+      "correct": "previous",
+      "wrong": [
+        "last",
+        "other"
+      ],
+      "word": "previous"
+    },
+    {
+      "item_id": "serious",
+      "question": "not joking or playful",
+      "correct": "serious",
+      "wrong": [
+        "last",
+        "other"
+      ],
+      "word": "serious"
+    },
+    {
+      "item_id": "significant",
+      "question": "important and meaningful",
+      "correct": "significant",
+      "wrong": [
+        "last",
+        "other"
+      ],
+      "word": "significant"
+    },
+    {
+      "item_id": "prime",
+      "question": "best or first in order",
+      "correct": "prime",
+      "wrong": [
+        "last",
+        "other"
+      ],
+      "word": "prime"
+    },
+    {
+      "item_id": "industrial",
+      "question": "about making things in factories",
+      "correct": "industrial",
+      "wrong": [
+        "last",
+        "other"
+      ],
+      "word": "industrial"
+    },
+    {
+      "item_id": "sorry",
+      "question": "feeling bad about something",
+      "correct": "sorry",
+      "wrong": [
+        "last",
+        "other"
+      ],
+      "word": "sorry"
+    },
+    {
+      "item_id": "labour",
+      "question": "hard work with the body",
+      "correct": "labour",
+      "wrong": [
+        "last",
+        "other"
+      ],
+      "word": "labour"
+    },
+    {
+      "item_id": "left",
+      "question": "on the side opposite right",
+      "correct": "left",
+      "wrong": [
+        "last",
+        "other"
+      ],
+      "word": "left"
+    },
+    {
+      "item_id": "dead",
+      "question": "no longer living",
+      "correct": "dead",
+      "wrong": [
+        "last",
+        "other"
+      ],
+      "word": "dead"
+    },
+    {
+      "item_id": "specific",
+      "question": "one exact thing",
+      "correct": "specific",
+      "wrong": [
+        "last",
+        "other"
+      ],
+      "word": "specific"
+    },
+    {
+      "item_id": "total",
+      "question": "the whole amount",
+      "correct": "total",
+      "wrong": [
+        "last",
+        "other"
+      ],
+      "word": "total"
+    },
+    {
+      "item_id": "appropriate",
+      "question": "right for the time",
+      "correct": "appropriate",
+      "wrong": [
+        "last",
+        "other"
+      ],
+      "word": "appropriate"
+    },
+    {
+      "item_id": "military",
+      "question": "related to the army",
+      "correct": "military",
+      "wrong": [
+        "last",
+        "other"
+      ],
+      "word": "military"
+    }
+  ]
+}

@@ -1,0 +1,1008 @@
+{
+  "pack_id": "adjectives1000",
+  "title": "B2 Adjectives 901–1000",
+  "module_id": "word_master",
+  "seconds": 15,
+  "items": [
+    {
+      "item_id": "disastrous",
+      "question": "very badly going wrong",
+      "correct": "disastrous",
+      "wrong": [
+        "circular",
+        "overwhelming"
+      ],
+      "word": "disastrous"
+    },
+    {
+      "item_id": "circular",
+      "question": "shaped like a circle",
+      "correct": "circular",
+      "wrong": [
+        "disastrous",
+        "overwhelming"
+      ],
+      "word": "circular"
+    },
+    {
+      "item_id": "overwhelming",
+      "question": "too huge to handle",
+      "correct": "overwhelming",
+      "wrong": [
+        "disastrous",
+        "circular"
+      ],
+      "word": "overwhelming"
+    },
+    {
+      "item_id": "fantastic",
+      "question": "amazingly great and wonderful",
+      "correct": "fantastic",
+      "wrong": [
+        "disastrous",
+        "circular"
+      ],
+      "word": "fantastic"
+    },
+    {
+      "item_id": "grim",
+      "question": "dark and unhappy looking",
+      "correct": "grim",
+      "wrong": [
+        "disastrous",
+        "circular"
+      ],
+      "word": "grim"
+    },
+    {
+      "item_id": "thorough",
+      "question": "careful and complete",
+      "correct": "thorough",
+      "wrong": [
+        "disastrous",
+        "circular"
+      ],
+      "word": "thorough"
+    },
+    {
+      "item_id": "anonymous",
+      "question": "with no name shown",
+      "correct": "anonymous",
+      "wrong": [
+        "disastrous",
+        "circular"
+      ],
+      "word": "anonymous"
+    },
+    {
+      "item_id": "depressed",
+      "question": "feeling deeply very sad",
+      "correct": "depressed",
+      "wrong": [
+        "disastrous",
+        "circular"
+      ],
+      "word": "depressed"
+    },
+    {
+      "item_id": "largescale",
+      "question": "very big in size",
+      "correct": "large-scale",
+      "wrong": [
+        "disastrous",
+        "circular"
+      ],
+      "word": "large-scale"
+    },
+    {
+      "item_id": "agreed",
+      "question": "both saying yes",
+      "correct": "agreed",
+      "wrong": [
+        "disastrous",
+        "circular"
+      ],
+      "word": "agreed"
+    },
+    {
+      "item_id": "atomic",
+      "question": "about tiny atoms",
+      "correct": "atomic",
+      "wrong": [
+        "disastrous",
+        "circular"
+      ],
+      "word": "atomic"
+    },
+    {
+      "item_id": "wicked",
+      "question": "very mean and bad",
+      "correct": "wicked",
+      "wrong": [
+        "disastrous",
+        "circular"
+      ],
+      "word": "wicked"
+    },
+    {
+      "item_id": "varying",
+      "question": "not all the same",
+      "correct": "varying",
+      "wrong": [
+        "disastrous",
+        "circular"
+      ],
+      "word": "varying"
+    },
+    {
+      "item_id": "ashamed",
+      "question": "sorry and embarrassed",
+      "correct": "ashamed",
+      "wrong": [
+        "disastrous",
+        "circular"
+      ],
+      "word": "ashamed"
+    },
+    {
+      "item_id": "coherent",
+      "question": "clear and fitting together",
+      "correct": "coherent",
+      "wrong": [
+        "disastrous",
+        "circular"
+      ],
+      "word": "coherent"
+    },
+    {
+      "item_id": "exotic",
+      "question": "unusual from far away",
+      "correct": "exotic",
+      "wrong": [
+        "disastrous",
+        "circular"
+      ],
+      "word": "exotic"
+    },
+    {
+      "item_id": "colourful",
+      "question": "full of many colors",
+      "correct": "colourful",
+      "wrong": [
+        "disastrous",
+        "circular"
+      ],
+      "word": "colourful"
+    },
+    {
+      "item_id": "arbitrary",
+      "question": "chosen with no reason",
+      "correct": "arbitrary",
+      "wrong": [
+        "disastrous",
+        "circular"
+      ],
+      "word": "arbitrary"
+    },
+    {
+      "item_id": "gold",
+      "question": "shiny yellow like metal",
+      "correct": "gold",
+      "wrong": [
+        "disastrous",
+        "circular"
+      ],
+      "word": "gold"
+    },
+    {
+      "item_id": "intimate",
+      "question": "close and private",
+      "correct": "intimate",
+      "wrong": [
+        "disastrous",
+        "circular"
+      ],
+      "word": "intimate"
+    },
+    {
+      "item_id": "shy",
+      "question": "quiet and a bit scared",
+      "correct": "shy",
+      "wrong": [
+        "disastrous",
+        "circular"
+      ],
+      "word": "shy"
+    },
+    {
+      "item_id": "delicious",
+      "question": "tasting very very good",
+      "correct": "delicious",
+      "wrong": [
+        "disastrous",
+        "circular"
+      ],
+      "word": "delicious"
+    },
+    {
+      "item_id": "unchanged",
+      "question": "still exactly the same",
+      "correct": "unchanged",
+      "wrong": [
+        "disastrous",
+        "circular"
+      ],
+      "word": "unchanged"
+    },
+    {
+      "item_id": "confidential",
+      "question": "secret and not shared",
+      "correct": "confidential",
+      "wrong": [
+        "disastrous",
+        "circular"
+      ],
+      "word": "confidential"
+    },
+    {
+      "item_id": "delightful",
+      "question": "very nice and pleasing",
+      "correct": "delightful",
+      "wrong": [
+        "disastrous",
+        "circular"
+      ],
+      "word": "delightful"
+    },
+    {
+      "item_id": "psychiatric",
+      "question": "about a mind doctor",
+      "correct": "psychiatric",
+      "wrong": [
+        "disastrous",
+        "circular"
+      ],
+      "word": "psychiatric"
+    },
+    {
+      "item_id": "aggregate",
+      "question": "all added together",
+      "correct": "aggregate",
+      "wrong": [
+        "disastrous",
+        "circular"
+      ],
+      "word": "aggregate"
+    },
+    {
+      "item_id": "disciplinary",
+      "question": "about rules and time-out",
+      "correct": "disciplinary",
+      "wrong": [
+        "disastrous",
+        "circular"
+      ],
+      "word": "disciplinary"
+    },
+    {
+      "item_id": "noisy",
+      "question": "making a lot of sound",
+      "correct": "noisy",
+      "wrong": [
+        "disastrous",
+        "circular"
+      ],
+      "word": "noisy"
+    },
+    {
+      "item_id": "lexical",
+      "question": "about the words themselves",
+      "correct": "lexical",
+      "wrong": [
+        "disastrous",
+        "circular"
+      ],
+      "word": "lexical"
+    },
+    {
+      "item_id": "autonomous",
+      "question": "working by itself",
+      "correct": "autonomous",
+      "wrong": [
+        "disastrous",
+        "circular"
+      ],
+      "word": "autonomous"
+    },
+    {
+      "item_id": "controlled",
+      "question": "kept from going wild",
+      "correct": "controlled",
+      "wrong": [
+        "disastrous",
+        "circular"
+      ],
+      "word": "controlled"
+    },
+    {
+      "item_id": "offensive",
+      "question": "rude and hurting feelings",
+      "correct": "offensive",
+      "wrong": [
+        "disastrous",
+        "circular"
+      ],
+      "word": "offensive"
+    },
+    {
+      "item_id": "evolutionary",
+      "question": "changing slowly over ages",
+      "correct": "evolutionary",
+      "wrong": [
+        "disastrous",
+        "circular"
+      ],
+      "word": "evolutionary"
+    },
+    {
+      "item_id": "glorious",
+      "question": "shining and wonderfully great",
+      "correct": "glorious",
+      "wrong": [
+        "disastrous",
+        "circular"
+      ],
+      "word": "glorious"
+    },
+    {
+      "item_id": "gradual",
+      "question": "slow little by little",
+      "correct": "gradual",
+      "wrong": [
+        "disastrous",
+        "circular"
+      ],
+      "word": "gradual"
+    },
+    {
+      "item_id": "continuing",
+      "question": "still going not stopping",
+      "correct": "continuing",
+      "wrong": [
+        "disastrous",
+        "circular"
+      ],
+      "word": "continuing"
+    },
+    {
+      "item_id": "formidable",
+      "question": "strong and a bit scary",
+      "correct": "formidable",
+      "wrong": [
+        "disastrous",
+        "circular"
+      ],
+      "word": "formidable"
+    },
+    {
+      "item_id": "dense",
+      "question": "packed very tightly together",
+      "correct": "dense",
+      "wrong": [
+        "disastrous",
+        "circular"
+      ],
+      "word": "dense"
+    },
+    {
+      "item_id": "outdoor",
+      "question": "outside not in a house",
+      "correct": "outdoor",
+      "wrong": [
+        "disastrous",
+        "circular"
+      ],
+      "word": "outdoor"
+    },
+    {
+      "item_id": "developed",
+      "question": "grown bigger and ready",
+      "correct": "developed",
+      "wrong": [
+        "disastrous",
+        "circular"
+      ],
+      "word": "developed"
+    },
+    {
+      "item_id": "bizarre",
+      "question": "very strange and weird",
+      "correct": "bizarre",
+      "wrong": [
+        "disastrous",
+        "circular"
+      ],
+      "word": "bizarre"
+    },
+    {
+      "item_id": "homeless",
+      "question": "having no home now",
+      "correct": "homeless",
+      "wrong": [
+        "disastrous",
+        "circular"
+      ],
+      "word": "homeless"
+    },
+    {
+      "item_id": "striking",
+      "question": "easy to notice strongly",
+      "correct": "striking",
+      "wrong": [
+        "disastrous",
+        "circular"
+      ],
+      "word": "striking"
+    },
+    {
+      "item_id": "embarrassed",
+      "question": "shy after a mistake",
+      "correct": "embarrassed",
+      "wrong": [
+        "disastrous",
+        "circular"
+      ],
+      "word": "embarrassed"
+    },
+    {
+      "item_id": "excess",
+      "question": "more than we need",
+      "correct": "excess",
+      "wrong": [
+        "disastrous",
+        "circular"
+      ],
+      "word": "excess"
+    },
+    {
+      "item_id": "devoted",
+      "question": "loving and always caring",
+      "correct": "devoted",
+      "wrong": [
+        "disastrous",
+        "circular"
+      ],
+      "word": "devoted"
+    },
+    {
+      "item_id": "driving",
+      "question": "strong and pushing hard",
+      "correct": "driving",
+      "wrong": [
+        "disastrous",
+        "circular"
+      ],
+      "word": "driving"
+    },
+    {
+      "item_id": "awake",
+      "question": "not sleeping eyes open",
+      "correct": "awake",
+      "wrong": [
+        "disastrous",
+        "circular"
+      ],
+      "word": "awake"
+    },
+    {
+      "item_id": "bored",
+      "question": "tired of nothing fun",
+      "correct": "bored",
+      "wrong": [
+        "disastrous",
+        "circular"
+      ],
+      "word": "bored"
+    },
+    {
+      "item_id": "imaginative",
+      "question": "good at new ideas",
+      "correct": "imaginative",
+      "wrong": [
+        "disastrous",
+        "circular"
+      ],
+      "word": "imaginative"
+    },
+    {
+      "item_id": "sunny",
+      "question": "full of bright sun",
+      "correct": "sunny",
+      "wrong": [
+        "disastrous",
+        "circular"
+      ],
+      "word": "sunny"
+    },
+    {
+      "item_id": "eventual",
+      "question": "happening at the end",
+      "correct": "eventual",
+      "wrong": [
+        "disastrous",
+        "circular"
+      ],
+      "word": "eventual"
+    },
+    {
+      "item_id": "organisational",
+      "question": "about planning group work",
+      "correct": "organisational",
+      "wrong": [
+        "disastrous",
+        "circular"
+      ],
+      "word": "organisational"
+    },
+    {
+      "item_id": "civilian",
+      "question": "ordinary not a soldier",
+      "correct": "civilian",
+      "wrong": [
+        "disastrous",
+        "circular"
+      ],
+      "word": "civilian"
+    },
+    {
+      "item_id": "foolish",
+      "question": "silly not wise",
+      "correct": "foolish",
+      "wrong": [
+        "disastrous",
+        "circular"
+      ],
+      "word": "foolish"
+    },
+    {
+      "item_id": "spontaneous",
+      "question": "sudden with no plan",
+      "correct": "spontaneous",
+      "wrong": [
+        "disastrous",
+        "circular"
+      ],
+      "word": "spontaneous"
+    },
+    {
+      "item_id": "vivid",
+      "question": "very bright and clear",
+      "correct": "vivid",
+      "wrong": [
+        "disastrous",
+        "circular"
+      ],
+      "word": "vivid"
+    },
+    {
+      "item_id": "aesthetic",
+      "question": "about looking beautiful",
+      "correct": "aesthetic",
+      "wrong": [
+        "disastrous",
+        "circular"
+      ],
+      "word": "aesthetic"
+    },
+    {
+      "item_id": "appalling",
+      "question": "shockingly very bad",
+      "correct": "appalling",
+      "wrong": [
+        "disastrous",
+        "circular"
+      ],
+      "word": "appalling"
+    },
+    {
+      "item_id": "rude",
+      "question": "not polite or kind",
+      "correct": "rude",
+      "wrong": [
+        "disastrous",
+        "circular"
+      ],
+      "word": "rude"
+    },
+    {
+      "item_id": "amateur",
+      "question": "not a trained pro",
+      "correct": "amateur",
+      "wrong": [
+        "disastrous",
+        "circular"
+      ],
+      "word": "amateur"
+    },
+    {
+      "item_id": "mighty",
+      "question": "very strong and powerful",
+      "correct": "mighty",
+      "wrong": [
+        "disastrous",
+        "circular"
+      ],
+      "word": "mighty"
+    },
+    {
+      "item_id": "shocked",
+      "question": "very surprised and startled",
+      "correct": "shocked",
+      "wrong": [
+        "disastrous",
+        "circular"
+      ],
+      "word": "shocked"
+    },
+    {
+      "item_id": "vocational",
+      "question": "for learning a job",
+      "correct": "vocational",
+      "wrong": [
+        "disastrous",
+        "circular"
+      ],
+      "word": "vocational"
+    },
+    {
+      "item_id": "innovative",
+      "question": "new and clever idea",
+      "correct": "innovative",
+      "wrong": [
+        "disastrous",
+        "circular"
+      ],
+      "word": "innovative"
+    },
+    {
+      "item_id": "moderate",
+      "question": "in the middle amount",
+      "correct": "moderate",
+      "wrong": [
+        "disastrous",
+        "circular"
+      ],
+      "word": "moderate"
+    },
+    {
+      "item_id": "supporting",
+      "question": "helping hold something up",
+      "correct": "supporting",
+      "wrong": [
+        "disastrous",
+        "circular"
+      ],
+      "word": "supporting"
+    },
+    {
+      "item_id": "ministerial",
+      "question": "about a government minister",
+      "correct": "ministerial",
+      "wrong": [
+        "disastrous",
+        "circular"
+      ],
+      "word": "ministerial"
+    },
+    {
+      "item_id": "desired",
+      "question": "wanted very much",
+      "correct": "desired",
+      "wrong": [
+        "disastrous",
+        "circular"
+      ],
+      "word": "desired"
+    },
+    {
+      "item_id": "unwilling",
+      "question": "not wanting to do",
+      "correct": "unwilling",
+      "wrong": [
+        "disastrous",
+        "circular"
+      ],
+      "word": "unwilling"
+    },
+    {
+      "item_id": "meaningful",
+      "question": "full of real meaning",
+      "correct": "meaningful",
+      "wrong": [
+        "disastrous",
+        "circular"
+      ],
+      "word": "meaningful"
+    },
+    {
+      "item_id": "conceptual",
+      "question": "about ideas not things",
+      "correct": "conceptual",
+      "wrong": [
+        "disastrous",
+        "circular"
+      ],
+      "word": "conceptual"
+    },
+    {
+      "item_id": "grammatical",
+      "question": "following the language rules",
+      "correct": "grammatical",
+      "wrong": [
+        "disastrous",
+        "circular"
+      ],
+      "word": "grammatical"
+    },
+    {
+      "item_id": "integral",
+      "question": "needed as a part",
+      "correct": "integral",
+      "wrong": [
+        "disastrous",
+        "circular"
+      ],
+      "word": "integral"
+    },
+    {
+      "item_id": "constructive",
+      "question": "helpful and building up",
+      "correct": "constructive",
+      "wrong": [
+        "disastrous",
+        "circular"
+      ],
+      "word": "constructive"
+    },
+    {
+      "item_id": "unreasonable",
+      "question": "not fair or sensible",
+      "correct": "unreasonable",
+      "wrong": [
+        "disastrous",
+        "circular"
+      ],
+      "word": "unreasonable"
+    },
+    {
+      "item_id": "worldwide",
+      "question": "all over the world",
+      "correct": "worldwide",
+      "wrong": [
+        "disastrous",
+        "circular"
+      ],
+      "word": "worldwide"
+    },
+    {
+      "item_id": "frightened",
+      "question": "feeling very scared",
+      "correct": "frightened",
+      "wrong": [
+        "disastrous",
+        "circular"
+      ],
+      "word": "frightened"
+    },
+    {
+      "item_id": "immune",
+      "question": "safe from getting sick",
+      "correct": "immune",
+      "wrong": [
+        "disastrous",
+        "circular"
+      ],
+      "word": "immune"
+    },
+    {
+      "item_id": "injured",
+      "question": "hurt on the body",
+      "correct": "injured",
+      "wrong": [
+        "disastrous",
+        "circular"
+      ],
+      "word": "injured"
+    },
+    {
+      "item_id": "embarrassing",
+      "question": "making you feel silly",
+      "correct": "embarrassing",
+      "wrong": [
+        "disastrous",
+        "circular"
+      ],
+      "word": "embarrassing"
+    },
+    {
+      "item_id": "preferred",
+      "question": "liked more than others",
+      "correct": "preferred",
+      "wrong": [
+        "disastrous",
+        "circular"
+      ],
+      "word": "preferred"
+    },
+    {
+      "item_id": "vigorous",
+      "question": "full of strong energy",
+      "correct": "vigorous",
+      "wrong": [
+        "disastrous",
+        "circular"
+      ],
+      "word": "vigorous"
+    },
+    {
+      "item_id": "uneasy",
+      "question": "a little bit worried",
+      "correct": "uneasy",
+      "wrong": [
+        "disastrous",
+        "circular"
+      ],
+      "word": "uneasy"
+    },
+    {
+      "item_id": "faithful",
+      "question": "always true and loyal",
+      "correct": "faithful",
+      "wrong": [
+        "disastrous",
+        "circular"
+      ],
+      "word": "faithful"
+    },
+    {
+      "item_id": "sleeping",
+      "question": "resting with eyes closed",
+      "correct": "sleeping",
+      "wrong": [
+        "disastrous",
+        "circular"
+      ],
+      "word": "sleeping"
+    },
+    {
+      "item_id": "allied",
+      "question": "joined as helping friends",
+      "correct": "allied",
+      "wrong": [
+        "disastrous",
+        "circular"
+      ],
+      "word": "allied"
+    },
+    {
+      "item_id": "privileged",
+      "question": "getting a special chance",
+      "correct": "privileged",
+      "wrong": [
+        "disastrous",
+        "circular"
+      ],
+      "word": "privileged"
+    },
+    {
+      "item_id": "viable",
+      "question": "able to live and grow",
+      "correct": "viable",
+      "wrong": [
+        "disastrous",
+        "circular"
+      ],
+      "word": "viable"
+    },
+    {
+      "item_id": "mandatory",
+      "question": "you must do it",
+      "correct": "mandatory",
+      "wrong": [
+        "disastrous",
+        "circular"
+      ],
+      "word": "mandatory"
+    },
+    {
+      "item_id": "indigenous",
+      "question": "from that place originally",
+      "correct": "indigenous",
+      "wrong": [
+        "disastrous",
+        "circular"
+      ],
+      "word": "indigenous"
+    },
+    {
+      "item_id": "absurd",
+      "question": "silly and not sensible",
+      "correct": "absurd",
+      "wrong": [
+        "disastrous",
+        "circular"
+      ],
+      "word": "absurd"
+    },
+    {
+      "item_id": "scared",
+      "question": "feeling afraid of something",
+      "correct": "scared",
+      "wrong": [
+        "disastrous",
+        "circular"
+      ],
+      "word": "scared"
+    },
+    {
+      "item_id": "optional",
+      "question": "you may choose it",
+      "correct": "optional",
+      "wrong": [
+        "disastrous",
+        "circular"
+      ],
+      "word": "optional"
+    },
+    {
+      "item_id": "unsuccessful",
+      "question": "did not work out",
+      "correct": "unsuccessful",
+      "wrong": [
+        "disastrous",
+        "circular"
+      ],
+      "word": "unsuccessful"
+    },
+    {
+      "item_id": "repeated",
+      "question": "done again and again",
+      "correct": "repeated",
+      "wrong": [
+        "disastrous",
+        "circular"
+      ],
+      "word": "repeated"
+    },
+    {
+      "item_id": "cooperative",
+      "question": "working together as helpers",
+      "correct": "co-operative",
+      "wrong": [
+        "disastrous",
+        "circular"
+      ],
+      "word": "co-operative"
+    },
+    {
+      "item_id": "geological",
+      "question": "about rocks and earth",
+      "correct": "geological",
+      "wrong": [
+        "disastrous",
+        "circular"
+      ],
+      "word": "geological"
+    },
+    {
+      "item_id": "inclined",
+      "question": "leaning to one side",
+      "correct": "inclined",
+      "wrong": [
+        "disastrous",
+        "circular"
+      ],
+      "word": "inclined"
+    }
+  ]
+}

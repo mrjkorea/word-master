@@ -1,0 +1,1008 @@
+{
+  "pack_id": "town100",
+  "title": "Town & Places",
+  "module_id": "word_master",
+  "seconds": 15,
+  "items": [
+    {
+      "item_id": "town",
+      "question": "small place with houses",
+      "correct": "town",
+      "wrong": [
+        "city",
+        "street"
+      ],
+      "word": "town"
+    },
+    {
+      "item_id": "city",
+      "question": "a big town with many people",
+      "correct": "city",
+      "wrong": [
+        "town",
+        "street"
+      ],
+      "word": "city"
+    },
+    {
+      "item_id": "street",
+      "question": "a road in a city or town",
+      "correct": "street",
+      "wrong": [
+        "town",
+        "city"
+      ],
+      "word": "street"
+    },
+    {
+      "item_id": "road",
+      "question": "a path for cars",
+      "correct": "road",
+      "wrong": [
+        "town",
+        "city"
+      ],
+      "word": "road"
+    },
+    {
+      "item_id": "avenue",
+      "question": "avenue",
+      "correct": "avenue",
+      "wrong": [
+        "town",
+        "city"
+      ],
+      "word": "avenue"
+    },
+    {
+      "item_id": "lane",
+      "question": "narrow road for travel",
+      "correct": "lane",
+      "wrong": [
+        "town",
+        "city"
+      ],
+      "word": "lane"
+    },
+    {
+      "item_id": "alley",
+      "question": "alley",
+      "correct": "alley",
+      "wrong": [
+        "town",
+        "city"
+      ],
+      "word": "alley"
+    },
+    {
+      "item_id": "block",
+      "question": "wooden toy cube",
+      "correct": "block",
+      "wrong": [
+        "town",
+        "city"
+      ],
+      "word": "block"
+    },
+    {
+      "item_id": "corner",
+      "question": "where two walls meet",
+      "correct": "corner",
+      "wrong": [
+        "town",
+        "city"
+      ],
+      "word": "corner"
+    },
+    {
+      "item_id": "crosswalk",
+      "question": "crosswalk",
+      "correct": "crosswalk",
+      "wrong": [
+        "town",
+        "city"
+      ],
+      "word": "crosswalk"
+    },
+    {
+      "item_id": "trafficlight",
+      "question": "traffic light",
+      "correct": "traffic light",
+      "wrong": [
+        "town",
+        "city"
+      ],
+      "word": "traffic light"
+    },
+    {
+      "item_id": "sign",
+      "question": "a board with directions",
+      "correct": "sign",
+      "wrong": [
+        "town",
+        "city"
+      ],
+      "word": "sign"
+    },
+    {
+      "item_id": "sidewalk",
+      "question": "sidewalk",
+      "correct": "sidewalk",
+      "wrong": [
+        "town",
+        "city"
+      ],
+      "word": "sidewalk"
+    },
+    {
+      "item_id": "pavement",
+      "question": "pavement",
+      "correct": "pavement",
+      "wrong": [
+        "town",
+        "city"
+      ],
+      "word": "pavement"
+    },
+    {
+      "item_id": "bridge",
+      "question": "a path over water",
+      "correct": "bridge",
+      "wrong": [
+        "town",
+        "city"
+      ],
+      "word": "bridge"
+    },
+    {
+      "item_id": "tunnel",
+      "question": "tunnel",
+      "correct": "tunnel",
+      "wrong": [
+        "town",
+        "city"
+      ],
+      "word": "tunnel"
+    },
+    {
+      "item_id": "highway",
+      "question": "highway",
+      "correct": "highway",
+      "wrong": [
+        "town",
+        "city"
+      ],
+      "word": "highway"
+    },
+    {
+      "item_id": "intersection",
+      "question": "intersection",
+      "correct": "intersection",
+      "wrong": [
+        "town",
+        "city"
+      ],
+      "word": "intersection"
+    },
+    {
+      "item_id": "roundabout",
+      "question": "roundabout",
+      "correct": "roundabout",
+      "wrong": [
+        "town",
+        "city"
+      ],
+      "word": "roundabout"
+    },
+    {
+      "item_id": "parking",
+      "question": "parking",
+      "correct": "parking",
+      "wrong": [
+        "town",
+        "city"
+      ],
+      "word": "parking"
+    },
+    {
+      "item_id": "bank",
+      "question": "a place to keep money",
+      "correct": "bank",
+      "wrong": [
+        "town",
+        "city"
+      ],
+      "word": "bank"
+    },
+    {
+      "item_id": "atm",
+      "question": "atm",
+      "correct": "atm",
+      "wrong": [
+        "town",
+        "city"
+      ],
+      "word": "atm"
+    },
+    {
+      "item_id": "pharmacy",
+      "question": "pharmacy",
+      "correct": "pharmacy",
+      "wrong": [
+        "town",
+        "city"
+      ],
+      "word": "pharmacy"
+    },
+    {
+      "item_id": "postoffice",
+      "question": "post office",
+      "correct": "post office",
+      "wrong": [
+        "town",
+        "city"
+      ],
+      "word": "post office"
+    },
+    {
+      "item_id": "library",
+      "question": "place with many books",
+      "correct": "library",
+      "wrong": [
+        "town",
+        "city"
+      ],
+      "word": "library"
+    },
+    {
+      "item_id": "museum",
+      "question": "a place with old things to see",
+      "correct": "museum",
+      "wrong": [
+        "town",
+        "city"
+      ],
+      "word": "museum"
+    },
+    {
+      "item_id": "theater",
+      "question": "theater",
+      "correct": "theater",
+      "wrong": [
+        "town",
+        "city"
+      ],
+      "word": "theater"
+    },
+    {
+      "item_id": "cinema",
+      "question": "cinema",
+      "correct": "cinema",
+      "wrong": [
+        "town",
+        "city"
+      ],
+      "word": "cinema"
+    },
+    {
+      "item_id": "mall",
+      "question": "mall",
+      "correct": "mall",
+      "wrong": [
+        "town",
+        "city"
+      ],
+      "word": "mall"
+    },
+    {
+      "item_id": "market",
+      "question": "a place to buy and sell things",
+      "correct": "market",
+      "wrong": [
+        "town",
+        "city"
+      ],
+      "word": "market"
+    },
+    {
+      "item_id": "supermarket",
+      "question": "supermarket",
+      "correct": "supermarket",
+      "wrong": [
+        "town",
+        "city"
+      ],
+      "word": "supermarket"
+    },
+    {
+      "item_id": "conveniencestore",
+      "question": "convenience store",
+      "correct": "convenience store",
+      "wrong": [
+        "town",
+        "city"
+      ],
+      "word": "convenience store"
+    },
+    {
+      "item_id": "bakery",
+      "question": "bakery",
+      "correct": "bakery",
+      "wrong": [
+        "town",
+        "city"
+      ],
+      "word": "bakery"
+    },
+    {
+      "item_id": "butcher",
+      "question": "butcher",
+      "correct": "butcher",
+      "wrong": [
+        "town",
+        "city"
+      ],
+      "word": "butcher"
+    },
+    {
+      "item_id": "florist",
+      "question": "florist",
+      "correct": "florist",
+      "wrong": [
+        "town",
+        "city"
+      ],
+      "word": "florist"
+    },
+    {
+      "item_id": "bookstore",
+      "question": "bookstore",
+      "correct": "bookstore",
+      "wrong": [
+        "town",
+        "city"
+      ],
+      "word": "bookstore"
+    },
+    {
+      "item_id": "hairsalon",
+      "question": "hair salon",
+      "correct": "hair salon",
+      "wrong": [
+        "town",
+        "city"
+      ],
+      "word": "hair salon"
+    },
+    {
+      "item_id": "barber",
+      "question": "barber",
+      "correct": "barber",
+      "wrong": [
+        "town",
+        "city"
+      ],
+      "word": "barber"
+    },
+    {
+      "item_id": "laundry",
+      "question": "laundry",
+      "correct": "laundry",
+      "wrong": [
+        "town",
+        "city"
+      ],
+      "word": "laundry"
+    },
+    {
+      "item_id": "drycleaner",
+      "question": "dry cleaner",
+      "correct": "dry cleaner",
+      "wrong": [
+        "town",
+        "city"
+      ],
+      "word": "dry cleaner"
+    },
+    {
+      "item_id": "hospital",
+      "question": "place where doctors help sick people",
+      "correct": "hospital",
+      "wrong": [
+        "town",
+        "city"
+      ],
+      "word": "hospital"
+    },
+    {
+      "item_id": "clinic",
+      "question": "clinic",
+      "correct": "clinic",
+      "wrong": [
+        "town",
+        "city"
+      ],
+      "word": "clinic"
+    },
+    {
+      "item_id": "policestation",
+      "question": "police station",
+      "correct": "police station",
+      "wrong": [
+        "town",
+        "city"
+      ],
+      "word": "police station"
+    },
+    {
+      "item_id": "firestation",
+      "question": "fire station",
+      "correct": "fire station",
+      "wrong": [
+        "town",
+        "city"
+      ],
+      "word": "fire station"
+    },
+    {
+      "item_id": "cityhall",
+      "question": "city hall",
+      "correct": "city hall",
+      "wrong": [
+        "town",
+        "city"
+      ],
+      "word": "city hall"
+    },
+    {
+      "item_id": "courthouse",
+      "question": "courthouse",
+      "correct": "courthouse",
+      "wrong": [
+        "town",
+        "city"
+      ],
+      "word": "courthouse"
+    },
+    {
+      "item_id": "prison",
+      "question": "place for locked-up people",
+      "correct": "prison",
+      "wrong": [
+        "town",
+        "city"
+      ],
+      "word": "prison"
+    },
+    {
+      "item_id": "embassy",
+      "question": "embassy",
+      "correct": "embassy",
+      "wrong": [
+        "town",
+        "city"
+      ],
+      "word": "embassy"
+    },
+    {
+      "item_id": "church",
+      "question": "a building for prayer",
+      "correct": "church",
+      "wrong": [
+        "town",
+        "city"
+      ],
+      "word": "church"
+    },
+    {
+      "item_id": "temple",
+      "question": "temple",
+      "correct": "temple",
+      "wrong": [
+        "town",
+        "city"
+      ],
+      "word": "temple"
+    },
+    {
+      "item_id": "mosque",
+      "question": "mosque",
+      "correct": "mosque",
+      "wrong": [
+        "town",
+        "city"
+      ],
+      "word": "mosque"
+    },
+    {
+      "item_id": "park",
+      "question": "a place with grass and trees to play",
+      "correct": "park",
+      "wrong": [
+        "town",
+        "city"
+      ],
+      "word": "park"
+    },
+    {
+      "item_id": "playground",
+      "question": "playground",
+      "correct": "playground",
+      "wrong": [
+        "town",
+        "city"
+      ],
+      "word": "playground"
+    },
+    {
+      "item_id": "fountain",
+      "question": "fountain",
+      "correct": "fountain",
+      "wrong": [
+        "town",
+        "city"
+      ],
+      "word": "fountain"
+    },
+    {
+      "item_id": "statue",
+      "question": "statue",
+      "correct": "statue",
+      "wrong": [
+        "town",
+        "city"
+      ],
+      "word": "statue"
+    },
+    {
+      "item_id": "monument",
+      "question": "monument",
+      "correct": "monument",
+      "wrong": [
+        "town",
+        "city"
+      ],
+      "word": "monument"
+    },
+    {
+      "item_id": "square",
+      "question": "having four equal sides",
+      "correct": "square",
+      "wrong": [
+        "town",
+        "city"
+      ],
+      "word": "square"
+    },
+    {
+      "item_id": "plaza",
+      "question": "plaza",
+      "correct": "plaza",
+      "wrong": [
+        "town",
+        "city"
+      ],
+      "word": "plaza"
+    },
+    {
+      "item_id": "harbor",
+      "question": "harbor",
+      "correct": "harbor",
+      "wrong": [
+        "town",
+        "city"
+      ],
+      "word": "harbor"
+    },
+    {
+      "item_id": "port",
+      "question": "place where ships stop",
+      "correct": "port",
+      "wrong": [
+        "town",
+        "city"
+      ],
+      "word": "port"
+    },
+    {
+      "item_id": "airport",
+      "question": "airport",
+      "correct": "airport",
+      "wrong": [
+        "town",
+        "city"
+      ],
+      "word": "airport"
+    },
+    {
+      "item_id": "trainstation",
+      "question": "train station",
+      "correct": "train station",
+      "wrong": [
+        "town",
+        "city"
+      ],
+      "word": "train station"
+    },
+    {
+      "item_id": "busstop",
+      "question": "bus stop",
+      "correct": "bus stop",
+      "wrong": [
+        "town",
+        "city"
+      ],
+      "word": "bus stop"
+    },
+    {
+      "item_id": "subway",
+      "question": "subway",
+      "correct": "subway",
+      "wrong": [
+        "town",
+        "city"
+      ],
+      "word": "subway"
+    },
+    {
+      "item_id": "taxistand",
+      "question": "taxi stand",
+      "correct": "taxi stand",
+      "wrong": [
+        "town",
+        "city"
+      ],
+      "word": "taxi stand"
+    },
+    {
+      "item_id": "gasstation",
+      "question": "gas station",
+      "correct": "gas station",
+      "wrong": [
+        "town",
+        "city"
+      ],
+      "word": "gas station"
+    },
+    {
+      "item_id": "garage",
+      "question": "garage",
+      "correct": "garage",
+      "wrong": [
+        "town",
+        "city"
+      ],
+      "word": "garage"
+    },
+    {
+      "item_id": "hotel",
+      "question": "a building where people stay",
+      "correct": "hotel",
+      "wrong": [
+        "town",
+        "city"
+      ],
+      "word": "hotel"
+    },
+    {
+      "item_id": "motel",
+      "question": "motel",
+      "correct": "motel",
+      "wrong": [
+        "town",
+        "city"
+      ],
+      "word": "motel"
+    },
+    {
+      "item_id": "hostel",
+      "question": "hostel",
+      "correct": "hostel",
+      "wrong": [
+        "town",
+        "city"
+      ],
+      "word": "hostel"
+    },
+    {
+      "item_id": "restaurant",
+      "question": "place that serves meals",
+      "correct": "restaurant",
+      "wrong": [
+        "town",
+        "city"
+      ],
+      "word": "restaurant"
+    },
+    {
+      "item_id": "cafe",
+      "question": "cafe",
+      "correct": "cafe",
+      "wrong": [
+        "town",
+        "city"
+      ],
+      "word": "cafe"
+    },
+    {
+      "item_id": "bar",
+      "question": "a long straight piece of metal or wood",
+      "correct": "bar",
+      "wrong": [
+        "town",
+        "city"
+      ],
+      "word": "bar"
+    },
+    {
+      "item_id": "pub",
+      "question": "place for drinks and food",
+      "correct": "pub",
+      "wrong": [
+        "town",
+        "city"
+      ],
+      "word": "pub"
+    },
+    {
+      "item_id": "nightclub",
+      "question": "nightclub",
+      "correct": "nightclub",
+      "wrong": [
+        "town",
+        "city"
+      ],
+      "word": "nightclub"
+    },
+    {
+      "item_id": "office",
+      "question": "a room for doing work",
+      "correct": "office",
+      "wrong": [
+        "town",
+        "city"
+      ],
+      "word": "office"
+    },
+    {
+      "item_id": "factory",
+      "question": "building where things are made",
+      "correct": "factory",
+      "wrong": [
+        "town",
+        "city"
+      ],
+      "word": "factory"
+    },
+    {
+      "item_id": "warehouse",
+      "question": "warehouse",
+      "correct": "warehouse",
+      "wrong": [
+        "town",
+        "city"
+      ],
+      "word": "warehouse"
+    },
+    {
+      "item_id": "construction",
+      "question": "building something new",
+      "correct": "construction",
+      "wrong": [
+        "town",
+        "city"
+      ],
+      "word": "construction"
+    },
+    {
+      "item_id": "building",
+      "question": "big place with walls and roof",
+      "correct": "building",
+      "wrong": [
+        "town",
+        "city"
+      ],
+      "word": "building"
+    },
+    {
+      "item_id": "apartment",
+      "question": "apartment",
+      "correct": "apartment",
+      "wrong": [
+        "town",
+        "city"
+      ],
+      "word": "apartment"
+    },
+    {
+      "item_id": "house",
+      "question": "a building where people live",
+      "correct": "house",
+      "wrong": [
+        "town",
+        "city"
+      ],
+      "word": "house"
+    },
+    {
+      "item_id": "neighborhood",
+      "question": "neighborhood",
+      "correct": "neighborhood",
+      "wrong": [
+        "town",
+        "city"
+      ],
+      "word": "neighborhood"
+    },
+    {
+      "item_id": "district",
+      "question": "an area of a city",
+      "correct": "district",
+      "wrong": [
+        "town",
+        "city"
+      ],
+      "word": "district"
+    },
+    {
+      "item_id": "downtown",
+      "question": "downtown",
+      "correct": "downtown",
+      "wrong": [
+        "town",
+        "city"
+      ],
+      "word": "downtown"
+    },
+    {
+      "item_id": "suburb",
+      "question": "suburb",
+      "correct": "suburb",
+      "wrong": [
+        "town",
+        "city"
+      ],
+      "word": "suburb"
+    },
+    {
+      "item_id": "village",
+      "question": "a small town in the countryside",
+      "correct": "village",
+      "wrong": [
+        "town",
+        "city"
+      ],
+      "word": "village"
+    },
+    {
+      "item_id": "countryside",
+      "question": "fields and quiet farms",
+      "correct": "countryside",
+      "wrong": [
+        "town",
+        "city"
+      ],
+      "word": "countryside"
+    },
+    {
+      "item_id": "rural",
+      "question": "of the countryside, not city",
+      "correct": "rural",
+      "wrong": [
+        "town",
+        "city"
+      ],
+      "word": "rural"
+    },
+    {
+      "item_id": "urban",
+      "question": "of a city or town",
+      "correct": "urban",
+      "wrong": [
+        "town",
+        "city"
+      ],
+      "word": "urban"
+    },
+    {
+      "item_id": "map",
+      "question": "drawing that shows places",
+      "correct": "map",
+      "wrong": [
+        "town",
+        "city"
+      ],
+      "word": "map"
+    },
+    {
+      "item_id": "direction",
+      "question": "the way something moves or faces",
+      "correct": "direction",
+      "wrong": [
+        "town",
+        "city"
+      ],
+      "word": "direction"
+    },
+    {
+      "item_id": "north",
+      "question": "the top direction on a map",
+      "correct": "north",
+      "wrong": [
+        "town",
+        "city"
+      ],
+      "word": "north"
+    },
+    {
+      "item_id": "south",
+      "question": "the direction toward the bottom",
+      "correct": "south",
+      "wrong": [
+        "town",
+        "city"
+      ],
+      "word": "south"
+    },
+    {
+      "item_id": "east",
+      "question": "where the sun rises",
+      "correct": "east",
+      "wrong": [
+        "town",
+        "city"
+      ],
+      "word": "east"
+    },
+    {
+      "item_id": "west",
+      "question": "direction where the sun sets",
+      "correct": "west",
+      "wrong": [
+        "town",
+        "city"
+      ],
+      "word": "west"
+    },
+    {
+      "item_id": "left",
+      "question": "on the side opposite right",
+      "correct": "left",
+      "wrong": [
+        "town",
+        "city"
+      ],
+      "word": "left"
+    },
+    {
+      "item_id": "right",
+      "question": "correct or true",
+      "correct": "right",
+      "wrong": [
+        "town",
+        "city"
+      ],
+      "word": "right"
+    },
+    {
+      "item_id": "straight",
+      "question": "with no bends or curves",
+      "correct": "straight",
+      "wrong": [
+        "town",
+        "city"
+      ],
+      "word": "straight"
+    },
+    {
+      "item_id": "near",
+      "question": "not far away",
+      "correct": "near",
+      "wrong": [
+        "town",
+        "city"
+      ],
+      "word": "near"
+    }
+  ]
+}

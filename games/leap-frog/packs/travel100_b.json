@@ -1,0 +1,1008 @@
+{
+  "pack_id": "travel100_b",
+  "title": "Travel B — Ground Transport",
+  "module_id": "word_master",
+  "seconds": 15,
+  "items": [
+    {
+      "item_id": "bus",
+      "question": "big vehicle for many people",
+      "correct": "bus",
+      "wrong": [
+        "subway",
+        "metro"
+      ],
+      "word": "bus"
+    },
+    {
+      "item_id": "subway",
+      "question": "subway",
+      "correct": "subway",
+      "wrong": [
+        "bus",
+        "metro"
+      ],
+      "word": "subway"
+    },
+    {
+      "item_id": "metro",
+      "question": "metro",
+      "correct": "metro",
+      "wrong": [
+        "bus",
+        "subway"
+      ],
+      "word": "metro"
+    },
+    {
+      "item_id": "train",
+      "question": "long vehicle that runs on tracks",
+      "correct": "train",
+      "wrong": [
+        "bus",
+        "subway"
+      ],
+      "word": "train"
+    },
+    {
+      "item_id": "tram",
+      "question": "tram",
+      "correct": "tram",
+      "wrong": [
+        "bus",
+        "subway"
+      ],
+      "word": "tram"
+    },
+    {
+      "item_id": "trolley",
+      "question": "trolley",
+      "correct": "trolley",
+      "wrong": [
+        "bus",
+        "subway"
+      ],
+      "word": "trolley"
+    },
+    {
+      "item_id": "taxi",
+      "question": "taxi",
+      "correct": "taxi",
+      "wrong": [
+        "bus",
+        "subway"
+      ],
+      "word": "taxi"
+    },
+    {
+      "item_id": "cab",
+      "question": "cab",
+      "correct": "cab",
+      "wrong": [
+        "bus",
+        "subway"
+      ],
+      "word": "cab"
+    },
+    {
+      "item_id": "uber",
+      "question": "uber",
+      "correct": "uber",
+      "wrong": [
+        "bus",
+        "subway"
+      ],
+      "word": "uber"
+    },
+    {
+      "item_id": "rideshare",
+      "question": "rideshare",
+      "correct": "rideshare",
+      "wrong": [
+        "bus",
+        "subway"
+      ],
+      "word": "rideshare"
+    },
+    {
+      "item_id": "car",
+      "question": "a vehicle with wheels",
+      "correct": "car",
+      "wrong": [
+        "bus",
+        "subway"
+      ],
+      "word": "car"
+    },
+    {
+      "item_id": "rentalcar",
+      "question": "rental car",
+      "correct": "rental car",
+      "wrong": [
+        "bus",
+        "subway"
+      ],
+      "word": "rental car"
+    },
+    {
+      "item_id": "driver",
+      "question": "person who drives a car",
+      "correct": "driver",
+      "wrong": [
+        "bus",
+        "subway"
+      ],
+      "word": "driver"
+    },
+    {
+      "item_id": "passenger",
+      "question": "person riding in a vehicle",
+      "correct": "passenger",
+      "wrong": [
+        "bus",
+        "subway"
+      ],
+      "word": "passenger"
+    },
+    {
+      "item_id": "seatbelt",
+      "question": "seatbelt",
+      "correct": "seatbelt",
+      "wrong": [
+        "bus",
+        "subway"
+      ],
+      "word": "seatbelt"
+    },
+    {
+      "item_id": "helmet",
+      "question": "helmet",
+      "correct": "helmet",
+      "wrong": [
+        "bus",
+        "subway"
+      ],
+      "word": "helmet"
+    },
+    {
+      "item_id": "license",
+      "question": "license",
+      "correct": "license",
+      "wrong": [
+        "bus",
+        "subway"
+      ],
+      "word": "license"
+    },
+    {
+      "item_id": "permit",
+      "question": "allow someone to do",
+      "correct": "permit",
+      "wrong": [
+        "bus",
+        "subway"
+      ],
+      "word": "permit"
+    },
+    {
+      "item_id": "fare",
+      "question": "fare",
+      "correct": "fare",
+      "wrong": [
+        "bus",
+        "subway"
+      ],
+      "word": "fare"
+    },
+    {
+      "item_id": "station",
+      "question": "a place where trains stop",
+      "correct": "station",
+      "wrong": [
+        "bus",
+        "subway"
+      ],
+      "word": "station"
+    },
+    {
+      "item_id": "platform",
+      "question": "raised floor to stand on",
+      "correct": "platform",
+      "wrong": [
+        "bus",
+        "subway"
+      ],
+      "word": "platform"
+    },
+    {
+      "item_id": "track",
+      "question": "a path for walking or running",
+      "correct": "track",
+      "wrong": [
+        "bus",
+        "subway"
+      ],
+      "word": "track"
+    },
+    {
+      "item_id": "schedule",
+      "question": "plan a time for",
+      "correct": "schedule",
+      "wrong": [
+        "bus",
+        "subway"
+      ],
+      "word": "schedule"
+    },
+    {
+      "item_id": "timetable",
+      "question": "timetable",
+      "correct": "timetable",
+      "wrong": [
+        "bus",
+        "subway"
+      ],
+      "word": "timetable"
+    },
+    {
+      "item_id": "delay",
+      "question": "extra time of waiting",
+      "correct": "delay",
+      "wrong": [
+        "bus",
+        "subway"
+      ],
+      "word": "delay"
+    },
+    {
+      "item_id": "ontime",
+      "question": "on time",
+      "correct": "on time",
+      "wrong": [
+        "bus",
+        "subway"
+      ],
+      "word": "on time"
+    },
+    {
+      "item_id": "express",
+      "question": "to show feelings or ideas clearly",
+      "correct": "express",
+      "wrong": [
+        "bus",
+        "subway"
+      ],
+      "word": "express"
+    },
+    {
+      "item_id": "local",
+      "question": "nearby or in the area",
+      "correct": "local",
+      "wrong": [
+        "bus",
+        "subway"
+      ],
+      "word": "local"
+    },
+    {
+      "item_id": "transfer",
+      "question": "moving to another place",
+      "correct": "transfer",
+      "wrong": [
+        "bus",
+        "subway"
+      ],
+      "word": "transfer"
+    },
+    {
+      "item_id": "stop",
+      "question": "to finish moving or doing",
+      "correct": "stop",
+      "wrong": [
+        "bus",
+        "subway"
+      ],
+      "word": "stop"
+    },
+    {
+      "item_id": "route",
+      "question": "a way to go",
+      "correct": "route",
+      "wrong": [
+        "bus",
+        "subway"
+      ],
+      "word": "route"
+    },
+    {
+      "item_id": "line",
+      "question": "a long thin mark on a surface",
+      "correct": "line",
+      "wrong": [
+        "bus",
+        "subway"
+      ],
+      "word": "line"
+    },
+    {
+      "item_id": "map",
+      "question": "drawing that shows places",
+      "correct": "map",
+      "wrong": [
+        "bus",
+        "subway"
+      ],
+      "word": "map"
+    },
+    {
+      "item_id": "gps",
+      "question": "gps",
+      "correct": "gps",
+      "wrong": [
+        "bus",
+        "subway"
+      ],
+      "word": "gps"
+    },
+    {
+      "item_id": "navigation",
+      "question": "navigation",
+      "correct": "navigation",
+      "wrong": [
+        "bus",
+        "subway"
+      ],
+      "word": "navigation"
+    },
+    {
+      "item_id": "traffic",
+      "question": "cars and trucks on road",
+      "correct": "traffic",
+      "wrong": [
+        "bus",
+        "subway"
+      ],
+      "word": "traffic"
+    },
+    {
+      "item_id": "jam",
+      "question": "jam",
+      "correct": "jam",
+      "wrong": [
+        "bus",
+        "subway"
+      ],
+      "word": "jam"
+    },
+    {
+      "item_id": "congestion",
+      "question": "congestion",
+      "correct": "congestion",
+      "wrong": [
+        "bus",
+        "subway"
+      ],
+      "word": "congestion"
+    },
+    {
+      "item_id": "rushhour",
+      "question": "rush hour",
+      "correct": "rush hour",
+      "wrong": [
+        "bus",
+        "subway"
+      ],
+      "word": "rush hour"
+    },
+    {
+      "item_id": "highway",
+      "question": "highway",
+      "correct": "highway",
+      "wrong": [
+        "bus",
+        "subway"
+      ],
+      "word": "highway"
+    },
+    {
+      "item_id": "freeway",
+      "question": "freeway",
+      "correct": "freeway",
+      "wrong": [
+        "bus",
+        "subway"
+      ],
+      "word": "freeway"
+    },
+    {
+      "item_id": "toll",
+      "question": "toll",
+      "correct": "toll",
+      "wrong": [
+        "bus",
+        "subway"
+      ],
+      "word": "toll"
+    },
+    {
+      "item_id": "gas",
+      "question": "air-like stuff you burn",
+      "correct": "gas",
+      "wrong": [
+        "bus",
+        "subway"
+      ],
+      "word": "gas"
+    },
+    {
+      "item_id": "fuel",
+      "question": "energy that runs machines",
+      "correct": "fuel",
+      "wrong": [
+        "bus",
+        "subway"
+      ],
+      "word": "fuel"
+    },
+    {
+      "item_id": "pump",
+      "question": "pump",
+      "correct": "pump",
+      "wrong": [
+        "bus",
+        "subway"
+      ],
+      "word": "pump"
+    },
+    {
+      "item_id": "parking",
+      "question": "parking",
+      "correct": "parking",
+      "wrong": [
+        "bus",
+        "subway"
+      ],
+      "word": "parking"
+    },
+    {
+      "item_id": "garage",
+      "question": "garage",
+      "correct": "garage",
+      "wrong": [
+        "bus",
+        "subway"
+      ],
+      "word": "garage"
+    },
+    {
+      "item_id": "meter",
+      "question": "meter",
+      "correct": "meter",
+      "wrong": [
+        "bus",
+        "subway"
+      ],
+      "word": "meter"
+    },
+    {
+      "item_id": "ticket",
+      "question": "paper that lets you in",
+      "correct": "ticket",
+      "wrong": [
+        "bus",
+        "subway"
+      ],
+      "word": "ticket"
+    },
+    {
+      "item_id": "windshield",
+      "question": "the front glass window of a car",
+      "correct": "windshield",
+      "wrong": [
+        "bus",
+        "subway"
+      ],
+      "word": "windshield"
+    },
+    {
+      "item_id": "accident",
+      "question": "something bad that happens by chance",
+      "correct": "accident",
+      "wrong": [
+        "bus",
+        "subway"
+      ],
+      "word": "accident"
+    },
+    {
+      "item_id": "breakdown",
+      "question": "breakdown",
+      "correct": "breakdown",
+      "wrong": [
+        "bus",
+        "subway"
+      ],
+      "word": "breakdown"
+    },
+    {
+      "item_id": "tow",
+      "question": "tow",
+      "correct": "tow",
+      "wrong": [
+        "bus",
+        "subway"
+      ],
+      "word": "tow"
+    },
+    {
+      "item_id": "repair",
+      "question": "fix something that broke",
+      "correct": "repair",
+      "wrong": [
+        "bus",
+        "subway"
+      ],
+      "word": "repair"
+    },
+    {
+      "item_id": "mechanic",
+      "question": "mechanic",
+      "correct": "mechanic",
+      "wrong": [
+        "bus",
+        "subway"
+      ],
+      "word": "mechanic"
+    },
+    {
+      "item_id": "flattire",
+      "question": "flat tire",
+      "correct": "flat tire",
+      "wrong": [
+        "bus",
+        "subway"
+      ],
+      "word": "flat tire"
+    },
+    {
+      "item_id": "engine",
+      "question": "machine that makes a car move",
+      "correct": "engine",
+      "wrong": [
+        "bus",
+        "subway"
+      ],
+      "word": "engine"
+    },
+    {
+      "item_id": "brake",
+      "question": "brake",
+      "correct": "brake",
+      "wrong": [
+        "bus",
+        "subway"
+      ],
+      "word": "brake"
+    },
+    {
+      "item_id": "horn",
+      "question": "horn",
+      "correct": "horn",
+      "wrong": [
+        "bus",
+        "subway"
+      ],
+      "word": "horn"
+    },
+    {
+      "item_id": "signal",
+      "question": "a sign that tells you",
+      "correct": "signal",
+      "wrong": [
+        "bus",
+        "subway"
+      ],
+      "word": "signal"
+    },
+    {
+      "item_id": "crosswalk",
+      "question": "crosswalk",
+      "correct": "crosswalk",
+      "wrong": [
+        "bus",
+        "subway"
+      ],
+      "word": "crosswalk"
+    },
+    {
+      "item_id": "pedestrian",
+      "question": "pedestrian",
+      "correct": "pedestrian",
+      "wrong": [
+        "bus",
+        "subway"
+      ],
+      "word": "pedestrian"
+    },
+    {
+      "item_id": "cyclist",
+      "question": "cyclist",
+      "correct": "cyclist",
+      "wrong": [
+        "bus",
+        "subway"
+      ],
+      "word": "cyclist"
+    },
+    {
+      "item_id": "motorcycle",
+      "question": "motorcycle",
+      "correct": "motorcycle",
+      "wrong": [
+        "bus",
+        "subway"
+      ],
+      "word": "motorcycle"
+    },
+    {
+      "item_id": "scooter",
+      "question": "scooter",
+      "correct": "scooter",
+      "wrong": [
+        "bus",
+        "subway"
+      ],
+      "word": "scooter"
+    },
+    {
+      "item_id": "skateboard",
+      "question": "skateboard",
+      "correct": "skateboard",
+      "wrong": [
+        "bus",
+        "subway"
+      ],
+      "word": "skateboard"
+    },
+    {
+      "item_id": "walk",
+      "question": "a trip on foot",
+      "correct": "walk",
+      "wrong": [
+        "bus",
+        "subway"
+      ],
+      "word": "walk"
+    },
+    {
+      "item_id": "hike",
+      "question": "hike",
+      "correct": "hike",
+      "wrong": [
+        "bus",
+        "subway"
+      ],
+      "word": "hike"
+    },
+    {
+      "item_id": "trail",
+      "question": "follow along behind someone",
+      "correct": "trail",
+      "wrong": [
+        "bus",
+        "subway"
+      ],
+      "word": "trail"
+    },
+    {
+      "item_id": "path",
+      "question": "a narrow way to walk",
+      "correct": "path",
+      "wrong": [
+        "bus",
+        "subway"
+      ],
+      "word": "path"
+    },
+    {
+      "item_id": "border",
+      "question": "line between two lands",
+      "correct": "border",
+      "wrong": [
+        "bus",
+        "subway"
+      ],
+      "word": "border"
+    },
+    {
+      "item_id": "checkpoint",
+      "question": "checkpoint",
+      "correct": "checkpoint",
+      "wrong": [
+        "bus",
+        "subway"
+      ],
+      "word": "checkpoint"
+    },
+    {
+      "item_id": "bordercontrol",
+      "question": "border control",
+      "correct": "border control",
+      "wrong": [
+        "bus",
+        "subway"
+      ],
+      "word": "border control"
+    },
+    {
+      "item_id": "quarantine",
+      "question": "quarantine",
+      "correct": "quarantine",
+      "wrong": [
+        "bus",
+        "subway"
+      ],
+      "word": "quarantine"
+    },
+    {
+      "item_id": "vaccinecard",
+      "question": "vaccine card",
+      "correct": "vaccine card",
+      "wrong": [
+        "bus",
+        "subway"
+      ],
+      "word": "vaccine card"
+    },
+    {
+      "item_id": "insurance",
+      "question": "money protection if something bad happens",
+      "correct": "insurance",
+      "wrong": [
+        "bus",
+        "subway"
+      ],
+      "word": "insurance"
+    },
+    {
+      "item_id": "emergency",
+      "question": "sudden dangerous problem",
+      "correct": "emergency",
+      "wrong": [
+        "bus",
+        "subway"
+      ],
+      "word": "emergency"
+    },
+    {
+      "item_id": "embassy",
+      "question": "embassy",
+      "correct": "embassy",
+      "wrong": [
+        "bus",
+        "subway"
+      ],
+      "word": "embassy"
+    },
+    {
+      "item_id": "consulate",
+      "question": "consulate",
+      "correct": "consulate",
+      "wrong": [
+        "bus",
+        "subway"
+      ],
+      "word": "consulate"
+    },
+    {
+      "item_id": "lostandfound",
+      "question": "lost and found",
+      "correct": "lost and found",
+      "wrong": [
+        "bus",
+        "subway"
+      ],
+      "word": "lost and found"
+    },
+    {
+      "item_id": "left",
+      "question": "on the side opposite right",
+      "correct": "left",
+      "wrong": [
+        "bus",
+        "subway"
+      ],
+      "word": "left"
+    },
+    {
+      "item_id": "right",
+      "question": "correct or true",
+      "correct": "right",
+      "wrong": [
+        "bus",
+        "subway"
+      ],
+      "word": "right"
+    },
+    {
+      "item_id": "straight",
+      "question": "with no bends or curves",
+      "correct": "straight",
+      "wrong": [
+        "bus",
+        "subway"
+      ],
+      "word": "straight"
+    },
+    {
+      "item_id": "turn",
+      "question": "a single change of direction",
+      "correct": "turn",
+      "wrong": [
+        "bus",
+        "subway"
+      ],
+      "word": "turn"
+    },
+    {
+      "item_id": "uturn",
+      "question": "u turn",
+      "correct": "u turn",
+      "wrong": [
+        "bus",
+        "subway"
+      ],
+      "word": "u turn"
+    },
+    {
+      "item_id": "roundabout",
+      "question": "roundabout",
+      "correct": "roundabout",
+      "wrong": [
+        "bus",
+        "subway"
+      ],
+      "word": "roundabout"
+    },
+    {
+      "item_id": "exit",
+      "question": "exit",
+      "correct": "exit",
+      "wrong": [
+        "bus",
+        "subway"
+      ],
+      "word": "exit"
+    },
+    {
+      "item_id": "entrance",
+      "question": "the way into a place",
+      "correct": "entrance",
+      "wrong": [
+        "bus",
+        "subway"
+      ],
+      "word": "entrance"
+    },
+    {
+      "item_id": "north",
+      "question": "the top direction on a map",
+      "correct": "north",
+      "wrong": [
+        "bus",
+        "subway"
+      ],
+      "word": "north"
+    },
+    {
+      "item_id": "south",
+      "question": "the direction toward the bottom",
+      "correct": "south",
+      "wrong": [
+        "bus",
+        "subway"
+      ],
+      "word": "south"
+    },
+    {
+      "item_id": "ticketmachine",
+      "question": "ticket machine",
+      "correct": "ticket machine",
+      "wrong": [
+        "bus",
+        "subway"
+      ],
+      "word": "ticket machine"
+    },
+    {
+      "item_id": "card",
+      "question": "a small flat piece of stiff paper",
+      "correct": "card",
+      "wrong": [
+        "bus",
+        "subway"
+      ],
+      "word": "card"
+    },
+    {
+      "item_id": "cash",
+      "question": "money in coins and bills",
+      "correct": "cash",
+      "wrong": [
+        "bus",
+        "subway"
+      ],
+      "word": "cash"
+    },
+    {
+      "item_id": "receipt",
+      "question": "receipt",
+      "correct": "receipt",
+      "wrong": [
+        "bus",
+        "subway"
+      ],
+      "word": "receipt"
+    },
+    {
+      "item_id": "refund",
+      "question": "refund",
+      "correct": "refund",
+      "wrong": [
+        "bus",
+        "subway"
+      ],
+      "word": "refund"
+    },
+    {
+      "item_id": "complaint",
+      "question": "saying something is wrong",
+      "correct": "complaint",
+      "wrong": [
+        "bus",
+        "subway"
+      ],
+      "word": "complaint"
+    },
+    {
+      "item_id": "helpdesk",
+      "question": "help desk",
+      "correct": "help desk",
+      "wrong": [
+        "bus",
+        "subway"
+      ],
+      "word": "help desk"
+    },
+    {
+      "item_id": "information",
+      "question": "facts or details about something",
+      "correct": "information",
+      "wrong": [
+        "bus",
+        "subway"
+      ],
+      "word": "information"
+    },
+    {
+      "item_id": "announcement",
+      "question": "announcement",
+      "correct": "announcement",
+      "wrong": [
+        "bus",
+        "subway"
+      ],
+      "word": "announcement"
+    },
+    {
+      "item_id": "platformnumber",
+      "question": "platform number",
+      "correct": "platform number",
+      "wrong": [
+        "bus",
+        "subway"
+      ],
+      "word": "platform number"
+    }
+  ]
+}

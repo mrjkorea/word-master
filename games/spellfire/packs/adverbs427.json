@@ -1,0 +1,1268 @@
+{
+  "pack_id": "adverbs427",
+  "title": "B2 Adverbs 301–427",
+  "module_id": "word_master",
+  "seconds": 15,
+  "items": [
+    {
+      "item_id": "instantly",
+      "question": "right away at once",
+      "correct": "instantly",
+      "wrong": [
+        "broadly",
+        "fortunately"
+      ],
+      "word": "instantly"
+    },
+    {
+      "item_id": "broadly",
+      "question": "in a wide way",
+      "correct": "broadly",
+      "wrong": [
+        "instantly",
+        "fortunately"
+      ],
+      "word": "broadly"
+    },
+    {
+      "item_id": "fortunately",
+      "question": "in a lucky way",
+      "correct": "fortunately",
+      "wrong": [
+        "instantly",
+        "broadly"
+      ],
+      "word": "fortunately"
+    },
+    {
+      "item_id": "publicly",
+      "question": "in front of people",
+      "correct": "publicly",
+      "wrong": [
+        "instantly",
+        "broadly"
+      ],
+      "word": "publicly"
+    },
+    {
+      "item_id": "fair",
+      "question": "in a just way",
+      "correct": "fair",
+      "wrong": [
+        "instantly",
+        "broadly"
+      ],
+      "word": "fair"
+    },
+    {
+      "item_id": "freely",
+      "question": "without being held back",
+      "correct": "freely",
+      "wrong": [
+        "instantly",
+        "broadly"
+      ],
+      "word": "freely"
+    },
+    {
+      "item_id": "hitherto",
+      "question": "until this time",
+      "correct": "hitherto",
+      "wrong": [
+        "instantly",
+        "broadly"
+      ],
+      "word": "hitherto"
+    },
+    {
+      "item_id": "invariably",
+      "question": "every single time",
+      "correct": "invariably",
+      "wrong": [
+        "instantly",
+        "broadly"
+      ],
+      "word": "invariably"
+    },
+    {
+      "item_id": "nearby",
+      "question": "close to here",
+      "correct": "nearby",
+      "wrong": [
+        "instantly",
+        "broadly"
+      ],
+      "word": "nearby"
+    },
+    {
+      "item_id": "regardless",
+      "question": "anyway even so",
+      "correct": "regardless",
+      "wrong": [
+        "instantly",
+        "broadly"
+      ],
+      "word": "regardless"
+    },
+    {
+      "item_id": "differently",
+      "question": "in another way",
+      "correct": "differently",
+      "wrong": [
+        "instantly",
+        "broadly"
+      ],
+      "word": "differently"
+    },
+    {
+      "item_id": "dramatically",
+      "question": "in a big sudden way",
+      "correct": "dramatically",
+      "wrong": [
+        "instantly",
+        "broadly"
+      ],
+      "word": "dramatically"
+    },
+    {
+      "item_id": "socially",
+      "question": "with other people",
+      "correct": "socially",
+      "wrong": [
+        "instantly",
+        "broadly"
+      ],
+      "word": "socially"
+    },
+    {
+      "item_id": "overall",
+      "question": "looking at everything",
+      "correct": "overall",
+      "wrong": [
+        "instantly",
+        "broadly"
+      ],
+      "word": "overall"
+    },
+    {
+      "item_id": "seldom",
+      "question": "not very often",
+      "correct": "seldom",
+      "wrong": [
+        "instantly",
+        "broadly"
+      ],
+      "word": "seldom"
+    },
+    {
+      "item_id": "actively",
+      "question": "with real energy",
+      "correct": "actively",
+      "wrong": [
+        "instantly",
+        "broadly"
+      ],
+      "word": "actively"
+    },
+    {
+      "item_id": "remarkably",
+      "question": "in a surprising way",
+      "correct": "remarkably",
+      "wrong": [
+        "instantly",
+        "broadly"
+      ],
+      "word": "remarkably"
+    },
+    {
+      "item_id": "ill",
+      "question": "in a bad way",
+      "correct": "ill",
+      "wrong": [
+        "instantly",
+        "broadly"
+      ],
+      "word": "ill"
+    },
+    {
+      "item_id": "tightly",
+      "question": "in a firm close way",
+      "correct": "tightly",
+      "wrong": [
+        "instantly",
+        "broadly"
+      ],
+      "word": "tightly"
+    },
+    {
+      "item_id": "forwards",
+      "question": "toward the front",
+      "correct": "forwards",
+      "wrong": [
+        "instantly",
+        "broadly"
+      ],
+      "word": "forwards"
+    },
+    {
+      "item_id": "thereafter",
+      "question": "after that time",
+      "correct": "thereafter",
+      "wrong": [
+        "instantly",
+        "broadly"
+      ],
+      "word": "thereafter"
+    },
+    {
+      "item_id": "reportedly",
+      "question": "people say so",
+      "correct": "reportedly",
+      "wrong": [
+        "instantly",
+        "broadly"
+      ],
+      "word": "reportedly"
+    },
+    {
+      "item_id": "evidently",
+      "question": "it looks clear",
+      "correct": "evidently",
+      "wrong": [
+        "instantly",
+        "broadly"
+      ],
+      "word": "evidently"
+    },
+    {
+      "item_id": "accurately",
+      "question": "in an exact way",
+      "correct": "accurately",
+      "wrong": [
+        "instantly",
+        "broadly"
+      ],
+      "word": "accurately"
+    },
+    {
+      "item_id": "onwards",
+      "question": "from here forward",
+      "correct": "onwards",
+      "wrong": [
+        "instantly",
+        "broadly"
+      ],
+      "word": "onwards"
+    },
+    {
+      "item_id": "genuinely",
+      "question": "in a real way",
+      "correct": "genuinely",
+      "wrong": [
+        "instantly",
+        "broadly"
+      ],
+      "word": "genuinely"
+    },
+    {
+      "item_id": "practically",
+      "question": "almost very nearly",
+      "correct": "practically",
+      "wrong": [
+        "instantly",
+        "broadly"
+      ],
+      "word": "practically"
+    },
+    {
+      "item_id": "independently",
+      "question": "without any help",
+      "correct": "independently",
+      "wrong": [
+        "instantly",
+        "broadly"
+      ],
+      "word": "independently"
+    },
+    {
+      "item_id": "honestly",
+      "question": "in a truthful way",
+      "correct": "honestly",
+      "wrong": [
+        "instantly",
+        "broadly"
+      ],
+      "word": "honestly"
+    },
+    {
+      "item_id": "rightly",
+      "question": "in the correct way",
+      "correct": "rightly",
+      "wrong": [
+        "instantly",
+        "broadly"
+      ],
+      "word": "rightly"
+    },
+    {
+      "item_id": "positively",
+      "question": "in a sure way",
+      "correct": "positively",
+      "wrong": [
+        "instantly",
+        "broadly"
+      ],
+      "word": "positively"
+    },
+    {
+      "item_id": "continually",
+      "question": "again and again",
+      "correct": "continually",
+      "wrong": [
+        "instantly",
+        "broadly"
+      ],
+      "word": "continually"
+    },
+    {
+      "item_id": "importantly",
+      "question": "what matters most",
+      "correct": "importantly",
+      "wrong": [
+        "instantly",
+        "broadly"
+      ],
+      "word": "importantly"
+    },
+    {
+      "item_id": "utterly",
+      "question": "in a total way",
+      "correct": "utterly",
+      "wrong": [
+        "instantly",
+        "broadly"
+      ],
+      "word": "utterly"
+    },
+    {
+      "item_id": "partially",
+      "question": "in part only",
+      "correct": "partially",
+      "wrong": [
+        "instantly",
+        "broadly"
+      ],
+      "word": "partially"
+    },
+    {
+      "item_id": "explicitly",
+      "question": "in a stated way",
+      "correct": "explicitly",
+      "wrong": [
+        "instantly",
+        "broadly"
+      ],
+      "word": "explicitly"
+    },
+    {
+      "item_id": "repeatedly",
+      "question": "many times over",
+      "correct": "repeatedly",
+      "wrong": [
+        "instantly",
+        "broadly"
+      ],
+      "word": "repeatedly"
+    },
+    {
+      "item_id": "temporarily",
+      "question": "for a short time",
+      "correct": "temporarily",
+      "wrong": [
+        "instantly",
+        "broadly"
+      ],
+      "word": "temporarily"
+    },
+    {
+      "item_id": "this",
+      "question": "to this amount",
+      "correct": "this",
+      "wrong": [
+        "instantly",
+        "broadly"
+      ],
+      "word": "this"
+    },
+    {
+      "item_id": "loud",
+      "question": "in a noisy way",
+      "correct": "loud",
+      "wrong": [
+        "instantly",
+        "broadly"
+      ],
+      "word": "loud"
+    },
+    {
+      "item_id": "alike",
+      "question": "in the same way",
+      "correct": "alike",
+      "wrong": [
+        "instantly",
+        "broadly"
+      ],
+      "word": "alike"
+    },
+    {
+      "item_id": "half",
+      "question": "partly, not fully",
+      "correct": "half",
+      "wrong": [
+        "instantly",
+        "broadly"
+      ],
+      "word": "half"
+    },
+    {
+      "item_id": "terribly",
+      "question": "in a very bad way",
+      "correct": "terribly",
+      "wrong": [
+        "instantly",
+        "broadly"
+      ],
+      "word": "terribly"
+    },
+    {
+      "item_id": "predominantly",
+      "question": "mostly, more than others",
+      "correct": "predominantly",
+      "wrong": [
+        "instantly",
+        "broadly"
+      ],
+      "word": "predominantly"
+    },
+    {
+      "item_id": "overnight",
+      "question": "during the whole night",
+      "correct": "overnight",
+      "wrong": [
+        "instantly",
+        "broadly"
+      ],
+      "word": "overnight"
+    },
+    {
+      "item_id": "beautifully",
+      "question": "in a pretty way",
+      "correct": "beautifully",
+      "wrong": [
+        "instantly",
+        "broadly"
+      ],
+      "word": "beautifully"
+    },
+    {
+      "item_id": "neatly",
+      "question": "in a tidy way",
+      "correct": "neatly",
+      "wrong": [
+        "instantly",
+        "broadly"
+      ],
+      "word": "neatly"
+    },
+    {
+      "item_id": "openly",
+      "question": "without hiding anything",
+      "correct": "openly",
+      "wrong": [
+        "instantly",
+        "broadly"
+      ],
+      "word": "openly"
+    },
+    {
+      "item_id": "within",
+      "question": "on the inside",
+      "correct": "within",
+      "wrong": [
+        "instantly",
+        "broadly"
+      ],
+      "word": "within"
+    },
+    {
+      "item_id": "permanently",
+      "question": "for all time",
+      "correct": "permanently",
+      "wrong": [
+        "instantly",
+        "broadly"
+      ],
+      "word": "permanently"
+    },
+    {
+      "item_id": "seemingly",
+      "question": "as it appears",
+      "correct": "seemingly",
+      "wrong": [
+        "instantly",
+        "broadly"
+      ],
+      "word": "seemingly"
+    },
+    {
+      "item_id": "overseas",
+      "question": "across the sea",
+      "correct": "overseas",
+      "wrong": [
+        "instantly",
+        "broadly"
+      ],
+      "word": "overseas"
+    },
+    {
+      "item_id": "swiftly",
+      "question": "in a fast way",
+      "correct": "swiftly",
+      "wrong": [
+        "instantly",
+        "broadly"
+      ],
+      "word": "swiftly"
+    },
+    {
+      "item_id": "worldwide",
+      "question": "all over the world",
+      "correct": "worldwide",
+      "wrong": [
+        "instantly",
+        "broadly"
+      ],
+      "word": "worldwide"
+    },
+    {
+      "item_id": "privately",
+      "question": "away from other people",
+      "correct": "privately",
+      "wrong": [
+        "instantly",
+        "broadly"
+      ],
+      "word": "privately"
+    },
+    {
+      "item_id": "silently",
+      "question": "with no sound",
+      "correct": "silently",
+      "wrong": [
+        "instantly",
+        "broadly"
+      ],
+      "word": "silently"
+    },
+    {
+      "item_id": "comparatively",
+      "question": "when you compare",
+      "correct": "comparatively",
+      "wrong": [
+        "instantly",
+        "broadly"
+      ],
+      "word": "comparatively"
+    },
+    {
+      "item_id": "ideally",
+      "question": "in the best way",
+      "correct": "ideally",
+      "wrong": [
+        "instantly",
+        "broadly"
+      ],
+      "word": "ideally"
+    },
+    {
+      "item_id": "dead",
+      "question": "completely, all the way",
+      "correct": "dead",
+      "wrong": [
+        "instantly",
+        "broadly"
+      ],
+      "word": "dead"
+    },
+    {
+      "item_id": "adequately",
+      "question": "well enough",
+      "correct": "adequately",
+      "wrong": [
+        "instantly",
+        "broadly"
+      ],
+      "word": "adequately"
+    },
+    {
+      "item_id": "abruptly",
+      "question": "suddenly with no warning",
+      "correct": "abruptly",
+      "wrong": [
+        "instantly",
+        "broadly"
+      ],
+      "word": "abruptly"
+    },
+    {
+      "item_id": "legally",
+      "question": "according to the law",
+      "correct": "legally",
+      "wrong": [
+        "instantly",
+        "broadly"
+      ],
+      "word": "legally"
+    },
+    {
+      "item_id": "sincerely",
+      "question": "from the heart",
+      "correct": "sincerely",
+      "wrong": [
+        "instantly",
+        "broadly"
+      ],
+      "word": "sincerely"
+    },
+    {
+      "item_id": "likewise",
+      "question": "the same way too",
+      "correct": "likewise",
+      "wrong": [
+        "instantly",
+        "broadly"
+      ],
+      "word": "likewise"
+    },
+    {
+      "item_id": "bitterly",
+      "question": "in a very hurt way",
+      "correct": "bitterly",
+      "wrong": [
+        "instantly",
+        "broadly"
+      ],
+      "word": "bitterly"
+    },
+    {
+      "item_id": "efficiently",
+      "question": "with no wasted time",
+      "correct": "efficiently",
+      "wrong": [
+        "instantly",
+        "broadly"
+      ],
+      "word": "efficiently"
+    },
+    {
+      "item_id": "individually",
+      "question": "each one alone",
+      "correct": "individually",
+      "wrong": [
+        "instantly",
+        "broadly"
+      ],
+      "word": "individually"
+    },
+    {
+      "item_id": "angrily",
+      "question": "in a mad way",
+      "correct": "angrily",
+      "wrong": [
+        "instantly",
+        "broadly"
+      ],
+      "word": "angrily"
+    },
+    {
+      "item_id": "annually",
+      "question": "once every year",
+      "correct": "annually",
+      "wrong": [
+        "instantly",
+        "broadly"
+      ],
+      "word": "annually"
+    },
+    {
+      "item_id": "beyond",
+      "question": "farther than here",
+      "correct": "beyond",
+      "wrong": [
+        "instantly",
+        "broadly"
+      ],
+      "word": "beyond"
+    },
+    {
+      "item_id": "incidentally",
+      "question": "by the way",
+      "correct": "incidentally",
+      "wrong": [
+        "instantly",
+        "broadly"
+      ],
+      "word": "incidentally"
+    },
+    {
+      "item_id": "loudly",
+      "question": "with a big sound",
+      "correct": "loudly",
+      "wrong": [
+        "instantly",
+        "broadly"
+      ],
+      "word": "loudly"
+    },
+    {
+      "item_id": "jointly",
+      "question": "together with someone",
+      "correct": "jointly",
+      "wrong": [
+        "instantly",
+        "broadly"
+      ],
+      "word": "jointly"
+    },
+    {
+      "item_id": "indirectly",
+      "question": "not the straight way",
+      "correct": "indirectly",
+      "wrong": [
+        "instantly",
+        "broadly"
+      ],
+      "word": "indirectly"
+    },
+    {
+      "item_id": "allegedly",
+      "question": "said but not proven",
+      "correct": "allegedly",
+      "wrong": [
+        "instantly",
+        "broadly"
+      ],
+      "word": "allegedly"
+    },
+    {
+      "item_id": "strangely",
+      "question": "in a weird way",
+      "correct": "strangely",
+      "wrong": [
+        "instantly",
+        "broadly"
+      ],
+      "word": "strangely"
+    },
+    {
+      "item_id": "sexually",
+      "question": "needing male and female",
+      "correct": "sexually",
+      "wrong": [
+        "instantly",
+        "broadly"
+      ],
+      "word": "sexually"
+    },
+    {
+      "item_id": "economically",
+      "question": "in a money-saving way",
+      "correct": "economically",
+      "wrong": [
+        "instantly",
+        "broadly"
+      ],
+      "word": "economically"
+    },
+    {
+      "item_id": "unusually",
+      "question": "more than is usual",
+      "correct": "unusually",
+      "wrong": [
+        "instantly",
+        "broadly"
+      ],
+      "word": "unusually"
+    },
+    {
+      "item_id": "aloud",
+      "question": "so others can hear",
+      "correct": "aloud",
+      "wrong": [
+        "instantly",
+        "broadly"
+      ],
+      "word": "aloud"
+    },
+    {
+      "item_id": "technically",
+      "question": "by the exact rules",
+      "correct": "technically",
+      "wrong": [
+        "instantly",
+        "broadly"
+      ],
+      "word": "technically"
+    },
+    {
+      "item_id": "opposite",
+      "question": "on the other side",
+      "correct": "opposite",
+      "wrong": [
+        "instantly",
+        "broadly"
+      ],
+      "word": "opposite"
+    },
+    {
+      "item_id": "reluctantly",
+      "question": "not wanting to",
+      "correct": "reluctantly",
+      "wrong": [
+        "instantly",
+        "broadly"
+      ],
+      "word": "reluctantly"
+    },
+    {
+      "item_id": "vaguely",
+      "question": "in a fuzzy way",
+      "correct": "vaguely",
+      "wrong": [
+        "instantly",
+        "broadly"
+      ],
+      "word": "vaguely"
+    },
+    {
+      "item_id": "ironically",
+      "question": "in a funny opposite way",
+      "correct": "ironically",
+      "wrong": [
+        "instantly",
+        "broadly"
+      ],
+      "word": "ironically"
+    },
+    {
+      "item_id": "poorly",
+      "question": "in a bad way",
+      "correct": "poorly",
+      "wrong": [
+        "instantly",
+        "broadly"
+      ],
+      "word": "poorly"
+    },
+    {
+      "item_id": "duly",
+      "question": "in the proper way",
+      "correct": "duly",
+      "wrong": [
+        "instantly",
+        "broadly"
+      ],
+      "word": "duly"
+    },
+    {
+      "item_id": "smoothly",
+      "question": "with no bumps",
+      "correct": "smoothly",
+      "wrong": [
+        "instantly",
+        "broadly"
+      ],
+      "word": "smoothly"
+    },
+    {
+      "item_id": "direct",
+      "question": "straight with no stops",
+      "correct": "direct",
+      "wrong": [
+        "instantly",
+        "broadly"
+      ],
+      "word": "direct"
+    },
+    {
+      "item_id": "presently",
+      "question": "in a short time",
+      "correct": "presently",
+      "wrong": [
+        "instantly",
+        "broadly"
+      ],
+      "word": "presently"
+    },
+    {
+      "item_id": "worse",
+      "question": "even more badly",
+      "correct": "worse",
+      "wrong": [
+        "instantly",
+        "broadly"
+      ],
+      "word": "worse"
+    },
+    {
+      "item_id": "principally",
+      "question": "for the most part",
+      "correct": "principally",
+      "wrong": [
+        "instantly",
+        "broadly"
+      ],
+      "word": "principally"
+    },
+    {
+      "item_id": "nicely",
+      "question": "in a pleasant way",
+      "correct": "nicely",
+      "wrong": [
+        "instantly",
+        "broadly"
+      ],
+      "word": "nicely"
+    },
+    {
+      "item_id": "supposedly",
+      "question": "said to be true",
+      "correct": "supposedly",
+      "wrong": [
+        "instantly",
+        "broadly"
+      ],
+      "word": "supposedly"
+    },
+    {
+      "item_id": "comfortably",
+      "question": "in a cozy way",
+      "correct": "comfortably",
+      "wrong": [
+        "instantly",
+        "broadly"
+      ],
+      "word": "comfortably"
+    },
+    {
+      "item_id": "frankly",
+      "question": "in an honest way",
+      "correct": "frankly",
+      "wrong": [
+        "instantly",
+        "broadly"
+      ],
+      "word": "frankly"
+    },
+    {
+      "item_id": "wrong",
+      "question": "not the right way",
+      "correct": "wrong",
+      "wrong": [
+        "instantly",
+        "broadly"
+      ],
+      "word": "wrong"
+    },
+    {
+      "item_id": "curiously",
+      "question": "in a wondering way",
+      "correct": "curiously",
+      "wrong": [
+        "instantly",
+        "broadly"
+      ],
+      "word": "curiously"
+    },
+    {
+      "item_id": "kindly",
+      "question": "in a gentle kind way",
+      "correct": "kindly",
+      "wrong": [
+        "instantly",
+        "broadly"
+      ],
+      "word": "kindly"
+    },
+    {
+      "item_id": "unexpectedly",
+      "question": "with no one expecting",
+      "correct": "unexpectedly",
+      "wrong": [
+        "instantly",
+        "broadly"
+      ],
+      "word": "unexpectedly"
+    },
+    {
+      "item_id": "quick",
+      "question": "in a fast way",
+      "correct": "quick",
+      "wrong": [
+        "instantly",
+        "broadly"
+      ],
+      "word": "quick"
+    },
+    {
+      "item_id": "promptly",
+      "question": "without any delay",
+      "correct": "promptly",
+      "wrong": [
+        "instantly",
+        "broadly"
+      ],
+      "word": "promptly"
+    },
+    {
+      "item_id": "exceptionally",
+      "question": "much more than usual",
+      "correct": "exceptionally",
+      "wrong": [
+        "instantly",
+        "broadly"
+      ],
+      "word": "exceptionally"
+    },
+    {
+      "item_id": "underneath",
+      "question": "under something else",
+      "correct": "underneath",
+      "wrong": [
+        "instantly",
+        "broadly"
+      ],
+      "word": "underneath"
+    },
+    {
+      "item_id": "appropriately",
+      "question": "in the right way",
+      "correct": "appropriately",
+      "wrong": [
+        "instantly",
+        "broadly"
+      ],
+      "word": "appropriately"
+    },
+    {
+      "item_id": "extensively",
+      "question": "over a large area",
+      "correct": "extensively",
+      "wrong": [
+        "instantly",
+        "broadly"
+      ],
+      "word": "extensively"
+    },
+    {
+      "item_id": "sideways",
+      "question": "to the side",
+      "correct": "sideways",
+      "wrong": [
+        "instantly",
+        "broadly"
+      ],
+      "word": "sideways"
+    },
+    {
+      "item_id": "continuously",
+      "question": "without ever stopping",
+      "correct": "continuously",
+      "wrong": [
+        "instantly",
+        "broadly"
+      ],
+      "word": "continuously"
+    },
+    {
+      "item_id": "fiercely",
+      "question": "with strong force",
+      "correct": "fiercely",
+      "wrong": [
+        "instantly",
+        "broadly"
+      ],
+      "word": "fiercely"
+    },
+    {
+      "item_id": "doubtless",
+      "question": "with no doubt",
+      "correct": "doubtless",
+      "wrong": [
+        "instantly",
+        "broadly"
+      ],
+      "word": "doubtless"
+    },
+    {
+      "item_id": "halfway",
+      "question": "at the middle point",
+      "correct": "halfway",
+      "wrong": [
+        "instantly",
+        "broadly"
+      ],
+      "word": "halfway"
+    },
+    {
+      "item_id": "fundamentally",
+      "question": "in a basic way",
+      "correct": "fundamentally",
+      "wrong": [
+        "instantly",
+        "broadly"
+      ],
+      "word": "fundamentally"
+    },
+    {
+      "item_id": "hastily",
+      "question": "in a rushed way",
+      "correct": "hastily",
+      "wrong": [
+        "instantly",
+        "broadly"
+      ],
+      "word": "hastily"
+    },
+    {
+      "item_id": "nationally",
+      "question": "across the whole country",
+      "correct": "nationally",
+      "wrong": [
+        "instantly",
+        "broadly"
+      ],
+      "word": "nationally"
+    },
+    {
+      "item_id": "urgently",
+      "question": "with great hurry",
+      "correct": "urgently",
+      "wrong": [
+        "instantly",
+        "broadly"
+      ],
+      "word": "urgently"
+    },
+    {
+      "item_id": "financially",
+      "question": "about money matters",
+      "correct": "financially",
+      "wrong": [
+        "instantly",
+        "broadly"
+      ],
+      "word": "financially"
+    },
+    {
+      "item_id": "lately",
+      "question": "in recent days",
+      "correct": "lately",
+      "wrong": [
+        "instantly",
+        "broadly"
+      ],
+      "word": "lately"
+    },
+    {
+      "item_id": "course",
+      "question": "as you would expect",
+      "correct": "course",
+      "wrong": [
+        "instantly",
+        "broadly"
+      ],
+      "word": "course"
+    },
+    {
+      "item_id": "thick",
+      "question": "in a heavy layer",
+      "correct": "thick",
+      "wrong": [
+        "instantly",
+        "broadly"
+      ],
+      "word": "thick"
+    },
+    {
+      "item_id": "enormously",
+      "question": "by a huge amount",
+      "correct": "enormously",
+      "wrong": [
+        "instantly",
+        "broadly"
+      ],
+      "word": "enormously"
+    },
+    {
+      "item_id": "distinctly",
+      "question": "in a clear way",
+      "correct": "distinctly",
+      "wrong": [
+        "instantly",
+        "broadly"
+      ],
+      "word": "distinctly"
+    },
+    {
+      "item_id": "conversely",
+      "question": "the other way around",
+      "correct": "conversely",
+      "wrong": [
+        "instantly",
+        "broadly"
+      ],
+      "word": "conversely"
+    },
+    {
+      "item_id": "tight",
+      "question": "with a firm grip",
+      "correct": "tight",
+      "wrong": [
+        "instantly",
+        "broadly"
+      ],
+      "word": "tight"
+    },
+    {
+      "item_id": "historically",
+      "question": "in times long ago",
+      "correct": "historically",
+      "wrong": [
+        "instantly",
+        "broadly"
+      ],
+      "word": "historically"
+    },
+    {
+      "item_id": "incredibly",
+      "question": "in a hard-to-believe way",
+      "correct": "incredibly",
+      "wrong": [
+        "instantly",
+        "broadly"
+      ],
+      "word": "incredibly"
+    },
+    {
+      "item_id": "wildly",
+      "question": "in a wild way",
+      "correct": "wildly",
+      "wrong": [
+        "instantly",
+        "broadly"
+      ],
+      "word": "wildly"
+    }
+  ]
+}

@@ -1,0 +1,1008 @@
+{
+  "pack_id": "jobs100_a",
+  "title": "Jobs A — Dream Careers",
+  "module_id": "word_master",
+  "seconds": 15,
+  "items": [
+    {
+      "item_id": "job",
+      "question": "work a person does",
+      "correct": "job",
+      "wrong": [
+        "career",
+        "work"
+      ],
+      "word": "job"
+    },
+    {
+      "item_id": "career",
+      "question": "a person's work life over time",
+      "correct": "career",
+      "wrong": [
+        "job",
+        "work"
+      ],
+      "word": "career"
+    },
+    {
+      "item_id": "work",
+      "question": "a job or task to do",
+      "correct": "work",
+      "wrong": [
+        "job",
+        "career"
+      ],
+      "word": "work"
+    },
+    {
+      "item_id": "worker",
+      "question": "a person who works",
+      "correct": "worker",
+      "wrong": [
+        "job",
+        "career"
+      ],
+      "word": "worker"
+    },
+    {
+      "item_id": "employee",
+      "question": "a person who works for a company",
+      "correct": "employee",
+      "wrong": [
+        "job",
+        "career"
+      ],
+      "word": "employee"
+    },
+    {
+      "item_id": "employer",
+      "question": "person who gives someone a job",
+      "correct": "employer",
+      "wrong": [
+        "job",
+        "career"
+      ],
+      "word": "employer"
+    },
+    {
+      "item_id": "boss",
+      "question": "person in charge at work",
+      "correct": "boss",
+      "wrong": [
+        "job",
+        "career"
+      ],
+      "word": "boss"
+    },
+    {
+      "item_id": "manager",
+      "question": "a person who runs a team",
+      "correct": "manager",
+      "wrong": [
+        "job",
+        "career"
+      ],
+      "word": "manager"
+    },
+    {
+      "item_id": "supervisor",
+      "question": "supervisor",
+      "correct": "supervisor",
+      "wrong": [
+        "job",
+        "career"
+      ],
+      "word": "supervisor"
+    },
+    {
+      "item_id": "colleague",
+      "question": "a person who works with you",
+      "correct": "colleague",
+      "wrong": [
+        "job",
+        "career"
+      ],
+      "word": "colleague"
+    },
+    {
+      "item_id": "doctor",
+      "question": "medical person who helps sick people",
+      "correct": "doctor",
+      "wrong": [
+        "job",
+        "career"
+      ],
+      "word": "doctor"
+    },
+    {
+      "item_id": "nurse",
+      "question": "a helper for sick people",
+      "correct": "nurse",
+      "wrong": [
+        "job",
+        "career"
+      ],
+      "word": "nurse"
+    },
+    {
+      "item_id": "surgeon",
+      "question": "surgeon",
+      "correct": "surgeon",
+      "wrong": [
+        "job",
+        "career"
+      ],
+      "word": "surgeon"
+    },
+    {
+      "item_id": "dentist",
+      "question": "dentist",
+      "correct": "dentist",
+      "wrong": [
+        "job",
+        "career"
+      ],
+      "word": "dentist"
+    },
+    {
+      "item_id": "pharmacist",
+      "question": "pharmacist",
+      "correct": "pharmacist",
+      "wrong": [
+        "job",
+        "career"
+      ],
+      "word": "pharmacist"
+    },
+    {
+      "item_id": "veterinarian",
+      "question": "veterinarian",
+      "correct": "veterinarian",
+      "wrong": [
+        "job",
+        "career"
+      ],
+      "word": "veterinarian"
+    },
+    {
+      "item_id": "teacher",
+      "question": "a person who teaches",
+      "correct": "teacher",
+      "wrong": [
+        "job",
+        "career"
+      ],
+      "word": "teacher"
+    },
+    {
+      "item_id": "professor",
+      "question": "professor",
+      "correct": "professor",
+      "wrong": [
+        "job",
+        "career"
+      ],
+      "word": "professor"
+    },
+    {
+      "item_id": "principal",
+      "question": "most important or main",
+      "correct": "principal",
+      "wrong": [
+        "job",
+        "career"
+      ],
+      "word": "principal"
+    },
+    {
+      "item_id": "tutor",
+      "question": "tutor",
+      "correct": "tutor",
+      "wrong": [
+        "job",
+        "career"
+      ],
+      "word": "tutor"
+    },
+    {
+      "item_id": "engineer",
+      "question": "person who builds machines",
+      "correct": "engineer",
+      "wrong": [
+        "job",
+        "career"
+      ],
+      "word": "engineer"
+    },
+    {
+      "item_id": "scientist",
+      "question": "person who studies nature",
+      "correct": "scientist",
+      "wrong": [
+        "job",
+        "career"
+      ],
+      "word": "scientist"
+    },
+    {
+      "item_id": "researcher",
+      "question": "person who studies things",
+      "correct": "researcher",
+      "wrong": [
+        "job",
+        "career"
+      ],
+      "word": "researcher"
+    },
+    {
+      "item_id": "programmer",
+      "question": "programmer",
+      "correct": "programmer",
+      "wrong": [
+        "job",
+        "career"
+      ],
+      "word": "programmer"
+    },
+    {
+      "item_id": "designer",
+      "question": "designer",
+      "correct": "designer",
+      "wrong": [
+        "job",
+        "career"
+      ],
+      "word": "designer"
+    },
+    {
+      "item_id": "architect",
+      "question": "architect",
+      "correct": "architect",
+      "wrong": [
+        "job",
+        "career"
+      ],
+      "word": "architect"
+    },
+    {
+      "item_id": "artist",
+      "question": "a person who makes art",
+      "correct": "artist",
+      "wrong": [
+        "job",
+        "career"
+      ],
+      "word": "artist"
+    },
+    {
+      "item_id": "musician",
+      "question": "musician",
+      "correct": "musician",
+      "wrong": [
+        "job",
+        "career"
+      ],
+      "word": "musician"
+    },
+    {
+      "item_id": "actor",
+      "question": "person in a play",
+      "correct": "actor",
+      "wrong": [
+        "job",
+        "career"
+      ],
+      "word": "actor"
+    },
+    {
+      "item_id": "writer",
+      "question": "person who writes stories",
+      "correct": "writer",
+      "wrong": [
+        "job",
+        "career"
+      ],
+      "word": "writer"
+    },
+    {
+      "item_id": "journalist",
+      "question": "person who writes news",
+      "correct": "journalist",
+      "wrong": [
+        "job",
+        "career"
+      ],
+      "word": "journalist"
+    },
+    {
+      "item_id": "photographer",
+      "question": "photographer",
+      "correct": "photographer",
+      "wrong": [
+        "job",
+        "career"
+      ],
+      "word": "photographer"
+    },
+    {
+      "item_id": "chef",
+      "question": "chef",
+      "correct": "chef",
+      "wrong": [
+        "job",
+        "career"
+      ],
+      "word": "chef"
+    },
+    {
+      "item_id": "baker",
+      "question": "baker",
+      "correct": "baker",
+      "wrong": [
+        "job",
+        "career"
+      ],
+      "word": "baker"
+    },
+    {
+      "item_id": "waiter",
+      "question": "waiter",
+      "correct": "waiter",
+      "wrong": [
+        "job",
+        "career"
+      ],
+      "word": "waiter"
+    },
+    {
+      "item_id": "pilot",
+      "question": "person who flies a plane",
+      "correct": "pilot",
+      "wrong": [
+        "job",
+        "career"
+      ],
+      "word": "pilot"
+    },
+    {
+      "item_id": "flightattendant",
+      "question": "flight attendant",
+      "correct": "flight attendant",
+      "wrong": [
+        "job",
+        "career"
+      ],
+      "word": "flight attendant"
+    },
+    {
+      "item_id": "captain",
+      "question": "leader of a ship",
+      "correct": "captain",
+      "wrong": [
+        "job",
+        "career"
+      ],
+      "word": "captain"
+    },
+    {
+      "item_id": "sailor",
+      "question": "sailor",
+      "correct": "sailor",
+      "wrong": [
+        "job",
+        "career"
+      ],
+      "word": "sailor"
+    },
+    {
+      "item_id": "soldier",
+      "question": "a person in an army",
+      "correct": "soldier",
+      "wrong": [
+        "job",
+        "career"
+      ],
+      "word": "soldier"
+    },
+    {
+      "item_id": "policeofficer",
+      "question": "police officer",
+      "correct": "police officer",
+      "wrong": [
+        "job",
+        "career"
+      ],
+      "word": "police officer"
+    },
+    {
+      "item_id": "firefighter",
+      "question": "firefighter",
+      "correct": "firefighter",
+      "wrong": [
+        "job",
+        "career"
+      ],
+      "word": "firefighter"
+    },
+    {
+      "item_id": "lawyer",
+      "question": "a person who knows laws",
+      "correct": "lawyer",
+      "wrong": [
+        "job",
+        "career"
+      ],
+      "word": "lawyer"
+    },
+    {
+      "item_id": "judge",
+      "question": "courtroom decision maker",
+      "correct": "judge",
+      "wrong": [
+        "job",
+        "career"
+      ],
+      "word": "judge"
+    },
+    {
+      "item_id": "accountant",
+      "question": "accountant",
+      "correct": "accountant",
+      "wrong": [
+        "job",
+        "career"
+      ],
+      "word": "accountant"
+    },
+    {
+      "item_id": "banker",
+      "question": "banker",
+      "correct": "banker",
+      "wrong": [
+        "job",
+        "career"
+      ],
+      "word": "banker"
+    },
+    {
+      "item_id": "cashier",
+      "question": "cashier",
+      "correct": "cashier",
+      "wrong": [
+        "job",
+        "career"
+      ],
+      "word": "cashier"
+    },
+    {
+      "item_id": "clerk",
+      "question": "clerk",
+      "correct": "clerk",
+      "wrong": [
+        "job",
+        "career"
+      ],
+      "word": "clerk"
+    },
+    {
+      "item_id": "secretary",
+      "question": "a person who writes letters",
+      "correct": "secretary",
+      "wrong": [
+        "job",
+        "career"
+      ],
+      "word": "secretary"
+    },
+    {
+      "item_id": "receptionist",
+      "question": "receptionist",
+      "correct": "receptionist",
+      "wrong": [
+        "job",
+        "career"
+      ],
+      "word": "receptionist"
+    },
+    {
+      "item_id": "driver",
+      "question": "person who drives a car",
+      "correct": "driver",
+      "wrong": [
+        "job",
+        "career"
+      ],
+      "word": "driver"
+    },
+    {
+      "item_id": "mechanic",
+      "question": "mechanic",
+      "correct": "mechanic",
+      "wrong": [
+        "job",
+        "career"
+      ],
+      "word": "mechanic"
+    },
+    {
+      "item_id": "electrician",
+      "question": "electrician",
+      "correct": "electrician",
+      "wrong": [
+        "job",
+        "career"
+      ],
+      "word": "electrician"
+    },
+    {
+      "item_id": "plumber",
+      "question": "plumber",
+      "correct": "plumber",
+      "wrong": [
+        "job",
+        "career"
+      ],
+      "word": "plumber"
+    },
+    {
+      "item_id": "carpenter",
+      "question": "carpenter",
+      "correct": "carpenter",
+      "wrong": [
+        "job",
+        "career"
+      ],
+      "word": "carpenter"
+    },
+    {
+      "item_id": "builder",
+      "question": "builder",
+      "correct": "builder",
+      "wrong": [
+        "job",
+        "career"
+      ],
+      "word": "builder"
+    },
+    {
+      "item_id": "farmer",
+      "question": "person who grows food",
+      "correct": "farmer",
+      "wrong": [
+        "job",
+        "career"
+      ],
+      "word": "farmer"
+    },
+    {
+      "item_id": "fisherman",
+      "question": "fisherman",
+      "correct": "fisherman",
+      "wrong": [
+        "job",
+        "career"
+      ],
+      "word": "fisherman"
+    },
+    {
+      "item_id": "miner",
+      "question": "miner",
+      "correct": "miner",
+      "wrong": [
+        "job",
+        "career"
+      ],
+      "word": "miner"
+    },
+    {
+      "item_id": "factoryworker",
+      "question": "factory worker",
+      "correct": "factory worker",
+      "wrong": [
+        "job",
+        "career"
+      ],
+      "word": "factory worker"
+    },
+    {
+      "item_id": "athlete",
+      "question": "athlete",
+      "correct": "athlete",
+      "wrong": [
+        "job",
+        "career"
+      ],
+      "word": "athlete"
+    },
+    {
+      "item_id": "coach",
+      "question": "person who trains players",
+      "correct": "coach",
+      "wrong": [
+        "job",
+        "career"
+      ],
+      "word": "coach"
+    },
+    {
+      "item_id": "referee",
+      "question": "referee",
+      "correct": "referee",
+      "wrong": [
+        "job",
+        "career"
+      ],
+      "word": "referee"
+    },
+    {
+      "item_id": "trainer",
+      "question": "trainer",
+      "correct": "trainer",
+      "wrong": [
+        "job",
+        "career"
+      ],
+      "word": "trainer"
+    },
+    {
+      "item_id": "dancer",
+      "question": "dancer",
+      "correct": "dancer",
+      "wrong": [
+        "job",
+        "career"
+      ],
+      "word": "dancer"
+    },
+    {
+      "item_id": "singer",
+      "question": "singer",
+      "correct": "singer",
+      "wrong": [
+        "job",
+        "career"
+      ],
+      "word": "singer"
+    },
+    {
+      "item_id": "director",
+      "question": "person who leads a movie or play",
+      "correct": "director",
+      "wrong": [
+        "job",
+        "career"
+      ],
+      "word": "director"
+    },
+    {
+      "item_id": "producer",
+      "question": "person who makes shows",
+      "correct": "producer",
+      "wrong": [
+        "job",
+        "career"
+      ],
+      "word": "producer"
+    },
+    {
+      "item_id": "editor",
+      "question": "person who checks writing",
+      "correct": "editor",
+      "wrong": [
+        "job",
+        "career"
+      ],
+      "word": "editor"
+    },
+    {
+      "item_id": "animator",
+      "question": "animator",
+      "correct": "animator",
+      "wrong": [
+        "job",
+        "career"
+      ],
+      "word": "animator"
+    },
+    {
+      "item_id": "astronaut",
+      "question": "astronaut",
+      "correct": "astronaut",
+      "wrong": [
+        "job",
+        "career"
+      ],
+      "word": "astronaut"
+    },
+    {
+      "item_id": "explorer",
+      "question": "explorer",
+      "correct": "explorer",
+      "wrong": [
+        "job",
+        "career"
+      ],
+      "word": "explorer"
+    },
+    {
+      "item_id": "inventor",
+      "question": "inventor",
+      "correct": "inventor",
+      "wrong": [
+        "job",
+        "career"
+      ],
+      "word": "inventor"
+    },
+    {
+      "item_id": "entrepreneur",
+      "question": "entrepreneur",
+      "correct": "entrepreneur",
+      "wrong": [
+        "job",
+        "career"
+      ],
+      "word": "entrepreneur"
+    },
+    {
+      "item_id": "ceo",
+      "question": "CEO",
+      "correct": "ceo",
+      "wrong": [
+        "job",
+        "career"
+      ],
+      "word": "ceo"
+    },
+    {
+      "item_id": "president",
+      "question": "leader of a country",
+      "correct": "president",
+      "wrong": [
+        "job",
+        "career"
+      ],
+      "word": "president"
+    },
+    {
+      "item_id": "mayor",
+      "question": "mayor",
+      "correct": "mayor",
+      "wrong": [
+        "job",
+        "career"
+      ],
+      "word": "mayor"
+    },
+    {
+      "item_id": "diplomat",
+      "question": "diplomat",
+      "correct": "diplomat",
+      "wrong": [
+        "job",
+        "career"
+      ],
+      "word": "diplomat"
+    },
+    {
+      "item_id": "translator",
+      "question": "translator",
+      "correct": "translator",
+      "wrong": [
+        "job",
+        "career"
+      ],
+      "word": "translator"
+    },
+    {
+      "item_id": "interpreter",
+      "question": "interpreter",
+      "correct": "interpreter",
+      "wrong": [
+        "job",
+        "career"
+      ],
+      "word": "interpreter"
+    },
+    {
+      "item_id": "volunteer",
+      "question": "volunteer",
+      "correct": "volunteer",
+      "wrong": [
+        "job",
+        "career"
+      ],
+      "word": "volunteer"
+    },
+    {
+      "item_id": "intern",
+      "question": "intern",
+      "correct": "intern",
+      "wrong": [
+        "job",
+        "career"
+      ],
+      "word": "intern"
+    },
+    {
+      "item_id": "apprentice",
+      "question": "apprentice",
+      "correct": "apprentice",
+      "wrong": [
+        "job",
+        "career"
+      ],
+      "word": "apprentice"
+    },
+    {
+      "item_id": "trainee",
+      "question": "trainee",
+      "correct": "trainee",
+      "wrong": [
+        "job",
+        "career"
+      ],
+      "word": "trainee"
+    },
+    {
+      "item_id": "retiree",
+      "question": "retiree",
+      "correct": "retiree",
+      "wrong": [
+        "job",
+        "career"
+      ],
+      "word": "retiree"
+    },
+    {
+      "item_id": "unemployed",
+      "question": "without a paid job",
+      "correct": "unemployed",
+      "wrong": [
+        "job",
+        "career"
+      ],
+      "word": "unemployed"
+    },
+    {
+      "item_id": "parttime",
+      "question": "job done for only some hours",
+      "correct": "part time",
+      "wrong": [
+        "job",
+        "career"
+      ],
+      "word": "part time"
+    },
+    {
+      "item_id": "fulltime",
+      "question": "working all day",
+      "correct": "full time",
+      "wrong": [
+        "job",
+        "career"
+      ],
+      "word": "full time"
+    },
+    {
+      "item_id": "shift",
+      "question": "set hours at work",
+      "correct": "shift",
+      "wrong": [
+        "job",
+        "career"
+      ],
+      "word": "shift"
+    },
+    {
+      "item_id": "overtime",
+      "question": "overtime",
+      "correct": "overtime",
+      "wrong": [
+        "job",
+        "career"
+      ],
+      "word": "overtime"
+    },
+    {
+      "item_id": "salary",
+      "question": "money paid for work",
+      "correct": "salary",
+      "wrong": [
+        "job",
+        "career"
+      ],
+      "word": "salary"
+    },
+    {
+      "item_id": "wage",
+      "question": "money paid for work",
+      "correct": "wage",
+      "wrong": [
+        "job",
+        "career"
+      ],
+      "word": "wage"
+    },
+    {
+      "item_id": "bonus",
+      "question": "bonus",
+      "correct": "bonus",
+      "wrong": [
+        "job",
+        "career"
+      ],
+      "word": "bonus"
+    },
+    {
+      "item_id": "benefit",
+      "question": "a good or helpful result",
+      "correct": "benefit",
+      "wrong": [
+        "job",
+        "career"
+      ],
+      "word": "benefit"
+    },
+    {
+      "item_id": "pension",
+      "question": "money paid to older people after work",
+      "correct": "pension",
+      "wrong": [
+        "job",
+        "career"
+      ],
+      "word": "pension"
+    },
+    {
+      "item_id": "resume",
+      "question": "start again after stopping",
+      "correct": "resume",
+      "wrong": [
+        "job",
+        "career"
+      ],
+      "word": "resume"
+    },
+    {
+      "item_id": "interview",
+      "question": "a meeting to ask questions",
+      "correct": "interview",
+      "wrong": [
+        "job",
+        "career"
+      ],
+      "word": "interview"
+    },
+    {
+      "item_id": "hire",
+      "question": "give someone a job",
+      "correct": "hire",
+      "wrong": [
+        "job",
+        "career"
+      ],
+      "word": "hire"
+    },
+    {
+      "item_id": "fire",
+      "question": "hot bright flames",
+      "correct": "fire",
+      "wrong": [
+        "job",
+        "career"
+      ],
+      "word": "fire"
+    },
+    {
+      "item_id": "quit",
+      "question": "quit",
+      "correct": "quit",
+      "wrong": [
+        "job",
+        "career"
+      ],
+      "word": "quit"
+    }
+  ]
+}

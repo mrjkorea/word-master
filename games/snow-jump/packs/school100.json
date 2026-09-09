@@ -1,0 +1,1008 @@
+{
+  "pack_id": "school100",
+  "title": "School Life",
+  "module_id": "word_master",
+  "seconds": 15,
+  "items": [
+    {
+      "item_id": "school",
+      "question": "a place for learning",
+      "correct": "school",
+      "wrong": [
+        "class",
+        "classroom"
+      ],
+      "word": "school"
+    },
+    {
+      "item_id": "class",
+      "question": "a group learning together",
+      "correct": "class",
+      "wrong": [
+        "school",
+        "classroom"
+      ],
+      "word": "class"
+    },
+    {
+      "item_id": "classroom",
+      "question": "classroom",
+      "correct": "classroom",
+      "wrong": [
+        "school",
+        "class"
+      ],
+      "word": "classroom"
+    },
+    {
+      "item_id": "teacher",
+      "question": "a person who teaches",
+      "correct": "teacher",
+      "wrong": [
+        "school",
+        "class"
+      ],
+      "word": "teacher"
+    },
+    {
+      "item_id": "student",
+      "question": "a child who learns at school",
+      "correct": "student",
+      "wrong": [
+        "school",
+        "class"
+      ],
+      "word": "student"
+    },
+    {
+      "item_id": "desk",
+      "question": "table for school work",
+      "correct": "desk",
+      "wrong": [
+        "school",
+        "class"
+      ],
+      "word": "desk"
+    },
+    {
+      "item_id": "chair",
+      "question": "a seat with four legs and a back",
+      "correct": "chair",
+      "wrong": [
+        "school",
+        "class"
+      ],
+      "word": "chair"
+    },
+    {
+      "item_id": "board",
+      "question": "a flat piece of wood",
+      "correct": "board",
+      "wrong": [
+        "school",
+        "class"
+      ],
+      "word": "board"
+    },
+    {
+      "item_id": "chalk",
+      "question": "chalk",
+      "correct": "chalk",
+      "wrong": [
+        "school",
+        "class"
+      ],
+      "word": "chalk"
+    },
+    {
+      "item_id": "pen",
+      "question": "pen",
+      "correct": "pen",
+      "wrong": [
+        "school",
+        "class"
+      ],
+      "word": "pen"
+    },
+    {
+      "item_id": "pencil",
+      "question": "pencil",
+      "correct": "pencil",
+      "wrong": [
+        "school",
+        "class"
+      ],
+      "word": "pencil"
+    },
+    {
+      "item_id": "eraser",
+      "question": "eraser",
+      "correct": "eraser",
+      "wrong": [
+        "school",
+        "class"
+      ],
+      "word": "eraser"
+    },
+    {
+      "item_id": "ruler",
+      "question": "ruler",
+      "correct": "ruler",
+      "wrong": [
+        "school",
+        "class"
+      ],
+      "word": "ruler"
+    },
+    {
+      "item_id": "notebook",
+      "question": "notebook",
+      "correct": "notebook",
+      "wrong": [
+        "school",
+        "class"
+      ],
+      "word": "notebook"
+    },
+    {
+      "item_id": "textbook",
+      "question": "textbook",
+      "correct": "textbook",
+      "wrong": [
+        "school",
+        "class"
+      ],
+      "word": "textbook"
+    },
+    {
+      "item_id": "homework",
+      "question": "homework",
+      "correct": "homework",
+      "wrong": [
+        "school",
+        "class"
+      ],
+      "word": "homework"
+    },
+    {
+      "item_id": "test",
+      "question": "a short school quiz",
+      "correct": "test",
+      "wrong": [
+        "school",
+        "class"
+      ],
+      "word": "test"
+    },
+    {
+      "item_id": "exam",
+      "question": "exam",
+      "correct": "exam",
+      "wrong": [
+        "school",
+        "class"
+      ],
+      "word": "exam"
+    },
+    {
+      "item_id": "quiz",
+      "question": "quiz",
+      "correct": "quiz",
+      "wrong": [
+        "school",
+        "class"
+      ],
+      "word": "quiz"
+    },
+    {
+      "item_id": "grade",
+      "question": "grade",
+      "correct": "grade",
+      "wrong": [
+        "school",
+        "class"
+      ],
+      "word": "grade"
+    },
+    {
+      "item_id": "score",
+      "question": "points in a game",
+      "correct": "score",
+      "wrong": [
+        "school",
+        "class"
+      ],
+      "word": "score"
+    },
+    {
+      "item_id": "subject",
+      "question": "based on personal feeling",
+      "correct": "subject",
+      "wrong": [
+        "school",
+        "class"
+      ],
+      "word": "subject"
+    },
+    {
+      "item_id": "math",
+      "question": "math",
+      "correct": "math",
+      "wrong": [
+        "school",
+        "class"
+      ],
+      "word": "math"
+    },
+    {
+      "item_id": "science",
+      "question": "study of the world",
+      "correct": "science",
+      "wrong": [
+        "school",
+        "class"
+      ],
+      "word": "science"
+    },
+    {
+      "item_id": "history",
+      "question": "study of things that happened long ago",
+      "correct": "history",
+      "wrong": [
+        "school",
+        "class"
+      ],
+      "word": "history"
+    },
+    {
+      "item_id": "english",
+      "question": "english",
+      "correct": "english",
+      "wrong": [
+        "school",
+        "class"
+      ],
+      "word": "english"
+    },
+    {
+      "item_id": "art",
+      "question": "pictures made by artists",
+      "correct": "art",
+      "wrong": [
+        "school",
+        "class"
+      ],
+      "word": "art"
+    },
+    {
+      "item_id": "music",
+      "question": "sounds made with instruments",
+      "correct": "music",
+      "wrong": [
+        "school",
+        "class"
+      ],
+      "word": "music"
+    },
+    {
+      "item_id": "pe",
+      "question": "PE",
+      "correct": "pe",
+      "wrong": [
+        "school",
+        "class"
+      ],
+      "word": "pe"
+    },
+    {
+      "item_id": "library",
+      "question": "place with many books",
+      "correct": "library",
+      "wrong": [
+        "school",
+        "class"
+      ],
+      "word": "library"
+    },
+    {
+      "item_id": "locker",
+      "question": "locker",
+      "correct": "locker",
+      "wrong": [
+        "school",
+        "class"
+      ],
+      "word": "locker"
+    },
+    {
+      "item_id": "hallway",
+      "question": "hallway",
+      "correct": "hallway",
+      "wrong": [
+        "school",
+        "class"
+      ],
+      "word": "hallway"
+    },
+    {
+      "item_id": "cafeteria",
+      "question": "cafeteria",
+      "correct": "cafeteria",
+      "wrong": [
+        "school",
+        "class"
+      ],
+      "word": "cafeteria"
+    },
+    {
+      "item_id": "gym",
+      "question": "gym",
+      "correct": "gym",
+      "wrong": [
+        "school",
+        "class"
+      ],
+      "word": "gym"
+    },
+    {
+      "item_id": "playground",
+      "question": "playground",
+      "correct": "playground",
+      "wrong": [
+        "school",
+        "class"
+      ],
+      "word": "playground"
+    },
+    {
+      "item_id": "principal",
+      "question": "most important or main",
+      "correct": "principal",
+      "wrong": [
+        "school",
+        "class"
+      ],
+      "word": "principal"
+    },
+    {
+      "item_id": "classmate",
+      "question": "classmate",
+      "correct": "classmate",
+      "wrong": [
+        "school",
+        "class"
+      ],
+      "word": "classmate"
+    },
+    {
+      "item_id": "friend",
+      "question": "person you like and trust",
+      "correct": "friend",
+      "wrong": [
+        "school",
+        "class"
+      ],
+      "word": "friend"
+    },
+    {
+      "item_id": "team",
+      "question": "a group working together",
+      "correct": "team",
+      "wrong": [
+        "school",
+        "class"
+      ],
+      "word": "team"
+    },
+    {
+      "item_id": "club",
+      "question": "long stick for hitting balls",
+      "correct": "club",
+      "wrong": [
+        "school",
+        "class"
+      ],
+      "word": "club"
+    },
+    {
+      "item_id": "bell",
+      "question": "bell",
+      "correct": "bell",
+      "wrong": [
+        "school",
+        "class"
+      ],
+      "word": "bell"
+    },
+    {
+      "item_id": "schedule",
+      "question": "plan a time for",
+      "correct": "schedule",
+      "wrong": [
+        "school",
+        "class"
+      ],
+      "word": "schedule"
+    },
+    {
+      "item_id": "period",
+      "question": "a length of time",
+      "correct": "period",
+      "wrong": [
+        "school",
+        "class"
+      ],
+      "word": "period"
+    },
+    {
+      "item_id": "break",
+      "question": "a short rest",
+      "correct": "break",
+      "wrong": [
+        "school",
+        "class"
+      ],
+      "word": "break"
+    },
+    {
+      "item_id": "recess",
+      "question": "recess",
+      "correct": "recess",
+      "wrong": [
+        "school",
+        "class"
+      ],
+      "word": "recess"
+    },
+    {
+      "item_id": "attendance",
+      "question": "attendance",
+      "correct": "attendance",
+      "wrong": [
+        "school",
+        "class"
+      ],
+      "word": "attendance"
+    },
+    {
+      "item_id": "absent",
+      "question": "not here right now",
+      "correct": "absent",
+      "wrong": [
+        "school",
+        "class"
+      ],
+      "word": "absent"
+    },
+    {
+      "item_id": "late",
+      "question": "after the right time",
+      "correct": "late",
+      "wrong": [
+        "school",
+        "class"
+      ],
+      "word": "late"
+    },
+    {
+      "item_id": "early",
+      "question": "before the usual time",
+      "correct": "early",
+      "wrong": [
+        "school",
+        "class"
+      ],
+      "word": "early"
+    },
+    {
+      "item_id": "study",
+      "question": "the act of learning about something",
+      "correct": "study",
+      "wrong": [
+        "school",
+        "class"
+      ],
+      "word": "study"
+    },
+    {
+      "item_id": "learn",
+      "question": "to get new knowledge or skill",
+      "correct": "learn",
+      "wrong": [
+        "school",
+        "class"
+      ],
+      "word": "learn"
+    },
+    {
+      "item_id": "read",
+      "question": "to look at words and understand",
+      "correct": "read",
+      "wrong": [
+        "school",
+        "class"
+      ],
+      "word": "read"
+    },
+    {
+      "item_id": "write",
+      "question": "to make words with a pen",
+      "correct": "write",
+      "wrong": [
+        "school",
+        "class"
+      ],
+      "word": "write"
+    },
+    {
+      "item_id": "spell",
+      "question": "say each letter in order",
+      "correct": "spell",
+      "wrong": [
+        "school",
+        "class"
+      ],
+      "word": "spell"
+    },
+    {
+      "item_id": "count",
+      "question": "how many things there are",
+      "correct": "count",
+      "wrong": [
+        "school",
+        "class"
+      ],
+      "word": "count"
+    },
+    {
+      "item_id": "answer",
+      "question": "reply to a question",
+      "correct": "answer",
+      "wrong": [
+        "school",
+        "class"
+      ],
+      "word": "answer"
+    },
+    {
+      "item_id": "question",
+      "question": "something you ask to learn",
+      "correct": "question",
+      "wrong": [
+        "school",
+        "class"
+      ],
+      "word": "question"
+    },
+    {
+      "item_id": "raise",
+      "question": "lift something up higher",
+      "correct": "raise",
+      "wrong": [
+        "school",
+        "class"
+      ],
+      "word": "raise"
+    },
+    {
+      "item_id": "listen",
+      "question": "hear with attention",
+      "correct": "listen",
+      "wrong": [
+        "school",
+        "class"
+      ],
+      "word": "listen"
+    },
+    {
+      "item_id": "speak",
+      "question": "to say words out loud",
+      "correct": "speak",
+      "wrong": [
+        "school",
+        "class"
+      ],
+      "word": "speak"
+    },
+    {
+      "item_id": "project",
+      "question": "a school task",
+      "correct": "project",
+      "wrong": [
+        "school",
+        "class"
+      ],
+      "word": "project"
+    },
+    {
+      "item_id": "report",
+      "question": "a paper that tells facts or news",
+      "correct": "report",
+      "wrong": [
+        "school",
+        "class"
+      ],
+      "word": "report"
+    },
+    {
+      "item_id": "essay",
+      "question": "essay",
+      "correct": "essay",
+      "wrong": [
+        "school",
+        "class"
+      ],
+      "word": "essay"
+    },
+    {
+      "item_id": "presentation",
+      "question": "showing work to others",
+      "correct": "presentation",
+      "wrong": [
+        "school",
+        "class"
+      ],
+      "word": "presentation"
+    },
+    {
+      "item_id": "group",
+      "question": "several people together",
+      "correct": "group",
+      "wrong": [
+        "school",
+        "class"
+      ],
+      "word": "group"
+    },
+    {
+      "item_id": "partner",
+      "question": "a person who works with you",
+      "correct": "partner",
+      "wrong": [
+        "school",
+        "class"
+      ],
+      "word": "partner"
+    },
+    {
+      "item_id": "tutor",
+      "question": "tutor",
+      "correct": "tutor",
+      "wrong": [
+        "school",
+        "class"
+      ],
+      "word": "tutor"
+    },
+    {
+      "item_id": "scholarship",
+      "question": "scholarship",
+      "correct": "scholarship",
+      "wrong": [
+        "school",
+        "class"
+      ],
+      "word": "scholarship"
+    },
+    {
+      "item_id": "graduation",
+      "question": "graduation",
+      "correct": "graduation",
+      "wrong": [
+        "school",
+        "class"
+      ],
+      "word": "graduation"
+    },
+    {
+      "item_id": "diploma",
+      "question": "diploma",
+      "correct": "diploma",
+      "wrong": [
+        "school",
+        "class"
+      ],
+      "word": "diploma"
+    },
+    {
+      "item_id": "uniform",
+      "question": "all the same",
+      "correct": "uniform",
+      "wrong": [
+        "school",
+        "class"
+      ],
+      "word": "uniform"
+    },
+    {
+      "item_id": "backpack",
+      "question": "backpack",
+      "correct": "backpack",
+      "wrong": [
+        "school",
+        "class"
+      ],
+      "word": "backpack"
+    },
+    {
+      "item_id": "binder",
+      "question": "binder",
+      "correct": "binder",
+      "wrong": [
+        "school",
+        "class"
+      ],
+      "word": "binder"
+    },
+    {
+      "item_id": "stapler",
+      "question": "stapler",
+      "correct": "stapler",
+      "wrong": [
+        "school",
+        "class"
+      ],
+      "word": "stapler"
+    },
+    {
+      "item_id": "tape",
+      "question": "sticky clear strip",
+      "correct": "tape",
+      "wrong": [
+        "school",
+        "class"
+      ],
+      "word": "tape"
+    },
+    {
+      "item_id": "glue",
+      "question": "glue",
+      "correct": "glue",
+      "wrong": [
+        "school",
+        "class"
+      ],
+      "word": "glue"
+    },
+    {
+      "item_id": "scissors",
+      "question": "scissors",
+      "correct": "scissors",
+      "wrong": [
+        "school",
+        "class"
+      ],
+      "word": "scissors"
+    },
+    {
+      "item_id": "marker",
+      "question": "marker",
+      "correct": "marker",
+      "wrong": [
+        "school",
+        "class"
+      ],
+      "word": "marker"
+    },
+    {
+      "item_id": "crayon",
+      "question": "crayon",
+      "correct": "crayon",
+      "wrong": [
+        "school",
+        "class"
+      ],
+      "word": "crayon"
+    },
+    {
+      "item_id": "paint",
+      "question": "to put color on something",
+      "correct": "paint",
+      "wrong": [
+        "school",
+        "class"
+      ],
+      "word": "paint"
+    },
+    {
+      "item_id": "calculator",
+      "question": "calculator",
+      "correct": "calculator",
+      "wrong": [
+        "school",
+        "class"
+      ],
+      "word": "calculator"
+    },
+    {
+      "item_id": "computer",
+      "question": "machine that runs programs",
+      "correct": "computer",
+      "wrong": [
+        "school",
+        "class"
+      ],
+      "word": "computer"
+    },
+    {
+      "item_id": "tablet",
+      "question": "tablet",
+      "correct": "tablet",
+      "wrong": [
+        "school",
+        "class"
+      ],
+      "word": "tablet"
+    },
+    {
+      "item_id": "printer",
+      "question": "printer",
+      "correct": "printer",
+      "wrong": [
+        "school",
+        "class"
+      ],
+      "word": "printer"
+    },
+    {
+      "item_id": "paper",
+      "question": "thin material made from wood",
+      "correct": "paper",
+      "wrong": [
+        "school",
+        "class"
+      ],
+      "word": "paper"
+    },
+    {
+      "item_id": "sheet",
+      "question": "flat cloth for a bed",
+      "correct": "sheet",
+      "wrong": [
+        "school",
+        "class"
+      ],
+      "word": "sheet"
+    },
+    {
+      "item_id": "folder",
+      "question": "folder",
+      "correct": "folder",
+      "wrong": [
+        "school",
+        "class"
+      ],
+      "word": "folder"
+    },
+    {
+      "item_id": "file",
+      "question": "a folder that holds papers",
+      "correct": "file",
+      "wrong": [
+        "school",
+        "class"
+      ],
+      "word": "file"
+    },
+    {
+      "item_id": "note",
+      "question": "short written message",
+      "correct": "note",
+      "wrong": [
+        "school",
+        "class"
+      ],
+      "word": "note"
+    },
+    {
+      "item_id": "reminder",
+      "question": "reminder",
+      "correct": "reminder",
+      "wrong": [
+        "school",
+        "class"
+      ],
+      "word": "reminder"
+    },
+    {
+      "item_id": "librarycard",
+      "question": "library card",
+      "correct": "library card",
+      "wrong": [
+        "school",
+        "class"
+      ],
+      "word": "library card"
+    },
+    {
+      "item_id": "borrow",
+      "question": "take something to return later",
+      "correct": "borrow",
+      "wrong": [
+        "school",
+        "class"
+      ],
+      "word": "borrow"
+    },
+    {
+      "item_id": "return",
+      "question": "the act of giving something back",
+      "correct": "return",
+      "wrong": [
+        "school",
+        "class"
+      ],
+      "word": "return"
+    },
+    {
+      "item_id": "due",
+      "question": "expected to happen at a certain time",
+      "correct": "due",
+      "wrong": [
+        "school",
+        "class"
+      ],
+      "word": "due"
+    },
+    {
+      "item_id": "fine",
+      "question": "very good or nice",
+      "correct": "fine",
+      "wrong": [
+        "school",
+        "class"
+      ],
+      "word": "fine"
+    },
+    {
+      "item_id": "campus",
+      "question": "campus",
+      "correct": "campus",
+      "wrong": [
+        "school",
+        "class"
+      ],
+      "word": "campus"
+    },
+    {
+      "item_id": "dorm",
+      "question": "dorm",
+      "correct": "dorm",
+      "wrong": [
+        "school",
+        "class"
+      ],
+      "word": "dorm"
+    },
+    {
+      "item_id": "lab",
+      "question": "lab",
+      "correct": "lab",
+      "wrong": [
+        "school",
+        "class"
+      ],
+      "word": "lab"
+    },
+    {
+      "item_id": "experiment",
+      "question": "a test to learn something",
+      "correct": "experiment",
+      "wrong": [
+        "school",
+        "class"
+      ],
+      "word": "experiment"
+    },
+    {
+      "item_id": "microscope",
+      "question": "microscope",
+      "correct": "microscope",
+      "wrong": [
+        "school",
+        "class"
+      ],
+      "word": "microscope"
+    }
+  ]
+}

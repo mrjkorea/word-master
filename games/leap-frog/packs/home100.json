@@ -1,0 +1,1008 @@
+{
+  "pack_id": "home100",
+  "title": "Home & Rooms",
+  "module_id": "word_master",
+  "seconds": 15,
+  "items": [
+    {
+      "item_id": "house",
+      "question": "a building where people live",
+      "correct": "house",
+      "wrong": [
+        "home",
+        "apartment"
+      ],
+      "word": "house"
+    },
+    {
+      "item_id": "home",
+      "question": "to the place you live",
+      "correct": "home",
+      "wrong": [
+        "house",
+        "apartment"
+      ],
+      "word": "home"
+    },
+    {
+      "item_id": "apartment",
+      "question": "apartment",
+      "correct": "apartment",
+      "wrong": [
+        "house",
+        "home"
+      ],
+      "word": "apartment"
+    },
+    {
+      "item_id": "room",
+      "question": "a space inside a building",
+      "correct": "room",
+      "wrong": [
+        "house",
+        "home"
+      ],
+      "word": "room"
+    },
+    {
+      "item_id": "bedroom",
+      "question": "a room where people sleep",
+      "correct": "bedroom",
+      "wrong": [
+        "house",
+        "home"
+      ],
+      "word": "bedroom"
+    },
+    {
+      "item_id": "bathroom",
+      "question": "bathroom",
+      "correct": "bathroom",
+      "wrong": [
+        "house",
+        "home"
+      ],
+      "word": "bathroom"
+    },
+    {
+      "item_id": "kitchen",
+      "question": "room for cooking food",
+      "correct": "kitchen",
+      "wrong": [
+        "house",
+        "home"
+      ],
+      "word": "kitchen"
+    },
+    {
+      "item_id": "livingroom",
+      "question": "living room",
+      "correct": "living room",
+      "wrong": [
+        "house",
+        "home"
+      ],
+      "word": "living room"
+    },
+    {
+      "item_id": "diningroom",
+      "question": "dining room",
+      "correct": "dining room",
+      "wrong": [
+        "house",
+        "home"
+      ],
+      "word": "dining room"
+    },
+    {
+      "item_id": "garage",
+      "question": "garage",
+      "correct": "garage",
+      "wrong": [
+        "house",
+        "home"
+      ],
+      "word": "garage"
+    },
+    {
+      "item_id": "door",
+      "question": "a way to enter a room",
+      "correct": "door",
+      "wrong": [
+        "house",
+        "home"
+      ],
+      "word": "door"
+    },
+    {
+      "item_id": "window",
+      "question": "an opening with glass in a wall",
+      "correct": "window",
+      "wrong": [
+        "house",
+        "home"
+      ],
+      "word": "window"
+    },
+    {
+      "item_id": "wall",
+      "question": "flat side of a room",
+      "correct": "wall",
+      "wrong": [
+        "house",
+        "home"
+      ],
+      "word": "wall"
+    },
+    {
+      "item_id": "floor",
+      "question": "the bottom surface of a room",
+      "correct": "floor",
+      "wrong": [
+        "house",
+        "home"
+      ],
+      "word": "floor"
+    },
+    {
+      "item_id": "ceiling",
+      "question": "ceiling",
+      "correct": "ceiling",
+      "wrong": [
+        "house",
+        "home"
+      ],
+      "word": "ceiling"
+    },
+    {
+      "item_id": "roof",
+      "question": "top of a house",
+      "correct": "roof",
+      "wrong": [
+        "house",
+        "home"
+      ],
+      "word": "roof"
+    },
+    {
+      "item_id": "stairs",
+      "question": "stairs",
+      "correct": "stairs",
+      "wrong": [
+        "house",
+        "home"
+      ],
+      "word": "stairs"
+    },
+    {
+      "item_id": "balcony",
+      "question": "balcony",
+      "correct": "balcony",
+      "wrong": [
+        "house",
+        "home"
+      ],
+      "word": "balcony"
+    },
+    {
+      "item_id": "yard",
+      "question": "an outdoor space next to a house",
+      "correct": "yard",
+      "wrong": [
+        "house",
+        "home"
+      ],
+      "word": "yard"
+    },
+    {
+      "item_id": "garden",
+      "question": "a place with plants and flowers",
+      "correct": "garden",
+      "wrong": [
+        "house",
+        "home"
+      ],
+      "word": "garden"
+    },
+    {
+      "item_id": "bed",
+      "question": "a place to sleep",
+      "correct": "bed",
+      "wrong": [
+        "house",
+        "home"
+      ],
+      "word": "bed"
+    },
+    {
+      "item_id": "sofa",
+      "question": "sofa",
+      "correct": "sofa",
+      "wrong": [
+        "house",
+        "home"
+      ],
+      "word": "sofa"
+    },
+    {
+      "item_id": "couch",
+      "question": "couch",
+      "correct": "couch",
+      "wrong": [
+        "house",
+        "home"
+      ],
+      "word": "couch"
+    },
+    {
+      "item_id": "table",
+      "question": "a flat surface with legs",
+      "correct": "table",
+      "wrong": [
+        "house",
+        "home"
+      ],
+      "word": "table"
+    },
+    {
+      "item_id": "chair",
+      "question": "a seat with four legs and a back",
+      "correct": "chair",
+      "wrong": [
+        "house",
+        "home"
+      ],
+      "word": "chair"
+    },
+    {
+      "item_id": "desk",
+      "question": "table for school work",
+      "correct": "desk",
+      "wrong": [
+        "house",
+        "home"
+      ],
+      "word": "desk"
+    },
+    {
+      "item_id": "shelf",
+      "question": "shelf",
+      "correct": "shelf",
+      "wrong": [
+        "house",
+        "home"
+      ],
+      "word": "shelf"
+    },
+    {
+      "item_id": "cabinet",
+      "question": "wooden cupboard for storage",
+      "correct": "cabinet",
+      "wrong": [
+        "house",
+        "home"
+      ],
+      "word": "cabinet"
+    },
+    {
+      "item_id": "drawer",
+      "question": "drawer",
+      "correct": "drawer",
+      "wrong": [
+        "house",
+        "home"
+      ],
+      "word": "drawer"
+    },
+    {
+      "item_id": "closet",
+      "question": "closet",
+      "correct": "closet",
+      "wrong": [
+        "house",
+        "home"
+      ],
+      "word": "closet"
+    },
+    {
+      "item_id": "lamp",
+      "question": "lamp",
+      "correct": "lamp",
+      "wrong": [
+        "house",
+        "home"
+      ],
+      "word": "lamp"
+    },
+    {
+      "item_id": "light",
+      "question": "not heavy to carry",
+      "correct": "light",
+      "wrong": [
+        "house",
+        "home"
+      ],
+      "word": "light"
+    },
+    {
+      "item_id": "fan",
+      "question": "machine that blows air",
+      "correct": "fan",
+      "wrong": [
+        "house",
+        "home"
+      ],
+      "word": "fan"
+    },
+    {
+      "item_id": "heater",
+      "question": "heater",
+      "correct": "heater",
+      "wrong": [
+        "house",
+        "home"
+      ],
+      "word": "heater"
+    },
+    {
+      "item_id": "airconditioner",
+      "question": "air conditioner",
+      "correct": "air conditioner",
+      "wrong": [
+        "house",
+        "home"
+      ],
+      "word": "air conditioner"
+    },
+    {
+      "item_id": "curtain",
+      "question": "cloth covering a window",
+      "correct": "curtain",
+      "wrong": [
+        "house",
+        "home"
+      ],
+      "word": "curtain"
+    },
+    {
+      "item_id": "carpet",
+      "question": "soft covering on the floor",
+      "correct": "carpet",
+      "wrong": [
+        "house",
+        "home"
+      ],
+      "word": "carpet"
+    },
+    {
+      "item_id": "rug",
+      "question": "rug",
+      "correct": "rug",
+      "wrong": [
+        "house",
+        "home"
+      ],
+      "word": "rug"
+    },
+    {
+      "item_id": "pillow",
+      "question": "pillow",
+      "correct": "pillow",
+      "wrong": [
+        "house",
+        "home"
+      ],
+      "word": "pillow"
+    },
+    {
+      "item_id": "blanket",
+      "question": "blanket",
+      "correct": "blanket",
+      "wrong": [
+        "house",
+        "home"
+      ],
+      "word": "blanket"
+    },
+    {
+      "item_id": "sheet",
+      "question": "flat cloth for a bed",
+      "correct": "sheet",
+      "wrong": [
+        "house",
+        "home"
+      ],
+      "word": "sheet"
+    },
+    {
+      "item_id": "mattress",
+      "question": "mattress",
+      "correct": "mattress",
+      "wrong": [
+        "house",
+        "home"
+      ],
+      "word": "mattress"
+    },
+    {
+      "item_id": "quilt",
+      "question": "quilt",
+      "correct": "quilt",
+      "wrong": [
+        "house",
+        "home"
+      ],
+      "word": "quilt"
+    },
+    {
+      "item_id": "towel",
+      "question": "towel",
+      "correct": "towel",
+      "wrong": [
+        "house",
+        "home"
+      ],
+      "word": "towel"
+    },
+    {
+      "item_id": "mirror",
+      "question": "glass that shows your face",
+      "correct": "mirror",
+      "wrong": [
+        "house",
+        "home"
+      ],
+      "word": "mirror"
+    },
+    {
+      "item_id": "clock",
+      "question": "machine that shows the time",
+      "correct": "clock",
+      "wrong": [
+        "house",
+        "home"
+      ],
+      "word": "clock"
+    },
+    {
+      "item_id": "calendar",
+      "question": "calendar",
+      "correct": "calendar",
+      "wrong": [
+        "house",
+        "home"
+      ],
+      "word": "calendar"
+    },
+    {
+      "item_id": "picture",
+      "question": "a drawing or photo",
+      "correct": "picture",
+      "wrong": [
+        "house",
+        "home"
+      ],
+      "word": "picture"
+    },
+    {
+      "item_id": "frame",
+      "question": "border around a picture",
+      "correct": "frame",
+      "wrong": [
+        "house",
+        "home"
+      ],
+      "word": "frame"
+    },
+    {
+      "item_id": "vase",
+      "question": "vase",
+      "correct": "vase",
+      "wrong": [
+        "house",
+        "home"
+      ],
+      "word": "vase"
+    },
+    {
+      "item_id": "fridge",
+      "question": "fridge",
+      "correct": "fridge",
+      "wrong": [
+        "house",
+        "home"
+      ],
+      "word": "fridge"
+    },
+    {
+      "item_id": "stove",
+      "question": "stove",
+      "correct": "stove",
+      "wrong": [
+        "house",
+        "home"
+      ],
+      "word": "stove"
+    },
+    {
+      "item_id": "oven",
+      "question": "oven",
+      "correct": "oven",
+      "wrong": [
+        "house",
+        "home"
+      ],
+      "word": "oven"
+    },
+    {
+      "item_id": "microwave",
+      "question": "microwave",
+      "correct": "microwave",
+      "wrong": [
+        "house",
+        "home"
+      ],
+      "word": "microwave"
+    },
+    {
+      "item_id": "sink",
+      "question": "to go down in water",
+      "correct": "sink",
+      "wrong": [
+        "house",
+        "home"
+      ],
+      "word": "sink"
+    },
+    {
+      "item_id": "faucet",
+      "question": "faucet",
+      "correct": "faucet",
+      "wrong": [
+        "house",
+        "home"
+      ],
+      "word": "faucet"
+    },
+    {
+      "item_id": "dishwasher",
+      "question": "dishwasher",
+      "correct": "dishwasher",
+      "wrong": [
+        "house",
+        "home"
+      ],
+      "word": "dishwasher"
+    },
+    {
+      "item_id": "washingmachine",
+      "question": "washing machine",
+      "correct": "washing machine",
+      "wrong": [
+        "house",
+        "home"
+      ],
+      "word": "washing machine"
+    },
+    {
+      "item_id": "dryer",
+      "question": "dryer",
+      "correct": "dryer",
+      "wrong": [
+        "house",
+        "home"
+      ],
+      "word": "dryer"
+    },
+    {
+      "item_id": "vacuum",
+      "question": "vacuum",
+      "correct": "vacuum",
+      "wrong": [
+        "house",
+        "home"
+      ],
+      "word": "vacuum"
+    },
+    {
+      "item_id": "key",
+      "question": "most important or main",
+      "correct": "key",
+      "wrong": [
+        "house",
+        "home"
+      ],
+      "word": "key"
+    },
+    {
+      "item_id": "lock",
+      "question": "close something with a key",
+      "correct": "lock",
+      "wrong": [
+        "house",
+        "home"
+      ],
+      "word": "lock"
+    },
+    {
+      "item_id": "keyhole",
+      "question": "keyhole",
+      "correct": "keyhole",
+      "wrong": [
+        "house",
+        "home"
+      ],
+      "word": "keyhole"
+    },
+    {
+      "item_id": "doorknob",
+      "question": "doorknob",
+      "correct": "doorknob",
+      "wrong": [
+        "house",
+        "home"
+      ],
+      "word": "doorknob"
+    },
+    {
+      "item_id": "mailbox",
+      "question": "mailbox",
+      "correct": "mailbox",
+      "wrong": [
+        "house",
+        "home"
+      ],
+      "word": "mailbox"
+    },
+    {
+      "item_id": "fence",
+      "question": "fence",
+      "correct": "fence",
+      "wrong": [
+        "house",
+        "home"
+      ],
+      "word": "fence"
+    },
+    {
+      "item_id": "gate",
+      "question": "door in a fence",
+      "correct": "gate",
+      "wrong": [
+        "house",
+        "home"
+      ],
+      "word": "gate"
+    },
+    {
+      "item_id": "driveway",
+      "question": "driveway",
+      "correct": "driveway",
+      "wrong": [
+        "house",
+        "home"
+      ],
+      "word": "driveway"
+    },
+    {
+      "item_id": "porch",
+      "question": "porch",
+      "correct": "porch",
+      "wrong": [
+        "house",
+        "home"
+      ],
+      "word": "porch"
+    },
+    {
+      "item_id": "attic",
+      "question": "attic",
+      "correct": "attic",
+      "wrong": [
+        "house",
+        "home"
+      ],
+      "word": "attic"
+    },
+    {
+      "item_id": "basement",
+      "question": "basement",
+      "correct": "basement",
+      "wrong": [
+        "house",
+        "home"
+      ],
+      "word": "basement"
+    },
+    {
+      "item_id": "furnace",
+      "question": "furnace",
+      "correct": "furnace",
+      "wrong": [
+        "house",
+        "home"
+      ],
+      "word": "furnace"
+    },
+    {
+      "item_id": "pipe",
+      "question": "tube that carries water",
+      "correct": "pipe",
+      "wrong": [
+        "house",
+        "home"
+      ],
+      "word": "pipe"
+    },
+    {
+      "item_id": "wire",
+      "question": "wire",
+      "correct": "wire",
+      "wrong": [
+        "house",
+        "home"
+      ],
+      "word": "wire"
+    },
+    {
+      "item_id": "outlet",
+      "question": "outlet",
+      "correct": "outlet",
+      "wrong": [
+        "house",
+        "home"
+      ],
+      "word": "outlet"
+    },
+    {
+      "item_id": "switch",
+      "question": "change from one thing to another",
+      "correct": "switch",
+      "wrong": [
+        "house",
+        "home"
+      ],
+      "word": "switch"
+    },
+    {
+      "item_id": "bulb",
+      "question": "bulb",
+      "correct": "bulb",
+      "wrong": [
+        "house",
+        "home"
+      ],
+      "word": "bulb"
+    },
+    {
+      "item_id": "battery",
+      "question": "battery",
+      "correct": "battery",
+      "wrong": [
+        "house",
+        "home"
+      ],
+      "word": "battery"
+    },
+    {
+      "item_id": "tool",
+      "question": "a helper for work",
+      "correct": "tool",
+      "wrong": [
+        "house",
+        "home"
+      ],
+      "word": "tool"
+    },
+    {
+      "item_id": "hammer",
+      "question": "hammer",
+      "correct": "hammer",
+      "wrong": [
+        "house",
+        "home"
+      ],
+      "word": "hammer"
+    },
+    {
+      "item_id": "clean",
+      "question": "not dirty or messy",
+      "correct": "clean",
+      "wrong": [
+        "house",
+        "home"
+      ],
+      "word": "clean"
+    },
+    {
+      "item_id": "sweep",
+      "question": "clean the floor with a broom",
+      "correct": "sweep",
+      "wrong": [
+        "house",
+        "home"
+      ],
+      "word": "sweep"
+    },
+    {
+      "item_id": "mop",
+      "question": "mop",
+      "correct": "mop",
+      "wrong": [
+        "house",
+        "home"
+      ],
+      "word": "mop"
+    },
+    {
+      "item_id": "dust",
+      "question": "dust",
+      "correct": "dust",
+      "wrong": [
+        "house",
+        "home"
+      ],
+      "word": "dust"
+    },
+    {
+      "item_id": "wash",
+      "question": "clean with water and soap",
+      "correct": "wash",
+      "wrong": [
+        "house",
+        "home"
+      ],
+      "word": "wash"
+    },
+    {
+      "item_id": "dry",
+      "question": "has no water or moisture",
+      "correct": "dry",
+      "wrong": [
+        "house",
+        "home"
+      ],
+      "word": "dry"
+    },
+    {
+      "item_id": "fold",
+      "question": "bend paper into layers",
+      "correct": "fold",
+      "wrong": [
+        "house",
+        "home"
+      ],
+      "word": "fold"
+    },
+    {
+      "item_id": "iron",
+      "question": "strong gray metal",
+      "correct": "iron",
+      "wrong": [
+        "house",
+        "home"
+      ],
+      "word": "iron"
+    },
+    {
+      "item_id": "organize",
+      "question": "put things in good order",
+      "correct": "organize",
+      "wrong": [
+        "house",
+        "home"
+      ],
+      "word": "organize"
+    },
+    {
+      "item_id": "decorate",
+      "question": "make a place pretty",
+      "correct": "decorate",
+      "wrong": [
+        "house",
+        "home"
+      ],
+      "word": "decorate"
+    },
+    {
+      "item_id": "rent",
+      "question": "money paid for housing",
+      "correct": "rent",
+      "wrong": [
+        "house",
+        "home"
+      ],
+      "word": "rent"
+    },
+    {
+      "item_id": "mortgage",
+      "question": "loan to buy a house",
+      "correct": "mortgage",
+      "wrong": [
+        "house",
+        "home"
+      ],
+      "word": "mortgage"
+    },
+    {
+      "item_id": "landlord",
+      "question": "owner of a rented house",
+      "correct": "landlord",
+      "wrong": [
+        "house",
+        "home"
+      ],
+      "word": "landlord"
+    },
+    {
+      "item_id": "tenant",
+      "question": "person who rents a home",
+      "correct": "tenant",
+      "wrong": [
+        "house",
+        "home"
+      ],
+      "word": "tenant"
+    },
+    {
+      "item_id": "neighbor",
+      "question": "neighbor",
+      "correct": "neighbor",
+      "wrong": [
+        "house",
+        "home"
+      ],
+      "word": "neighbor"
+    },
+    {
+      "item_id": "move",
+      "question": "change of place",
+      "correct": "move",
+      "wrong": [
+        "house",
+        "home"
+      ],
+      "word": "move"
+    },
+    {
+      "item_id": "pack",
+      "question": "bag of things together",
+      "correct": "pack",
+      "wrong": [
+        "house",
+        "home"
+      ],
+      "word": "pack"
+    },
+    {
+      "item_id": "unpack",
+      "question": "unpack",
+      "correct": "unpack",
+      "wrong": [
+        "house",
+        "home"
+      ],
+      "word": "unpack"
+    },
+    {
+      "item_id": "furniture",
+      "question": "tables chairs and beds",
+      "correct": "furniture",
+      "wrong": [
+        "house",
+        "home"
+      ],
+      "word": "furniture"
+    },
+    {
+      "item_id": "appliance",
+      "question": "appliance",
+      "correct": "appliance",
+      "wrong": [
+        "house",
+        "home"
+      ],
+      "word": "appliance"
+    }
+  ]
+}

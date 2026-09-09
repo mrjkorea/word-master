@@ -1,0 +1,1008 @@
+{
+  "pack_id": "nouns400",
+  "title": "A2 Nouns 301–400",
+  "module_id": "word_master",
+  "seconds": 15,
+  "items": [
+    {
+      "item_id": "region",
+      "question": "a part of a country",
+      "correct": "region",
+      "wrong": [
+        "effort",
+        "player"
+      ],
+      "word": "region"
+    },
+    {
+      "item_id": "effort",
+      "question": "trying hard to do something",
+      "correct": "effort",
+      "wrong": [
+        "region",
+        "player"
+      ],
+      "word": "effort"
+    },
+    {
+      "item_id": "player",
+      "question": "a person who plays a sport or game",
+      "correct": "player",
+      "wrong": [
+        "region",
+        "effort"
+      ],
+      "word": "player"
+    },
+    {
+      "item_id": "award",
+      "question": "a prize given for good work",
+      "correct": "award",
+      "wrong": [
+        "region",
+        "effort"
+      ],
+      "word": "award"
+    },
+    {
+      "item_id": "village",
+      "question": "a small town in the countryside",
+      "correct": "village",
+      "wrong": [
+        "region",
+        "effort"
+      ],
+      "word": "village"
+    },
+    {
+      "item_id": "organisation",
+      "question": "a group working together",
+      "correct": "organisation",
+      "wrong": [
+        "region",
+        "effort"
+      ],
+      "word": "organisation"
+    },
+    {
+      "item_id": "news",
+      "question": "information about recent events",
+      "correct": "news",
+      "wrong": [
+        "region",
+        "effort"
+      ],
+      "word": "news"
+    },
+    {
+      "item_id": "difficulty",
+      "question": "something that is hard to do",
+      "correct": "difficulty",
+      "wrong": [
+        "region",
+        "effort"
+      ],
+      "word": "difficulty"
+    },
+    {
+      "item_id": "cell",
+      "question": "the smallest living part of the body",
+      "correct": "cell",
+      "wrong": [
+        "region",
+        "effort"
+      ],
+      "word": "cell"
+    },
+    {
+      "item_id": "energy",
+      "question": "power to move or work",
+      "correct": "energy",
+      "wrong": [
+        "region",
+        "effort"
+      ],
+      "word": "energy"
+    },
+    {
+      "item_id": "degree",
+      "question": "unit of temperature or angle",
+      "correct": "degree",
+      "wrong": [
+        "region",
+        "effort"
+      ],
+      "word": "degree"
+    },
+    {
+      "item_id": "mile",
+      "question": "a distance of 1.6 kilometers",
+      "correct": "mile",
+      "wrong": [
+        "region",
+        "effort"
+      ],
+      "word": "mile"
+    },
+    {
+      "item_id": "means",
+      "question": "money or resources to do something",
+      "correct": "means",
+      "wrong": [
+        "region",
+        "effort"
+      ],
+      "word": "means"
+    },
+    {
+      "item_id": "growth",
+      "question": "the process of getting bigger",
+      "correct": "growth",
+      "wrong": [
+        "region",
+        "effort"
+      ],
+      "word": "growth"
+    },
+    {
+      "item_id": "treatment",
+      "question": "care or medicine to help someone",
+      "correct": "treatment",
+      "wrong": [
+        "region",
+        "effort"
+      ],
+      "word": "treatment"
+    },
+    {
+      "item_id": "sound",
+      "question": "noise you can hear",
+      "correct": "sound",
+      "wrong": [
+        "region",
+        "effort"
+      ],
+      "word": "sound"
+    },
+    {
+      "item_id": "task",
+      "question": "job you must finish",
+      "correct": "task",
+      "wrong": [
+        "region",
+        "effort"
+      ],
+      "word": "task"
+    },
+    {
+      "item_id": "provision",
+      "question": "things you need to have",
+      "correct": "provision",
+      "wrong": [
+        "region",
+        "effort"
+      ],
+      "word": "provision"
+    },
+    {
+      "item_id": "behaviour",
+      "question": "way a person acts",
+      "correct": "behaviour",
+      "wrong": [
+        "region",
+        "effort"
+      ],
+      "word": "behaviour"
+    },
+    {
+      "item_id": "function",
+      "question": "job a thing does",
+      "correct": "function",
+      "wrong": [
+        "region",
+        "effort"
+      ],
+      "word": "function"
+    },
+    {
+      "item_id": "resource",
+      "question": "useful thing or supply",
+      "correct": "resource",
+      "wrong": [
+        "region",
+        "effort"
+      ],
+      "word": "resource"
+    },
+    {
+      "item_id": "defence",
+      "question": "protection from harm",
+      "correct": "defence",
+      "wrong": [
+        "region",
+        "effort"
+      ],
+      "word": "defence"
+    },
+    {
+      "item_id": "garden",
+      "question": "a place with plants and flowers",
+      "correct": "garden",
+      "wrong": [
+        "region",
+        "effort"
+      ],
+      "word": "garden"
+    },
+    {
+      "item_id": "floor",
+      "question": "the bottom surface of a room",
+      "correct": "floor",
+      "wrong": [
+        "region",
+        "effort"
+      ],
+      "word": "floor"
+    },
+    {
+      "item_id": "technology",
+      "question": "machines and tools that help us",
+      "correct": "technology",
+      "wrong": [
+        "region",
+        "effort"
+      ],
+      "word": "technology"
+    },
+    {
+      "item_id": "style",
+      "question": "way of doing something",
+      "correct": "style",
+      "wrong": [
+        "region",
+        "effort"
+      ],
+      "word": "style"
+    },
+    {
+      "item_id": "feeling",
+      "question": "emotion inside you",
+      "correct": "feeling",
+      "wrong": [
+        "region",
+        "effort"
+      ],
+      "word": "feeling"
+    },
+    {
+      "item_id": "science",
+      "question": "study of the world",
+      "correct": "science",
+      "wrong": [
+        "region",
+        "effort"
+      ],
+      "word": "science"
+    },
+    {
+      "item_id": "doubt",
+      "question": "not being sure",
+      "correct": "doubt",
+      "wrong": [
+        "region",
+        "effort"
+      ],
+      "word": "doubt"
+    },
+    {
+      "item_id": "horse",
+      "question": "big animal you can ride",
+      "correct": "horse",
+      "wrong": [
+        "region",
+        "effort"
+      ],
+      "word": "horse"
+    },
+    {
+      "item_id": "answer",
+      "question": "reply to a question",
+      "correct": "answer",
+      "wrong": [
+        "region",
+        "effort"
+      ],
+      "word": "answer"
+    },
+    {
+      "item_id": "user",
+      "question": "person who uses something",
+      "correct": "user",
+      "wrong": [
+        "region",
+        "effort"
+      ],
+      "word": "user"
+    },
+    {
+      "item_id": "fund",
+      "question": "money saved for a purpose",
+      "correct": "fund",
+      "wrong": [
+        "region",
+        "effort"
+      ],
+      "word": "fund"
+    },
+    {
+      "item_id": "character",
+      "question": "the way a person acts",
+      "correct": "character",
+      "wrong": [
+        "region",
+        "effort"
+      ],
+      "word": "character"
+    },
+    {
+      "item_id": "risk",
+      "question": "chance of something bad",
+      "correct": "risk",
+      "wrong": [
+        "region",
+        "effort"
+      ],
+      "word": "risk"
+    },
+    {
+      "item_id": "dog",
+      "question": "a pet animal with four legs",
+      "correct": "dog",
+      "wrong": [
+        "region",
+        "effort"
+      ],
+      "word": "dog"
+    },
+    {
+      "item_id": "army",
+      "question": "a large group of soldiers",
+      "correct": "army",
+      "wrong": [
+        "region",
+        "effort"
+      ],
+      "word": "army"
+    },
+    {
+      "item_id": "station",
+      "question": "a place where trains stop",
+      "correct": "station",
+      "wrong": [
+        "region",
+        "effort"
+      ],
+      "word": "station"
+    },
+    {
+      "item_id": "glass",
+      "question": "a clear cup made of glass",
+      "correct": "glass",
+      "wrong": [
+        "region",
+        "effort"
+      ],
+      "word": "glass"
+    },
+    {
+      "item_id": "cup",
+      "question": "a small container for drinking",
+      "correct": "cup",
+      "wrong": [
+        "region",
+        "effort"
+      ],
+      "word": "cup"
+    },
+    {
+      "item_id": "husband",
+      "question": "married man",
+      "correct": "husband",
+      "wrong": [
+        "region",
+        "effort"
+      ],
+      "word": "husband"
+    },
+    {
+      "item_id": "capital",
+      "question": "main city of a country",
+      "correct": "capital",
+      "wrong": [
+        "region",
+        "effort"
+      ],
+      "word": "capital"
+    },
+    {
+      "item_id": "note",
+      "question": "short written message",
+      "correct": "note",
+      "wrong": [
+        "region",
+        "effort"
+      ],
+      "word": "note"
+    },
+    {
+      "item_id": "season",
+      "question": "one of four parts of the year",
+      "correct": "season",
+      "wrong": [
+        "region",
+        "effort"
+      ],
+      "word": "season"
+    },
+    {
+      "item_id": "argument",
+      "question": "a strong disagreement",
+      "correct": "argument",
+      "wrong": [
+        "region",
+        "effort"
+      ],
+      "word": "argument"
+    },
+    {
+      "item_id": "show",
+      "question": "a performance on stage",
+      "correct": "show",
+      "wrong": [
+        "region",
+        "effort"
+      ],
+      "word": "show"
+    },
+    {
+      "item_id": "responsibility",
+      "question": "a duty you must do",
+      "correct": "responsibility",
+      "wrong": [
+        "region",
+        "effort"
+      ],
+      "word": "responsibility"
+    },
+    {
+      "item_id": "deal",
+      "question": "an agreement to trade",
+      "correct": "deal",
+      "wrong": [
+        "region",
+        "effort"
+      ],
+      "word": "deal"
+    },
+    {
+      "item_id": "economy",
+      "question": "how money and goods move",
+      "correct": "economy",
+      "wrong": [
+        "region",
+        "effort"
+      ],
+      "word": "economy"
+    },
+    {
+      "item_id": "element",
+      "question": "one basic part of something",
+      "correct": "element",
+      "wrong": [
+        "region",
+        "effort"
+      ],
+      "word": "element"
+    },
+    {
+      "item_id": "duty",
+      "question": "a job you must do",
+      "correct": "duty",
+      "wrong": [
+        "region",
+        "effort"
+      ],
+      "word": "duty"
+    },
+    {
+      "item_id": "attempt",
+      "question": "a try to do something",
+      "correct": "attempt",
+      "wrong": [
+        "region",
+        "effort"
+      ],
+      "word": "attempt"
+    },
+    {
+      "item_id": "leg",
+      "question": "a part of the body for walking",
+      "correct": "leg",
+      "wrong": [
+        "region",
+        "effort"
+      ],
+      "word": "leg"
+    },
+    {
+      "item_id": "investment",
+      "question": "money you put in to grow",
+      "correct": "investment",
+      "wrong": [
+        "region",
+        "effort"
+      ],
+      "word": "investment"
+    },
+    {
+      "item_id": "brother",
+      "question": "a boy who has the same parents",
+      "correct": "brother",
+      "wrong": [
+        "region",
+        "effort"
+      ],
+      "word": "brother"
+    },
+    {
+      "item_id": "title",
+      "question": "name of a book or movie",
+      "correct": "title",
+      "wrong": [
+        "region",
+        "effort"
+      ],
+      "word": "title"
+    },
+    {
+      "item_id": "hotel",
+      "question": "a building where people stay",
+      "correct": "hotel",
+      "wrong": [
+        "region",
+        "effort"
+      ],
+      "word": "hotel"
+    },
+    {
+      "item_id": "aspect",
+      "question": "one part or side of something",
+      "correct": "aspect",
+      "wrong": [
+        "region",
+        "effort"
+      ],
+      "word": "aspect"
+    },
+    {
+      "item_id": "increase",
+      "question": "a rise in amount or size",
+      "correct": "increase",
+      "wrong": [
+        "region",
+        "effort"
+      ],
+      "word": "increase"
+    },
+    {
+      "item_id": "help",
+      "question": "support or aid given to someone",
+      "correct": "help",
+      "wrong": [
+        "region",
+        "effort"
+      ],
+      "word": "help"
+    },
+    {
+      "item_id": "summer",
+      "question": "hot season with long days",
+      "correct": "summer",
+      "wrong": [
+        "region",
+        "effort"
+      ],
+      "word": "summer"
+    },
+    {
+      "item_id": "daughter",
+      "question": "a parent's female child",
+      "correct": "daughter",
+      "wrong": [
+        "region",
+        "effort"
+      ],
+      "word": "daughter"
+    },
+    {
+      "item_id": "baby",
+      "question": "a very young child",
+      "correct": "baby",
+      "wrong": [
+        "region",
+        "effort"
+      ],
+      "word": "baby"
+    },
+    {
+      "item_id": "sea",
+      "question": "a big body of salt water",
+      "correct": "sea",
+      "wrong": [
+        "region",
+        "effort"
+      ],
+      "word": "sea"
+    },
+    {
+      "item_id": "skill",
+      "question": "an ability to do something well",
+      "correct": "skill",
+      "wrong": [
+        "region",
+        "effort"
+      ],
+      "word": "skill"
+    },
+    {
+      "item_id": "claim",
+      "question": "a statement you say is true",
+      "correct": "claim",
+      "wrong": [
+        "region",
+        "effort"
+      ],
+      "word": "claim"
+    },
+    {
+      "item_id": "concern",
+      "question": "a feeling of worry or care",
+      "correct": "concern",
+      "wrong": [
+        "region",
+        "effort"
+      ],
+      "word": "concern"
+    },
+    {
+      "item_id": "university",
+      "question": "a big school after high school",
+      "correct": "university",
+      "wrong": [
+        "region",
+        "effort"
+      ],
+      "word": "university"
+    },
+    {
+      "item_id": "discussion",
+      "question": "talking together about a topic",
+      "correct": "discussion",
+      "wrong": [
+        "region",
+        "effort"
+      ],
+      "word": "discussion"
+    },
+    {
+      "item_id": "box",
+      "question": "a container with four sides and a lid",
+      "correct": "box",
+      "wrong": [
+        "region",
+        "effort"
+      ],
+      "word": "box"
+    },
+    {
+      "item_id": "customer",
+      "question": "person who buys things",
+      "correct": "customer",
+      "wrong": [
+        "region",
+        "effort"
+      ],
+      "word": "customer"
+    },
+    {
+      "item_id": "conference",
+      "question": "a big meeting of people",
+      "correct": "conference",
+      "wrong": [
+        "region",
+        "effort"
+      ],
+      "word": "conference"
+    },
+    {
+      "item_id": "whole",
+      "question": "all of something together",
+      "correct": "whole",
+      "wrong": [
+        "region",
+        "effort"
+      ],
+      "word": "whole"
+    },
+    {
+      "item_id": "division",
+      "question": "splitting numbers into groups",
+      "correct": "division",
+      "wrong": [
+        "region",
+        "effort"
+      ],
+      "word": "division"
+    },
+    {
+      "item_id": "profit",
+      "question": "money earned after costs",
+      "correct": "profit",
+      "wrong": [
+        "region",
+        "effort"
+      ],
+      "word": "profit"
+    },
+    {
+      "item_id": "procedure",
+      "question": "a set of steps",
+      "correct": "procedure",
+      "wrong": [
+        "region",
+        "effort"
+      ],
+      "word": "procedure"
+    },
+    {
+      "item_id": "king",
+      "question": "a male ruler of a country",
+      "correct": "king",
+      "wrong": [
+        "region",
+        "effort"
+      ],
+      "word": "king"
+    },
+    {
+      "item_id": "image",
+      "question": "a picture of something",
+      "correct": "image",
+      "wrong": [
+        "region",
+        "effort"
+      ],
+      "word": "image"
+    },
+    {
+      "item_id": "oil",
+      "question": "a thick liquid used in cooking",
+      "correct": "oil",
+      "wrong": [
+        "region",
+        "effort"
+      ],
+      "word": "oil"
+    },
+    {
+      "item_id": "circumstance",
+      "question": "the conditions around an event",
+      "correct": "circumstance",
+      "wrong": [
+        "region",
+        "effort"
+      ],
+      "word": "circumstance"
+    },
+    {
+      "item_id": "proposal",
+      "question": "a plan or idea offered",
+      "correct": "proposal",
+      "wrong": [
+        "region",
+        "effort"
+      ],
+      "word": "proposal"
+    },
+    {
+      "item_id": "client",
+      "question": "a person who buys a service",
+      "correct": "client",
+      "wrong": [
+        "region",
+        "effort"
+      ],
+      "word": "client"
+    },
+    {
+      "item_id": "sector",
+      "question": "a part of an area or group",
+      "correct": "sector",
+      "wrong": [
+        "region",
+        "effort"
+      ],
+      "word": "sector"
+    },
+    {
+      "item_id": "direction",
+      "question": "the way something moves or faces",
+      "correct": "direction",
+      "wrong": [
+        "region",
+        "effort"
+      ],
+      "word": "direction"
+    },
+    {
+      "item_id": "instance",
+      "question": "one clear example of something",
+      "correct": "instance",
+      "wrong": [
+        "region",
+        "effort"
+      ],
+      "word": "instance"
+    },
+    {
+      "item_id": "sign",
+      "question": "a board with directions",
+      "correct": "sign",
+      "wrong": [
+        "region",
+        "effort"
+      ],
+      "word": "sign"
+    },
+    {
+      "item_id": "measure",
+      "question": "a tool to find size",
+      "correct": "measure",
+      "wrong": [
+        "region",
+        "effort"
+      ],
+      "word": "measure"
+    },
+    {
+      "item_id": "attitude",
+      "question": "how someone feels or acts",
+      "correct": "attitude",
+      "wrong": [
+        "region",
+        "effort"
+      ],
+      "word": "attitude"
+    },
+    {
+      "item_id": "disease",
+      "question": "an illness that makes you sick",
+      "correct": "disease",
+      "wrong": [
+        "region",
+        "effort"
+      ],
+      "word": "disease"
+    },
+    {
+      "item_id": "commission",
+      "question": "a group that makes decisions",
+      "correct": "commission",
+      "wrong": [
+        "region",
+        "effort"
+      ],
+      "word": "commission"
+    },
+    {
+      "item_id": "seat",
+      "question": "place to sit down",
+      "correct": "seat",
+      "wrong": [
+        "region",
+        "effort"
+      ],
+      "word": "seat"
+    },
+    {
+      "item_id": "president",
+      "question": "leader of a country",
+      "correct": "president",
+      "wrong": [
+        "region",
+        "effort"
+      ],
+      "word": "president"
+    },
+    {
+      "item_id": "addition",
+      "question": "putting numbers together",
+      "correct": "addition",
+      "wrong": [
+        "region",
+        "effort"
+      ],
+      "word": "addition"
+    },
+    {
+      "item_id": "goal",
+      "question": "place to score points",
+      "correct": "goal",
+      "wrong": [
+        "region",
+        "effort"
+      ],
+      "word": "goal"
+    },
+    {
+      "item_id": "affair",
+      "question": "an important event or matter",
+      "correct": "affair",
+      "wrong": [
+        "region",
+        "effort"
+      ],
+      "word": "affair"
+    },
+    {
+      "item_id": "technique",
+      "question": "a way to do something",
+      "correct": "technique",
+      "wrong": [
+        "region",
+        "effort"
+      ],
+      "word": "technique"
+    },
+    {
+      "item_id": "respect",
+      "question": "a feeling of honor for someone",
+      "correct": "respect",
+      "wrong": [
+        "region",
+        "effort"
+      ],
+      "word": "respect"
+    },
+    {
+      "item_id": "item",
+      "question": "one thing in a list",
+      "correct": "item",
+      "wrong": [
+        "region",
+        "effort"
+      ],
+      "word": "item"
+    },
+    {
+      "item_id": "version",
+      "question": "a different form of something",
+      "correct": "version",
+      "wrong": [
+        "region",
+        "effort"
+      ],
+      "word": "version"
+    },
+    {
+      "item_id": "ability",
+      "question": "the power to do something",
+      "correct": "ability",
+      "wrong": [
+        "region",
+        "effort"
+      ],
+      "word": "ability"
+    }
+  ]
+}

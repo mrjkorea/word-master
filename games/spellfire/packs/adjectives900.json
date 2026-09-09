@@ -1,0 +1,1008 @@
+{
+  "pack_id": "adjectives900",
+  "title": "B2 Adjectives 801–900",
+  "module_id": "word_master",
+  "seconds": 15,
+  "items": [
+    {
+      "item_id": "tender",
+      "question": "soft and gentle",
+      "correct": "tender",
+      "wrong": [
+        "linear",
+        "selective"
+      ],
+      "word": "tender"
+    },
+    {
+      "item_id": "linear",
+      "question": "in a straight line",
+      "correct": "linear",
+      "wrong": [
+        "tender",
+        "selective"
+      ],
+      "word": "linear"
+    },
+    {
+      "item_id": "selective",
+      "question": "picking only some things",
+      "correct": "selective",
+      "wrong": [
+        "tender",
+        "linear"
+      ],
+      "word": "selective"
+    },
+    {
+      "item_id": "semantic",
+      "question": "about word meaning",
+      "correct": "semantic",
+      "wrong": [
+        "tender",
+        "linear"
+      ],
+      "word": "semantic"
+    },
+    {
+      "item_id": "fiscal",
+      "question": "about money and budgets",
+      "correct": "fiscal",
+      "wrong": [
+        "tender",
+        "linear"
+      ],
+      "word": "fiscal"
+    },
+    {
+      "item_id": "fortunate",
+      "question": "lucky in a good way",
+      "correct": "fortunate",
+      "wrong": [
+        "tender",
+        "linear"
+      ],
+      "word": "fortunate"
+    },
+    {
+      "item_id": "rival",
+      "question": "competing against another",
+      "correct": "rival",
+      "wrong": [
+        "tender",
+        "linear"
+      ],
+      "word": "rival"
+    },
+    {
+      "item_id": "select",
+      "question": "specially chosen as best",
+      "correct": "select",
+      "wrong": [
+        "tender",
+        "linear"
+      ],
+      "word": "select"
+    },
+    {
+      "item_id": "defensive",
+      "question": "protecting yourself from attack",
+      "correct": "defensive",
+      "wrong": [
+        "tender",
+        "linear"
+      ],
+      "word": "defensive"
+    },
+    {
+      "item_id": "skilled",
+      "question": "good at doing something",
+      "correct": "skilled",
+      "wrong": [
+        "tender",
+        "linear"
+      ],
+      "word": "skilled"
+    },
+    {
+      "item_id": "philosophical",
+      "question": "thinking about big ideas",
+      "correct": "philosophical",
+      "wrong": [
+        "tender",
+        "linear"
+      ],
+      "word": "philosophical"
+    },
+    {
+      "item_id": "protective",
+      "question": "keeping someone from harm",
+      "correct": "protective",
+      "wrong": [
+        "tender",
+        "linear"
+      ],
+      "word": "protective"
+    },
+    {
+      "item_id": "slim",
+      "question": "thin and not wide",
+      "correct": "slim",
+      "wrong": [
+        "tender",
+        "linear"
+      ],
+      "word": "slim"
+    },
+    {
+      "item_id": "material",
+      "question": "made of real stuff",
+      "correct": "material",
+      "wrong": [
+        "tender",
+        "linear"
+      ],
+      "word": "material"
+    },
+    {
+      "item_id": "distinguished",
+      "question": "important and well respected",
+      "correct": "distinguished",
+      "wrong": [
+        "tender",
+        "linear"
+      ],
+      "word": "distinguished"
+    },
+    {
+      "item_id": "furious",
+      "question": "very very angry",
+      "correct": "furious",
+      "wrong": [
+        "tender",
+        "linear"
+      ],
+      "word": "furious"
+    },
+    {
+      "item_id": "solar",
+      "question": "from the sun",
+      "correct": "solar",
+      "wrong": [
+        "tender",
+        "linear"
+      ],
+      "word": "solar"
+    },
+    {
+      "item_id": "qualified",
+      "question": "trained and ready to do",
+      "correct": "qualified",
+      "wrong": [
+        "tender",
+        "linear"
+      ],
+      "word": "qualified"
+    },
+    {
+      "item_id": "inappropriate",
+      "question": "not right for this",
+      "correct": "inappropriate",
+      "wrong": [
+        "tender",
+        "linear"
+      ],
+      "word": "inappropriate"
+    },
+    {
+      "item_id": "liquid",
+      "question": "like water that pours",
+      "correct": "liquid",
+      "wrong": [
+        "tender",
+        "linear"
+      ],
+      "word": "liquid"
+    },
+    {
+      "item_id": "unfortunate",
+      "question": "having bad luck",
+      "correct": "unfortunate",
+      "wrong": [
+        "tender",
+        "linear"
+      ],
+      "word": "unfortunate"
+    },
+    {
+      "item_id": "burning",
+      "question": "on fire and hot",
+      "correct": "burning",
+      "wrong": [
+        "tender",
+        "linear"
+      ],
+      "word": "burning"
+    },
+    {
+      "item_id": "persistent",
+      "question": "keeping on trying",
+      "correct": "persistent",
+      "wrong": [
+        "tender",
+        "linear"
+      ],
+      "word": "persistent"
+    },
+    {
+      "item_id": "mathematical",
+      "question": "about numbers and math",
+      "correct": "mathematical",
+      "wrong": [
+        "tender",
+        "linear"
+      ],
+      "word": "mathematical"
+    },
+    {
+      "item_id": "binding",
+      "question": "that you must follow",
+      "correct": "binding",
+      "wrong": [
+        "tender",
+        "linear"
+      ],
+      "word": "binding"
+    },
+    {
+      "item_id": "doubtful",
+      "question": "not sure at all",
+      "correct": "doubtful",
+      "wrong": [
+        "tender",
+        "linear"
+      ],
+      "word": "doubtful"
+    },
+    {
+      "item_id": "invisible",
+      "question": "cannot be seen",
+      "correct": "invisible",
+      "wrong": [
+        "tender",
+        "linear"
+      ],
+      "word": "invisible"
+    },
+    {
+      "item_id": "mid",
+      "question": "in the middle",
+      "correct": "mid",
+      "wrong": [
+        "tender",
+        "linear"
+      ],
+      "word": "mid"
+    },
+    {
+      "item_id": "surrounding",
+      "question": "all around something",
+      "correct": "surrounding",
+      "wrong": [
+        "tender",
+        "linear"
+      ],
+      "word": "surrounding"
+    },
+    {
+      "item_id": "intact",
+      "question": "whole and not broken",
+      "correct": "intact",
+      "wrong": [
+        "tender",
+        "linear"
+      ],
+      "word": "intact"
+    },
+    {
+      "item_id": "sterling",
+      "question": "excellent in quality",
+      "correct": "sterling",
+      "wrong": [
+        "tender",
+        "linear"
+      ],
+      "word": "sterling"
+    },
+    {
+      "item_id": "inland",
+      "question": "away from the sea",
+      "correct": "inland",
+      "wrong": [
+        "tender",
+        "linear"
+      ],
+      "word": "inland"
+    },
+    {
+      "item_id": "competent",
+      "question": "able to do well",
+      "correct": "competent",
+      "wrong": [
+        "tender",
+        "linear"
+      ],
+      "word": "competent"
+    },
+    {
+      "item_id": "optimistic",
+      "question": "hoping for good things",
+      "correct": "optimistic",
+      "wrong": [
+        "tender",
+        "linear"
+      ],
+      "word": "optimistic"
+    },
+    {
+      "item_id": "uniform",
+      "question": "all the same",
+      "correct": "uniform",
+      "wrong": [
+        "tender",
+        "linear"
+      ],
+      "word": "uniform"
+    },
+    {
+      "item_id": "decisive",
+      "question": "making a clear choice",
+      "correct": "decisive",
+      "wrong": [
+        "tender",
+        "linear"
+      ],
+      "word": "decisive"
+    },
+    {
+      "item_id": "horizontal",
+      "question": "flat from side to side",
+      "correct": "horizontal",
+      "wrong": [
+        "tender",
+        "linear"
+      ],
+      "word": "horizontal"
+    },
+    {
+      "item_id": "respective",
+      "question": "each one's own",
+      "correct": "respective",
+      "wrong": [
+        "tender",
+        "linear"
+      ],
+      "word": "respective"
+    },
+    {
+      "item_id": "spatial",
+      "question": "about place and space",
+      "correct": "spatial",
+      "wrong": [
+        "tender",
+        "linear"
+      ],
+      "word": "spatial"
+    },
+    {
+      "item_id": "convincing",
+      "question": "making you believe it",
+      "correct": "convincing",
+      "wrong": [
+        "tender",
+        "linear"
+      ],
+      "word": "convincing"
+    },
+    {
+      "item_id": "respectable",
+      "question": "proper and well behaved",
+      "correct": "respectable",
+      "wrong": [
+        "tender",
+        "linear"
+      ],
+      "word": "respectable"
+    },
+    {
+      "item_id": "unacceptable",
+      "question": "not allowed at all",
+      "correct": "unacceptable",
+      "wrong": [
+        "tender",
+        "linear"
+      ],
+      "word": "unacceptable"
+    },
+    {
+      "item_id": "instant",
+      "question": "happening right away",
+      "correct": "instant",
+      "wrong": [
+        "tender",
+        "linear"
+      ],
+      "word": "instant"
+    },
+    {
+      "item_id": "paid",
+      "question": "given money for work",
+      "correct": "paid",
+      "wrong": [
+        "tender",
+        "linear"
+      ],
+      "word": "paid"
+    },
+    {
+      "item_id": "fond",
+      "question": "liking someone a lot",
+      "correct": "fond",
+      "wrong": [
+        "tender",
+        "linear"
+      ],
+      "word": "fond"
+    },
+    {
+      "item_id": "medium",
+      "question": "in the middle size",
+      "correct": "medium",
+      "wrong": [
+        "tender",
+        "linear"
+      ],
+      "word": "medium"
+    },
+    {
+      "item_id": "winning",
+      "question": "coming in first",
+      "correct": "winning",
+      "wrong": [
+        "tender",
+        "linear"
+      ],
+      "word": "winning"
+    },
+    {
+      "item_id": "redundant",
+      "question": "not needed anymore",
+      "correct": "redundant",
+      "wrong": [
+        "tender",
+        "linear"
+      ],
+      "word": "redundant"
+    },
+    {
+      "item_id": "silver",
+      "question": "shiny gray metal color",
+      "correct": "silver",
+      "wrong": [
+        "tender",
+        "linear"
+      ],
+      "word": "silver"
+    },
+    {
+      "item_id": "tragic",
+      "question": "very sad indeed",
+      "correct": "tragic",
+      "wrong": [
+        "tender",
+        "linear"
+      ],
+      "word": "tragic"
+    },
+    {
+      "item_id": "neighbouring",
+      "question": "next door nearby",
+      "correct": "neighbouring",
+      "wrong": [
+        "tender",
+        "linear"
+      ],
+      "word": "neighbouring"
+    },
+    {
+      "item_id": "probable",
+      "question": "likely to happen",
+      "correct": "probable",
+      "wrong": [
+        "tender",
+        "linear"
+      ],
+      "word": "probable"
+    },
+    {
+      "item_id": "mobile",
+      "question": "able to move around",
+      "correct": "mobile",
+      "wrong": [
+        "tender",
+        "linear"
+      ],
+      "word": "mobile"
+    },
+    {
+      "item_id": "oldfashioned",
+      "question": "from a long ago time",
+      "correct": "old-fashioned",
+      "wrong": [
+        "tender",
+        "linear"
+      ],
+      "word": "old-fashioned"
+    },
+    {
+      "item_id": "thinking",
+      "question": "using your mind",
+      "correct": "thinking",
+      "wrong": [
+        "tender",
+        "linear"
+      ],
+      "word": "thinking"
+    },
+    {
+      "item_id": "toxic",
+      "question": "poisonous and harmful",
+      "correct": "toxic",
+      "wrong": [
+        "tender",
+        "linear"
+      ],
+      "word": "toxic"
+    },
+    {
+      "item_id": "polite",
+      "question": "using nice manners",
+      "correct": "polite",
+      "wrong": [
+        "tender",
+        "linear"
+      ],
+      "word": "polite"
+    },
+    {
+      "item_id": "uptodate",
+      "question": "new and current now",
+      "correct": "up-to-date",
+      "wrong": [
+        "tender",
+        "linear"
+      ],
+      "word": "up-to-date"
+    },
+    {
+      "item_id": "wee",
+      "question": "very very small",
+      "correct": "wee",
+      "wrong": [
+        "tender",
+        "linear"
+      ],
+      "word": "wee"
+    },
+    {
+      "item_id": "miserable",
+      "question": "very unhappy and sad",
+      "correct": "miserable",
+      "wrong": [
+        "tender",
+        "linear"
+      ],
+      "word": "miserable"
+    },
+    {
+      "item_id": "incredible",
+      "question": "amazing hard to believe",
+      "correct": "incredible",
+      "wrong": [
+        "tender",
+        "linear"
+      ],
+      "word": "incredible"
+    },
+    {
+      "item_id": "premier",
+      "question": "first and most important",
+      "correct": "premier",
+      "wrong": [
+        "tender",
+        "linear"
+      ],
+      "word": "premier"
+    },
+    {
+      "item_id": "regulatory",
+      "question": "about official rules",
+      "correct": "regulatory",
+      "wrong": [
+        "tender",
+        "linear"
+      ],
+      "word": "regulatory"
+    },
+    {
+      "item_id": "cognitive",
+      "question": "about thinking and mind",
+      "correct": "cognitive",
+      "wrong": [
+        "tender",
+        "linear"
+      ],
+      "word": "cognitive"
+    },
+    {
+      "item_id": "resident",
+      "question": "living in that place",
+      "correct": "resident",
+      "wrong": [
+        "tender",
+        "linear"
+      ],
+      "word": "resident"
+    },
+    {
+      "item_id": "adverse",
+      "question": "harmful and very bad",
+      "correct": "adverse",
+      "wrong": [
+        "tender",
+        "linear"
+      ],
+      "word": "adverse"
+    },
+    {
+      "item_id": "gothic",
+      "question": "pointed old church style",
+      "correct": "gothic",
+      "wrong": [
+        "tender",
+        "linear"
+      ],
+      "word": "gothic"
+    },
+    {
+      "item_id": "lengthy",
+      "question": "very long in time",
+      "correct": "lengthy",
+      "wrong": [
+        "tender",
+        "linear"
+      ],
+      "word": "lengthy"
+    },
+    {
+      "item_id": "selected",
+      "question": "specially chosen from others",
+      "correct": "selected",
+      "wrong": [
+        "tender",
+        "linear"
+      ],
+      "word": "selected"
+    },
+    {
+      "item_id": "manual",
+      "question": "done by hand",
+      "correct": "manual",
+      "wrong": [
+        "tender",
+        "linear"
+      ],
+      "word": "manual"
+    },
+    {
+      "item_id": "unconscious",
+      "question": "not awake at all",
+      "correct": "unconscious",
+      "wrong": [
+        "tender",
+        "linear"
+      ],
+      "word": "unconscious"
+    },
+    {
+      "item_id": "orthodox",
+      "question": "usual traditional accepted way",
+      "correct": "orthodox",
+      "wrong": [
+        "tender",
+        "linear"
+      ],
+      "word": "orthodox"
+    },
+    {
+      "item_id": "unaware",
+      "question": "not noticing at all",
+      "correct": "unaware",
+      "wrong": [
+        "tender",
+        "linear"
+      ],
+      "word": "unaware"
+    },
+    {
+      "item_id": "costly",
+      "question": "costing lots of money",
+      "correct": "costly",
+      "wrong": [
+        "tender",
+        "linear"
+      ],
+      "word": "costly"
+    },
+    {
+      "item_id": "printed",
+      "question": "made with ink on paper",
+      "correct": "printed",
+      "wrong": [
+        "tender",
+        "linear"
+      ],
+      "word": "printed"
+    },
+    {
+      "item_id": "territorial",
+      "question": "guarding your own area",
+      "correct": "territorial",
+      "wrong": [
+        "tender",
+        "linear"
+      ],
+      "word": "territorial"
+    },
+    {
+      "item_id": "underground",
+      "question": "below the ground",
+      "correct": "underground",
+      "wrong": [
+        "tender",
+        "linear"
+      ],
+      "word": "underground"
+    },
+    {
+      "item_id": "misleading",
+      "question": "making you think wrongly",
+      "correct": "misleading",
+      "wrong": [
+        "tender",
+        "linear"
+      ],
+      "word": "misleading"
+    },
+    {
+      "item_id": "verbal",
+      "question": "using spoken words",
+      "correct": "verbal",
+      "wrong": [
+        "tender",
+        "linear"
+      ],
+      "word": "verbal"
+    },
+    {
+      "item_id": "causal",
+      "question": "causing something to happen",
+      "correct": "causal",
+      "wrong": [
+        "tender",
+        "linear"
+      ],
+      "word": "causal"
+    },
+    {
+      "item_id": "compatible",
+      "question": "able to work together",
+      "correct": "compatible",
+      "wrong": [
+        "tender",
+        "linear"
+      ],
+      "word": "compatible"
+    },
+    {
+      "item_id": "fashionable",
+      "question": "in style right now",
+      "correct": "fashionable",
+      "wrong": [
+        "tender",
+        "linear"
+      ],
+      "word": "fashionable"
+    },
+    {
+      "item_id": "implicit",
+      "question": "understood without being said",
+      "correct": "implicit",
+      "wrong": [
+        "tender",
+        "linear"
+      ],
+      "word": "implicit"
+    },
+    {
+      "item_id": "applied",
+      "question": "used in real life",
+      "correct": "applied",
+      "wrong": [
+        "tender",
+        "linear"
+      ],
+      "word": "applied"
+    },
+    {
+      "item_id": "chosen",
+      "question": "picked as the one",
+      "correct": "chosen",
+      "wrong": [
+        "tender",
+        "linear"
+      ],
+      "word": "chosen"
+    },
+    {
+      "item_id": "interim",
+      "question": "only for now",
+      "correct": "interim",
+      "wrong": [
+        "tender",
+        "linear"
+      ],
+      "word": "interim"
+    },
+    {
+      "item_id": "kind",
+      "question": "nice and caring",
+      "correct": "kind",
+      "wrong": [
+        "tender",
+        "linear"
+      ],
+      "word": "kind"
+    },
+    {
+      "item_id": "nursing",
+      "question": "caring for sick people",
+      "correct": "nursing",
+      "wrong": [
+        "tender",
+        "linear"
+      ],
+      "word": "nursing"
+    },
+    {
+      "item_id": "subjective",
+      "question": "based on your feelings",
+      "correct": "subjective",
+      "wrong": [
+        "tender",
+        "linear"
+      ],
+      "word": "subjective"
+    },
+    {
+      "item_id": "static",
+      "question": "not moving at all",
+      "correct": "static",
+      "wrong": [
+        "tender",
+        "linear"
+      ],
+      "word": "static"
+    },
+    {
+      "item_id": "cheerful",
+      "question": "happy and bright",
+      "correct": "cheerful",
+      "wrong": [
+        "tender",
+        "linear"
+      ],
+      "word": "cheerful"
+    },
+    {
+      "item_id": "given",
+      "question": "already handed to you",
+      "correct": "given",
+      "wrong": [
+        "tender",
+        "linear"
+      ],
+      "word": "given"
+    },
+    {
+      "item_id": "purple",
+      "question": "red mixed with blue",
+      "correct": "purple",
+      "wrong": [
+        "tender",
+        "linear"
+      ],
+      "word": "purple"
+    },
+    {
+      "item_id": "dual",
+      "question": "made of two parts",
+      "correct": "dual",
+      "wrong": [
+        "tender",
+        "linear"
+      ],
+      "word": "dual"
+    },
+    {
+      "item_id": "grave",
+      "question": "very serious indeed",
+      "correct": "grave",
+      "wrong": [
+        "tender",
+        "linear"
+      ],
+      "word": "grave"
+    },
+    {
+      "item_id": "cautious",
+      "question": "careful about possible danger",
+      "correct": "cautious",
+      "wrong": [
+        "tender",
+        "linear"
+      ],
+      "word": "cautious"
+    },
+    {
+      "item_id": "ethical",
+      "question": "fair and doing right",
+      "correct": "ethical",
+      "wrong": [
+        "tender",
+        "linear"
+      ],
+      "word": "ethical"
+    },
+    {
+      "item_id": "teenage",
+      "question": "in the teen years",
+      "correct": "teenage",
+      "wrong": [
+        "tender",
+        "linear"
+      ],
+      "word": "teenage"
+    },
+    {
+      "item_id": "weird",
+      "question": "strange and unusual",
+      "correct": "weird",
+      "wrong": [
+        "tender",
+        "linear"
+      ],
+      "word": "weird"
+    },
+    {
+      "item_id": "disastrous",
+      "question": "very badly going wrong",
+      "correct": "disastrous",
+      "wrong": [
+        "tender",
+        "linear"
+      ],
+      "word": "disastrous"
+    }
+  ]
+}

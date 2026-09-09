@@ -1,0 +1,1008 @@
+{
+  "pack_id": "actions100",
+  "title": "Actions & Daily Life",
+  "module_id": "word_master",
+  "seconds": 15,
+  "items": [
+    {
+      "item_id": "run",
+      "question": "moving fast on your feet",
+      "correct": "run",
+      "wrong": [
+        "walk",
+        "jump"
+      ],
+      "word": "run"
+    },
+    {
+      "item_id": "walk",
+      "question": "a trip on foot",
+      "correct": "walk",
+      "wrong": [
+        "run",
+        "jump"
+      ],
+      "word": "walk"
+    },
+    {
+      "item_id": "jump",
+      "question": "to move up quickly",
+      "correct": "jump",
+      "wrong": [
+        "run",
+        "walk"
+      ],
+      "word": "jump"
+    },
+    {
+      "item_id": "climb",
+      "question": "to go up something high",
+      "correct": "climb",
+      "wrong": [
+        "run",
+        "walk"
+      ],
+      "word": "climb"
+    },
+    {
+      "item_id": "swim",
+      "question": "move through the water",
+      "correct": "swim",
+      "wrong": [
+        "run",
+        "walk"
+      ],
+      "word": "swim"
+    },
+    {
+      "item_id": "dance",
+      "question": "moving to the music",
+      "correct": "dance",
+      "wrong": [
+        "run",
+        "walk"
+      ],
+      "word": "dance"
+    },
+    {
+      "item_id": "sit",
+      "question": "rest on your bottom",
+      "correct": "sit",
+      "wrong": [
+        "run",
+        "walk"
+      ],
+      "word": "sit"
+    },
+    {
+      "item_id": "stand",
+      "question": "table that holds things",
+      "correct": "stand",
+      "wrong": [
+        "run",
+        "walk"
+      ],
+      "word": "stand"
+    },
+    {
+      "item_id": "lie",
+      "question": "to rest flat on a surface",
+      "correct": "lie",
+      "wrong": [
+        "run",
+        "walk"
+      ],
+      "word": "lie"
+    },
+    {
+      "item_id": "sleep",
+      "question": "rest you take at night",
+      "correct": "sleep",
+      "wrong": [
+        "run",
+        "walk"
+      ],
+      "word": "sleep"
+    },
+    {
+      "item_id": "wake",
+      "question": "to stop sleeping",
+      "correct": "wake",
+      "wrong": [
+        "run",
+        "walk"
+      ],
+      "word": "wake"
+    },
+    {
+      "item_id": "eat",
+      "question": "to put food in mouth",
+      "correct": "eat",
+      "wrong": [
+        "run",
+        "walk"
+      ],
+      "word": "eat"
+    },
+    {
+      "item_id": "drink",
+      "question": "liquid you swallow",
+      "correct": "drink",
+      "wrong": [
+        "run",
+        "walk"
+      ],
+      "word": "drink"
+    },
+    {
+      "item_id": "cook",
+      "question": "to prepare food with heat",
+      "correct": "cook",
+      "wrong": [
+        "run",
+        "walk"
+      ],
+      "word": "cook"
+    },
+    {
+      "item_id": "wash",
+      "question": "clean with water and soap",
+      "correct": "wash",
+      "wrong": [
+        "run",
+        "walk"
+      ],
+      "word": "wash"
+    },
+    {
+      "item_id": "clean",
+      "question": "not dirty or messy",
+      "correct": "clean",
+      "wrong": [
+        "run",
+        "walk"
+      ],
+      "word": "clean"
+    },
+    {
+      "item_id": "brush",
+      "question": "clean with a brush",
+      "correct": "brush",
+      "wrong": [
+        "run",
+        "walk"
+      ],
+      "word": "brush"
+    },
+    {
+      "item_id": "shower",
+      "question": "shower",
+      "correct": "shower",
+      "wrong": [
+        "run",
+        "walk"
+      ],
+      "word": "shower"
+    },
+    {
+      "item_id": "dress",
+      "question": "one-piece clothes for girls",
+      "correct": "dress",
+      "wrong": [
+        "run",
+        "walk"
+      ],
+      "word": "dress"
+    },
+    {
+      "item_id": "undress",
+      "question": "undress",
+      "correct": "undress",
+      "wrong": [
+        "run",
+        "walk"
+      ],
+      "word": "undress"
+    },
+    {
+      "item_id": "open",
+      "question": "not closed",
+      "correct": "open",
+      "wrong": [
+        "run",
+        "walk"
+      ],
+      "word": "open"
+    },
+    {
+      "item_id": "close",
+      "question": "near in distance",
+      "correct": "close",
+      "wrong": [
+        "run",
+        "walk"
+      ],
+      "word": "close"
+    },
+    {
+      "item_id": "push",
+      "question": "to move something away with force",
+      "correct": "push",
+      "wrong": [
+        "run",
+        "walk"
+      ],
+      "word": "push"
+    },
+    {
+      "item_id": "pull",
+      "question": "move something toward yourself",
+      "correct": "pull",
+      "wrong": [
+        "run",
+        "walk"
+      ],
+      "word": "pull"
+    },
+    {
+      "item_id": "lift",
+      "question": "a box that goes up",
+      "correct": "lift",
+      "wrong": [
+        "run",
+        "walk"
+      ],
+      "word": "lift"
+    },
+    {
+      "item_id": "carry",
+      "question": "hold and move something",
+      "correct": "carry",
+      "wrong": [
+        "run",
+        "walk"
+      ],
+      "word": "carry"
+    },
+    {
+      "item_id": "drop",
+      "question": "tiny round bit of liquid",
+      "correct": "drop",
+      "wrong": [
+        "run",
+        "walk"
+      ],
+      "word": "drop"
+    },
+    {
+      "item_id": "throw",
+      "question": "send something through the air",
+      "correct": "throw",
+      "wrong": [
+        "run",
+        "walk"
+      ],
+      "word": "throw"
+    },
+    {
+      "item_id": "catch",
+      "question": "to grab something moving in the air",
+      "correct": "catch",
+      "wrong": [
+        "run",
+        "walk"
+      ],
+      "word": "catch"
+    },
+    {
+      "item_id": "kick",
+      "question": "hit something with your foot",
+      "correct": "kick",
+      "wrong": [
+        "run",
+        "walk"
+      ],
+      "word": "kick"
+    },
+    {
+      "item_id": "hit",
+      "question": "to touch something hard",
+      "correct": "hit",
+      "wrong": [
+        "run",
+        "walk"
+      ],
+      "word": "hit"
+    },
+    {
+      "item_id": "touch",
+      "question": "feeling with your fingers",
+      "correct": "touch",
+      "wrong": [
+        "run",
+        "walk"
+      ],
+      "word": "touch"
+    },
+    {
+      "item_id": "hold",
+      "question": "grip with your hands",
+      "correct": "hold",
+      "wrong": [
+        "run",
+        "walk"
+      ],
+      "word": "hold"
+    },
+    {
+      "item_id": "grab",
+      "question": "take something quickly with your hand",
+      "correct": "grab",
+      "wrong": [
+        "run",
+        "walk"
+      ],
+      "word": "grab"
+    },
+    {
+      "item_id": "release",
+      "question": "the act of setting free",
+      "correct": "release",
+      "wrong": [
+        "run",
+        "walk"
+      ],
+      "word": "release"
+    },
+    {
+      "item_id": "point",
+      "question": "a small dot or spot",
+      "correct": "point",
+      "wrong": [
+        "run",
+        "walk"
+      ],
+      "word": "point"
+    },
+    {
+      "item_id": "wave",
+      "question": "a moving line of water",
+      "correct": "wave",
+      "wrong": [
+        "run",
+        "walk"
+      ],
+      "word": "wave"
+    },
+    {
+      "item_id": "nod",
+      "question": "move head up and down",
+      "correct": "nod",
+      "wrong": [
+        "run",
+        "walk"
+      ],
+      "word": "nod"
+    },
+    {
+      "item_id": "shake",
+      "question": "to move something quickly back and forth",
+      "correct": "shake",
+      "wrong": [
+        "run",
+        "walk"
+      ],
+      "word": "shake"
+    },
+    {
+      "item_id": "turn",
+      "question": "a single change of direction",
+      "correct": "turn",
+      "wrong": [
+        "run",
+        "walk"
+      ],
+      "word": "turn"
+    },
+    {
+      "item_id": "look",
+      "question": "expression on a face",
+      "correct": "look",
+      "wrong": [
+        "run",
+        "walk"
+      ],
+      "word": "look"
+    },
+    {
+      "item_id": "see",
+      "question": "to look at something with eyes",
+      "correct": "see",
+      "wrong": [
+        "run",
+        "walk"
+      ],
+      "word": "see"
+    },
+    {
+      "item_id": "watch",
+      "question": "clock worn on the wrist",
+      "correct": "watch",
+      "wrong": [
+        "run",
+        "walk"
+      ],
+      "word": "watch"
+    },
+    {
+      "item_id": "hear",
+      "question": "to notice sounds with ears",
+      "correct": "hear",
+      "wrong": [
+        "run",
+        "walk"
+      ],
+      "word": "hear"
+    },
+    {
+      "item_id": "listen",
+      "question": "hear with attention",
+      "correct": "listen",
+      "wrong": [
+        "run",
+        "walk"
+      ],
+      "word": "listen"
+    },
+    {
+      "item_id": "smell",
+      "question": "scent your nose notices",
+      "correct": "smell",
+      "wrong": [
+        "run",
+        "walk"
+      ],
+      "word": "smell"
+    },
+    {
+      "item_id": "taste",
+      "question": "flavor of food",
+      "correct": "taste",
+      "wrong": [
+        "run",
+        "walk"
+      ],
+      "word": "taste"
+    },
+    {
+      "item_id": "feel",
+      "question": "to sense with your body",
+      "correct": "feel",
+      "wrong": [
+        "run",
+        "walk"
+      ],
+      "word": "feel"
+    },
+    {
+      "item_id": "think",
+      "question": "use your mind to consider",
+      "correct": "think",
+      "wrong": [
+        "run",
+        "walk"
+      ],
+      "word": "think"
+    },
+    {
+      "item_id": "remember",
+      "question": "to keep something in your mind",
+      "correct": "remember",
+      "wrong": [
+        "run",
+        "walk"
+      ],
+      "word": "remember"
+    },
+    {
+      "item_id": "forget",
+      "question": "not remember something",
+      "correct": "forget",
+      "wrong": [
+        "run",
+        "walk"
+      ],
+      "word": "forget"
+    },
+    {
+      "item_id": "learn",
+      "question": "to get new knowledge or skill",
+      "correct": "learn",
+      "wrong": [
+        "run",
+        "walk"
+      ],
+      "word": "learn"
+    },
+    {
+      "item_id": "teach",
+      "question": "show someone how to do something",
+      "correct": "teach",
+      "wrong": [
+        "run",
+        "walk"
+      ],
+      "word": "teach"
+    },
+    {
+      "item_id": "study",
+      "question": "the act of learning about something",
+      "correct": "study",
+      "wrong": [
+        "run",
+        "walk"
+      ],
+      "word": "study"
+    },
+    {
+      "item_id": "read",
+      "question": "to look at words and understand",
+      "correct": "read",
+      "wrong": [
+        "run",
+        "walk"
+      ],
+      "word": "read"
+    },
+    {
+      "item_id": "write",
+      "question": "to make words with a pen",
+      "correct": "write",
+      "wrong": [
+        "run",
+        "walk"
+      ],
+      "word": "write"
+    },
+    {
+      "item_id": "draw",
+      "question": "to make a picture",
+      "correct": "draw",
+      "wrong": [
+        "run",
+        "walk"
+      ],
+      "word": "draw"
+    },
+    {
+      "item_id": "paint",
+      "question": "to put color on something",
+      "correct": "paint",
+      "wrong": [
+        "run",
+        "walk"
+      ],
+      "word": "paint"
+    },
+    {
+      "item_id": "sing",
+      "question": "to make music with your voice",
+      "correct": "sing",
+      "wrong": [
+        "run",
+        "walk"
+      ],
+      "word": "sing"
+    },
+    {
+      "item_id": "play",
+      "question": "fun activity children do",
+      "correct": "play",
+      "wrong": [
+        "run",
+        "walk"
+      ],
+      "word": "play"
+    },
+    {
+      "item_id": "work",
+      "question": "a job or task to do",
+      "correct": "work",
+      "wrong": [
+        "run",
+        "walk"
+      ],
+      "word": "work"
+    },
+    {
+      "item_id": "rest",
+      "question": "time to stop and relax",
+      "correct": "rest",
+      "wrong": [
+        "run",
+        "walk"
+      ],
+      "word": "rest"
+    },
+    {
+      "item_id": "wait",
+      "question": "stay in place until something happens",
+      "correct": "wait",
+      "wrong": [
+        "run",
+        "walk"
+      ],
+      "word": "wait"
+    },
+    {
+      "item_id": "hurry",
+      "question": "go somewhere very fast",
+      "correct": "hurry",
+      "wrong": [
+        "run",
+        "walk"
+      ],
+      "word": "hurry"
+    },
+    {
+      "item_id": "stop",
+      "question": "to finish moving or doing",
+      "correct": "stop",
+      "wrong": [
+        "run",
+        "walk"
+      ],
+      "word": "stop"
+    },
+    {
+      "item_id": "start",
+      "question": "the moment something begins",
+      "correct": "start",
+      "wrong": [
+        "run",
+        "walk"
+      ],
+      "word": "start"
+    },
+    {
+      "item_id": "finish",
+      "question": "bring to an end",
+      "correct": "finish",
+      "wrong": [
+        "run",
+        "walk"
+      ],
+      "word": "finish"
+    },
+    {
+      "item_id": "continue",
+      "question": "to keep going on",
+      "correct": "continue",
+      "wrong": [
+        "run",
+        "walk"
+      ],
+      "word": "continue"
+    },
+    {
+      "item_id": "try",
+      "question": "to make an effort to do",
+      "correct": "try",
+      "wrong": [
+        "run",
+        "walk"
+      ],
+      "word": "try"
+    },
+    {
+      "item_id": "fail",
+      "question": "not succeed in doing something",
+      "correct": "fail",
+      "wrong": [
+        "run",
+        "walk"
+      ],
+      "word": "fail"
+    },
+    {
+      "item_id": "succeed",
+      "question": "do something well and win",
+      "correct": "succeed",
+      "wrong": [
+        "run",
+        "walk"
+      ],
+      "word": "succeed"
+    },
+    {
+      "item_id": "win",
+      "question": "to finish first in a game",
+      "correct": "win",
+      "wrong": [
+        "run",
+        "walk"
+      ],
+      "word": "win"
+    },
+    {
+      "item_id": "lose",
+      "question": "to not have something anymore",
+      "correct": "lose",
+      "wrong": [
+        "run",
+        "walk"
+      ],
+      "word": "lose"
+    },
+    {
+      "item_id": "help",
+      "question": "support or aid given to someone",
+      "correct": "help",
+      "wrong": [
+        "run",
+        "walk"
+      ],
+      "word": "help"
+    },
+    {
+      "item_id": "ask",
+      "question": "to say a question out loud",
+      "correct": "ask",
+      "wrong": [
+        "run",
+        "walk"
+      ],
+      "word": "ask"
+    },
+    {
+      "item_id": "answer",
+      "question": "reply to a question",
+      "correct": "answer",
+      "wrong": [
+        "run",
+        "walk"
+      ],
+      "word": "answer"
+    },
+    {
+      "item_id": "call",
+      "question": "a phone conversation",
+      "correct": "call",
+      "wrong": [
+        "run",
+        "walk"
+      ],
+      "word": "call"
+    },
+    {
+      "item_id": "text",
+      "question": "a written message",
+      "correct": "text",
+      "wrong": [
+        "run",
+        "walk"
+      ],
+      "word": "text"
+    },
+    {
+      "item_id": "send",
+      "question": "to make something go somewhere",
+      "correct": "send",
+      "wrong": [
+        "run",
+        "walk"
+      ],
+      "word": "send"
+    },
+    {
+      "item_id": "receive",
+      "question": "to get something given",
+      "correct": "receive",
+      "wrong": [
+        "run",
+        "walk"
+      ],
+      "word": "receive"
+    },
+    {
+      "item_id": "buy",
+      "question": "to give money for something",
+      "correct": "buy",
+      "wrong": [
+        "run",
+        "walk"
+      ],
+      "word": "buy"
+    },
+    {
+      "item_id": "sell",
+      "question": "give something for money",
+      "correct": "sell",
+      "wrong": [
+        "run",
+        "walk"
+      ],
+      "word": "sell"
+    },
+    {
+      "item_id": "pay",
+      "question": "money for your work",
+      "correct": "pay",
+      "wrong": [
+        "run",
+        "walk"
+      ],
+      "word": "pay"
+    },
+    {
+      "item_id": "borrow",
+      "question": "take something to return later",
+      "correct": "borrow",
+      "wrong": [
+        "run",
+        "walk"
+      ],
+      "word": "borrow"
+    },
+    {
+      "item_id": "lend",
+      "question": "let someone use something for a while",
+      "correct": "lend",
+      "wrong": [
+        "run",
+        "walk"
+      ],
+      "word": "lend"
+    },
+    {
+      "item_id": "return",
+      "question": "the act of giving something back",
+      "correct": "return",
+      "wrong": [
+        "run",
+        "walk"
+      ],
+      "word": "return"
+    },
+    {
+      "item_id": "save",
+      "question": "rescue someone from danger",
+      "correct": "save",
+      "wrong": [
+        "run",
+        "walk"
+      ],
+      "word": "save"
+    },
+    {
+      "item_id": "spend",
+      "question": "to use money to buy things",
+      "correct": "spend",
+      "wrong": [
+        "run",
+        "walk"
+      ],
+      "word": "spend"
+    },
+    {
+      "item_id": "fix",
+      "question": "make something work again",
+      "correct": "fix",
+      "wrong": [
+        "run",
+        "walk"
+      ],
+      "word": "fix"
+    },
+    {
+      "item_id": "break",
+      "question": "a short rest",
+      "correct": "break",
+      "wrong": [
+        "run",
+        "walk"
+      ],
+      "word": "break"
+    },
+    {
+      "item_id": "build",
+      "question": "to make something by putting parts together",
+      "correct": "build",
+      "wrong": [
+        "run",
+        "walk"
+      ],
+      "word": "build"
+    },
+    {
+      "item_id": "cut",
+      "question": "a small open mark on skin",
+      "correct": "cut",
+      "wrong": [
+        "run",
+        "walk"
+      ],
+      "word": "cut"
+    },
+    {
+      "item_id": "glue",
+      "question": "glue",
+      "correct": "glue",
+      "wrong": [
+        "run",
+        "walk"
+      ],
+      "word": "glue"
+    },
+    {
+      "item_id": "tape",
+      "question": "sticky clear strip",
+      "correct": "tape",
+      "wrong": [
+        "run",
+        "walk"
+      ],
+      "word": "tape"
+    },
+    {
+      "item_id": "pack",
+      "question": "bag of things together",
+      "correct": "pack",
+      "wrong": [
+        "run",
+        "walk"
+      ],
+      "word": "pack"
+    },
+    {
+      "item_id": "unpack",
+      "question": "unpack",
+      "correct": "unpack",
+      "wrong": [
+        "run",
+        "walk"
+      ],
+      "word": "unpack"
+    },
+    {
+      "item_id": "move",
+      "question": "change of place",
+      "correct": "move",
+      "wrong": [
+        "run",
+        "walk"
+      ],
+      "word": "move"
+    },
+    {
+      "item_id": "travel",
+      "question": "going to other places",
+      "correct": "travel",
+      "wrong": [
+        "run",
+        "walk"
+      ],
+      "word": "travel"
+    },
+    {
+      "item_id": "visit",
+      "question": "act of going to see someone",
+      "correct": "visit",
+      "wrong": [
+        "run",
+        "walk"
+      ],
+      "word": "visit"
+    },
+    {
+      "item_id": "leave",
+      "question": "go away from a place",
+      "correct": "leave",
+      "wrong": [
+        "run",
+        "walk"
+      ],
+      "word": "leave"
+    }
+  ]
+}

@@ -1,0 +1,1008 @@
+{
+  "pack_id": "verbs1000",
+  "title": "B2 Verbs 901–1000",
+  "module_id": "word_master",
+  "seconds": 15,
+  "items": [
+    {
+      "item_id": "excite",
+      "question": "make someone feel eager",
+      "correct": "excite",
+      "wrong": [
+        "erect",
+        "tuck"
+      ],
+      "word": "excite"
+    },
+    {
+      "item_id": "erect",
+      "question": "put something up tall",
+      "correct": "erect",
+      "wrong": [
+        "excite",
+        "tuck"
+      ],
+      "word": "erect"
+    },
+    {
+      "item_id": "tuck",
+      "question": "push neatly into place",
+      "correct": "tuck",
+      "wrong": [
+        "excite",
+        "erect"
+      ],
+      "word": "tuck"
+    },
+    {
+      "item_id": "ruin",
+      "question": "spoil something completely",
+      "correct": "ruin",
+      "wrong": [
+        "excite",
+        "erect"
+      ],
+      "word": "ruin"
+    },
+    {
+      "item_id": "subject",
+      "question": "make someone go through",
+      "correct": "subject",
+      "wrong": [
+        "excite",
+        "erect"
+      ],
+      "word": "subject"
+    },
+    {
+      "item_id": "dedicate",
+      "question": "give time to something",
+      "correct": "dedicate",
+      "wrong": [
+        "excite",
+        "erect"
+      ],
+      "word": "dedicate"
+    },
+    {
+      "item_id": "transmit",
+      "question": "send from one place",
+      "correct": "transmit",
+      "wrong": [
+        "excite",
+        "erect"
+      ],
+      "word": "transmit"
+    },
+    {
+      "item_id": "mistake",
+      "question": "think it is another",
+      "correct": "mistake",
+      "wrong": [
+        "excite",
+        "erect"
+      ],
+      "word": "mistake"
+    },
+    {
+      "item_id": "nurse",
+      "question": "care for someone sick",
+      "correct": "nurse",
+      "wrong": [
+        "excite",
+        "erect"
+      ],
+      "word": "nurse"
+    },
+    {
+      "item_id": "propose",
+      "question": "suggest a new plan",
+      "correct": "propose",
+      "wrong": [
+        "excite",
+        "erect"
+      ],
+      "word": "propose"
+    },
+    {
+      "item_id": "campaign",
+      "question": "work to win support",
+      "correct": "campaign",
+      "wrong": [
+        "excite",
+        "erect"
+      ],
+      "word": "campaign"
+    },
+    {
+      "item_id": "originate",
+      "question": "start or come from",
+      "correct": "originate",
+      "wrong": [
+        "excite",
+        "erect"
+      ],
+      "word": "originate"
+    },
+    {
+      "item_id": "inspect",
+      "question": "look at very carefully",
+      "correct": "inspect",
+      "wrong": [
+        "excite",
+        "erect"
+      ],
+      "word": "inspect"
+    },
+    {
+      "item_id": "summon",
+      "question": "call someone to come",
+      "correct": "summon",
+      "wrong": [
+        "excite",
+        "erect"
+      ],
+      "word": "summon"
+    },
+    {
+      "item_id": "access",
+      "question": "get in and use",
+      "correct": "access",
+      "wrong": [
+        "excite",
+        "erect"
+      ],
+      "word": "access"
+    },
+    {
+      "item_id": "amend",
+      "question": "change it to fix",
+      "correct": "amend",
+      "wrong": [
+        "excite",
+        "erect"
+      ],
+      "word": "amend"
+    },
+    {
+      "item_id": "clarify",
+      "question": "make the meaning clearer",
+      "correct": "clarify",
+      "wrong": [
+        "excite",
+        "erect"
+      ],
+      "word": "clarify"
+    },
+    {
+      "item_id": "strain",
+      "question": "stretch or try too hard",
+      "correct": "strain",
+      "wrong": [
+        "excite",
+        "erect"
+      ],
+      "word": "strain"
+    },
+    {
+      "item_id": "characterise",
+      "question": "show its special nature",
+      "correct": "characterise",
+      "wrong": [
+        "excite",
+        "erect"
+      ],
+      "word": "characterise"
+    },
+    {
+      "item_id": "deprive",
+      "question": "take away something needed",
+      "correct": "deprive",
+      "wrong": [
+        "excite",
+        "erect"
+      ],
+      "word": "deprive"
+    },
+    {
+      "item_id": "fling",
+      "question": "throw hard and fast",
+      "correct": "fling",
+      "wrong": [
+        "excite",
+        "erect"
+      ],
+      "word": "fling"
+    },
+    {
+      "item_id": "stem",
+      "question": "stop it from spreading",
+      "correct": "stem",
+      "wrong": [
+        "excite",
+        "erect"
+      ],
+      "word": "stem"
+    },
+    {
+      "item_id": "abuse",
+      "question": "treat roughly and wrongly",
+      "correct": "abuse",
+      "wrong": [
+        "excite",
+        "erect"
+      ],
+      "word": "abuse"
+    },
+    {
+      "item_id": "survey",
+      "question": "look over a whole area",
+      "correct": "survey",
+      "wrong": [
+        "excite",
+        "erect"
+      ],
+      "word": "survey"
+    },
+    {
+      "item_id": "bow",
+      "question": "bend forward in respect",
+      "correct": "bow",
+      "wrong": [
+        "excite",
+        "erect"
+      ],
+      "word": "bow"
+    },
+    {
+      "item_id": "code",
+      "question": "write a computer program",
+      "correct": "code",
+      "wrong": [
+        "excite",
+        "erect"
+      ],
+      "word": "code"
+    },
+    {
+      "item_id": "contrast",
+      "question": "show how things differ",
+      "correct": "contrast",
+      "wrong": [
+        "excite",
+        "erect"
+      ],
+      "word": "contrast"
+    },
+    {
+      "item_id": "plunge",
+      "question": "jump quickly into water",
+      "correct": "plunge",
+      "wrong": [
+        "excite",
+        "erect"
+      ],
+      "word": "plunge"
+    },
+    {
+      "item_id": "grip",
+      "question": "hold very tightly",
+      "correct": "grip",
+      "wrong": [
+        "excite",
+        "erect"
+      ],
+      "word": "grip"
+    },
+    {
+      "item_id": "compensate",
+      "question": "make up for something",
+      "correct": "compensate",
+      "wrong": [
+        "excite",
+        "erect"
+      ],
+      "word": "compensate"
+    },
+    {
+      "item_id": "seat",
+      "question": "put someone in a chair",
+      "correct": "seat",
+      "wrong": [
+        "excite",
+        "erect"
+      ],
+      "word": "seat"
+    },
+    {
+      "item_id": "pronounce",
+      "question": "say a word clearly",
+      "correct": "pronounce",
+      "wrong": [
+        "excite",
+        "erect"
+      ],
+      "word": "pronounce"
+    },
+    {
+      "item_id": "substitute",
+      "question": "use instead of another",
+      "correct": "substitute",
+      "wrong": [
+        "excite",
+        "erect"
+      ],
+      "word": "substitute"
+    },
+    {
+      "item_id": "weaken",
+      "question": "make less strong",
+      "correct": "weaken",
+      "wrong": [
+        "excite",
+        "erect"
+      ],
+      "word": "weaken"
+    },
+    {
+      "item_id": "renew",
+      "question": "make new again",
+      "correct": "renew",
+      "wrong": [
+        "excite",
+        "erect"
+      ],
+      "word": "renew"
+    },
+    {
+      "item_id": "embark",
+      "question": "get on a ship",
+      "correct": "embark",
+      "wrong": [
+        "excite",
+        "erect"
+      ],
+      "word": "embark"
+    },
+    {
+      "item_id": "revive",
+      "question": "bring back to life",
+      "correct": "revive",
+      "wrong": [
+        "excite",
+        "erect"
+      ],
+      "word": "revive"
+    },
+    {
+      "item_id": "trip",
+      "question": "catch a foot and stumble",
+      "correct": "trip",
+      "wrong": [
+        "excite",
+        "erect"
+      ],
+      "word": "trip"
+    },
+    {
+      "item_id": "forbid",
+      "question": "say you must not",
+      "correct": "forbid",
+      "wrong": [
+        "excite",
+        "erect"
+      ],
+      "word": "forbid"
+    },
+    {
+      "item_id": "deem",
+      "question": "judge it to be",
+      "correct": "deem",
+      "wrong": [
+        "excite",
+        "erect"
+      ],
+      "word": "deem"
+    },
+    {
+      "item_id": "rebuild",
+      "question": "build again after damage",
+      "correct": "rebuild",
+      "wrong": [
+        "excite",
+        "erect"
+      ],
+      "word": "rebuild"
+    },
+    {
+      "item_id": "suppress",
+      "question": "hold a feeling back",
+      "correct": "suppress",
+      "wrong": [
+        "excite",
+        "erect"
+      ],
+      "word": "suppress"
+    },
+    {
+      "item_id": "betray",
+      "question": "tell a friend's secret",
+      "correct": "betray",
+      "wrong": [
+        "excite",
+        "erect"
+      ],
+      "word": "betray"
+    },
+    {
+      "item_id": "punish",
+      "question": "give a fair consequence",
+      "correct": "punish",
+      "wrong": [
+        "excite",
+        "erect"
+      ],
+      "word": "punish"
+    },
+    {
+      "item_id": "arouse",
+      "question": "wake a feeling up",
+      "correct": "arouse",
+      "wrong": [
+        "excite",
+        "erect"
+      ],
+      "word": "arouse"
+    },
+    {
+      "item_id": "compile",
+      "question": "gather things into one",
+      "correct": "compile",
+      "wrong": [
+        "excite",
+        "erect"
+      ],
+      "word": "compile"
+    },
+    {
+      "item_id": "cool",
+      "question": "make less hot",
+      "correct": "cool",
+      "wrong": [
+        "excite",
+        "erect"
+      ],
+      "word": "cool"
+    },
+    {
+      "item_id": "obey",
+      "question": "do as you are told",
+      "correct": "obey",
+      "wrong": [
+        "excite",
+        "erect"
+      ],
+      "word": "obey"
+    },
+    {
+      "item_id": "tremble",
+      "question": "shake from cold or fear",
+      "correct": "tremble",
+      "wrong": [
+        "excite",
+        "erect"
+      ],
+      "word": "tremble"
+    },
+    {
+      "item_id": "circulate",
+      "question": "pass around a group",
+      "correct": "circulate",
+      "wrong": [
+        "excite",
+        "erect"
+      ],
+      "word": "circulate"
+    },
+    {
+      "item_id": "chat",
+      "question": "talk in a friendly way",
+      "correct": "chat",
+      "wrong": [
+        "excite",
+        "erect"
+      ],
+      "word": "chat"
+    },
+    {
+      "item_id": "spill",
+      "question": "let liquid fall out",
+      "correct": "spill",
+      "wrong": [
+        "excite",
+        "erect"
+      ],
+      "word": "spill"
+    },
+    {
+      "item_id": "sum",
+      "question": "add numbers together",
+      "correct": "sum",
+      "wrong": [
+        "excite",
+        "erect"
+      ],
+      "word": "sum"
+    },
+    {
+      "item_id": "activate",
+      "question": "turn something on",
+      "correct": "activate",
+      "wrong": [
+        "excite",
+        "erect"
+      ],
+      "word": "activate"
+    },
+    {
+      "item_id": "crush",
+      "question": "press until it breaks",
+      "correct": "crush",
+      "wrong": [
+        "excite",
+        "erect"
+      ],
+      "word": "crush"
+    },
+    {
+      "item_id": "weep",
+      "question": "cry with falling tears",
+      "correct": "weep",
+      "wrong": [
+        "excite",
+        "erect"
+      ],
+      "word": "weep"
+    },
+    {
+      "item_id": "calm",
+      "question": "make quiet and peaceful",
+      "correct": "calm",
+      "wrong": [
+        "excite",
+        "erect"
+      ],
+      "word": "calm"
+    },
+    {
+      "item_id": "rain",
+      "question": "fall as water drops",
+      "correct": "rain",
+      "wrong": [
+        "excite",
+        "erect"
+      ],
+      "word": "rain"
+    },
+    {
+      "item_id": "disagree",
+      "question": "have a different opinion",
+      "correct": "disagree",
+      "wrong": [
+        "excite",
+        "erect"
+      ],
+      "word": "disagree"
+    },
+    {
+      "item_id": "merge",
+      "question": "join two things together",
+      "correct": "merge",
+      "wrong": [
+        "excite",
+        "erect"
+      ],
+      "word": "merge"
+    },
+    {
+      "item_id": "map",
+      "question": "draw where things are",
+      "correct": "map",
+      "wrong": [
+        "excite",
+        "erect"
+      ],
+      "word": "map"
+    },
+    {
+      "item_id": "stamp",
+      "question": "press a mark down",
+      "correct": "stamp",
+      "wrong": [
+        "excite",
+        "erect"
+      ],
+      "word": "stamp"
+    },
+    {
+      "item_id": "picture",
+      "question": "see it in your mind",
+      "correct": "picture",
+      "wrong": [
+        "excite",
+        "erect"
+      ],
+      "word": "picture"
+    },
+    {
+      "item_id": "shock",
+      "question": "surprise someone very suddenly",
+      "correct": "shock",
+      "wrong": [
+        "excite",
+        "erect"
+      ],
+      "word": "shock"
+    },
+    {
+      "item_id": "stroke",
+      "question": "pet gently with your hand",
+      "correct": "stroke",
+      "wrong": [
+        "excite",
+        "erect"
+      ],
+      "word": "stroke"
+    },
+    {
+      "item_id": "melt",
+      "question": "turn from solid to liquid",
+      "correct": "melt",
+      "wrong": [
+        "excite",
+        "erect"
+      ],
+      "word": "melt"
+    },
+    {
+      "item_id": "characterize",
+      "question": "show what something is like",
+      "correct": "characterize",
+      "wrong": [
+        "excite",
+        "erect"
+      ],
+      "word": "characterize"
+    },
+    {
+      "item_id": "carve",
+      "question": "cut a shape out",
+      "correct": "carve",
+      "wrong": [
+        "excite",
+        "erect"
+      ],
+      "word": "carve"
+    },
+    {
+      "item_id": "convict",
+      "question": "officially say they did it",
+      "correct": "convict",
+      "wrong": [
+        "excite",
+        "erect"
+      ],
+      "word": "convict"
+    },
+    {
+      "item_id": "drug",
+      "question": "give sleepy medicine to",
+      "correct": "drug",
+      "wrong": [
+        "excite",
+        "erect"
+      ],
+      "word": "drug"
+    },
+    {
+      "item_id": "wound",
+      "question": "hurt and make a cut",
+      "correct": "wound",
+      "wrong": [
+        "excite",
+        "erect"
+      ],
+      "word": "wound"
+    },
+    {
+      "item_id": "trail",
+      "question": "follow along behind someone",
+      "correct": "trail",
+      "wrong": [
+        "excite",
+        "erect"
+      ],
+      "word": "trail"
+    },
+    {
+      "item_id": "sack",
+      "question": "send away from a job",
+      "correct": "sack",
+      "wrong": [
+        "excite",
+        "erect"
+      ],
+      "word": "sack"
+    },
+    {
+      "item_id": "compel",
+      "question": "make someone do something",
+      "correct": "compel",
+      "wrong": [
+        "excite",
+        "erect"
+      ],
+      "word": "compel"
+    },
+    {
+      "item_id": "motivate",
+      "question": "give a reason to try",
+      "correct": "motivate",
+      "wrong": [
+        "excite",
+        "erect"
+      ],
+      "word": "motivate"
+    },
+    {
+      "item_id": "coach",
+      "question": "teach how to play",
+      "correct": "coach",
+      "wrong": [
+        "excite",
+        "erect"
+      ],
+      "word": "coach"
+    },
+    {
+      "item_id": "depart",
+      "question": "leave and go away",
+      "correct": "depart",
+      "wrong": [
+        "excite",
+        "erect"
+      ],
+      "word": "depart"
+    },
+    {
+      "item_id": "consume",
+      "question": "eat or use up",
+      "correct": "consume",
+      "wrong": [
+        "excite",
+        "erect"
+      ],
+      "word": "consume"
+    },
+    {
+      "item_id": "manipulate",
+      "question": "move with careful hands",
+      "correct": "manipulate",
+      "wrong": [
+        "excite",
+        "erect"
+      ],
+      "word": "manipulate"
+    },
+    {
+      "item_id": "stag",
+      "question": "go to a party alone",
+      "correct": "stag",
+      "wrong": [
+        "excite",
+        "erect"
+      ],
+      "word": "stag"
+    },
+    {
+      "item_id": "clutch",
+      "question": "hold something very tightly",
+      "correct": "clutch",
+      "wrong": [
+        "excite",
+        "erect"
+      ],
+      "word": "clutch"
+    },
+    {
+      "item_id": "underline",
+      "question": "draw a line under",
+      "correct": "underline",
+      "wrong": [
+        "excite",
+        "erect"
+      ],
+      "word": "underline"
+    },
+    {
+      "item_id": "penetrate",
+      "question": "go through something",
+      "correct": "penetrate",
+      "wrong": [
+        "excite",
+        "erect"
+      ],
+      "word": "penetrate"
+    },
+    {
+      "item_id": "grind",
+      "question": "crush into tiny bits",
+      "correct": "grind",
+      "wrong": [
+        "excite",
+        "erect"
+      ],
+      "word": "grind"
+    },
+    {
+      "item_id": "package",
+      "question": "wrap something up",
+      "correct": "package",
+      "wrong": [
+        "excite",
+        "erect"
+      ],
+      "word": "package"
+    },
+    {
+      "item_id": "supervise",
+      "question": "watch over the work",
+      "correct": "supervise",
+      "wrong": [
+        "excite",
+        "erect"
+      ],
+      "word": "supervise"
+    },
+    {
+      "item_id": "bless",
+      "question": "wish someone good things",
+      "correct": "bless",
+      "wrong": [
+        "excite",
+        "erect"
+      ],
+      "word": "bless"
+    },
+    {
+      "item_id": "cheer",
+      "question": "shout with happy joy",
+      "correct": "cheer",
+      "wrong": [
+        "excite",
+        "erect"
+      ],
+      "word": "cheer"
+    },
+    {
+      "item_id": "joke",
+      "question": "say something funny",
+      "correct": "joke",
+      "wrong": [
+        "excite",
+        "erect"
+      ],
+      "word": "joke"
+    },
+    {
+      "item_id": "alarm",
+      "question": "make someone feel worried",
+      "correct": "alarm",
+      "wrong": [
+        "excite",
+        "erect"
+      ],
+      "word": "alarm"
+    },
+    {
+      "item_id": "toss",
+      "question": "throw something lightly",
+      "correct": "toss",
+      "wrong": [
+        "excite",
+        "erect"
+      ],
+      "word": "toss"
+    },
+    {
+      "item_id": "desire",
+      "question": "want something very much",
+      "correct": "desire",
+      "wrong": [
+        "excite",
+        "erect"
+      ],
+      "word": "desire"
+    },
+    {
+      "item_id": "dive",
+      "question": "jump into the water",
+      "correct": "dive",
+      "wrong": [
+        "excite",
+        "erect"
+      ],
+      "word": "dive"
+    },
+    {
+      "item_id": "prescribe",
+      "question": "give the right medicine",
+      "correct": "prescribe",
+      "wrong": [
+        "excite",
+        "erect"
+      ],
+      "word": "prescribe"
+    },
+    {
+      "item_id": "heal",
+      "question": "make well again",
+      "correct": "heal",
+      "wrong": [
+        "excite",
+        "erect"
+      ],
+      "word": "heal"
+    },
+    {
+      "item_id": "host",
+      "question": "welcome guests at home",
+      "correct": "host",
+      "wrong": [
+        "excite",
+        "erect"
+      ],
+      "word": "host"
+    },
+    {
+      "item_id": "dictate",
+      "question": "say words to write",
+      "correct": "dictate",
+      "wrong": [
+        "excite",
+        "erect"
+      ],
+      "word": "dictate"
+    },
+    {
+      "item_id": "bar",
+      "question": "block the way",
+      "correct": "bar",
+      "wrong": [
+        "excite",
+        "erect"
+      ],
+      "word": "bar"
+    },
+    {
+      "item_id": "regain",
+      "question": "get back again",
+      "correct": "regain",
+      "wrong": [
+        "excite",
+        "erect"
+      ],
+      "word": "regain"
+    },
+    {
+      "item_id": "rip",
+      "question": "tear something apart",
+      "correct": "rip",
+      "wrong": [
+        "excite",
+        "erect"
+      ],
+      "word": "rip"
+    }
+  ]
+}

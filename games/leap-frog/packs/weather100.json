@@ -1,0 +1,1008 @@
+{
+  "pack_id": "weather100",
+  "title": "Weather & Seasons",
+  "module_id": "word_master",
+  "seconds": 15,
+  "items": [
+    {
+      "item_id": "weather",
+      "question": "how hot or cold it is outside",
+      "correct": "weather",
+      "wrong": [
+        "sun",
+        "sunny"
+      ],
+      "word": "weather"
+    },
+    {
+      "item_id": "sun",
+      "question": "the big star that gives us light",
+      "correct": "sun",
+      "wrong": [
+        "weather",
+        "sunny"
+      ],
+      "word": "sun"
+    },
+    {
+      "item_id": "sunny",
+      "question": "full of bright sun",
+      "correct": "sunny",
+      "wrong": [
+        "weather",
+        "sun"
+      ],
+      "word": "sunny"
+    },
+    {
+      "item_id": "cloud",
+      "question": "white fluff in the sky",
+      "correct": "cloud",
+      "wrong": [
+        "weather",
+        "sun"
+      ],
+      "word": "cloud"
+    },
+    {
+      "item_id": "cloudy",
+      "question": "cloudy",
+      "correct": "cloudy",
+      "wrong": [
+        "weather",
+        "sun"
+      ],
+      "word": "cloudy"
+    },
+    {
+      "item_id": "rain",
+      "question": "water falling from sky",
+      "correct": "rain",
+      "wrong": [
+        "weather",
+        "sun"
+      ],
+      "word": "rain"
+    },
+    {
+      "item_id": "rainy",
+      "question": "rainy",
+      "correct": "rainy",
+      "wrong": [
+        "weather",
+        "sun"
+      ],
+      "word": "rainy"
+    },
+    {
+      "item_id": "snow",
+      "question": "white flakes from the sky",
+      "correct": "snow",
+      "wrong": [
+        "weather",
+        "sun"
+      ],
+      "word": "snow"
+    },
+    {
+      "item_id": "snowy",
+      "question": "snowy",
+      "correct": "snowy",
+      "wrong": [
+        "weather",
+        "sun"
+      ],
+      "word": "snowy"
+    },
+    {
+      "item_id": "wind",
+      "question": "moving air you can feel",
+      "correct": "wind",
+      "wrong": [
+        "weather",
+        "sun"
+      ],
+      "word": "wind"
+    },
+    {
+      "item_id": "windy",
+      "question": "windy",
+      "correct": "windy",
+      "wrong": [
+        "weather",
+        "sun"
+      ],
+      "word": "windy"
+    },
+    {
+      "item_id": "storm",
+      "question": "storm",
+      "correct": "storm",
+      "wrong": [
+        "weather",
+        "sun"
+      ],
+      "word": "storm"
+    },
+    {
+      "item_id": "thunder",
+      "question": "thunder",
+      "correct": "thunder",
+      "wrong": [
+        "weather",
+        "sun"
+      ],
+      "word": "thunder"
+    },
+    {
+      "item_id": "lightning",
+      "question": "lightning",
+      "correct": "lightning",
+      "wrong": [
+        "weather",
+        "sun"
+      ],
+      "word": "lightning"
+    },
+    {
+      "item_id": "fog",
+      "question": "fog",
+      "correct": "fog",
+      "wrong": [
+        "weather",
+        "sun"
+      ],
+      "word": "fog"
+    },
+    {
+      "item_id": "foggy",
+      "question": "foggy",
+      "correct": "foggy",
+      "wrong": [
+        "weather",
+        "sun"
+      ],
+      "word": "foggy"
+    },
+    {
+      "item_id": "mist",
+      "question": "mist",
+      "correct": "mist",
+      "wrong": [
+        "weather",
+        "sun"
+      ],
+      "word": "mist"
+    },
+    {
+      "item_id": "hail",
+      "question": "hail",
+      "correct": "hail",
+      "wrong": [
+        "weather",
+        "sun"
+      ],
+      "word": "hail"
+    },
+    {
+      "item_id": "sleet",
+      "question": "sleet",
+      "correct": "sleet",
+      "wrong": [
+        "weather",
+        "sun"
+      ],
+      "word": "sleet"
+    },
+    {
+      "item_id": "drizzle",
+      "question": "drizzle",
+      "correct": "drizzle",
+      "wrong": [
+        "weather",
+        "sun"
+      ],
+      "word": "drizzle"
+    },
+    {
+      "item_id": "shower",
+      "question": "shower",
+      "correct": "shower",
+      "wrong": [
+        "weather",
+        "sun"
+      ],
+      "word": "shower"
+    },
+    {
+      "item_id": "downpour",
+      "question": "downpour",
+      "correct": "downpour",
+      "wrong": [
+        "weather",
+        "sun"
+      ],
+      "word": "downpour"
+    },
+    {
+      "item_id": "flood",
+      "question": "cover with too much water",
+      "correct": "flood",
+      "wrong": [
+        "weather",
+        "sun"
+      ],
+      "word": "flood"
+    },
+    {
+      "item_id": "drought",
+      "question": "drought",
+      "correct": "drought",
+      "wrong": [
+        "weather",
+        "sun"
+      ],
+      "word": "drought"
+    },
+    {
+      "item_id": "heatwave",
+      "question": "heatwave",
+      "correct": "heatwave",
+      "wrong": [
+        "weather",
+        "sun"
+      ],
+      "word": "heatwave"
+    },
+    {
+      "item_id": "coldsnap",
+      "question": "cold snap",
+      "correct": "cold snap",
+      "wrong": [
+        "weather",
+        "sun"
+      ],
+      "word": "cold snap"
+    },
+    {
+      "item_id": "frost",
+      "question": "frost",
+      "correct": "frost",
+      "wrong": [
+        "weather",
+        "sun"
+      ],
+      "word": "frost"
+    },
+    {
+      "item_id": "ice",
+      "question": "frozen hard water",
+      "correct": "ice",
+      "wrong": [
+        "weather",
+        "sun"
+      ],
+      "word": "ice"
+    },
+    {
+      "item_id": "icy",
+      "question": "icy",
+      "correct": "icy",
+      "wrong": [
+        "weather",
+        "sun"
+      ],
+      "word": "icy"
+    },
+    {
+      "item_id": "humid",
+      "question": "humid",
+      "correct": "humid",
+      "wrong": [
+        "weather",
+        "sun"
+      ],
+      "word": "humid"
+    },
+    {
+      "item_id": "dry",
+      "question": "has no water or moisture",
+      "correct": "dry",
+      "wrong": [
+        "weather",
+        "sun"
+      ],
+      "word": "dry"
+    },
+    {
+      "item_id": "wet",
+      "question": "covered with water",
+      "correct": "wet",
+      "wrong": [
+        "weather",
+        "sun"
+      ],
+      "word": "wet"
+    },
+    {
+      "item_id": "mild",
+      "question": "gentle not too strong",
+      "correct": "mild",
+      "wrong": [
+        "weather",
+        "sun"
+      ],
+      "word": "mild"
+    },
+    {
+      "item_id": "warm",
+      "question": "a little hot",
+      "correct": "warm",
+      "wrong": [
+        "weather",
+        "sun"
+      ],
+      "word": "warm"
+    },
+    {
+      "item_id": "hot",
+      "question": "very warm to touch",
+      "correct": "hot",
+      "wrong": [
+        "weather",
+        "sun"
+      ],
+      "word": "hot"
+    },
+    {
+      "item_id": "cool",
+      "question": "a little cold",
+      "correct": "cool",
+      "wrong": [
+        "weather",
+        "sun"
+      ],
+      "word": "cool"
+    },
+    {
+      "item_id": "cold",
+      "question": "very cool to touch",
+      "correct": "cold",
+      "wrong": [
+        "weather",
+        "sun"
+      ],
+      "word": "cold"
+    },
+    {
+      "item_id": "freezing",
+      "question": "freezing",
+      "correct": "freezing",
+      "wrong": [
+        "weather",
+        "sun"
+      ],
+      "word": "freezing"
+    },
+    {
+      "item_id": "temperature",
+      "question": "how hot or cold something is",
+      "correct": "temperature",
+      "wrong": [
+        "weather",
+        "sun"
+      ],
+      "word": "temperature"
+    },
+    {
+      "item_id": "degree",
+      "question": "unit of temperature or angle",
+      "correct": "degree",
+      "wrong": [
+        "weather",
+        "sun"
+      ],
+      "word": "degree"
+    },
+    {
+      "item_id": "forecast",
+      "question": "forecast",
+      "correct": "forecast",
+      "wrong": [
+        "weather",
+        "sun"
+      ],
+      "word": "forecast"
+    },
+    {
+      "item_id": "report",
+      "question": "a paper that tells facts or news",
+      "correct": "report",
+      "wrong": [
+        "weather",
+        "sun"
+      ],
+      "word": "report"
+    },
+    {
+      "item_id": "climate",
+      "question": "usual weather of a place",
+      "correct": "climate",
+      "wrong": [
+        "weather",
+        "sun"
+      ],
+      "word": "climate"
+    },
+    {
+      "item_id": "season",
+      "question": "one of four parts of the year",
+      "correct": "season",
+      "wrong": [
+        "weather",
+        "sun"
+      ],
+      "word": "season"
+    },
+    {
+      "item_id": "spring",
+      "question": "season after winter",
+      "correct": "spring",
+      "wrong": [
+        "weather",
+        "sun"
+      ],
+      "word": "spring"
+    },
+    {
+      "item_id": "summer",
+      "question": "hot season with long days",
+      "correct": "summer",
+      "wrong": [
+        "weather",
+        "sun"
+      ],
+      "word": "summer"
+    },
+    {
+      "item_id": "autumn",
+      "question": "season of falling leaves",
+      "correct": "autumn",
+      "wrong": [
+        "weather",
+        "sun"
+      ],
+      "word": "autumn"
+    },
+    {
+      "item_id": "fall",
+      "question": "season of falling leaves",
+      "correct": "fall",
+      "wrong": [
+        "weather",
+        "sun"
+      ],
+      "word": "fall"
+    },
+    {
+      "item_id": "winter",
+      "question": "the coldest season of the year",
+      "correct": "winter",
+      "wrong": [
+        "weather",
+        "sun"
+      ],
+      "word": "winter"
+    },
+    {
+      "item_id": "monsoon",
+      "question": "monsoon",
+      "correct": "monsoon",
+      "wrong": [
+        "weather",
+        "sun"
+      ],
+      "word": "monsoon"
+    },
+    {
+      "item_id": "typhoon",
+      "question": "typhoon",
+      "correct": "typhoon",
+      "wrong": [
+        "weather",
+        "sun"
+      ],
+      "word": "typhoon"
+    },
+    {
+      "item_id": "hurricane",
+      "question": "hurricane",
+      "correct": "hurricane",
+      "wrong": [
+        "weather",
+        "sun"
+      ],
+      "word": "hurricane"
+    },
+    {
+      "item_id": "tornado",
+      "question": "tornado",
+      "correct": "tornado",
+      "wrong": [
+        "weather",
+        "sun"
+      ],
+      "word": "tornado"
+    },
+    {
+      "item_id": "cyclone",
+      "question": "cyclone",
+      "correct": "cyclone",
+      "wrong": [
+        "weather",
+        "sun"
+      ],
+      "word": "cyclone"
+    },
+    {
+      "item_id": "earthquake",
+      "question": "earthquake",
+      "correct": "earthquake",
+      "wrong": [
+        "weather",
+        "sun"
+      ],
+      "word": "earthquake"
+    },
+    {
+      "item_id": "tsunami",
+      "question": "tsunami",
+      "correct": "tsunami",
+      "wrong": [
+        "weather",
+        "sun"
+      ],
+      "word": "tsunami"
+    },
+    {
+      "item_id": "volcano",
+      "question": "volcano",
+      "correct": "volcano",
+      "wrong": [
+        "weather",
+        "sun"
+      ],
+      "word": "volcano"
+    },
+    {
+      "item_id": "wildfire",
+      "question": "wildfire",
+      "correct": "wildfire",
+      "wrong": [
+        "weather",
+        "sun"
+      ],
+      "word": "wildfire"
+    },
+    {
+      "item_id": "blizzard",
+      "question": "blizzard",
+      "correct": "blizzard",
+      "wrong": [
+        "weather",
+        "sun"
+      ],
+      "word": "blizzard"
+    },
+    {
+      "item_id": "avalanche",
+      "question": "avalanche",
+      "correct": "avalanche",
+      "wrong": [
+        "weather",
+        "sun"
+      ],
+      "word": "avalanche"
+    },
+    {
+      "item_id": "umbrella",
+      "question": "umbrella",
+      "correct": "umbrella",
+      "wrong": [
+        "weather",
+        "sun"
+      ],
+      "word": "umbrella"
+    },
+    {
+      "item_id": "raincoat",
+      "question": "raincoat",
+      "correct": "raincoat",
+      "wrong": [
+        "weather",
+        "sun"
+      ],
+      "word": "raincoat"
+    },
+    {
+      "item_id": "boots",
+      "question": "boots",
+      "correct": "boots",
+      "wrong": [
+        "weather",
+        "sun"
+      ],
+      "word": "boots"
+    },
+    {
+      "item_id": "sunglasses",
+      "question": "sunglasses",
+      "correct": "sunglasses",
+      "wrong": [
+        "weather",
+        "sun"
+      ],
+      "word": "sunglasses"
+    },
+    {
+      "item_id": "sunscreen",
+      "question": "sunscreen",
+      "correct": "sunscreen",
+      "wrong": [
+        "weather",
+        "sun"
+      ],
+      "word": "sunscreen"
+    },
+    {
+      "item_id": "hat",
+      "question": "thing worn on head",
+      "correct": "hat",
+      "wrong": [
+        "weather",
+        "sun"
+      ],
+      "word": "hat"
+    },
+    {
+      "item_id": "scarf",
+      "question": "scarf",
+      "correct": "scarf",
+      "wrong": [
+        "weather",
+        "sun"
+      ],
+      "word": "scarf"
+    },
+    {
+      "item_id": "gloves",
+      "question": "gloves",
+      "correct": "gloves",
+      "wrong": [
+        "weather",
+        "sun"
+      ],
+      "word": "gloves"
+    },
+    {
+      "item_id": "jacket",
+      "question": "short coat you wear",
+      "correct": "jacket",
+      "wrong": [
+        "weather",
+        "sun"
+      ],
+      "word": "jacket"
+    },
+    {
+      "item_id": "sweater",
+      "question": "sweater",
+      "correct": "sweater",
+      "wrong": [
+        "weather",
+        "sun"
+      ],
+      "word": "sweater"
+    },
+    {
+      "item_id": "sunrise",
+      "question": "sunrise",
+      "correct": "sunrise",
+      "wrong": [
+        "weather",
+        "sun"
+      ],
+      "word": "sunrise"
+    },
+    {
+      "item_id": "sunset",
+      "question": "sunset",
+      "correct": "sunset",
+      "wrong": [
+        "weather",
+        "sun"
+      ],
+      "word": "sunset"
+    },
+    {
+      "item_id": "dawn",
+      "question": "dawn",
+      "correct": "dawn",
+      "wrong": [
+        "weather",
+        "sun"
+      ],
+      "word": "dawn"
+    },
+    {
+      "item_id": "dusk",
+      "question": "dusk",
+      "correct": "dusk",
+      "wrong": [
+        "weather",
+        "sun"
+      ],
+      "word": "dusk"
+    },
+    {
+      "item_id": "noon",
+      "question": "noon",
+      "correct": "noon",
+      "wrong": [
+        "weather",
+        "sun"
+      ],
+      "word": "noon"
+    },
+    {
+      "item_id": "midnight",
+      "question": "midnight",
+      "correct": "midnight",
+      "wrong": [
+        "weather",
+        "sun"
+      ],
+      "word": "midnight"
+    },
+    {
+      "item_id": "shade",
+      "question": "shade",
+      "correct": "shade",
+      "wrong": [
+        "weather",
+        "sun"
+      ],
+      "word": "shade"
+    },
+    {
+      "item_id": "shadow",
+      "question": "dark shape from blocking light",
+      "correct": "shadow",
+      "wrong": [
+        "weather",
+        "sun"
+      ],
+      "word": "shadow"
+    },
+    {
+      "item_id": "rainbow",
+      "question": "rainbow",
+      "correct": "rainbow",
+      "wrong": [
+        "weather",
+        "sun"
+      ],
+      "word": "rainbow"
+    },
+    {
+      "item_id": "sky",
+      "question": "the space above the ground",
+      "correct": "sky",
+      "wrong": [
+        "weather",
+        "sun"
+      ],
+      "word": "sky"
+    },
+    {
+      "item_id": "air",
+      "question": "what we breathe",
+      "correct": "air",
+      "wrong": [
+        "weather",
+        "sun"
+      ],
+      "word": "air"
+    },
+    {
+      "item_id": "breeze",
+      "question": "breeze",
+      "correct": "breeze",
+      "wrong": [
+        "weather",
+        "sun"
+      ],
+      "word": "breeze"
+    },
+    {
+      "item_id": "gust",
+      "question": "gust",
+      "correct": "gust",
+      "wrong": [
+        "weather",
+        "sun"
+      ],
+      "word": "gust"
+    },
+    {
+      "item_id": "chill",
+      "question": "chill",
+      "correct": "chill",
+      "wrong": [
+        "weather",
+        "sun"
+      ],
+      "word": "chill"
+    },
+    {
+      "item_id": "warmth",
+      "question": "warmth",
+      "correct": "warmth",
+      "wrong": [
+        "weather",
+        "sun"
+      ],
+      "word": "warmth"
+    },
+    {
+      "item_id": "moisture",
+      "question": "moisture",
+      "correct": "moisture",
+      "wrong": [
+        "weather",
+        "sun"
+      ],
+      "word": "moisture"
+    },
+    {
+      "item_id": "evaporation",
+      "question": "evaporation",
+      "correct": "evaporation",
+      "wrong": [
+        "weather",
+        "sun"
+      ],
+      "word": "evaporation"
+    },
+    {
+      "item_id": "condensation",
+      "question": "condensation",
+      "correct": "condensation",
+      "wrong": [
+        "weather",
+        "sun"
+      ],
+      "word": "condensation"
+    },
+    {
+      "item_id": "pressure",
+      "question": "a force pushing on something",
+      "correct": "pressure",
+      "wrong": [
+        "weather",
+        "sun"
+      ],
+      "word": "pressure"
+    },
+    {
+      "item_id": "barometer",
+      "question": "barometer",
+      "correct": "barometer",
+      "wrong": [
+        "weather",
+        "sun"
+      ],
+      "word": "barometer"
+    },
+    {
+      "item_id": "clear",
+      "question": "easy to see through",
+      "correct": "clear",
+      "wrong": [
+        "weather",
+        "sun"
+      ],
+      "word": "clear"
+    },
+    {
+      "item_id": "overcast",
+      "question": "overcast",
+      "correct": "overcast",
+      "wrong": [
+        "weather",
+        "sun"
+      ],
+      "word": "overcast"
+    },
+    {
+      "item_id": "partlycloudy",
+      "question": "partly cloudy",
+      "correct": "partly cloudy",
+      "wrong": [
+        "weather",
+        "sun"
+      ],
+      "word": "partly cloudy"
+    },
+    {
+      "item_id": "scattered",
+      "question": "scattered",
+      "correct": "scattered",
+      "wrong": [
+        "weather",
+        "sun"
+      ],
+      "word": "scattered"
+    },
+    {
+      "item_id": "severe",
+      "question": "very strong and bad",
+      "correct": "severe",
+      "wrong": [
+        "weather",
+        "sun"
+      ],
+      "word": "severe"
+    },
+    {
+      "item_id": "extreme",
+      "question": "very great or strong",
+      "correct": "extreme",
+      "wrong": [
+        "weather",
+        "sun"
+      ],
+      "word": "extreme"
+    },
+    {
+      "item_id": "pleasant",
+      "question": "giving a nice happy feeling",
+      "correct": "pleasant",
+      "wrong": [
+        "weather",
+        "sun"
+      ],
+      "word": "pleasant"
+    },
+    {
+      "item_id": "miserable",
+      "question": "very unhappy and sad",
+      "correct": "miserable",
+      "wrong": [
+        "weather",
+        "sun"
+      ],
+      "word": "miserable"
+    },
+    {
+      "item_id": "changeable",
+      "question": "changeable",
+      "correct": "changeable",
+      "wrong": [
+        "weather",
+        "sun"
+      ],
+      "word": "changeable"
+    },
+    {
+      "item_id": "stable",
+      "question": "steady and not likely to fall",
+      "correct": "stable",
+      "wrong": [
+        "weather",
+        "sun"
+      ],
+      "word": "stable"
+    }
+  ]
+}

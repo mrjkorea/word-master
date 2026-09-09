@@ -1,0 +1,1008 @@
+{
+  "pack_id": "clothes100",
+  "title": "Clothes & Accessories",
+  "module_id": "word_master",
+  "seconds": 15,
+  "items": [
+    {
+      "item_id": "shirt",
+      "question": "clothing for the chest",
+      "correct": "shirt",
+      "wrong": [
+        "pants",
+        "jeans"
+      ],
+      "word": "shirt"
+    },
+    {
+      "item_id": "pants",
+      "question": "pants",
+      "correct": "pants",
+      "wrong": [
+        "shirt",
+        "jeans"
+      ],
+      "word": "pants"
+    },
+    {
+      "item_id": "jeans",
+      "question": "jeans",
+      "correct": "jeans",
+      "wrong": [
+        "shirt",
+        "pants"
+      ],
+      "word": "jeans"
+    },
+    {
+      "item_id": "shorts",
+      "question": "shorts",
+      "correct": "shorts",
+      "wrong": [
+        "shirt",
+        "pants"
+      ],
+      "word": "shorts"
+    },
+    {
+      "item_id": "skirt",
+      "question": "skirt",
+      "correct": "skirt",
+      "wrong": [
+        "shirt",
+        "pants"
+      ],
+      "word": "skirt"
+    },
+    {
+      "item_id": "dress",
+      "question": "one-piece clothes for girls",
+      "correct": "dress",
+      "wrong": [
+        "shirt",
+        "pants"
+      ],
+      "word": "dress"
+    },
+    {
+      "item_id": "suit",
+      "question": "matching jacket and pants",
+      "correct": "suit",
+      "wrong": [
+        "shirt",
+        "pants"
+      ],
+      "word": "suit"
+    },
+    {
+      "item_id": "jacket",
+      "question": "short coat you wear",
+      "correct": "jacket",
+      "wrong": [
+        "shirt",
+        "pants"
+      ],
+      "word": "jacket"
+    },
+    {
+      "item_id": "coat",
+      "question": "warm outer clothing",
+      "correct": "coat",
+      "wrong": [
+        "shirt",
+        "pants"
+      ],
+      "word": "coat"
+    },
+    {
+      "item_id": "sweater",
+      "question": "sweater",
+      "correct": "sweater",
+      "wrong": [
+        "shirt",
+        "pants"
+      ],
+      "word": "sweater"
+    },
+    {
+      "item_id": "hoodie",
+      "question": "hoodie",
+      "correct": "hoodie",
+      "wrong": [
+        "shirt",
+        "pants"
+      ],
+      "word": "hoodie"
+    },
+    {
+      "item_id": "vest",
+      "question": "vest",
+      "correct": "vest",
+      "wrong": [
+        "shirt",
+        "pants"
+      ],
+      "word": "vest"
+    },
+    {
+      "item_id": "tie",
+      "question": "long cloth around the neck",
+      "correct": "tie",
+      "wrong": [
+        "shirt",
+        "pants"
+      ],
+      "word": "tie"
+    },
+    {
+      "item_id": "belt",
+      "question": "belt",
+      "correct": "belt",
+      "wrong": [
+        "shirt",
+        "pants"
+      ],
+      "word": "belt"
+    },
+    {
+      "item_id": "sock",
+      "question": "sock",
+      "correct": "sock",
+      "wrong": [
+        "shirt",
+        "pants"
+      ],
+      "word": "sock"
+    },
+    {
+      "item_id": "shoe",
+      "question": "covering for a foot",
+      "correct": "shoe",
+      "wrong": [
+        "shirt",
+        "pants"
+      ],
+      "word": "shoe"
+    },
+    {
+      "item_id": "sneaker",
+      "question": "sneaker",
+      "correct": "sneaker",
+      "wrong": [
+        "shirt",
+        "pants"
+      ],
+      "word": "sneaker"
+    },
+    {
+      "item_id": "boot",
+      "question": "tall rain shoe",
+      "correct": "boot",
+      "wrong": [
+        "shirt",
+        "pants"
+      ],
+      "word": "boot"
+    },
+    {
+      "item_id": "sandal",
+      "question": "sandal",
+      "correct": "sandal",
+      "wrong": [
+        "shirt",
+        "pants"
+      ],
+      "word": "sandal"
+    },
+    {
+      "item_id": "slipper",
+      "question": "slipper",
+      "correct": "slipper",
+      "wrong": [
+        "shirt",
+        "pants"
+      ],
+      "word": "slipper"
+    },
+    {
+      "item_id": "hat",
+      "question": "thing worn on head",
+      "correct": "hat",
+      "wrong": [
+        "shirt",
+        "pants"
+      ],
+      "word": "hat"
+    },
+    {
+      "item_id": "cap",
+      "question": "cap",
+      "correct": "cap",
+      "wrong": [
+        "shirt",
+        "pants"
+      ],
+      "word": "cap"
+    },
+    {
+      "item_id": "scarf",
+      "question": "scarf",
+      "correct": "scarf",
+      "wrong": [
+        "shirt",
+        "pants"
+      ],
+      "word": "scarf"
+    },
+    {
+      "item_id": "glove",
+      "question": "glove",
+      "correct": "glove",
+      "wrong": [
+        "shirt",
+        "pants"
+      ],
+      "word": "glove"
+    },
+    {
+      "item_id": "mittens",
+      "question": "mittens",
+      "correct": "mittens",
+      "wrong": [
+        "shirt",
+        "pants"
+      ],
+      "word": "mittens"
+    },
+    {
+      "item_id": "umbrella",
+      "question": "umbrella",
+      "correct": "umbrella",
+      "wrong": [
+        "shirt",
+        "pants"
+      ],
+      "word": "umbrella"
+    },
+    {
+      "item_id": "bag",
+      "question": "a container for carrying things",
+      "correct": "bag",
+      "wrong": [
+        "shirt",
+        "pants"
+      ],
+      "word": "bag"
+    },
+    {
+      "item_id": "purse",
+      "question": "purse",
+      "correct": "purse",
+      "wrong": [
+        "shirt",
+        "pants"
+      ],
+      "word": "purse"
+    },
+    {
+      "item_id": "wallet",
+      "question": "wallet",
+      "correct": "wallet",
+      "wrong": [
+        "shirt",
+        "pants"
+      ],
+      "word": "wallet"
+    },
+    {
+      "item_id": "backpack",
+      "question": "backpack",
+      "correct": "backpack",
+      "wrong": [
+        "shirt",
+        "pants"
+      ],
+      "word": "backpack"
+    },
+    {
+      "item_id": "watch",
+      "question": "clock worn on the wrist",
+      "correct": "watch",
+      "wrong": [
+        "shirt",
+        "pants"
+      ],
+      "word": "watch"
+    },
+    {
+      "item_id": "ring",
+      "question": "circle worn on a finger",
+      "correct": "ring",
+      "wrong": [
+        "shirt",
+        "pants"
+      ],
+      "word": "ring"
+    },
+    {
+      "item_id": "necklace",
+      "question": "necklace",
+      "correct": "necklace",
+      "wrong": [
+        "shirt",
+        "pants"
+      ],
+      "word": "necklace"
+    },
+    {
+      "item_id": "bracelet",
+      "question": "bracelet",
+      "correct": "bracelet",
+      "wrong": [
+        "shirt",
+        "pants"
+      ],
+      "word": "bracelet"
+    },
+    {
+      "item_id": "earring",
+      "question": "earring",
+      "correct": "earring",
+      "wrong": [
+        "shirt",
+        "pants"
+      ],
+      "word": "earring"
+    },
+    {
+      "item_id": "glasses",
+      "question": "glasses",
+      "correct": "glasses",
+      "wrong": [
+        "shirt",
+        "pants"
+      ],
+      "word": "glasses"
+    },
+    {
+      "item_id": "sunglasses",
+      "question": "sunglasses",
+      "correct": "sunglasses",
+      "wrong": [
+        "shirt",
+        "pants"
+      ],
+      "word": "sunglasses"
+    },
+    {
+      "item_id": "mask",
+      "question": "mask",
+      "correct": "mask",
+      "wrong": [
+        "shirt",
+        "pants"
+      ],
+      "word": "mask"
+    },
+    {
+      "item_id": "uniform",
+      "question": "all the same",
+      "correct": "uniform",
+      "wrong": [
+        "shirt",
+        "pants"
+      ],
+      "word": "uniform"
+    },
+    {
+      "item_id": "costume",
+      "question": "costume",
+      "correct": "costume",
+      "wrong": [
+        "shirt",
+        "pants"
+      ],
+      "word": "costume"
+    },
+    {
+      "item_id": "pajamas",
+      "question": "pajamas",
+      "correct": "pajamas",
+      "wrong": [
+        "shirt",
+        "pants"
+      ],
+      "word": "pajamas"
+    },
+    {
+      "item_id": "underwear",
+      "question": "underwear",
+      "correct": "underwear",
+      "wrong": [
+        "shirt",
+        "pants"
+      ],
+      "word": "underwear"
+    },
+    {
+      "item_id": "bra",
+      "question": "bra",
+      "correct": "bra",
+      "wrong": [
+        "shirt",
+        "pants"
+      ],
+      "word": "bra"
+    },
+    {
+      "item_id": "swimsuit",
+      "question": "swimsuit",
+      "correct": "swimsuit",
+      "wrong": [
+        "shirt",
+        "pants"
+      ],
+      "word": "swimsuit"
+    },
+    {
+      "item_id": "raincoat",
+      "question": "raincoat",
+      "correct": "raincoat",
+      "wrong": [
+        "shirt",
+        "pants"
+      ],
+      "word": "raincoat"
+    },
+    {
+      "item_id": "windbreaker",
+      "question": "windbreaker",
+      "correct": "windbreaker",
+      "wrong": [
+        "shirt",
+        "pants"
+      ],
+      "word": "windbreaker"
+    },
+    {
+      "item_id": "blazer",
+      "question": "blazer",
+      "correct": "blazer",
+      "wrong": [
+        "shirt",
+        "pants"
+      ],
+      "word": "blazer"
+    },
+    {
+      "item_id": "cardigan",
+      "question": "cardigan",
+      "correct": "cardigan",
+      "wrong": [
+        "shirt",
+        "pants"
+      ],
+      "word": "cardigan"
+    },
+    {
+      "item_id": "polo",
+      "question": "polo",
+      "correct": "polo",
+      "wrong": [
+        "shirt",
+        "pants"
+      ],
+      "word": "polo"
+    },
+    {
+      "item_id": "blouse",
+      "question": "blouse",
+      "correct": "blouse",
+      "wrong": [
+        "shirt",
+        "pants"
+      ],
+      "word": "blouse"
+    },
+    {
+      "item_id": "tshirt",
+      "question": "t-shirt",
+      "correct": "tshirt",
+      "wrong": [
+        "shirt",
+        "pants"
+      ],
+      "word": "tshirt"
+    },
+    {
+      "item_id": "leggings",
+      "question": "leggings",
+      "correct": "leggings",
+      "wrong": [
+        "shirt",
+        "pants"
+      ],
+      "word": "leggings"
+    },
+    {
+      "item_id": "tights",
+      "question": "tights",
+      "correct": "tights",
+      "wrong": [
+        "shirt",
+        "pants"
+      ],
+      "word": "tights"
+    },
+    {
+      "item_id": "stockings",
+      "question": "stockings",
+      "correct": "stockings",
+      "wrong": [
+        "shirt",
+        "pants"
+      ],
+      "word": "stockings"
+    },
+    {
+      "item_id": "robe",
+      "question": "robe",
+      "correct": "robe",
+      "wrong": [
+        "shirt",
+        "pants"
+      ],
+      "word": "robe"
+    },
+    {
+      "item_id": "apron",
+      "question": "apron",
+      "correct": "apron",
+      "wrong": [
+        "shirt",
+        "pants"
+      ],
+      "word": "apron"
+    },
+    {
+      "item_id": "helmet",
+      "question": "helmet",
+      "correct": "helmet",
+      "wrong": [
+        "shirt",
+        "pants"
+      ],
+      "word": "helmet"
+    },
+    {
+      "item_id": "goggles",
+      "question": "goggles",
+      "correct": "goggles",
+      "wrong": [
+        "shirt",
+        "pants"
+      ],
+      "word": "goggles"
+    },
+    {
+      "item_id": "button",
+      "question": "button",
+      "correct": "button",
+      "wrong": [
+        "shirt",
+        "pants"
+      ],
+      "word": "button"
+    },
+    {
+      "item_id": "zipper",
+      "question": "zipper",
+      "correct": "zipper",
+      "wrong": [
+        "shirt",
+        "pants"
+      ],
+      "word": "zipper"
+    },
+    {
+      "item_id": "pocket",
+      "question": "small bag in clothes",
+      "correct": "pocket",
+      "wrong": [
+        "shirt",
+        "pants"
+      ],
+      "word": "pocket"
+    },
+    {
+      "item_id": "collar",
+      "question": "collar",
+      "correct": "collar",
+      "wrong": [
+        "shirt",
+        "pants"
+      ],
+      "word": "collar"
+    },
+    {
+      "item_id": "sleeve",
+      "question": "sleeve",
+      "correct": "sleeve",
+      "wrong": [
+        "shirt",
+        "pants"
+      ],
+      "word": "sleeve"
+    },
+    {
+      "item_id": "hem",
+      "question": "hem",
+      "correct": "hem",
+      "wrong": [
+        "shirt",
+        "pants"
+      ],
+      "word": "hem"
+    },
+    {
+      "item_id": "fabric",
+      "question": "fabric",
+      "correct": "fabric",
+      "wrong": [
+        "shirt",
+        "pants"
+      ],
+      "word": "fabric"
+    },
+    {
+      "item_id": "cotton",
+      "question": "cotton",
+      "correct": "cotton",
+      "wrong": [
+        "shirt",
+        "pants"
+      ],
+      "word": "cotton"
+    },
+    {
+      "item_id": "wool",
+      "question": "wool",
+      "correct": "wool",
+      "wrong": [
+        "shirt",
+        "pants"
+      ],
+      "word": "wool"
+    },
+    {
+      "item_id": "silk",
+      "question": "silk",
+      "correct": "silk",
+      "wrong": [
+        "shirt",
+        "pants"
+      ],
+      "word": "silk"
+    },
+    {
+      "item_id": "leather",
+      "question": "leather",
+      "correct": "leather",
+      "wrong": [
+        "shirt",
+        "pants"
+      ],
+      "word": "leather"
+    },
+    {
+      "item_id": "denim",
+      "question": "denim",
+      "correct": "denim",
+      "wrong": [
+        "shirt",
+        "pants"
+      ],
+      "word": "denim"
+    },
+    {
+      "item_id": "size",
+      "question": "how big or small something is",
+      "correct": "size",
+      "wrong": [
+        "shirt",
+        "pants"
+      ],
+      "word": "size"
+    },
+    {
+      "item_id": "fit",
+      "question": "the right size for you",
+      "correct": "fit",
+      "wrong": [
+        "shirt",
+        "pants"
+      ],
+      "word": "fit"
+    },
+    {
+      "item_id": "tight",
+      "question": "fitting very closely",
+      "correct": "tight",
+      "wrong": [
+        "shirt",
+        "pants"
+      ],
+      "word": "tight"
+    },
+    {
+      "item_id": "loose",
+      "question": "not tight or firm",
+      "correct": "loose",
+      "wrong": [
+        "shirt",
+        "pants"
+      ],
+      "word": "loose"
+    },
+    {
+      "item_id": "fashion",
+      "question": "popular style of clothes",
+      "correct": "fashion",
+      "wrong": [
+        "shirt",
+        "pants"
+      ],
+      "word": "fashion"
+    },
+    {
+      "item_id": "style",
+      "question": "way of doing something",
+      "correct": "style",
+      "wrong": [
+        "shirt",
+        "pants"
+      ],
+      "word": "style"
+    },
+    {
+      "item_id": "brand",
+      "question": "brand",
+      "correct": "brand",
+      "wrong": [
+        "shirt",
+        "pants"
+      ],
+      "word": "brand"
+    },
+    {
+      "item_id": "label",
+      "question": "put a name tag",
+      "correct": "label",
+      "wrong": [
+        "shirt",
+        "pants"
+      ],
+      "word": "label"
+    },
+    {
+      "item_id": "tag",
+      "question": "tag",
+      "correct": "tag",
+      "wrong": [
+        "shirt",
+        "pants"
+      ],
+      "word": "tag"
+    },
+    {
+      "item_id": "laundry",
+      "question": "laundry",
+      "correct": "laundry",
+      "wrong": [
+        "shirt",
+        "pants"
+      ],
+      "word": "laundry"
+    },
+    {
+      "item_id": "wash",
+      "question": "clean with water and soap",
+      "correct": "wash",
+      "wrong": [
+        "shirt",
+        "pants"
+      ],
+      "word": "wash"
+    },
+    {
+      "item_id": "dry",
+      "question": "has no water or moisture",
+      "correct": "dry",
+      "wrong": [
+        "shirt",
+        "pants"
+      ],
+      "word": "dry"
+    },
+    {
+      "item_id": "iron",
+      "question": "strong gray metal",
+      "correct": "iron",
+      "wrong": [
+        "shirt",
+        "pants"
+      ],
+      "word": "iron"
+    },
+    {
+      "item_id": "fold",
+      "question": "bend paper into layers",
+      "correct": "fold",
+      "wrong": [
+        "shirt",
+        "pants"
+      ],
+      "word": "fold"
+    },
+    {
+      "item_id": "hang",
+      "question": "to put something up",
+      "correct": "hang",
+      "wrong": [
+        "shirt",
+        "pants"
+      ],
+      "word": "hang"
+    },
+    {
+      "item_id": "wear",
+      "question": "to have clothes on your body",
+      "correct": "wear",
+      "wrong": [
+        "shirt",
+        "pants"
+      ],
+      "word": "wear"
+    },
+    {
+      "item_id": "tryon",
+      "question": "try on",
+      "correct": "try on",
+      "wrong": [
+        "shirt",
+        "pants"
+      ],
+      "word": "try on"
+    },
+    {
+      "item_id": "match",
+      "question": "a small stick for making fire",
+      "correct": "match",
+      "wrong": [
+        "shirt",
+        "pants"
+      ],
+      "word": "match"
+    },
+    {
+      "item_id": "color",
+      "question": "color",
+      "correct": "color",
+      "wrong": [
+        "shirt",
+        "pants"
+      ],
+      "word": "color"
+    },
+    {
+      "item_id": "pattern",
+      "question": "a repeating design or shape",
+      "correct": "pattern",
+      "wrong": [
+        "shirt",
+        "pants"
+      ],
+      "word": "pattern"
+    },
+    {
+      "item_id": "stripe",
+      "question": "stripe",
+      "correct": "stripe",
+      "wrong": [
+        "shirt",
+        "pants"
+      ],
+      "word": "stripe"
+    },
+    {
+      "item_id": "plaid",
+      "question": "plaid",
+      "correct": "plaid",
+      "wrong": [
+        "shirt",
+        "pants"
+      ],
+      "word": "plaid"
+    },
+    {
+      "item_id": "polkadot",
+      "question": "polka dot",
+      "correct": "polka dot",
+      "wrong": [
+        "shirt",
+        "pants"
+      ],
+      "word": "polka dot"
+    },
+    {
+      "item_id": "plain",
+      "question": "simple and not fancy",
+      "correct": "plain",
+      "wrong": [
+        "shirt",
+        "pants"
+      ],
+      "word": "plain"
+    },
+    {
+      "item_id": "casual",
+      "question": "relaxed and not fancy",
+      "correct": "casual",
+      "wrong": [
+        "shirt",
+        "pants"
+      ],
+      "word": "casual"
+    },
+    {
+      "item_id": "formal",
+      "question": "serious and proper",
+      "correct": "formal",
+      "wrong": [
+        "shirt",
+        "pants"
+      ],
+      "word": "formal"
+    },
+    {
+      "item_id": "sporty",
+      "question": "sporty",
+      "correct": "sporty",
+      "wrong": [
+        "shirt",
+        "pants"
+      ],
+      "word": "sporty"
+    },
+    {
+      "item_id": "vintage",
+      "question": "vintage",
+      "correct": "vintage",
+      "wrong": [
+        "shirt",
+        "pants"
+      ],
+      "word": "vintage"
+    },
+    {
+      "item_id": "trendy",
+      "question": "trendy",
+      "correct": "trendy",
+      "wrong": [
+        "shirt",
+        "pants"
+      ],
+      "word": "trendy"
+    },
+    {
+      "item_id": "accessory",
+      "question": "accessory",
+      "correct": "accessory",
+      "wrong": [
+        "shirt",
+        "pants"
+      ],
+      "word": "accessory"
+    }
+  ]
+}
