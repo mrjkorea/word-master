@@ -62,7 +62,7 @@ function drawImg(img, x, y, w, h) {
 const params = new URLSearchParams(location.search);
 const studentId = params.get("student") || "Guest";
 const packUrl = params.get("pack") || DEFAULT_PACK_URL;
-const packIdHint = params.get("packid") || "demo10";
+const packIdHint = params.get("packid") || "nouns100";
 const sessionId =
   (crypto.randomUUID && crypto.randomUUID()) ||
   `s-${Date.now()}-${Math.random().toString(16).slice(2)}`;
@@ -670,7 +670,7 @@ async function fetchPack() {
     }
   }
   try {
-    const res = await fetch(packUrl === "session" ? "packs/animals.json" : packUrl, { cache: "no-store" });
+    const res = await fetch(packUrl === "session" ? "packs/nouns100.json" : packUrl, { cache: "no-store" });
     if (res.ok) {
       const json = await res.json();
       const pack = normalizePack(json, json.pack_id || "fetched");

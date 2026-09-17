@@ -4,22 +4,22 @@
   const Algo = window.WordFactoryAlgo;
   const LS_STATE = "mrj.word_factory.state";
   const LS_EVENTS = "mrj.word_factory.events";
-  const DEMO_PACK_ID = "demo10";
+  const DEMO_PACK_ID = "nouns100";
 
   const DEMO_FALLBACK = {
     id: DEMO_PACK_ID,
-    title: "Animals",
+    title: "A1 Nouns 1–100",
     words: [
-      { id: "cat", en: "cat", ko: "고양이" },
-      { id: "dog", en: "dog", ko: "개" },
-      { id: "bird", en: "bird", ko: "새" },
-      { id: "fish", en: "fish", ko: "물고기" },
-      { id: "horse", en: "horse", ko: "말" },
-      { id: "cow", en: "cow", ko: "소" },
-      { id: "pig", en: "pig", ko: "돼지" },
-      { id: "duck", en: "duck", ko: "오리" },
-      { id: "frog", en: "frog", ko: "개구리" },
-      { id: "bear", en: "bear", ko: "곰" },
+      { id: "time", en: "time", ko: "시계가 재는 것" },
+      { id: "year", en: "year", ko: "일 년" },
+      { id: "people", en: "people", ko: "사람들" },
+      { id: "way", en: "way", ko: "길" },
+      { id: "day", en: "day", ko: "하루" },
+      { id: "man", en: "man", ko: "남자" },
+      { id: "thing", en: "thing", ko: "물건" },
+      { id: "woman", en: "woman", ko: "여자" },
+      { id: "life", en: "life", ko: "삶" },
+      { id: "child", en: "child", ko: "아이" },
     ],
   };
 
@@ -1895,14 +1895,14 @@
     let pack;
     if (kind === "spellfire") {
       pack = {
-        pack_id: set.id || "animals",
+        pack_id: set.id || "nouns100",
         title: set.title,
         seconds_per_letter: 5,
         items: set.words.map(function (w) { return { item_id: w.id, word: w.en }; }),
       };
     } else {
       pack = {
-        pack_id: set.id || "animals",
+        pack_id: set.id || "nouns100",
         title: set.title,
         module_id: kind,
         activity_id: kind,
@@ -2025,7 +2025,8 @@
       renderSetHome();
       showScreen("set");
     });
-    $("#btn-demo").addEventListener("click", function () { openDemo(); });
+    const demoBtn = $("#btn-demo");
+    if (demoBtn) demoBtn.addEventListener("click", function () { openDemo(); });
     ["nouns100", "verbs100", "adjectives100", "nouns200", "little100", "verbs200", "adjectives200", "adverbs100", "nouns300", "verbs300"].forEach(function (pid) {
       const el = $("#btn-pack-" + pid);
       if (el) el.addEventListener("click", function () { openPack(pid); });
@@ -2142,7 +2143,27 @@
 
     buildPad($("#az-pad"));
     buildPad($("#test-az-pad"));
-    if ($("#intro-az-pad")) buildPad($("#intro-az-pad"));
+    if ($("#intro-az-pad"))     buildPad($("#intro-az-pad"));
+    applySlimPacks();
+  }
+
+  async function applySlimPacks() {
+    try {
+      const res = await fetch("BUILD_STAMP.txt", { cache: "no-store" });
+      if (!res.ok) return;
+      const text = await res.text();
+      const line = text.split("\n").find(function (l) { return l.indexOf("packs=") === 0; });
+      if (!line) return;
+      const val = line.slice(6).trim();
+      if (!val || val === "all") return;
+      const allowed = val.split(/\s+/);
+      const demo = $("#btn-demo");
+      if (demo) demo.hidden = true;
+      ["nouns100", "verbs100", "adjectives100", "nouns200", "little100", "verbs200", "adjectives200", "adverbs100", "nouns300", "verbs300"].forEach(function (pid) {
+        const el = $("#btn-pack-" + pid);
+        if (el && allowed.indexOf(pid) < 0) el.hidden = true;
+      });
+    } catch (e) { /* ignore */ }
   }
 
   function applyLocale(code) {

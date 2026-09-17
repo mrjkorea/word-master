@@ -131,7 +131,8 @@
     name_title: "What’s your name?",
     name_help: "First thing. We keep it on this phone only.",
     name_go: "That’s me",
-    animals_az: "Animals A–Z",
+    words_az: "Words A–Z",
+    nouns100_em: "time · year · people …",
     word_list_em: "See every word A–Z",
     stats_line: "{forever} remembered forever  ·  {trying} trying (reviews: 1, 3, 7, 21, 60 days)",
     hello: "Hi, {name}",
@@ -139,7 +140,7 @@
     tag_forever: "forever",
     tag_learning: "learning",
     tag_new: "new",
-    demo_em: "cat · dog · bird … bear",
+    demo_em: "time · year · people …",
   };
 
   STR.ko = {
@@ -252,7 +253,8 @@
     name_title: "이름이 뭐예요?",
     name_help: "가장 먼저. 이 휴대폰에만 저장합니다.",
     name_go: "나예요",
-    animals_az: "동물 A–Z",
+    words_az: "단어 A–Z",
+    nouns100_em: "time · year · people …",
     word_list_em: "단어 전부 가나다/ABC 순",
     stats_line: "평생 기억 {forever}개  ·  연습 중 {trying}개 (복습: 1일, 3일, 7일, 21일, 60일)",
     hello: "안녕, {name}",
@@ -260,7 +262,7 @@
     tag_forever: "평생",
     tag_learning: "배우는 중",
     tag_new: "새 단어",
-    demo_em: "cat · dog · bird … bear",
+    demo_em: "time · year · people …",
   };
 
   STR["zh-Hans"] = {
@@ -691,7 +693,7 @@
       no_mistakes: "没有错误。", forever_help: "永远记住 — 之后这台手机会提醒你（1、3、7、21、60天）。",
       need_80: "{pct}% — 需要 80%。回到学习。",
       name_title: "你叫什么名字？", name_help: "先填这个。只保存在这台手机。", name_go: "就是我",
-      animals_az: "动物 A–Z", word_list_em: "按字母看全部单词",
+      words_az: "单词 A–Z", word_list_em: "按字母看全部单词",
       stats_line: "永远记住 {forever}  ·  练习中 {trying}（复习：1、3、7、21、60天）",
       hello: "你好，{name}", due_line: "复习时间：{title}",
       tag_forever: "永远", tag_learning: "学习中", tag_new: "新词"
@@ -708,7 +710,7 @@
       no_mistakes: "ミスなし。", forever_help: "ずっと覚える — あとでこの端末が知らせます（1・3・7・21・60日）。",
       need_80: "{pct}% — 80%必要。学習に戻る。",
       name_title: "お名前は？", name_help: "最初に。この端末だけに保存します。", name_go: "わたしです",
-      animals_az: "動物 A–Z", word_list_em: "単語を全部 ABC 順",
+      words_az: "単語 A–Z", word_list_em: "単語を全部 ABC 順",
       stats_line: "ずっと覚える {forever}  ·  練習中 {trying}（復習: 1, 3, 7, 21, 60日）",
       hello: "こんにちは、{name}", due_line: "復習の時間: {title}",
       tag_forever: "ずっと", tag_learning: "学習中", tag_new: "新しい"
@@ -725,7 +727,7 @@
       no_mistakes: "Sin errores.", forever_help: "Recordar para siempre — este teléfono te avisará (1, 3, 7, 21, 60 días).",
       need_80: "{pct}% — necesitas 80%. Vuelve a Aprender.",
       name_title: "¿Cómo te llamas?", name_help: "Lo primero. Solo en este teléfono.", name_go: "Soy yo",
-      animals_az: "Animales A–Z", word_list_em: "Ver cada palabra A–Z",
+      words_az: "Palabras A–Z", word_list_em: "Ver cada palabra A–Z",
       stats_line: "{forever} para siempre  ·  {trying} practicando (repaso: 1, 3, 7, 21, 60 días)",
       hello: "Hola, {name}", due_line: "Hora de repasar: {title}",
       tag_forever: "siempre", tag_learning: "aprendiendo", tag_new: "nuevo"
@@ -742,7 +744,7 @@
       no_mistakes: "कोई गलती नहीं।", forever_help: "हमेशा याद — बाद में यह फ़ोन याद दिलाएगा (1, 3, 7, 21, 60 दिन)।",
       need_80: "{pct}% — 80% चाहिए। सीखने पर वापस।",
       name_title: "आपका नाम क्या है?", name_help: "सबसे पहले। सिर्फ़ इस फ़ोन पर।", name_go: "यह मैं हूँ",
-      animals_az: "जानवर A–Z", word_list_em: "सारे शब्द A–Z",
+      words_az: "शब्द A–Z", word_list_em: "सारे शब्द A–Z",
       stats_line: "हमेशा {forever}  ·  अभ्यास {trying} (दोहराना: 1, 3, 7, 21, 60 दिन)",
       hello: "नमस्ते, {name}", due_line: "दोहराने का समय: {title}",
       tag_forever: "हमेशा", tag_learning: "सीख रहे", tag_new: "नया"
@@ -759,7 +761,7 @@
       no_mistakes: "Keine Fehler.", forever_help: "Für immer merken — dieses Handy erinnert dich (1, 3, 7, 21, 60 Tage).",
       need_80: "{pct}% — 80% nötig. Zurück zum Lernen.",
       name_title: "Wie heißt du?", name_help: "Zuerst. Nur auf diesem Handy.", name_go: "Das bin ich",
-      animals_az: "Tiere A–Z", word_list_em: "Jedes Wort A–Z sehen",
+      words_az: "Wörter A–Z", word_list_em: "Jedes Wort A–Z sehen",
       stats_line: "{forever} für immer  ·  {trying} üben (Wiederholung: 1, 3, 7, 21, 60 Tage)",
       hello: "Hallo, {name}", due_line: "Wiederholungszeit: {title}",
       tag_forever: "für immer", tag_learning: "lernt", tag_new: "neu"
@@ -776,7 +778,7 @@
       no_mistakes: "Không sai.", forever_help: "Nhớ mãi — điện thoại này sẽ nhắc (1, 3, 7, 21, 60 ngày).",
       need_80: "{pct}% — cần 80%. Về Học.",
       name_title: "Bạn tên gì?", name_help: "Việc đầu. Chỉ lưu trên máy này.", name_go: "Đó là tôi",
-      animals_az: "Động vật A–Z", word_list_em: "Xem mọi từ A–Z",
+      words_az: "Từ A–Z", word_list_em: "Xem mọi từ A–Z",
       stats_line: "Nhớ mãi {forever}  ·  đang học {trying} (ôn: 1, 3, 7, 21, 60 ngày)",
       hello: "Xin chào, {name}", due_line: "Giờ ôn: {title}",
       tag_forever: "mãi", tag_learning: "đang học", tag_new: "mới"
@@ -793,7 +795,7 @@
       no_mistakes: "Sem erros.", forever_help: "Lembrar para sempre — este celular avisa depois (1, 3, 7, 21, 60 dias).",
       need_80: "{pct}% — precisa de 80%. Volte a Aprender.",
       name_title: "Qual é o seu nome?", name_help: "Primeiro. Só neste celular.", name_go: "Sou eu",
-      animals_az: "Animais A–Z", word_list_em: "Ver cada palavra A–Z",
+      words_az: "Palavras A–Z", word_list_em: "Ver cada palavra A–Z",
       stats_line: "{forever} para sempre  ·  {trying} praticando (revisão: 1, 3, 7, 21, 60 dias)",
       hello: "Oi, {name}", due_line: "Hora de revisar: {title}",
       tag_forever: "sempre", tag_learning: "aprendendo", tag_new: "novo"
@@ -810,7 +812,7 @@
       no_mistakes: "Tidak ada salah.", forever_help: "Ingat selamanya — HP ini akan mengingatkan (1, 3, 7, 21, 60 hari).",
       need_80: "{pct}% — perlu 80%. Kembali Belajar.",
       name_title: "Siapa namamu?", name_help: "Yang pertama. Hanya di HP ini.", name_go: "Ini saya",
-      animals_az: "Hewan A–Z", word_list_em: "Lihat semua kata A–Z",
+      words_az: "Kata A–Z", word_list_em: "Lihat semua kata A–Z",
       stats_line: "Selamanya {forever}  ·  latihan {trying} (ulang: 1, 3, 7, 21, 60 hari)",
       hello: "Hai, {name}", due_line: "Waktu mengulang: {title}",
       tag_forever: "selamanya", tag_learning: "belajar", tag_new: "baru"
@@ -827,7 +829,7 @@
       no_mistakes: "Aucune erreur.", forever_help: "Retenir pour toujours — ce téléphone rappellera (1, 3, 7, 21, 60 jours).",
       need_80: "{pct}% — il faut 80%. Retour à Apprendre.",
       name_title: "Comment tu t’appelles ?", name_help: "D’abord. Seulement sur ce téléphone.", name_go: "C’est moi",
-      animals_az: "Animaux A–Z", word_list_em: "Voir chaque mot A–Z",
+      words_az: "Mots A–Z", word_list_em: "Voir chaque mot A–Z",
       stats_line: "{forever} pour toujours  ·  {trying} en cours (révision : 1, 3, 7, 21, 60 jours)",
       hello: "Salut, {name}", due_line: "Moment de réviser : {title}",
       tag_forever: "toujours", tag_learning: "en cours", tag_new: "nouveau"
@@ -844,7 +846,7 @@
       no_mistakes: "لا أخطاء.", forever_help: "تذكّر للأبد — هذا الهاتف يذكّرك لاحقًا (1، 3، 7، 21، 60 يومًا).",
       need_80: "{pct}% — تحتاج 80%. عُد للتعلّم.",
       name_title: "ما اسمك؟", name_help: "أول شيء. يُحفظ على هذا الهاتف فقط.", name_go: "هذا أنا",
-      animals_az: "حيوانات A–Z", word_list_em: "انظر كل كلمة أبجديًا",
+      words_az: "كلمات A–Z", word_list_em: "انظر كل كلمة أبجديًا",
       stats_line: "للأبد {forever}  ·  يتدرّب {trying} (مراجعة: 1، 3، 7، 21، 60 يومًا)",
       hello: "مرحبًا، {name}", due_line: "وقت المراجعة: {title}",
       tag_forever: "للأبد", tag_learning: "يتعلم", tag_new: "جديد"
@@ -861,7 +863,7 @@
       no_mistakes: "Hata yok.", forever_help: "Sonsuza dek hatırla — bu telefon sonra hatırlatır (1, 3, 7, 21, 60 gün).",
       need_80: "{pct}% — %80 gerekir. Öğren’e dön.",
       name_title: "Adın ne?", name_help: "İlk iş. Sadece bu telefonda.", name_go: "Benim",
-      animals_az: "Hayvanlar A–Z", word_list_em: "Her kelimeyi A–Z gör",
+      words_az: "Kelimeler A–Z", word_list_em: "Her kelimeyi A–Z gör",
       stats_line: "Sonsuza {forever}  ·  çalışan {trying} (tekrar: 1, 3, 7, 21, 60 gün)",
       hello: "Merhaba, {name}", due_line: "Tekrar zamanı: {title}",
       tag_forever: "sonsuza", tag_learning: "öğreniyor", tag_new: "yeni"
@@ -878,7 +880,7 @@
       no_mistakes: "Nessun errore.", forever_help: "Ricorda per sempre — questo telefono ricorderà (1, 3, 7, 21, 60 giorni).",
       need_80: "{pct}% — serve l’80%. Torna a Impara.",
       name_title: "Come ti chiami?", name_help: "Per prima. Solo su questo telefono.", name_go: "Sono io",
-      animals_az: "Animali A–Z", word_list_em: "Vedi ogni parola A–Z",
+      words_az: "Parole A–Z", word_list_em: "Vedi ogni parola A–Z",
       stats_line: "{forever} per sempre  ·  {trying} in prova (ripasso: 1, 3, 7, 21, 60 giorni)",
       hello: "Ciao, {name}", due_line: "Ora del ripasso: {title}",
       tag_forever: "sempre", tag_learning: "imparando", tag_new: "nuovo"
@@ -895,7 +897,7 @@
       no_mistakes: "Bez błędów.", forever_help: "Pamiętaj na zawsze — ten telefon przypomni (1, 3, 7, 21, 60 dni).",
       need_80: "{pct}% — potrzeba 80%. Wróć do Nauki.",
       name_title: "Jak masz na imię?", name_help: "Najpierw. Tylko na tym telefonie.", name_go: "To ja",
-      animals_az: "Zwierzęta A–Z", word_list_em: "Zobacz każde słowo A–Z",
+      words_az: "Słowa A–Z", word_list_em: "Zobacz każde słowo A–Z",
       stats_line: "Na zawsze {forever}  ·  ćwiczy {trying} (powtórka: 1, 3, 7, 21, 60 dni)",
       hello: "Cześć, {name}", due_line: "Czas powtórki: {title}",
       tag_forever: "zawsze", tag_learning: "nauka", tag_new: "nowe"
