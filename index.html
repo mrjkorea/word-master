@@ -7,7 +7,7 @@
   <meta name="mobile-web-app-capable" content="yes" />
   <meta name="theme-color" content="#f6f3ec" />
   <title>MRJ Word Master</title>
-  <link rel="stylesheet" href="css/app.css?v=20260921-desktop" />
+  <link rel="stylesheet" href="css/app.css" />
 </head>
 <body>
   <div id="phone" class="phone">
@@ -70,6 +70,24 @@
 
       <section class="screen" id="screen-home" data-screen="home">
         <p class="hello" id="hello-line"></p>
+        <button type="button" class="signout-link" id="btn-signout" hidden>Sign out</button>
+        <div class="signin-card" id="signin-card">
+          <p class="signin-kicker">Optional sign-in</p>
+          <p class="help-ko">Name and a 4-digit PIN. Saved on this phone. No Google. No email.</p>
+          <label class="signin-field">
+            <span>Name</span>
+            <input id="account-name" class="name-input" maxlength="24" autocomplete="off" />
+          </label>
+          <label class="signin-field">
+            <span>4-digit PIN</span>
+            <input id="account-pin" class="name-input pin-input" maxlength="4" inputmode="numeric" pattern="[0-9]*" autocomplete="off" />
+          </label>
+          <p class="signin-err" id="signin-err" hidden>Need a name and a 4-digit PIN.</p>
+          <div class="signin-actions">
+            <button type="button" class="chunk primary" id="btn-signin-save"><strong>Save sign-in</strong></button>
+            <button type="button" class="chunk" id="btn-signin-skip"><strong>Skip — just practice</strong><em>Pick a pack as today</em></button>
+          </div>
+        </div>
         <div class="stats-card" id="stats-card">
           <p id="stats-line"></p>
           <button type="button" class="chunk" id="btn-word-list"><strong data-i18n="words_az">Words A–Z</strong><em data-i18n="word_list_em">See every word A–Z</em></button>
@@ -131,6 +149,31 @@
             <span class="chip-tag">A2</span>
             <strong>Verbs 201–300</strong>
             <em>replace · reflect · intend …</em>
+          </button>
+          <button type="button" class="chunk" id="btn-pack-adjectives300">
+            <span class="chip-tag">A2</span>
+            <strong>Adjectives 201–300</strong>
+            <em>detailed · limited · afraid</em>
+          </button>
+          <button type="button" class="chunk" id="btn-pack-nouns400">
+            <span class="chip-tag">A2</span>
+            <strong>Nouns 301–400</strong>
+            <em>region · effort · player</em>
+          </button>
+          <button type="button" class="chunk" id="btn-pack-adverbs200">
+            <span class="chip-tag">B1</span>
+            <strong>Adverbs 101–200</strong>
+            <em>apart · easily · little</em>
+          </button>
+          <button type="button" class="chunk" id="btn-pack-nouns500">
+            <span class="chip-tag">B1</span>
+            <strong>Nouns 401–500</strong>
+            <em>good · campaign · advice</em>
+          </button>
+          <button type="button" class="chunk" id="btn-pack-verbs400">
+            <span class="chip-tag">B1</span>
+            <strong>Verbs 301–400</strong>
+            <em>bind · threaten · launch</em>
           </button>
           <button type="button" class="chunk" id="btn-games-home">
             <span class="chip-tag" data-i18n="games">Games</span>
@@ -355,6 +398,8 @@
 
   <script src="js/factory-algo.js"></script>
   <script src="js/i18n.js"></script>
-  <script src="js/app.js?v=20260921-desktop"></script>
+  <script src="js/progress-config.js"></script>
+  <script src="js/progress.js"></script>
+  <script src="js/app.js"></script>
 </body>
 </html>

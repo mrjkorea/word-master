@@ -1,0 +1,1008 @@
+{
+  "pack_id": "nouns500",
+  "title": "B1 Nouns 401–500",
+  "module_id": "snow_jump",
+  "seconds": 15,
+  "items": [
+    {
+      "item_id": "good",
+      "question": "something that is right",
+      "correct": "good",
+      "wrong": [
+        "campaign",
+        "advice"
+      ],
+      "word": "good"
+    },
+    {
+      "item_id": "campaign",
+      "question": "a planned effort for change",
+      "correct": "campaign",
+      "wrong": [
+        "good",
+        "advice"
+      ],
+      "word": "campaign"
+    },
+    {
+      "item_id": "advice",
+      "question": "words that help decide",
+      "correct": "advice",
+      "wrong": [
+        "good",
+        "campaign"
+      ],
+      "word": "advice"
+    },
+    {
+      "item_id": "institution",
+      "question": "an important organization or place",
+      "correct": "institution",
+      "wrong": [
+        "good",
+        "campaign"
+      ],
+      "word": "institution"
+    },
+    {
+      "item_id": "surface",
+      "question": "the outside or top part",
+      "correct": "surface",
+      "wrong": [
+        "good",
+        "campaign"
+      ],
+      "word": "surface"
+    },
+    {
+      "item_id": "library",
+      "question": "place with many books",
+      "correct": "library",
+      "wrong": [
+        "good",
+        "campaign"
+      ],
+      "word": "library"
+    },
+    {
+      "item_id": "pupil",
+      "question": "child who goes to school",
+      "correct": "pupil",
+      "wrong": [
+        "good",
+        "campaign"
+      ],
+      "word": "pupil"
+    },
+    {
+      "item_id": "advantage",
+      "question": "something that helps you win",
+      "correct": "advantage",
+      "wrong": [
+        "good",
+        "campaign"
+      ],
+      "word": "advantage"
+    },
+    {
+      "item_id": "memory",
+      "question": "something you remember from before",
+      "correct": "memory",
+      "wrong": [
+        "good",
+        "campaign"
+      ],
+      "word": "memory"
+    },
+    {
+      "item_id": "culture",
+      "question": "the way people live and celebrate",
+      "correct": "culture",
+      "wrong": [
+        "good",
+        "campaign"
+      ],
+      "word": "culture"
+    },
+    {
+      "item_id": "blood",
+      "question": "red liquid inside body",
+      "correct": "blood",
+      "wrong": [
+        "good",
+        "campaign"
+      ],
+      "word": "blood"
+    },
+    {
+      "item_id": "majority",
+      "question": "more than half of a group",
+      "correct": "majority",
+      "wrong": [
+        "good",
+        "campaign"
+      ],
+      "word": "majority"
+    },
+    {
+      "item_id": "variety",
+      "question": "many different kinds of things",
+      "correct": "variety",
+      "wrong": [
+        "good",
+        "campaign"
+      ],
+      "word": "variety"
+    },
+    {
+      "item_id": "press",
+      "question": "news reporters and media",
+      "correct": "press",
+      "wrong": [
+        "good",
+        "campaign"
+      ],
+      "word": "press"
+    },
+    {
+      "item_id": "bill",
+      "question": "paper showing money to pay",
+      "correct": "bill",
+      "wrong": [
+        "good",
+        "campaign"
+      ],
+      "word": "bill"
+    },
+    {
+      "item_id": "competition",
+      "question": "a contest between people",
+      "correct": "competition",
+      "wrong": [
+        "good",
+        "campaign"
+      ],
+      "word": "competition"
+    },
+    {
+      "item_id": "general",
+      "question": "a high-ranking army officer",
+      "correct": "general",
+      "wrong": [
+        "good",
+        "campaign"
+      ],
+      "word": "general"
+    },
+    {
+      "item_id": "access",
+      "question": "the ability to enter a place",
+      "correct": "access",
+      "wrong": [
+        "good",
+        "campaign"
+      ],
+      "word": "access"
+    },
+    {
+      "item_id": "stone",
+      "question": "a small hard piece of rock",
+      "correct": "stone",
+      "wrong": [
+        "good",
+        "campaign"
+      ],
+      "word": "stone"
+    },
+    {
+      "item_id": "extent",
+      "question": "the size or amount of something",
+      "correct": "extent",
+      "wrong": [
+        "good",
+        "campaign"
+      ],
+      "word": "extent"
+    },
+    {
+      "item_id": "employment",
+      "question": "a paid job",
+      "correct": "employment",
+      "wrong": [
+        "good",
+        "campaign"
+      ],
+      "word": "employment"
+    },
+    {
+      "item_id": "present",
+      "question": "a gift you give",
+      "correct": "present",
+      "wrong": [
+        "good",
+        "campaign"
+      ],
+      "word": "present"
+    },
+    {
+      "item_id": "appeal",
+      "question": "a serious request",
+      "correct": "appeal",
+      "wrong": [
+        "good",
+        "campaign"
+      ],
+      "word": "appeal"
+    },
+    {
+      "item_id": "text",
+      "question": "a written message",
+      "correct": "text",
+      "wrong": [
+        "good",
+        "campaign"
+      ],
+      "word": "text"
+    },
+    {
+      "item_id": "parliament",
+      "question": "a group of lawmakers",
+      "correct": "parliament",
+      "wrong": [
+        "good",
+        "campaign"
+      ],
+      "word": "parliament"
+    },
+    {
+      "item_id": "cause",
+      "question": "a thing that makes something happen",
+      "correct": "cause",
+      "wrong": [
+        "good",
+        "campaign"
+      ],
+      "word": "cause"
+    },
+    {
+      "item_id": "terms",
+      "question": "rules or conditions of an agreement",
+      "correct": "terms",
+      "wrong": [
+        "good",
+        "campaign"
+      ],
+      "word": "terms"
+    },
+    {
+      "item_id": "bar",
+      "question": "a long straight piece of metal or wood",
+      "correct": "bar",
+      "wrong": [
+        "good",
+        "campaign"
+      ],
+      "word": "bar"
+    },
+    {
+      "item_id": "attack",
+      "question": "an act of trying to hurt or defeat",
+      "correct": "attack",
+      "wrong": [
+        "good",
+        "campaign"
+      ],
+      "word": "attack"
+    },
+    {
+      "item_id": "mouth",
+      "question": "the opening on the face for eating and speaking",
+      "correct": "mouth",
+      "wrong": [
+        "good",
+        "campaign"
+      ],
+      "word": "mouth"
+    },
+    {
+      "item_id": "fish",
+      "question": "animal that swims in water",
+      "correct": "fish",
+      "wrong": [
+        "good",
+        "campaign"
+      ],
+      "word": "fish"
+    },
+    {
+      "item_id": "visit",
+      "question": "act of going to see someone",
+      "correct": "visit",
+      "wrong": [
+        "good",
+        "campaign"
+      ],
+      "word": "visit"
+    },
+    {
+      "item_id": "trouble",
+      "question": "a problem or difficulty",
+      "correct": "trouble",
+      "wrong": [
+        "good",
+        "campaign"
+      ],
+      "word": "trouble"
+    },
+    {
+      "item_id": "payment",
+      "question": "money given for something",
+      "correct": "payment",
+      "wrong": [
+        "good",
+        "campaign"
+      ],
+      "word": "payment"
+    },
+    {
+      "item_id": "post",
+      "question": "a tall pole fixed in the ground",
+      "correct": "post",
+      "wrong": [
+        "good",
+        "campaign"
+      ],
+      "word": "post"
+    },
+    {
+      "item_id": "county",
+      "question": "a region inside a state",
+      "correct": "county",
+      "wrong": [
+        "good",
+        "campaign"
+      ],
+      "word": "county"
+    },
+    {
+      "item_id": "lady",
+      "question": "a polite word for a woman",
+      "correct": "lady",
+      "wrong": [
+        "good",
+        "campaign"
+      ],
+      "word": "lady"
+    },
+    {
+      "item_id": "holiday",
+      "question": "a special day to rest or celebrate",
+      "correct": "holiday",
+      "wrong": [
+        "good",
+        "campaign"
+      ],
+      "word": "holiday"
+    },
+    {
+      "item_id": "chair",
+      "question": "a seat with four legs and a back",
+      "correct": "chair",
+      "wrong": [
+        "good",
+        "campaign"
+      ],
+      "word": "chair"
+    },
+    {
+      "item_id": "importance",
+      "question": "how much something matters",
+      "correct": "importance",
+      "wrong": [
+        "good",
+        "campaign"
+      ],
+      "word": "importance"
+    },
+    {
+      "item_id": "facility",
+      "question": "a place for a purpose",
+      "correct": "facility",
+      "wrong": [
+        "good",
+        "campaign"
+      ],
+      "word": "facility"
+    },
+    {
+      "item_id": "article",
+      "question": "a short news story",
+      "correct": "article",
+      "wrong": [
+        "good",
+        "campaign"
+      ],
+      "word": "article"
+    },
+    {
+      "item_id": "object",
+      "question": "a thing you can touch",
+      "correct": "object",
+      "wrong": [
+        "good",
+        "campaign"
+      ],
+      "word": "object"
+    },
+    {
+      "item_id": "context",
+      "question": "the situation around words",
+      "correct": "context",
+      "wrong": [
+        "good",
+        "campaign"
+      ],
+      "word": "context"
+    },
+    {
+      "item_id": "survey",
+      "question": "questions to collect answers",
+      "correct": "survey",
+      "wrong": [
+        "good",
+        "campaign"
+      ],
+      "word": "survey"
+    },
+    {
+      "item_id": "turn",
+      "question": "a single change of direction",
+      "correct": "turn",
+      "wrong": [
+        "good",
+        "campaign"
+      ],
+      "word": "turn"
+    },
+    {
+      "item_id": "collection",
+      "question": "a group of similar things kept together",
+      "correct": "collection",
+      "wrong": [
+        "good",
+        "campaign"
+      ],
+      "word": "collection"
+    },
+    {
+      "item_id": "reference",
+      "question": "a book or note used for information",
+      "correct": "reference",
+      "wrong": [
+        "good",
+        "campaign"
+      ],
+      "word": "reference"
+    },
+    {
+      "item_id": "card",
+      "question": "a small flat piece of stiff paper",
+      "correct": "card",
+      "wrong": [
+        "good",
+        "campaign"
+      ],
+      "word": "card"
+    },
+    {
+      "item_id": "television",
+      "question": "a screen that shows moving pictures and sound",
+      "correct": "television",
+      "wrong": [
+        "good",
+        "campaign"
+      ],
+      "word": "television"
+    },
+    {
+      "item_id": "communication",
+      "question": "sharing ideas with words",
+      "correct": "communication",
+      "wrong": [
+        "good",
+        "campaign"
+      ],
+      "word": "communication"
+    },
+    {
+      "item_id": "agency",
+      "question": "an organization that helps people",
+      "correct": "agency",
+      "wrong": [
+        "good",
+        "campaign"
+      ],
+      "word": "agency"
+    },
+    {
+      "item_id": "sun",
+      "question": "the big star that gives us light",
+      "correct": "sun",
+      "wrong": [
+        "good",
+        "campaign"
+      ],
+      "word": "sun"
+    },
+    {
+      "item_id": "possibility",
+      "question": "a chance that something can happen",
+      "correct": "possibility",
+      "wrong": [
+        "good",
+        "campaign"
+      ],
+      "word": "possibility"
+    },
+    {
+      "item_id": "species",
+      "question": "a group of living things that are the same",
+      "correct": "species",
+      "wrong": [
+        "good",
+        "campaign"
+      ],
+      "word": "species"
+    },
+    {
+      "item_id": "official",
+      "question": "person with authority",
+      "correct": "official",
+      "wrong": [
+        "good",
+        "campaign"
+      ],
+      "word": "official"
+    },
+    {
+      "item_id": "chairman",
+      "question": "leader of a meeting",
+      "correct": "chairman",
+      "wrong": [
+        "good",
+        "campaign"
+      ],
+      "word": "chairman"
+    },
+    {
+      "item_id": "speaker",
+      "question": "person who gives a speech",
+      "correct": "speaker",
+      "wrong": [
+        "good",
+        "campaign"
+      ],
+      "word": "speaker"
+    },
+    {
+      "item_id": "second",
+      "question": "one of sixty parts of a minute",
+      "correct": "second",
+      "wrong": [
+        "good",
+        "campaign"
+      ],
+      "word": "second"
+    },
+    {
+      "item_id": "career",
+      "question": "a person's work life over time",
+      "correct": "career",
+      "wrong": [
+        "good",
+        "campaign"
+      ],
+      "word": "career"
+    },
+    {
+      "item_id": "weight",
+      "question": "how heavy something is",
+      "correct": "weight",
+      "wrong": [
+        "good",
+        "campaign"
+      ],
+      "word": "weight"
+    },
+    {
+      "item_id": "base",
+      "question": "the bottom part of something",
+      "correct": "base",
+      "wrong": [
+        "good",
+        "campaign"
+      ],
+      "word": "base"
+    },
+    {
+      "item_id": "document",
+      "question": "a piece of paper with writing",
+      "correct": "document",
+      "wrong": [
+        "good",
+        "campaign"
+      ],
+      "word": "document"
+    },
+    {
+      "item_id": "return",
+      "question": "the act of giving something back",
+      "correct": "return",
+      "wrong": [
+        "good",
+        "campaign"
+      ],
+      "word": "return"
+    },
+    {
+      "item_id": "solution",
+      "question": "an answer to a problem",
+      "correct": "solution",
+      "wrong": [
+        "good",
+        "campaign"
+      ],
+      "word": "solution"
+    },
+    {
+      "item_id": "talk",
+      "question": "spoken words between people",
+      "correct": "talk",
+      "wrong": [
+        "good",
+        "campaign"
+      ],
+      "word": "talk"
+    },
+    {
+      "item_id": "budget",
+      "question": "plan for spending money",
+      "correct": "budget",
+      "wrong": [
+        "good",
+        "campaign"
+      ],
+      "word": "budget"
+    },
+    {
+      "item_id": "river",
+      "question": "long flowing body of water",
+      "correct": "river",
+      "wrong": [
+        "good",
+        "campaign"
+      ],
+      "word": "river"
+    },
+    {
+      "item_id": "organization",
+      "question": "group of people working together",
+      "correct": "organization",
+      "wrong": [
+        "good",
+        "campaign"
+      ],
+      "word": "organization"
+    },
+    {
+      "item_id": "start",
+      "question": "the moment something begins",
+      "correct": "start",
+      "wrong": [
+        "good",
+        "campaign"
+      ],
+      "word": "start"
+    },
+    {
+      "item_id": "requirement",
+      "question": "something you must have",
+      "correct": "requirement",
+      "wrong": [
+        "good",
+        "campaign"
+      ],
+      "word": "requirement"
+    },
+    {
+      "item_id": "edge",
+      "question": "the sharp side of something",
+      "correct": "edge",
+      "wrong": [
+        "good",
+        "campaign"
+      ],
+      "word": "edge"
+    },
+    {
+      "item_id": "opposition",
+      "question": "people who are against you",
+      "correct": "opposition",
+      "wrong": [
+        "good",
+        "campaign"
+      ],
+      "word": "opposition"
+    },
+    {
+      "item_id": "opinion",
+      "question": "what you think about something",
+      "correct": "opinion",
+      "wrong": [
+        "good",
+        "campaign"
+      ],
+      "word": "opinion"
+    },
+    {
+      "item_id": "drug",
+      "question": "medicine you take to feel better",
+      "correct": "drug",
+      "wrong": [
+        "good",
+        "campaign"
+      ],
+      "word": "drug"
+    },
+    {
+      "item_id": "quarter",
+      "question": "a coin worth 25 cents",
+      "correct": "quarter",
+      "wrong": [
+        "good",
+        "campaign"
+      ],
+      "word": "quarter"
+    },
+    {
+      "item_id": "option",
+      "question": "a choice you can make",
+      "correct": "option",
+      "wrong": [
+        "good",
+        "campaign"
+      ],
+      "word": "option"
+    },
+    {
+      "item_id": "call",
+      "question": "a phone conversation",
+      "correct": "call",
+      "wrong": [
+        "good",
+        "campaign"
+      ],
+      "word": "call"
+    },
+    {
+      "item_id": "stock",
+      "question": "a share of company ownership",
+      "correct": "stock",
+      "wrong": [
+        "good",
+        "campaign"
+      ],
+      "word": "stock"
+    },
+    {
+      "item_id": "influence",
+      "question": "power to change what others do",
+      "correct": "influence",
+      "wrong": [
+        "good",
+        "campaign"
+      ],
+      "word": "influence"
+    },
+    {
+      "item_id": "occasion",
+      "question": "a special event or time",
+      "correct": "occasion",
+      "wrong": [
+        "good",
+        "campaign"
+      ],
+      "word": "occasion"
+    },
+    {
+      "item_id": "software",
+      "question": "programs that run on a computer",
+      "correct": "software",
+      "wrong": [
+        "good",
+        "campaign"
+      ],
+      "word": "software"
+    },
+    {
+      "item_id": "exchange",
+      "question": "the act of giving and receiving",
+      "correct": "exchange",
+      "wrong": [
+        "good",
+        "campaign"
+      ],
+      "word": "exchange"
+    },
+    {
+      "item_id": "lack",
+      "question": "the state of not having enough",
+      "correct": "lack",
+      "wrong": [
+        "good",
+        "campaign"
+      ],
+      "word": "lack"
+    },
+    {
+      "item_id": "concept",
+      "question": "an idea or basic understanding",
+      "correct": "concept",
+      "wrong": [
+        "good",
+        "campaign"
+      ],
+      "word": "concept"
+    },
+    {
+      "item_id": "star",
+      "question": "a bright light in the sky",
+      "correct": "star",
+      "wrong": [
+        "good",
+        "campaign"
+      ],
+      "word": "star"
+    },
+    {
+      "item_id": "radio",
+      "question": "a machine that plays sound",
+      "correct": "radio",
+      "wrong": [
+        "good",
+        "campaign"
+      ],
+      "word": "radio"
+    },
+    {
+      "item_id": "arrangement",
+      "question": "things placed in a nice order",
+      "correct": "arrangement",
+      "wrong": [
+        "good",
+        "campaign"
+      ],
+      "word": "arrangement"
+    },
+    {
+      "item_id": "bird",
+      "question": "an animal that can fly",
+      "correct": "bird",
+      "wrong": [
+        "good",
+        "campaign"
+      ],
+      "word": "bird"
+    },
+    {
+      "item_id": "band",
+      "question": "a group that plays music",
+      "correct": "band",
+      "wrong": [
+        "good",
+        "campaign"
+      ],
+      "word": "band"
+    },
+    {
+      "item_id": "sex",
+      "question": "male or female",
+      "correct": "sex",
+      "wrong": [
+        "good",
+        "campaign"
+      ],
+      "word": "sex"
+    },
+    {
+      "item_id": "finger",
+      "question": "part of the hand",
+      "correct": "finger",
+      "wrong": [
+        "good",
+        "campaign"
+      ],
+      "word": "finger"
+    },
+    {
+      "item_id": "past",
+      "question": "time before now",
+      "correct": "past",
+      "wrong": [
+        "good",
+        "campaign"
+      ],
+      "word": "past"
+    },
+    {
+      "item_id": "equipment",
+      "question": "things you need for a job",
+      "correct": "equipment",
+      "wrong": [
+        "good",
+        "campaign"
+      ],
+      "word": "equipment"
+    },
+    {
+      "item_id": "north",
+      "question": "the top direction on a map",
+      "correct": "north",
+      "wrong": [
+        "good",
+        "campaign"
+      ],
+      "word": "north"
+    },
+    {
+      "item_id": "move",
+      "question": "change of place",
+      "correct": "move",
+      "wrong": [
+        "good",
+        "campaign"
+      ],
+      "word": "move"
+    },
+    {
+      "item_id": "message",
+      "question": "words sent to someone",
+      "correct": "message",
+      "wrong": [
+        "good",
+        "campaign"
+      ],
+      "word": "message"
+    },
+    {
+      "item_id": "afternoon",
+      "question": "time after noon",
+      "correct": "afternoon",
+      "wrong": [
+        "good",
+        "campaign"
+      ],
+      "word": "afternoon"
+    },
+    {
+      "item_id": "fear",
+      "question": "feeling of being scared",
+      "correct": "fear",
+      "wrong": [
+        "good",
+        "campaign"
+      ],
+      "word": "fear"
+    },
+    {
+      "item_id": "race",
+      "question": "contest of speed",
+      "correct": "race",
+      "wrong": [
+        "good",
+        "campaign"
+      ],
+      "word": "race"
+    }
+  ]
+}

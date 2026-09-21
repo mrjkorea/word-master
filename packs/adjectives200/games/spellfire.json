@@ -1,0 +1,407 @@
+{
+  "pack_id": "adjectives200",
+  "title": "A2 Adjectives 101–200",
+  "seconds_per_letter": 5,
+  "items": [
+    {
+      "item_id": "basic",
+      "word": "basic"
+    },
+    {
+      "item_id": "original",
+      "word": "original"
+    },
+    {
+      "item_id": "successful",
+      "word": "successful"
+    },
+    {
+      "item_id": "aware",
+      "word": "aware"
+    },
+    {
+      "item_id": "popular",
+      "word": "popular"
+    },
+    {
+      "item_id": "professional",
+      "word": "professional"
+    },
+    {
+      "item_id": "heavy",
+      "word": "heavy"
+    },
+    {
+      "item_id": "top",
+      "word": "top"
+    },
+    {
+      "item_id": "dark",
+      "word": "dark"
+    },
+    {
+      "item_id": "ready",
+      "word": "ready"
+    },
+    {
+      "item_id": "useful",
+      "word": "useful"
+    },
+    {
+      "item_id": "effective",
+      "word": "effective"
+    },
+    {
+      "item_id": "future",
+      "word": "future"
+    },
+    {
+      "item_id": "traditional",
+      "word": "traditional"
+    },
+    {
+      "item_id": "complete",
+      "word": "complete"
+    },
+    {
+      "item_id": "direct",
+      "word": "direct"
+    },
+    {
+      "item_id": "interesting",
+      "word": "interesting"
+    },
+    {
+      "item_id": "considerable",
+      "word": "considerable"
+    },
+    {
+      "item_id": "physical",
+      "word": "physical"
+    },
+    {
+      "item_id": "responsible",
+      "word": "responsible"
+    },
+    {
+      "item_id": "medical",
+      "word": "medical"
+    },
+    {
+      "item_id": "hot",
+      "word": "hot"
+    },
+    {
+      "item_id": "existing",
+      "word": "existing"
+    },
+    {
+      "item_id": "cold",
+      "word": "cold"
+    },
+    {
+      "item_id": "blue",
+      "word": "blue"
+    },
+    {
+      "item_id": "green",
+      "word": "green"
+    },
+    {
+      "item_id": "independent",
+      "word": "independent"
+    },
+    {
+      "item_id": "extra",
+      "word": "extra"
+    },
+    {
+      "item_id": "past",
+      "word": "past"
+    },
+    {
+      "item_id": "beautiful",
+      "word": "beautiful"
+    },
+    {
+      "item_id": "civil",
+      "word": "civil"
+    },
+    {
+      "item_id": "essential",
+      "word": "essential"
+    },
+    {
+      "item_id": "light",
+      "word": "light"
+    },
+    {
+      "item_id": "obvious",
+      "word": "obvious"
+    },
+    {
+      "item_id": "deep",
+      "word": "deep"
+    },
+    {
+      "item_id": "working",
+      "word": "working"
+    },
+    {
+      "item_id": "positive",
+      "word": "positive"
+    },
+    {
+      "item_id": "very",
+      "word": "very"
+    },
+    {
+      "item_id": "male",
+      "word": "male"
+    },
+    {
+      "item_id": "complex",
+      "word": "complex"
+    },
+    {
+      "item_id": "environmental",
+      "word": "environmental"
+    },
+    {
+      "item_id": "relevant",
+      "word": "relevant"
+    },
+    {
+      "item_id": "huge",
+      "word": "huge"
+    },
+    {
+      "item_id": "primary",
+      "word": "primary"
+    },
+    {
+      "item_id": "annual",
+      "word": "annual"
+    },
+    {
+      "item_id": "nuclear",
+      "word": "nuclear"
+    },
+    {
+      "item_id": "practical",
+      "word": "practical"
+    },
+    {
+      "item_id": "commercial",
+      "word": "commercial"
+    },
+    {
+      "item_id": "rich",
+      "word": "rich"
+    },
+    {
+      "item_id": "key",
+      "word": "key"
+    },
+    {
+      "item_id": "separate",
+      "word": "separate"
+    },
+    {
+      "item_id": "usual",
+      "word": "usual"
+    },
+    {
+      "item_id": "safe",
+      "word": "safe"
+    },
+    {
+      "item_id": "interested",
+      "word": "interested"
+    },
+    {
+      "item_id": "regular",
+      "word": "regular"
+    },
+    {
+      "item_id": "western",
+      "word": "western"
+    },
+    {
+      "item_id": "additional",
+      "word": "additional"
+    },
+    {
+      "item_id": "active",
+      "word": "active"
+    },
+    {
+      "item_id": "regional",
+      "word": "regional"
+    },
+    {
+      "item_id": "powerful",
+      "word": "powerful"
+    },
+    {
+      "item_id": "alone",
+      "word": "alone"
+    },
+    {
+      "item_id": "front",
+      "word": "front"
+    },
+    {
+      "item_id": "impossible",
+      "word": "impossible"
+    },
+    {
+      "item_id": "fresh",
+      "word": "fresh"
+    },
+    {
+      "item_id": "fair",
+      "word": "fair"
+    },
+    {
+      "item_id": "senior",
+      "word": "senior"
+    },
+    {
+      "item_id": "sexual",
+      "word": "sexual"
+    },
+    {
+      "item_id": "ordinary",
+      "word": "ordinary"
+    },
+    {
+      "item_id": "actual",
+      "word": "actual"
+    },
+    {
+      "item_id": "domestic",
+      "word": "domestic"
+    },
+    {
+      "item_id": "warm",
+      "word": "warm"
+    },
+    {
+      "item_id": "internal",
+      "word": "internal"
+    },
+    {
+      "item_id": "excellent",
+      "word": "excellent"
+    },
+    {
+      "item_id": "strange",
+      "word": "strange"
+    },
+    {
+      "item_id": "technical",
+      "word": "technical"
+    },
+    {
+      "item_id": "living",
+      "word": "living"
+    },
+    {
+      "item_id": "soft",
+      "word": "soft"
+    },
+    {
+      "item_id": "standard",
+      "word": "standard"
+    },
+    {
+      "item_id": "cultural",
+      "word": "cultural"
+    },
+    {
+      "item_id": "proper",
+      "word": "proper"
+    },
+    {
+      "item_id": "famous",
+      "word": "famous"
+    },
+    {
+      "item_id": "religious",
+      "word": "religious"
+    },
+    {
+      "item_id": "joint",
+      "word": "joint"
+    },
+    {
+      "item_id": "potential",
+      "word": "potential"
+    },
+    {
+      "item_id": "broad",
+      "word": "broad"
+    },
+    {
+      "item_id": "formal",
+      "word": "formal"
+    },
+    {
+      "item_id": "chief",
+      "word": "chief"
+    },
+    {
+      "item_id": "lovely",
+      "word": "lovely"
+    },
+    {
+      "item_id": "official",
+      "word": "official"
+    },
+    {
+      "item_id": "unable",
+      "word": "unable"
+    },
+    {
+      "item_id": "equal",
+      "word": "equal"
+    },
+    {
+      "item_id": "rural",
+      "word": "rural"
+    },
+    {
+      "item_id": "substantial",
+      "word": "substantial"
+    },
+    {
+      "item_id": "reasonable",
+      "word": "reasonable"
+    },
+    {
+      "item_id": "cheap",
+      "word": "cheap"
+    },
+    {
+      "item_id": "quiet",
+      "word": "quiet"
+    },
+    {
+      "item_id": "bright",
+      "word": "bright"
+    },
+    {
+      "item_id": "immediate",
+      "word": "immediate"
+    },
+    {
+      "item_id": "growing",
+      "word": "growing"
+    },
+    {
+      "item_id": "suitable",
+      "word": "suitable"
+    }
+  ]
+}

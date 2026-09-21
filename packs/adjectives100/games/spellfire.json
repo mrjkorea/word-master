@@ -1,0 +1,407 @@
+{
+  "pack_id": "adjectives100",
+  "title": "A1 Adjectives 1–100",
+  "seconds_per_letter": 5,
+  "items": [
+    {
+      "item_id": "last",
+      "word": "last"
+    },
+    {
+      "item_id": "other",
+      "word": "other"
+    },
+    {
+      "item_id": "new",
+      "word": "new"
+    },
+    {
+      "item_id": "good",
+      "word": "good"
+    },
+    {
+      "item_id": "old",
+      "word": "old"
+    },
+    {
+      "item_id": "great",
+      "word": "great"
+    },
+    {
+      "item_id": "high",
+      "word": "high"
+    },
+    {
+      "item_id": "small",
+      "word": "small"
+    },
+    {
+      "item_id": "different",
+      "word": "different"
+    },
+    {
+      "item_id": "large",
+      "word": "large"
+    },
+    {
+      "item_id": "local",
+      "word": "local"
+    },
+    {
+      "item_id": "social",
+      "word": "social"
+    },
+    {
+      "item_id": "long",
+      "word": "long"
+    },
+    {
+      "item_id": "important",
+      "word": "important"
+    },
+    {
+      "item_id": "young",
+      "word": "young"
+    },
+    {
+      "item_id": "national",
+      "word": "national"
+    },
+    {
+      "item_id": "possible",
+      "word": "possible"
+    },
+    {
+      "item_id": "big",
+      "word": "big"
+    },
+    {
+      "item_id": "right",
+      "word": "right"
+    },
+    {
+      "item_id": "early",
+      "word": "early"
+    },
+    {
+      "item_id": "public",
+      "word": "public"
+    },
+    {
+      "item_id": "only",
+      "word": "only"
+    },
+    {
+      "item_id": "able",
+      "word": "able"
+    },
+    {
+      "item_id": "political",
+      "word": "political"
+    },
+    {
+      "item_id": "particular",
+      "word": "particular"
+    },
+    {
+      "item_id": "full",
+      "word": "full"
+    },
+    {
+      "item_id": "far",
+      "word": "far"
+    },
+    {
+      "item_id": "late",
+      "word": "late"
+    },
+    {
+      "item_id": "available",
+      "word": "available"
+    },
+    {
+      "item_id": "little",
+      "word": "little"
+    },
+    {
+      "item_id": "low",
+      "word": "low"
+    },
+    {
+      "item_id": "bad",
+      "word": "bad"
+    },
+    {
+      "item_id": "main",
+      "word": "main"
+    },
+    {
+      "item_id": "major",
+      "word": "major"
+    },
+    {
+      "item_id": "economic",
+      "word": "economic"
+    },
+    {
+      "item_id": "general",
+      "word": "general"
+    },
+    {
+      "item_id": "real",
+      "word": "real"
+    },
+    {
+      "item_id": "likely",
+      "word": "likely"
+    },
+    {
+      "item_id": "certain",
+      "word": "certain"
+    },
+    {
+      "item_id": "special",
+      "word": "special"
+    },
+    {
+      "item_id": "difficult",
+      "word": "difficult"
+    },
+    {
+      "item_id": "international",
+      "word": "international"
+    },
+    {
+      "item_id": "clear",
+      "word": "clear"
+    },
+    {
+      "item_id": "sure",
+      "word": "sure"
+    },
+    {
+      "item_id": "black",
+      "word": "black"
+    },
+    {
+      "item_id": "white",
+      "word": "white"
+    },
+    {
+      "item_id": "common",
+      "word": "common"
+    },
+    {
+      "item_id": "strong",
+      "word": "strong"
+    },
+    {
+      "item_id": "whole",
+      "word": "whole"
+    },
+    {
+      "item_id": "free",
+      "word": "free"
+    },
+    {
+      "item_id": "similar",
+      "word": "similar"
+    },
+    {
+      "item_id": "necessary",
+      "word": "necessary"
+    },
+    {
+      "item_id": "central",
+      "word": "central"
+    },
+    {
+      "item_id": "true",
+      "word": "true"
+    },
+    {
+      "item_id": "open",
+      "word": "open"
+    },
+    {
+      "item_id": "short",
+      "word": "short"
+    },
+    {
+      "item_id": "personal",
+      "word": "personal"
+    },
+    {
+      "item_id": "single",
+      "word": "single"
+    },
+    {
+      "item_id": "easy",
+      "word": "easy"
+    },
+    {
+      "item_id": "private",
+      "word": "private"
+    },
+    {
+      "item_id": "financial",
+      "word": "financial"
+    },
+    {
+      "item_id": "poor",
+      "word": "poor"
+    },
+    {
+      "item_id": "foreign",
+      "word": "foreign"
+    },
+    {
+      "item_id": "human",
+      "word": "human"
+    },
+    {
+      "item_id": "simple",
+      "word": "simple"
+    },
+    {
+      "item_id": "recent",
+      "word": "recent"
+    },
+    {
+      "item_id": "wide",
+      "word": "wide"
+    },
+    {
+      "item_id": "various",
+      "word": "various"
+    },
+    {
+      "item_id": "due",
+      "word": "due"
+    },
+    {
+      "item_id": "hard",
+      "word": "hard"
+    },
+    {
+      "item_id": "royal",
+      "word": "royal"
+    },
+    {
+      "item_id": "fine",
+      "word": "fine"
+    },
+    {
+      "item_id": "natural",
+      "word": "natural"
+    },
+    {
+      "item_id": "wrong",
+      "word": "wrong"
+    },
+    {
+      "item_id": "final",
+      "word": "final"
+    },
+    {
+      "item_id": "following",
+      "word": "following"
+    },
+    {
+      "item_id": "present",
+      "word": "present"
+    },
+    {
+      "item_id": "nice",
+      "word": "nice"
+    },
+    {
+      "item_id": "modern",
+      "word": "modern"
+    },
+    {
+      "item_id": "close",
+      "word": "close"
+    },
+    {
+      "item_id": "current",
+      "word": "current"
+    },
+    {
+      "item_id": "legal",
+      "word": "legal"
+    },
+    {
+      "item_id": "red",
+      "word": "red"
+    },
+    {
+      "item_id": "happy",
+      "word": "happy"
+    },
+    {
+      "item_id": "concerned",
+      "word": "concerned"
+    },
+    {
+      "item_id": "individual",
+      "word": "individual"
+    },
+    {
+      "item_id": "normal",
+      "word": "normal"
+    },
+    {
+      "item_id": "previous",
+      "word": "previous"
+    },
+    {
+      "item_id": "serious",
+      "word": "serious"
+    },
+    {
+      "item_id": "significant",
+      "word": "significant"
+    },
+    {
+      "item_id": "prime",
+      "word": "prime"
+    },
+    {
+      "item_id": "industrial",
+      "word": "industrial"
+    },
+    {
+      "item_id": "sorry",
+      "word": "sorry"
+    },
+    {
+      "item_id": "labour",
+      "word": "labour"
+    },
+    {
+      "item_id": "left",
+      "word": "left"
+    },
+    {
+      "item_id": "dead",
+      "word": "dead"
+    },
+    {
+      "item_id": "specific",
+      "word": "specific"
+    },
+    {
+      "item_id": "total",
+      "word": "total"
+    },
+    {
+      "item_id": "appropriate",
+      "word": "appropriate"
+    },
+    {
+      "item_id": "military",
+      "word": "military"
+    }
+  ]
+}

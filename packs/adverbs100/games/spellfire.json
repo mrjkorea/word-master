@@ -1,0 +1,407 @@
+{
+  "pack_id": "adverbs100",
+  "title": "A2 Adverbs 1–100",
+  "seconds_per_letter": 5,
+  "items": [
+    {
+      "item_id": "not",
+      "word": "not"
+    },
+    {
+      "item_id": "out",
+      "word": "out"
+    },
+    {
+      "item_id": "up",
+      "word": "up"
+    },
+    {
+      "item_id": "so",
+      "word": "so"
+    },
+    {
+      "item_id": "then",
+      "word": "then"
+    },
+    {
+      "item_id": "more",
+      "word": "more"
+    },
+    {
+      "item_id": "now",
+      "word": "now"
+    },
+    {
+      "item_id": "just",
+      "word": "just"
+    },
+    {
+      "item_id": "also",
+      "word": "also"
+    },
+    {
+      "item_id": "well",
+      "word": "well"
+    },
+    {
+      "item_id": "only",
+      "word": "only"
+    },
+    {
+      "item_id": "very",
+      "word": "very"
+    },
+    {
+      "item_id": "how",
+      "word": "how"
+    },
+    {
+      "item_id": "when",
+      "word": "when"
+    },
+    {
+      "item_id": "as",
+      "word": "as"
+    },
+    {
+      "item_id": "even",
+      "word": "even"
+    },
+    {
+      "item_id": "there",
+      "word": "there"
+    },
+    {
+      "item_id": "down",
+      "word": "down"
+    },
+    {
+      "item_id": "back",
+      "word": "back"
+    },
+    {
+      "item_id": "still",
+      "word": "still"
+    },
+    {
+      "item_id": "here",
+      "word": "here"
+    },
+    {
+      "item_id": "too",
+      "word": "too"
+    },
+    {
+      "item_id": "on",
+      "word": "on"
+    },
+    {
+      "item_id": "where",
+      "word": "where"
+    },
+    {
+      "item_id": "over",
+      "word": "over"
+    },
+    {
+      "item_id": "much",
+      "word": "much"
+    },
+    {
+      "item_id": "however",
+      "word": "however"
+    },
+    {
+      "item_id": "again",
+      "word": "again"
+    },
+    {
+      "item_id": "never",
+      "word": "never"
+    },
+    {
+      "item_id": "all",
+      "word": "all"
+    },
+    {
+      "item_id": "most",
+      "word": "most"
+    },
+    {
+      "item_id": "about",
+      "word": "about"
+    },
+    {
+      "item_id": "in",
+      "word": "in"
+    },
+    {
+      "item_id": "why",
+      "word": "why"
+    },
+    {
+      "item_id": "away",
+      "word": "away"
+    },
+    {
+      "item_id": "really",
+      "word": "really"
+    },
+    {
+      "item_id": "off",
+      "word": "off"
+    },
+    {
+      "item_id": "always",
+      "word": "always"
+    },
+    {
+      "item_id": "next",
+      "word": "next"
+    },
+    {
+      "item_id": "rather",
+      "word": "rather"
+    },
+    {
+      "item_id": "quite",
+      "word": "quite"
+    },
+    {
+      "item_id": "right",
+      "word": "right"
+    },
+    {
+      "item_id": "often",
+      "word": "often"
+    },
+    {
+      "item_id": "yet",
+      "word": "yet"
+    },
+    {
+      "item_id": "perhaps",
+      "word": "perhaps"
+    },
+    {
+      "item_id": "already",
+      "word": "already"
+    },
+    {
+      "item_id": "least",
+      "word": "least"
+    },
+    {
+      "item_id": "almost",
+      "word": "almost"
+    },
+    {
+      "item_id": "long",
+      "word": "long"
+    },
+    {
+      "item_id": "together",
+      "word": "together"
+    },
+    {
+      "item_id": "later",
+      "word": "later"
+    },
+    {
+      "item_id": "less",
+      "word": "less"
+    },
+    {
+      "item_id": "both",
+      "word": "both"
+    },
+    {
+      "item_id": "once",
+      "word": "once"
+    },
+    {
+      "item_id": "probably",
+      "word": "probably"
+    },
+    {
+      "item_id": "ever",
+      "word": "ever"
+    },
+    {
+      "item_id": "no",
+      "word": "no"
+    },
+    {
+      "item_id": "far",
+      "word": "far"
+    },
+    {
+      "item_id": "actually",
+      "word": "actually"
+    },
+    {
+      "item_id": "today",
+      "word": "today"
+    },
+    {
+      "item_id": "enough",
+      "word": "enough"
+    },
+    {
+      "item_id": "therefore",
+      "word": "therefore"
+    },
+    {
+      "item_id": "around",
+      "word": "around"
+    },
+    {
+      "item_id": "soon",
+      "word": "soon"
+    },
+    {
+      "item_id": "particularly",
+      "word": "particularly"
+    },
+    {
+      "item_id": "early",
+      "word": "early"
+    },
+    {
+      "item_id": "else",
+      "word": "else"
+    },
+    {
+      "item_id": "sometimes",
+      "word": "sometimes"
+    },
+    {
+      "item_id": "thus",
+      "word": "thus"
+    },
+    {
+      "item_id": "further",
+      "word": "further"
+    },
+    {
+      "item_id": "ago",
+      "word": "ago"
+    },
+    {
+      "item_id": "yesterday",
+      "word": "yesterday"
+    },
+    {
+      "item_id": "usually",
+      "word": "usually"
+    },
+    {
+      "item_id": "indeed",
+      "word": "indeed"
+    },
+    {
+      "item_id": "certainly",
+      "word": "certainly"
+    },
+    {
+      "item_id": "home",
+      "word": "home"
+    },
+    {
+      "item_id": "simply",
+      "word": "simply"
+    },
+    {
+      "item_id": "especially",
+      "word": "especially"
+    },
+    {
+      "item_id": "better",
+      "word": "better"
+    },
+    {
+      "item_id": "either",
+      "word": "either"
+    },
+    {
+      "item_id": "clearly",
+      "word": "clearly"
+    },
+    {
+      "item_id": "instead",
+      "word": "instead"
+    },
+    {
+      "item_id": "round",
+      "word": "round"
+    },
+    {
+      "item_id": "to",
+      "word": "to"
+    },
+    {
+      "item_id": "finally",
+      "word": "finally"
+    },
+    {
+      "item_id": "please",
+      "word": "please"
+    },
+    {
+      "item_id": "forward",
+      "word": "forward"
+    },
+    {
+      "item_id": "quickly",
+      "word": "quickly"
+    },
+    {
+      "item_id": "recently",
+      "word": "recently"
+    },
+    {
+      "item_id": "anyway",
+      "word": "anyway"
+    },
+    {
+      "item_id": "suddenly",
+      "word": "suddenly"
+    },
+    {
+      "item_id": "generally",
+      "word": "generally"
+    },
+    {
+      "item_id": "nearly",
+      "word": "nearly"
+    },
+    {
+      "item_id": "obviously",
+      "word": "obviously"
+    },
+    {
+      "item_id": "though",
+      "word": "though"
+    },
+    {
+      "item_id": "hard",
+      "word": "hard"
+    },
+    {
+      "item_id": "okay",
+      "word": "okay"
+    },
+    {
+      "item_id": "exactly",
+      "word": "exactly"
+    },
+    {
+      "item_id": "above",
+      "word": "above"
+    },
+    {
+      "item_id": "maybe",
+      "word": "maybe"
+    }
+  ]
+}

@@ -1,16 +1,16 @@
 :root {
-  --ink: #1d1d1f;
-  --muted: #6e6e73;
-  --bg: #f5f5f7;
+  --ink: #000000;
+  --muted: #2c2c2e;
+  --bg: #fffdf6;
   --card: #ffffff;
-  --navy: #0071e3;
-  --navy2: #0058b0;
-  --gold: #ffd60a;
-  --ok: #30d158;
+  --navy: #0033b8;
+  --navy2: #002080;
+  --gold: #f5c400;
+  --ok: #0b7a2b;
   --ok-ink: #003d16;
-  --bad: #ff3b30;
-  --line: rgba(0, 0, 0, 0.08);
-  --shadow: 0 8px 28px rgba(0, 0, 0, 0.08);
+  --bad: #b00000;
+  --line: #111111;
+  --shadow: 0 8px 24px rgba(0, 0, 0, 0.16);
 }
 * { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
 [hidden] { display: none !important; }
@@ -168,6 +168,10 @@ button:disabled { cursor: not-allowed; opacity: 0.38; }
   overflow: hidden;
   padding: 12px 16px calc(12px + env(safe-area-inset-bottom));
 }
+#screen-home.active {
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+}
 
 /* Boot — no overlapping chrome */
 .screen-boot {
@@ -229,13 +233,56 @@ button:disabled { cursor: not-allowed; opacity: 0.38; }
   width: 100%;
   min-height: 52px;
   border-radius: 14px;
-  border: 1px solid var(--line);
+  border: 2px solid var(--line);
   font-size: 22px;
   padding: 8px 14px;
   margin: 16px 0;
   background: #fff;
+  color: var(--ink);
 }
-.hello { font-weight: 700; font-size: 22px; margin: 4px 0 12px; letter-spacing: -0.03em; }
+.hello { font-weight: 800; font-size: 22px; margin: 4px 0 8px; letter-spacing: -0.03em; color: var(--ink); }
+.signout-link {
+  align-self: flex-start;
+  min-height: 36px;
+  margin: 0 0 12px;
+  padding: 0 4px;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--navy);
+  text-decoration: underline;
+}
+.signin-card {
+  background: #fff;
+  border: 2px solid var(--line);
+  border-radius: 18px;
+  padding: 14px;
+  margin-bottom: 12px;
+}
+.signin-kicker {
+  margin: 0 0 6px;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink);
+}
+.signin-field {
+  display: grid;
+  gap: 4px;
+  margin: 8px 0 0;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--ink);
+}
+.signin-card .name-input { margin: 0; font-size: 18px; }
+.pin-input { letter-spacing: 0.35em; font-variant-numeric: tabular-nums; }
+.signin-err {
+  margin: 8px 0 0;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--bad);
+}
+.signin-actions { display: grid; gap: 8px; margin-top: 12px; }
 .stats-card {
   background: #fff;
   border: 1px solid var(--line);
@@ -258,6 +305,7 @@ button:disabled { cursor: not-allowed; opacity: 0.38; }
   margin: 0 0 10px;
   color: var(--muted);
   font-size: 14px;
+  font-weight: 600;
   line-height: 1.35;
 }
 .hint { color: var(--ink); font-weight: 600; }
@@ -279,8 +327,9 @@ button:disabled { cursor: not-allowed; opacity: 0.38; }
   padding: 14px 16px;
   border-radius: 18px;
   background: var(--card);
-  border: 1px solid var(--line);
-  box-shadow: 0 1px 0 rgba(0,0,0,0.04);
+  border: 2px solid var(--line);
+  color: var(--ink);
+  box-shadow: 0 1px 0 rgba(0,0,0,0.08);
 }
 .chunk.primary, .btn {
   display: grid;
@@ -302,22 +351,24 @@ button:disabled { cursor: not-allowed; opacity: 0.38; }
   padding: 16px;
 }
 .chunk.primary em, .chunk.primary .chip-tag { color: rgba(255,255,255,.85); }
-.chunk.continue { background: #e8f1ff; border-color: #c9def8; }
+.chunk.continue { background: #fff; border-color: var(--navy); }
+.chunk.continue strong, .chunk.continue em { color: var(--ink); }
+.chunk.continue .chip-tag { background: var(--navy); color: #fff; }
 .chunk.test:disabled, .chunk.disabled { background: #eee; }
 .chunk.test.picked { outline: 2px solid var(--navy); outline-offset: 2px; }
 .chunk strong { font-size: 17px; font-weight: 700; }
-.chunk em { font-style: normal; color: var(--muted); font-size: 13px; }
+.chunk em { font-style: normal; color: var(--ink); font-size: 13px; font-weight: 600; }
 .chip-tag {
   display: inline-block;
   width: fit-content;
-  background: #f5f5f7;
-  color: var(--muted);
+  background: #111;
+  color: #fff;
   font-size: 11px;
   letter-spacing: 0.04em;
   text-transform: uppercase;
   padding: 3px 8px;
   border-radius: 980px;
-  font-weight: 600;
+  font-weight: 800;
 }
 .chunk.primary .chip-tag { background: rgba(255,255,255,.18); color: #fff; }
 

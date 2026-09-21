@@ -1,0 +1,1008 @@
+{
+  "pack_id": "adjectives200",
+  "title": "A2 Adjectives 101–200",
+  "module_id": "snow_jump",
+  "seconds": 15,
+  "items": [
+    {
+      "item_id": "basic",
+      "question": "simple and easy",
+      "correct": "basic",
+      "wrong": [
+        "original",
+        "successful"
+      ],
+      "word": "basic"
+    },
+    {
+      "item_id": "original",
+      "question": "first or starting",
+      "correct": "original",
+      "wrong": [
+        "basic",
+        "successful"
+      ],
+      "word": "original"
+    },
+    {
+      "item_id": "successful",
+      "question": "doing well and winning",
+      "correct": "successful",
+      "wrong": [
+        "basic",
+        "original"
+      ],
+      "word": "successful"
+    },
+    {
+      "item_id": "aware",
+      "question": "knowing or noticing something",
+      "correct": "aware",
+      "wrong": [
+        "basic",
+        "original"
+      ],
+      "word": "aware"
+    },
+    {
+      "item_id": "popular",
+      "question": "liked by many people",
+      "correct": "popular",
+      "wrong": [
+        "basic",
+        "original"
+      ],
+      "word": "popular"
+    },
+    {
+      "item_id": "professional",
+      "question": "skilled at a job",
+      "correct": "professional",
+      "wrong": [
+        "basic",
+        "original"
+      ],
+      "word": "professional"
+    },
+    {
+      "item_id": "heavy",
+      "question": "weighing a lot",
+      "correct": "heavy",
+      "wrong": [
+        "basic",
+        "original"
+      ],
+      "word": "heavy"
+    },
+    {
+      "item_id": "top",
+      "question": "the very best",
+      "correct": "top",
+      "wrong": [
+        "basic",
+        "original"
+      ],
+      "word": "top"
+    },
+    {
+      "item_id": "dark",
+      "question": "having little light",
+      "correct": "dark",
+      "wrong": [
+        "basic",
+        "original"
+      ],
+      "word": "dark"
+    },
+    {
+      "item_id": "ready",
+      "question": "prepared to start",
+      "correct": "ready",
+      "wrong": [
+        "basic",
+        "original"
+      ],
+      "word": "ready"
+    },
+    {
+      "item_id": "useful",
+      "question": "helps you do something",
+      "correct": "useful",
+      "wrong": [
+        "basic",
+        "original"
+      ],
+      "word": "useful"
+    },
+    {
+      "item_id": "effective",
+      "question": "works very well",
+      "correct": "effective",
+      "wrong": [
+        "basic",
+        "original"
+      ],
+      "word": "effective"
+    },
+    {
+      "item_id": "future",
+      "question": "happening after now",
+      "correct": "future",
+      "wrong": [
+        "basic",
+        "original"
+      ],
+      "word": "future"
+    },
+    {
+      "item_id": "traditional",
+      "question": "done for a long time",
+      "correct": "traditional",
+      "wrong": [
+        "basic",
+        "original"
+      ],
+      "word": "traditional"
+    },
+    {
+      "item_id": "complete",
+      "question": "having every part",
+      "correct": "complete",
+      "wrong": [
+        "basic",
+        "original"
+      ],
+      "word": "complete"
+    },
+    {
+      "item_id": "direct",
+      "question": "straight and clear way",
+      "correct": "direct",
+      "wrong": [
+        "basic",
+        "original"
+      ],
+      "word": "direct"
+    },
+    {
+      "item_id": "interesting",
+      "question": "makes you want to know more",
+      "correct": "interesting",
+      "wrong": [
+        "basic",
+        "original"
+      ],
+      "word": "interesting"
+    },
+    {
+      "item_id": "considerable",
+      "question": "quite large or important",
+      "correct": "considerable",
+      "wrong": [
+        "basic",
+        "original"
+      ],
+      "word": "considerable"
+    },
+    {
+      "item_id": "physical",
+      "question": "of the body, not the mind",
+      "correct": "physical",
+      "wrong": [
+        "basic",
+        "original"
+      ],
+      "word": "physical"
+    },
+    {
+      "item_id": "responsible",
+      "question": "taking care of duties",
+      "correct": "responsible",
+      "wrong": [
+        "basic",
+        "original"
+      ],
+      "word": "responsible"
+    },
+    {
+      "item_id": "medical",
+      "question": "about doctors and health",
+      "correct": "medical",
+      "wrong": [
+        "basic",
+        "original"
+      ],
+      "word": "medical"
+    },
+    {
+      "item_id": "hot",
+      "question": "very warm to touch",
+      "correct": "hot",
+      "wrong": [
+        "basic",
+        "original"
+      ],
+      "word": "hot"
+    },
+    {
+      "item_id": "existing",
+      "question": "already here now",
+      "correct": "existing",
+      "wrong": [
+        "basic",
+        "original"
+      ],
+      "word": "existing"
+    },
+    {
+      "item_id": "cold",
+      "question": "very cool to touch",
+      "correct": "cold",
+      "wrong": [
+        "basic",
+        "original"
+      ],
+      "word": "cold"
+    },
+    {
+      "item_id": "blue",
+      "question": "the color of the sky",
+      "correct": "blue",
+      "wrong": [
+        "basic",
+        "original"
+      ],
+      "word": "blue"
+    },
+    {
+      "item_id": "green",
+      "question": "color of grass",
+      "correct": "green",
+      "wrong": [
+        "basic",
+        "original"
+      ],
+      "word": "green"
+    },
+    {
+      "item_id": "independent",
+      "question": "doing things alone",
+      "correct": "independent",
+      "wrong": [
+        "basic",
+        "original"
+      ],
+      "word": "independent"
+    },
+    {
+      "item_id": "extra",
+      "question": "more than needed",
+      "correct": "extra",
+      "wrong": [
+        "basic",
+        "original"
+      ],
+      "word": "extra"
+    },
+    {
+      "item_id": "past",
+      "question": "time before now",
+      "correct": "past",
+      "wrong": [
+        "basic",
+        "original"
+      ],
+      "word": "past"
+    },
+    {
+      "item_id": "beautiful",
+      "question": "very nice to look at",
+      "correct": "beautiful",
+      "wrong": [
+        "basic",
+        "original"
+      ],
+      "word": "beautiful"
+    },
+    {
+      "item_id": "civil",
+      "question": "polite and respectful",
+      "correct": "civil",
+      "wrong": [
+        "basic",
+        "original"
+      ],
+      "word": "civil"
+    },
+    {
+      "item_id": "essential",
+      "question": "very important and needed",
+      "correct": "essential",
+      "wrong": [
+        "basic",
+        "original"
+      ],
+      "word": "essential"
+    },
+    {
+      "item_id": "light",
+      "question": "not heavy to carry",
+      "correct": "light",
+      "wrong": [
+        "basic",
+        "original"
+      ],
+      "word": "light"
+    },
+    {
+      "item_id": "obvious",
+      "question": "easy to see or understand",
+      "correct": "obvious",
+      "wrong": [
+        "basic",
+        "original"
+      ],
+      "word": "obvious"
+    },
+    {
+      "item_id": "deep",
+      "question": "going far down from the top",
+      "correct": "deep",
+      "wrong": [
+        "basic",
+        "original"
+      ],
+      "word": "deep"
+    },
+    {
+      "item_id": "working",
+      "question": "doing a job",
+      "correct": "working",
+      "wrong": [
+        "basic",
+        "original"
+      ],
+      "word": "working"
+    },
+    {
+      "item_id": "positive",
+      "question": "good and hopeful",
+      "correct": "positive",
+      "wrong": [
+        "basic",
+        "original"
+      ],
+      "word": "positive"
+    },
+    {
+      "item_id": "very",
+      "question": "a lot or much",
+      "correct": "very",
+      "wrong": [
+        "basic",
+        "original"
+      ],
+      "word": "very"
+    },
+    {
+      "item_id": "male",
+      "question": "of the boy or man kind",
+      "correct": "male",
+      "wrong": [
+        "basic",
+        "original"
+      ],
+      "word": "male"
+    },
+    {
+      "item_id": "complex",
+      "question": "having many parts",
+      "correct": "complex",
+      "wrong": [
+        "basic",
+        "original"
+      ],
+      "word": "complex"
+    },
+    {
+      "item_id": "environmental",
+      "question": "about nature and surroundings",
+      "correct": "environmental",
+      "wrong": [
+        "basic",
+        "original"
+      ],
+      "word": "environmental"
+    },
+    {
+      "item_id": "relevant",
+      "question": "connected to the topic",
+      "correct": "relevant",
+      "wrong": [
+        "basic",
+        "original"
+      ],
+      "word": "relevant"
+    },
+    {
+      "item_id": "huge",
+      "question": "very big in size",
+      "correct": "huge",
+      "wrong": [
+        "basic",
+        "original"
+      ],
+      "word": "huge"
+    },
+    {
+      "item_id": "primary",
+      "question": "most important or main",
+      "correct": "primary",
+      "wrong": [
+        "basic",
+        "original"
+      ],
+      "word": "primary"
+    },
+    {
+      "item_id": "annual",
+      "question": "happening once every year",
+      "correct": "annual",
+      "wrong": [
+        "basic",
+        "original"
+      ],
+      "word": "annual"
+    },
+    {
+      "item_id": "nuclear",
+      "question": "about atomic energy",
+      "correct": "nuclear",
+      "wrong": [
+        "basic",
+        "original"
+      ],
+      "word": "nuclear"
+    },
+    {
+      "item_id": "practical",
+      "question": "useful in real life",
+      "correct": "practical",
+      "wrong": [
+        "basic",
+        "original"
+      ],
+      "word": "practical"
+    },
+    {
+      "item_id": "commercial",
+      "question": "about buying and selling",
+      "correct": "commercial",
+      "wrong": [
+        "basic",
+        "original"
+      ],
+      "word": "commercial"
+    },
+    {
+      "item_id": "rich",
+      "question": "having lots of money",
+      "correct": "rich",
+      "wrong": [
+        "basic",
+        "original"
+      ],
+      "word": "rich"
+    },
+    {
+      "item_id": "key",
+      "question": "most important or main",
+      "correct": "key",
+      "wrong": [
+        "basic",
+        "original"
+      ],
+      "word": "key"
+    },
+    {
+      "item_id": "separate",
+      "question": "not together",
+      "correct": "separate",
+      "wrong": [
+        "basic",
+        "original"
+      ],
+      "word": "separate"
+    },
+    {
+      "item_id": "usual",
+      "question": "happening most of the time",
+      "correct": "usual",
+      "wrong": [
+        "basic",
+        "original"
+      ],
+      "word": "usual"
+    },
+    {
+      "item_id": "safe",
+      "question": "not in danger",
+      "correct": "safe",
+      "wrong": [
+        "basic",
+        "original"
+      ],
+      "word": "safe"
+    },
+    {
+      "item_id": "interested",
+      "question": "wanting to know more",
+      "correct": "interested",
+      "wrong": [
+        "basic",
+        "original"
+      ],
+      "word": "interested"
+    },
+    {
+      "item_id": "regular",
+      "question": "happening at the same time",
+      "correct": "regular",
+      "wrong": [
+        "basic",
+        "original"
+      ],
+      "word": "regular"
+    },
+    {
+      "item_id": "western",
+      "question": "from the west part",
+      "correct": "western",
+      "wrong": [
+        "basic",
+        "original"
+      ],
+      "word": "western"
+    },
+    {
+      "item_id": "additional",
+      "question": "extra or more",
+      "correct": "additional",
+      "wrong": [
+        "basic",
+        "original"
+      ],
+      "word": "additional"
+    },
+    {
+      "item_id": "active",
+      "question": "doing lots of things",
+      "correct": "active",
+      "wrong": [
+        "basic",
+        "original"
+      ],
+      "word": "active"
+    },
+    {
+      "item_id": "regional",
+      "question": "of a certain area",
+      "correct": "regional",
+      "wrong": [
+        "basic",
+        "original"
+      ],
+      "word": "regional"
+    },
+    {
+      "item_id": "powerful",
+      "question": "having great strength",
+      "correct": "powerful",
+      "wrong": [
+        "basic",
+        "original"
+      ],
+      "word": "powerful"
+    },
+    {
+      "item_id": "alone",
+      "question": "by oneself with no one else",
+      "correct": "alone",
+      "wrong": [
+        "basic",
+        "original"
+      ],
+      "word": "alone"
+    },
+    {
+      "item_id": "front",
+      "question": "the forward-facing side",
+      "correct": "front",
+      "wrong": [
+        "basic",
+        "original"
+      ],
+      "word": "front"
+    },
+    {
+      "item_id": "impossible",
+      "question": "cannot be done at all",
+      "correct": "impossible",
+      "wrong": [
+        "basic",
+        "original"
+      ],
+      "word": "impossible"
+    },
+    {
+      "item_id": "fresh",
+      "question": "newly picked or made",
+      "correct": "fresh",
+      "wrong": [
+        "basic",
+        "original"
+      ],
+      "word": "fresh"
+    },
+    {
+      "item_id": "fair",
+      "question": "treating everyone the same",
+      "correct": "fair",
+      "wrong": [
+        "basic",
+        "original"
+      ],
+      "word": "fair"
+    },
+    {
+      "item_id": "senior",
+      "question": "older person",
+      "correct": "senior",
+      "wrong": [
+        "basic",
+        "original"
+      ],
+      "word": "senior"
+    },
+    {
+      "item_id": "sexual",
+      "question": "about male and female",
+      "correct": "sexual",
+      "wrong": [
+        "basic",
+        "original"
+      ],
+      "word": "sexual"
+    },
+    {
+      "item_id": "ordinary",
+      "question": "normal and usual",
+      "correct": "ordinary",
+      "wrong": [
+        "basic",
+        "original"
+      ],
+      "word": "ordinary"
+    },
+    {
+      "item_id": "actual",
+      "question": "real and true",
+      "correct": "actual",
+      "wrong": [
+        "basic",
+        "original"
+      ],
+      "word": "actual"
+    },
+    {
+      "item_id": "domestic",
+      "question": "inside the home",
+      "correct": "domestic",
+      "wrong": [
+        "basic",
+        "original"
+      ],
+      "word": "domestic"
+    },
+    {
+      "item_id": "warm",
+      "question": "a little hot",
+      "correct": "warm",
+      "wrong": [
+        "basic",
+        "original"
+      ],
+      "word": "warm"
+    },
+    {
+      "item_id": "internal",
+      "question": "inside something",
+      "correct": "internal",
+      "wrong": [
+        "basic",
+        "original"
+      ],
+      "word": "internal"
+    },
+    {
+      "item_id": "excellent",
+      "question": "very very good",
+      "correct": "excellent",
+      "wrong": [
+        "basic",
+        "original"
+      ],
+      "word": "excellent"
+    },
+    {
+      "item_id": "strange",
+      "question": "not normal or usual",
+      "correct": "strange",
+      "wrong": [
+        "basic",
+        "original"
+      ],
+      "word": "strange"
+    },
+    {
+      "item_id": "technical",
+      "question": "about machines or science",
+      "correct": "technical",
+      "wrong": [
+        "basic",
+        "original"
+      ],
+      "word": "technical"
+    },
+    {
+      "item_id": "living",
+      "question": "alive and breathing",
+      "correct": "living",
+      "wrong": [
+        "basic",
+        "original"
+      ],
+      "word": "living"
+    },
+    {
+      "item_id": "soft",
+      "question": "easy to press or bend",
+      "correct": "soft",
+      "wrong": [
+        "basic",
+        "original"
+      ],
+      "word": "soft"
+    },
+    {
+      "item_id": "standard",
+      "question": "usual or normal kind",
+      "correct": "standard",
+      "wrong": [
+        "basic",
+        "original"
+      ],
+      "word": "standard"
+    },
+    {
+      "item_id": "cultural",
+      "question": "about a group's customs",
+      "correct": "cultural",
+      "wrong": [
+        "basic",
+        "original"
+      ],
+      "word": "cultural"
+    },
+    {
+      "item_id": "proper",
+      "question": "correct or right way",
+      "correct": "proper",
+      "wrong": [
+        "basic",
+        "original"
+      ],
+      "word": "proper"
+    },
+    {
+      "item_id": "famous",
+      "question": "well known by many people",
+      "correct": "famous",
+      "wrong": [
+        "basic",
+        "original"
+      ],
+      "word": "famous"
+    },
+    {
+      "item_id": "religious",
+      "question": "related to belief in God",
+      "correct": "religious",
+      "wrong": [
+        "basic",
+        "original"
+      ],
+      "word": "religious"
+    },
+    {
+      "item_id": "joint",
+      "question": "shared by two or more",
+      "correct": "joint",
+      "wrong": [
+        "basic",
+        "original"
+      ],
+      "word": "joint"
+    },
+    {
+      "item_id": "potential",
+      "question": "possible to become something",
+      "correct": "potential",
+      "wrong": [
+        "basic",
+        "original"
+      ],
+      "word": "potential"
+    },
+    {
+      "item_id": "broad",
+      "question": "wide from side to side",
+      "correct": "broad",
+      "wrong": [
+        "basic",
+        "original"
+      ],
+      "word": "broad"
+    },
+    {
+      "item_id": "formal",
+      "question": "serious and proper",
+      "correct": "formal",
+      "wrong": [
+        "basic",
+        "original"
+      ],
+      "word": "formal"
+    },
+    {
+      "item_id": "chief",
+      "question": "most important",
+      "correct": "chief",
+      "wrong": [
+        "basic",
+        "original"
+      ],
+      "word": "chief"
+    },
+    {
+      "item_id": "lovely",
+      "question": "very nice and pretty",
+      "correct": "lovely",
+      "wrong": [
+        "basic",
+        "original"
+      ],
+      "word": "lovely"
+    },
+    {
+      "item_id": "official",
+      "question": "approved by authority",
+      "correct": "official",
+      "wrong": [
+        "basic",
+        "original"
+      ],
+      "word": "official"
+    },
+    {
+      "item_id": "unable",
+      "question": "not able to do",
+      "correct": "unable",
+      "wrong": [
+        "basic",
+        "original"
+      ],
+      "word": "unable"
+    },
+    {
+      "item_id": "equal",
+      "question": "same in size or value",
+      "correct": "equal",
+      "wrong": [
+        "basic",
+        "original"
+      ],
+      "word": "equal"
+    },
+    {
+      "item_id": "rural",
+      "question": "of the countryside, not city",
+      "correct": "rural",
+      "wrong": [
+        "basic",
+        "original"
+      ],
+      "word": "rural"
+    },
+    {
+      "item_id": "substantial",
+      "question": "large in amount or size",
+      "correct": "substantial",
+      "wrong": [
+        "basic",
+        "original"
+      ],
+      "word": "substantial"
+    },
+    {
+      "item_id": "reasonable",
+      "question": "fair and makes sense",
+      "correct": "reasonable",
+      "wrong": [
+        "basic",
+        "original"
+      ],
+      "word": "reasonable"
+    },
+    {
+      "item_id": "cheap",
+      "question": "low in price or cost",
+      "correct": "cheap",
+      "wrong": [
+        "basic",
+        "original"
+      ],
+      "word": "cheap"
+    },
+    {
+      "item_id": "quiet",
+      "question": "not loud or noisy",
+      "correct": "quiet",
+      "wrong": [
+        "basic",
+        "original"
+      ],
+      "word": "quiet"
+    },
+    {
+      "item_id": "bright",
+      "question": "full of light",
+      "correct": "bright",
+      "wrong": [
+        "basic",
+        "original"
+      ],
+      "word": "bright"
+    },
+    {
+      "item_id": "immediate",
+      "question": "happening right now",
+      "correct": "immediate",
+      "wrong": [
+        "basic",
+        "original"
+      ],
+      "word": "immediate"
+    },
+    {
+      "item_id": "growing",
+      "question": "becoming bigger",
+      "correct": "growing",
+      "wrong": [
+        "basic",
+        "original"
+      ],
+      "word": "growing"
+    },
+    {
+      "item_id": "suitable",
+      "question": "right for the situation",
+      "correct": "suitable",
+      "wrong": [
+        "basic",
+        "original"
+      ],
+      "word": "suitable"
+    }
+  ]
+}

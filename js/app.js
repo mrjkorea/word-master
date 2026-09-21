@@ -5,6 +5,11 @@
   const LS_STATE = "mrj.word_factory.state";
   const LS_EVENTS = "mrj.word_factory.events";
   const DEMO_PACK_ID = "nouns100";
+  const PACK_IDS = [
+    "nouns100", "verbs100", "adjectives100", "nouns200", "little100",
+    "verbs200", "adjectives200", "adverbs100", "nouns300", "verbs300",
+    "adjectives300", "nouns400", "adverbs200", "nouns500", "verbs400",
+  ];
 
   const DEMO_FALLBACK = {
     id: DEMO_PACK_ID,
@@ -90,6 +95,8 @@
         const parsed = JSON.parse(raw);
         if (parsed && parsed.studentId) {
           if (!parsed.displayName) parsed.displayName = "";
+          if (!parsed.accountName) parsed.accountName = "";
+          if (!parsed.accountPin) parsed.accountPin = "";
           if (!parsed.testKind) parsed.testKind = "easy";
           if (!parsed.studySize) parsed.studySize = 10;
           if (!parsed.voice || parsed.voice === "man") parsed.voice = "us_m";
@@ -104,6 +111,8 @@
       sessionId: uid("ses"),
       voice: "us_m",
       displayName: "",
+      accountName: "",
+      accountPin: "",
       testKind: "easy",
       studySize: 10,
       locale: "en",
@@ -112,10 +121,51 @@
     };
   }
 
+  let progressTimer = null;
+  let signinSkipped = false;
+
+  function isSignedIn() {
+    return !!(state.accountName && String(state.accountName).trim());
+  }
+
+  function currentWordId() {
+    if (learn && learn.cur && learn.cur.id) return learn.cur.id;
+    if (quiz && quiz.items && quiz.items[quiz.index] && quiz.items[quiz.index].id) {
+      return quiz.items[quiz.index].id;
+    }
+    const set = currentSet();
+    if (set && set.words && set.words[0]) return set.words[0].id;
+    return "";
+  }
+
+  function progressPayload() {
+    const set = currentSet();
+    return {
+      action: "save",
+      name: state.accountName || "",
+      pin: state.accountPin || "",
+      pack_id: set ? (set.packId || set.id || "") : "",
+      pack_title: set ? (set.title || "") : "",
+      screen: currentScreen || "",
+      word_id: currentWordId(),
+      study_size: state.studySize || 10,
+      locale: state.locale || "en",
+      student_id: state.studentId || "",
+      progress_json: JSON.stringify(state),
+    };
+  }
+
   function persist() {
     try {
       localStorage.setItem(LS_STATE, JSON.stringify(state));
     } catch (e) {}
+    if (progressTimer) clearTimeout(progressTimer);
+    progressTimer = setTimeout(function () {
+      progressTimer = null;
+      if (window.MRJ_WM_progress && typeof window.MRJ_WM_progress.save === "function") {
+        try { window.MRJ_WM_progress.save(progressPayload()); } catch (e) {}
+      }
+    }, 1000);
   }
 
   function loadEvents() {
@@ -682,7 +732,18 @@
     const btn = $("#btn-continue");
     const set = currentSet();
     const hello = $("#hello-line");
-    if (hello) hello.textContent = state.displayName ? t("hello", { name: state.displayName }) : "";
+    const signed = isSignedIn();
+    if (hello) hello.textContent = signed ? t("hello", { name: state.accountName }) : "";
+    const signCard = $("#signin-card");
+    const signOut = $("#btn-signout");
+    if (signCard) signCard.hidden = signed || signinSkipped;
+    if (signOut) signOut.hidden = !signed;
+    if (signed) {
+      const nameEl = $("#account-name");
+      const pinEl = $("#account-pin");
+      if (nameEl) nameEl.value = state.accountName;
+      if (pinEl) pinEl.value = state.accountPin || "";
+    }
     let forever = 0;
     let trying = 0;
     Object.keys(state.sets).forEach(function (k) {
@@ -701,8 +762,8 @@
       due.hidden = !dueSet;
       if (dueSet) due.textContent = t("due_line", { title: dueSet.title });
     }
-    if (!set) {
-      btn.hidden = true;
+    if (!signed || !set) {
+      if (btn) btn.hidden = true;
       return;
     }
     btn.hidden = false;
@@ -1960,10 +2021,6 @@
     $("#btn-tap-start").addEventListener("click", function () {
       unlockSpeech();
       setVoice(state.voice);
-      if (!state.displayName) {
-        showScreen("name");
-        return;
-      }
       renderHome();
       showScreen("home");
     });
@@ -1975,6 +2032,42 @@
       persist();
       renderHome();
       showScreen("home");
+    });
+    const pinEl = $("#account-pin");
+    if (pinEl) pinEl.addEventListener("input", function () {
+      pinEl.value = String(pinEl.value || "").replace(/\D/g, "").slice(0, 4);
+    });
+    const saveIn = $("#btn-signin-save");
+    if (saveIn) saveIn.addEventListener("click", function () {
+      const n = (($("#account-name") && $("#account-name").value) || "").trim().slice(0, 24);
+      const pin = (($("#account-pin") && $("#account-pin").value) || "").replace(/\D/g, "");
+      const err = $("#signin-err");
+      if (!n || pin.length !== 4) {
+        if (err) err.hidden = false;
+        return;
+      }
+      if (err) err.hidden = true;
+      state.accountName = n;
+      state.accountPin = pin;
+      state.displayName = n;
+      signinSkipped = false;
+      persist();
+      renderHome();
+    });
+    const skipIn = $("#btn-signin-skip");
+    if (skipIn) skipIn.addEventListener("click", function () {
+      signinSkipped = true;
+      const err = $("#signin-err");
+      if (err) err.hidden = true;
+      renderHome();
+    });
+    const signOut = $("#btn-signout");
+    if (signOut) signOut.addEventListener("click", function () {
+      state.accountName = "";
+      state.accountPin = "";
+      signinSkipped = false;
+      persist();
+      renderHome();
     });
     const listBtn = $("#btn-word-list");
     if (listBtn) listBtn.addEventListener("click", function () {
@@ -2031,7 +2124,7 @@
     });
     const demoBtn = $("#btn-demo");
     if (demoBtn) demoBtn.addEventListener("click", function () { openDemo(); });
-    ["nouns100", "verbs100", "adjectives100", "nouns200", "little100", "verbs200", "adjectives200", "adverbs100", "nouns300", "verbs300"].forEach(function (pid) {
+    PACK_IDS.forEach(function (pid) {
       const el = $("#btn-pack-" + pid);
       if (el) el.addEventListener("click", function () { openPack(pid); });
     });
@@ -2134,6 +2227,13 @@
       } else if (currentScreen === "name") {
         e.preventDefault();
         $("#btn-name-go").click();
+      } else if (currentScreen === "home") {
+        const ae = document.activeElement;
+        if (ae && (ae.id === "account-name" || ae.id === "account-pin")) {
+          e.preventDefault();
+          const saveBtn = $("#btn-signin-save");
+          if (saveBtn) saveBtn.click();
+        }
       }
     });
     if (window.visualViewport) {
@@ -2151,23 +2251,37 @@
     applySlimPacks();
   }
 
+  function showAllPackButtons() {
+    PACK_IDS.forEach(function (pid) {
+      const el = $("#btn-pack-" + pid);
+      if (el) el.hidden = false;
+    });
+  }
+
   async function applySlimPacks() {
     try {
       const res = await fetch("BUILD_STAMP.txt", { cache: "no-store" });
-      if (!res.ok) return;
+      if (!res.ok) {
+        showAllPackButtons();
+        return;
+      }
       const text = await res.text();
       const line = text.split("\n").find(function (l) { return l.indexOf("packs=") === 0; });
-      if (!line) return;
-      const val = line.slice(6).trim();
-      if (!val || val === "all") return;
+      const val = line ? line.slice(6).trim() : "";
+      if (!line || !val || val === "all") {
+        showAllPackButtons();
+        return;
+      }
       const allowed = val.split(/\s+/);
       const demo = $("#btn-demo");
       if (demo) demo.hidden = true;
-      ["nouns100", "verbs100", "adjectives100", "nouns200", "little100", "verbs200", "adjectives200", "adverbs100", "nouns300", "verbs300"].forEach(function (pid) {
+      PACK_IDS.forEach(function (pid) {
         const el = $("#btn-pack-" + pid);
-        if (el && allowed.indexOf(pid) < 0) el.hidden = true;
+        if (el) el.hidden = allowed.indexOf(pid) < 0;
       });
-    } catch (e) { /* ignore */ }
+    } catch (e) {
+      showAllPackButtons();
+    }
   }
 
   function applyLocale(code) {

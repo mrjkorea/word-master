@@ -1,0 +1,407 @@
+{
+  "pack_id": "adjectives300",
+  "title": "A2 Adjectives 201–300",
+  "seconds_per_letter": 5,
+  "items": [
+    {
+      "item_id": "detailed",
+      "word": "detailed"
+    },
+    {
+      "item_id": "limited",
+      "word": "limited"
+    },
+    {
+      "item_id": "afraid",
+      "word": "afraid"
+    },
+    {
+      "item_id": "average",
+      "word": "average"
+    },
+    {
+      "item_id": "quick",
+      "word": "quick"
+    },
+    {
+      "item_id": "sufficient",
+      "word": "sufficient"
+    },
+    {
+      "item_id": "democratic",
+      "word": "democratic"
+    },
+    {
+      "item_id": "expensive",
+      "word": "expensive"
+    },
+    {
+      "item_id": "mental",
+      "word": "mental"
+    },
+    {
+      "item_id": "used",
+      "word": "used"
+    },
+    {
+      "item_id": "scientific",
+      "word": "scientific"
+    },
+    {
+      "item_id": "critical",
+      "word": "critical"
+    },
+    {
+      "item_id": "dangerous",
+      "word": "dangerous"
+    },
+    {
+      "item_id": "familiar",
+      "word": "familiar"
+    },
+    {
+      "item_id": "educational",
+      "word": "educational"
+    },
+    {
+      "item_id": "unlikely",
+      "word": "unlikely"
+    },
+    {
+      "item_id": "correct",
+      "word": "correct"
+    },
+    {
+      "item_id": "female",
+      "word": "female"
+    },
+    {
+      "item_id": "tiny",
+      "word": "tiny"
+    },
+    {
+      "item_id": "perfect",
+      "word": "perfect"
+    },
+    {
+      "item_id": "fast",
+      "word": "fast"
+    },
+    {
+      "item_id": "thin",
+      "word": "thin"
+    },
+    {
+      "item_id": "dry",
+      "word": "dry"
+    },
+    {
+      "item_id": "historical",
+      "word": "historical"
+    },
+    {
+      "item_id": "initial",
+      "word": "initial"
+    },
+    {
+      "item_id": "empty",
+      "word": "empty"
+    },
+    {
+      "item_id": "upper",
+      "word": "upper"
+    },
+    {
+      "item_id": "double",
+      "word": "double"
+    },
+    {
+      "item_id": "relative",
+      "word": "relative"
+    },
+    {
+      "item_id": "urban",
+      "word": "urban"
+    },
+    {
+      "item_id": "narrow",
+      "word": "narrow"
+    },
+    {
+      "item_id": "liberal",
+      "word": "liberal"
+    },
+    {
+      "item_id": "wild",
+      "word": "wild"
+    },
+    {
+      "item_id": "apparent",
+      "word": "apparent"
+    },
+    {
+      "item_id": "tall",
+      "word": "tall"
+    },
+    {
+      "item_id": "slow",
+      "word": "slow"
+    },
+    {
+      "item_id": "leading",
+      "word": "leading"
+    },
+    {
+      "item_id": "bloody",
+      "word": "bloody"
+    },
+    {
+      "item_id": "conservative",
+      "word": "conservative"
+    },
+    {
+      "item_id": "busy",
+      "word": "busy"
+    },
+    {
+      "item_id": "careful",
+      "word": "careful"
+    },
+    {
+      "item_id": "attractive",
+      "word": "attractive"
+    },
+    {
+      "item_id": "alternative",
+      "word": "alternative"
+    },
+    {
+      "item_id": "vital",
+      "word": "vital"
+    },
+    {
+      "item_id": "united",
+      "word": "united"
+    },
+    {
+      "item_id": "ancient",
+      "word": "ancient"
+    },
+    {
+      "item_id": "brief",
+      "word": "brief"
+    },
+    {
+      "item_id": "elderly",
+      "word": "elderly"
+    },
+    {
+      "item_id": "overall",
+      "word": "overall"
+    },
+    {
+      "item_id": "rare",
+      "word": "rare"
+    },
+    {
+      "item_id": "external",
+      "word": "external"
+    },
+    {
+      "item_id": "capable",
+      "word": "capable"
+    },
+    {
+      "item_id": "wonderful",
+      "word": "wonderful"
+    },
+    {
+      "item_id": "married",
+      "word": "married"
+    },
+    {
+      "item_id": "entire",
+      "word": "entire"
+    },
+    {
+      "item_id": "secondary",
+      "word": "secondary"
+    },
+    {
+      "item_id": "increased",
+      "word": "increased"
+    },
+    {
+      "item_id": "typical",
+      "word": "typical"
+    },
+    {
+      "item_id": "clean",
+      "word": "clean"
+    },
+    {
+      "item_id": "grey",
+      "word": "grey"
+    },
+    {
+      "item_id": "first",
+      "word": "first"
+    },
+    {
+      "item_id": "constant",
+      "word": "constant"
+    },
+    {
+      "item_id": "vast",
+      "word": "vast"
+    },
+    {
+      "item_id": "northern",
+      "word": "northern"
+    },
+    {
+      "item_id": "funny",
+      "word": "funny"
+    },
+    {
+      "item_id": "severe",
+      "word": "severe"
+    },
+    {
+      "item_id": "terrible",
+      "word": "terrible"
+    },
+    {
+      "item_id": "criminal",
+      "word": "criminal"
+    },
+    {
+      "item_id": "academic",
+      "word": "academic"
+    },
+    {
+      "item_id": "odd",
+      "word": "odd"
+    },
+    {
+      "item_id": "corporate",
+      "word": "corporate"
+    },
+    {
+      "item_id": "southern",
+      "word": "southern"
+    },
+    {
+      "item_id": "permanent",
+      "word": "permanent"
+    },
+    {
+      "item_id": "weak",
+      "word": "weak"
+    },
+    {
+      "item_id": "fundamental",
+      "word": "fundamental"
+    },
+    {
+      "item_id": "middle",
+      "word": "middle"
+    },
+    {
+      "item_id": "minor",
+      "word": "minor"
+    },
+    {
+      "item_id": "negative",
+      "word": "negative"
+    },
+    {
+      "item_id": "inner",
+      "word": "inner"
+    },
+    {
+      "item_id": "crucial",
+      "word": "crucial"
+    },
+    {
+      "item_id": "sharp",
+      "word": "sharp"
+    },
+    {
+      "item_id": "contemporary",
+      "word": "contemporary"
+    },
+    {
+      "item_id": "thick",
+      "word": "thick"
+    },
+    {
+      "item_id": "massive",
+      "word": "massive"
+    },
+    {
+      "item_id": "unique",
+      "word": "unique"
+    },
+    {
+      "item_id": "parliamentary",
+      "word": "parliamentary"
+    },
+    {
+      "item_id": "unknown",
+      "word": "unknown"
+    },
+    {
+      "item_id": "subsequent",
+      "word": "subsequent"
+    },
+    {
+      "item_id": "brown",
+      "word": "brown"
+    },
+    {
+      "item_id": "angry",
+      "word": "angry"
+    },
+    {
+      "item_id": "alive",
+      "word": "alive"
+    },
+    {
+      "item_id": "firm",
+      "word": "firm"
+    },
+    {
+      "item_id": "guilty",
+      "word": "guilty"
+    },
+    {
+      "item_id": "prior",
+      "word": "prior"
+    },
+    {
+      "item_id": "round",
+      "word": "round"
+    },
+    {
+      "item_id": "eastern",
+      "word": "eastern"
+    },
+    {
+      "item_id": "enormous",
+      "word": "enormous"
+    },
+    {
+      "item_id": "remaining",
+      "word": "remaining"
+    },
+    {
+      "item_id": "friendly",
+      "word": "friendly"
+    },
+    {
+      "item_id": "unusual",
+      "word": "unusual"
+    }
+  ]
+}

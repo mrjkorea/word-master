@@ -1,0 +1,1008 @@
+{
+  "pack_id": "verbs200",
+  "title": "A2 Verbs 101–200",
+  "module_id": "word_master",
+  "seconds": 15,
+  "items": [
+    {
+      "item_id": "sell",
+      "question": "give something for money",
+      "correct": "sell",
+      "wrong": [
+        "report",
+        "pass"
+      ],
+      "word": "sell"
+    },
+    {
+      "item_id": "report",
+      "question": "tell someone about an event",
+      "correct": "report",
+      "wrong": [
+        "sell",
+        "pass"
+      ],
+      "word": "report"
+    },
+    {
+      "item_id": "pass",
+      "question": "give something to another person",
+      "correct": "pass",
+      "wrong": [
+        "sell",
+        "report"
+      ],
+      "word": "pass"
+    },
+    {
+      "item_id": "accept",
+      "question": "agree to take or receive",
+      "correct": "accept",
+      "wrong": [
+        "sell",
+        "report"
+      ],
+      "word": "accept"
+    },
+    {
+      "item_id": "cause",
+      "question": "make something happen",
+      "correct": "cause",
+      "wrong": [
+        "sell",
+        "report"
+      ],
+      "word": "cause"
+    },
+    {
+      "item_id": "watch",
+      "question": "look at something carefully",
+      "correct": "watch",
+      "wrong": [
+        "sell",
+        "report"
+      ],
+      "word": "watch"
+    },
+    {
+      "item_id": "break",
+      "question": "make something into pieces",
+      "correct": "break",
+      "wrong": [
+        "sell",
+        "report"
+      ],
+      "word": "break"
+    },
+    {
+      "item_id": "support",
+      "question": "help hold something up",
+      "correct": "support",
+      "wrong": [
+        "sell",
+        "report"
+      ],
+      "word": "support"
+    },
+    {
+      "item_id": "explain",
+      "question": "tell how or why something happens",
+      "correct": "explain",
+      "wrong": [
+        "sell",
+        "report"
+      ],
+      "word": "explain"
+    },
+    {
+      "item_id": "stay",
+      "question": "remain in one place",
+      "correct": "stay",
+      "wrong": [
+        "sell",
+        "report"
+      ],
+      "word": "stay"
+    },
+    {
+      "item_id": "wait",
+      "question": "stay in place until something happens",
+      "correct": "wait",
+      "wrong": [
+        "sell",
+        "report"
+      ],
+      "word": "wait"
+    },
+    {
+      "item_id": "cover",
+      "question": "put something over to hide or protect",
+      "correct": "cover",
+      "wrong": [
+        "sell",
+        "report"
+      ],
+      "word": "cover"
+    },
+    {
+      "item_id": "apply",
+      "question": "put something on a surface",
+      "correct": "apply",
+      "wrong": [
+        "sell",
+        "report"
+      ],
+      "word": "apply"
+    },
+    {
+      "item_id": "raise",
+      "question": "lift something up higher",
+      "correct": "raise",
+      "wrong": [
+        "sell",
+        "report"
+      ],
+      "word": "raise"
+    },
+    {
+      "item_id": "claim",
+      "question": "say something belongs to you",
+      "correct": "claim",
+      "wrong": [
+        "sell",
+        "report"
+      ],
+      "word": "claim"
+    },
+    {
+      "item_id": "form",
+      "question": "to make or shape something",
+      "correct": "form",
+      "wrong": [
+        "sell",
+        "report"
+      ],
+      "word": "form"
+    },
+    {
+      "item_id": "base",
+      "question": "to build something on a bottom",
+      "correct": "base",
+      "wrong": [
+        "sell",
+        "report"
+      ],
+      "word": "base"
+    },
+    {
+      "item_id": "cut",
+      "question": "to divide something with a sharp tool",
+      "correct": "cut",
+      "wrong": [
+        "sell",
+        "report"
+      ],
+      "word": "cut"
+    },
+    {
+      "item_id": "grow",
+      "question": "to become bigger or taller",
+      "correct": "grow",
+      "wrong": [
+        "sell",
+        "report"
+      ],
+      "word": "grow"
+    },
+    {
+      "item_id": "contain",
+      "question": "to hold something inside",
+      "correct": "contain",
+      "wrong": [
+        "sell",
+        "report"
+      ],
+      "word": "contain"
+    },
+    {
+      "item_id": "bear",
+      "question": "to carry or hold up",
+      "correct": "bear",
+      "wrong": [
+        "sell",
+        "report"
+      ],
+      "word": "bear"
+    },
+    {
+      "item_id": "join",
+      "question": "to become part of a group",
+      "correct": "join",
+      "wrong": [
+        "sell",
+        "report"
+      ],
+      "word": "join"
+    },
+    {
+      "item_id": "reduce",
+      "question": "to make something smaller",
+      "correct": "reduce",
+      "wrong": [
+        "sell",
+        "report"
+      ],
+      "word": "reduce"
+    },
+    {
+      "item_id": "establish",
+      "question": "to start or set up something",
+      "correct": "establish",
+      "wrong": [
+        "sell",
+        "report"
+      ],
+      "word": "establish"
+    },
+    {
+      "item_id": "face",
+      "question": "to meet or deal with something",
+      "correct": "face",
+      "wrong": [
+        "sell",
+        "report"
+      ],
+      "word": "face"
+    },
+    {
+      "item_id": "choose",
+      "question": "pick one thing you like",
+      "correct": "choose",
+      "wrong": [
+        "sell",
+        "report"
+      ],
+      "word": "choose"
+    },
+    {
+      "item_id": "wish",
+      "question": "want something very much",
+      "correct": "wish",
+      "wrong": [
+        "sell",
+        "report"
+      ],
+      "word": "wish"
+    },
+    {
+      "item_id": "achieve",
+      "question": "reach a goal you worked for",
+      "correct": "achieve",
+      "wrong": [
+        "sell",
+        "report"
+      ],
+      "word": "achieve"
+    },
+    {
+      "item_id": "drive",
+      "question": "make a car move",
+      "correct": "drive",
+      "wrong": [
+        "sell",
+        "report"
+      ],
+      "word": "drive"
+    },
+    {
+      "item_id": "deal",
+      "question": "give cards to each player",
+      "correct": "deal",
+      "wrong": [
+        "sell",
+        "report"
+      ],
+      "word": "deal"
+    },
+    {
+      "item_id": "place",
+      "question": "put something in a spot",
+      "correct": "place",
+      "wrong": [
+        "sell",
+        "report"
+      ],
+      "word": "place"
+    },
+    {
+      "item_id": "seek",
+      "question": "look for something or someone",
+      "correct": "seek",
+      "wrong": [
+        "sell",
+        "report"
+      ],
+      "word": "seek"
+    },
+    {
+      "item_id": "fail",
+      "question": "not succeed in doing something",
+      "correct": "fail",
+      "wrong": [
+        "sell",
+        "report"
+      ],
+      "word": "fail"
+    },
+    {
+      "item_id": "serve",
+      "question": "give food or help to someone",
+      "correct": "serve",
+      "wrong": [
+        "sell",
+        "report"
+      ],
+      "word": "serve"
+    },
+    {
+      "item_id": "end",
+      "question": "bring something to its finish",
+      "correct": "end",
+      "wrong": [
+        "sell",
+        "report"
+      ],
+      "word": "end"
+    },
+    {
+      "item_id": "occur",
+      "question": "to happen suddenly",
+      "correct": "occur",
+      "wrong": [
+        "sell",
+        "report"
+      ],
+      "word": "occur"
+    },
+    {
+      "item_id": "act",
+      "question": "to do something",
+      "correct": "act",
+      "wrong": [
+        "sell",
+        "report"
+      ],
+      "word": "act"
+    },
+    {
+      "item_id": "kill",
+      "question": "to make something die",
+      "correct": "kill",
+      "wrong": [
+        "sell",
+        "report"
+      ],
+      "word": "kill"
+    },
+    {
+      "item_id": "plan",
+      "question": "to make a plan",
+      "correct": "plan",
+      "wrong": [
+        "sell",
+        "report"
+      ],
+      "word": "plan"
+    },
+    {
+      "item_id": "eat",
+      "question": "to put food in mouth",
+      "correct": "eat",
+      "wrong": [
+        "sell",
+        "report"
+      ],
+      "word": "eat"
+    },
+    {
+      "item_id": "close",
+      "question": "to shut something",
+      "correct": "close",
+      "wrong": [
+        "sell",
+        "report"
+      ],
+      "word": "close"
+    },
+    {
+      "item_id": "represent",
+      "question": "to speak for others",
+      "correct": "represent",
+      "wrong": [
+        "sell",
+        "report"
+      ],
+      "word": "represent"
+    },
+    {
+      "item_id": "love",
+      "question": "to feel strong affection",
+      "correct": "love",
+      "wrong": [
+        "sell",
+        "report"
+      ],
+      "word": "love"
+    },
+    {
+      "item_id": "rise",
+      "question": "to move upward",
+      "correct": "rise",
+      "wrong": [
+        "sell",
+        "report"
+      ],
+      "word": "rise"
+    },
+    {
+      "item_id": "prepare",
+      "question": "to get ready",
+      "correct": "prepare",
+      "wrong": [
+        "sell",
+        "report"
+      ],
+      "word": "prepare"
+    },
+    {
+      "item_id": "manage",
+      "question": "to control or handle something",
+      "correct": "manage",
+      "wrong": [
+        "sell",
+        "report"
+      ],
+      "word": "manage"
+    },
+    {
+      "item_id": "discuss",
+      "question": "to talk about something together",
+      "correct": "discuss",
+      "wrong": [
+        "sell",
+        "report"
+      ],
+      "word": "discuss"
+    },
+    {
+      "item_id": "prove",
+      "question": "to show that something is true",
+      "correct": "prove",
+      "wrong": [
+        "sell",
+        "report"
+      ],
+      "word": "prove"
+    },
+    {
+      "item_id": "catch",
+      "question": "to grab something moving in the air",
+      "correct": "catch",
+      "wrong": [
+        "sell",
+        "report"
+      ],
+      "word": "catch"
+    },
+    {
+      "item_id": "pick",
+      "question": "to choose one thing from many",
+      "correct": "pick",
+      "wrong": [
+        "sell",
+        "report"
+      ],
+      "word": "pick"
+    },
+    {
+      "item_id": "enjoy",
+      "question": "to like something very much",
+      "correct": "enjoy",
+      "wrong": [
+        "sell",
+        "report"
+      ],
+      "word": "enjoy"
+    },
+    {
+      "item_id": "suppose",
+      "question": "to think something is true",
+      "correct": "suppose",
+      "wrong": [
+        "sell",
+        "report"
+      ],
+      "word": "suppose"
+    },
+    {
+      "item_id": "wear",
+      "question": "to have clothes on your body",
+      "correct": "wear",
+      "wrong": [
+        "sell",
+        "report"
+      ],
+      "word": "wear"
+    },
+    {
+      "item_id": "argue",
+      "question": "to disagree with someone loudly",
+      "correct": "argue",
+      "wrong": [
+        "sell",
+        "report"
+      ],
+      "word": "argue"
+    },
+    {
+      "item_id": "introduce",
+      "question": "to present someone to others",
+      "correct": "introduce",
+      "wrong": [
+        "sell",
+        "report"
+      ],
+      "word": "introduce"
+    },
+    {
+      "item_id": "enter",
+      "question": "go inside a place",
+      "correct": "enter",
+      "wrong": [
+        "sell",
+        "report"
+      ],
+      "word": "enter"
+    },
+    {
+      "item_id": "arrive",
+      "question": "reach a place after traveling",
+      "correct": "arrive",
+      "wrong": [
+        "sell",
+        "report"
+      ],
+      "word": "arrive"
+    },
+    {
+      "item_id": "ensure",
+      "question": "make sure something happens",
+      "correct": "ensure",
+      "wrong": [
+        "sell",
+        "report"
+      ],
+      "word": "ensure"
+    },
+    {
+      "item_id": "pull",
+      "question": "move something toward yourself",
+      "correct": "pull",
+      "wrong": [
+        "sell",
+        "report"
+      ],
+      "word": "pull"
+    },
+    {
+      "item_id": "refer",
+      "question": "mention or talk about something",
+      "correct": "refer",
+      "wrong": [
+        "sell",
+        "report"
+      ],
+      "word": "refer"
+    },
+    {
+      "item_id": "thank",
+      "question": "say thanks to someone",
+      "correct": "thank",
+      "wrong": [
+        "sell",
+        "report"
+      ],
+      "word": "thank"
+    },
+    {
+      "item_id": "present",
+      "question": "show something to others",
+      "correct": "present",
+      "wrong": [
+        "sell",
+        "report"
+      ],
+      "word": "present"
+    },
+    {
+      "item_id": "control",
+      "question": "make something move or work",
+      "correct": "control",
+      "wrong": [
+        "sell",
+        "report"
+      ],
+      "word": "control"
+    },
+    {
+      "item_id": "affect",
+      "question": "change how someone feels",
+      "correct": "affect",
+      "wrong": [
+        "sell",
+        "report"
+      ],
+      "word": "affect"
+    },
+    {
+      "item_id": "point",
+      "question": "show where something is",
+      "correct": "point",
+      "wrong": [
+        "sell",
+        "report"
+      ],
+      "word": "point"
+    },
+    {
+      "item_id": "identify",
+      "question": "to name or recognize something",
+      "correct": "identify",
+      "wrong": [
+        "sell",
+        "report"
+      ],
+      "word": "identify"
+    },
+    {
+      "item_id": "relate",
+      "question": "to tell or connect ideas",
+      "correct": "relate",
+      "wrong": [
+        "sell",
+        "report"
+      ],
+      "word": "relate"
+    },
+    {
+      "item_id": "force",
+      "question": "to make someone do something",
+      "correct": "force",
+      "wrong": [
+        "sell",
+        "report"
+      ],
+      "word": "force"
+    },
+    {
+      "item_id": "compare",
+      "question": "to look at two things together",
+      "correct": "compare",
+      "wrong": [
+        "sell",
+        "report"
+      ],
+      "word": "compare"
+    },
+    {
+      "item_id": "suffer",
+      "question": "to feel pain or sadness",
+      "correct": "suffer",
+      "wrong": [
+        "sell",
+        "report"
+      ],
+      "word": "suffer"
+    },
+    {
+      "item_id": "announce",
+      "question": "tell people something important",
+      "correct": "announce",
+      "wrong": [
+        "sell",
+        "report"
+      ],
+      "word": "announce"
+    },
+    {
+      "item_id": "obtain",
+      "question": "get something you want",
+      "correct": "obtain",
+      "wrong": [
+        "sell",
+        "report"
+      ],
+      "word": "obtain"
+    },
+    {
+      "item_id": "indicate",
+      "question": "point to show something",
+      "correct": "indicate",
+      "wrong": [
+        "sell",
+        "report"
+      ],
+      "word": "indicate"
+    },
+    {
+      "item_id": "forget",
+      "question": "not remember something",
+      "correct": "forget",
+      "wrong": [
+        "sell",
+        "report"
+      ],
+      "word": "forget"
+    },
+    {
+      "item_id": "publish",
+      "question": "make a book or story ready for people to read",
+      "correct": "publish",
+      "wrong": [
+        "sell",
+        "report"
+      ],
+      "word": "publish"
+    },
+    {
+      "item_id": "visit",
+      "question": "go see someone",
+      "correct": "visit",
+      "wrong": [
+        "sell",
+        "report"
+      ],
+      "word": "visit"
+    },
+    {
+      "item_id": "listen",
+      "question": "hear with attention",
+      "correct": "listen",
+      "wrong": [
+        "sell",
+        "report"
+      ],
+      "word": "listen"
+    },
+    {
+      "item_id": "finish",
+      "question": "bring to an end",
+      "correct": "finish",
+      "wrong": [
+        "sell",
+        "report"
+      ],
+      "word": "finish"
+    },
+    {
+      "item_id": "fight",
+      "question": "struggle against someone",
+      "correct": "fight",
+      "wrong": [
+        "sell",
+        "report"
+      ],
+      "word": "fight"
+    },
+    {
+      "item_id": "train",
+      "question": "teach skills through practice",
+      "correct": "train",
+      "wrong": [
+        "sell",
+        "report"
+      ],
+      "word": "train"
+    },
+    {
+      "item_id": "maintain",
+      "question": "keep something working well",
+      "correct": "maintain",
+      "wrong": [
+        "sell",
+        "report"
+      ],
+      "word": "maintain"
+    },
+    {
+      "item_id": "save",
+      "question": "rescue someone from danger",
+      "correct": "save",
+      "wrong": [
+        "sell",
+        "report"
+      ],
+      "word": "save"
+    },
+    {
+      "item_id": "design",
+      "question": "plan how something will look",
+      "correct": "design",
+      "wrong": [
+        "sell",
+        "report"
+      ],
+      "word": "design"
+    },
+    {
+      "item_id": "improve",
+      "question": "make something better than before",
+      "correct": "improve",
+      "wrong": [
+        "sell",
+        "report"
+      ],
+      "word": "improve"
+    },
+    {
+      "item_id": "avoid",
+      "question": "stay away from something bad",
+      "correct": "avoid",
+      "wrong": [
+        "sell",
+        "report"
+      ],
+      "word": "avoid"
+    },
+    {
+      "item_id": "wonder",
+      "question": "think about something with curiosity",
+      "correct": "wonder",
+      "wrong": [
+        "sell",
+        "report"
+      ],
+      "word": "wonder"
+    },
+    {
+      "item_id": "tend",
+      "question": "to take care of someone or something",
+      "correct": "tend",
+      "wrong": [
+        "sell",
+        "report"
+      ],
+      "word": "tend"
+    },
+    {
+      "item_id": "express",
+      "question": "to show feelings or ideas clearly",
+      "correct": "express",
+      "wrong": [
+        "sell",
+        "report"
+      ],
+      "word": "express"
+    },
+    {
+      "item_id": "determine",
+      "question": "to decide something after thinking",
+      "correct": "determine",
+      "wrong": [
+        "sell",
+        "report"
+      ],
+      "word": "determine"
+    },
+    {
+      "item_id": "exist",
+      "question": "to be real or to be present",
+      "correct": "exist",
+      "wrong": [
+        "sell",
+        "report"
+      ],
+      "word": "exist"
+    },
+    {
+      "item_id": "share",
+      "question": "give part of something to others",
+      "correct": "share",
+      "wrong": [
+        "sell",
+        "report"
+      ],
+      "word": "share"
+    },
+    {
+      "item_id": "smile",
+      "question": "show happiness with your mouth",
+      "correct": "smile",
+      "wrong": [
+        "sell",
+        "report"
+      ],
+      "word": "smile"
+    },
+    {
+      "item_id": "treat",
+      "question": "give something nice to someone",
+      "correct": "treat",
+      "wrong": [
+        "sell",
+        "report"
+      ],
+      "word": "treat"
+    },
+    {
+      "item_id": "remove",
+      "question": "take something away from a place",
+      "correct": "remove",
+      "wrong": [
+        "sell",
+        "report"
+      ],
+      "word": "remove"
+    },
+    {
+      "item_id": "state",
+      "question": "say something clearly and officially",
+      "correct": "state",
+      "wrong": [
+        "sell",
+        "report"
+      ],
+      "word": "state"
+    },
+    {
+      "item_id": "throw",
+      "question": "send something through the air",
+      "correct": "throw",
+      "wrong": [
+        "sell",
+        "report"
+      ],
+      "word": "throw"
+    },
+    {
+      "item_id": "fill",
+      "question": "make something full of something",
+      "correct": "fill",
+      "wrong": [
+        "sell",
+        "report"
+      ],
+      "word": "fill"
+    },
+    {
+      "item_id": "assume",
+      "question": "think something is true without proof",
+      "correct": "assume",
+      "wrong": [
+        "sell",
+        "report"
+      ],
+      "word": "assume"
+    },
+    {
+      "item_id": "mention",
+      "question": "speak briefly about something",
+      "correct": "mention",
+      "wrong": [
+        "sell",
+        "report"
+      ],
+      "word": "mention"
+    },
+    {
+      "item_id": "admit",
+      "question": "say that something is true",
+      "correct": "admit",
+      "wrong": [
+        "sell",
+        "report"
+      ],
+      "word": "admit"
+    }
+  ]
+}

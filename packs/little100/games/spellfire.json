@@ -1,0 +1,407 @@
+{
+  "pack_id": "little100",
+  "title": "A1 Little words 1–100",
+  "seconds_per_letter": 5,
+  "items": [
+    {
+      "item_id": "thedet",
+      "word": "the"
+    },
+    {
+      "item_id": "ofprep",
+      "word": "of"
+    },
+    {
+      "item_id": "andconj",
+      "word": "and"
+    },
+    {
+      "item_id": "adet",
+      "word": "a"
+    },
+    {
+      "item_id": "inprep",
+      "word": "in"
+    },
+    {
+      "item_id": "itpron",
+      "word": "it"
+    },
+    {
+      "item_id": "toprep",
+      "word": "to"
+    },
+    {
+      "item_id": "forprep",
+      "word": "for"
+    },
+    {
+      "item_id": "ipron",
+      "word": "i"
+    },
+    {
+      "item_id": "thatconj",
+      "word": "that"
+    },
+    {
+      "item_id": "youpron",
+      "word": "you"
+    },
+    {
+      "item_id": "hepron",
+      "word": "he"
+    },
+    {
+      "item_id": "onprep",
+      "word": "on"
+    },
+    {
+      "item_id": "withprep",
+      "word": "with"
+    },
+    {
+      "item_id": "atprep",
+      "word": "at"
+    },
+    {
+      "item_id": "byprep",
+      "word": "by"
+    },
+    {
+      "item_id": "thisdet",
+      "word": "this"
+    },
+    {
+      "item_id": "butconj",
+      "word": "but"
+    },
+    {
+      "item_id": "fromprep",
+      "word": "from"
+    },
+    {
+      "item_id": "theypron",
+      "word": "they"
+    },
+    {
+      "item_id": "hisdet",
+      "word": "his"
+    },
+    {
+      "item_id": "thatdet",
+      "word": "that"
+    },
+    {
+      "item_id": "shepron",
+      "word": "she"
+    },
+    {
+      "item_id": "orconj",
+      "word": "or"
+    },
+    {
+      "item_id": "whichdet",
+      "word": "which"
+    },
+    {
+      "item_id": "asconj",
+      "word": "as"
+    },
+    {
+      "item_id": "wepron",
+      "word": "we"
+    },
+    {
+      "item_id": "andet",
+      "word": "an"
+    },
+    {
+      "item_id": "willmodal",
+      "word": "will"
+    },
+    {
+      "item_id": "wouldmodal",
+      "word": "would"
+    },
+    {
+      "item_id": "canmodal",
+      "word": "can"
+    },
+    {
+      "item_id": "ifconj",
+      "word": "if"
+    },
+    {
+      "item_id": "theirdet",
+      "word": "their"
+    },
+    {
+      "item_id": "whatdet",
+      "word": "what"
+    },
+    {
+      "item_id": "therepron",
+      "word": "there"
+    },
+    {
+      "item_id": "alldet",
+      "word": "all"
+    },
+    {
+      "item_id": "herdet",
+      "word": "her"
+    },
+    {
+      "item_id": "whopron",
+      "word": "who"
+    },
+    {
+      "item_id": "asprep",
+      "word": "as"
+    },
+    {
+      "item_id": "thempron",
+      "word": "them"
+    },
+    {
+      "item_id": "somedet",
+      "word": "some"
+    },
+    {
+      "item_id": "couldmodal",
+      "word": "could"
+    },
+    {
+      "item_id": "himpron",
+      "word": "him"
+    },
+    {
+      "item_id": "intoprep",
+      "word": "into"
+    },
+    {
+      "item_id": "itsdet",
+      "word": "its"
+    },
+    {
+      "item_id": "mydet",
+      "word": "my"
+    },
+    {
+      "item_id": "thanconj",
+      "word": "than"
+    },
+    {
+      "item_id": "aboutprep",
+      "word": "about"
+    },
+    {
+      "item_id": "yourdet",
+      "word": "your"
+    },
+    {
+      "item_id": "mepron",
+      "word": "me"
+    },
+    {
+      "item_id": "nodet",
+      "word": "no"
+    },
+    {
+      "item_id": "shouldmodal",
+      "word": "should"
+    },
+    {
+      "item_id": "thesedet",
+      "word": "these"
+    },
+    {
+      "item_id": "anydet",
+      "word": "any"
+    },
+    {
+      "item_id": "whenconj",
+      "word": "when"
+    },
+    {
+      "item_id": "maymodal",
+      "word": "may"
+    },
+    {
+      "item_id": "likeprep",
+      "word": "like"
+    },
+    {
+      "item_id": "herpron",
+      "word": "her"
+    },
+    {
+      "item_id": "suchdet",
+      "word": "such"
+    },
+    {
+      "item_id": "becauseconj",
+      "word": "because"
+    },
+    {
+      "item_id": "ourdet",
+      "word": "our"
+    },
+    {
+      "item_id": "betweenprep",
+      "word": "between"
+    },
+    {
+      "item_id": "manydet",
+      "word": "many"
+    },
+    {
+      "item_id": "thosedet",
+      "word": "those"
+    },
+    {
+      "item_id": "onepron",
+      "word": "one"
+    },
+    {
+      "item_id": "afterprep",
+      "word": "after"
+    },
+    {
+      "item_id": "soconj",
+      "word": "so"
+    },
+    {
+      "item_id": "throughprep",
+      "word": "through"
+    },
+    {
+      "item_id": "mustmodal",
+      "word": "must"
+    },
+    {
+      "item_id": "overprep",
+      "word": "over"
+    },
+    {
+      "item_id": "owndet",
+      "word": "own"
+    },
+    {
+      "item_id": "moredet",
+      "word": "more"
+    },
+    {
+      "item_id": "samedet",
+      "word": "same"
+    },
+    {
+      "item_id": "uspron",
+      "word": "us"
+    },
+    {
+      "item_id": "eachdet",
+      "word": "each"
+    },
+    {
+      "item_id": "mightmodal",
+      "word": "might"
+    },
+    {
+      "item_id": "anotherdet",
+      "word": "another"
+    },
+    {
+      "item_id": "shallmodal",
+      "word": "shall"
+    },
+    {
+      "item_id": "underprep",
+      "word": "under"
+    },
+    {
+      "item_id": "againstprep",
+      "word": "against"
+    },
+    {
+      "item_id": "somethingpron",
+      "word": "something"
+    },
+    {
+      "item_id": "beforeprep",
+      "word": "before"
+    },
+    {
+      "item_id": "whileconj",
+      "word": "while"
+    },
+    {
+      "item_id": "nextdet",
+      "word": "next"
+    },
+    {
+      "item_id": "withoutprep",
+      "word": "without"
+    },
+    {
+      "item_id": "withinprep",
+      "word": "within"
+    },
+    {
+      "item_id": "whereconj",
+      "word": "where"
+    },
+    {
+      "item_id": "duringprep",
+      "word": "during"
+    },
+    {
+      "item_id": "mostdet",
+      "word": "most"
+    },
+    {
+      "item_id": "althoughconj",
+      "word": "although"
+    },
+    {
+      "item_id": "bothdet",
+      "word": "both"
+    },
+    {
+      "item_id": "everydet",
+      "word": "every"
+    },
+    {
+      "item_id": "whetherconj",
+      "word": "whether"
+    },
+    {
+      "item_id": "untilconj",
+      "word": "until"
+    },
+    {
+      "item_id": "thoughconj",
+      "word": "though"
+    },
+    {
+      "item_id": "nothingpron",
+      "word": "nothing"
+    },
+    {
+      "item_id": "sinceconj",
+      "word": "since"
+    },
+    {
+      "item_id": "muchdet",
+      "word": "much"
+    },
+    {
+      "item_id": "himselfpron",
+      "word": "himself"
+    },
+    {
+      "item_id": "afterconj",
+      "word": "after"
+    }
+  ]
+}

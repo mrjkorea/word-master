@@ -1,0 +1,1008 @@
+{
+  "pack_id": "verbs300",
+  "title": "A2 Verbs 201–300",
+  "module_id": "snow_jump",
+  "seconds": 15,
+  "items": [
+    {
+      "item_id": "replace",
+      "question": "put something new in place",
+      "correct": "replace",
+      "wrong": [
+        "reflect",
+        "intend"
+      ],
+      "word": "replace"
+    },
+    {
+      "item_id": "reflect",
+      "question": "show an image back from a surface",
+      "correct": "reflect",
+      "wrong": [
+        "replace",
+        "intend"
+      ],
+      "word": "reflect"
+    },
+    {
+      "item_id": "intend",
+      "question": "plan to do something",
+      "correct": "intend",
+      "wrong": [
+        "replace",
+        "reflect"
+      ],
+      "word": "intend"
+    },
+    {
+      "item_id": "encourage",
+      "question": "give support or cheer",
+      "correct": "encourage",
+      "wrong": [
+        "replace",
+        "reflect"
+      ],
+      "word": "encourage"
+    },
+    {
+      "item_id": "miss",
+      "question": "fail to catch or hit something",
+      "correct": "miss",
+      "wrong": [
+        "replace",
+        "reflect"
+      ],
+      "word": "miss"
+    },
+    {
+      "item_id": "drop",
+      "question": "let something fall down",
+      "correct": "drop",
+      "wrong": [
+        "replace",
+        "reflect"
+      ],
+      "word": "drop"
+    },
+    {
+      "item_id": "fly",
+      "question": "move through the air",
+      "correct": "fly",
+      "wrong": [
+        "replace",
+        "reflect"
+      ],
+      "word": "fly"
+    },
+    {
+      "item_id": "reveal",
+      "question": "show something hidden",
+      "correct": "reveal",
+      "wrong": [
+        "replace",
+        "reflect"
+      ],
+      "word": "reveal"
+    },
+    {
+      "item_id": "operate",
+      "question": "make a machine work",
+      "correct": "operate",
+      "wrong": [
+        "replace",
+        "reflect"
+      ],
+      "word": "operate"
+    },
+    {
+      "item_id": "discover",
+      "question": "find something new",
+      "correct": "discover",
+      "wrong": [
+        "replace",
+        "reflect"
+      ],
+      "word": "discover"
+    },
+    {
+      "item_id": "record",
+      "question": "write facts down",
+      "correct": "record",
+      "wrong": [
+        "replace",
+        "reflect"
+      ],
+      "word": "record"
+    },
+    {
+      "item_id": "refuse",
+      "question": "say no to something",
+      "correct": "refuse",
+      "wrong": [
+        "replace",
+        "reflect"
+      ],
+      "word": "refuse"
+    },
+    {
+      "item_id": "prevent",
+      "question": "stop something from happening",
+      "correct": "prevent",
+      "wrong": [
+        "replace",
+        "reflect"
+      ],
+      "word": "prevent"
+    },
+    {
+      "item_id": "teach",
+      "question": "show someone how to do something",
+      "correct": "teach",
+      "wrong": [
+        "replace",
+        "reflect"
+      ],
+      "word": "teach"
+    },
+    {
+      "item_id": "cost",
+      "question": "have a price to pay",
+      "correct": "cost",
+      "wrong": [
+        "replace",
+        "reflect"
+      ],
+      "word": "cost"
+    },
+    {
+      "item_id": "answer",
+      "question": "to reply to a question",
+      "correct": "answer",
+      "wrong": [
+        "replace",
+        "reflect"
+      ],
+      "word": "answer"
+    },
+    {
+      "item_id": "depend",
+      "question": "to need help from someone",
+      "correct": "depend",
+      "wrong": [
+        "replace",
+        "reflect"
+      ],
+      "word": "depend"
+    },
+    {
+      "item_id": "hit",
+      "question": "to touch something hard",
+      "correct": "hit",
+      "wrong": [
+        "replace",
+        "reflect"
+      ],
+      "word": "hit"
+    },
+    {
+      "item_id": "regard",
+      "question": "to think of someone",
+      "correct": "regard",
+      "wrong": [
+        "replace",
+        "reflect"
+      ],
+      "word": "regard"
+    },
+    {
+      "item_id": "result",
+      "question": "to happen as an effect",
+      "correct": "result",
+      "wrong": [
+        "replace",
+        "reflect"
+      ],
+      "word": "result"
+    },
+    {
+      "item_id": "attempt",
+      "question": "try to do something",
+      "correct": "attempt",
+      "wrong": [
+        "replace",
+        "reflect"
+      ],
+      "word": "attempt"
+    },
+    {
+      "item_id": "enable",
+      "question": "make something possible",
+      "correct": "enable",
+      "wrong": [
+        "replace",
+        "reflect"
+      ],
+      "word": "enable"
+    },
+    {
+      "item_id": "realise",
+      "question": "understand something suddenly",
+      "correct": "realise",
+      "wrong": [
+        "replace",
+        "reflect"
+      ],
+      "word": "realise"
+    },
+    {
+      "item_id": "complete",
+      "question": "finish doing something",
+      "correct": "complete",
+      "wrong": [
+        "replace",
+        "reflect"
+      ],
+      "word": "complete"
+    },
+    {
+      "item_id": "notice",
+      "question": "see or become aware of",
+      "correct": "notice",
+      "wrong": [
+        "replace",
+        "reflect"
+      ],
+      "word": "notice"
+    },
+    {
+      "item_id": "extend",
+      "question": "make something longer",
+      "correct": "extend",
+      "wrong": [
+        "replace",
+        "reflect"
+      ],
+      "word": "extend"
+    },
+    {
+      "item_id": "check",
+      "question": "look to see if something is right",
+      "correct": "check",
+      "wrong": [
+        "replace",
+        "reflect"
+      ],
+      "word": "check"
+    },
+    {
+      "item_id": "laugh",
+      "question": "make happy sounds with your mouth",
+      "correct": "laugh",
+      "wrong": [
+        "replace",
+        "reflect"
+      ],
+      "word": "laugh"
+    },
+    {
+      "item_id": "sound",
+      "question": "make or give out a noise",
+      "correct": "sound",
+      "wrong": [
+        "replace",
+        "reflect"
+      ],
+      "word": "sound"
+    },
+    {
+      "item_id": "recognise",
+      "question": "know someone or something again",
+      "correct": "recognise",
+      "wrong": [
+        "replace",
+        "reflect"
+      ],
+      "word": "recognise"
+    },
+    {
+      "item_id": "fit",
+      "question": "to be the right size",
+      "correct": "fit",
+      "wrong": [
+        "replace",
+        "reflect"
+      ],
+      "word": "fit"
+    },
+    {
+      "item_id": "push",
+      "question": "to move something away with force",
+      "correct": "push",
+      "wrong": [
+        "replace",
+        "reflect"
+      ],
+      "word": "push"
+    },
+    {
+      "item_id": "sign",
+      "question": "to write your name on paper",
+      "correct": "sign",
+      "wrong": [
+        "replace",
+        "reflect"
+      ],
+      "word": "sign"
+    },
+    {
+      "item_id": "define",
+      "question": "to explain the meaning of a word",
+      "correct": "define",
+      "wrong": [
+        "replace",
+        "reflect"
+      ],
+      "word": "define"
+    },
+    {
+      "item_id": "shake",
+      "question": "to move something quickly back and forth",
+      "correct": "shake",
+      "wrong": [
+        "replace",
+        "reflect"
+      ],
+      "word": "shake"
+    },
+    {
+      "item_id": "study",
+      "question": "learn from books",
+      "correct": "study",
+      "wrong": [
+        "replace",
+        "reflect"
+      ],
+      "word": "study"
+    },
+    {
+      "item_id": "examine",
+      "question": "look at something closely",
+      "correct": "examine",
+      "wrong": [
+        "replace",
+        "reflect"
+      ],
+      "word": "examine"
+    },
+    {
+      "item_id": "mind",
+      "question": "take care of something",
+      "correct": "mind",
+      "wrong": [
+        "replace",
+        "reflect"
+      ],
+      "word": "mind"
+    },
+    {
+      "item_id": "drink",
+      "question": "take liquid into the mouth",
+      "correct": "drink",
+      "wrong": [
+        "replace",
+        "reflect"
+      ],
+      "word": "drink"
+    },
+    {
+      "item_id": "gain",
+      "question": "get or receive something",
+      "correct": "gain",
+      "wrong": [
+        "replace",
+        "reflect"
+      ],
+      "word": "gain"
+    },
+    {
+      "item_id": "arise",
+      "question": "to get up or appear",
+      "correct": "arise",
+      "wrong": [
+        "replace",
+        "reflect"
+      ],
+      "word": "arise"
+    },
+    {
+      "item_id": "attend",
+      "question": "to go to a place",
+      "correct": "attend",
+      "wrong": [
+        "replace",
+        "reflect"
+      ],
+      "word": "attend"
+    },
+    {
+      "item_id": "associate",
+      "question": "to connect two things",
+      "correct": "associate",
+      "wrong": [
+        "replace",
+        "reflect"
+      ],
+      "word": "associate"
+    },
+    {
+      "item_id": "hang",
+      "question": "to put something up",
+      "correct": "hang",
+      "wrong": [
+        "replace",
+        "reflect"
+      ],
+      "word": "hang"
+    },
+    {
+      "item_id": "perform",
+      "question": "to do an action on stage",
+      "correct": "perform",
+      "wrong": [
+        "replace",
+        "reflect"
+      ],
+      "word": "perform"
+    },
+    {
+      "item_id": "marry",
+      "question": "to become husband and wife",
+      "correct": "marry",
+      "wrong": [
+        "replace",
+        "reflect"
+      ],
+      "word": "marry"
+    },
+    {
+      "item_id": "protect",
+      "question": "to keep someone safe",
+      "correct": "protect",
+      "wrong": [
+        "replace",
+        "reflect"
+      ],
+      "word": "protect"
+    },
+    {
+      "item_id": "adopt",
+      "question": "to take a child as your own",
+      "correct": "adopt",
+      "wrong": [
+        "replace",
+        "reflect"
+      ],
+      "word": "adopt"
+    },
+    {
+      "item_id": "confirm",
+      "question": "to say something is true",
+      "correct": "confirm",
+      "wrong": [
+        "replace",
+        "reflect"
+      ],
+      "word": "confirm"
+    },
+    {
+      "item_id": "star",
+      "question": "to be the main actor",
+      "correct": "star",
+      "wrong": [
+        "replace",
+        "reflect"
+      ],
+      "word": "star"
+    },
+    {
+      "item_id": "mark",
+      "question": "put a sign on something",
+      "correct": "mark",
+      "wrong": [
+        "replace",
+        "reflect"
+      ],
+      "word": "mark"
+    },
+    {
+      "item_id": "clear",
+      "question": "remove things from a place",
+      "correct": "clear",
+      "wrong": [
+        "replace",
+        "reflect"
+      ],
+      "word": "clear"
+    },
+    {
+      "item_id": "imagine",
+      "question": "make a picture in your mind",
+      "correct": "imagine",
+      "wrong": [
+        "replace",
+        "reflect"
+      ],
+      "word": "imagine"
+    },
+    {
+      "item_id": "travel",
+      "question": "go from one place to another",
+      "correct": "travel",
+      "wrong": [
+        "replace",
+        "reflect"
+      ],
+      "word": "travel"
+    },
+    {
+      "item_id": "issue",
+      "question": "give out something official",
+      "correct": "issue",
+      "wrong": [
+        "replace",
+        "reflect"
+      ],
+      "word": "issue"
+    },
+    {
+      "item_id": "supply",
+      "question": "to give something needed",
+      "correct": "supply",
+      "wrong": [
+        "replace",
+        "reflect"
+      ],
+      "word": "supply"
+    },
+    {
+      "item_id": "beat",
+      "question": "to win against someone",
+      "correct": "beat",
+      "wrong": [
+        "replace",
+        "reflect"
+      ],
+      "word": "beat"
+    },
+    {
+      "item_id": "strike",
+      "question": "to hit something hard",
+      "correct": "strike",
+      "wrong": [
+        "replace",
+        "reflect"
+      ],
+      "word": "strike"
+    },
+    {
+      "item_id": "demand",
+      "question": "to ask strongly for something",
+      "correct": "demand",
+      "wrong": [
+        "replace",
+        "reflect"
+      ],
+      "word": "demand"
+    },
+    {
+      "item_id": "employ",
+      "question": "to give someone a job",
+      "correct": "employ",
+      "wrong": [
+        "replace",
+        "reflect"
+      ],
+      "word": "employ"
+    },
+    {
+      "item_id": "shoot",
+      "question": "to fire an arrow",
+      "correct": "shoot",
+      "wrong": [
+        "replace",
+        "reflect"
+      ],
+      "word": "shoot"
+    },
+    {
+      "item_id": "test",
+      "question": "to check knowledge with questions",
+      "correct": "test",
+      "wrong": [
+        "replace",
+        "reflect"
+      ],
+      "word": "test"
+    },
+    {
+      "item_id": "order",
+      "question": "to ask for food in a restaurant",
+      "correct": "order",
+      "wrong": [
+        "replace",
+        "reflect"
+      ],
+      "word": "order"
+    },
+    {
+      "item_id": "release",
+      "question": "to let an animal go free",
+      "correct": "release",
+      "wrong": [
+        "replace",
+        "reflect"
+      ],
+      "word": "release"
+    },
+    {
+      "item_id": "emerge",
+      "question": "to come out from hiding",
+      "correct": "emerge",
+      "wrong": [
+        "replace",
+        "reflect"
+      ],
+      "word": "emerge"
+    },
+    {
+      "item_id": "ring",
+      "question": "call someone on phone",
+      "correct": "ring",
+      "wrong": [
+        "replace",
+        "reflect"
+      ],
+      "word": "ring"
+    },
+    {
+      "item_id": "aim",
+      "question": "point at a target",
+      "correct": "aim",
+      "wrong": [
+        "replace",
+        "reflect"
+      ],
+      "word": "aim"
+    },
+    {
+      "item_id": "link",
+      "question": "join two things together",
+      "correct": "link",
+      "wrong": [
+        "replace",
+        "reflect"
+      ],
+      "word": "link"
+    },
+    {
+      "item_id": "collect",
+      "question": "gather things in one place",
+      "correct": "collect",
+      "wrong": [
+        "replace",
+        "reflect"
+      ],
+      "word": "collect"
+    },
+    {
+      "item_id": "lay",
+      "question": "put something down flat",
+      "correct": "lay",
+      "wrong": [
+        "replace",
+        "reflect"
+      ],
+      "word": "lay"
+    },
+    {
+      "item_id": "reply",
+      "question": "to answer someone",
+      "correct": "reply",
+      "wrong": [
+        "replace",
+        "reflect"
+      ],
+      "word": "reply"
+    },
+    {
+      "item_id": "press",
+      "question": "to push something down",
+      "correct": "press",
+      "wrong": [
+        "replace",
+        "reflect"
+      ],
+      "word": "press"
+    },
+    {
+      "item_id": "approach",
+      "question": "to move closer to something",
+      "correct": "approach",
+      "wrong": [
+        "replace",
+        "reflect"
+      ],
+      "word": "approach"
+    },
+    {
+      "item_id": "survive",
+      "question": "to stay alive after danger",
+      "correct": "survive",
+      "wrong": [
+        "replace",
+        "reflect"
+      ],
+      "word": "survive"
+    },
+    {
+      "item_id": "settle",
+      "question": "to make a new home",
+      "correct": "settle",
+      "wrong": [
+        "replace",
+        "reflect"
+      ],
+      "word": "settle"
+    },
+    {
+      "item_id": "observe",
+      "question": "to watch carefully",
+      "correct": "observe",
+      "wrong": [
+        "replace",
+        "reflect"
+      ],
+      "word": "observe"
+    },
+    {
+      "item_id": "limit",
+      "question": "to keep something under a set amount",
+      "correct": "limit",
+      "wrong": [
+        "replace",
+        "reflect"
+      ],
+      "word": "limit"
+    },
+    {
+      "item_id": "deny",
+      "question": "to say something is not true",
+      "correct": "deny",
+      "wrong": [
+        "replace",
+        "reflect"
+      ],
+      "word": "deny"
+    },
+    {
+      "item_id": "worry",
+      "question": "to feel troubled or anxious",
+      "correct": "worry",
+      "wrong": [
+        "replace",
+        "reflect"
+      ],
+      "word": "worry"
+    },
+    {
+      "item_id": "cross",
+      "question": "to go from one side to the other",
+      "correct": "cross",
+      "wrong": [
+        "replace",
+        "reflect"
+      ],
+      "word": "cross"
+    },
+    {
+      "item_id": "charge",
+      "question": "put electricity into a battery",
+      "correct": "charge",
+      "wrong": [
+        "replace",
+        "reflect"
+      ],
+      "word": "charge"
+    },
+    {
+      "item_id": "respond",
+      "question": "answer or reply to someone",
+      "correct": "respond",
+      "wrong": [
+        "replace",
+        "reflect"
+      ],
+      "word": "respond"
+    },
+    {
+      "item_id": "grant",
+      "question": "give permission or allow something",
+      "correct": "grant",
+      "wrong": [
+        "replace",
+        "reflect"
+      ],
+      "word": "grant"
+    },
+    {
+      "item_id": "concentrate",
+      "question": "focus attention on one thing",
+      "correct": "concentrate",
+      "wrong": [
+        "replace",
+        "reflect"
+      ],
+      "word": "concentrate"
+    },
+    {
+      "item_id": "ignore",
+      "question": "pay no attention to something",
+      "correct": "ignore",
+      "wrong": [
+        "replace",
+        "reflect"
+      ],
+      "word": "ignore"
+    },
+    {
+      "item_id": "lift",
+      "question": "raise something upward",
+      "correct": "lift",
+      "wrong": [
+        "replace",
+        "reflect"
+      ],
+      "word": "lift"
+    },
+    {
+      "item_id": "stick",
+      "question": "put something on a surface",
+      "correct": "stick",
+      "wrong": [
+        "replace",
+        "reflect"
+      ],
+      "word": "stick"
+    },
+    {
+      "item_id": "arrange",
+      "question": "put things in order",
+      "correct": "arrange",
+      "wrong": [
+        "replace",
+        "reflect"
+      ],
+      "word": "arrange"
+    },
+    {
+      "item_id": "sleep",
+      "question": "rest with eyes closed",
+      "correct": "sleep",
+      "wrong": [
+        "replace",
+        "reflect"
+      ],
+      "word": "sleep"
+    },
+    {
+      "item_id": "promise",
+      "question": "say you will do something",
+      "correct": "promise",
+      "wrong": [
+        "replace",
+        "reflect"
+      ],
+      "word": "promise"
+    },
+    {
+      "item_id": "touch",
+      "question": "put hand on something",
+      "correct": "touch",
+      "wrong": [
+        "replace",
+        "reflect"
+      ],
+      "word": "touch"
+    },
+    {
+      "item_id": "vary",
+      "question": "be different in some way",
+      "correct": "vary",
+      "wrong": [
+        "replace",
+        "reflect"
+      ],
+      "word": "vary"
+    },
+    {
+      "item_id": "prefer",
+      "question": "like one thing more than another",
+      "correct": "prefer",
+      "wrong": [
+        "replace",
+        "reflect"
+      ],
+      "word": "prefer"
+    },
+    {
+      "item_id": "repeat",
+      "question": "say or do something again",
+      "correct": "repeat",
+      "wrong": [
+        "replace",
+        "reflect"
+      ],
+      "word": "repeat"
+    },
+    {
+      "item_id": "commit",
+      "question": "decide to do something",
+      "correct": "commit",
+      "wrong": [
+        "replace",
+        "reflect"
+      ],
+      "word": "commit"
+    },
+    {
+      "item_id": "insist",
+      "question": "say something is true",
+      "correct": "insist",
+      "wrong": [
+        "replace",
+        "reflect"
+      ],
+      "word": "insist"
+    },
+    {
+      "item_id": "measure",
+      "question": "find the size of something",
+      "correct": "measure",
+      "wrong": [
+        "replace",
+        "reflect"
+      ],
+      "word": "measure"
+    },
+    {
+      "item_id": "warn",
+      "question": "tell someone about danger",
+      "correct": "warn",
+      "wrong": [
+        "replace",
+        "reflect"
+      ],
+      "word": "warn"
+    },
+    {
+      "item_id": "award",
+      "question": "give a prize to someone",
+      "correct": "award",
+      "wrong": [
+        "replace",
+        "reflect"
+      ],
+      "word": "award"
+    },
+    {
+      "item_id": "attack",
+      "question": "try to hurt or damage",
+      "correct": "attack",
+      "wrong": [
+        "replace",
+        "reflect"
+      ],
+      "word": "attack"
+    }
+  ]
+}

@@ -1,0 +1,407 @@
+{
+  "pack_id": "verbs100",
+  "title": "A1 Verbs 1–100",
+  "seconds_per_letter": 5,
+  "items": [
+    {
+      "item_id": "be",
+      "word": "be"
+    },
+    {
+      "item_id": "have",
+      "word": "have"
+    },
+    {
+      "item_id": "do",
+      "word": "do"
+    },
+    {
+      "item_id": "say",
+      "word": "say"
+    },
+    {
+      "item_id": "go",
+      "word": "go"
+    },
+    {
+      "item_id": "get",
+      "word": "get"
+    },
+    {
+      "item_id": "make",
+      "word": "make"
+    },
+    {
+      "item_id": "see",
+      "word": "see"
+    },
+    {
+      "item_id": "know",
+      "word": "know"
+    },
+    {
+      "item_id": "take",
+      "word": "take"
+    },
+    {
+      "item_id": "think",
+      "word": "think"
+    },
+    {
+      "item_id": "come",
+      "word": "come"
+    },
+    {
+      "item_id": "give",
+      "word": "give"
+    },
+    {
+      "item_id": "look",
+      "word": "look"
+    },
+    {
+      "item_id": "use",
+      "word": "use"
+    },
+    {
+      "item_id": "find",
+      "word": "find"
+    },
+    {
+      "item_id": "want",
+      "word": "want"
+    },
+    {
+      "item_id": "tell",
+      "word": "tell"
+    },
+    {
+      "item_id": "put",
+      "word": "put"
+    },
+    {
+      "item_id": "work",
+      "word": "work"
+    },
+    {
+      "item_id": "become",
+      "word": "become"
+    },
+    {
+      "item_id": "mean",
+      "word": "mean"
+    },
+    {
+      "item_id": "leave",
+      "word": "leave"
+    },
+    {
+      "item_id": "seem",
+      "word": "seem"
+    },
+    {
+      "item_id": "need",
+      "word": "need"
+    },
+    {
+      "item_id": "feel",
+      "word": "feel"
+    },
+    {
+      "item_id": "may",
+      "word": "may"
+    },
+    {
+      "item_id": "ask",
+      "word": "ask"
+    },
+    {
+      "item_id": "show",
+      "word": "show"
+    },
+    {
+      "item_id": "try",
+      "word": "try"
+    },
+    {
+      "item_id": "call",
+      "word": "call"
+    },
+    {
+      "item_id": "keep",
+      "word": "keep"
+    },
+    {
+      "item_id": "provide",
+      "word": "provide"
+    },
+    {
+      "item_id": "hold",
+      "word": "hold"
+    },
+    {
+      "item_id": "follow",
+      "word": "follow"
+    },
+    {
+      "item_id": "turn",
+      "word": "turn"
+    },
+    {
+      "item_id": "bring",
+      "word": "bring"
+    },
+    {
+      "item_id": "begin",
+      "word": "begin"
+    },
+    {
+      "item_id": "like",
+      "word": "like"
+    },
+    {
+      "item_id": "write",
+      "word": "write"
+    },
+    {
+      "item_id": "start",
+      "word": "start"
+    },
+    {
+      "item_id": "run",
+      "word": "run"
+    },
+    {
+      "item_id": "set",
+      "word": "set"
+    },
+    {
+      "item_id": "help",
+      "word": "help"
+    },
+    {
+      "item_id": "play",
+      "word": "play"
+    },
+    {
+      "item_id": "move",
+      "word": "move"
+    },
+    {
+      "item_id": "pay",
+      "word": "pay"
+    },
+    {
+      "item_id": "hear",
+      "word": "hear"
+    },
+    {
+      "item_id": "meet",
+      "word": "meet"
+    },
+    {
+      "item_id": "include",
+      "word": "include"
+    },
+    {
+      "item_id": "believe",
+      "word": "believe"
+    },
+    {
+      "item_id": "allow",
+      "word": "allow"
+    },
+    {
+      "item_id": "lead",
+      "word": "lead"
+    },
+    {
+      "item_id": "stand",
+      "word": "stand"
+    },
+    {
+      "item_id": "live",
+      "word": "live"
+    },
+    {
+      "item_id": "happen",
+      "word": "happen"
+    },
+    {
+      "item_id": "carry",
+      "word": "carry"
+    },
+    {
+      "item_id": "talk",
+      "word": "talk"
+    },
+    {
+      "item_id": "sit",
+      "word": "sit"
+    },
+    {
+      "item_id": "appear",
+      "word": "appear"
+    },
+    {
+      "item_id": "continue",
+      "word": "continue"
+    },
+    {
+      "item_id": "let",
+      "word": "let"
+    },
+    {
+      "item_id": "produce",
+      "word": "produce"
+    },
+    {
+      "item_id": "involve",
+      "word": "involve"
+    },
+    {
+      "item_id": "require",
+      "word": "require"
+    },
+    {
+      "item_id": "suggest",
+      "word": "suggest"
+    },
+    {
+      "item_id": "consider",
+      "word": "consider"
+    },
+    {
+      "item_id": "read",
+      "word": "read"
+    },
+    {
+      "item_id": "change",
+      "word": "change"
+    },
+    {
+      "item_id": "offer",
+      "word": "offer"
+    },
+    {
+      "item_id": "lose",
+      "word": "lose"
+    },
+    {
+      "item_id": "add",
+      "word": "add"
+    },
+    {
+      "item_id": "expect",
+      "word": "expect"
+    },
+    {
+      "item_id": "remember",
+      "word": "remember"
+    },
+    {
+      "item_id": "remain",
+      "word": "remain"
+    },
+    {
+      "item_id": "fall",
+      "word": "fall"
+    },
+    {
+      "item_id": "speak",
+      "word": "speak"
+    },
+    {
+      "item_id": "open",
+      "word": "open"
+    },
+    {
+      "item_id": "buy",
+      "word": "buy"
+    },
+    {
+      "item_id": "stop",
+      "word": "stop"
+    },
+    {
+      "item_id": "send",
+      "word": "send"
+    },
+    {
+      "item_id": "decide",
+      "word": "decide"
+    },
+    {
+      "item_id": "win",
+      "word": "win"
+    },
+    {
+      "item_id": "understand",
+      "word": "understand"
+    },
+    {
+      "item_id": "develop",
+      "word": "develop"
+    },
+    {
+      "item_id": "receive",
+      "word": "receive"
+    },
+    {
+      "item_id": "return",
+      "word": "return"
+    },
+    {
+      "item_id": "build",
+      "word": "build"
+    },
+    {
+      "item_id": "spend",
+      "word": "spend"
+    },
+    {
+      "item_id": "describe",
+      "word": "describe"
+    },
+    {
+      "item_id": "agree",
+      "word": "agree"
+    },
+    {
+      "item_id": "increase",
+      "word": "increase"
+    },
+    {
+      "item_id": "learn",
+      "word": "learn"
+    },
+    {
+      "item_id": "reach",
+      "word": "reach"
+    },
+    {
+      "item_id": "lie",
+      "word": "lie"
+    },
+    {
+      "item_id": "walk",
+      "word": "walk"
+    },
+    {
+      "item_id": "die",
+      "word": "die"
+    },
+    {
+      "item_id": "draw",
+      "word": "draw"
+    },
+    {
+      "item_id": "hope",
+      "word": "hope"
+    },
+    {
+      "item_id": "create",
+      "word": "create"
+    }
+  ]
+}
