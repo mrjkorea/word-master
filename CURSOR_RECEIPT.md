@@ -17,3 +17,26 @@ No github.io URL. Did not invent one. Did not Cloudflare.
 ## Blocker
 This Mac: `gh` not logged in. No GitHub token in Keychain. SSH github Permission denied.
 Same wall as Memory Match Pages 09SEP (github-pages-vite.md).
+
+---
+
+## 2026-09-22 — Jay 22SEP HARD: bilingual meaning() (no translated explanation sentences)
+
+**Command:** Fix `meaning(w)` in `js/app.js` only; append receipt; no pack JSON edits.
+
+**Model:** composer-2.5
+
+**Date:** 2026-09-22
+
+**Files changed:**
+- `js/app.js` — `meaning(w)` and `DEMO_FALLBACK` ko glosses (native words, not definition sentences)
+
+**Proof (`meaning()` no longer concatenates with ` · `):**
+```
+$ rg -n 'function meaning' -A 20 js/app.js | rg ' · ' || echo 'PROOF: no " · " inside meaning() block'
+PROOF: no " · " inside meaning() block (grep exit clean)
+```
+
+**Behavior:**
+- `en`: `w.ww.def.en` (via `wwEn`) else `w.l1.en`; lemma only if no explanation.
+- Other locales: `w.l1[loc]` or `w.ko` for `ko` only; no English fallback; no ` · `.
