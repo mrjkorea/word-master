@@ -40,3 +40,13 @@ PROOF: no " · " inside meaning() block (grep exit clean)
 **Behavior:**
 - `en`: `w.ww.def.en` (via `wwEn`) else `w.l1.en`; lemma only if no explanation.
 - Other locales: `w.l1[loc]` or `w.ko` for `ko` only; no English fallback; no ` · `.
+
+---
+
+## 2026-09-22 — Learn choice cursor (disabled not-allowed)
+
+**Model:** composer-2.5
+
+**Files:** `css/app.css`, `index.html` (stylesheet `?v=20260922-cursor`), `CURSOR_RECEIPT.md`
+
+**Fix:** `button:disabled:not(.choice)` keeps not-allowed on chrome only; `.choice` / `:disabled` / `.good` / `.bad` use `cursor: default` and `opacity: 1`.
