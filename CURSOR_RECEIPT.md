@@ -50,3 +50,15 @@ PROOF: no " · " inside meaning() block (grep exit clean)
 **Files:** `css/app.css`, `index.html` (stylesheet `?v=20260922-cursor`), `CURSOR_RECEIPT.md`
 
 **Fix:** `button:disabled:not(.choice)` keeps not-allowed on chrome only; `.choice` / `:disabled` / `.good` / `.bad` use `cursor: default` and `opacity: 1`.
+
+---
+
+## 2026-09-22 — Desktop hardware keyboard for Learn B/C and Hard test
+
+**Model:** composer-2.5
+
+**Files:** `js/app.js`, `css/app.css`, `index.html` (`?v=20260922-kb`), `CURSOR_RECEIPT.md`
+
+**Change:** `(hover: hover) and (pointer: fine)` and not `(pointer: coarse)` sets `body.kb-desk` and hides `.az-pad` via CSS; Check/Delete and typed line stay. Physical keys use `e.code` KeyA–KeyZ → `onAz`, Backspace → `delAz`, Enter → check — only on Learn B/C or Hard test, not in form fields or modifier shortcuts. Phones keep the pad; BT keyboard may still type. No `export/linux/mrj-word-factory/js/app.js` in this repo.
+
+**Proof:** `node --check js/app.js` exit 0.

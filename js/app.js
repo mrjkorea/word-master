@@ -1285,6 +1285,49 @@
     }
   }
 
+  function isHardwareKeyboardDesk() {
+    return window.matchMedia("(hover: hover) and (pointer: fine)").matches &&
+      !window.matchMedia("(pointer: coarse)").matches;
+  }
+
+  function updateKbDeskClass() {
+    document.body.classList.toggle("kb-desk", isHardwareKeyboardDesk());
+  }
+
+  function bindKbDeskMedia() {
+    updateKbDeskClass();
+    function onMqChange() { updateKbDeskClass(); }
+    const mqFine = window.matchMedia("(hover: hover) and (pointer: fine)");
+    const mqCoarse = window.matchMedia("(pointer: coarse)");
+    if (mqFine.addEventListener) {
+      mqFine.addEventListener("change", onMqChange);
+      mqCoarse.addEventListener("change", onMqChange);
+    } else if (mqFine.addListener) {
+      mqFine.addListener(onMqChange);
+      mqCoarse.addListener(onMqChange);
+    }
+  }
+
+  function isTypingScreenActive() {
+    if (currentScreen === "learn" && learn && (learn.mode === "B" || learn.mode === "C")) return true;
+    if (currentScreen === "test" && quiz && quiz.kind === "hard") return true;
+    return false;
+  }
+
+  function azLetterFromCode(code) {
+    if (!code || code.length !== 4 || code.slice(0, 3) !== "Key") return null;
+    const ch = code.charAt(3);
+    if (ch >= "A" && ch <= "Z") return ch;
+    return null;
+  }
+
+  function keydownInFormField() {
+    const ae = document.activeElement;
+    if (!ae) return false;
+    const tag = ae.tagName;
+    return tag === "INPUT" || tag === "TEXTAREA" || tag === "SELECT";
+  }
+
   function startLearn(reset) {
     const set = currentSet();
     if (!set) return;
@@ -1327,6 +1370,7 @@
   }
 
   function renderLearn(doSpeak) {
+    updateKbDeskClass();
     const set = currentSet();
     if (!set || !learn.cur) return;
     const ws = winsState(set);
@@ -1646,6 +1690,7 @@
   }
 
   function renderQuiz() {
+    updateKbDeskClass();
     const item = quiz.items[quiz.index];
     if (!item) return finishQuiz();
     $("#test-kind").textContent = quiz.kind === "easy" ? "EASY" : "HARD";
@@ -2220,6 +2265,28 @@
     }
 
     document.addEventListener("keydown", function (e) {
+      if (e.ctrlKey || e.metaKey || e.altKey) return;
+
+      if (isTypingScreenActive() && !keydownInFormField()) {
+        const letter = azLetterFromCode(e.code);
+        if (letter) {
+          e.preventDefault();
+          onAz(letter);
+          return;
+        }
+        if (e.code === "Backspace") {
+          e.preventDefault();
+          delAz();
+          return;
+        }
+        if (e.key === "Enter") {
+          e.preventDefault();
+          if (currentScreen === "learn") onLearnCheck();
+          else if (currentScreen === "test") onHardCheck();
+          return;
+        }
+      }
+
       if (e.key !== "Enter") return;
       if (currentScreen === "learn") {
         e.preventDefault();
@@ -2239,6 +2306,7 @@
         }
       }
     });
+    bindKbDeskMedia();
     if (window.visualViewport) {
       const fit = function () {
         const phone = document.querySelector(".phone");
