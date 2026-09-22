@@ -15,11 +15,11 @@
     id: DEMO_PACK_ID,
     title: "A1 Nouns 1–100",
     words: [
-      { id: "time", en: "time", ko: "시계가 재는 것" },
-      { id: "year", en: "year", ko: "일 년" },
+      { id: "time", en: "time", ko: "시간" },
+      { id: "year", en: "year", ko: "년" },
       { id: "people", en: "people", ko: "사람들" },
       { id: "way", en: "way", ko: "길" },
-      { id: "day", en: "day", ko: "하루" },
+      { id: "day", en: "day", ko: "날" },
       { id: "man", en: "man", ko: "남자" },
       { id: "thing", en: "thing", ko: "물건" },
       { id: "woman", en: "woman", ko: "여자" },
@@ -47,12 +47,15 @@
     if (!w) return "";
     const loc = localeCode();
     const l1 = w.l1 && typeof w.l1 === "object" ? w.l1 : {};
-    const enDef = String(l1.en || "").trim();
-    if (loc === "en") return enDef || w.en || "";
-    let locGloss = String(l1[loc] || "").trim();
-    if (!locGloss && loc === "ko") locGloss = String(w.ko || "").trim();
-    if (locGloss && enDef && locGloss !== enDef) return locGloss + " · " + enDef;
-    return locGloss || enDef || w.en || "";
+    if (loc === "en") {
+      const ww = w.ww && typeof w.ww === "object" ? w.ww : null;
+      const enExplanation = (ww && ww.def ? wwEn(ww.def) : "") || String(l1.en || "").trim();
+      if (enExplanation) return enExplanation;
+      return String(w.en || "").trim();
+    }
+    let nativeWord = String(l1[loc] || "").trim();
+    if (!nativeWord && loc === "ko") nativeWord = String(w.ko || "").trim();
+    return nativeWord;
   }
 
   function packWord(w, i) {
