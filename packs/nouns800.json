@@ -17,15 +17,15 @@
         "ja": "合計",
         "es": "total",
         "hi": "कुल",
-        "de": "Summe",
+        "de": "Summe (T)",
         "vi": "tổng số",
         "pt-BR": "total",
         "id": "total",
         "fr": "total",
         "ar": "إجمالي",
-        "tr": "toplam",
+        "tr": "toplam (T)",
         "it": "totale",
-        "pl": "suma"
+        "pl": "suma (T)"
       },
       "ww": {
         "sense_id": "total.s1",
@@ -37,15 +37,15 @@
           "ja": "合計",
           "es": "total",
           "hi": "कुल",
-          "de": "Summe",
+          "de": "Summe (T)",
           "vi": "tổng số",
           "pt-BR": "total",
           "id": "total",
           "fr": "total",
           "ar": "إجمالي",
-          "tr": "toplam",
+          "tr": "toplam (T)",
           "it": "totale",
-          "pl": "suma"
+          "pl": "suma (T)"
         },
         "example": {
           "en": "The total of 2 plus 3 is 5.",
@@ -2204,11 +2204,11 @@
     {
       "id": "mountain",
       "en": "mountain",
-      "ko": "산",
+      "ko": "산 (M)",
       "picture_prompt": "one tall rocky peak with white snow on top",
       "l1": {
         "en": "very high land with rocks",
-        "ko": "산",
+        "ko": "산 (M)",
         "zh-Hans": "山",
         "ja": "山",
         "es": "montaña",
@@ -2228,7 +2228,7 @@
         "pos": "n",
         "def": {
           "en": "a very high hill made of rock",
-          "ko": "산",
+          "ko": "산 (M)",
           "zh-Hans": "山",
           "ja": "山",
           "es": "montaña",
@@ -3058,11 +3058,11 @@
     {
       "id": "acid",
       "en": "acid",
-      "ko": "산",
+      "ko": "산 (A)",
       "picture_prompt": "a clear glass bottle with yellow liquid inside",
       "l1": {
         "en": "sour liquid that burns",
-        "ko": "산",
+        "ko": "산 (A)",
         "zh-Hans": "酸",
         "ja": "酸",
         "es": "ácido",
@@ -3082,7 +3082,7 @@
         "pos": "n",
         "def": {
           "en": "a sour liquid that can burn skin",
-          "ko": "산",
+          "ko": "산 (A)",
           "zh-Hans": "酸",
           "ja": "酸",
           "es": "ácido",
@@ -4775,15 +4775,15 @@
         "ja": "和",
         "es": "suma",
         "hi": "योग",
-        "de": "Summe",
+        "de": "Summe (S)",
         "vi": "tổng",
         "pt-BR": "soma",
         "id": "jumlah",
         "fr": "somme",
         "ar": "مجموع",
-        "tr": "toplam",
+        "tr": "toplam (S)",
         "it": "somma",
-        "pl": "suma"
+        "pl": "suma (S)"
       },
       "ww": {
         "sense_id": "sum.s1",
@@ -4795,15 +4795,15 @@
           "ja": "和",
           "es": "suma",
           "hi": "योग",
-          "de": "Summe",
+          "de": "Summe (S)",
           "vi": "tổng",
           "pt-BR": "soma",
           "id": "jumlah",
           "fr": "somme",
           "ar": "مجموع",
-          "tr": "toplam",
+          "tr": "toplam (S)",
           "it": "somma",
-          "pl": "suma"
+          "pl": "suma (S)"
         },
         "example": {
           "en": "The sum of two and three is five.",

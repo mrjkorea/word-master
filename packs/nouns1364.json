@@ -2037,7 +2037,7 @@
         "fr": "fortune",
         "ar": "ثروة",
         "tr": "servet",
-        "it": "fortuna",
+        "it": "fortuna (F)",
         "pl": "fortuna"
       },
       "ww": {
@@ -2057,7 +2057,7 @@
           "fr": "fortune",
           "ar": "ثروة",
           "tr": "servet",
-          "it": "fortuna",
+          "it": "fortuna (F)",
           "pl": "fortuna"
         },
         "example": {
@@ -3135,7 +3135,7 @@
         "fr": "chance",
         "ar": "حظ",
         "tr": "şans",
-        "it": "fortuna",
+        "it": "fortuna (L)",
         "pl": "szczęście"
       },
       "ww": {
@@ -3155,7 +3155,7 @@
           "fr": "chance",
           "ar": "حظ",
           "tr": "şans",
-          "it": "fortuna",
+          "it": "fortuna (L)",
           "pl": "szczęście"
         },
         "example": {

@@ -204,10 +204,10 @@
         "vi": "tài trợ",
         "pt-BR": "financiar",
         "id": "membiayai",
-        "fr": "financer",
+        "fr": "financer (Fi)",
         "ar": "يمول",
         "tr": "finanse etmek",
-        "it": "finanziare",
+        "it": "finanziare (Fi)",
         "pl": "finansować"
       },
       "ww": {
@@ -224,10 +224,10 @@
           "vi": "tài trợ",
           "pt-BR": "financiar",
           "id": "membiayai",
-          "fr": "financer",
+          "fr": "financer (Fi)",
           "ar": "يمول",
           "tr": "finanse etmek",
-          "it": "finanziare",
+          "it": "finanziare (Fi)",
           "pl": "finansować"
         },
         "example": {
@@ -265,10 +265,10 @@
         "vi": "gây quỹ",
         "pt-BR": "arrecadar",
         "id": "mendanai",
-        "fr": "financer",
+        "fr": "financer (Fu)",
         "ar": "يجمع",
         "tr": "fonlamak",
-        "it": "finanziare",
+        "it": "finanziare (Fu)",
         "pl": "fundować"
       },
       "ww": {
@@ -285,10 +285,10 @@
           "vi": "gây quỹ",
           "pt-BR": "arrecadar",
           "id": "mendanai",
-          "fr": "financer",
+          "fr": "financer (Fu)",
           "ar": "يجمع",
           "tr": "fonlamak",
-          "it": "finanziare",
+          "it": "finanziare (Fu)",
           "pl": "fundować"
         },
         "example": {
@@ -818,7 +818,7 @@
         "ar": "يركل",
         "tr": "tekmelemek",
         "it": "calciare",
-        "pl": "kopać"
+        "pl": "kopać (K)"
       },
       "ww": {
         "sense_id": "kick.s1",
@@ -838,7 +838,7 @@
           "ar": "يركل",
           "tr": "tekmelemek",
           "it": "calciare",
-          "pl": "kopać"
+          "pl": "kopać (K)"
         },
         "example": {
           "en": "He kicks the ball very hard.",
@@ -1425,7 +1425,7 @@
         "zh-Hans": "达标",
         "ja": "合格する",
         "es": "clasificarse",
-        "hi": "योग्य होना",
+        "hi": "योग्य होना (Q)",
         "de": "sich qualifizieren",
         "vi": "đạt chuẩn",
         "pt-BR": "qualificar-se",
@@ -1445,7 +1445,7 @@
           "zh-Hans": "达标",
           "ja": "合格する",
           "es": "clasificarse",
-          "hi": "योग्य होना",
+          "hi": "योग्य होना (Q)",
           "de": "sich qualifizieren",
           "vi": "đạt chuẩn",
           "pt-BR": "qualificar-se",
@@ -2828,7 +2828,7 @@
         "zh-Hans": "应得",
         "ja": "値する",
         "es": "merecer",
-        "hi": "योग्य होना",
+        "hi": "योग्य होना (D)",
         "de": "verdienen",
         "vi": "xứng đáng",
         "pt-BR": "merecer",
@@ -2848,7 +2848,7 @@
           "zh-Hans": "应得",
           "ja": "値する",
           "es": "merecer",
-          "hi": "योग्य होना",
+          "hi": "योग्य होना (D)",
           "de": "verdienen",
           "vi": "xứng đáng",
           "pt-BR": "merecer",
@@ -5399,7 +5399,7 @@
         "ar": "يحفر",
         "tr": "kazmak",
         "it": "scavare",
-        "pl": "kopać"
+        "pl": "kopać (D)"
       },
       "ww": {
         "sense_id": "dig.s1",
@@ -5419,7 +5419,7 @@
           "ar": "يحفر",
           "tr": "kazmak",
           "it": "scavare",
-          "pl": "kopać"
+          "pl": "kopać (D)"
         },
         "example": {
           "en": "The dog digs a hole in the yard.",

@@ -1974,7 +1974,7 @@
         "pt-BR": "comentar",
         "id": "berkomentar",
         "fr": "remarquer",
-        "ar": "علّق",
+        "ar": "علّق (R)",
         "tr": "belirtmek",
         "it": "commentare",
         "pl": "komentować"
@@ -1994,7 +1994,7 @@
           "pt-BR": "comentar",
           "id": "berkomentar",
           "fr": "remarquer",
-          "ar": "علّق",
+          "ar": "علّق (R)",
           "tr": "belirtmek",
           "it": "commentare",
           "pl": "komentować"
@@ -2516,7 +2516,7 @@
         "ko": "흔들다",
         "zh-Hans": "挥手",
         "ja": "振る",
-        "es": "saludar",
+        "es": "saludar (W)",
         "hi": "हाथ हिलाना",
         "de": "winken",
         "vi": "vẫy",
@@ -2525,7 +2525,7 @@
         "fr": "agiter",
         "ar": "لوّح",
         "tr": "el sallamak",
-        "it": "salutare",
+        "it": "salutare (W)",
         "pl": "machać"
       },
       "ww": {
@@ -2536,7 +2536,7 @@
           "ko": "흔들다",
           "zh-Hans": "挥手",
           "ja": "振る",
-          "es": "saludar",
+          "es": "saludar (W)",
           "hi": "हाथ हिलाना",
           "de": "winken",
           "vi": "vẫy",
@@ -2545,7 +2545,7 @@
           "fr": "agiter",
           "ar": "لوّح",
           "tr": "el sallamak",
-          "it": "salutare",
+          "it": "salutare (W)",
           "pl": "machać"
         },
         "example": {
@@ -2889,7 +2889,7 @@
         "pt-BR": "pendurar",
         "id": "menggantung",
         "fr": "suspendre",
-        "ar": "علّق",
+        "ar": "علّق (S)",
         "tr": "asmak",
         "it": "appendere",
         "pl": "wieszać"
@@ -2909,7 +2909,7 @@
           "pt-BR": "pendurar",
           "id": "menggantung",
           "fr": "suspendre",
-          "ar": "علّق",
+          "ar": "علّق (S)",
           "tr": "asmak",
           "it": "appendere",
           "pl": "wieszać"
@@ -5017,7 +5017,7 @@
         "ko": "인사하다",
         "zh-Hans": "打招呼",
         "ja": "挨拶する",
-        "es": "saludar",
+        "es": "saludar (G)",
         "hi": "अभिवादन करना",
         "de": "begrüßen",
         "vi": "chào",
@@ -5026,7 +5026,7 @@
         "fr": "saluer",
         "ar": "حيّا",
         "tr": "selamlamak",
-        "it": "salutare",
+        "it": "salutare (G)",
         "pl": "witać"
       },
       "ww": {
@@ -5037,7 +5037,7 @@
           "ko": "인사하다",
           "zh-Hans": "打招呼",
           "ja": "挨拶する",
-          "es": "saludar",
+          "es": "saludar (G)",
           "hi": "अभिवादन करना",
           "de": "begrüßen",
           "vi": "chào",
@@ -5046,7 +5046,7 @@
           "fr": "saluer",
           "ar": "حيّا",
           "tr": "selamlamak",
-          "it": "salutare",
+          "it": "salutare (G)",
           "pl": "witać"
         },
         "example": {

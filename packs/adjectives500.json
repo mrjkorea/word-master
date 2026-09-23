@@ -1053,13 +1053,13 @@
         "zh-Hans": "准确的",
         "ja": "正確な",
         "es": "exacto",
-        "hi": "सटीक",
+        "hi": "सटीक (A)",
         "de": "genau",
         "vi": "chính xác",
         "pt-BR": "exato",
         "id": "akurat",
         "fr": "exact",
-        "ar": "دقيق",
+        "ar": "دقيق (A)",
         "tr": "doğru",
         "it": "esatto",
         "pl": "dokładny"
@@ -1073,13 +1073,13 @@
           "zh-Hans": "准确的",
           "ja": "正確な",
           "es": "exacto",
-          "hi": "सटीक",
+          "hi": "सटीक (A)",
           "de": "genau",
           "vi": "chính xác",
           "pt-BR": "exato",
           "id": "akurat",
           "fr": "exact",
-          "ar": "دقيق",
+          "ar": "دقيق (A)",
           "tr": "doğru",
           "it": "esatto",
           "pl": "dokładny"
@@ -1297,7 +1297,7 @@
         "zh-Hans": "固定的",
         "ja": "固定された",
         "es": "fijo",
-        "hi": "स्थिर",
+        "hi": "स्थिर (Fix)",
         "de": "fest",
         "vi": "cố định",
         "pt-BR": "fixo",
@@ -1317,7 +1317,7 @@
           "zh-Hans": "固定的",
           "ja": "固定された",
           "es": "fijo",
-          "hi": "स्थिर",
+          "hi": "स्थिर (Fix)",
           "de": "fest",
           "vi": "cố định",
           "pt-BR": "fixo",
@@ -1358,13 +1358,13 @@
         "zh-Hans": "精确的",
         "ja": "精密な",
         "es": "preciso",
-        "hi": "सटीक",
+        "hi": "सटीक (P)",
         "de": "präzise",
         "vi": "chuẩn xác",
         "pt-BR": "preciso",
         "id": "tepat",
         "fr": "précis",
-        "ar": "دقيق",
+        "ar": "دقيق (P)",
         "tr": "kesin",
         "it": "preciso",
         "pl": "precyzyjny"
@@ -1378,13 +1378,13 @@
           "zh-Hans": "精确的",
           "ja": "精密な",
           "es": "preciso",
-          "hi": "सटीक",
+          "hi": "सटीक (P)",
           "de": "präzise",
           "vi": "chuẩn xác",
           "pt-BR": "preciso",
           "id": "tepat",
           "fr": "précis",
-          "ar": "دقيق",
+          "ar": "دقيق (P)",
           "tr": "kesin",
           "it": "preciso",
           "pl": "precyzyjny"
@@ -2343,7 +2343,7 @@
         "ar": "مستقيم",
         "tr": "düz",
         "it": "dritto",
-        "pl": "prosty"
+        "pl": "prosty (S)"
       },
       "ww": {
         "sense_id": "straight.s1",
@@ -2363,7 +2363,7 @@
           "ar": "مستقيم",
           "tr": "düz",
           "it": "dritto",
-          "pl": "prosty"
+          "pl": "prosty (S)"
         },
         "example": {
           "en": "Draw a straight line from left to right.",
@@ -2707,7 +2707,7 @@
         "id": "masuk akal",
         "fr": "sensé",
         "ar": "عاقل",
-        "tr": "mantıklı",
+        "tr": "mantıklı (S)",
         "it": "sensato",
         "pl": "rozsądny"
       },
@@ -2727,7 +2727,7 @@
           "id": "masuk akal",
           "fr": "sensé",
           "ar": "عاقل",
-          "tr": "mantıklı",
+          "tr": "mantıklı (S)",
           "it": "sensato",
           "pl": "rozsądny"
         },
@@ -3807,7 +3807,7 @@
         "ar": "نيء",
         "tr": "çiğ",
         "it": "crudo",
-        "pl": "surowy"
+        "pl": "surowy (R)"
       },
       "ww": {
         "sense_id": "raw.s1",
@@ -3827,7 +3827,7 @@
           "ar": "نيء",
           "tr": "çiğ",
           "it": "crudo",
-          "pl": "surowy"
+          "pl": "surowy (R)"
         },
         "example": {
           "en": "She eats a raw carrot.",
@@ -4661,7 +4661,7 @@
         "ar": "بسيط",
         "tr": "sade",
         "it": "semplice",
-        "pl": "prosty"
+        "pl": "prosty (P)"
       },
       "ww": {
         "sense_id": "plain.s1",
@@ -4681,7 +4681,7 @@
           "ar": "بسيط",
           "tr": "sade",
           "it": "semplice",
-          "pl": "prosty"
+          "pl": "prosty (P)"
         },
         "example": {
           "en": "She wore a plain dress.",
@@ -4722,7 +4722,7 @@
         "ar": "صارم",
         "tr": "katı",
         "it": "severo",
-        "pl": "surowy"
+        "pl": "surowy (S)"
       },
       "ww": {
         "sense_id": "strict.s1",
@@ -4742,7 +4742,7 @@
           "ar": "صارم",
           "tr": "katı",
           "it": "severo",
-          "pl": "surowy"
+          "pl": "surowy (S)"
         },
         "example": {
           "en": "Our teacher is strict.",
@@ -5019,18 +5019,18 @@
         "en": "steady and not likely to fall",
         "ko": "안정된",
         "zh-Hans": "稳定的",
-        "ja": "安定した",
+        "ja": "安定した (Sta)",
         "es": "estable",
-        "hi": "स्थिर",
-        "de": "stabil",
-        "vi": "ổn định",
+        "hi": "स्थिर (Sta)",
+        "de": "stabil (Sta)",
+        "vi": "ổn định (Sta)",
         "pt-BR": "estável",
         "id": "stabil",
-        "fr": "stable",
+        "fr": "stable (Sta)",
         "ar": "مستقر",
         "tr": "sağlam",
         "it": "stabile",
-        "pl": "stabilny"
+        "pl": "stabilny (Sta)"
       },
       "ww": {
         "sense_id": "stable.s1",
@@ -5039,18 +5039,18 @@
           "en": "firm and not moving or shaking",
           "ko": "안정된",
           "zh-Hans": "稳定的",
-          "ja": "安定した",
+          "ja": "安定した (Sta)",
           "es": "estable",
-          "hi": "स्थिर",
-          "de": "stabil",
-          "vi": "ổn định",
+          "hi": "स्थिर (Sta)",
+          "de": "stabil (Sta)",
+          "vi": "ổn định (Sta)",
           "pt-BR": "estável",
           "id": "stabil",
-          "fr": "stable",
+          "fr": "stable (Sta)",
           "ar": "مستقر",
           "tr": "sağlam",
           "it": "stabile",
-          "pl": "stabilny"
+          "pl": "stabilny (Sta)"
         },
         "example": {
           "en": "The table is stable on the floor.",
@@ -5455,18 +5455,18 @@
         "en": "not shaking or moving much",
         "ko": "흔들림없는",
         "zh-Hans": "平稳的",
-        "ja": "安定した",
+        "ja": "安定した (Ste)",
         "es": "firme",
-        "hi": "स्थिर",
-        "de": "stabil",
-        "vi": "ổn định",
+        "hi": "स्थिर (Ste)",
+        "de": "stabil (Ste)",
+        "vi": "ổn định (Ste)",
         "pt-BR": "firme",
         "id": "mantap",
-        "fr": "stable",
+        "fr": "stable (Ste)",
         "ar": "ثابت",
         "tr": "dengeli",
         "it": "fermo",
-        "pl": "stabilny"
+        "pl": "stabilny (Ste)"
       },
       "ww": {
         "sense_id": "steady.s1",
@@ -5475,18 +5475,18 @@
           "en": "not shaking or moving much",
           "ko": "흔들림없는",
           "zh-Hans": "平稳的",
-          "ja": "安定した",
+          "ja": "安定した (Ste)",
           "es": "firme",
-          "hi": "स्थिर",
-          "de": "stabil",
-          "vi": "ổn định",
+          "hi": "स्थिर (Ste)",
+          "de": "stabil (Ste)",
+          "vi": "ổn định (Ste)",
           "pt-BR": "firme",
           "id": "mantap",
-          "fr": "stable",
+          "fr": "stable (Ste)",
           "ar": "ثابت",
           "tr": "dengeli",
           "it": "fermo",
-          "pl": "stabilny"
+          "pl": "stabilny (Ste)"
         },
         "example": {
           "en": "Hold the camera steady.",
@@ -5647,7 +5647,7 @@
         "id": "rasional",
         "fr": "rationnel",
         "ar": "عقلاني",
-        "tr": "mantıklı",
+        "tr": "mantıklı (R)",
         "it": "razionale",
         "pl": "racjonalny"
       },
@@ -5667,7 +5667,7 @@
           "id": "rasional",
           "fr": "rationnel",
           "ar": "عقلاني",
-          "tr": "mantıklı",
+          "tr": "mantıklı (R)",
           "it": "razionale",
           "pl": "racjonalny"
         },
