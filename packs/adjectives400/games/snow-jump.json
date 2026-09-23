@@ -1,0 +1,1008 @@
+{
+  "pack_id": "adjectives400",
+  "title": "B1 Adjectives 301–400",
+  "module_id": "snow_jump",
+  "seconds": 15,
+  "items": [
+    {
+      "item_id": "yellow",
+      "question": "color of the sun",
+      "correct": "yellow",
+      "wrong": [
+        "dear",
+        "long-term"
+      ],
+      "word": "yellow"
+    },
+    {
+      "item_id": "dear",
+      "question": "loved very much",
+      "correct": "dear",
+      "wrong": [
+        "yellow",
+        "long-term"
+      ],
+      "word": "dear"
+    },
+    {
+      "item_id": "longterm",
+      "question": "lasting a long time",
+      "correct": "long-term",
+      "wrong": [
+        "yellow",
+        "dear"
+      ],
+      "word": "long-term"
+    },
+    {
+      "item_id": "lucky",
+      "question": "having good luck",
+      "correct": "lucky",
+      "wrong": [
+        "yellow",
+        "dear"
+      ],
+      "word": "lucky"
+    },
+    {
+      "item_id": "extensive",
+      "question": "covering a large area",
+      "correct": "extensive",
+      "wrong": [
+        "yellow",
+        "dear"
+      ],
+      "word": "extensive"
+    },
+    {
+      "item_id": "glad",
+      "question": "happy and pleased",
+      "correct": "glad",
+      "wrong": [
+        "yellow",
+        "dear"
+      ],
+      "word": "glad"
+    },
+    {
+      "item_id": "surprised",
+      "question": "feeling sudden wonder",
+      "correct": "surprised",
+      "wrong": [
+        "yellow",
+        "dear"
+      ],
+      "word": "surprised"
+    },
+    {
+      "item_id": "moral",
+      "question": "about right and wrong",
+      "correct": "moral",
+      "wrong": [
+        "yellow",
+        "dear"
+      ],
+      "word": "moral"
+    },
+    {
+      "item_id": "efficient",
+      "question": "working well without waste",
+      "correct": "efficient",
+      "wrong": [
+        "yellow",
+        "dear"
+      ],
+      "word": "efficient"
+    },
+    {
+      "item_id": "tough",
+      "question": "strong and hard to break",
+      "correct": "tough",
+      "wrong": [
+        "yellow",
+        "dear"
+      ],
+      "word": "tough"
+    },
+    {
+      "item_id": "willing",
+      "question": "ready to do something",
+      "correct": "willing",
+      "wrong": [
+        "yellow",
+        "dear"
+      ],
+      "word": "willing"
+    },
+    {
+      "item_id": "healthy",
+      "question": "having good health",
+      "correct": "healthy",
+      "wrong": [
+        "yellow",
+        "dear"
+      ],
+      "word": "healthy"
+    },
+    {
+      "item_id": "comfortable",
+      "question": "feeling relaxed and easy",
+      "correct": "comfortable",
+      "wrong": [
+        "yellow",
+        "dear"
+      ],
+      "word": "comfortable"
+    },
+    {
+      "item_id": "daily",
+      "question": "happening every day",
+      "correct": "daily",
+      "wrong": [
+        "yellow",
+        "dear"
+      ],
+      "word": "daily"
+    },
+    {
+      "item_id": "sudden",
+      "question": "happening very quickly",
+      "correct": "sudden",
+      "wrong": [
+        "yellow",
+        "dear"
+      ],
+      "word": "sudden"
+    },
+    {
+      "item_id": "keen",
+      "question": "very sharp and eager",
+      "correct": "keen",
+      "wrong": [
+        "yellow",
+        "dear"
+      ],
+      "word": "keen"
+    },
+    {
+      "item_id": "conventional",
+      "question": "usual and following old ways",
+      "correct": "conventional",
+      "wrong": [
+        "yellow",
+        "dear"
+      ],
+      "word": "conventional"
+    },
+    {
+      "item_id": "voluntary",
+      "question": "done by free choice, not forced",
+      "correct": "voluntary",
+      "wrong": [
+        "yellow",
+        "dear"
+      ],
+      "word": "voluntary"
+    },
+    {
+      "item_id": "valuable",
+      "question": "worth a lot of money or care",
+      "correct": "valuable",
+      "wrong": [
+        "yellow",
+        "dear"
+      ],
+      "word": "valuable"
+    },
+    {
+      "item_id": "slight",
+      "question": "very small in amount or degree",
+      "correct": "slight",
+      "wrong": [
+        "yellow",
+        "dear"
+      ],
+      "word": "slight"
+    },
+    {
+      "item_id": "dramatic",
+      "question": "very surprising or exciting",
+      "correct": "dramatic",
+      "wrong": [
+        "yellow",
+        "dear"
+      ],
+      "word": "dramatic"
+    },
+    {
+      "item_id": "golden",
+      "question": "made of gold or bright yellow",
+      "correct": "golden",
+      "wrong": [
+        "yellow",
+        "dear"
+      ],
+      "word": "golden"
+    },
+    {
+      "item_id": "temporary",
+      "question": "lasting only for a short time",
+      "correct": "temporary",
+      "wrong": [
+        "yellow",
+        "dear"
+      ],
+      "word": "temporary"
+    },
+    {
+      "item_id": "silent",
+      "question": "making no sound at all",
+      "correct": "silent",
+      "wrong": [
+        "yellow",
+        "dear"
+      ],
+      "word": "silent"
+    },
+    {
+      "item_id": "opposite",
+      "question": "completely different from something",
+      "correct": "opposite",
+      "wrong": [
+        "yellow",
+        "dear"
+      ],
+      "word": "opposite"
+    },
+    {
+      "item_id": "videotaped",
+      "question": "recorded on camera",
+      "correct": "video-taped",
+      "wrong": [
+        "yellow",
+        "dear"
+      ],
+      "word": "video-taped"
+    },
+    {
+      "item_id": "ideal",
+      "question": "perfect or best possible",
+      "correct": "ideal",
+      "wrong": [
+        "yellow",
+        "dear"
+      ],
+      "word": "ideal"
+    },
+    {
+      "item_id": "tired",
+      "question": "needing rest or sleep",
+      "correct": "tired",
+      "wrong": [
+        "yellow",
+        "dear"
+      ],
+      "word": "tired"
+    },
+    {
+      "item_id": "statutory",
+      "question": "required by written law",
+      "correct": "statutory",
+      "wrong": [
+        "yellow",
+        "dear"
+      ],
+      "word": "statutory"
+    },
+    {
+      "item_id": "federal",
+      "question": "of the whole country",
+      "correct": "federal",
+      "wrong": [
+        "yellow",
+        "dear"
+      ],
+      "word": "federal"
+    },
+    {
+      "item_id": "flat",
+      "question": "smooth and level",
+      "correct": "flat",
+      "wrong": [
+        "yellow",
+        "dear"
+      ],
+      "word": "flat"
+    },
+    {
+      "item_id": "like",
+      "question": "almost the same",
+      "correct": "like",
+      "wrong": [
+        "yellow",
+        "dear"
+      ],
+      "word": "like"
+    },
+    {
+      "item_id": "outside",
+      "question": "not inside a building",
+      "correct": "outside",
+      "wrong": [
+        "yellow",
+        "dear"
+      ],
+      "word": "outside"
+    },
+    {
+      "item_id": "competitive",
+      "question": "trying to win",
+      "correct": "competitive",
+      "wrong": [
+        "yellow",
+        "dear"
+      ],
+      "word": "competitive"
+    },
+    {
+      "item_id": "acceptable",
+      "question": "good enough to use",
+      "correct": "acceptable",
+      "wrong": [
+        "yellow",
+        "dear"
+      ],
+      "word": "acceptable"
+    },
+    {
+      "item_id": "net",
+      "question": "after all costs",
+      "correct": "net",
+      "wrong": [
+        "yellow",
+        "dear"
+      ],
+      "word": "net"
+    },
+    {
+      "item_id": "sensitive",
+      "question": "easily hurt or upset",
+      "correct": "sensitive",
+      "wrong": [
+        "yellow",
+        "dear"
+      ],
+      "word": "sensitive"
+    },
+    {
+      "item_id": "dependent",
+      "question": "needing help from others",
+      "correct": "dependent",
+      "wrong": [
+        "yellow",
+        "dear"
+      ],
+      "word": "dependent"
+    },
+    {
+      "item_id": "pure",
+      "question": "not mixed with anything else",
+      "correct": "pure",
+      "wrong": [
+        "yellow",
+        "dear"
+      ],
+      "word": "pure"
+    },
+    {
+      "item_id": "global",
+      "question": "covering the whole world",
+      "correct": "global",
+      "wrong": [
+        "yellow",
+        "dear"
+      ],
+      "word": "global"
+    },
+    {
+      "item_id": "expected",
+      "question": "likely to happen",
+      "correct": "expected",
+      "wrong": [
+        "yellow",
+        "dear"
+      ],
+      "word": "expected"
+    },
+    {
+      "item_id": "alright",
+      "question": "good enough",
+      "correct": "alright",
+      "wrong": [
+        "yellow",
+        "dear"
+      ],
+      "word": "alright"
+    },
+    {
+      "item_id": "sad",
+      "question": "feeling unhappy",
+      "correct": "sad",
+      "wrong": [
+        "yellow",
+        "dear"
+      ],
+      "word": "sad"
+    },
+    {
+      "item_id": "emotional",
+      "question": "full of strong feelings",
+      "correct": "emotional",
+      "wrong": [
+        "yellow",
+        "dear"
+      ],
+      "word": "emotional"
+    },
+    {
+      "item_id": "adequate",
+      "question": "enough for the need",
+      "correct": "adequate",
+      "wrong": [
+        "yellow",
+        "dear"
+      ],
+      "word": "adequate"
+    },
+    {
+      "item_id": "pale",
+      "question": "very light in color",
+      "correct": "pale",
+      "wrong": [
+        "yellow",
+        "dear"
+      ],
+      "word": "pale"
+    },
+    {
+      "item_id": "administrative",
+      "question": "about running an office or group",
+      "correct": "administrative",
+      "wrong": [
+        "yellow",
+        "dear"
+      ],
+      "word": "administrative"
+    },
+    {
+      "item_id": "wooden",
+      "question": "made of wood material",
+      "correct": "wooden",
+      "wrong": [
+        "yellow",
+        "dear"
+      ],
+      "word": "wooden"
+    },
+    {
+      "item_id": "surprising",
+      "question": "causing a feeling of surprise",
+      "correct": "surprising",
+      "wrong": [
+        "yellow",
+        "dear"
+      ],
+      "word": "surprising"
+    },
+    {
+      "item_id": "remarkable",
+      "question": "very special or worth noticing",
+      "correct": "remarkable",
+      "wrong": [
+        "yellow",
+        "dear"
+      ],
+      "word": "remarkable"
+    },
+    {
+      "item_id": "brilliant",
+      "question": "very bright and shiny",
+      "correct": "brilliant",
+      "wrong": [
+        "yellow",
+        "dear"
+      ],
+      "word": "brilliant"
+    },
+    {
+      "item_id": "principal",
+      "question": "most important or main",
+      "correct": "principal",
+      "wrong": [
+        "yellow",
+        "dear"
+      ],
+      "word": "principal"
+    },
+    {
+      "item_id": "proposed",
+      "question": "suggested or offered for consideration",
+      "correct": "proposed",
+      "wrong": [
+        "yellow",
+        "dear"
+      ],
+      "word": "proposed"
+    },
+    {
+      "item_id": "absolute",
+      "question": "complete and without any limit",
+      "correct": "absolute",
+      "wrong": [
+        "yellow",
+        "dear"
+      ],
+      "word": "absolute"
+    },
+    {
+      "item_id": "rapid",
+      "question": "moving or happening very fast",
+      "correct": "rapid",
+      "wrong": [
+        "yellow",
+        "dear"
+      ],
+      "word": "rapid"
+    },
+    {
+      "item_id": "rough",
+      "question": "not smooth or even",
+      "correct": "rough",
+      "wrong": [
+        "yellow",
+        "dear"
+      ],
+      "word": "rough"
+    },
+    {
+      "item_id": "sweet",
+      "question": "tasting like sugar",
+      "correct": "sweet",
+      "wrong": [
+        "yellow",
+        "dear"
+      ],
+      "word": "sweet"
+    },
+    {
+      "item_id": "solid",
+      "question": "hard and firm",
+      "correct": "solid",
+      "wrong": [
+        "yellow",
+        "dear"
+      ],
+      "word": "solid"
+    },
+    {
+      "item_id": "level",
+      "question": "flat and even",
+      "correct": "level",
+      "wrong": [
+        "yellow",
+        "dear"
+      ],
+      "word": "level"
+    },
+    {
+      "item_id": "electronic",
+      "question": "using electricity",
+      "correct": "electronic",
+      "wrong": [
+        "yellow",
+        "dear"
+      ],
+      "word": "electronic"
+    },
+    {
+      "item_id": "comprehensive",
+      "question": "covering everything important",
+      "correct": "comprehensive",
+      "wrong": [
+        "yellow",
+        "dear"
+      ],
+      "word": "comprehensive"
+    },
+    {
+      "item_id": "sick",
+      "question": "not feeling well",
+      "correct": "sick",
+      "wrong": [
+        "yellow",
+        "dear"
+      ],
+      "word": "sick"
+    },
+    {
+      "item_id": "near",
+      "question": "not far away",
+      "correct": "near",
+      "wrong": [
+        "yellow",
+        "dear"
+      ],
+      "word": "near"
+    },
+    {
+      "item_id": "written",
+      "question": "put down on paper",
+      "correct": "written",
+      "wrong": [
+        "yellow",
+        "dear"
+      ],
+      "word": "written"
+    },
+    {
+      "item_id": "ill",
+      "question": "not healthy",
+      "correct": "ill",
+      "wrong": [
+        "yellow",
+        "dear"
+      ],
+      "word": "ill"
+    },
+    {
+      "item_id": "literary",
+      "question": "about books and stories",
+      "correct": "literary",
+      "wrong": [
+        "yellow",
+        "dear"
+      ],
+      "word": "literary"
+    },
+    {
+      "item_id": "wet",
+      "question": "covered with water",
+      "correct": "wet",
+      "wrong": [
+        "yellow",
+        "dear"
+      ],
+      "word": "wet"
+    },
+    {
+      "item_id": "extreme",
+      "question": "very great or strong",
+      "correct": "extreme",
+      "wrong": [
+        "yellow",
+        "dear"
+      ],
+      "word": "extreme"
+    },
+    {
+      "item_id": "armed",
+      "question": "carrying weapons or tools",
+      "correct": "armed",
+      "wrong": [
+        "yellow",
+        "dear"
+      ],
+      "word": "armed"
+    },
+    {
+      "item_id": "supreme",
+      "question": "the highest or best",
+      "correct": "supreme",
+      "wrong": [
+        "yellow",
+        "dear"
+      ],
+      "word": "supreme"
+    },
+    {
+      "item_id": "visual",
+      "question": "about seeing with eyes",
+      "correct": "visual",
+      "wrong": [
+        "yellow",
+        "dear"
+      ],
+      "word": "visual"
+    },
+    {
+      "item_id": "genuine",
+      "question": "real and not fake",
+      "correct": "genuine",
+      "wrong": [
+        "yellow",
+        "dear"
+      ],
+      "word": "genuine"
+    },
+    {
+      "item_id": "exciting",
+      "question": "making you feel happy and thrilled",
+      "correct": "exciting",
+      "wrong": [
+        "yellow",
+        "dear"
+      ],
+      "word": "exciting"
+    },
+    {
+      "item_id": "maximum",
+      "question": "the highest amount possible",
+      "correct": "maximum",
+      "wrong": [
+        "yellow",
+        "dear"
+      ],
+      "word": "maximum"
+    },
+    {
+      "item_id": "widespread",
+      "question": "found in many places",
+      "correct": "widespread",
+      "wrong": [
+        "yellow",
+        "dear"
+      ],
+      "word": "widespread"
+    },
+    {
+      "item_id": "involved",
+      "question": "part of an activity",
+      "correct": "involved",
+      "wrong": [
+        "yellow",
+        "dear"
+      ],
+      "word": "involved"
+    },
+    {
+      "item_id": "confident",
+      "question": "sure you can do it",
+      "correct": "confident",
+      "wrong": [
+        "yellow",
+        "dear"
+      ],
+      "word": "confident"
+    },
+    {
+      "item_id": "radical",
+      "question": "very new and different",
+      "correct": "radical",
+      "wrong": [
+        "yellow",
+        "dear"
+      ],
+      "word": "radical"
+    },
+    {
+      "item_id": "stupid",
+      "question": "not thinking well",
+      "correct": "stupid",
+      "wrong": [
+        "yellow",
+        "dear"
+      ],
+      "word": "stupid"
+    },
+    {
+      "item_id": "grand",
+      "question": "very big and nice",
+      "correct": "grand",
+      "wrong": [
+        "yellow",
+        "dear"
+      ],
+      "word": "grand"
+    },
+    {
+      "item_id": "mean",
+      "question": "average amount or value",
+      "correct": "mean",
+      "wrong": [
+        "yellow",
+        "dear"
+      ],
+      "word": "mean"
+    },
+    {
+      "item_id": "numerous",
+      "question": "very many in number",
+      "correct": "numerous",
+      "wrong": [
+        "yellow",
+        "dear"
+      ],
+      "word": "numerous"
+    },
+    {
+      "item_id": "classical",
+      "question": "from ancient Greece or Rome",
+      "correct": "classical",
+      "wrong": [
+        "yellow",
+        "dear"
+      ],
+      "word": "classical"
+    },
+    {
+      "item_id": "distinct",
+      "question": "clearly different or separate",
+      "correct": "distinct",
+      "wrong": [
+        "yellow",
+        "dear"
+      ],
+      "word": "distinct"
+    },
+    {
+      "item_id": "mad",
+      "question": "very angry or upset",
+      "correct": "mad",
+      "wrong": [
+        "yellow",
+        "dear"
+      ],
+      "word": "mad"
+    },
+    {
+      "item_id": "false",
+      "question": "not true or correct",
+      "correct": "false",
+      "wrong": [
+        "yellow",
+        "dear"
+      ],
+      "word": "false"
+    },
+    {
+      "item_id": "proud",
+      "question": "feeling very happy about something",
+      "correct": "proud",
+      "wrong": [
+        "yellow",
+        "dear"
+      ],
+      "word": "proud"
+    },
+    {
+      "item_id": "advanced",
+      "question": "more difficult or higher level",
+      "correct": "advanced",
+      "wrong": [
+        "yellow",
+        "dear"
+      ],
+      "word": "advanced"
+    },
+    {
+      "item_id": "secret",
+      "question": "known by only a few people",
+      "correct": "secret",
+      "wrong": [
+        "yellow",
+        "dear"
+      ],
+      "word": "secret"
+    },
+    {
+      "item_id": "agricultural",
+      "question": "related to farming and crops",
+      "correct": "agricultural",
+      "wrong": [
+        "yellow",
+        "dear"
+      ],
+      "word": "agricultural"
+    },
+    {
+      "item_id": "helpful",
+      "question": "ready to give help",
+      "correct": "helpful",
+      "wrong": [
+        "yellow",
+        "dear"
+      ],
+      "word": "helpful"
+    },
+    {
+      "item_id": "mass",
+      "question": "very large amount",
+      "correct": "mass",
+      "wrong": [
+        "yellow",
+        "dear"
+      ],
+      "word": "mass"
+    },
+    {
+      "item_id": "tight",
+      "question": "fitting very closely",
+      "correct": "tight",
+      "wrong": [
+        "yellow",
+        "dear"
+      ],
+      "word": "tight"
+    },
+    {
+      "item_id": "gentle",
+      "question": "kind and soft",
+      "correct": "gentle",
+      "wrong": [
+        "yellow",
+        "dear"
+      ],
+      "word": "gentle"
+    },
+    {
+      "item_id": "consistent",
+      "question": "always the same way",
+      "correct": "consistent",
+      "wrong": [
+        "yellow",
+        "dear"
+      ],
+      "word": "consistent"
+    },
+    {
+      "item_id": "anxious",
+      "question": "worried about something bad",
+      "correct": "anxious",
+      "wrong": [
+        "yellow",
+        "dear"
+      ],
+      "word": "anxious"
+    },
+    {
+      "item_id": "mere",
+      "question": "only that and nothing more",
+      "correct": "mere",
+      "wrong": [
+        "yellow",
+        "dear"
+      ],
+      "word": "mere"
+    },
+    {
+      "item_id": "nervous",
+      "question": "worried and unable to relax",
+      "correct": "nervous",
+      "wrong": [
+        "yellow",
+        "dear"
+      ],
+      "word": "nervous"
+    },
+    {
+      "item_id": "pleased",
+      "question": "happy about something good",
+      "correct": "pleased",
+      "wrong": [
+        "yellow",
+        "dear"
+      ],
+      "word": "pleased"
+    },
+    {
+      "item_id": "holy",
+      "question": "special and pure for God",
+      "correct": "holy",
+      "wrong": [
+        "yellow",
+        "dear"
+      ],
+      "word": "holy"
+    }
+  ]
+}

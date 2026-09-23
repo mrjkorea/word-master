@@ -1,0 +1,511 @@
+{
+  "pack_id": "adverbs427",
+  "title": "B2 Adverbs 301–427",
+  "seconds_per_letter": 5,
+  "items": [
+    {
+      "item_id": "instantly",
+      "word": "instantly"
+    },
+    {
+      "item_id": "broadly",
+      "word": "broadly"
+    },
+    {
+      "item_id": "fortunately",
+      "word": "fortunately"
+    },
+    {
+      "item_id": "publicly",
+      "word": "publicly"
+    },
+    {
+      "item_id": "fair",
+      "word": "fair"
+    },
+    {
+      "item_id": "freely",
+      "word": "freely"
+    },
+    {
+      "item_id": "hitherto",
+      "word": "hitherto"
+    },
+    {
+      "item_id": "invariably",
+      "word": "invariably"
+    },
+    {
+      "item_id": "nearby",
+      "word": "nearby"
+    },
+    {
+      "item_id": "regardless",
+      "word": "regardless"
+    },
+    {
+      "item_id": "differently",
+      "word": "differently"
+    },
+    {
+      "item_id": "dramatically",
+      "word": "dramatically"
+    },
+    {
+      "item_id": "socially",
+      "word": "socially"
+    },
+    {
+      "item_id": "overall",
+      "word": "overall"
+    },
+    {
+      "item_id": "seldom",
+      "word": "seldom"
+    },
+    {
+      "item_id": "actively",
+      "word": "actively"
+    },
+    {
+      "item_id": "remarkably",
+      "word": "remarkably"
+    },
+    {
+      "item_id": "ill",
+      "word": "ill"
+    },
+    {
+      "item_id": "tightly",
+      "word": "tightly"
+    },
+    {
+      "item_id": "forwards",
+      "word": "forwards"
+    },
+    {
+      "item_id": "thereafter",
+      "word": "thereafter"
+    },
+    {
+      "item_id": "reportedly",
+      "word": "reportedly"
+    },
+    {
+      "item_id": "evidently",
+      "word": "evidently"
+    },
+    {
+      "item_id": "accurately",
+      "word": "accurately"
+    },
+    {
+      "item_id": "onwards",
+      "word": "onwards"
+    },
+    {
+      "item_id": "genuinely",
+      "word": "genuinely"
+    },
+    {
+      "item_id": "practically",
+      "word": "practically"
+    },
+    {
+      "item_id": "independently",
+      "word": "independently"
+    },
+    {
+      "item_id": "honestly",
+      "word": "honestly"
+    },
+    {
+      "item_id": "rightly",
+      "word": "rightly"
+    },
+    {
+      "item_id": "positively",
+      "word": "positively"
+    },
+    {
+      "item_id": "continually",
+      "word": "continually"
+    },
+    {
+      "item_id": "importantly",
+      "word": "importantly"
+    },
+    {
+      "item_id": "utterly",
+      "word": "utterly"
+    },
+    {
+      "item_id": "partially",
+      "word": "partially"
+    },
+    {
+      "item_id": "explicitly",
+      "word": "explicitly"
+    },
+    {
+      "item_id": "repeatedly",
+      "word": "repeatedly"
+    },
+    {
+      "item_id": "temporarily",
+      "word": "temporarily"
+    },
+    {
+      "item_id": "this",
+      "word": "this"
+    },
+    {
+      "item_id": "loud",
+      "word": "loud"
+    },
+    {
+      "item_id": "alike",
+      "word": "alike"
+    },
+    {
+      "item_id": "half",
+      "word": "half"
+    },
+    {
+      "item_id": "terribly",
+      "word": "terribly"
+    },
+    {
+      "item_id": "predominantly",
+      "word": "predominantly"
+    },
+    {
+      "item_id": "overnight",
+      "word": "overnight"
+    },
+    {
+      "item_id": "beautifully",
+      "word": "beautifully"
+    },
+    {
+      "item_id": "neatly",
+      "word": "neatly"
+    },
+    {
+      "item_id": "openly",
+      "word": "openly"
+    },
+    {
+      "item_id": "within",
+      "word": "within"
+    },
+    {
+      "item_id": "permanently",
+      "word": "permanently"
+    },
+    {
+      "item_id": "seemingly",
+      "word": "seemingly"
+    },
+    {
+      "item_id": "overseas",
+      "word": "overseas"
+    },
+    {
+      "item_id": "swiftly",
+      "word": "swiftly"
+    },
+    {
+      "item_id": "worldwide",
+      "word": "worldwide"
+    },
+    {
+      "item_id": "privately",
+      "word": "privately"
+    },
+    {
+      "item_id": "silently",
+      "word": "silently"
+    },
+    {
+      "item_id": "comparatively",
+      "word": "comparatively"
+    },
+    {
+      "item_id": "ideally",
+      "word": "ideally"
+    },
+    {
+      "item_id": "dead",
+      "word": "dead"
+    },
+    {
+      "item_id": "adequately",
+      "word": "adequately"
+    },
+    {
+      "item_id": "abruptly",
+      "word": "abruptly"
+    },
+    {
+      "item_id": "legally",
+      "word": "legally"
+    },
+    {
+      "item_id": "sincerely",
+      "word": "sincerely"
+    },
+    {
+      "item_id": "likewise",
+      "word": "likewise"
+    },
+    {
+      "item_id": "bitterly",
+      "word": "bitterly"
+    },
+    {
+      "item_id": "efficiently",
+      "word": "efficiently"
+    },
+    {
+      "item_id": "individually",
+      "word": "individually"
+    },
+    {
+      "item_id": "angrily",
+      "word": "angrily"
+    },
+    {
+      "item_id": "annually",
+      "word": "annually"
+    },
+    {
+      "item_id": "beyond",
+      "word": "beyond"
+    },
+    {
+      "item_id": "incidentally",
+      "word": "incidentally"
+    },
+    {
+      "item_id": "loudly",
+      "word": "loudly"
+    },
+    {
+      "item_id": "jointly",
+      "word": "jointly"
+    },
+    {
+      "item_id": "indirectly",
+      "word": "indirectly"
+    },
+    {
+      "item_id": "allegedly",
+      "word": "allegedly"
+    },
+    {
+      "item_id": "strangely",
+      "word": "strangely"
+    },
+    {
+      "item_id": "sexually",
+      "word": "sexually"
+    },
+    {
+      "item_id": "economically",
+      "word": "economically"
+    },
+    {
+      "item_id": "unusually",
+      "word": "unusually"
+    },
+    {
+      "item_id": "aloud",
+      "word": "aloud"
+    },
+    {
+      "item_id": "technically",
+      "word": "technically"
+    },
+    {
+      "item_id": "opposite",
+      "word": "opposite"
+    },
+    {
+      "item_id": "reluctantly",
+      "word": "reluctantly"
+    },
+    {
+      "item_id": "vaguely",
+      "word": "vaguely"
+    },
+    {
+      "item_id": "ironically",
+      "word": "ironically"
+    },
+    {
+      "item_id": "poorly",
+      "word": "poorly"
+    },
+    {
+      "item_id": "duly",
+      "word": "duly"
+    },
+    {
+      "item_id": "smoothly",
+      "word": "smoothly"
+    },
+    {
+      "item_id": "direct",
+      "word": "direct"
+    },
+    {
+      "item_id": "presently",
+      "word": "presently"
+    },
+    {
+      "item_id": "worse",
+      "word": "worse"
+    },
+    {
+      "item_id": "principally",
+      "word": "principally"
+    },
+    {
+      "item_id": "nicely",
+      "word": "nicely"
+    },
+    {
+      "item_id": "supposedly",
+      "word": "supposedly"
+    },
+    {
+      "item_id": "comfortably",
+      "word": "comfortably"
+    },
+    {
+      "item_id": "frankly",
+      "word": "frankly"
+    },
+    {
+      "item_id": "wrong",
+      "word": "wrong"
+    },
+    {
+      "item_id": "curiously",
+      "word": "curiously"
+    },
+    {
+      "item_id": "kindly",
+      "word": "kindly"
+    },
+    {
+      "item_id": "unexpectedly",
+      "word": "unexpectedly"
+    },
+    {
+      "item_id": "quick",
+      "word": "quick"
+    },
+    {
+      "item_id": "promptly",
+      "word": "promptly"
+    },
+    {
+      "item_id": "exceptionally",
+      "word": "exceptionally"
+    },
+    {
+      "item_id": "underneath",
+      "word": "underneath"
+    },
+    {
+      "item_id": "appropriately",
+      "word": "appropriately"
+    },
+    {
+      "item_id": "extensively",
+      "word": "extensively"
+    },
+    {
+      "item_id": "sideways",
+      "word": "sideways"
+    },
+    {
+      "item_id": "continuously",
+      "word": "continuously"
+    },
+    {
+      "item_id": "fiercely",
+      "word": "fiercely"
+    },
+    {
+      "item_id": "doubtless",
+      "word": "doubtless"
+    },
+    {
+      "item_id": "halfway",
+      "word": "halfway"
+    },
+    {
+      "item_id": "fundamentally",
+      "word": "fundamentally"
+    },
+    {
+      "item_id": "hastily",
+      "word": "hastily"
+    },
+    {
+      "item_id": "nationally",
+      "word": "nationally"
+    },
+    {
+      "item_id": "urgently",
+      "word": "urgently"
+    },
+    {
+      "item_id": "financially",
+      "word": "financially"
+    },
+    {
+      "item_id": "lately",
+      "word": "lately"
+    },
+    {
+      "item_id": "course",
+      "word": "course"
+    },
+    {
+      "item_id": "thick",
+      "word": "thick"
+    },
+    {
+      "item_id": "enormously",
+      "word": "enormously"
+    },
+    {
+      "item_id": "distinctly",
+      "word": "distinctly"
+    },
+    {
+      "item_id": "conversely",
+      "word": "conversely"
+    },
+    {
+      "item_id": "tight",
+      "word": "tight"
+    },
+    {
+      "item_id": "historically",
+      "word": "historically"
+    },
+    {
+      "item_id": "incredibly",
+      "word": "incredibly"
+    },
+    {
+      "item_id": "wildly",
+      "word": "wildly"
+    }
+  ]
+}

@@ -1,0 +1,407 @@
+{
+  "pack_id": "verbs500",
+  "title": "B1 Verbs 401–500",
+  "seconds_per_letter": 5,
+  "items": [
+    {
+      "item_id": "accompany",
+      "word": "accompany"
+    },
+    {
+      "item_id": "earn",
+      "word": "earn"
+    },
+    {
+      "item_id": "attach",
+      "word": "attach"
+    },
+    {
+      "item_id": "count",
+      "word": "count"
+    },
+    {
+      "item_id": "appeal",
+      "word": "appeal"
+    },
+    {
+      "item_id": "hate",
+      "word": "hate"
+    },
+    {
+      "item_id": "rest",
+      "word": "rest"
+    },
+    {
+      "item_id": "switch",
+      "word": "switch"
+    },
+    {
+      "item_id": "damage",
+      "word": "damage"
+    },
+    {
+      "item_id": "search",
+      "word": "search"
+    },
+    {
+      "item_id": "steal",
+      "word": "steal"
+    },
+    {
+      "item_id": "explore",
+      "word": "explore"
+    },
+    {
+      "item_id": "surround",
+      "word": "surround"
+    },
+    {
+      "item_id": "question",
+      "word": "question"
+    },
+    {
+      "item_id": "withdraw",
+      "word": "withdraw"
+    },
+    {
+      "item_id": "paint",
+      "word": "paint"
+    },
+    {
+      "item_id": "judge",
+      "word": "judge"
+    },
+    {
+      "item_id": "separate",
+      "word": "separate"
+    },
+    {
+      "item_id": "connect",
+      "word": "connect"
+    },
+    {
+      "item_id": "owe",
+      "word": "owe"
+    },
+    {
+      "item_id": "knock",
+      "word": "knock"
+    },
+    {
+      "item_id": "pursue",
+      "word": "pursue"
+    },
+    {
+      "item_id": "occupy",
+      "word": "occupy"
+    },
+    {
+      "item_id": "house",
+      "word": "house"
+    },
+    {
+      "item_id": "stretch",
+      "word": "stretch"
+    },
+    {
+      "item_id": "view",
+      "word": "view"
+    },
+    {
+      "item_id": "expand",
+      "word": "expand"
+    },
+    {
+      "item_id": "back",
+      "word": "back"
+    },
+    {
+      "item_id": "light",
+      "word": "light"
+    },
+    {
+      "item_id": "challenge",
+      "word": "challenge"
+    },
+    {
+      "item_id": "list",
+      "word": "list"
+    },
+    {
+      "item_id": "suit",
+      "word": "suit"
+    },
+    {
+      "item_id": "elect",
+      "word": "elect"
+    },
+    {
+      "item_id": "tie",
+      "word": "tie"
+    },
+    {
+      "item_id": "exclude",
+      "word": "exclude"
+    },
+    {
+      "item_id": "review",
+      "word": "review"
+    },
+    {
+      "item_id": "appreciate",
+      "word": "appreciate"
+    },
+    {
+      "item_id": "permit",
+      "word": "permit"
+    },
+    {
+      "item_id": "benefit",
+      "word": "benefit"
+    },
+    {
+      "item_id": "engage",
+      "word": "engage"
+    },
+    {
+      "item_id": "abandon",
+      "word": "abandon"
+    },
+    {
+      "item_id": "blame",
+      "word": "blame"
+    },
+    {
+      "item_id": "clean",
+      "word": "clean"
+    },
+    {
+      "item_id": "quote",
+      "word": "quote"
+    },
+    {
+      "item_id": "rule",
+      "word": "rule"
+    },
+    {
+      "item_id": "dominate",
+      "word": "dominate"
+    },
+    {
+      "item_id": "glance",
+      "word": "glance"
+    },
+    {
+      "item_id": "trust",
+      "word": "trust"
+    },
+    {
+      "item_id": "interpret",
+      "word": "interpret"
+    },
+    {
+      "item_id": "land",
+      "word": "land"
+    },
+    {
+      "item_id": "mix",
+      "word": "mix"
+    },
+    {
+      "item_id": "acknowledge",
+      "word": "acknowledge"
+    },
+    {
+      "item_id": "register",
+      "word": "register"
+    },
+    {
+      "item_id": "complain",
+      "word": "complain"
+    },
+    {
+      "item_id": "dismiss",
+      "word": "dismiss"
+    },
+    {
+      "item_id": "shift",
+      "word": "shift"
+    },
+    {
+      "item_id": "analyse",
+      "word": "analyse"
+    },
+    {
+      "item_id": "restore",
+      "word": "restore"
+    },
+    {
+      "item_id": "convince",
+      "word": "convince"
+    },
+    {
+      "item_id": "oppose",
+      "word": "oppose"
+    },
+    {
+      "item_id": "defend",
+      "word": "defend"
+    },
+    {
+      "item_id": "alter",
+      "word": "alter"
+    },
+    {
+      "item_id": "arrest",
+      "word": "arrest"
+    },
+    {
+      "item_id": "bother",
+      "word": "bother"
+    },
+    {
+      "item_id": "accuse",
+      "word": "accuse"
+    },
+    {
+      "item_id": "possess",
+      "word": "possess"
+    },
+    {
+      "item_id": "restrict",
+      "word": "restrict"
+    },
+    {
+      "item_id": "distinguish",
+      "word": "distinguish"
+    },
+    {
+      "item_id": "incorporate",
+      "word": "incorporate"
+    },
+    {
+      "item_id": "reckon",
+      "word": "reckon"
+    },
+    {
+      "item_id": "proceed",
+      "word": "proceed"
+    },
+    {
+      "item_id": "assist",
+      "word": "assist"
+    },
+    {
+      "item_id": "stress",
+      "word": "stress"
+    },
+    {
+      "item_id": "justify",
+      "word": "justify"
+    },
+    {
+      "item_id": "suspect",
+      "word": "suspect"
+    },
+    {
+      "item_id": "construct",
+      "word": "construct"
+    },
+    {
+      "item_id": "trade",
+      "word": "trade"
+    },
+    {
+      "item_id": "wake",
+      "word": "wake"
+    },
+    {
+      "item_id": "implement",
+      "word": "implement"
+    },
+    {
+      "item_id": "print",
+      "word": "print"
+    },
+    {
+      "item_id": "calculate",
+      "word": "calculate"
+    },
+    {
+      "item_id": "guess",
+      "word": "guess"
+    },
+    {
+      "item_id": "constitute",
+      "word": "constitute"
+    },
+    {
+      "item_id": "cope",
+      "word": "cope"
+    },
+    {
+      "item_id": "cast",
+      "word": "cast"
+    },
+    {
+      "item_id": "resolve",
+      "word": "resolve"
+    },
+    {
+      "item_id": "solve",
+      "word": "solve"
+    },
+    {
+      "item_id": "feed",
+      "word": "feed"
+    },
+    {
+      "item_id": "submit",
+      "word": "submit"
+    },
+    {
+      "item_id": "relax",
+      "word": "relax"
+    },
+    {
+      "item_id": "purchase",
+      "word": "purchase"
+    },
+    {
+      "item_id": "specify",
+      "word": "specify"
+    },
+    {
+      "item_id": "monitor",
+      "word": "monitor"
+    },
+    {
+      "item_id": "pour",
+      "word": "pour"
+    },
+    {
+      "item_id": "urge",
+      "word": "urge"
+    },
+    {
+      "item_id": "locate",
+      "word": "locate"
+    },
+    {
+      "item_id": "struggle",
+      "word": "struggle"
+    },
+    {
+      "item_id": "convert",
+      "word": "convert"
+    },
+    {
+      "item_id": "please",
+      "word": "please"
+    },
+    {
+      "item_id": "sort",
+      "word": "sort"
+    }
+  ]
+}

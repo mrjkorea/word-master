@@ -1,0 +1,407 @@
+{
+  "pack_id": "adjectives600",
+  "title": "B2 Adjectives 501–600",
+  "seconds_per_letter": 5,
+  "items": [
+    {
+      "item_id": "acute",
+      "word": "acute"
+    },
+    {
+      "item_id": "bare",
+      "word": "bare"
+    },
+    {
+      "item_id": "valid",
+      "word": "valid"
+    },
+    {
+      "item_id": "depending",
+      "word": "depending"
+    },
+    {
+      "item_id": "classic",
+      "word": "classic"
+    },
+    {
+      "item_id": "ethnic",
+      "word": "ethnic"
+    },
+    {
+      "item_id": "automatic",
+      "word": "automatic"
+    },
+    {
+      "item_id": "liable",
+      "word": "liable"
+    },
+    {
+      "item_id": "well",
+      "word": "well"
+    },
+    {
+      "item_id": "revolutionary",
+      "word": "revolutionary"
+    },
+    {
+      "item_id": "sole",
+      "word": "sole"
+    },
+    {
+      "item_id": "reliable",
+      "word": "reliable"
+    },
+    {
+      "item_id": "medieval",
+      "word": "medieval"
+    },
+    {
+      "item_id": "established",
+      "word": "established"
+    },
+    {
+      "item_id": "intellectual",
+      "word": "intellectual"
+    },
+    {
+      "item_id": "pregnant",
+      "word": "pregnant"
+    },
+    {
+      "item_id": "electrical",
+      "word": "electrical"
+    },
+    {
+      "item_id": "socialist",
+      "word": "socialist"
+    },
+    {
+      "item_id": "exact",
+      "word": "exact"
+    },
+    {
+      "item_id": "mutual",
+      "word": "mutual"
+    },
+    {
+      "item_id": "curious",
+      "word": "curious"
+    },
+    {
+      "item_id": "identical",
+      "word": "identical"
+    },
+    {
+      "item_id": "satisfactory",
+      "word": "satisfactory"
+    },
+    {
+      "item_id": "electoral",
+      "word": "electoral"
+    },
+    {
+      "item_id": "urgent",
+      "word": "urgent"
+    },
+    {
+      "item_id": "distinctive",
+      "word": "distinctive"
+    },
+    {
+      "item_id": "marginal",
+      "word": "marginal"
+    },
+    {
+      "item_id": "structural",
+      "word": "structural"
+    },
+    {
+      "item_id": "encouraging",
+      "word": "encouraging"
+    },
+    {
+      "item_id": "above",
+      "word": "above"
+    },
+    {
+      "item_id": "contrary",
+      "word": "contrary"
+    },
+    {
+      "item_id": "fun",
+      "word": "fun"
+    },
+    {
+      "item_id": "everyday",
+      "word": "everyday"
+    },
+    {
+      "item_id": "determined",
+      "word": "determined"
+    },
+    {
+      "item_id": "controversial",
+      "word": "controversial"
+    },
+    {
+      "item_id": "organic",
+      "word": "organic"
+    },
+    {
+      "item_id": "historic",
+      "word": "historic"
+    },
+    {
+      "item_id": "desirable",
+      "word": "desirable"
+    },
+    {
+      "item_id": "presidential",
+      "word": "presidential"
+    },
+    {
+      "item_id": "unexpected",
+      "word": "unexpected"
+    },
+    {
+      "item_id": "gross",
+      "word": "gross"
+    },
+    {
+      "item_id": "superb",
+      "word": "superb"
+    },
+    {
+      "item_id": "innocent",
+      "word": "innocent"
+    },
+    {
+      "item_id": "statistical",
+      "word": "statistical"
+    },
+    {
+      "item_id": "marked",
+      "word": "marked"
+    },
+    {
+      "item_id": "gastric",
+      "word": "gastric"
+    },
+    {
+      "item_id": "collective",
+      "word": "collective"
+    },
+    {
+      "item_id": "naked",
+      "word": "naked"
+    },
+    {
+      "item_id": "reluctant",
+      "word": "reluctant"
+    },
+    {
+      "item_id": "experienced",
+      "word": "experienced"
+    },
+    {
+      "item_id": "nearby",
+      "word": "nearby"
+    },
+    {
+      "item_id": "exclusive",
+      "word": "exclusive"
+    },
+    {
+      "item_id": "convenient",
+      "word": "convenient"
+    },
+    {
+      "item_id": "sheer",
+      "word": "sheer"
+    },
+    {
+      "item_id": "ruling",
+      "word": "ruling"
+    },
+    {
+      "item_id": "uncertain",
+      "word": "uncertain"
+    },
+    {
+      "item_id": "fellow",
+      "word": "fellow"
+    },
+    {
+      "item_id": "diplomatic",
+      "word": "diplomatic"
+    },
+    {
+      "item_id": "mixed",
+      "word": "mixed"
+    },
+    {
+      "item_id": "magnificent",
+      "word": "magnificent"
+    },
+    {
+      "item_id": "tremendous",
+      "word": "tremendous"
+    },
+    {
+      "item_id": "institutional",
+      "word": "institutional"
+    },
+    {
+      "item_id": "straightforward",
+      "word": "straightforward"
+    },
+    {
+      "item_id": "fulltime",
+      "word": "full-time"
+    },
+    {
+      "item_id": "still",
+      "word": "still"
+    },
+    {
+      "item_id": "biological",
+      "word": "biological"
+    },
+    {
+      "item_id": "functional",
+      "word": "functional"
+    },
+    {
+      "item_id": "mechanical",
+      "word": "mechanical"
+    },
+    {
+      "item_id": "expert",
+      "word": "expert"
+    },
+    {
+      "item_id": "minute",
+      "word": "minute"
+    },
+    {
+      "item_id": "equivalent",
+      "word": "equivalent"
+    },
+    {
+      "item_id": "unfair",
+      "word": "unfair"
+    },
+    {
+      "item_id": "prominent",
+      "word": "prominent"
+    },
+    {
+      "item_id": "subtle",
+      "word": "subtle"
+    },
+    {
+      "item_id": "capital",
+      "word": "capital"
+    },
+    {
+      "item_id": "unhappy",
+      "word": "unhappy"
+    },
+    {
+      "item_id": "aggressive",
+      "word": "aggressive"
+    },
+    {
+      "item_id": "superior",
+      "word": "superior"
+    },
+    {
+      "item_id": "painful",
+      "word": "painful"
+    },
+    {
+      "item_id": "imperial",
+      "word": "imperial"
+    },
+    {
+      "item_id": "spectacular",
+      "word": "spectacular"
+    },
+    {
+      "item_id": "artificial",
+      "word": "artificial"
+    },
+    {
+      "item_id": "oral",
+      "word": "oral"
+    },
+    {
+      "item_id": "spare",
+      "word": "spare"
+    },
+    {
+      "item_id": "intelligent",
+      "word": "intelligent"
+    },
+    {
+      "item_id": "explicit",
+      "word": "explicit"
+    },
+    {
+      "item_id": "hungry",
+      "word": "hungry"
+    },
+    {
+      "item_id": "objective",
+      "word": "objective"
+    },
+    {
+      "item_id": "subject",
+      "word": "subject"
+    },
+    {
+      "item_id": "romantic",
+      "word": "romantic"
+    },
+    {
+      "item_id": "parttime",
+      "word": "part-time"
+    },
+    {
+      "item_id": "workingclass",
+      "word": "working-class"
+    },
+    {
+      "item_id": "legislative",
+      "word": "legislative"
+    },
+    {
+      "item_id": "nasty",
+      "word": "nasty"
+    },
+    {
+      "item_id": "native",
+      "word": "native"
+    },
+    {
+      "item_id": "amazing",
+      "word": "amazing"
+    },
+    {
+      "item_id": "comparable",
+      "word": "comparable"
+    },
+    {
+      "item_id": "successive",
+      "word": "successive"
+    },
+    {
+      "item_id": "loud",
+      "word": "loud"
+    },
+    {
+      "item_id": "unnecessary",
+      "word": "unnecessary"
+    }
+  ]
+}

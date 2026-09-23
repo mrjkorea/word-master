@@ -1,0 +1,407 @@
+{
+  "pack_id": "adjectives400",
+  "title": "B1 Adjectives 301–400",
+  "seconds_per_letter": 5,
+  "items": [
+    {
+      "item_id": "yellow",
+      "word": "yellow"
+    },
+    {
+      "item_id": "dear",
+      "word": "dear"
+    },
+    {
+      "item_id": "longterm",
+      "word": "long-term"
+    },
+    {
+      "item_id": "lucky",
+      "word": "lucky"
+    },
+    {
+      "item_id": "extensive",
+      "word": "extensive"
+    },
+    {
+      "item_id": "glad",
+      "word": "glad"
+    },
+    {
+      "item_id": "surprised",
+      "word": "surprised"
+    },
+    {
+      "item_id": "moral",
+      "word": "moral"
+    },
+    {
+      "item_id": "efficient",
+      "word": "efficient"
+    },
+    {
+      "item_id": "tough",
+      "word": "tough"
+    },
+    {
+      "item_id": "willing",
+      "word": "willing"
+    },
+    {
+      "item_id": "healthy",
+      "word": "healthy"
+    },
+    {
+      "item_id": "comfortable",
+      "word": "comfortable"
+    },
+    {
+      "item_id": "daily",
+      "word": "daily"
+    },
+    {
+      "item_id": "sudden",
+      "word": "sudden"
+    },
+    {
+      "item_id": "keen",
+      "word": "keen"
+    },
+    {
+      "item_id": "conventional",
+      "word": "conventional"
+    },
+    {
+      "item_id": "voluntary",
+      "word": "voluntary"
+    },
+    {
+      "item_id": "valuable",
+      "word": "valuable"
+    },
+    {
+      "item_id": "slight",
+      "word": "slight"
+    },
+    {
+      "item_id": "dramatic",
+      "word": "dramatic"
+    },
+    {
+      "item_id": "golden",
+      "word": "golden"
+    },
+    {
+      "item_id": "temporary",
+      "word": "temporary"
+    },
+    {
+      "item_id": "silent",
+      "word": "silent"
+    },
+    {
+      "item_id": "opposite",
+      "word": "opposite"
+    },
+    {
+      "item_id": "videotaped",
+      "word": "video-taped"
+    },
+    {
+      "item_id": "ideal",
+      "word": "ideal"
+    },
+    {
+      "item_id": "tired",
+      "word": "tired"
+    },
+    {
+      "item_id": "statutory",
+      "word": "statutory"
+    },
+    {
+      "item_id": "federal",
+      "word": "federal"
+    },
+    {
+      "item_id": "flat",
+      "word": "flat"
+    },
+    {
+      "item_id": "like",
+      "word": "like"
+    },
+    {
+      "item_id": "outside",
+      "word": "outside"
+    },
+    {
+      "item_id": "competitive",
+      "word": "competitive"
+    },
+    {
+      "item_id": "acceptable",
+      "word": "acceptable"
+    },
+    {
+      "item_id": "net",
+      "word": "net"
+    },
+    {
+      "item_id": "sensitive",
+      "word": "sensitive"
+    },
+    {
+      "item_id": "dependent",
+      "word": "dependent"
+    },
+    {
+      "item_id": "pure",
+      "word": "pure"
+    },
+    {
+      "item_id": "global",
+      "word": "global"
+    },
+    {
+      "item_id": "expected",
+      "word": "expected"
+    },
+    {
+      "item_id": "alright",
+      "word": "alright"
+    },
+    {
+      "item_id": "sad",
+      "word": "sad"
+    },
+    {
+      "item_id": "emotional",
+      "word": "emotional"
+    },
+    {
+      "item_id": "adequate",
+      "word": "adequate"
+    },
+    {
+      "item_id": "pale",
+      "word": "pale"
+    },
+    {
+      "item_id": "administrative",
+      "word": "administrative"
+    },
+    {
+      "item_id": "wooden",
+      "word": "wooden"
+    },
+    {
+      "item_id": "surprising",
+      "word": "surprising"
+    },
+    {
+      "item_id": "remarkable",
+      "word": "remarkable"
+    },
+    {
+      "item_id": "brilliant",
+      "word": "brilliant"
+    },
+    {
+      "item_id": "principal",
+      "word": "principal"
+    },
+    {
+      "item_id": "proposed",
+      "word": "proposed"
+    },
+    {
+      "item_id": "absolute",
+      "word": "absolute"
+    },
+    {
+      "item_id": "rapid",
+      "word": "rapid"
+    },
+    {
+      "item_id": "rough",
+      "word": "rough"
+    },
+    {
+      "item_id": "sweet",
+      "word": "sweet"
+    },
+    {
+      "item_id": "solid",
+      "word": "solid"
+    },
+    {
+      "item_id": "level",
+      "word": "level"
+    },
+    {
+      "item_id": "electronic",
+      "word": "electronic"
+    },
+    {
+      "item_id": "comprehensive",
+      "word": "comprehensive"
+    },
+    {
+      "item_id": "sick",
+      "word": "sick"
+    },
+    {
+      "item_id": "near",
+      "word": "near"
+    },
+    {
+      "item_id": "written",
+      "word": "written"
+    },
+    {
+      "item_id": "ill",
+      "word": "ill"
+    },
+    {
+      "item_id": "literary",
+      "word": "literary"
+    },
+    {
+      "item_id": "wet",
+      "word": "wet"
+    },
+    {
+      "item_id": "extreme",
+      "word": "extreme"
+    },
+    {
+      "item_id": "armed",
+      "word": "armed"
+    },
+    {
+      "item_id": "supreme",
+      "word": "supreme"
+    },
+    {
+      "item_id": "visual",
+      "word": "visual"
+    },
+    {
+      "item_id": "genuine",
+      "word": "genuine"
+    },
+    {
+      "item_id": "exciting",
+      "word": "exciting"
+    },
+    {
+      "item_id": "maximum",
+      "word": "maximum"
+    },
+    {
+      "item_id": "widespread",
+      "word": "widespread"
+    },
+    {
+      "item_id": "involved",
+      "word": "involved"
+    },
+    {
+      "item_id": "confident",
+      "word": "confident"
+    },
+    {
+      "item_id": "radical",
+      "word": "radical"
+    },
+    {
+      "item_id": "stupid",
+      "word": "stupid"
+    },
+    {
+      "item_id": "grand",
+      "word": "grand"
+    },
+    {
+      "item_id": "mean",
+      "word": "mean"
+    },
+    {
+      "item_id": "numerous",
+      "word": "numerous"
+    },
+    {
+      "item_id": "classical",
+      "word": "classical"
+    },
+    {
+      "item_id": "distinct",
+      "word": "distinct"
+    },
+    {
+      "item_id": "mad",
+      "word": "mad"
+    },
+    {
+      "item_id": "false",
+      "word": "false"
+    },
+    {
+      "item_id": "proud",
+      "word": "proud"
+    },
+    {
+      "item_id": "advanced",
+      "word": "advanced"
+    },
+    {
+      "item_id": "secret",
+      "word": "secret"
+    },
+    {
+      "item_id": "agricultural",
+      "word": "agricultural"
+    },
+    {
+      "item_id": "helpful",
+      "word": "helpful"
+    },
+    {
+      "item_id": "mass",
+      "word": "mass"
+    },
+    {
+      "item_id": "tight",
+      "word": "tight"
+    },
+    {
+      "item_id": "gentle",
+      "word": "gentle"
+    },
+    {
+      "item_id": "consistent",
+      "word": "consistent"
+    },
+    {
+      "item_id": "anxious",
+      "word": "anxious"
+    },
+    {
+      "item_id": "mere",
+      "word": "mere"
+    },
+    {
+      "item_id": "nervous",
+      "word": "nervous"
+    },
+    {
+      "item_id": "pleased",
+      "word": "pleased"
+    },
+    {
+      "item_id": "holy",
+      "word": "holy"
+    }
+  ]
+}

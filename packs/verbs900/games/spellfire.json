@@ -1,0 +1,407 @@
+{
+  "pack_id": "verbs900",
+  "title": "B2 Verbs 801–900",
+  "seconds_per_letter": 5,
+  "items": [
+    {
+      "item_id": "colour",
+      "word": "colour"
+    },
+    {
+      "item_id": "edit",
+      "word": "edit"
+    },
+    {
+      "item_id": "sponsor",
+      "word": "sponsor"
+    },
+    {
+      "item_id": "crack",
+      "word": "crack"
+    },
+    {
+      "item_id": "inherit",
+      "word": "inherit"
+    },
+    {
+      "item_id": "resume",
+      "word": "resume"
+    },
+    {
+      "item_id": "conceal",
+      "word": "conceal"
+    },
+    {
+      "item_id": "disclose",
+      "word": "disclose"
+    },
+    {
+      "item_id": "function",
+      "word": "function"
+    },
+    {
+      "item_id": "conceive",
+      "word": "conceive"
+    },
+    {
+      "item_id": "guard",
+      "word": "guard"
+    },
+    {
+      "item_id": "opt",
+      "word": "opt"
+    },
+    {
+      "item_id": "criticize",
+      "word": "criticize"
+    },
+    {
+      "item_id": "couple",
+      "word": "couple"
+    },
+    {
+      "item_id": "tour",
+      "word": "tour"
+    },
+    {
+      "item_id": "drain",
+      "word": "drain"
+    },
+    {
+      "item_id": "decorate",
+      "word": "decorate"
+    },
+    {
+      "item_id": "incur",
+      "word": "incur"
+    },
+    {
+      "item_id": "ship",
+      "word": "ship"
+    },
+    {
+      "item_id": "research",
+      "word": "research"
+    },
+    {
+      "item_id": "spin",
+      "word": "spin"
+    },
+    {
+      "item_id": "speed",
+      "word": "speed"
+    },
+    {
+      "item_id": "scatter",
+      "word": "scatter"
+    },
+    {
+      "item_id": "advocate",
+      "word": "advocate"
+    },
+    {
+      "item_id": "slam",
+      "word": "slam"
+    },
+    {
+      "item_id": "facilitate",
+      "word": "facilitate"
+    },
+    {
+      "item_id": "warm",
+      "word": "warm"
+    },
+    {
+      "item_id": "creep",
+      "word": "creep"
+    },
+    {
+      "item_id": "round",
+      "word": "round"
+    },
+    {
+      "item_id": "assemble",
+      "word": "assemble"
+    },
+    {
+      "item_id": "regulate",
+      "word": "regulate"
+    },
+    {
+      "item_id": "vanish",
+      "word": "vanish"
+    },
+    {
+      "item_id": "will",
+      "word": "will"
+    },
+    {
+      "item_id": "skill",
+      "word": "skill"
+    },
+    {
+      "item_id": "embrace",
+      "word": "embrace"
+    },
+    {
+      "item_id": "complicate",
+      "word": "complicate"
+    },
+    {
+      "item_id": "sue",
+      "word": "sue"
+    },
+    {
+      "item_id": "contemplate",
+      "word": "contemplate"
+    },
+    {
+      "item_id": "reproduce",
+      "word": "reproduce"
+    },
+    {
+      "item_id": "signal",
+      "word": "signal"
+    },
+    {
+      "item_id": "age",
+      "word": "age"
+    },
+    {
+      "item_id": "confess",
+      "word": "confess"
+    },
+    {
+      "item_id": "telephone",
+      "word": "telephone"
+    },
+    {
+      "item_id": "dump",
+      "word": "dump"
+    },
+    {
+      "item_id": "endorse",
+      "word": "endorse"
+    },
+    {
+      "item_id": "heat",
+      "word": "heat"
+    },
+    {
+      "item_id": "smash",
+      "word": "smash"
+    },
+    {
+      "item_id": "centre",
+      "word": "centre"
+    },
+    {
+      "item_id": "classify",
+      "word": "classify"
+    },
+    {
+      "item_id": "explode",
+      "word": "explode"
+    },
+    {
+      "item_id": "tax",
+      "word": "tax"
+    },
+    {
+      "item_id": "tighten",
+      "word": "tighten"
+    },
+    {
+      "item_id": "deposit",
+      "word": "deposit"
+    },
+    {
+      "item_id": "arm",
+      "word": "arm"
+    },
+    {
+      "item_id": "post",
+      "word": "post"
+    },
+    {
+      "item_id": "service",
+      "word": "service"
+    },
+    {
+      "item_id": "top",
+      "word": "top"
+    },
+    {
+      "item_id": "flood",
+      "word": "flood"
+    },
+    {
+      "item_id": "taste",
+      "word": "taste"
+    },
+    {
+      "item_id": "decrease",
+      "word": "decrease"
+    },
+    {
+      "item_id": "seal",
+      "word": "seal"
+    },
+    {
+      "item_id": "reward",
+      "word": "reward"
+    },
+    {
+      "item_id": "thrust",
+      "word": "thrust"
+    },
+    {
+      "item_id": "dispose",
+      "word": "dispose"
+    },
+    {
+      "item_id": "widen",
+      "word": "widen"
+    },
+    {
+      "item_id": "model",
+      "word": "model"
+    },
+    {
+      "item_id": "reassure",
+      "word": "reassure"
+    },
+    {
+      "item_id": "stuff",
+      "word": "stuff"
+    },
+    {
+      "item_id": "flash",
+      "word": "flash"
+    },
+    {
+      "item_id": "shed",
+      "word": "shed"
+    },
+    {
+      "item_id": "discipline",
+      "word": "discipline"
+    },
+    {
+      "item_id": "halt",
+      "word": "halt"
+    },
+    {
+      "item_id": "sentence",
+      "word": "sentence"
+    },
+    {
+      "item_id": "coincide",
+      "word": "coincide"
+    },
+    {
+      "item_id": "dissolve",
+      "word": "dissolve"
+    },
+    {
+      "item_id": "praise",
+      "word": "praise"
+    },
+    {
+      "item_id": "tempt",
+      "word": "tempt"
+    },
+    {
+      "item_id": "grasp",
+      "word": "grasp"
+    },
+    {
+      "item_id": "commence",
+      "word": "commence"
+    },
+    {
+      "item_id": "discharge",
+      "word": "discharge"
+    },
+    {
+      "item_id": "effect",
+      "word": "effect"
+    },
+    {
+      "item_id": "spoil",
+      "word": "spoil"
+    },
+    {
+      "item_id": "pin",
+      "word": "pin"
+    },
+    {
+      "item_id": "draft",
+      "word": "draft"
+    },
+    {
+      "item_id": "formulate",
+      "word": "formulate"
+    },
+    {
+      "item_id": "position",
+      "word": "position"
+    },
+    {
+      "item_id": "exhaust",
+      "word": "exhaust"
+    },
+    {
+      "item_id": "long",
+      "word": "long"
+    },
+    {
+      "item_id": "enquire",
+      "word": "enquire"
+    },
+    {
+      "item_id": "supplement",
+      "word": "supplement"
+    },
+    {
+      "item_id": "neglect",
+      "word": "neglect"
+    },
+    {
+      "item_id": "suck",
+      "word": "suck"
+    },
+    {
+      "item_id": "delight",
+      "word": "delight"
+    },
+    {
+      "item_id": "diminish",
+      "word": "diminish"
+    },
+    {
+      "item_id": "depict",
+      "word": "depict"
+    },
+    {
+      "item_id": "honour",
+      "word": "honour"
+    },
+    {
+      "item_id": "drown",
+      "word": "drown"
+    },
+    {
+      "item_id": "rate",
+      "word": "rate"
+    },
+    {
+      "item_id": "price",
+      "word": "price"
+    },
+    {
+      "item_id": "omit",
+      "word": "omit"
+    }
+  ]
+}

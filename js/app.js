@@ -9,6 +9,10 @@
     "nouns100", "verbs100", "adjectives100", "nouns200", "little100",
     "verbs200", "adjectives200", "adverbs100", "nouns300", "verbs300",
     "adjectives300", "nouns400", "adverbs200", "nouns500", "verbs400",
+    "adjectives400", "nouns600", "little210", "adverbs300", "nouns700",
+    "verbs500", "adjectives500", "nouns800", "verbs600", "adjectives600",
+    "nouns900", "adverbs427", "nouns1000", "verbs700", "adjectives700",
+    "verbs800", "adjectives800", "verbs900", "adjectives900", "verbs1000",
   ];
 
   const DEMO_FALLBACK = {
@@ -871,11 +875,7 @@
   }
 
   function markIndexNext() {
-    const path = [
-      "nouns100", "verbs100", "adjectives100", "nouns200", "little100",
-      "verbs200", "adjectives200", "adverbs100", "nouns300", "verbs300",
-      "adjectives300", "nouns400", "adverbs200", "nouns500", "verbs400",
-    ];
+    const path = PACK_IDS;
     function setFor(pid) {
       return Object.keys(state.sets).map(function (k) { return state.sets[k]; }).find(function (s) {
         return s.packId === pid;

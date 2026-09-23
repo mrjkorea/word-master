@@ -1,0 +1,1008 @@
+{
+  "pack_id": "adjectives700",
+  "title": "B2 Adjectives 601–700",
+  "module_id": "word_master",
+  "seconds": 15,
+  "items": [
+    {
+      "item_id": "realistic",
+      "question": "looking like real life",
+      "correct": "realistic",
+      "wrong": [
+        "content",
+        "decent"
+      ],
+      "word": "realistic"
+    },
+    {
+      "item_id": "content",
+      "question": "happy and satisfied",
+      "correct": "content",
+      "wrong": [
+        "realistic",
+        "decent"
+      ],
+      "word": "content"
+    },
+    {
+      "item_id": "decent",
+      "question": "fairly good and kind",
+      "correct": "decent",
+      "wrong": [
+        "realistic",
+        "content"
+      ],
+      "word": "decent"
+    },
+    {
+      "item_id": "influential",
+      "question": "able to change others",
+      "correct": "influential",
+      "wrong": [
+        "realistic",
+        "content"
+      ],
+      "word": "influential"
+    },
+    {
+      "item_id": "dull",
+      "question": "not bright or interesting",
+      "correct": "dull",
+      "wrong": [
+        "realistic",
+        "content"
+      ],
+      "word": "dull"
+    },
+    {
+      "item_id": "faint",
+      "question": "very weak and pale",
+      "correct": "faint",
+      "wrong": [
+        "realistic",
+        "content"
+      ],
+      "word": "faint"
+    },
+    {
+      "item_id": "ridiculous",
+      "question": "very silly and funny",
+      "correct": "ridiculous",
+      "wrong": [
+        "realistic",
+        "content"
+      ],
+      "word": "ridiculous"
+    },
+    {
+      "item_id": "neat",
+      "question": "tidy and in order",
+      "correct": "neat",
+      "wrong": [
+        "realistic",
+        "content"
+      ],
+      "word": "neat"
+    },
+    {
+      "item_id": "elegant",
+      "question": "beautiful and graceful",
+      "correct": "elegant",
+      "wrong": [
+        "realistic",
+        "content"
+      ],
+      "word": "elegant"
+    },
+    {
+      "item_id": "lesser",
+      "question": "smaller or less important",
+      "correct": "lesser",
+      "wrong": [
+        "realistic",
+        "content"
+      ],
+      "word": "lesser"
+    },
+    {
+      "item_id": "improved",
+      "question": "made better than before",
+      "correct": "improved",
+      "wrong": [
+        "realistic",
+        "content"
+      ],
+      "word": "improved"
+    },
+    {
+      "item_id": "marvellous",
+      "question": "wonderful and amazing",
+      "correct": "marvellous",
+      "wrong": [
+        "realistic",
+        "content"
+      ],
+      "word": "marvellous"
+    },
+    {
+      "item_id": "secure",
+      "question": "safe and well protected",
+      "correct": "secure",
+      "wrong": [
+        "realistic",
+        "content"
+      ],
+      "word": "secure"
+    },
+    {
+      "item_id": "genetic",
+      "question": "passed down in families",
+      "correct": "genetic",
+      "wrong": [
+        "realistic",
+        "content"
+      ],
+      "word": "genetic"
+    },
+    {
+      "item_id": "lonely",
+      "question": "sad from being alone",
+      "correct": "lonely",
+      "wrong": [
+        "realistic",
+        "content"
+      ],
+      "word": "lonely"
+    },
+    {
+      "item_id": "partial",
+      "question": "not the whole thing",
+      "correct": "partial",
+      "wrong": [
+        "realistic",
+        "content"
+      ],
+      "word": "partial"
+    },
+    {
+      "item_id": "weekly",
+      "question": "happening once a week",
+      "correct": "weekly",
+      "wrong": [
+        "realistic",
+        "content"
+      ],
+      "word": "weekly"
+    },
+    {
+      "item_id": "damp",
+      "question": "a little bit wet",
+      "correct": "damp",
+      "wrong": [
+        "realistic",
+        "content"
+      ],
+      "word": "damp"
+    },
+    {
+      "item_id": "intensive",
+      "question": "needing lots of hard work",
+      "correct": "intensive",
+      "wrong": [
+        "realistic",
+        "content"
+      ],
+      "word": "intensive"
+    },
+    {
+      "item_id": "casual",
+      "question": "relaxed and not fancy",
+      "correct": "casual",
+      "wrong": [
+        "realistic",
+        "content"
+      ],
+      "word": "casual"
+    },
+    {
+      "item_id": "precious",
+      "question": "very special and loved",
+      "correct": "precious",
+      "wrong": [
+        "realistic",
+        "content"
+      ],
+      "word": "precious"
+    },
+    {
+      "item_id": "changing",
+      "question": "becoming something different",
+      "correct": "changing",
+      "wrong": [
+        "realistic",
+        "content"
+      ],
+      "word": "changing"
+    },
+    {
+      "item_id": "crazy",
+      "question": "wild and very silly",
+      "correct": "crazy",
+      "wrong": [
+        "realistic",
+        "content"
+      ],
+      "word": "crazy"
+    },
+    {
+      "item_id": "brave",
+      "question": "not afraid of danger",
+      "correct": "brave",
+      "wrong": [
+        "realistic",
+        "content"
+      ],
+      "word": "brave"
+    },
+    {
+      "item_id": "continued",
+      "question": "going on without stopping",
+      "correct": "continued",
+      "wrong": [
+        "realistic",
+        "content"
+      ],
+      "word": "continued"
+    },
+    {
+      "item_id": "delicate",
+      "question": "fine and easily broken",
+      "correct": "delicate",
+      "wrong": [
+        "realistic",
+        "content"
+      ],
+      "word": "delicate"
+    },
+    {
+      "item_id": "vertical",
+      "question": "straight up and down",
+      "correct": "vertical",
+      "wrong": [
+        "realistic",
+        "content"
+      ],
+      "word": "vertical"
+    },
+    {
+      "item_id": "assistant",
+      "question": "helping the main person",
+      "correct": "assistant",
+      "wrong": [
+        "realistic",
+        "content"
+      ],
+      "word": "assistant"
+    },
+    {
+      "item_id": "excessive",
+      "question": "much more than needed",
+      "correct": "excessive",
+      "wrong": [
+        "realistic",
+        "content"
+      ],
+      "word": "excessive"
+    },
+    {
+      "item_id": "digital",
+      "question": "using computers and screens",
+      "correct": "digital",
+      "wrong": [
+        "realistic",
+        "content"
+      ],
+      "word": "digital"
+    },
+    {
+      "item_id": "steep",
+      "question": "rising up very sharply",
+      "correct": "steep",
+      "wrong": [
+        "realistic",
+        "content"
+      ],
+      "word": "steep"
+    },
+    {
+      "item_id": "exceptional",
+      "question": "much better than usual",
+      "correct": "exceptional",
+      "wrong": [
+        "realistic",
+        "content"
+      ],
+      "word": "exceptional"
+    },
+    {
+      "item_id": "random",
+      "question": "with no special order",
+      "correct": "random",
+      "wrong": [
+        "realistic",
+        "content"
+      ],
+      "word": "random"
+    },
+    {
+      "item_id": "harsh",
+      "question": "too rough or unkind",
+      "correct": "harsh",
+      "wrong": [
+        "realistic",
+        "content"
+      ],
+      "word": "harsh"
+    },
+    {
+      "item_id": "alleged",
+      "question": "said but not proven",
+      "correct": "alleged",
+      "wrong": [
+        "realistic",
+        "content"
+      ],
+      "word": "alleged"
+    },
+    {
+      "item_id": "complicated",
+      "question": "hard with many parts",
+      "correct": "complicated",
+      "wrong": [
+        "realistic",
+        "content"
+      ],
+      "word": "complicated"
+    },
+    {
+      "item_id": "concrete",
+      "question": "made of hard gray stone",
+      "correct": "concrete",
+      "wrong": [
+        "realistic",
+        "content"
+      ],
+      "word": "concrete"
+    },
+    {
+      "item_id": "progressive",
+      "question": "moving forward little by little",
+      "correct": "progressive",
+      "wrong": [
+        "realistic",
+        "content"
+      ],
+      "word": "progressive"
+    },
+    {
+      "item_id": "waiting",
+      "question": "staying until something happens",
+      "correct": "waiting",
+      "wrong": [
+        "realistic",
+        "content"
+      ],
+      "word": "waiting"
+    },
+    {
+      "item_id": "fierce",
+      "question": "strong and a bit scary",
+      "correct": "fierce",
+      "wrong": [
+        "realistic",
+        "content"
+      ],
+      "word": "fierce"
+    },
+    {
+      "item_id": "tropical",
+      "question": "hot and wet like jungle",
+      "correct": "tropical",
+      "wrong": [
+        "realistic",
+        "content"
+      ],
+      "word": "tropical"
+    },
+    {
+      "item_id": "delighted",
+      "question": "very happy and pleased",
+      "correct": "delighted",
+      "wrong": [
+        "realistic",
+        "content"
+      ],
+      "word": "delighted"
+    },
+    {
+      "item_id": "occupational",
+      "question": "about a person's job",
+      "correct": "occupational",
+      "wrong": [
+        "realistic",
+        "content"
+      ],
+      "word": "occupational"
+    },
+    {
+      "item_id": "related",
+      "question": "connected to each other",
+      "correct": "related",
+      "wrong": [
+        "realistic",
+        "content"
+      ],
+      "word": "related"
+    },
+    {
+      "item_id": "mild",
+      "question": "gentle not too strong",
+      "correct": "mild",
+      "wrong": [
+        "realistic",
+        "content"
+      ],
+      "word": "mild"
+    },
+    {
+      "item_id": "chronic",
+      "question": "lasting a very long time",
+      "correct": "chronic",
+      "wrong": [
+        "realistic",
+        "content"
+      ],
+      "word": "chronic"
+    },
+    {
+      "item_id": "splendid",
+      "question": "very beautiful and great",
+      "correct": "splendid",
+      "wrong": [
+        "realistic",
+        "content"
+      ],
+      "word": "splendid"
+    },
+    {
+      "item_id": "systematic",
+      "question": "done in careful order",
+      "correct": "systematic",
+      "wrong": [
+        "realistic",
+        "content"
+      ],
+      "word": "systematic"
+    },
+    {
+      "item_id": "handsome",
+      "question": "nice looking and neat",
+      "correct": "handsome",
+      "wrong": [
+        "realistic",
+        "content"
+      ],
+      "word": "handsome"
+    },
+    {
+      "item_id": "fascinating",
+      "question": "very interesting to watch",
+      "correct": "fascinating",
+      "wrong": [
+        "realistic",
+        "content"
+      ],
+      "word": "fascinating"
+    },
+    {
+      "item_id": "compulsory",
+      "question": "you must do it",
+      "correct": "compulsory",
+      "wrong": [
+        "realistic",
+        "content"
+      ],
+      "word": "compulsory"
+    },
+    {
+      "item_id": "ideological",
+      "question": "about big belief ideas",
+      "correct": "ideological",
+      "wrong": [
+        "realistic",
+        "content"
+      ],
+      "word": "ideological"
+    },
+    {
+      "item_id": "payable",
+      "question": "needing to be paid",
+      "correct": "payable",
+      "wrong": [
+        "realistic",
+        "content"
+      ],
+      "word": "payable"
+    },
+    {
+      "item_id": "elected",
+      "question": "chosen by a vote",
+      "correct": "elected",
+      "wrong": [
+        "realistic",
+        "content"
+      ],
+      "word": "elected"
+    },
+    {
+      "item_id": "estimated",
+      "question": "guessed about the amount",
+      "correct": "estimated",
+      "wrong": [
+        "realistic",
+        "content"
+      ],
+      "word": "estimated"
+    },
+    {
+      "item_id": "continental",
+      "question": "about a whole continent",
+      "correct": "continental",
+      "wrong": [
+        "realistic",
+        "content"
+      ],
+      "word": "continental"
+    },
+    {
+      "item_id": "operational",
+      "question": "working and ready now",
+      "correct": "operational",
+      "wrong": [
+        "realistic",
+        "content"
+      ],
+      "word": "operational"
+    },
+    {
+      "item_id": "parallel",
+      "question": "side by side never meeting",
+      "correct": "parallel",
+      "wrong": [
+        "realistic",
+        "content"
+      ],
+      "word": "parallel"
+    },
+    {
+      "item_id": "opposed",
+      "question": "against that idea",
+      "correct": "opposed",
+      "wrong": [
+        "realistic",
+        "content"
+      ],
+      "word": "opposed"
+    },
+    {
+      "item_id": "hostile",
+      "question": "unfriendly and a bit angry",
+      "correct": "hostile",
+      "wrong": [
+        "realistic",
+        "content"
+      ],
+      "word": "hostile"
+    },
+    {
+      "item_id": "technological",
+      "question": "about machines and computers",
+      "correct": "technological",
+      "wrong": [
+        "realistic",
+        "content"
+      ],
+      "word": "technological"
+    },
+    {
+      "item_id": "accounting",
+      "question": "about counting money records",
+      "correct": "accounting",
+      "wrong": [
+        "realistic",
+        "content"
+      ],
+      "word": "accounting"
+    },
+    {
+      "item_id": "peaceful",
+      "question": "calm and very quiet",
+      "correct": "peaceful",
+      "wrong": [
+        "realistic",
+        "content"
+      ],
+      "word": "peaceful"
+    },
+    {
+      "item_id": "horrible",
+      "question": "very bad and scary",
+      "correct": "horrible",
+      "wrong": [
+        "realistic",
+        "content"
+      ],
+      "word": "horrible"
+    },
+    {
+      "item_id": "accessible",
+      "question": "easy to get to",
+      "correct": "accessible",
+      "wrong": [
+        "realistic",
+        "content"
+      ],
+      "word": "accessible"
+    },
+    {
+      "item_id": "evil",
+      "question": "very mean and bad",
+      "correct": "evil",
+      "wrong": [
+        "realistic",
+        "content"
+      ],
+      "word": "evil"
+    },
+    {
+      "item_id": "provincial",
+      "question": "from a small town",
+      "correct": "provincial",
+      "wrong": [
+        "realistic",
+        "content"
+      ],
+      "word": "provincial"
+    },
+    {
+      "item_id": "adjacent",
+      "question": "next to something",
+      "correct": "adjacent",
+      "wrong": [
+        "realistic",
+        "content"
+      ],
+      "word": "adjacent"
+    },
+    {
+      "item_id": "smart",
+      "question": "clever and quick thinking",
+      "correct": "smart",
+      "wrong": [
+        "realistic",
+        "content"
+      ],
+      "word": "smart"
+    },
+    {
+      "item_id": "giant",
+      "question": "very very big",
+      "correct": "giant",
+      "wrong": [
+        "realistic",
+        "content"
+      ],
+      "word": "giant"
+    },
+    {
+      "item_id": "postwar",
+      "question": "after the war ended",
+      "correct": "post-war",
+      "wrong": [
+        "realistic",
+        "content"
+      ],
+      "word": "post-war"
+    },
+    {
+      "item_id": "waste",
+      "question": "leftover and not useful",
+      "correct": "waste",
+      "wrong": [
+        "realistic",
+        "content"
+      ],
+      "word": "waste"
+    },
+    {
+      "item_id": "forthcoming",
+      "question": "coming very soon",
+      "correct": "forthcoming",
+      "wrong": [
+        "realistic",
+        "content"
+      ],
+      "word": "forthcoming"
+    },
+    {
+      "item_id": "appointed",
+      "question": "chosen for a job",
+      "correct": "appointed",
+      "wrong": [
+        "realistic",
+        "content"
+      ],
+      "word": "appointed"
+    },
+    {
+      "item_id": "abstract",
+      "question": "made of shapes only",
+      "correct": "abstract",
+      "wrong": [
+        "realistic",
+        "content"
+      ],
+      "word": "abstract"
+    },
+    {
+      "item_id": "geographical",
+      "question": "about land and maps",
+      "correct": "geographical",
+      "wrong": [
+        "realistic",
+        "content"
+      ],
+      "word": "geographical"
+    },
+    {
+      "item_id": "dynamic",
+      "question": "full of energy",
+      "correct": "dynamic",
+      "wrong": [
+        "realistic",
+        "content"
+      ],
+      "word": "dynamic"
+    },
+    {
+      "item_id": "definite",
+      "question": "sure and very clear",
+      "correct": "definite",
+      "wrong": [
+        "realistic",
+        "content"
+      ],
+      "word": "definite"
+    },
+    {
+      "item_id": "endless",
+      "question": "with no end",
+      "correct": "endless",
+      "wrong": [
+        "realistic",
+        "content"
+      ],
+      "word": "endless"
+    },
+    {
+      "item_id": "communist",
+      "question": "shared by the whole group",
+      "correct": "communist",
+      "wrong": [
+        "realistic",
+        "content"
+      ],
+      "word": "communist"
+    },
+    {
+      "item_id": "neutral",
+      "question": "not on either side",
+      "correct": "neutral",
+      "wrong": [
+        "realistic",
+        "content"
+      ],
+      "word": "neutral"
+    },
+    {
+      "item_id": "combined",
+      "question": "joined together as one",
+      "correct": "combined",
+      "wrong": [
+        "realistic",
+        "content"
+      ],
+      "word": "combined"
+    },
+    {
+      "item_id": "vague",
+      "question": "not clear or exact",
+      "correct": "vague",
+      "wrong": [
+        "realistic",
+        "content"
+      ],
+      "word": "vague"
+    },
+    {
+      "item_id": "marine",
+      "question": "of the sea",
+      "correct": "marine",
+      "wrong": [
+        "realistic",
+        "content"
+      ],
+      "word": "marine"
+    },
+    {
+      "item_id": "notable",
+      "question": "worth noticing and important",
+      "correct": "notable",
+      "wrong": [
+        "realistic",
+        "content"
+      ],
+      "word": "notable"
+    },
+    {
+      "item_id": "lively",
+      "question": "full of happy energy",
+      "correct": "lively",
+      "wrong": [
+        "realistic",
+        "content"
+      ],
+      "word": "lively"
+    },
+    {
+      "item_id": "legitimate",
+      "question": "real and officially allowed",
+      "correct": "legitimate",
+      "wrong": [
+        "realistic",
+        "content"
+      ],
+      "word": "legitimate"
+    },
+    {
+      "item_id": "gay",
+      "question": "happy and brightly cheerful",
+      "correct": "gay",
+      "wrong": [
+        "realistic",
+        "content"
+      ],
+      "word": "gay"
+    },
+    {
+      "item_id": "moving",
+      "question": "making you feel strongly",
+      "correct": "moving",
+      "wrong": [
+        "realistic",
+        "content"
+      ],
+      "word": "moving"
+    },
+    {
+      "item_id": "mature",
+      "question": "fully grown and ready",
+      "correct": "mature",
+      "wrong": [
+        "realistic",
+        "content"
+      ],
+      "word": "mature"
+    },
+    {
+      "item_id": "head",
+      "question": "main or most important",
+      "correct": "head",
+      "wrong": [
+        "realistic",
+        "content"
+      ],
+      "word": "head"
+    },
+    {
+      "item_id": "wealthy",
+      "question": "having lots of money",
+      "correct": "wealthy",
+      "wrong": [
+        "realistic",
+        "content"
+      ],
+      "word": "wealthy"
+    },
+    {
+      "item_id": "magic",
+      "question": "using special secret power",
+      "correct": "magic",
+      "wrong": [
+        "realistic",
+        "content"
+      ],
+      "word": "magic"
+    },
+    {
+      "item_id": "coloured",
+      "question": "having bright pretty colors",
+      "correct": "coloured",
+      "wrong": [
+        "realistic",
+        "content"
+      ],
+      "word": "coloured"
+    },
+    {
+      "item_id": "reduced",
+      "question": "made smaller than before",
+      "correct": "reduced",
+      "wrong": [
+        "realistic",
+        "content"
+      ],
+      "word": "reduced"
+    },
+    {
+      "item_id": "super",
+      "question": "very very good",
+      "correct": "super",
+      "wrong": [
+        "realistic",
+        "content"
+      ],
+      "word": "super"
+    },
+    {
+      "item_id": "shared",
+      "question": "used by everyone together",
+      "correct": "shared",
+      "wrong": [
+        "realistic",
+        "content"
+      ],
+      "word": "shared"
+    },
+    {
+      "item_id": "artistic",
+      "question": "good at making art",
+      "correct": "artistic",
+      "wrong": [
+        "realistic",
+        "content"
+      ],
+      "word": "artistic"
+    },
+    {
+      "item_id": "adult",
+      "question": "grown up not a child",
+      "correct": "adult",
+      "wrong": [
+        "realistic",
+        "content"
+      ],
+      "word": "adult"
+    },
+    {
+      "item_id": "manufacturing",
+      "question": "making things in factories",
+      "correct": "manufacturing",
+      "wrong": [
+        "realistic",
+        "content"
+      ],
+      "word": "manufacturing"
+    }
+  ]
+}

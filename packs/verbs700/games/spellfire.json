@@ -1,0 +1,407 @@
+{
+  "pack_id": "verbs700",
+  "title": "B2 Verbs 601–700",
+  "seconds_per_letter": 5,
+  "items": [
+    {
+      "item_id": "tap",
+      "word": "tap"
+    },
+    {
+      "item_id": "request",
+      "word": "request"
+    },
+    {
+      "item_id": "confine",
+      "word": "confine"
+    },
+    {
+      "item_id": "rid",
+      "word": "rid"
+    },
+    {
+      "item_id": "scream",
+      "word": "scream"
+    },
+    {
+      "item_id": "sail",
+      "word": "sail"
+    },
+    {
+      "item_id": "adjust",
+      "word": "adjust"
+    },
+    {
+      "item_id": "block",
+      "word": "block"
+    },
+    {
+      "item_id": "adapt",
+      "word": "adapt"
+    },
+    {
+      "item_id": "absorb",
+      "word": "absorb"
+    },
+    {
+      "item_id": "encounter",
+      "word": "encounter"
+    },
+    {
+      "item_id": "defeat",
+      "word": "defeat"
+    },
+    {
+      "item_id": "protest",
+      "word": "protest"
+    },
+    {
+      "item_id": "communicate",
+      "word": "communicate"
+    },
+    {
+      "item_id": "file",
+      "word": "file"
+    },
+    {
+      "item_id": "govern",
+      "word": "govern"
+    },
+    {
+      "item_id": "reinforce",
+      "word": "reinforce"
+    },
+    {
+      "item_id": "injure",
+      "word": "injure"
+    },
+    {
+      "item_id": "swim",
+      "word": "swim"
+    },
+    {
+      "item_id": "disturb",
+      "word": "disturb"
+    },
+    {
+      "item_id": "doubt",
+      "word": "doubt"
+    },
+    {
+      "item_id": "react",
+      "word": "react"
+    },
+    {
+      "item_id": "fulfil",
+      "word": "fulfil"
+    },
+    {
+      "item_id": "frighten",
+      "word": "frighten"
+    },
+    {
+      "item_id": "stir",
+      "word": "stir"
+    },
+    {
+      "item_id": "trace",
+      "word": "trace"
+    },
+    {
+      "item_id": "progress",
+      "word": "progress"
+    },
+    {
+      "item_id": "exploit",
+      "word": "exploit"
+    },
+    {
+      "item_id": "seize",
+      "word": "seize"
+    },
+    {
+      "item_id": "park",
+      "word": "park"
+    },
+    {
+      "item_id": "collapse",
+      "word": "collapse"
+    },
+    {
+      "item_id": "pray",
+      "word": "pray"
+    },
+    {
+      "item_id": "remark",
+      "word": "remark"
+    },
+    {
+      "item_id": "gaze",
+      "word": "gaze"
+    },
+    {
+      "item_id": "burst",
+      "word": "burst"
+    },
+    {
+      "item_id": "relieve",
+      "word": "relieve"
+    },
+    {
+      "item_id": "allocate",
+      "word": "allocate"
+    },
+    {
+      "item_id": "risk",
+      "word": "risk"
+    },
+    {
+      "item_id": "smell",
+      "word": "smell"
+    },
+    {
+      "item_id": "transport",
+      "word": "transport"
+    },
+    {
+      "item_id": "grin",
+      "word": "grin"
+    },
+    {
+      "item_id": "wave",
+      "word": "wave"
+    },
+    {
+      "item_id": "hurry",
+      "word": "hurry"
+    },
+    {
+      "item_id": "murder",
+      "word": "murder"
+    },
+    {
+      "item_id": "sigh",
+      "word": "sigh"
+    },
+    {
+      "item_id": "double",
+      "word": "double"
+    },
+    {
+      "item_id": "instal",
+      "word": "instal"
+    },
+    {
+      "item_id": "suspend",
+      "word": "suspend"
+    },
+    {
+      "item_id": "wander",
+      "word": "wander"
+    },
+    {
+      "item_id": "disappoint",
+      "word": "disappoint"
+    },
+    {
+      "item_id": "wipe",
+      "word": "wipe"
+    },
+    {
+      "item_id": "inspire",
+      "word": "inspire"
+    },
+    {
+      "item_id": "undergo",
+      "word": "undergo"
+    },
+    {
+      "item_id": "balance",
+      "word": "balance"
+    },
+    {
+      "item_id": "ease",
+      "word": "ease"
+    },
+    {
+      "item_id": "convey",
+      "word": "convey"
+    },
+    {
+      "item_id": "reserve",
+      "word": "reserve"
+    },
+    {
+      "item_id": "wind",
+      "word": "wind"
+    },
+    {
+      "item_id": "witness",
+      "word": "witness"
+    },
+    {
+      "item_id": "crash",
+      "word": "crash"
+    },
+    {
+      "item_id": "confront",
+      "word": "confront"
+    },
+    {
+      "item_id": "precede",
+      "word": "precede"
+    },
+    {
+      "item_id": "wrap",
+      "word": "wrap"
+    },
+    {
+      "item_id": "anticipate",
+      "word": "anticipate"
+    },
+    {
+      "item_id": "attribute",
+      "word": "attribute"
+    },
+    {
+      "item_id": "sense",
+      "word": "sense"
+    },
+    {
+      "item_id": "spot",
+      "word": "spot"
+    },
+    {
+      "item_id": "devote",
+      "word": "devote"
+    },
+    {
+      "item_id": "condemn",
+      "word": "condemn"
+    },
+    {
+      "item_id": "integrate",
+      "word": "integrate"
+    },
+    {
+      "item_id": "bet",
+      "word": "bet"
+    },
+    {
+      "item_id": "modify",
+      "word": "modify"
+    },
+    {
+      "item_id": "swear",
+      "word": "swear"
+    },
+    {
+      "item_id": "cite",
+      "word": "cite"
+    },
+    {
+      "item_id": "correspond",
+      "word": "correspond"
+    },
+    {
+      "item_id": "slow",
+      "word": "slow"
+    },
+    {
+      "item_id": "evaluate",
+      "word": "evaluate"
+    },
+    {
+      "item_id": "weigh",
+      "word": "weigh"
+    },
+    {
+      "item_id": "shine",
+      "word": "shine"
+    },
+    {
+      "item_id": "knit",
+      "word": "knit"
+    },
+    {
+      "item_id": "eliminate",
+      "word": "eliminate"
+    },
+    {
+      "item_id": "freeze",
+      "word": "freeze"
+    },
+    {
+      "item_id": "greet",
+      "word": "greet"
+    },
+    {
+      "item_id": "cancel",
+      "word": "cancel"
+    },
+    {
+      "item_id": "oblige",
+      "word": "oblige"
+    },
+    {
+      "item_id": "load",
+      "word": "load"
+    },
+    {
+      "item_id": "murmur",
+      "word": "murmur"
+    },
+    {
+      "item_id": "spell",
+      "word": "spell"
+    },
+    {
+      "item_id": "hesitate",
+      "word": "hesitate"
+    },
+    {
+      "item_id": "reverse",
+      "word": "reverse"
+    },
+    {
+      "item_id": "admire",
+      "word": "admire"
+    },
+    {
+      "item_id": "prompt",
+      "word": "prompt"
+    },
+    {
+      "item_id": "rub",
+      "word": "rub"
+    },
+    {
+      "item_id": "flee",
+      "word": "flee"
+    },
+    {
+      "item_id": "yield",
+      "word": "yield"
+    },
+    {
+      "item_id": "swallow",
+      "word": "swallow"
+    },
+    {
+      "item_id": "interrupt",
+      "word": "interrupt"
+    },
+    {
+      "item_id": "brush",
+      "word": "brush"
+    },
+    {
+      "item_id": "devise",
+      "word": "devise"
+    },
+    {
+      "item_id": "advertise",
+      "word": "advertise"
+    }
+  ]
+}

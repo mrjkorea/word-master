@@ -1,0 +1,1008 @@
+{
+  "pack_id": "verbs600",
+  "title": "B2 Verbs 501–600",
+  "module_id": "snow_jump",
+  "seconds": 15,
+  "items": [
+    {
+      "item_id": "cook",
+      "question": "to prepare food with heat",
+      "correct": "cook",
+      "wrong": [
+        "amount",
+        "kiss"
+      ],
+      "word": "cook"
+    },
+    {
+      "item_id": "amount",
+      "question": "to add up to a total",
+      "correct": "amount",
+      "wrong": [
+        "cook",
+        "kiss"
+      ],
+      "word": "amount"
+    },
+    {
+      "item_id": "kiss",
+      "question": "to touch with the lips",
+      "correct": "kiss",
+      "wrong": [
+        "cook",
+        "amount"
+      ],
+      "word": "kiss"
+    },
+    {
+      "item_id": "finance",
+      "question": "to provide money for something",
+      "correct": "finance",
+      "wrong": [
+        "cook",
+        "amount"
+      ],
+      "word": "finance"
+    },
+    {
+      "item_id": "fund",
+      "question": "to collect money for a purpose",
+      "correct": "fund",
+      "wrong": [
+        "cook",
+        "amount"
+      ],
+      "word": "fund"
+    },
+    {
+      "item_id": "preserve",
+      "question": "keep something safe and fresh",
+      "correct": "preserve",
+      "wrong": [
+        "cook",
+        "amount"
+      ],
+      "word": "preserve"
+    },
+    {
+      "item_id": "lock",
+      "question": "close something with a key",
+      "correct": "lock",
+      "wrong": [
+        "cook",
+        "amount"
+      ],
+      "word": "lock"
+    },
+    {
+      "item_id": "pack",
+      "question": "put things into a bag",
+      "correct": "pack",
+      "wrong": [
+        "cook",
+        "amount"
+      ],
+      "word": "pack"
+    },
+    {
+      "item_id": "invest",
+      "question": "put money to make more",
+      "correct": "invest",
+      "wrong": [
+        "cook",
+        "amount"
+      ],
+      "word": "invest"
+    },
+    {
+      "item_id": "dance",
+      "question": "move your body to music",
+      "correct": "dance",
+      "wrong": [
+        "cook",
+        "amount"
+      ],
+      "word": "dance"
+    },
+    {
+      "item_id": "predict",
+      "question": "say what will happen",
+      "correct": "predict",
+      "wrong": [
+        "cook",
+        "amount"
+      ],
+      "word": "predict"
+    },
+    {
+      "item_id": "retire",
+      "question": "stop working because of age",
+      "correct": "retire",
+      "wrong": [
+        "cook",
+        "amount"
+      ],
+      "word": "retire"
+    },
+    {
+      "item_id": "feature",
+      "question": "show something as important",
+      "correct": "feature",
+      "wrong": [
+        "cook",
+        "amount"
+      ],
+      "word": "feature"
+    },
+    {
+      "item_id": "kick",
+      "question": "hit something with your foot",
+      "correct": "kick",
+      "wrong": [
+        "cook",
+        "amount"
+      ],
+      "word": "kick"
+    },
+    {
+      "item_id": "smoke",
+      "question": "send out smoke from mouth",
+      "correct": "smoke",
+      "wrong": [
+        "cook",
+        "amount"
+      ],
+      "word": "smoke"
+    },
+    {
+      "item_id": "celebrate",
+      "question": "have a party for something good",
+      "correct": "celebrate",
+      "wrong": [
+        "cook",
+        "amount"
+      ],
+      "word": "celebrate"
+    },
+    {
+      "item_id": "swing",
+      "question": "move back and forth on a seat",
+      "correct": "swing",
+      "wrong": [
+        "cook",
+        "amount"
+      ],
+      "word": "swing"
+    },
+    {
+      "item_id": "fire",
+      "question": "tell a worker to leave the job",
+      "correct": "fire",
+      "wrong": [
+        "cook",
+        "amount"
+      ],
+      "word": "fire"
+    },
+    {
+      "item_id": "compete",
+      "question": "try to win against others",
+      "correct": "compete",
+      "wrong": [
+        "cook",
+        "amount"
+      ],
+      "word": "compete"
+    },
+    {
+      "item_id": "decline",
+      "question": "say no to an offer",
+      "correct": "decline",
+      "wrong": [
+        "cook",
+        "amount"
+      ],
+      "word": "decline"
+    },
+    {
+      "item_id": "bend",
+      "question": "to curve or fold something",
+      "correct": "bend",
+      "wrong": [
+        "cook",
+        "amount"
+      ],
+      "word": "bend"
+    },
+    {
+      "item_id": "pause",
+      "question": "to stop for a short time",
+      "correct": "pause",
+      "wrong": [
+        "cook",
+        "amount"
+      ],
+      "word": "pause"
+    },
+    {
+      "item_id": "resist",
+      "question": "to fight against something",
+      "correct": "resist",
+      "wrong": [
+        "cook",
+        "amount"
+      ],
+      "word": "resist"
+    },
+    {
+      "item_id": "qualify",
+      "question": "to meet the needed standard",
+      "correct": "qualify",
+      "wrong": [
+        "cook",
+        "amount"
+      ],
+      "word": "qualify"
+    },
+    {
+      "item_id": "breathe",
+      "question": "to take air into the lungs",
+      "correct": "breathe",
+      "wrong": [
+        "cook",
+        "amount"
+      ],
+      "word": "breathe"
+    },
+    {
+      "item_id": "borrow",
+      "question": "take something to return later",
+      "correct": "borrow",
+      "wrong": [
+        "cook",
+        "amount"
+      ],
+      "word": "borrow"
+    },
+    {
+      "item_id": "overcome",
+      "question": "defeat a problem or fear",
+      "correct": "overcome",
+      "wrong": [
+        "cook",
+        "amount"
+      ],
+      "word": "overcome"
+    },
+    {
+      "item_id": "guarantee",
+      "question": "promise something will happen",
+      "correct": "guarantee",
+      "wrong": [
+        "cook",
+        "amount"
+      ],
+      "word": "guarantee"
+    },
+    {
+      "item_id": "organize",
+      "question": "put things in good order",
+      "correct": "organize",
+      "wrong": [
+        "cook",
+        "amount"
+      ],
+      "word": "organize"
+    },
+    {
+      "item_id": "figure",
+      "question": "understand something with thinking",
+      "correct": "figure",
+      "wrong": [
+        "cook",
+        "amount"
+      ],
+      "word": "figure"
+    },
+    {
+      "item_id": "race",
+      "question": "run fast to win",
+      "correct": "race",
+      "wrong": [
+        "cook",
+        "amount"
+      ],
+      "word": "race"
+    },
+    {
+      "item_id": "expose",
+      "question": "show something hidden",
+      "correct": "expose",
+      "wrong": [
+        "cook",
+        "amount"
+      ],
+      "word": "expose"
+    },
+    {
+      "item_id": "resign",
+      "question": "quit a job willingly",
+      "correct": "resign",
+      "wrong": [
+        "cook",
+        "amount"
+      ],
+      "word": "resign"
+    },
+    {
+      "item_id": "store",
+      "question": "keep things for later",
+      "correct": "store",
+      "wrong": [
+        "cook",
+        "amount"
+      ],
+      "word": "store"
+    },
+    {
+      "item_id": "comprise",
+      "question": "make up a whole",
+      "correct": "comprise",
+      "wrong": [
+        "cook",
+        "amount"
+      ],
+      "word": "comprise"
+    },
+    {
+      "item_id": "detect",
+      "question": "to find something hidden",
+      "correct": "detect",
+      "wrong": [
+        "cook",
+        "amount"
+      ],
+      "word": "detect"
+    },
+    {
+      "item_id": "rush",
+      "question": "to move very fast",
+      "correct": "rush",
+      "wrong": [
+        "cook",
+        "amount"
+      ],
+      "word": "rush"
+    },
+    {
+      "item_id": "sink",
+      "question": "to go down in water",
+      "correct": "sink",
+      "wrong": [
+        "cook",
+        "amount"
+      ],
+      "word": "sink"
+    },
+    {
+      "item_id": "differ",
+      "question": "to be not the same",
+      "correct": "differ",
+      "wrong": [
+        "cook",
+        "amount"
+      ],
+      "word": "differ"
+    },
+    {
+      "item_id": "drag",
+      "question": "to pull something along",
+      "correct": "drag",
+      "wrong": [
+        "cook",
+        "amount"
+      ],
+      "word": "drag"
+    },
+    {
+      "item_id": "car",
+      "question": "drive a car",
+      "correct": "car",
+      "wrong": [
+        "cook",
+        "amount"
+      ],
+      "word": "car"
+    },
+    {
+      "item_id": "negotiate",
+      "question": "talk to make a deal",
+      "correct": "negotiate",
+      "wrong": [
+        "cook",
+        "amount"
+      ],
+      "word": "negotiate"
+    },
+    {
+      "item_id": "sweep",
+      "question": "clean the floor with a broom",
+      "correct": "sweep",
+      "wrong": [
+        "cook",
+        "amount"
+      ],
+      "word": "sweep"
+    },
+    {
+      "item_id": "dry",
+      "question": "make something not wet",
+      "correct": "dry",
+      "wrong": [
+        "cook",
+        "amount"
+      ],
+      "word": "dry"
+    },
+    {
+      "item_id": "whisper",
+      "question": "speak very softly",
+      "correct": "whisper",
+      "wrong": [
+        "cook",
+        "amount"
+      ],
+      "word": "whisper"
+    },
+    {
+      "item_id": "assure",
+      "question": "make someone feel sure",
+      "correct": "assure",
+      "wrong": [
+        "cook",
+        "amount"
+      ],
+      "word": "assure"
+    },
+    {
+      "item_id": "deserve",
+      "question": "earn something good",
+      "correct": "deserve",
+      "wrong": [
+        "cook",
+        "amount"
+      ],
+      "word": "deserve"
+    },
+    {
+      "item_id": "split",
+      "question": "divide into parts",
+      "correct": "split",
+      "wrong": [
+        "cook",
+        "amount"
+      ],
+      "word": "split"
+    },
+    {
+      "item_id": "slide",
+      "question": "move smoothly down",
+      "correct": "slide",
+      "wrong": [
+        "cook",
+        "amount"
+      ],
+      "word": "slide"
+    },
+    {
+      "item_id": "behave",
+      "question": "act in a good way",
+      "correct": "behave",
+      "wrong": [
+        "cook",
+        "amount"
+      ],
+      "word": "behave"
+    },
+    {
+      "item_id": "guide",
+      "question": "show the way",
+      "correct": "guide",
+      "wrong": [
+        "cook",
+        "amount"
+      ],
+      "word": "guide"
+    },
+    {
+      "item_id": "flow",
+      "question": "move like water",
+      "correct": "flow",
+      "wrong": [
+        "cook",
+        "amount"
+      ],
+      "word": "flow"
+    },
+    {
+      "item_id": "practise",
+      "question": "do something again and again",
+      "correct": "practise",
+      "wrong": [
+        "cook",
+        "amount"
+      ],
+      "word": "practise"
+    },
+    {
+      "item_id": "enhance",
+      "question": "make something better",
+      "correct": "enhance",
+      "wrong": [
+        "cook",
+        "amount"
+      ],
+      "word": "enhance"
+    },
+    {
+      "item_id": "waste",
+      "question": "use something badly",
+      "correct": "waste",
+      "wrong": [
+        "cook",
+        "amount"
+      ],
+      "word": "waste"
+    },
+    {
+      "item_id": "mount",
+      "question": "to get on a horse",
+      "correct": "mount",
+      "wrong": [
+        "cook",
+        "amount"
+      ],
+      "word": "mount"
+    },
+    {
+      "item_id": "advance",
+      "question": "to move forward",
+      "correct": "advance",
+      "wrong": [
+        "cook",
+        "amount"
+      ],
+      "word": "advance"
+    },
+    {
+      "item_id": "favour",
+      "question": "to help or support",
+      "correct": "favour",
+      "wrong": [
+        "cook",
+        "amount"
+      ],
+      "word": "favour"
+    },
+    {
+      "item_id": "phone",
+      "question": "to call on the phone",
+      "correct": "phone",
+      "wrong": [
+        "cook",
+        "amount"
+      ],
+      "word": "phone"
+    },
+    {
+      "item_id": "shape",
+      "question": "to make into a form",
+      "correct": "shape",
+      "wrong": [
+        "cook",
+        "amount"
+      ],
+      "word": "shape"
+    },
+    {
+      "item_id": "bury",
+      "question": "put something in the ground",
+      "correct": "bury",
+      "wrong": [
+        "cook",
+        "amount"
+      ],
+      "word": "bury"
+    },
+    {
+      "item_id": "tackle",
+      "question": "try to stop someone in a game",
+      "correct": "tackle",
+      "wrong": [
+        "cook",
+        "amount"
+      ],
+      "word": "tackle"
+    },
+    {
+      "item_id": "outline",
+      "question": "show the main parts of something",
+      "correct": "outline",
+      "wrong": [
+        "cook",
+        "amount"
+      ],
+      "word": "outline"
+    },
+    {
+      "item_id": "lend",
+      "question": "let someone use something for a while",
+      "correct": "lend",
+      "wrong": [
+        "cook",
+        "amount"
+      ],
+      "word": "lend"
+    },
+    {
+      "item_id": "manufacture",
+      "question": "make things in a factory",
+      "correct": "manufacture",
+      "wrong": [
+        "cook",
+        "amount"
+      ],
+      "word": "manufacture"
+    },
+    {
+      "item_id": "impress",
+      "question": "make someone feel admiration",
+      "correct": "impress",
+      "wrong": [
+        "cook",
+        "amount"
+      ],
+      "word": "impress"
+    },
+    {
+      "item_id": "emphasise",
+      "question": "show that something is important",
+      "correct": "emphasise",
+      "wrong": [
+        "cook",
+        "amount"
+      ],
+      "word": "emphasise"
+    },
+    {
+      "item_id": "interview",
+      "question": "ask someone questions for a story",
+      "correct": "interview",
+      "wrong": [
+        "cook",
+        "amount"
+      ],
+      "word": "interview"
+    },
+    {
+      "item_id": "lower",
+      "question": "make something go down",
+      "correct": "lower",
+      "wrong": [
+        "cook",
+        "amount"
+      ],
+      "word": "lower"
+    },
+    {
+      "item_id": "tear",
+      "question": "pull something apart into pieces",
+      "correct": "tear",
+      "wrong": [
+        "cook",
+        "amount"
+      ],
+      "word": "tear"
+    },
+    {
+      "item_id": "bite",
+      "question": "use teeth to cut",
+      "correct": "bite",
+      "wrong": [
+        "cook",
+        "amount"
+      ],
+      "word": "bite"
+    },
+    {
+      "item_id": "range",
+      "question": "move over a wide area",
+      "correct": "range",
+      "wrong": [
+        "cook",
+        "amount"
+      ],
+      "word": "range"
+    },
+    {
+      "item_id": "capture",
+      "question": "catch and hold something",
+      "correct": "capture",
+      "wrong": [
+        "cook",
+        "amount"
+      ],
+      "word": "capture"
+    },
+    {
+      "item_id": "sustain",
+      "question": "keep something going",
+      "correct": "sustain",
+      "wrong": [
+        "cook",
+        "amount"
+      ],
+      "word": "sustain"
+    },
+    {
+      "item_id": "participate",
+      "question": "join in an activity",
+      "correct": "participate",
+      "wrong": [
+        "cook",
+        "amount"
+      ],
+      "word": "participate"
+    },
+    {
+      "item_id": "distribute",
+      "question": "to give out to many",
+      "correct": "distribute",
+      "wrong": [
+        "cook",
+        "amount"
+      ],
+      "word": "distribute"
+    },
+    {
+      "item_id": "ban",
+      "question": "to say something is not allowed",
+      "correct": "ban",
+      "wrong": [
+        "cook",
+        "amount"
+      ],
+      "word": "ban"
+    },
+    {
+      "item_id": "consult",
+      "question": "to ask someone for advice",
+      "correct": "consult",
+      "wrong": [
+        "cook",
+        "amount"
+      ],
+      "word": "consult"
+    },
+    {
+      "item_id": "confuse",
+      "question": "to make someone unsure",
+      "correct": "confuse",
+      "wrong": [
+        "cook",
+        "amount"
+      ],
+      "word": "confuse"
+    },
+    {
+      "item_id": "dare",
+      "question": "to be brave enough to try",
+      "correct": "dare",
+      "wrong": [
+        "cook",
+        "amount"
+      ],
+      "word": "dare"
+    },
+    {
+      "item_id": "cease",
+      "question": "stop doing something",
+      "correct": "cease",
+      "wrong": [
+        "cook",
+        "amount"
+      ],
+      "word": "cease"
+    },
+    {
+      "item_id": "exceed",
+      "question": "go beyond a limit",
+      "correct": "exceed",
+      "wrong": [
+        "cook",
+        "amount"
+      ],
+      "word": "exceed"
+    },
+    {
+      "item_id": "perceive",
+      "question": "notice or understand something",
+      "correct": "perceive",
+      "wrong": [
+        "cook",
+        "amount"
+      ],
+      "word": "perceive"
+    },
+    {
+      "item_id": "lack",
+      "question": "not have enough of something",
+      "correct": "lack",
+      "wrong": [
+        "cook",
+        "amount"
+      ],
+      "word": "lack"
+    },
+    {
+      "item_id": "snap",
+      "question": "make a quick sharp sound",
+      "correct": "snap",
+      "wrong": [
+        "cook",
+        "amount"
+      ],
+      "word": "snap"
+    },
+    {
+      "item_id": "strengthen",
+      "question": "make something stronger",
+      "correct": "strengthen",
+      "wrong": [
+        "cook",
+        "amount"
+      ],
+      "word": "strengthen"
+    },
+    {
+      "item_id": "pose",
+      "question": "put your body in a position",
+      "correct": "pose",
+      "wrong": [
+        "cook",
+        "amount"
+      ],
+      "word": "pose"
+    },
+    {
+      "item_id": "found",
+      "question": "start or build something new",
+      "correct": "found",
+      "wrong": [
+        "cook",
+        "amount"
+      ],
+      "word": "found"
+    },
+    {
+      "item_id": "dig",
+      "question": "make a hole in the ground",
+      "correct": "dig",
+      "wrong": [
+        "cook",
+        "amount"
+      ],
+      "word": "dig"
+    },
+    {
+      "item_id": "grab",
+      "question": "take something quickly with your hand",
+      "correct": "grab",
+      "wrong": [
+        "cook",
+        "amount"
+      ],
+      "word": "grab"
+    },
+    {
+      "item_id": "transform",
+      "question": "change something completely",
+      "correct": "transform",
+      "wrong": [
+        "cook",
+        "amount"
+      ],
+      "word": "transform"
+    },
+    {
+      "item_id": "upset",
+      "question": "make someone feel sad",
+      "correct": "upset",
+      "wrong": [
+        "cook",
+        "amount"
+      ],
+      "word": "upset"
+    },
+    {
+      "item_id": "plant",
+      "question": "put a plant into the ground",
+      "correct": "plant",
+      "wrong": [
+        "cook",
+        "amount"
+      ],
+      "word": "plant"
+    },
+    {
+      "item_id": "pretend",
+      "question": "act like something is true",
+      "correct": "pretend",
+      "wrong": [
+        "cook",
+        "amount"
+      ],
+      "word": "pretend"
+    },
+    {
+      "item_id": "free",
+      "question": "let someone or something go",
+      "correct": "free",
+      "wrong": [
+        "cook",
+        "amount"
+      ],
+      "word": "free"
+    },
+    {
+      "item_id": "project",
+      "question": "to throw light forward",
+      "correct": "project",
+      "wrong": [
+        "cook",
+        "amount"
+      ],
+      "word": "project"
+    },
+    {
+      "item_id": "shrug",
+      "question": "to lift shoulders up",
+      "correct": "shrug",
+      "wrong": [
+        "cook",
+        "amount"
+      ],
+      "word": "shrug"
+    },
+    {
+      "item_id": "delay",
+      "question": "to make something later",
+      "correct": "delay",
+      "wrong": [
+        "cook",
+        "amount"
+      ],
+      "word": "delay"
+    },
+    {
+      "item_id": "dream",
+      "question": "to see pictures while sleeping",
+      "correct": "dream",
+      "wrong": [
+        "cook",
+        "amount"
+      ],
+      "word": "dream"
+    },
+    {
+      "item_id": "highlight",
+      "question": "to mark something important",
+      "correct": "highlight",
+      "wrong": [
+        "cook",
+        "amount"
+      ],
+      "word": "highlight"
+    }
+  ]
+}

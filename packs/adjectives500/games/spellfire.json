@@ -1,0 +1,407 @@
+{
+  "pack_id": "adjectives500",
+  "title": "B1 Adjectives 401–500",
+  "seconds_per_letter": 5,
+  "items": [
+    {
+      "item_id": "smooth",
+      "word": "smooth"
+    },
+    {
+      "item_id": "dominant",
+      "word": "dominant"
+    },
+    {
+      "item_id": "conscious",
+      "word": "conscious"
+    },
+    {
+      "item_id": "electric",
+      "word": "electric"
+    },
+    {
+      "item_id": "strategic",
+      "word": "strategic"
+    },
+    {
+      "item_id": "disabled",
+      "word": "disabled"
+    },
+    {
+      "item_id": "remote",
+      "word": "remote"
+    },
+    {
+      "item_id": "outstanding",
+      "word": "outstanding"
+    },
+    {
+      "item_id": "theoretical",
+      "word": "theoretical"
+    },
+    {
+      "item_id": "worried",
+      "word": "worried"
+    },
+    {
+      "item_id": "clinical",
+      "word": "clinical"
+    },
+    {
+      "item_id": "live",
+      "word": "live"
+    },
+    {
+      "item_id": "awful",
+      "word": "awful"
+    },
+    {
+      "item_id": "honest",
+      "word": "honest"
+    },
+    {
+      "item_id": "impressive",
+      "word": "impressive"
+    },
+    {
+      "item_id": "pink",
+      "word": "pink"
+    },
+    {
+      "item_id": "visible",
+      "word": "visible"
+    },
+    {
+      "item_id": "accurate",
+      "word": "accurate"
+    },
+    {
+      "item_id": "constitutional",
+      "word": "constitutional"
+    },
+    {
+      "item_id": "developing",
+      "word": "developing"
+    },
+    {
+      "item_id": "distant",
+      "word": "distant"
+    },
+    {
+      "item_id": "fixed",
+      "word": "fixed"
+    },
+    {
+      "item_id": "precise",
+      "word": "precise"
+    },
+    {
+      "item_id": "residential",
+      "word": "residential"
+    },
+    {
+      "item_id": "silly",
+      "word": "silly"
+    },
+    {
+      "item_id": "musical",
+      "word": "musical"
+    },
+    {
+      "item_id": "cool",
+      "word": "cool"
+    },
+    {
+      "item_id": "supposed",
+      "word": "supposed"
+    },
+    {
+      "item_id": "specialist",
+      "word": "specialist"
+    },
+    {
+      "item_id": "minimum",
+      "word": "minimum"
+    },
+    {
+      "item_id": "monetary",
+      "word": "monetary"
+    },
+    {
+      "item_id": "isolated",
+      "word": "isolated"
+    },
+    {
+      "item_id": "fat",
+      "word": "fat"
+    },
+    {
+      "item_id": "junior",
+      "word": "junior"
+    },
+    {
+      "item_id": "unemployed",
+      "word": "unemployed"
+    },
+    {
+      "item_id": "violent",
+      "word": "violent"
+    },
+    {
+      "item_id": "dirty",
+      "word": "dirty"
+    },
+    {
+      "item_id": "psychological",
+      "word": "psychological"
+    },
+    {
+      "item_id": "straight",
+      "word": "straight"
+    },
+    {
+      "item_id": "pleasant",
+      "word": "pleasant"
+    },
+    {
+      "item_id": "inevitable",
+      "word": "inevitable"
+    },
+    {
+      "item_id": "known",
+      "word": "known"
+    },
+    {
+      "item_id": "pretty",
+      "word": "pretty"
+    },
+    {
+      "item_id": "grateful",
+      "word": "grateful"
+    },
+    {
+      "item_id": "sensible",
+      "word": "sensible"
+    },
+    {
+      "item_id": "favourite",
+      "word": "favourite"
+    },
+    {
+      "item_id": "running",
+      "word": "running"
+    },
+    {
+      "item_id": "socalled",
+      "word": "so-called"
+    },
+    {
+      "item_id": "blind",
+      "word": "blind"
+    },
+    {
+      "item_id": "square",
+      "word": "square"
+    },
+    {
+      "item_id": "deaf",
+      "word": "deaf"
+    },
+    {
+      "item_id": "continuous",
+      "word": "continuous"
+    },
+    {
+      "item_id": "extraordinary",
+      "word": "extraordinary"
+    },
+    {
+      "item_id": "evident",
+      "word": "evident"
+    },
+    {
+      "item_id": "universal",
+      "word": "universal"
+    },
+    {
+      "item_id": "desperate",
+      "word": "desperate"
+    },
+    {
+      "item_id": "overseas",
+      "word": "overseas"
+    },
+    {
+      "item_id": "occasional",
+      "word": "occasional"
+    },
+    {
+      "item_id": "underlying",
+      "word": "underlying"
+    },
+    {
+      "item_id": "ultimate",
+      "word": "ultimate"
+    },
+    {
+      "item_id": "clever",
+      "word": "clever"
+    },
+    {
+      "item_id": "broken",
+      "word": "broken"
+    },
+    {
+      "item_id": "raw",
+      "word": "raw"
+    },
+    {
+      "item_id": "sophisticated",
+      "word": "sophisticated"
+    },
+    {
+      "item_id": "asleep",
+      "word": "asleep"
+    },
+    {
+      "item_id": "welcome",
+      "word": "welcome"
+    },
+    {
+      "item_id": "linguistic",
+      "word": "linguistic"
+    },
+    {
+      "item_id": "forward",
+      "word": "forward"
+    },
+    {
+      "item_id": "multiple",
+      "word": "multiple"
+    },
+    {
+      "item_id": "outer",
+      "word": "outer"
+    },
+    {
+      "item_id": "patient",
+      "word": "patient"
+    },
+    {
+      "item_id": "vulnerable",
+      "word": "vulnerable"
+    },
+    {
+      "item_id": "creative",
+      "word": "creative"
+    },
+    {
+      "item_id": "just",
+      "word": "just"
+    },
+    {
+      "item_id": "judicial",
+      "word": "judicial"
+    },
+    {
+      "item_id": "illegal",
+      "word": "illegal"
+    },
+    {
+      "item_id": "plain",
+      "word": "plain"
+    },
+    {
+      "item_id": "strict",
+      "word": "strict"
+    },
+    {
+      "item_id": "fit",
+      "word": "fit"
+    },
+    {
+      "item_id": "bitter",
+      "word": "bitter"
+    },
+    {
+      "item_id": "flexible",
+      "word": "flexible"
+    },
+    {
+      "item_id": "informal",
+      "word": "informal"
+    },
+    {
+      "item_id": "stable",
+      "word": "stable"
+    },
+    {
+      "item_id": "wise",
+      "word": "wise"
+    },
+    {
+      "item_id": "frequent",
+      "word": "frequent"
+    },
+    {
+      "item_id": "intense",
+      "word": "intense"
+    },
+    {
+      "item_id": "loose",
+      "word": "loose"
+    },
+    {
+      "item_id": "retail",
+      "word": "retail"
+    },
+    {
+      "item_id": "lost",
+      "word": "lost"
+    },
+    {
+      "item_id": "steady",
+      "word": "steady"
+    },
+    {
+      "item_id": "back",
+      "word": "back"
+    },
+    {
+      "item_id": "experimental",
+      "word": "experimental"
+    },
+    {
+      "item_id": "rational",
+      "word": "rational"
+    },
+    {
+      "item_id": "inadequate",
+      "word": "inadequate"
+    },
+    {
+      "item_id": "increasing",
+      "word": "increasing"
+    },
+    {
+      "item_id": "spiritual",
+      "word": "spiritual"
+    },
+    {
+      "item_id": "logical",
+      "word": "logical"
+    },
+    {
+      "item_id": "generous",
+      "word": "generous"
+    },
+    {
+      "item_id": "bottom",
+      "word": "bottom"
+    },
+    {
+      "item_id": "modest",
+      "word": "modest"
+    }
+  ]
+}

@@ -1,0 +1,407 @@
+{
+  "pack_id": "adjectives900",
+  "title": "B2 Adjectives 801–900",
+  "seconds_per_letter": 5,
+  "items": [
+    {
+      "item_id": "tender",
+      "word": "tender"
+    },
+    {
+      "item_id": "linear",
+      "word": "linear"
+    },
+    {
+      "item_id": "selective",
+      "word": "selective"
+    },
+    {
+      "item_id": "semantic",
+      "word": "semantic"
+    },
+    {
+      "item_id": "fiscal",
+      "word": "fiscal"
+    },
+    {
+      "item_id": "fortunate",
+      "word": "fortunate"
+    },
+    {
+      "item_id": "rival",
+      "word": "rival"
+    },
+    {
+      "item_id": "select",
+      "word": "select"
+    },
+    {
+      "item_id": "defensive",
+      "word": "defensive"
+    },
+    {
+      "item_id": "skilled",
+      "word": "skilled"
+    },
+    {
+      "item_id": "philosophical",
+      "word": "philosophical"
+    },
+    {
+      "item_id": "protective",
+      "word": "protective"
+    },
+    {
+      "item_id": "slim",
+      "word": "slim"
+    },
+    {
+      "item_id": "material",
+      "word": "material"
+    },
+    {
+      "item_id": "distinguished",
+      "word": "distinguished"
+    },
+    {
+      "item_id": "furious",
+      "word": "furious"
+    },
+    {
+      "item_id": "solar",
+      "word": "solar"
+    },
+    {
+      "item_id": "qualified",
+      "word": "qualified"
+    },
+    {
+      "item_id": "inappropriate",
+      "word": "inappropriate"
+    },
+    {
+      "item_id": "liquid",
+      "word": "liquid"
+    },
+    {
+      "item_id": "unfortunate",
+      "word": "unfortunate"
+    },
+    {
+      "item_id": "burning",
+      "word": "burning"
+    },
+    {
+      "item_id": "persistent",
+      "word": "persistent"
+    },
+    {
+      "item_id": "mathematical",
+      "word": "mathematical"
+    },
+    {
+      "item_id": "binding",
+      "word": "binding"
+    },
+    {
+      "item_id": "doubtful",
+      "word": "doubtful"
+    },
+    {
+      "item_id": "invisible",
+      "word": "invisible"
+    },
+    {
+      "item_id": "mid",
+      "word": "mid"
+    },
+    {
+      "item_id": "surrounding",
+      "word": "surrounding"
+    },
+    {
+      "item_id": "intact",
+      "word": "intact"
+    },
+    {
+      "item_id": "sterling",
+      "word": "sterling"
+    },
+    {
+      "item_id": "inland",
+      "word": "inland"
+    },
+    {
+      "item_id": "competent",
+      "word": "competent"
+    },
+    {
+      "item_id": "optimistic",
+      "word": "optimistic"
+    },
+    {
+      "item_id": "uniform",
+      "word": "uniform"
+    },
+    {
+      "item_id": "decisive",
+      "word": "decisive"
+    },
+    {
+      "item_id": "horizontal",
+      "word": "horizontal"
+    },
+    {
+      "item_id": "respective",
+      "word": "respective"
+    },
+    {
+      "item_id": "spatial",
+      "word": "spatial"
+    },
+    {
+      "item_id": "convincing",
+      "word": "convincing"
+    },
+    {
+      "item_id": "respectable",
+      "word": "respectable"
+    },
+    {
+      "item_id": "unacceptable",
+      "word": "unacceptable"
+    },
+    {
+      "item_id": "instant",
+      "word": "instant"
+    },
+    {
+      "item_id": "paid",
+      "word": "paid"
+    },
+    {
+      "item_id": "fond",
+      "word": "fond"
+    },
+    {
+      "item_id": "medium",
+      "word": "medium"
+    },
+    {
+      "item_id": "winning",
+      "word": "winning"
+    },
+    {
+      "item_id": "redundant",
+      "word": "redundant"
+    },
+    {
+      "item_id": "silver",
+      "word": "silver"
+    },
+    {
+      "item_id": "tragic",
+      "word": "tragic"
+    },
+    {
+      "item_id": "neighbouring",
+      "word": "neighbouring"
+    },
+    {
+      "item_id": "probable",
+      "word": "probable"
+    },
+    {
+      "item_id": "mobile",
+      "word": "mobile"
+    },
+    {
+      "item_id": "oldfashioned",
+      "word": "old-fashioned"
+    },
+    {
+      "item_id": "thinking",
+      "word": "thinking"
+    },
+    {
+      "item_id": "toxic",
+      "word": "toxic"
+    },
+    {
+      "item_id": "polite",
+      "word": "polite"
+    },
+    {
+      "item_id": "uptodate",
+      "word": "up-to-date"
+    },
+    {
+      "item_id": "wee",
+      "word": "wee"
+    },
+    {
+      "item_id": "miserable",
+      "word": "miserable"
+    },
+    {
+      "item_id": "incredible",
+      "word": "incredible"
+    },
+    {
+      "item_id": "premier",
+      "word": "premier"
+    },
+    {
+      "item_id": "regulatory",
+      "word": "regulatory"
+    },
+    {
+      "item_id": "cognitive",
+      "word": "cognitive"
+    },
+    {
+      "item_id": "resident",
+      "word": "resident"
+    },
+    {
+      "item_id": "adverse",
+      "word": "adverse"
+    },
+    {
+      "item_id": "gothic",
+      "word": "gothic"
+    },
+    {
+      "item_id": "lengthy",
+      "word": "lengthy"
+    },
+    {
+      "item_id": "selected",
+      "word": "selected"
+    },
+    {
+      "item_id": "manual",
+      "word": "manual"
+    },
+    {
+      "item_id": "unconscious",
+      "word": "unconscious"
+    },
+    {
+      "item_id": "orthodox",
+      "word": "orthodox"
+    },
+    {
+      "item_id": "unaware",
+      "word": "unaware"
+    },
+    {
+      "item_id": "costly",
+      "word": "costly"
+    },
+    {
+      "item_id": "printed",
+      "word": "printed"
+    },
+    {
+      "item_id": "territorial",
+      "word": "territorial"
+    },
+    {
+      "item_id": "underground",
+      "word": "underground"
+    },
+    {
+      "item_id": "misleading",
+      "word": "misleading"
+    },
+    {
+      "item_id": "verbal",
+      "word": "verbal"
+    },
+    {
+      "item_id": "causal",
+      "word": "causal"
+    },
+    {
+      "item_id": "compatible",
+      "word": "compatible"
+    },
+    {
+      "item_id": "fashionable",
+      "word": "fashionable"
+    },
+    {
+      "item_id": "implicit",
+      "word": "implicit"
+    },
+    {
+      "item_id": "applied",
+      "word": "applied"
+    },
+    {
+      "item_id": "chosen",
+      "word": "chosen"
+    },
+    {
+      "item_id": "interim",
+      "word": "interim"
+    },
+    {
+      "item_id": "kind",
+      "word": "kind"
+    },
+    {
+      "item_id": "nursing",
+      "word": "nursing"
+    },
+    {
+      "item_id": "subjective",
+      "word": "subjective"
+    },
+    {
+      "item_id": "static",
+      "word": "static"
+    },
+    {
+      "item_id": "cheerful",
+      "word": "cheerful"
+    },
+    {
+      "item_id": "given",
+      "word": "given"
+    },
+    {
+      "item_id": "purple",
+      "word": "purple"
+    },
+    {
+      "item_id": "dual",
+      "word": "dual"
+    },
+    {
+      "item_id": "grave",
+      "word": "grave"
+    },
+    {
+      "item_id": "cautious",
+      "word": "cautious"
+    },
+    {
+      "item_id": "ethical",
+      "word": "ethical"
+    },
+    {
+      "item_id": "teenage",
+      "word": "teenage"
+    },
+    {
+      "item_id": "weird",
+      "word": "weird"
+    },
+    {
+      "item_id": "disastrous",
+      "word": "disastrous"
+    }
+  ]
+}

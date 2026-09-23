@@ -1,0 +1,407 @@
+{
+  "pack_id": "verbs600",
+  "title": "B2 Verbs 501–600",
+  "seconds_per_letter": 5,
+  "items": [
+    {
+      "item_id": "cook",
+      "word": "cook"
+    },
+    {
+      "item_id": "amount",
+      "word": "amount"
+    },
+    {
+      "item_id": "kiss",
+      "word": "kiss"
+    },
+    {
+      "item_id": "finance",
+      "word": "finance"
+    },
+    {
+      "item_id": "fund",
+      "word": "fund"
+    },
+    {
+      "item_id": "preserve",
+      "word": "preserve"
+    },
+    {
+      "item_id": "lock",
+      "word": "lock"
+    },
+    {
+      "item_id": "pack",
+      "word": "pack"
+    },
+    {
+      "item_id": "invest",
+      "word": "invest"
+    },
+    {
+      "item_id": "dance",
+      "word": "dance"
+    },
+    {
+      "item_id": "predict",
+      "word": "predict"
+    },
+    {
+      "item_id": "retire",
+      "word": "retire"
+    },
+    {
+      "item_id": "feature",
+      "word": "feature"
+    },
+    {
+      "item_id": "kick",
+      "word": "kick"
+    },
+    {
+      "item_id": "smoke",
+      "word": "smoke"
+    },
+    {
+      "item_id": "celebrate",
+      "word": "celebrate"
+    },
+    {
+      "item_id": "swing",
+      "word": "swing"
+    },
+    {
+      "item_id": "fire",
+      "word": "fire"
+    },
+    {
+      "item_id": "compete",
+      "word": "compete"
+    },
+    {
+      "item_id": "decline",
+      "word": "decline"
+    },
+    {
+      "item_id": "bend",
+      "word": "bend"
+    },
+    {
+      "item_id": "pause",
+      "word": "pause"
+    },
+    {
+      "item_id": "resist",
+      "word": "resist"
+    },
+    {
+      "item_id": "qualify",
+      "word": "qualify"
+    },
+    {
+      "item_id": "breathe",
+      "word": "breathe"
+    },
+    {
+      "item_id": "borrow",
+      "word": "borrow"
+    },
+    {
+      "item_id": "overcome",
+      "word": "overcome"
+    },
+    {
+      "item_id": "guarantee",
+      "word": "guarantee"
+    },
+    {
+      "item_id": "organize",
+      "word": "organize"
+    },
+    {
+      "item_id": "figure",
+      "word": "figure"
+    },
+    {
+      "item_id": "race",
+      "word": "race"
+    },
+    {
+      "item_id": "expose",
+      "word": "expose"
+    },
+    {
+      "item_id": "resign",
+      "word": "resign"
+    },
+    {
+      "item_id": "store",
+      "word": "store"
+    },
+    {
+      "item_id": "comprise",
+      "word": "comprise"
+    },
+    {
+      "item_id": "detect",
+      "word": "detect"
+    },
+    {
+      "item_id": "rush",
+      "word": "rush"
+    },
+    {
+      "item_id": "sink",
+      "word": "sink"
+    },
+    {
+      "item_id": "differ",
+      "word": "differ"
+    },
+    {
+      "item_id": "drag",
+      "word": "drag"
+    },
+    {
+      "item_id": "car",
+      "word": "car"
+    },
+    {
+      "item_id": "negotiate",
+      "word": "negotiate"
+    },
+    {
+      "item_id": "sweep",
+      "word": "sweep"
+    },
+    {
+      "item_id": "dry",
+      "word": "dry"
+    },
+    {
+      "item_id": "whisper",
+      "word": "whisper"
+    },
+    {
+      "item_id": "assure",
+      "word": "assure"
+    },
+    {
+      "item_id": "deserve",
+      "word": "deserve"
+    },
+    {
+      "item_id": "split",
+      "word": "split"
+    },
+    {
+      "item_id": "slide",
+      "word": "slide"
+    },
+    {
+      "item_id": "behave",
+      "word": "behave"
+    },
+    {
+      "item_id": "guide",
+      "word": "guide"
+    },
+    {
+      "item_id": "flow",
+      "word": "flow"
+    },
+    {
+      "item_id": "practise",
+      "word": "practise"
+    },
+    {
+      "item_id": "enhance",
+      "word": "enhance"
+    },
+    {
+      "item_id": "waste",
+      "word": "waste"
+    },
+    {
+      "item_id": "mount",
+      "word": "mount"
+    },
+    {
+      "item_id": "advance",
+      "word": "advance"
+    },
+    {
+      "item_id": "favour",
+      "word": "favour"
+    },
+    {
+      "item_id": "phone",
+      "word": "phone"
+    },
+    {
+      "item_id": "shape",
+      "word": "shape"
+    },
+    {
+      "item_id": "bury",
+      "word": "bury"
+    },
+    {
+      "item_id": "tackle",
+      "word": "tackle"
+    },
+    {
+      "item_id": "outline",
+      "word": "outline"
+    },
+    {
+      "item_id": "lend",
+      "word": "lend"
+    },
+    {
+      "item_id": "manufacture",
+      "word": "manufacture"
+    },
+    {
+      "item_id": "impress",
+      "word": "impress"
+    },
+    {
+      "item_id": "emphasise",
+      "word": "emphasise"
+    },
+    {
+      "item_id": "interview",
+      "word": "interview"
+    },
+    {
+      "item_id": "lower",
+      "word": "lower"
+    },
+    {
+      "item_id": "tear",
+      "word": "tear"
+    },
+    {
+      "item_id": "bite",
+      "word": "bite"
+    },
+    {
+      "item_id": "range",
+      "word": "range"
+    },
+    {
+      "item_id": "capture",
+      "word": "capture"
+    },
+    {
+      "item_id": "sustain",
+      "word": "sustain"
+    },
+    {
+      "item_id": "participate",
+      "word": "participate"
+    },
+    {
+      "item_id": "distribute",
+      "word": "distribute"
+    },
+    {
+      "item_id": "ban",
+      "word": "ban"
+    },
+    {
+      "item_id": "consult",
+      "word": "consult"
+    },
+    {
+      "item_id": "confuse",
+      "word": "confuse"
+    },
+    {
+      "item_id": "dare",
+      "word": "dare"
+    },
+    {
+      "item_id": "cease",
+      "word": "cease"
+    },
+    {
+      "item_id": "exceed",
+      "word": "exceed"
+    },
+    {
+      "item_id": "perceive",
+      "word": "perceive"
+    },
+    {
+      "item_id": "lack",
+      "word": "lack"
+    },
+    {
+      "item_id": "snap",
+      "word": "snap"
+    },
+    {
+      "item_id": "strengthen",
+      "word": "strengthen"
+    },
+    {
+      "item_id": "pose",
+      "word": "pose"
+    },
+    {
+      "item_id": "found",
+      "word": "found"
+    },
+    {
+      "item_id": "dig",
+      "word": "dig"
+    },
+    {
+      "item_id": "grab",
+      "word": "grab"
+    },
+    {
+      "item_id": "transform",
+      "word": "transform"
+    },
+    {
+      "item_id": "upset",
+      "word": "upset"
+    },
+    {
+      "item_id": "plant",
+      "word": "plant"
+    },
+    {
+      "item_id": "pretend",
+      "word": "pretend"
+    },
+    {
+      "item_id": "free",
+      "word": "free"
+    },
+    {
+      "item_id": "project",
+      "word": "project"
+    },
+    {
+      "item_id": "shrug",
+      "word": "shrug"
+    },
+    {
+      "item_id": "delay",
+      "word": "delay"
+    },
+    {
+      "item_id": "dream",
+      "word": "dream"
+    },
+    {
+      "item_id": "highlight",
+      "word": "highlight"
+    }
+  ]
+}

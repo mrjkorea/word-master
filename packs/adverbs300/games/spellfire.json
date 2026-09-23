@@ -1,0 +1,407 @@
+{
+  "pack_id": "adverbs300",
+  "title": "B1 Adverbs 201–300",
+  "seconds_per_letter": 5,
+  "items": [
+    {
+      "item_id": "gradually",
+      "word": "gradually"
+    },
+    {
+      "item_id": "essentially",
+      "word": "essentially"
+    },
+    {
+      "item_id": "aside",
+      "word": "aside"
+    },
+    {
+      "item_id": "precisely",
+      "word": "precisely"
+    },
+    {
+      "item_id": "for",
+      "word": "for"
+    },
+    {
+      "item_id": "across",
+      "word": "across"
+    },
+    {
+      "item_id": "successfully",
+      "word": "successfully"
+    },
+    {
+      "item_id": "greatly",
+      "word": "greatly"
+    },
+    {
+      "item_id": "briefly",
+      "word": "briefly"
+    },
+    {
+      "item_id": "presumably",
+      "word": "presumably"
+    },
+    {
+      "item_id": "altogether",
+      "word": "altogether"
+    },
+    {
+      "item_id": "everywhere",
+      "word": "everywhere"
+    },
+    {
+      "item_id": "respectively",
+      "word": "respectively"
+    },
+    {
+      "item_id": "truly",
+      "word": "truly"
+    },
+    {
+      "item_id": "whenever",
+      "word": "whenever"
+    },
+    {
+      "item_id": "definitely",
+      "word": "definitely"
+    },
+    {
+      "item_id": "primarily",
+      "word": "primarily"
+    },
+    {
+      "item_id": "basically",
+      "word": "basically"
+    },
+    {
+      "item_id": "near",
+      "word": "near"
+    },
+    {
+      "item_id": "inevitably",
+      "word": "inevitably"
+    },
+    {
+      "item_id": "constantly",
+      "word": "constantly"
+    },
+    {
+      "item_id": "reasonably",
+      "word": "reasonably"
+    },
+    {
+      "item_id": "furthermore",
+      "word": "furthermore"
+    },
+    {
+      "item_id": "considerably",
+      "word": "considerably"
+    },
+    {
+      "item_id": "by",
+      "word": "by"
+    },
+    {
+      "item_id": "ultimately",
+      "word": "ultimately"
+    },
+    {
+      "item_id": "secondly",
+      "word": "secondly"
+    },
+    {
+      "item_id": "approximately",
+      "word": "approximately"
+    },
+    {
+      "item_id": "open",
+      "word": "open"
+    },
+    {
+      "item_id": "readily",
+      "word": "readily"
+    },
+    {
+      "item_id": "behind",
+      "word": "behind"
+    },
+    {
+      "item_id": "deliberately",
+      "word": "deliberately"
+    },
+    {
+      "item_id": "automatically",
+      "word": "automatically"
+    },
+    {
+      "item_id": "newly",
+      "word": "newly"
+    },
+    {
+      "item_id": "thereby",
+      "word": "thereby"
+    },
+    {
+      "item_id": "personally",
+      "word": "personally"
+    },
+    {
+      "item_id": "surprisingly",
+      "word": "surprisingly"
+    },
+    {
+      "item_id": "purely",
+      "word": "purely"
+    },
+    {
+      "item_id": "commonly",
+      "word": "commonly"
+    },
+    {
+      "item_id": "sufficiently",
+      "word": "sufficiently"
+    },
+    {
+      "item_id": "low",
+      "word": "low"
+    },
+    {
+      "item_id": "consequently",
+      "word": "consequently"
+    },
+    {
+      "item_id": "softly",
+      "word": "softly"
+    },
+    {
+      "item_id": "sharply",
+      "word": "sharply"
+    },
+    {
+      "item_id": "potentially",
+      "word": "potentially"
+    },
+    {
+      "item_id": "undoubtedly",
+      "word": "undoubtedly"
+    },
+    {
+      "item_id": "notably",
+      "word": "notably"
+    },
+    {
+      "item_id": "nowhere",
+      "word": "nowhere"
+    },
+    {
+      "item_id": "roughly",
+      "word": "roughly"
+    },
+    {
+      "item_id": "since",
+      "word": "since"
+    },
+    {
+      "item_id": "barely",
+      "word": "barely"
+    },
+    {
+      "item_id": "accordingly",
+      "word": "accordingly"
+    },
+    {
+      "item_id": "wherever",
+      "word": "wherever"
+    },
+    {
+      "item_id": "wholly",
+      "word": "wholly"
+    },
+    {
+      "item_id": "formally",
+      "word": "formally"
+    },
+    {
+      "item_id": "namely",
+      "word": "namely"
+    },
+    {
+      "item_id": "past",
+      "word": "past"
+    },
+    {
+      "item_id": "typically",
+      "word": "typically"
+    },
+    {
+      "item_id": "thoroughly",
+      "word": "thoroughly"
+    },
+    {
+      "item_id": "traditionally",
+      "word": "traditionally"
+    },
+    {
+      "item_id": "upstairs",
+      "word": "upstairs"
+    },
+    {
+      "item_id": "bloody",
+      "word": "bloody"
+    },
+    {
+      "item_id": "nonetheless",
+      "word": "nonetheless"
+    },
+    {
+      "item_id": "literally",
+      "word": "literally"
+    },
+    {
+      "item_id": "physically",
+      "word": "physically"
+    },
+    {
+      "item_id": "specially",
+      "word": "specially"
+    },
+    {
+      "item_id": "whereby",
+      "word": "whereby"
+    },
+    {
+      "item_id": "desperately",
+      "word": "desperately"
+    },
+    {
+      "item_id": "strictly",
+      "word": "strictly"
+    },
+    {
+      "item_id": "lightly",
+      "word": "lightly"
+    },
+    {
+      "item_id": "mentally",
+      "word": "mentally"
+    },
+    {
+      "item_id": "correctly",
+      "word": "correctly"
+    },
+    {
+      "item_id": "sadly",
+      "word": "sadly"
+    },
+    {
+      "item_id": "hopefully",
+      "word": "hopefully"
+    },
+    {
+      "item_id": "formerly",
+      "word": "formerly"
+    },
+    {
+      "item_id": "forever",
+      "word": "forever"
+    },
+    {
+      "item_id": "forth",
+      "word": "forth"
+    },
+    {
+      "item_id": "locally",
+      "word": "locally"
+    },
+    {
+      "item_id": "backwards",
+      "word": "backwards"
+    },
+    {
+      "item_id": "officially",
+      "word": "officially"
+    },
+    {
+      "item_id": "daily",
+      "word": "daily"
+    },
+    {
+      "item_id": "happily",
+      "word": "happily"
+    },
+    {
+      "item_id": "simultaneously",
+      "word": "simultaneously"
+    },
+    {
+      "item_id": "besides",
+      "word": "besides"
+    },
+    {
+      "item_id": "severely",
+      "word": "severely"
+    },
+    {
+      "item_id": "separately",
+      "word": "separately"
+    },
+    {
+      "item_id": "downstairs",
+      "word": "downstairs"
+    },
+    {
+      "item_id": "safely",
+      "word": "safely"
+    },
+    {
+      "item_id": "alternatively",
+      "word": "alternatively"
+    },
+    {
+      "item_id": "substantially",
+      "word": "substantially"
+    },
+    {
+      "item_id": "exclusively",
+      "word": "exclusively"
+    },
+    {
+      "item_id": "firstly",
+      "word": "firstly"
+    },
+    {
+      "item_id": "politically",
+      "word": "politically"
+    },
+    {
+      "item_id": "steadily",
+      "word": "steadily"
+    },
+    {
+      "item_id": "scarcely",
+      "word": "scarcely"
+    },
+    {
+      "item_id": "wide",
+      "word": "wide"
+    },
+    {
+      "item_id": "solely",
+      "word": "solely"
+    },
+    {
+      "item_id": "consistently",
+      "word": "consistently"
+    },
+    {
+      "item_id": "nowadays",
+      "word": "nowadays"
+    },
+    {
+      "item_id": "upwards",
+      "word": "upwards"
+    }
+  ]
+}
