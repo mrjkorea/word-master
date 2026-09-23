@@ -696,7 +696,10 @@
       words_az: "单词 A–Z", word_list_em: "按字母看全部单词",
       stats_line: "永远记住 {forever}  ·  练习中 {trying}（复习：1、3、7、21、60天）",
       hello: "你好，{name}", due_line: "复习时间：{title}",
-      tag_forever: "永远", tag_learning: "学习中", tag_new: "新词"
+      tag_forever: "永远", tag_learning: "学习中", tag_new: "新词",
+      spell_help: "点乱序字母，拼出单词。不用打字。", study_how_many: "这次学几个？", tap_explore: "看看", tap_listen: "听", tap_read: "读",
+      tap_hint_explore: "点每张图。听到单词。", tap_hint_listen: "听，然后点对应的图。", tap_hint_read: "读单词，点对应的图。", tap_done: "认识完成",
+      ww_noun: "名词", ww_origin: "词源", ww_like: "近义", ww_unlike: "反义", ww_bits: "词的部分", ww_hear_ex: "听句子"
     },
     ja: {
       intro_title: "単語に会う", intro_help: "ばらばらの文字をタップして単語を作る。入力なし。",
@@ -713,7 +716,11 @@
       words_az: "単語 A–Z", word_list_em: "単語を全部 ABC 順",
       stats_line: "ずっと覚える {forever}  ·  練習中 {trying}（復習: 1, 3, 7, 21, 60日）",
       hello: "こんにちは、{name}", due_line: "復習の時間: {title}",
-      tag_forever: "ずっと", tag_learning: "学習中", tag_new: "新しい"
+      tag_forever: "ずっと", tag_learning: "学習中", tag_new: "新しい",
+      spell_help: "ばらばらの文字をタップして単語を作る。入力なし。", study_how_many: "今回は何語？", tap_explore: "見てみる", tap_listen: "聞く",
+      tap_read: "読む", tap_hint_explore: "絵を一つずつタップ。単語が聞こえます。", tap_hint_listen: "聞いて、同じ絵をタップ。",
+      tap_hint_read: "単語を読んで、同じ絵をタップ。", tap_done: "会う完了", ww_noun: "名詞", ww_origin: "語源", ww_like: "似た語",
+      ww_unlike: "反対語", ww_bits: "語の部分", ww_hear_ex: "文を聞く"
     },
     es: {
       intro_title: "Conoce las palabras", intro_help: "Toca las letras mezcladas. Forma la palabra. Sin teclado.",
@@ -730,7 +737,14 @@
       words_az: "Palabras A–Z", word_list_em: "Ver cada palabra A–Z",
       stats_line: "{forever} para siempre  ·  {trying} practicando (repaso: 1, 3, 7, 21, 60 días)",
       hello: "Hola, {name}", due_line: "Hora de repasar: {title}",
-      tag_forever: "siempre", tag_learning: "aprendiendo", tag_new: "nuevo"
+      tag_forever: "siempre", tag_learning: "aprendiendo", tag_new: "nuevo",
+      spell_help: "Toca las letras mezcladas. Forma la palabra. Sin teclado.",
+      study_how_many: "¿Cuántas palabras esta vez?", tap_explore: "Explorar", tap_listen: "Escuchar",
+      tap_read: "Leer", tap_hint_explore: "Toca cada dibujo. Escucha la palabra.",
+      tap_hint_listen: "Escucha. Toca el dibujo que coincide.",
+      tap_hint_read: "Lee la palabra. Toca el dibujo que coincide.", tap_done: "Listo", ww_noun: "sustantivo",
+      ww_origin: "Origen", ww_like: "Parecido", ww_unlike: "Opuesto", ww_bits: "Partes de la palabra",
+      ww_hear_ex: "Escuchar la frase", jump_test: "6 Prueba"
     },
     hi: {
       intro_title: "शब्द मिलिए", intro_help: "मिली-जुली अक्षरों को टैप कर शब्द बनाएँ। टाइप नहीं।",
@@ -747,7 +761,13 @@
       words_az: "शब्द A–Z", word_list_em: "सारे शब्द A–Z",
       stats_line: "हमेशा {forever}  ·  अभ्यास {trying} (दोहराना: 1, 3, 7, 21, 60 दिन)",
       hello: "नमस्ते, {name}", due_line: "दोहराने का समय: {title}",
-      tag_forever: "हमेशा", tag_learning: "सीख रहे", tag_new: "नया"
+      tag_forever: "हमेशा", tag_learning: "सीख रहे", tag_new: "नया",
+      spell_help: "मिली-जुली अक्षरों को टैप कर शब्द बनाएँ। टाइप नहीं।", study_how_many: "इस बार कितने शब्द?",
+      tap_explore: "देखें", tap_listen: "सुनें", tap_read: "पढ़ें",
+      tap_hint_explore: "हर चित्र टैप करें। शब्द सुनें।", tap_hint_listen: "सुनें। मिलता चित्र टैप करें।",
+      tap_hint_read: "शब्द पढ़ें। मिलता चित्र टैप करें।", tap_done: "मिलना पूरा", ww_noun: "संज्ञा",
+      ww_origin: "मूल", ww_like: "मिलता शब्द", ww_unlike: "उलटा", ww_bits: "शब्द के हिस्से",
+      ww_hear_ex: "वाक्य सुनें"
     },
     de: {
       intro_title: "Wörter kennenlernen", intro_help: "Tippe die gemischten Buchstaben. Baue das Wort. Ohne Tippen.",
@@ -764,7 +784,13 @@
       words_az: "Wörter A–Z", word_list_em: "Jedes Wort A–Z sehen",
       stats_line: "{forever} für immer  ·  {trying} üben (Wiederholung: 1, 3, 7, 21, 60 Tage)",
       hello: "Hallo, {name}", due_line: "Wiederholungszeit: {title}",
-      tag_forever: "für immer", tag_learning: "lernt", tag_new: "neu"
+      tag_forever: "für immer", tag_learning: "lernt", tag_new: "neu",
+      spell_help: "Tippe die gemischten Buchstaben. Baue das Wort. Ohne Tippen.",
+      study_how_many: "Wie viele Wörter diesmal?", tap_explore: "Ansehen", tap_listen: "Hören", tap_read: "Lesen",
+      tap_hint_explore: "Tippe jedes Bild. Hör das Wort.", tap_hint_listen: "Hör zu. Tippe das passende Bild.",
+      tap_hint_read: "Lies das Wort. Tippe das passende Bild.", tap_done: "Kennenlernen fertig", ww_noun: "Nomen",
+      ww_origin: "Herkunft", ww_like: "Ähnlich", ww_unlike: "Gegenteil", ww_bits: "Wortteile",
+      ww_hear_ex: "Satz hören", voice_teenager: "Jugendlicher", jump_test: "6 Prüfung"
     },
     vi: {
       intro_title: "Gặp các từ", intro_help: "Chạm chữ bị xáo. Ghép từ. Không gõ.",
@@ -781,7 +807,12 @@
       words_az: "Từ A–Z", word_list_em: "Xem mọi từ A–Z",
       stats_line: "Nhớ mãi {forever}  ·  đang học {trying} (ôn: 1, 3, 7, 21, 60 ngày)",
       hello: "Xin chào, {name}", due_line: "Giờ ôn: {title}",
-      tag_forever: "mãi", tag_learning: "đang học", tag_new: "mới"
+      tag_forever: "mãi", tag_learning: "đang học", tag_new: "mới",
+      spell_help: "Chạm chữ bị xáo. Ghép từ. Không gõ.", study_how_many: "Lần này bao nhiêu từ?", tap_explore: "Xem",
+      tap_listen: "Nghe", tap_read: "Đọc", tap_hint_explore: "Chạm từng tranh. Nghe từ.",
+      tap_hint_listen: "Nghe. Chạm tranh đúng.", tap_hint_read: "Đọc từ. Chạm tranh đúng.", tap_done: "Gặp xong",
+      ww_noun: "danh từ", ww_origin: "Nguồn gốc", ww_like: "Từ giống", ww_unlike: "Từ trái", ww_bits: "Mảnh từ",
+      ww_hear_ex: "Nghe câu"
     },
     "pt-BR": {
       intro_title: "Conheça as palavras", intro_help: "Toque as letras misturadas. Monte a palavra. Sem teclado.",
@@ -798,7 +829,13 @@
       words_az: "Palavras A–Z", word_list_em: "Ver cada palavra A–Z",
       stats_line: "{forever} para sempre  ·  {trying} praticando (revisão: 1, 3, 7, 21, 60 dias)",
       hello: "Oi, {name}", due_line: "Hora de revisar: {title}",
-      tag_forever: "sempre", tag_learning: "aprendendo", tag_new: "novo"
+      tag_forever: "sempre", tag_learning: "aprendendo", tag_new: "novo",
+      spell_help: "Toque as letras misturadas. Monte a palavra. Sem teclado.",
+      study_how_many: "Quantas palavras desta vez?", tap_explore: "Explorar", tap_listen: "Ouvir", tap_read: "Ler",
+      tap_hint_explore: "Toque cada desenho. Ouça a palavra.", tap_hint_listen: "Ouça. Toque o desenho certo.",
+      tap_hint_read: "Leia a palavra. Toque o desenho certo.", tap_done: "Pronto", ww_noun: "substantivo",
+      ww_origin: "Origem", ww_like: "Parecido", ww_unlike: "Oposto", ww_bits: "Partes da palavra",
+      ww_hear_ex: "Ouvir a frase"
     },
     id: {
       intro_title: "Kenali katanya", intro_help: "Ketuk huruf acak. Susun katanya. Tanpa mengetik.",
@@ -815,7 +852,13 @@
       words_az: "Kata A–Z", word_list_em: "Lihat semua kata A–Z",
       stats_line: "Selamanya {forever}  ·  latihan {trying} (ulang: 1, 3, 7, 21, 60 hari)",
       hello: "Hai, {name}", due_line: "Waktu mengulang: {title}",
-      tag_forever: "selamanya", tag_learning: "belajar", tag_new: "baru"
+      tag_forever: "selamanya", tag_learning: "belajar", tag_new: "baru",
+      spell_help: "Ketuk huruf acak. Susun katanya. Tanpa mengetik.", study_how_many: "Berapa kata kali ini?",
+      tap_explore: "Lihat", tap_listen: "Dengar", tap_read: "Baca",
+      tap_hint_explore: "Ketuk setiap gambar. Dengar katanya.", tap_hint_listen: "Dengar. Ketuk gambar yang cocok.",
+      tap_hint_read: "Baca katanya. Ketuk gambar yang cocok.", tap_done: "Selesai", ww_noun: "kata benda",
+      ww_origin: "Asal", ww_like: "Mirip", ww_unlike: "Lawan", ww_bits: "Bagian kata",
+      ww_hear_ex: "Dengar kalimatnya"
     },
     fr: {
       intro_title: "Rencontrer les mots", intro_help: "Touchez les lettres mélangées. Formez le mot. Sans clavier.",
@@ -832,7 +875,14 @@
       words_az: "Mots A–Z", word_list_em: "Voir chaque mot A–Z",
       stats_line: "{forever} pour toujours  ·  {trying} en cours (révision : 1, 3, 7, 21, 60 jours)",
       hello: "Salut, {name}", due_line: "Moment de réviser : {title}",
-      tag_forever: "toujours", tag_learning: "en cours", tag_new: "nouveau"
+      tag_forever: "toujours", tag_learning: "en cours", tag_new: "nouveau",
+      spell_help: "Touchez les lettres mélangées. Formez le mot. Sans clavier.",
+      study_how_many: "Combien de mots cette fois ?", tap_explore: "Explorer", tap_listen: "Écouter",
+      tap_read: "Lire", tap_hint_explore: "Touchez chaque image. Écoutez le mot.",
+      tap_hint_listen: "Écoutez. Touchez l’image qui correspond.",
+      tap_hint_read: "Lisez le mot. Touchez l’image qui correspond.", tap_done: "Terminé", ww_noun: "nom",
+      ww_origin: "Origine", ww_like: "Semblable", ww_unlike: "Contraire", ww_bits: "Morceaux du mot",
+      ww_hear_ex: "Écouter la phrase", jump_test: "6 Contrôle"
     },
     ar: {
       intro_title: "تعرّف على الكلمات", intro_help: "اضغط الحروف المختلطة لبناء الكلمة. بلا كتابة.",
@@ -849,7 +899,12 @@
       words_az: "كلمات A–Z", word_list_em: "انظر كل كلمة أبجديًا",
       stats_line: "للأبد {forever}  ·  يتدرّب {trying} (مراجعة: 1، 3، 7، 21، 60 يومًا)",
       hello: "مرحبًا، {name}", due_line: "وقت المراجعة: {title}",
-      tag_forever: "للأبد", tag_learning: "يتعلم", tag_new: "جديد"
+      tag_forever: "للأبد", tag_learning: "يتعلم", tag_new: "جديد",
+      spell_help: "اضغط الحروف المختلطة لبناء الكلمة. بلا كتابة.", study_how_many: "كم كلمة هذه المرة؟",
+      tap_explore: "استكشف", tap_listen: "استمع", tap_read: "اقرأ", tap_hint_explore: "اضغط كل صورة. اسمع الكلمة.",
+      tap_hint_listen: "استمع. اضغط الصورة المطابقة.", tap_hint_read: "اقرأ الكلمة. اضغط الصورة المطابقة.",
+      tap_done: "تم التعارف", ww_noun: "اسم", ww_origin: "الأصل", ww_like: "مشابه", ww_unlike: "عكس",
+      ww_bits: "أجزاء الكلمة", ww_hear_ex: "اسمع الجملة"
     },
     tr: {
       intro_title: "Kelimelerle tanış", intro_help: "Karışık harflere dokun. Kelimeyi kur. Yazmadan.",
@@ -866,7 +921,12 @@
       words_az: "Kelimeler A–Z", word_list_em: "Her kelimeyi A–Z gör",
       stats_line: "Sonsuza {forever}  ·  çalışan {trying} (tekrar: 1, 3, 7, 21, 60 gün)",
       hello: "Merhaba, {name}", due_line: "Tekrar zamanı: {title}",
-      tag_forever: "sonsuza", tag_learning: "öğreniyor", tag_new: "yeni"
+      tag_forever: "sonsuza", tag_learning: "öğreniyor", tag_new: "yeni",
+      spell_help: "Karışık harflere dokun. Kelimeyi kur. Yazmadan.", study_how_many: "Bu sefer kaç kelime?",
+      tap_explore: "Bak", tap_listen: "Dinle", tap_read: "Oku", tap_hint_explore: "Her resme dokun. Kelimeyi duy.",
+      tap_hint_listen: "Dinle. Eşleşen resme dokun.", tap_hint_read: "Kelimeyi oku. Eşleşen resme dokun.",
+      tap_done: "Tanışma bitti", ww_noun: "isim", ww_origin: "Köken", ww_like: "Benzer", ww_unlike: "Zıt",
+      ww_bits: "Kelime parçaları", ww_hear_ex: "Cümleyi dinle", jump_test: "6 Sınav"
     },
     it: {
       intro_title: "Incontra le parole", intro_help: "Tocca le lettere mescolate. Forma la parola. Senza digitare.",
@@ -883,7 +943,14 @@
       words_az: "Parole A–Z", word_list_em: "Vedi ogni parola A–Z",
       stats_line: "{forever} per sempre  ·  {trying} in prova (ripasso: 1, 3, 7, 21, 60 giorni)",
       hello: "Ciao, {name}", due_line: "Ora del ripasso: {title}",
-      tag_forever: "sempre", tag_learning: "imparando", tag_new: "nuovo"
+      tag_forever: "sempre", tag_learning: "imparando", tag_new: "nuovo",
+      spell_help: "Tocca le lettere mescolate. Forma la parola. Senza digitare.",
+      study_how_many: "Quante parole questa volta?", tap_explore: "Esplora", tap_listen: "Ascolta",
+      tap_read: "Leggi", tap_hint_explore: "Tocca ogni disegno. Senti la parola.",
+      tap_hint_listen: "Ascolta. Tocca il disegno giusto.",
+      tap_hint_read: "Leggi la parola. Tocca il disegno giusto.", tap_done: "Fatto", ww_noun: "sostantivo",
+      ww_origin: "Origine", ww_like: "Simile", ww_unlike: "Opposto", ww_bits: "Parti della parola",
+      ww_hear_ex: "Senti la frase", voice_teenager: "Adolescente", jump_test: "6 Prova"
     },
     pl: {
       intro_title: "Poznaj słowa", intro_help: "Dotknij pomieszanych liter. Złóż słowo. Bez pisania.",
@@ -900,7 +967,14 @@
       words_az: "Słowa A–Z", word_list_em: "Zobacz każde słowo A–Z",
       stats_line: "Na zawsze {forever}  ·  ćwiczy {trying} (powtórka: 1, 3, 7, 21, 60 dni)",
       hello: "Cześć, {name}", due_line: "Czas powtórki: {title}",
-      tag_forever: "zawsze", tag_learning: "nauka", tag_new: "nowe"
+      tag_forever: "zawsze", tag_learning: "nauka", tag_new: "nowe",
+      spell_help: "Dotknij pomieszanych liter. Złóż słowo. Bez pisania.", study_how_many: "Ile słów tym razem?",
+      tap_explore: "Oglądaj", tap_listen: "Słuchaj", tap_read: "Czytaj",
+      tap_hint_explore: "Dotknij każdego obrazka. Usłysz słowo.",
+      tap_hint_listen: "Posłuchaj. Dotknij pasującego obrazka.",
+      tap_hint_read: "Przeczytaj słowo. Dotknij pasującego obrazka.", tap_done: "Gotowe", ww_noun: "rzeczownik",
+      ww_origin: "Pochodzenie", ww_like: "Podobne", ww_unlike: "Przeciwieństwo", ww_bits: "Części słowa",
+      ww_hear_ex: "Usłysz zdanie", jump_test: "6 Sprawdzian"
     }
   };
 
