@@ -976,7 +976,7 @@
 
   function wordPic(w) {
     const id = String((w && (w.id || w.en)) || "").toLowerCase().replace(/[^a-z]/g, "");
-    return packBase() + "/" + id + ".png";
+    return packBase() + "/" + id + ".jpg";
   }
 
   function scramble(en) {
