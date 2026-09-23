@@ -855,6 +855,7 @@
       due.hidden = !dueSet;
       if (dueSet) due.textContent = t("due_line", { title: dueSet.title });
     }
+    markIndexNext();
     if (!signed || !set) {
       if (btn) btn.hidden = true;
       return;
@@ -867,6 +868,30 @@
       const mode = Algo.startMode(set.words, winsState(set));
       $("#continue-meta").textContent = t("continue_meta", { mode: I18n.partName(mode) });
     }
+  }
+
+  function markIndexNext() {
+    const path = [
+      "nouns100", "verbs100", "adjectives100", "nouns200", "little100",
+      "verbs200", "adjectives200", "adverbs100", "nouns300", "verbs300",
+      "adjectives300", "nouns400", "adverbs200", "nouns500", "verbs400",
+    ];
+    function setFor(pid) {
+      return Object.keys(state.sets).map(function (k) { return state.sets[k]; }).find(function (s) {
+        return s.packId === pid;
+      });
+    }
+    function done(pid) {
+      const s = setFor(pid);
+      if (!s || !(s.words || []).length) return false;
+      return factoryCleared(s);
+    }
+    const next = path.filter(function (pid) { return !done(pid); })[0] || path[0];
+    $$(".pack-tile").forEach(function (el) {
+      const pid = el.getAttribute("data-pack");
+      el.classList.toggle("is-next", pid === next);
+      el.classList.toggle("is-done", done(pid));
+    });
   }
 
   function renderSetHome() {
