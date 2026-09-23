@@ -141,6 +141,96 @@
     return "";
   }
 
+  function slimProgress() {
+    const sets = {};
+    Object.keys(state.sets || {}).forEach(function (k) {
+      const s = state.sets[k];
+      const pid = s && s.packId;
+      if (!pid) return;
+      sets[pid] = {
+        title: s.title || "",
+        winsA: s.winsA || {},
+        winsB: s.winsB || {},
+        winsC: s.winsC || {},
+        intro: s.intro || {},
+        lastPlayedAt: s.lastPlayedAt || 0,
+        srsTrying: !!s.srsTrying,
+        srsForever: !!s.srsForever,
+        srsStage: s.srsStage || 0,
+        srsNextAt: s.srsNextAt || null,
+      };
+    });
+    const cur = currentSet();
+    return {
+      v: 1,
+      studentId: state.studentId,
+      voice: state.voice,
+      locale: state.locale,
+      studySize: state.studySize,
+      testKind: state.testKind,
+      currentPackId: cur ? (cur.packId || "") : "",
+      sets: sets,
+    };
+  }
+
+  function applyRemote(raw) {
+    if (!raw) return;
+    let obj = raw;
+    if (typeof raw === "string") {
+      try { obj = JSON.parse(raw); } catch (e) { return; }
+    }
+    if (!obj || typeof obj !== "object" || !obj.sets) return;
+    if (obj.studentId) state.studentId = obj.studentId;
+    if (obj.voice) state.voice = obj.voice;
+    if (obj.locale) state.locale = obj.locale;
+    if (obj.studySize) state.studySize = obj.studySize;
+    if (obj.testKind) state.testKind = obj.testKind;
+    if (!obj.v && obj.currentSetId) {
+      state.sets = obj.sets;
+      state.currentSetId = obj.currentSetId;
+      return;
+    }
+    state.sets = {};
+    state.currentSetId = null;
+    Object.keys(obj.sets).forEach(function (pid) {
+      const s = obj.sets[pid] || {};
+      const id = "set_" + pid;
+      state.sets[id] = {
+        id: id,
+        packId: pid,
+        title: s.title || pid,
+        words: s.words || [],
+        winsA: s.winsA || {},
+        winsB: s.winsB || {},
+        winsC: s.winsC || {},
+        intro: s.intro || {},
+        lastPlayedAt: s.lastPlayedAt || 0,
+        srsTrying: !!s.srsTrying,
+        srsForever: !!s.srsForever,
+        srsStage: s.srsStage || 0,
+        srsNextAt: s.srsNextAt || null,
+        createdAt: s.lastPlayedAt || Date.now(),
+      };
+      if (obj.currentPackId === pid) state.currentSetId = id;
+    });
+  }
+
+  function pullSheet() {
+    if (!state.accountName || !state.accountPin) return;
+    if (!window.MRJ_WM_progress || !window.MRJ_WM_progress.load) return;
+    window.MRJ_WM_progress.load({
+      action: "load",
+      name: state.accountName,
+      pin: state.accountPin,
+    }).then(function (res) {
+      if (res && res.found && res.progress_json) {
+        applyRemote(res.progress_json);
+        try { localStorage.setItem(LS_STATE, JSON.stringify(state)); } catch (e) {}
+        if (currentScreen === "home") renderHome();
+      }
+    }).catch(function () {});
+  }
+
   function progressPayload() {
     const set = currentSet();
     return {
@@ -154,7 +244,7 @@
       study_size: state.studySize || 10,
       locale: state.locale || "en",
       student_id: state.studentId || "",
-      progress_json: JSON.stringify(state),
+      progress_json: JSON.stringify(slimProgress()),
     };
   }
 
@@ -2091,16 +2181,57 @@
       const pin = (($("#account-pin") && $("#account-pin").value) || "").replace(/\D/g, "");
       const err = $("#signin-err");
       if (!n || pin.length !== 4) {
-        if (err) err.hidden = false;
+        if (err) {
+          err.textContent = "Need a name and a 4-digit PIN.";
+          err.hidden = false;
+        }
         return;
       }
       if (err) err.hidden = true;
-      state.accountName = n;
-      state.accountPin = pin;
-      state.displayName = n;
-      signinSkipped = false;
-      persist();
-      renderHome();
+      saveIn.disabled = true;
+      const prog = window.MRJ_WM_progress;
+      if (!prog || !prog.load) {
+        saveIn.disabled = false;
+        if (err) {
+          err.textContent = "Progress sheet is not connected.";
+          err.hidden = false;
+        }
+        return;
+      }
+      prog.load({ action: "load", name: n, pin: pin }).then(function (res) {
+        if (res && res.error === "wrong_pin") {
+          if (err) {
+            err.textContent = "That name already has a different PIN.";
+            err.hidden = false;
+          }
+          saveIn.disabled = false;
+          return;
+        }
+        if (!res || res.ok === false) {
+          if (err) {
+            err.textContent = "Could not reach the progress sheet. Try again.";
+            err.hidden = false;
+          }
+          saveIn.disabled = false;
+          return;
+        }
+        state.accountName = n;
+        state.accountPin = pin;
+        state.displayName = n;
+        signinSkipped = false;
+        if (res.found && res.progress_json) applyRemote(res.progress_json);
+        persist();
+        renderHome();
+        saveIn.disabled = false;
+        const set = currentSet();
+        if (set && set.packId && !(set.words || []).length) openPack(set.packId);
+      }).catch(function () {
+        if (err) {
+          err.textContent = "Could not reach the progress sheet. Try again.";
+          err.hidden = false;
+        }
+        saveIn.disabled = false;
+      });
     });
     const skipIn = $("#btn-signin-skip");
     if (skipIn) skipIn.addEventListener("click", function () {
@@ -2167,6 +2298,11 @@
       });
     });
     $("#btn-continue").addEventListener("click", function () {
+      const set = currentSet();
+      if (set && set.packId && !(set.words || []).length) {
+        openPack(set.packId);
+        return;
+      }
       renderSetHome();
       showScreen("set");
     });
@@ -2387,6 +2523,7 @@
 
   window.MRJ_WORD_FACTORY_PACK = { words: [] };
   bind();
+  pullSheet();
   probeLinuxTts();
   if (I18n) {
     I18n.setLocale(state.locale || "en");

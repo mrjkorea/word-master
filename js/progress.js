@@ -39,30 +39,27 @@
 
   function postRemote(payload) {
     var url = root.WM_PROGRESS_URL;
-    if (!url) return;
-    try {
-      fetch(url, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(fields(payload)),
-      }).catch(function () {});
-    } catch (e) {}
+    if (!url) return Promise.resolve(null);
+    return fetch(url, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(fields(payload)),
+    }).then(function (res) {
+      return res.json();
+    });
   }
 
   function save(payload) {
     var body = fields(payload);
     if (!body.action) body.action = "save";
     writeLocal(body);
-    postRemote(body);
-    return body;
+    return postRemote(body);
   }
 
-  function load() {
-    var local = readLocal();
-    var body = fields(local || {});
+  function load(payload) {
+    var body = fields(payload || readLocal() || {});
     body.action = "load";
-    postRemote(body);
-    return local;
+    return postRemote(body);
   }
 
   root.MRJ_WM_progress = { save: save, load: load };
