@@ -468,11 +468,103 @@
 
   let currentAudio = null;
 
+  function audioBox() {
+    const AC = window.AudioContext || window.webkitAudioContext;
+    if (!AC) return null;
+    if (!audioBox.ctx) audioBox.ctx = new AC();
+    if (audioBox.ctx.state === "suspended") audioBox.ctx.resume();
+    return audioBox.ctx;
+  }
+
+  function blip(freq, when, dur, gain) {
+    const c = audioBox();
+    if (!c) return;
+    const o = c.createOscillator();
+    const g = c.createGain();
+    o.type = "triangle";
+    o.frequency.setValueAtTime(freq, when);
+    g.gain.setValueAtTime(0.0001, when);
+    g.gain.exponentialRampToValueAtTime(gain || 0.08, when + 0.02);
+    g.gain.exponentialRampToValueAtTime(0.0001, when + dur);
+    o.connect(g);
+    g.connect(c.destination);
+    o.start(when);
+    o.stop(when + dur + 0.02);
+  }
+
   function dingOk() {
-    try {
-      const a = new Audio("audio/ding.wav");
-      a.play().catch(function () {});
-    } catch (e) {}
+    const c = audioBox();
+    if (!c) {
+      try { new Audio("audio/ding.wav").play().catch(function () {}); } catch (e) {}
+      confetti(24);
+      return;
+    }
+    const t = c.currentTime;
+    blip(523.25, t, 0.11, 0.07);
+    blip(659.25, t + 0.08, 0.13, 0.07);
+    blip(783.99, t + 0.16, 0.18, 0.06);
+    confetti(26);
+  }
+
+  function cheerBig() {
+    const c = audioBox();
+    if (c) {
+      const t = c.currentTime;
+      [523.25, 659.25, 783.99, 1046.5].forEach(function (f, i) {
+        blip(f, t + i * 0.09, 0.22, 0.09);
+      });
+    }
+    confetti(64);
+  }
+
+  function confetti(n) {
+    const canvas = $("#confetti");
+    if (!canvas || !canvas.getContext) return;
+    const box = canvas.parentElement.getBoundingClientRect();
+    canvas.width = Math.max(1, Math.floor(box.width));
+    canvas.height = Math.max(1, Math.floor(box.height));
+    canvas.hidden = false;
+    const g = canvas.getContext("2d");
+    const colors = ["#f5c400", "#ff4d6d", "#3d8bfd", "#30d158", "#ff8a00", "#b44dff"];
+    const bits = [];
+    const count = n || 24;
+    for (let i = 0; i < count; i++) {
+      const left = i % 2 === 0;
+      bits.push({
+        x: left ? 8 : canvas.width - 8,
+        y: canvas.height * 0.42 + Math.random() * 30,
+        w: 7 + Math.random() * 6,
+        h: 4 + Math.random() * 3,
+        vx: (left ? 1 : -1) * (2.2 + Math.random() * 2.4),
+        vy: -3.2 - Math.random() * 2.6,
+        rot: Math.random() * 6,
+        vr: -0.25 + Math.random() * 0.5,
+        color: colors[i % colors.length],
+      });
+    }
+    let frames = 0;
+    function tick() {
+      frames += 1;
+      g.clearRect(0, 0, canvas.width, canvas.height);
+      bits.forEach(function (b) {
+        b.x += b.vx;
+        b.y += b.vy;
+        b.vy += 0.12;
+        b.rot += b.vr;
+        g.save();
+        g.translate(b.x, b.y);
+        g.rotate(b.rot);
+        g.fillStyle = b.color;
+        g.fillRect(-b.w / 2, -b.h / 2, b.w, b.h);
+        g.restore();
+      });
+      if (frames < 72) requestAnimationFrame(tick);
+      else {
+        g.clearRect(0, 0, canvas.width, canvas.height);
+        canvas.hidden = true;
+      }
+    }
+    requestAnimationFrame(tick);
   }
 
   function currentPackId() {
@@ -696,13 +788,14 @@
 
   function burst(msg) {
     const el = $("#burst");
-    $("#burst-msg").textContent = msg;
+    $("#burst-msg").textContent = "🎉 " + msg;
     el.hidden = false;
+    cheerBig();
     clearTimeout(burst._t);
     burst._t = setTimeout(function () {
       el.hidden = true;
-    }, 1400);
-    return wait(1400);
+    }, 1100);
+    return wait(900);
   }
 
   function shakeCard() {
