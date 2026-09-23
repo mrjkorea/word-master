@@ -62,3 +62,11 @@ PROOF: no " · " inside meaning() block (grep exit clean)
 **Change:** `(hover: hover) and (pointer: fine)` and not `(pointer: coarse)` sets `body.kb-desk` and hides `.az-pad` via CSS; Check/Delete and typed line stay. Physical keys use `e.code` KeyA–KeyZ → `onAz`, Backspace → `delAz`, Enter → check — only on Learn B/C or Hard test, not in form fields or modifier shortcuts. Phones keep the pad; BT keyboard may still type. No `export/linux/mrj-word-factory/js/app.js` in this repo.
 
 **Proof:** `node --check js/app.js` exit 0.
+
+## 2026-09-23 — Meet lock (Verbs 101–200 leak)
+
+**Model:** grok-4.7 (cursor-agent started the lock; finish after timeout)
+**Command:** `node scripts/meet_word_lock_test.js`
+**Result:** `MEET_LOCK_OK verbs-round stays inside Meet the Words` exit 0
+**Files:** `js/meet-lock.js`, `js/app.js`, `index.html`, `games/spellfire/src/engine.js`, leap-frog and snow-jump assets, `scripts/meet_word_lock_test.js`
+**Law:** Dictation, Write, Test, Listen, and games use only the Meet the Words list. No slide. No animals/nouns fallback.

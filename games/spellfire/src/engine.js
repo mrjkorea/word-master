@@ -19,8 +19,7 @@ const API = "1.6.0";
 const STORAGE_KEY = "mrj.firefighter_spelling.records";
 const CUSTOM_KEY = "mrj.firefighter_spelling.custom_words";
 const VOICE_KEY = "mrj.firefighter_spelling.tts_gender";
-const DEFAULT_PACK_URL = "packs/numbers-en.json";
-const WORDS_TXT_URL = "packs/words.txt";
+const DEFAULT_PACK_URL = "";
 const WINDOWS = 5;
 const LETTERS = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("");
 const HURRY_MS = 4000;
@@ -683,36 +682,29 @@ function packFromLines(text, id) {
 }
 
 async function fetchPack() {
-  if (packUrl === "session") {
-    try {
-      const raw = sessionStorage.getItem("mrj.wm.gamepack");
-      if (raw) {
-        const pack = normalizePack(JSON.parse(raw), "session");
-        if (pack.items.length) return pack;
+  if (!packUrl || packUrl === "session") {
+    if (packUrl === "session") {
+      try {
+        const raw = sessionStorage.getItem("mrj.wm.gamepack");
+        if (raw) {
+          const pack = normalizePack(JSON.parse(raw), "session");
+          if (pack.items.length) return pack;
+        }
+      } catch {
+        /* no other pack */
       }
-    } catch {
-      /* fall through */
     }
+    return normalizePack({ pack_id: "empty", seconds_per_letter: DEFAULT_SEC_PER_LETTER, items: [] }, "empty");
   }
   try {
-    const res = await fetch(packUrl === "session" ? "packs/nouns100.json" : packUrl, { cache: "no-store" });
+    const res = await fetch(packUrl, { cache: "no-store" });
     if (res.ok) {
       const json = await res.json();
       const pack = normalizePack(json, json.pack_id || "fetched");
       if (pack.items.length) return pack;
     }
   } catch {
-    /* fall through */
-  }
-  try {
-    const res = await fetch(WORDS_TXT_URL, { cache: "no-store" });
-    if (res.ok) {
-      const text = await res.text();
-      const pack = packFromLines(text, "words-txt");
-      if (pack.items.length) return pack;
-    }
-  } catch {
-    /* last resort empty — still not hardcoded as only source */
+    /* no other pack */
   }
   return normalizePack({ pack_id: "empty", seconds_per_letter: DEFAULT_SEC_PER_LETTER, items: [] }, "empty");
 }

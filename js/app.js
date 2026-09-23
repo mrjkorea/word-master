@@ -157,6 +157,8 @@
         winsB: s.winsB || {},
         winsC: s.winsC || {},
         intro: s.intro || {},
+        meetLock: Array.isArray(s.meetLock) ? s.meetLock.slice() : [],
+        tapmapKey: s.tapmapKey || "",
         lastPlayedAt: s.lastPlayedAt || 0,
         srsTrying: !!s.srsTrying,
         srsForever: !!s.srsForever,
@@ -208,6 +210,8 @@
         winsB: s.winsB || {},
         winsC: s.winsC || {},
         intro: s.intro || {},
+        meetLock: Array.isArray(s.meetLock) ? s.meetLock.slice() : [],
+        tapmapKey: s.tapmapKey || "",
         lastPlayedAt: s.lastPlayedAt || 0,
         srsTrying: !!s.srsTrying,
         srsForever: !!s.srsForever,
@@ -741,23 +745,60 @@
     set = set || currentSet();
     if (!set || !set.words || !set.words.length) return [];
     const n = Math.min(studySize(), set.words.length);
-    const undone = set.words.filter(function (w) {
-      const intro = !(set.intro && set.intro[w.id]);
-      const a = (set.winsA[w.id] || 0) < 2;
-      const b = (set.winsB[w.id] || 0) < 2;
-      const c = (set.winsC[w.id] || 0) < 2;
-      return intro || a || b || c;
+    const ids = window.MeetLock.batchIds(
+      set.words,
+      set.intro || {},
+      set.winsA || {},
+      set.winsB || {},
+      set.winsC || {},
+      n,
+      2
+    );
+    if (ids.length) return window.MeetLock.wordsForLock(set.words, ids);
+    return set.words.slice(0, n);
+  }
+
+  function wordMap(set) {
+    const map = {};
+    ((set && set.words) || []).forEach(function (w) {
+      if (w && w.id != null) map[w.id] = w;
     });
-    const src = undone.length ? undone : set.words;
-    return src.slice(0, n);
+    return map;
+  }
+
+  function meetLockHeld(set) {
+    if (!set || !Array.isArray(set.meetLock) || !set.meetLock.length) return false;
+    return !window.MeetLock.lockCleared(
+      wordMap(set),
+      set.meetLock,
+      set.intro || {},
+      set.winsA || {},
+      set.winsB || {},
+      set.winsC || {},
+      2
+    );
   }
 
   function playWords(set) {
+    set = set || currentSet();
+    if (!set) return [];
+    if (set.meetLock && set.meetLock.length) {
+      return window.MeetLock.wordsForLock(set.words || [], set.meetLock);
+    }
     return batchWords(set);
   }
 
+  function ensureMeetLock(set) {
+    set = set || currentSet();
+    if (!set) return;
+    if (!Array.isArray(set.meetLock) || !set.meetLock.length) {
+      set.meetLock = batchWords(set).map(function (w) { return w.id; });
+      persist();
+    }
+  }
+
   function batchKey(set) {
-    return batchWords(set).map(function (w) { return w.id; }).join(",");
+    return playWords(set).map(function (w) { return w.id; }).join(",");
   }
 
   function tapmapDone(set) {
@@ -769,7 +810,7 @@
 
   function introDone(set) {
     if (!set || !set.intro) set.intro = {};
-    const words = batchWords(set);
+    const words = playWords(set);
     if (!words.length) return true;
     return tapmapDone(set) && words.every(function (w) { return !!set.intro[w.id]; });
   }
@@ -1001,13 +1042,15 @@
       if (jump === "intro") el.classList.toggle("done", met);
       if (jump === "A" || jump === "B" || jump === "C") {
         const wins = Algo.bucket(ws, jump);
-        el.classList.toggle("done", Algo.partDone(set.words, wins));
-        el.classList.toggle("now", Algo.startMode(set.words, ws) === jump);
+        const round = playWords(set);
+        el.classList.toggle("done", Algo.partDone(round, wins));
+        el.classList.toggle("now", Algo.startMode(round, ws) === jump);
       }
     });
     const chips = $("#word-chips");
     chips.innerHTML = "";
-    set.words.forEach(function (w) {
+    const roundWords = playWords(set);
+    roundWords.forEach(function (w) {
       const btn = document.createElement("button");
       btn.type = "button";
       btn.className = "word-row";
@@ -1032,8 +1075,8 @@
     if (cleared) {
       $("#learn-label").textContent = t("relearn");
     } else {
-      const mode = Algo.startMode(set.words, ws);
-      $("#learn-label").textContent = mode === "A" && Algo.factoryProgress(set.words, ws) === 0
+      const mode = Algo.startMode(roundWords, ws);
+      $("#learn-label").textContent = mode === "A" && Algo.factoryProgress(roundWords, ws) === 0
         ? t("start_learn")
         : t("continue_learn");
     }
@@ -1090,7 +1133,11 @@
     const set = currentSet();
     if (!set) return;
     if (!set.intro) set.intro = {};
-    const words = batchWords(set);
+    if (!meetLockHeld(set)) {
+      set.meetLock = batchWords(set).map(function (w) { return w.id; });
+      persist();
+    }
+    const words = playWords(set);
     if (!words.length) {
       learn = blankLearn();
       showScreen("learn");
@@ -1295,7 +1342,7 @@
     if (!set) return;
     set.tapmapKey = batchKey(set);
     if (!set.intro) set.intro = {};
-    batchWords(set).forEach(function (w) { set.intro[w.id] = true; });
+    playWords(set).forEach(function (w) { set.intro[w.id] = true; });
     persist();
     learn = blankLearn();
     showScreen("learn");
@@ -1351,7 +1398,7 @@
               const set = currentSet();
               set.intro[w.id] = true;
               persist();
-              const nxt = set.words.find(function (x) { return !set.intro[x.id]; });
+              const nxt = playWords(set).find(function (x) { return !set.intro[x.id]; });
               if (nxt) {
                 introCurId = nxt.id;
                 meetBuilt = [];
@@ -1403,7 +1450,7 @@
     if (!set || !w) return;
     set.intro[w.id] = true;
     persist();
-    const nxt = set.words.find(function (x) { return !set.intro[x.id]; });
+    const nxt = playWords(set).find(function (x) { return !set.intro[x.id]; });
     if (nxt) {
       introCurId = nxt.id;
       meetBuilt = [];
@@ -1459,7 +1506,7 @@
   function onAz(ch) {
     if (currentScreen === "intro") {
       const set = currentSet();
-      if (!introCurId && set && set.words[0]) introCurId = set.words[0].id;
+      if (!introCurId && set && playWords(set)[0]) introCurId = playWords(set)[0].id;
       if (!set || !introCurId || set.intro[introCurId]) return;
       introTyped += ch;
       renderIntro();
@@ -1543,6 +1590,7 @@
       startTapmap();
       return;
     }
+    ensureMeetLock(set);
     if (reset || factoryCleared(set)) {
       const empty = Algo.emptyWins();
       set.winsA = empty.winsA;
@@ -1550,7 +1598,7 @@
       set.winsC = empty.winsC;
       persist();
     }
-    const mode = Algo.startMode(set.words, winsState(set));
+    const mode = Algo.startMode(playWords(set), winsState(set));
     if (!mode) {
       renderSetHome();
       showScreen("set");
@@ -1564,6 +1612,7 @@
 
   function beginPart(mode) {
     const set = currentSet();
+    ensureMeetLock(set);
     const words = playWords(set);
     const wins = Algo.bucket(winsState(set), mode);
     learn.mode = mode;
@@ -1863,6 +1912,7 @@
   function startEasy() {
     const set = currentSet();
     if (!set) return;
+    ensureMeetLock(set);
     quiz = blankQuiz();
     quiz.kind = "easy";
     quiz.items = shuffle(playWords(set).slice());
@@ -1881,6 +1931,7 @@
   function startHard() {
     const set = currentSet();
     if (!set) return;
+    ensureMeetLock(set);
     quiz = blankQuiz();
     quiz.kind = "hard";
     quiz.items = shuffle(playWords(set).slice());
@@ -2047,7 +2098,7 @@
     const set = currentSet();
     if (!set) return;
     const tiles = [];
-    set.words.forEach(function (w) {
+    playWords(set).forEach(function (w) {
       tiles.push({ id: w.id, side: "en", text: w.en, pair: w.id });
       tiles.push({ id: w.id + "_ko", side: "ko", text: meaning(w), pair: w.id });
     });
@@ -2058,7 +2109,7 @@
       started: Date.now(),
       timer: null,
       pairs: 0,
-      need: set.words.length,
+      need: playWords(set).length,
     };
     showScreen("match");
     $("#match-win").hidden = true;
@@ -2128,8 +2179,9 @@
   function startListen() {
     const set = currentSet();
     if (!set) return;
+    ensureMeetLock(set);
     listenGame = {
-      items: shuffle(set.words),
+      items: shuffle(playWords(set)),
       index: 0,
       score: 0,
       locking: false,
@@ -2186,7 +2238,7 @@
 
   function quizItemsFromSet() {
     const set = currentSet();
-    const words = (set && set.words) || [];
+    const words = playWords(set);
     return words.map(function (w) {
       const others = shuffle(words.filter(function (x) { return x.id !== w.id; })).map(function (x) { return x.en; });
       return {
@@ -2205,6 +2257,7 @@
       openDemo().then(function () { openPortableGame(kind); });
       return;
     }
+    ensureMeetLock(set);
     const items = quizItemsFromSet();
     const paths = {
       leapfrog: "games/leap-frog/index.html",
@@ -2219,7 +2272,7 @@
         pack_id: set.id || "nouns100",
         title: set.title,
         seconds_per_letter: 5,
-        items: set.words.map(function (w) { return { item_id: w.id, word: w.en }; }),
+        items: playWords(set).map(function (w) { return { item_id: w.id, word: w.en }; }),
       };
     } else {
       pack = {
