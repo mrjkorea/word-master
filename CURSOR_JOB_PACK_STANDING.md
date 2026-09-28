@@ -89,7 +89,7 @@ Behavior — **no `meetLock` cap, uses the whole pack**:
 `js/progress.js` / `js/progress-config.js`:
 - `js/progress-config.js` → set
   ```js
-  window.WM_PROGRESS_URL = "https://opponent-turned-typing-cingular.trycloudflare.com/";
+  window.WM_PROGRESS_URL = "https://script.google.com/macros/s/AKfycbwIBPzcmJYkJP-uURVzyt8_7iF3mzGBTCp-omNA2sF3Hk5oGusHfOlPyhEnDl2XAJu82w/exec";
   ```
 - In `slimProgress()` add `final: state.sets[k].final || null` and `finalMiss` per pack (array, capped 200). Keep total under 49,000 chars — if `JSON.stringify` exceeds 45,000, drop `finalMiss` for the least-recently-played packs until it fits.
 
@@ -110,10 +110,10 @@ In `index.html`, bump `?v=` for `css/app.css`, `js/progress-config.js`, `js/prog
 3. New test `scripts/final_test_wide_test.js`: assert `startEasy(true)` queues all 100 words while normal `startEasy()` still queues only the lock batch; assert 80% pass rule.
 4. Door end-to-end (real network, must return real JSON):
    ```bash
-   curl -s -X POST https://opponent-turned-typing-cingular.trycloudflare.com/ \
+   curl -s -X POST https://script.google.com/macros/s/AKfycbwIBPzcmJYkJP-uURVzyt8_7iF3mzGBTCp-omNA2sF3Hk5oGusHfOlPyhEnDl2XAJu82w/exec \
      -H 'Content-Type: application/json' \
      -d '{"action":"save","name":"Cursor Check","pin":"1234","pack_id":"nouns100","study_size":10,"progress_json":"{\"v\":1,\"sets\":{\"nouns100\":{\"intro\":{}},\"final\":{\"pct\":42}}}"}'
-   curl -s -X POST https://opponent-turned-typing-cingular.trycloudflare.com/ \
+   curl -s -X POST https://script.google.com/macros/s/AKfycbwIBPzcmJYkJP-uURVzyt8_7iF3mzGBTCp-omNA2sF3Hk5oGusHfOlPyhEnDl2XAJu82w/exec \
      -H 'Content-Type: application/json' \
      -d '{"action":"load","name":"Cursor Check","pin":"1234"}'
    ```

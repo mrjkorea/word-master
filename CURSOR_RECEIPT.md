@@ -49,12 +49,12 @@ FINAL_WIDE_OK all 100 vs lock 10, pass at 80%
 ## 5.4 door
 
 ```
-$ curl -s -X POST https://opponent-turned-typing-cingular.trycloudflare.com/ \
+$ curl -s -X POST https://script.google.com/macros/s/AKfycbwIBPzcmJYkJP-uURVzyt8_7iF3mzGBTCp-omNA2sF3Hk5oGusHfOlPyhEnDl2XAJu82w/exec \
     -H 'Content-Type: application/json' \
     -d '{"action":"save","name":"Cursor Check","pin":"1234","pack_id":"nouns100","study_size":10,"progress_json":"{\"v\":1,\"sets\":{\"nouns100\":{\"intro\":{}},\"final\":{\"pct\":42}}}"}'
 {"ok": true, "found": false, "saved": true, "tab": "Sheet1"}
 
-$ curl -s -X POST https://opponent-turned-typing-cingular.trycloudflare.com/ \
+$ curl -s -X POST https://script.google.com/macros/s/AKfycbwIBPzcmJYkJP-uURVzyt8_7iF3mzGBTCp-omNA2sF3Hk5oGusHfOlPyhEnDl2XAJu82w/exec \
     -H 'Content-Type: application/json' \
     -d '{"action":"load","name":"Cursor Check","pin":"1234"}'
 {"ok": true, "found": true, "name": "Cursor Check", "tab": "Sheet1", "progress_json": "{\"v\":1,\"sets\":{\"nouns100\":{\"intro\":{}},\"final\":{\"pct\":42}}}"}
