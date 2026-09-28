@@ -704,23 +704,52 @@
     }
   }
 
-  function speakLetter(ch) {
-    const id = String(ch || "").toUpperCase().replace(/[^A-Z]/g, "");
-    if (!id) return Promise.resolve();
+  function waitAudioEnd(audio) {
     return new Promise(function (resolve) {
-      try {
-        if (currentAudio) {
-          currentAudio.pause();
-          currentAudio.src = "";
-        }
-      } catch (e) {}
-      currentAudio = new Audio(packBase() + "/audio/letters/" + id + ".mp3");
-      currentAudio.onended = function () { resolve(); };
-      currentAudio.onerror = function () { resolve(); };
-      const p = currentAudio.play();
-      if (p && p.catch) p.catch(function () { resolve(); });
-      setTimeout(resolve, 2200);
+      if (!audio) {
+        resolve();
+        return;
+      }
+      var settled = false;
+      function finish() {
+        if (settled) return;
+        settled = true;
+        clearTimeout(safety);
+        audio.onended = null;
+        audio.onerror = null;
+        resolve();
+      }
+      var safety = setTimeout(finish, 4000);
+      audio.onended = finish;
+      audio.onerror = finish;
     });
+  }
+
+  async function tryPlayLetterSrc(src) {
+    if (!currentAudio) currentAudio = new Audio();
+    try {
+      currentAudio.pause();
+    } catch (e) {}
+    for (var attempt = 0; attempt < 2; attempt++) {
+      currentAudio.src = src;
+      try {
+        await currentAudio.play();
+        return true;
+      } catch (e) {}
+    }
+    return false;
+  }
+
+  async function speakLetter(ch) {
+    const id = String(ch || "").toUpperCase().replace(/[^A-Z]/g, "");
+    if (!id) return;
+    var src = packBase() + "/audio/letters/" + id + ".mp3";
+    var ok = await tryPlayLetterSrc(src);
+    if (!ok) {
+      ok = await tryPlayLetterSrc("packs/nouns100/audio/letters/" + id + ".mp3");
+    }
+    if (!ok) return;
+    await waitAudioEnd(currentAudio);
   }
 
   function unlockSpeech() {
@@ -1995,7 +2024,7 @@
       rail.appendChild(s);
     });
     speak(word);
-    await wait(900);
+    await waitAudioEnd(currentAudio);
     const spans = $$("#letter-rail span");
     for (let i = 0; i < spans.length; i++) {
       spans[i].classList.add("on");
