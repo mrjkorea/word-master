@@ -1,3 +1,7 @@
+> ⚠️ 28 Sep 2026: the tunnel URLs in this file are historical. Word Master no longer
+> posts scores to any trycloudflare host. The one score book is MRJ Classroom Metrics
+> via `mrj-scores.js`. See `SCORE_SHEET.md`.
+
 # Cursor job — Word Master: pack standing + all-100 pack test (Jay 28 Sep 2026)
 
 Workspace: `/Users/andreclouthier/.hermes/projects/mrj-word-master-web` (this folder). Repo `github.com/mrjkorea/word-master`, branch `main`. Live: https://mrjkorea.github.io/word-master/
