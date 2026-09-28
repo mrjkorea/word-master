@@ -393,6 +393,107 @@ button:disabled:not(.choice) { cursor: not-allowed; opacity: 0.38; }
 .rib.now { border-color: var(--navy); background: #e8f1ff; }
 .pct-line { text-align: center; margin: 8px 0 0; color: var(--muted); font-size: 13px; }
 
+.standing {
+  margin: 10px 0 12px;
+  padding: 12px;
+  border-radius: 16px;
+  background: #fff;
+  border: 2px solid var(--navy);
+  box-shadow: 0 1px 0 rgba(0,0,0,0.08);
+  flex: 0 0 auto;
+}
+.standing-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 8px;
+}
+.standing-head strong {
+  color: var(--navy);
+  font-size: 15px;
+  font-weight: 800;
+}
+.standing-head em {
+  font-style: normal;
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 700;
+  text-align: right;
+}
+.standing-bar {
+  height: 8px;
+  margin: 8px 0;
+  border-radius: 980px;
+  background: #ececec;
+  overflow: hidden;
+}
+.standing-bar i {
+  display: block;
+  height: 100%;
+  width: 0;
+  background: var(--gold);
+  border-radius: 980px;
+}
+.standing-next, .standing-sync {
+  margin: 6px 0 0;
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 1.35;
+  color: var(--ink);
+}
+.standing-sync { color: var(--muted); font-weight: 600; font-size: 12px; }
+.standing-seats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  margin-top: 8px;
+  max-height: 108px;
+  overflow-y: auto;
+}
+.seat {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 16px;
+  height: 16px;
+  padding: 0;
+  border-radius: 3px;
+  border: 1px solid transparent;
+  background: #ececec;
+  color: #8e8e93;
+  font-size: 7px;
+  font-weight: 800;
+  line-height: 1;
+  cursor: pointer;
+}
+.seat.done { background: #b7f0c8; color: var(--ok-ink); border-color: #8ed7a4; }
+.seat.doing {
+  background: #fff;
+  color: var(--navy);
+  border-color: var(--gold);
+  box-shadow: 0 0 0 2px var(--gold);
+}
+.seat.todo { background: #ececec; color: #8e8e93; }
+.chunk.final {
+  background: var(--gold);
+  border-color: var(--navy);
+}
+.chunk.final strong { color: var(--navy); }
+.chunk.final em { color: var(--navy2); }
+.miss-list {
+  margin: 8px 0 0;
+  padding: 0;
+  list-style: none;
+  text-align: center;
+}
+.miss-list li { color: var(--bad); font-weight: 700; font-size: 15px; }
+@media (max-width: 360px) {
+  .standing { padding: 10px; }
+  .standing-head { align-items: flex-start; }
+  .standing-head strong { font-size: 14px; }
+  .seat { width: 14px; height: 14px; font-size: 6px; }
+}
+
 .word-list, .intro-list {
   display: grid;
   gap: 8px;

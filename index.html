@@ -7,7 +7,7 @@
   <meta name="mobile-web-app-capable" content="yes" />
   <meta name="theme-color" content="#f6f3ec" />
   <title>MRJ Word Master</title>
-  <link rel="stylesheet" href="css/app.css?v=20260923-cheer" />
+  <link rel="stylesheet" href="css/app.css?v=20260928-standing" />
 </head>
 <body>
   <div id="phone" class="phone">
@@ -250,6 +250,16 @@
           <button type="button" class="rib" data-jump="games"><b>5</b><span data-i18n="games">Games</span></button>
         </div>
         <p class="pct-line" id="set-pct"></p>
+        <div class="standing" id="pack-standing">
+          <div class="standing-head">
+            <strong id="stand-count"></strong>
+            <em id="stand-left"></em>
+          </div>
+          <div class="standing-bar"><i id="stand-fill"></i></div>
+          <p class="standing-next" id="stand-next"></p>
+          <div class="standing-seats" id="stand-seats"></div>
+          <p class="standing-sync" id="stand-sync"></p>
+        </div>
         <p class="tap-word-hint" data-i18n="study_how_many">How many words this time?</p>
         <div class="study-size" id="study-size" role="group"></div>
         <p class="tap-word-hint" data-i18n="tap_word_hint">Tap a word to hear it</p>
@@ -274,6 +284,10 @@
           <button type="button" class="chunk" id="btn-games-set">
             <strong data-i18n="games">Games</strong>
             <em data-i18n="games_set_em">Play with this set</em>
+          </button>
+          <button type="button" class="chunk final" id="btn-final-test">
+            <strong id="final-label">All 100 test</strong>
+            <em id="final-meta"></em>
           </button>
         </div>
       </section>
@@ -382,6 +396,7 @@
         <div class="scoreboard" id="test-score" hidden>
           <h3 id="test-score-title"></h3>
           <p id="test-score-line"></p>
+          <ul class="miss-list" id="test-misses" hidden></ul>
           <label class="forever-box" id="forever-box" hidden>
             <input type="checkbox" id="chk-forever" />
             <span data-i18n="forever_help">Remember forever — we’ll remind you on this phone later (1 day, then 3, 7, 21, 60).</span>
@@ -457,8 +472,8 @@
   <script src="js/factory-algo.js"></script>
   <script src="js/meet-lock.js?v=20260923-meetlock"></script>
   <script src="js/i18n.js?v=20260923-l1"></script>
-  <script src="js/progress-config.js?v=20260923-sheet"></script>
-  <script src="js/progress.js?v=20260923-sheet"></script>
-  <script src="js/app.js?v=20260923-meetlock"></script>
+  <script src="js/progress-config.js?v=20260928-standing"></script>
+  <script src="js/progress.js?v=20260928-standing"></script>
+  <script src="js/app.js?v=20260928-standing"></script>
 </body>
 </html>

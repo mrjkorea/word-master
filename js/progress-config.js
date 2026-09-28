@@ -1,1 +1,1 @@
-window.WM_PROGRESS_URL = "https://graduates-chan-journals-missing.trycloudflare.com/";
+window.WM_PROGRESS_URL = "https://opponent-turned-typing-cingular.trycloudflare.com/";

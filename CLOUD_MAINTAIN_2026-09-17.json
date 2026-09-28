@@ -1,0 +1,34 @@
+{
+  "http": 201,
+  "body": {
+    "agent": {
+      "id": "bc-fd9d9243-b01c-4484-be72-d61c802c5b05",
+      "name": "WM Pages maintain",
+      "status": "ACTIVE",
+      "env": {
+        "type": "cloud"
+      },
+      "repos": [
+        {
+          "url": "https://github.com/mrjkorea/word-master",
+          "startingRef": "main"
+        }
+      ],
+      "workOnCurrentBranch": false,
+      "autoCreatePR": false,
+      "openAsCursorGithubApp": false,
+      "skipReviewerRequest": true,
+      "url": "https://cursor.com/agents/bc-fd9d9243-b01c-4484-be72-d61c802c5b05",
+      "createdAt": "2026-09-17T09:23:51.841Z",
+      "updatedAt": "2026-09-17T09:23:52.868Z",
+      "latestRunId": "run-0eecd292-f68e-4f2e-aea8-e58f38292709"
+    },
+    "run": {
+      "id": "run-0eecd292-f68e-4f2e-aea8-e58f38292709",
+      "agentId": "bc-fd9d9243-b01c-4484-be72-d61c802c5b05",
+      "status": "RUNNING",
+      "createdAt": "2026-09-17T09:23:51.841Z",
+      "updatedAt": "2026-09-17T09:23:52.588Z"
+    }
+  }
+}

@@ -164,10 +164,12 @@
         srsForever: !!s.srsForever,
         srsStage: s.srsStage || 0,
         srsNextAt: s.srsNextAt || null,
+        final: s.final || null,
+        finalMiss: Array.isArray(s.finalMiss) ? s.finalMiss.slice(0, 200) : [],
       };
     });
     const cur = currentSet();
-    return {
+    const payload = {
       v: 1,
       studentId: state.studentId,
       voice: state.voice,
@@ -177,6 +179,15 @@
       currentPackId: cur ? (cur.packId || "") : "",
       sets: sets,
     };
+    if (JSON.stringify(payload).length > 45000) {
+      const order = Object.keys(sets).sort(function (a, b) {
+        return (sets[a].lastPlayedAt || 0) - (sets[b].lastPlayedAt || 0);
+      });
+      for (let i = 0; i < order.length && JSON.stringify(payload).length > 45000; i++) {
+        sets[order[i]].finalMiss = [];
+      }
+    }
+    return payload;
   }
 
   function applyRemote(raw) {
@@ -217,6 +228,8 @@
         srsForever: !!s.srsForever,
         srsStage: s.srsStage || 0,
         srsNextAt: s.srsNextAt || null,
+        final: s.final || null,
+        finalMiss: Array.isArray(s.finalMiss) ? s.finalMiss.slice(0, 200) : [],
         createdAt: s.lastPlayedAt || Date.now(),
       };
       if (obj.currentPackId === pid) state.currentSetId = id;
@@ -231,10 +244,11 @@
       name: state.accountName,
       pin: state.accountPin,
     }).then(function (res) {
-      if (res && res.found && res.progress_json) {
+        if (res && res.found && res.progress_json) {
         applyRemote(res.progress_json);
         try { localStorage.setItem(LS_STATE, JSON.stringify(state)); } catch (e) {}
         if (currentScreen === "home") renderHome();
+        if (currentScreen === "set") renderSetHome();
       }
     }).catch(function () {});
   }
@@ -264,7 +278,17 @@
     progressTimer = setTimeout(function () {
       progressTimer = null;
       if (window.MRJ_WM_progress && typeof window.MRJ_WM_progress.save === "function") {
-        try { window.MRJ_WM_progress.save(progressPayload()); } catch (e) {}
+        try {
+          const pending = window.MRJ_WM_progress.save(progressPayload());
+          if (pending && typeof pending.then === "function") {
+            pending.then(function (res) {
+              const ok = !!(res && typeof res === "object" && res.ok !== false && !res.error);
+              noteSheetSync(ok);
+            }).catch(function () { noteSheetSync(false); });
+          }
+        } catch (e) {
+          noteSheetSync(false);
+        }
       }
     }, 1000);
   }
@@ -734,6 +758,8 @@
   }
 
   const STUDY_SIZES = [5, 10, 15, 20];
+  const PASS_PCT = 80;
+  let sheetSync = { ok: null, at: 0 };
   let tap = blankTap();
 
   function studySize() {
@@ -1036,6 +1062,7 @@
     const pct = Algo.factoryProgress(set.words, ws);
     $("#set-pct").textContent = t("pct", { n: pct });
     renderStudySize(set);
+    renderPackStanding(set);
     $$("#progress-ribbon .rib").forEach(function (el) {
       const jump = el.getAttribute("data-jump");
       const met = introDone(set);
@@ -1103,6 +1130,115 @@
       });
       host.appendChild(btn);
     });
+  }
+
+  function kstStamp(ts) {
+    const shifted = new Date((Number(ts) || Date.now()) + (9 * 60 * 60 * 1000));
+    const months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+    const day = String(shifted.getUTCDate()).padStart(2, "0");
+    const month = months[shifted.getUTCMonth()];
+    const hh = String(shifted.getUTCHours()).padStart(2, "0");
+    const mm = String(shifted.getUTCMinutes()).padStart(2, "0");
+    return { day: day + " " + month, time: day + " " + month + " " + hh + ":" + mm };
+  }
+
+  function noteSheetSync(ok) {
+    sheetSync = { ok: !!ok, at: ok ? Date.now() : 0 };
+    paintSheetSync();
+  }
+
+  function paintSheetSync() {
+    const el = $("#stand-sync");
+    if (!el) return;
+    if (sheetSync.ok) el.textContent = "Saved to Mr. Jay's sheet · " + kstStamp(sheetSync.at).time;
+    else if (sheetSync.ok === false) el.textContent = "Not saved yet";
+    else el.textContent = "";
+  }
+
+  function packStandingData(set) {
+    const words = (set && set.words) || [];
+    const intro = (set && set.intro) || {};
+    const winsA = (set && set.winsA) || {};
+    const winsB = (set && set.winsB) || {};
+    const winsC = (set && set.winsC) || {};
+    const doingIds = (set && set.meetLock && set.meetLock.length) ? set.meetLock.slice() : [];
+    const doingSet = {};
+    doingIds.forEach(function (id) { doingSet[id] = true; });
+    const seats = words.map(function (w, i) {
+      const id = w.id;
+      const done = !!(intro[id] && (winsA[id] || 0) >= 2 && (winsB[id] || 0) >= 2 && (winsC[id] || 0) >= 2);
+      let seatState = "todo";
+      if (done) seatState = "done";
+      else if (doingSet[id]) seatState = "doing";
+      return { n: i + 1, id: id, en: w.en, state: seatState };
+    });
+    const doneCount = seats.filter(function (s) { return s.state === "done"; }).length;
+    const doingCount = seats.filter(function (s) { return s.state === "doing"; }).length;
+    const total = words.length;
+    const nextIds = window.MeetLock.batchIds(words, intro, winsA, winsB, winsC, studySize(), 2);
+    const nextWords = window.MeetLock.wordsForLock(words, nextIds);
+    const countText = doneCount + " / " + total + " words finished";
+    let leftText = (total - doneCount) + " to go";
+    if (set && set.final && set.final.pct != null) {
+      leftText += " · last all-" + total + ": " + set.final.pct + "%";
+    }
+    const nextText = nextWords.length
+      ? ("Next " + nextWords.length + ": " + nextWords.map(function (w) { return w.en; }).join(" · "))
+      : "This pack is finished. Try the All 100 test.";
+    return {
+      total: total,
+      doneCount: doneCount,
+      doingCount: doingCount,
+      seats: seats,
+      nextIds: nextIds,
+      nextWords: nextWords,
+      countText: countText,
+      leftText: leftText,
+      nextText: nextText,
+    };
+  }
+
+  function renderPackStanding(set) {
+    set = set || currentSet();
+    if (!set) return null;
+    const data = packStandingData(set);
+    const countEl = $("#stand-count");
+    if (countEl) countEl.textContent = data.countText;
+    const leftEl = $("#stand-left");
+    if (leftEl) leftEl.textContent = data.leftText;
+    const fill = $("#stand-fill");
+    if (fill) fill.style.width = (data.total ? (100 * data.doneCount / data.total) : 0) + "%";
+    const nextEl = $("#stand-next");
+    if (nextEl) nextEl.textContent = data.nextText;
+    const host = $("#stand-seats");
+    if (host) {
+      host.innerHTML = "";
+      data.seats.forEach(function (seat) {
+        const span = document.createElement("span");
+        span.className = "seat " + seat.state;
+        span.textContent = String(seat.n);
+        span.title = seat.en || "";
+        span.addEventListener("click", function () {
+          const w = ((set.words) || []).filter(function (word) { return word.id === seat.id; })[0];
+          if (!w) return;
+          unlockSpeech();
+          speak(w.en);
+        });
+        host.appendChild(span);
+      });
+    }
+    const fl = $("#final-label");
+    if (fl) fl.textContent = "All " + data.total + " test";
+    const fm = $("#final-meta");
+    if (fm) {
+      if (set.final && set.final.score != null && set.final.total != null) {
+        fm.textContent = "Last: " + set.final.score + " / " + set.final.total + " · " + set.final.pct + "% · " + kstStamp(set.final.at).day;
+      } else {
+        fm.textContent = "Every word in this pack · pass 80%";
+      }
+    }
+    paintSheetSync();
+    return data;
   }
 
   let introCurId = null;
@@ -1473,7 +1609,8 @@
 
   function distractors(correct, n) {
     const set = currentSet();
-    const others = shuffle(playWords(set).filter(function (w) { return w.id !== correct.id; }));
+    const pool = (quiz && quiz.wide) ? ((set && set.words) || []) : playWords(set);
+    const others = shuffle(pool.filter(function (w) { return w.id !== correct.id; }));
     const pick = others.slice(0, Math.max(0, n - 1));
     return shuffle([correct].concat(pick));
   }
@@ -1909,16 +2046,19 @@
     I18n.applyDom(document);
   }
 
-  function startEasy() {
+  function startEasy(wide) {
     const set = currentSet();
     if (!set) return;
+    wide = !!wide;
     ensureMeetLock(set);
     quiz = blankQuiz();
-    quiz.kind = "easy";
-    quiz.items = shuffle(playWords(set).slice());
+    quiz.kind = wide ? "final" : "easy";
+    quiz.wide = wide;
+    quiz.items = shuffle((wide ? (set.words || []) : playWords(set)).slice());
     quiz.index = 0;
     quiz.score = 0;
     quiz.mistakes = [];
+    if (!wide) state.finalTest = false;
     const pick = $("#test-pick");
     const play = $("#test-play");
     if (pick) pick.hidden = true;
@@ -1928,17 +2068,20 @@
     renderQuiz();
   }
 
-  function startHard() {
+  function startHard(wide) {
     const set = currentSet();
     if (!set) return;
+    wide = !!wide;
     ensureMeetLock(set);
     quiz = blankQuiz();
     quiz.kind = "hard";
-    quiz.items = shuffle(playWords(set).slice());
+    quiz.wide = wide;
+    quiz.items = shuffle((wide ? (set.words || []) : playWords(set)).slice());
     quiz.index = 0;
     quiz.score = 0;
     quiz.typed = "";
     quiz.mistakes = [];
+    if (!wide) state.finalTest = false;
     const pick = $("#test-pick");
     const play = $("#test-play");
     if (pick) pick.hidden = true;
@@ -1952,8 +2095,11 @@
     updateKbDeskClass();
     const item = quiz.items[quiz.index];
     if (!item) return finishQuiz();
-    $("#test-kind").textContent = quiz.kind === "easy" ? "EASY" : "HARD";
-    $("#test-ko").textContent = quiz.kind === "easy" ? t("easy_name") : t("hard_name");
+    const choiceRound = quiz.kind === "easy" || quiz.kind === "final";
+    $("#test-kind").textContent = quiz.kind === "final" ? "ALL" : (quiz.kind === "easy" ? "EASY" : "HARD");
+    $("#test-ko").textContent = quiz.kind === "final"
+      ? ("All " + quiz.items.length + " test")
+      : (quiz.kind === "easy" ? t("easy_name") : t("hard_name"));
     $("#test-prog").textContent = quiz.index + 1 + " / " + quiz.items.length;
     $("#test-score").hidden = true;
     const en = $("#test-en-word");
@@ -1963,7 +2109,7 @@
     const az = $("#test-az-wrap");
     quiz.startedAt = Date.now();
     quiz.locking = false;
-    if (quiz.kind === "easy") {
+    if (choiceRound) {
       en.hidden = false;
       en.textContent = item.en;
       ko.hidden = true;
@@ -1997,12 +2143,12 @@
       dingOk();
     } else {
       quiz.mistakes = quiz.mistakes || [];
-      quiz.mistakes.push({ en: item.en, ko: item.ko });
+      quiz.mistakes.push({ id: item.id, en: item.en, ko: item.ko });
     }
     logEvent({
-      activity_id: "easy_test",
+      activity_id: quiz.kind === "final" ? "final_test" : "easy_test",
       item_id: item.id,
-      mode: "easy",
+      mode: quiz.kind === "final" ? "final" : "easy",
       response: word.ko,
       correct: ok,
       latency_ms: Date.now() - quiz.startedAt,
@@ -2026,7 +2172,7 @@
     if (ok) quiz.score += 1;
     else {
       quiz.mistakes = quiz.mistakes || [];
-      quiz.mistakes.push({ en: item.en, ko: item.ko });
+      quiz.mistakes.push({ id: item.id, en: item.en, ko: item.ko });
     }
     logEvent({
       activity_id: "hard_test",
@@ -2047,7 +2193,59 @@
     }, ok ? 400 : 900);
   }
 
+  function finishWideQuiz() {
+    $("#test-choices").hidden = true;
+    $("#test-az-wrap").hidden = true;
+    $("#test-score").hidden = false;
+    const total = quiz.items.length || 1;
+    const pct = Math.round((100 * quiz.score) / total);
+    const passed = pct >= PASS_PCT;
+    const misses = quiz.mistakes || [];
+    $("#test-score-title").textContent = quiz.score + " / " + total + " — " + pct + "%";
+    $("#test-score-line").textContent = passed
+      ? "Passed ✅ Pack finished."
+      : "Needs work — keep learning the words in red.";
+    const box = $("#forever-box");
+    if (box) box.hidden = true;
+    const list = $("#test-misses");
+    if (list) {
+      list.innerHTML = "";
+      misses.forEach(function (m) {
+        const li = document.createElement("li");
+        li.className = "miss-word";
+        li.textContent = m.en;
+        list.appendChild(li);
+      });
+      list.hidden = !misses.length;
+    }
+    const set = currentSet();
+    if (set) {
+      const missIds = [];
+      misses.forEach(function (m) {
+        if (m && m.id != null && missIds.length < 200) missIds.push(m.id);
+      });
+      set.final = {
+        score: quiz.score,
+        total: total,
+        pct: pct,
+        passed: !!passed,
+        at: Date.now(),
+      };
+      set.finalMiss = missIds;
+      persist();
+    }
+  }
+
   function finishQuiz() {
+    if (quiz && quiz.wide) {
+      finishWideQuiz();
+      return;
+    }
+    const missesEl = $("#test-misses");
+    if (missesEl) {
+      missesEl.hidden = true;
+      missesEl.innerHTML = "";
+    }
     $("#test-choices").hidden = true;
     $("#test-az-wrap").hidden = true;
     $("#test-score").hidden = false;
@@ -2055,7 +2253,7 @@
     const pct = Math.round((100 * quiz.score) / total);
     const misses = quiz.mistakes || [];
     $("#test-score-title").textContent = pct + "%";
-    if (pct < 80) {
+    if (pct < PASS_PCT) {
     $("#forever-box").hidden = true;
       $("#test-score-line").textContent = t("need_80", { pct: pct });
       const set = currentSet();
@@ -2393,6 +2591,7 @@
         if (res.found && res.progress_json) applyRemote(res.progress_json);
         persist();
         renderHome();
+        if (currentScreen === "set") renderSetHome();
         saveIn.disabled = false;
         const set = currentSet();
         if (set && set.packId && !(set.words || []).length) openPack(set.packId);
@@ -2526,6 +2725,12 @@
     if (te) te.addEventListener("click", function () { state.testKind = "easy"; persist(); startEasy(); });
     if (th) th.addEventListener("click", function () { state.testKind = "hard"; persist(); startHard(); });
     $("#btn-games-set").addEventListener("click", goGames);
+    const finalBtn = $("#btn-final-test");
+    if (finalBtn) finalBtn.addEventListener("click", function () {
+      state.finalTest = true;
+      persist();
+      startEasy(true);
+    });
     $("#btn-speak").addEventListener("click", function () {
       if (learn.cur) speak(learn.cur.en);
     });
@@ -2693,6 +2898,18 @@
   }
 
   window.MRJ_WORD_FACTORY_PACK = { words: [] };
+  if (window.WM_TEST_HOOK) {
+    window.WM_TEST = {
+      renderPackStanding: renderPackStanding,
+      startEasy: startEasy,
+      startHard: startHard,
+      finishQuiz: finishQuiz,
+      activateSet: activateSet,
+      currentSet: currentSet,
+      getQuiz: function () { return quiz; },
+      PASS_PCT: PASS_PCT,
+    };
+  }
   bind();
   pullSheet();
   probeLinuxTts();
