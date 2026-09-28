@@ -410,7 +410,7 @@
       topbar.classList.toggle("no-back", name === "home");
     }
     back.hidden = name === "boot" || name === "home";
-    voice.hidden = quiet || typing || name === "playgame";
+    voice.hidden = false;
     const tb = $("#teacher-bar");
     if (tb) tb.hidden = quiet || typing || name === "playgame";
     document.querySelector(".phone").classList.toggle("play", typing || name === "playgame");

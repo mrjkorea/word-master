@@ -133,8 +133,10 @@ button:disabled:not(.choice) { cursor: not-allowed; opacity: 0.38; }
   flex: 0 0 auto;
   background: #fff;
   border-bottom: 1px solid var(--line);
+  position: sticky;
+  top: 0;
+  z-index: 20;
 }
-.phone.play .voice-bar { display: none; }
 .voice-btn {
   min-height: 32px;
   border-radius: 980px;
