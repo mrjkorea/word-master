@@ -129,10 +129,49 @@
   }
 
   let progressTimer = null;
-  let signinSkipped = false;
+  let authStudentId = "";
+
+  function currentStudentId() {
+    let id = String(authStudentId || "").trim();
+    if (!id && window.MRJ_AUTH && typeof window.MRJ_AUTH.student === "function") {
+      id = String(window.MRJ_AUTH.student() || "").trim();
+    }
+    return id;
+  }
+
+  function onAuthReady(event) {
+    const detail = event && event.detail ? event.detail : {};
+    let id = detail.id != null ? String(detail.id).trim() : "";
+    if (!id && window.MRJ_AUTH && typeof window.MRJ_AUTH.student === "function") {
+      id = String(window.MRJ_AUTH.student() || "").trim();
+    }
+    authStudentId = id;
+    state.accountName = "";
+    state.accountPin = "";
+    if (!id) {
+      state.displayName = "";
+      showSharedDoor();
+      showScreen("boot");
+      return;
+    }
+    state.studentId = id;
+    state.displayName = id;
+    pullSheet();
+    if (currentScreen === "home") renderHome();
+  }
+
+  if (window.addEventListener) {
+    window.addEventListener("mrj-auth-ready", onAuthReady);
+  }
 
   function isSignedIn() {
-    return !!(state.accountName && String(state.accountName).trim());
+    return !!currentStudentId();
+  }
+
+  function showSharedDoor() {
+    const gate = document.getElementById("mrj-auth-gate");
+    if (gate) gate.hidden = false;
+    if (document.documentElement) document.documentElement.classList.add("mrj-auth-locked");
   }
 
   function currentWordId() {
@@ -197,7 +236,6 @@
       try { obj = JSON.parse(raw); } catch (e) { return; }
     }
     if (!obj || typeof obj !== "object" || !obj.sets) return;
-    if (obj.studentId) state.studentId = obj.studentId;
     if (obj.voice) state.voice = obj.voice;
     if (obj.locale) state.locale = obj.locale;
     if (obj.studySize) state.studySize = obj.studySize;
@@ -237,35 +275,38 @@
   }
 
   function pullSheet() {
-    if (!state.accountName || !state.accountPin) return;
+    const id = currentStudentId();
+    if (!id) return;
     if (!window.MRJ_WM_progress || !window.MRJ_WM_progress.load) return;
     window.MRJ_WM_progress.load({
       action: "load",
-      name: state.accountName,
-      pin: state.accountPin,
+      name: id,
+      pin: "",
+      student_id: id,
     }).then(function (res) {
-        if (res && res.found && res.progress_json) {
-        applyRemote(res.progress_json);
-        try { localStorage.setItem(LS_STATE, JSON.stringify(state)); } catch (e) {}
-        if (currentScreen === "home") renderHome();
-        if (currentScreen === "set") renderSetHome();
-      }
+      if (!(res && res.found && res.progress_json)) return;
+      applyRemote(res.progress_json);
+      if (currentStudentId()) state.studentId = currentStudentId();
+      try { localStorage.setItem(LS_STATE, JSON.stringify(state)); } catch (e) {}
+      if (currentScreen === "home") renderHome();
+      if (currentScreen === "set") renderSetHome();
     }).catch(function () {});
   }
 
   function progressPayload() {
     const set = currentSet();
+    const id = currentStudentId();
     return {
       action: "save",
-      name: state.accountName || "",
-      pin: state.accountPin || "",
+      name: id,
+      pin: "",
       pack_id: set ? (set.packId || set.id || "") : "",
       pack_title: set ? (set.title || "") : "",
       screen: currentScreen || "",
       word_id: currentWordId(),
       study_size: state.studySize || 10,
       locale: state.locale || "en",
-      student_id: state.studentId || "",
+      student_id: id,
       progress_json: JSON.stringify(slimProgress()),
     };
   }
@@ -275,6 +316,10 @@
       localStorage.setItem(LS_STATE, JSON.stringify(state));
     } catch (e) {}
     if (progressTimer) clearTimeout(progressTimer);
+    if (!currentStudentId()) {
+      progressTimer = null;
+      return;
+    }
     progressTimer = setTimeout(function () {
       progressTimer = null;
       if (window.MRJ_WM_progress && typeof window.MRJ_WM_progress.save === "function") {
@@ -306,7 +351,7 @@
   function logEvent(partial) {
     const set = currentSet();
     const ev = {
-      student_id: state.studentId,
+      student_id: currentStudentId(),
       session_id: state.sessionId,
       module_id: "word_factory",
       activity_id: partial.activity_id || "",
@@ -1019,17 +1064,10 @@
     const set = currentSet();
     const hello = $("#hello-line");
     const signed = isSignedIn();
-    if (hello) hello.textContent = signed ? t("hello", { name: state.accountName }) : "";
-    const signCard = $("#signin-card");
+    const studentId = currentStudentId();
+    if (hello) hello.textContent = signed ? t("hello", { name: studentId }) : "";
     const signOut = $("#btn-signout");
-    if (signCard) signCard.hidden = signed || signinSkipped;
     if (signOut) signOut.hidden = !signed;
-    if (signed) {
-      const nameEl = $("#account-name");
-      const pinEl = $("#account-pin");
-      if (nameEl) nameEl.value = state.accountName;
-      if (pinEl) pinEl.value = state.accountPin || "";
-    }
     let forever = 0;
     let trying = 0;
     Object.keys(state.sets).forEach(function (k) {
@@ -2479,6 +2517,8 @@
   }
 
   function openPortableGame(kind) {
+    const student = currentStudentId();
+    if (!student) return;
     const set = currentSet();
     if (!set) {
       openDemo().then(function () { openPortableGame(kind); });
@@ -2515,7 +2555,7 @@
       sessionStorage.setItem("mrj.wm.gamepack", JSON.stringify(pack));
     } catch (e) { /* ignore */ }
     const frame = $("#game-frame");
-    const name = encodeURIComponent(state.displayName || "Student");
+    const name = encodeURIComponent(student);
     frame.src = path + "?pack=session&packid=" + encodeURIComponent(currentPackId()) + "&student=" + name;
     showScreen("playgame");
   }
@@ -2555,100 +2595,27 @@
 
   function bind() {
     $("#btn-tap-start").addEventListener("click", function () {
+      if (!currentStudentId()) return;
       unlockSpeech();
       setVoice(state.voice);
       renderHome();
       showScreen("home");
     });
-    const nameGo = $("#btn-name-go");
-    if (nameGo) nameGo.addEventListener("click", function () {
-      const n = ($("#name-input").value || "").trim();
-      if (!n) return;
-      state.displayName = n;
-      persist();
-      renderHome();
-      showScreen("home");
-    });
-    const pinEl = $("#account-pin");
-    if (pinEl) pinEl.addEventListener("input", function () {
-      pinEl.value = String(pinEl.value || "").replace(/\D/g, "").slice(0, 4);
-    });
-    const saveIn = $("#btn-signin-save");
-    if (saveIn) saveIn.addEventListener("click", function () {
-      const n = (($("#account-name") && $("#account-name").value) || "").trim().slice(0, 24);
-      const pin = (($("#account-pin") && $("#account-pin").value) || "").replace(/\D/g, "");
-      const err = $("#signin-err");
-      if (!n || pin.length !== 4) {
-        if (err) {
-          err.textContent = "Need a name and a 4-digit PIN.";
-          err.hidden = false;
-        }
-        return;
-      }
-      if (err) err.hidden = true;
-      saveIn.disabled = true;
-      const prog = window.MRJ_WM_progress;
-      if (!prog || !prog.load) {
-        saveIn.disabled = false;
-        if (err) {
-          err.textContent = "Progress sheet is not connected.";
-          err.hidden = false;
-        }
-        return;
-      }
-      prog.load({ action: "load", name: n, pin: pin }).then(function (res) {
-        if (res && res.error === "wrong_pin") {
-          if (err) {
-            err.textContent = "That name already has a different PIN.";
-            err.hidden = false;
-          }
-          saveIn.disabled = false;
-          return;
-        }
-        if (!res || res.ok === false) {
-          if (err) {
-            err.textContent = "Could not reach the progress sheet. Try again.";
-            err.hidden = false;
-          }
-          saveIn.disabled = false;
-          return;
-        }
-        state.accountName = n;
-        state.accountPin = pin;
-        state.displayName = n;
-        signinSkipped = false;
-        if (res.found && res.progress_json) applyRemote(res.progress_json);
-        persist();
-        renderHome();
-        if (currentScreen === "set") renderSetHome();
-        saveIn.disabled = false;
-        const set = currentSet();
-        if (set && set.packId && !(set.words || []).length) openPack(set.packId);
-      }).catch(function () {
-        if (err) {
-          err.textContent = "Could not reach the progress sheet. Try again.";
-          err.hidden = false;
-        }
-        saveIn.disabled = false;
-      });
-    });
-    const skipIn = $("#btn-signin-skip");
-    if (skipIn) skipIn.addEventListener("click", function () {
-      signinSkipped = true;
-      const err = $("#signin-err");
-      if (err) err.hidden = true;
-      renderHome();
-    });
     const signOut = $("#btn-signout");
     if (signOut) signOut.addEventListener("click", function () {
+      authStudentId = "";
+      state.displayName = "";
       state.accountName = "";
       state.accountPin = "";
-      signinSkipped = false;
-      persist();
-      renderHome();
+      if (window.MRJ_AUTH && typeof window.MRJ_AUTH.signOut === "function") {
+        window.MRJ_AUTH.signOut();
+      }
+      showSharedDoor();
+      showScreen("boot");
     });
     const listBtn = $("#btn-word-list");
     if (listBtn) listBtn.addEventListener("click", function () {
+      if (!currentStudentId()) return;
       openDemo().then(function () {
         const box = $("#alpha-list");
         box.innerHTML = "";
@@ -2697,6 +2664,7 @@
       });
     });
     $("#btn-continue").addEventListener("click", function () {
+      if (!currentStudentId()) return;
       const set = currentSet();
       if (set && set.packId && !(set.words || []).length) {
         openPack(set.packId);
@@ -2706,22 +2674,36 @@
       showScreen("set");
     });
     const demoBtn = $("#btn-demo");
-    if (demoBtn) demoBtn.addEventListener("click", function () { openDemo(); });
+    if (demoBtn) demoBtn.addEventListener("click", function () {
+      if (!currentStudentId()) return;
+      openDemo();
+    });
     PACK_IDS.forEach(function (pid) {
       const el = $("#btn-pack-" + pid);
-      if (el) el.addEventListener("click", function () { openPack(pid); });
+      if (el) el.addEventListener("click", function () {
+        if (!currentStudentId()) return;
+        openPack(pid);
+      });
     });
-    $("#btn-games-home").addEventListener("click", goGames);
-    $("#btn-intro").addEventListener("click", function () { startMeet(); });
+    $("#btn-games-home").addEventListener("click", function () {
+      if (!currentStudentId()) return;
+      goGames();
+    });
+    $("#btn-intro").addEventListener("click", function () {
+      if (!currentStudentId()) return;
+      startMeet();
+    });
     const tapSpeak = $("#btn-tap-speak");
     if (tapSpeak) tapSpeak.addEventListener("click", function () {
       if (tap.cur) speak(tap.cur.en);
     });
     $("#btn-learn").addEventListener("click", function () {
+      if (!currentStudentId()) return;
       startLearnAt("A");
     });
     $$("[data-jump]").forEach(function (btn) {
       btn.addEventListener("click", function () {
+        if (!currentStudentId()) return;
         jumpTo(btn.getAttribute("data-jump"));
       });
     });
@@ -2738,12 +2720,14 @@
     const skipStepBtn = $("#btn-skip-step");
     if (skipStepBtn) skipStepBtn.addEventListener("click", skipStep);
     $("#btn-easy").addEventListener("click", function () {
+      if (!currentStudentId()) return;
       state.testKind = "easy";
       persist();
       renderSetHome();
       startEasy();
     });
     $("#btn-hard").addEventListener("click", function () {
+      if (!currentStudentId()) return;
       state.testKind = "hard";
       persist();
       renderSetHome();
@@ -2751,11 +2735,25 @@
     });
     const te = $("#btn-test-easy");
     const th = $("#btn-test-hard");
-    if (te) te.addEventListener("click", function () { state.testKind = "easy"; persist(); startEasy(); });
-    if (th) th.addEventListener("click", function () { state.testKind = "hard"; persist(); startHard(); });
-    $("#btn-games-set").addEventListener("click", goGames);
+    if (te) te.addEventListener("click", function () {
+      if (!currentStudentId()) return;
+      state.testKind = "easy";
+      persist();
+      startEasy();
+    });
+    if (th) th.addEventListener("click", function () {
+      if (!currentStudentId()) return;
+      state.testKind = "hard";
+      persist();
+      startHard();
+    });
+    $("#btn-games-set").addEventListener("click", function () {
+      if (!currentStudentId()) return;
+      goGames();
+    });
     const finalBtn = $("#btn-final-test");
     if (finalBtn) finalBtn.addEventListener("click", function () {
+      if (!currentStudentId()) return;
       state.finalTest = true;
       persist();
       startEasy(true);
@@ -2780,6 +2778,7 @@
     });
     $$("#game-slots .slot.playable").forEach(function (slot) {
       slot.addEventListener("click", function () {
+        if (!currentStudentId()) return;
         const g = slot.getAttribute("data-game");
         if (g === "leapfrog" || g === "snowjump" || g === "spellfire") openPortableGame(g);
       });
@@ -2835,16 +2834,6 @@
       } else if (currentScreen === "test") {
         e.preventDefault();
         onHardCheck();
-      } else if (currentScreen === "name") {
-        e.preventDefault();
-        $("#btn-name-go").click();
-      } else if (currentScreen === "home") {
-        const ae = document.activeElement;
-        if (ae && (ae.id === "account-name" || ae.id === "account-pin")) {
-          e.preventDefault();
-          const saveBtn = $("#btn-signin-save");
-          if (saveBtn) saveBtn.click();
-        }
       }
     });
     bindKbDeskMedia();

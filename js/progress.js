@@ -37,6 +37,11 @@
     } catch (e) {}
   }
 
+  function authStudentId() {
+    if (!root.MRJ_AUTH || typeof root.MRJ_AUTH.student !== "function") return "";
+    return String(root.MRJ_AUTH.student() || "").trim();
+  }
+
   function postRemote(payload) {
     var url = root.WM_PROGRESS_URL;
     if (!url) return Promise.resolve(null);
@@ -56,9 +61,10 @@
     try { prog = JSON.parse(p.progress_json || "null"); } catch (e) {}
     var known = (prog && (prog.known || prog.correct || prog.knownCount)) || 0;
     var total = (prog && (prog.total || prog.studySize)) || p.study_size || 0;
-    if (!window.MRJ_SCORES || !total) return Promise.resolve(null);
+    var student = authStudentId();
+    if (!student || !window.MRJ_SCORES || !total) return Promise.resolve(null);
     return window.MRJ_SCORES.post({
-      student: p.name || "",
+      student: student,
       program: "word-master",
       appName: "MRJ Word Master",
       source: "word-master",
@@ -72,8 +78,13 @@
   }
 
   function save(payload) {
+    var id = authStudentId();
+    if (!id) return Promise.resolve(null);
     var body = fields(payload);
     if (!body.action) body.action = "save";
+    body.name = id;
+    body.pin = "";
+    body.student_id = id;
     writeLocal(body);
     try { toOneBook(body); } catch (e) {}
     return postRemote(body);
