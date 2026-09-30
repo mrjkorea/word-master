@@ -83,6 +83,7 @@ function bootApp() {
   g.WordFactoryAlgo = require("../js/factory-algo.js");
   g.MeetLock = require("../js/meet-lock.js");
   g.StartSlice = require("../js/start-slice.js");
+  g.SpellStop = require("../js/spell-stop.js");
   g.WM_TEST_HOOK = true;
   require("../js/app.js");
   return g.WM_TEST;

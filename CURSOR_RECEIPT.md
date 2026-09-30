@@ -108,3 +108,31 @@ PACK_STANDING_OK 30/100 next w31-w40 seats 30 done + 10 doing
 node scripts/meet_word_lock_test.js
 MEET_LOCK_OK verbs-round stays inside Meet the Words
 ```
+
+# CURSOR_RECEIPT — stop dictation spelling audio
+
+Date: 2026-09-30
+Command: Fix the dictation spelling-audio leak. Cancel the letter clip when the next word starts. Do not revert start-word / green-seat work.
+Model: grok-4.7
+
+## Files
+
+- `js/spell-stop.js` — bump, token, stale, bind, settle.
+- `js/app.js` — speak, speakWW, speakLetter, teachSpelling, advanceLearn.
+- `index.html` — spell-stop before app.js, `?v=20260930-spellstop`.
+- `scripts/dictation_audio_stop_test.js`
+- `scripts/load_app_for_test.js` — load SpellStop before app.js.
+- `scripts/start_slice_test.js` — app.js cache query is now `20260930-spellstop`.
+
+## Tests
+
+```
+node scripts/dictation_audio_stop_test.js
+DICTATION_AUDIO_STOP_OK
+node scripts/start_slice_test.js
+START_SLICE_OK
+node scripts/pack_standing_test.js
+PACK_STANDING_OK 30/100 next w31-w40 seats 30 done + 10 doing
+node scripts/meet_word_lock_test.js
+MEET_LOCK_OK verbs-round stays inside Meet the Words
+```
