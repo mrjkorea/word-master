@@ -2,6 +2,7 @@
 
 function makeEl(id) {
   const children = [];
+  const attrs = {};
   const node = {
     id: id || "",
     hidden: false,
@@ -19,8 +20,10 @@ function makeEl(id) {
     },
     addEventListener: function () {},
     removeEventListener: function () {},
-    setAttribute: function () {},
-    getAttribute: function () { return null; },
+    setAttribute: function (name, value) { attrs[name] = String(value); },
+    getAttribute: function (name) {
+      return Object.prototype.hasOwnProperty.call(attrs, name) ? attrs[name] : null;
+    },
     appendChild: function (child) { children.push(child); return child; },
     querySelector: function () { return makeEl(); },
     querySelectorAll: function () { return []; },
@@ -79,6 +82,7 @@ function bootApp() {
   g.requestAnimationFrame = function () { return 0; };
   g.WordFactoryAlgo = require("../js/factory-algo.js");
   g.MeetLock = require("../js/meet-lock.js");
+  g.StartSlice = require("../js/start-slice.js");
   g.WM_TEST_HOOK = true;
   require("../js/app.js");
   return g.WM_TEST;

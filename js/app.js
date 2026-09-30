@@ -194,6 +194,15 @@
     return "";
   }
 
+  function copyPassed(src) {
+    const out = {};
+    if (!src || typeof src !== "object") return out;
+    Object.keys(src).forEach(function (id) {
+      out[id] = src[id];
+    });
+    return out;
+  }
+
   function slimProgress() {
     const sets = {};
     Object.keys(state.sets || {}).forEach(function (k) {
@@ -207,6 +216,8 @@
         winsC: s.winsC || {},
         intro: s.intro || {},
         meetLock: Array.isArray(s.meetLock) ? s.meetLock.slice() : [],
+        startNumber: (Number(s.startNumber) >= 1) ? Number(s.startNumber) : null,
+        testPassed: copyPassed(s.testPassed),
         tapmapKey: s.tapmapKey || "",
         lastPlayedAt: s.lastPlayedAt || 0,
         srsTrying: !!s.srsTrying,
@@ -270,6 +281,8 @@
         winsC: s.winsC || {},
         intro: s.intro || {},
         meetLock: Array.isArray(s.meetLock) ? s.meetLock.slice() : [],
+        startNumber: (Number(s.startNumber) >= 1) ? Number(s.startNumber) : null,
+        testPassed: copyPassed(s.testPassed),
         tapmapKey: s.tapmapKey || "",
         lastPlayedAt: s.lastPlayedAt || 0,
         srsTrying: !!s.srsTrying,
@@ -898,9 +911,39 @@
     return batchWords(set);
   }
 
+  function lockOrigin(set) {
+    if (!set || !Array.isArray(set.words) || !set.words.length) return 1;
+    const lock = set.meetLock || [];
+    if (!lock.length) return 1;
+    const first = lock[0];
+    for (let i = 0; i < set.words.length; i++) {
+      if (set.words[i] && set.words[i].id === first) return i + 1;
+    }
+    return 1;
+  }
+
+  function chooseStart(set, startNumber) {
+    set = set || currentSet();
+    if (!set) return null;
+    const slice = window.StartSlice.sliceFrom(set.words || [], startNumber, studySize());
+    set.startNumber = slice.startNumber;
+    set.meetLock = slice.ids.slice();
+    persist();
+    return slice;
+  }
+
   function ensureMeetLock(set) {
     set = set || currentSet();
     if (!set) return;
+    if (set.startNumber) {
+      if (!Array.isArray(set.meetLock) || !set.meetLock.length) {
+        const slice = window.StartSlice.sliceFrom(set.words || [], set.startNumber, studySize());
+        set.startNumber = slice.startNumber;
+        set.meetLock = slice.ids.slice();
+        persist();
+      }
+      return;
+    }
     if (!Array.isArray(set.meetLock) || !set.meetLock.length) {
       set.meetLock = batchWords(set).map(function (w) { return w.id; });
       persist();
@@ -1202,7 +1245,16 @@
       btn.addEventListener("click", function () {
         if (n > max) return;
         state.studySize = n;
-        persist();
+        const live = currentSet();
+        if (live && live.startNumber) {
+          chooseStart(live, live.startNumber);
+        } else if (live) {
+          const slice = window.StartSlice.sliceFrom(live.words || [], lockOrigin(live), n);
+          live.meetLock = slice.ids.slice();
+          persist();
+        } else {
+          persist();
+        }
         renderSetHome();
       });
       host.appendChild(btn);
@@ -1232,27 +1284,50 @@
     else el.textContent = "";
   }
 
+  function sliceLine(set, words) {
+    const ids = (set && set.meetLock) || [];
+    if (!ids.length) return "";
+    const locked = window.MeetLock.wordsForLock(words, ids);
+    if (!locked.length) return "";
+    let start = Number(set && set.startNumber);
+    if (!(start >= 1)) {
+      start = 1;
+      const firstId = locked[0].id;
+      for (let i = 0; i < words.length; i++) {
+        if (words[i] && words[i].id === firstId) {
+          start = i + 1;
+          break;
+        }
+      }
+    }
+    const n = locked.length;
+    const ens = locked.map(function (w) { return w.en; }).join(" · ");
+    return "Starting at " + start + " · " + n + (n === 1 ? " word: " : " words: ") + ens;
+  }
+
   function packStandingData(set) {
     const words = (set && set.words) || [];
-    const intro = (set && set.intro) || {};
-    const winsA = (set && set.winsA) || {};
-    const winsB = (set && set.winsB) || {};
-    const winsC = (set && set.winsC) || {};
     const doingIds = (set && set.meetLock && set.meetLock.length) ? set.meetLock.slice() : [];
     const doingSet = {};
     doingIds.forEach(function (id) { doingSet[id] = true; });
     const seats = words.map(function (w, i) {
       const id = w.id;
-      const done = !!(intro[id] && (winsA[id] || 0) >= 2 && (winsB[id] || 0) >= 2 && (winsC[id] || 0) >= 2);
+      const green = window.StartSlice.isGreen(w, set);
+      const doing = !!doingSet[id];
       let seatState = "todo";
-      if (done) seatState = "done";
-      else if (doingSet[id]) seatState = "doing";
+      if (green && doing) seatState = "done doing";
+      else if (green) seatState = "done";
+      else if (doing) seatState = "doing";
       return { n: i + 1, id: id, en: w.en, state: seatState };
     });
-    const doneCount = seats.filter(function (s) { return s.state === "done"; }).length;
-    const doingCount = seats.filter(function (s) { return s.state === "doing"; }).length;
+    const doneCount = seats.filter(function (s) { return s.state.indexOf("done") !== -1; }).length;
+    const doingCount = seats.filter(function (s) { return s.state.indexOf("doing") !== -1; }).length;
     const total = words.length;
-    const nextIds = window.MeetLock.batchIds(words, intro, winsA, winsB, winsC, studySize(), 2);
+    const nextIds = [];
+    const nextLimit = studySize();
+    for (let ni = 0; ni < words.length && nextIds.length < nextLimit; ni++) {
+      if (!window.StartSlice.isGreen(words[ni], set)) nextIds.push(words[ni].id);
+    }
     const nextWords = window.MeetLock.wordsForLock(words, nextIds);
     const countText = doneCount + " / " + total + " words finished";
     let leftText = (total - doneCount) + " to go";
@@ -1272,6 +1347,7 @@
       countText: countText,
       leftText: leftText,
       nextText: nextText,
+      sliceText: sliceLine(set, words),
     };
   }
 
@@ -1287,21 +1363,29 @@
     if (fill) fill.style.width = (data.total ? (100 * data.doneCount / data.total) : 0) + "%";
     const nextEl = $("#stand-next");
     if (nextEl) nextEl.textContent = data.nextText;
+    const sliceEl = $("#stand-slice");
+    if (sliceEl) sliceEl.textContent = data.sliceText || "";
     const host = $("#stand-seats");
     if (host) {
       host.innerHTML = "";
       data.seats.forEach(function (seat) {
-        const span = document.createElement("span");
-        span.className = "seat " + seat.state;
-        span.textContent = String(seat.n);
-        span.title = seat.en || "";
-        span.addEventListener("click", function () {
+        const btn = document.createElement("button");
+        btn.type = "button";
+        btn.className = "seat " + seat.state;
+        btn.textContent = String(seat.n);
+        btn.title = seat.en || "";
+        btn.setAttribute("aria-label", "Start at word " + seat.n + ", " + (seat.en || ""));
+        btn.addEventListener("click", function () {
+          chooseStart(set, seat.n);
           const w = ((set.words) || []).filter(function (word) { return word.id === seat.id; })[0];
-          if (!w) return;
-          unlockSpeech();
-          speak(w.en);
+          if (w) {
+            unlockSpeech();
+            speak(w.en);
+          }
+          if (currentSet() === set) renderSetHome();
+          else renderPackStanding(set);
         });
-        host.appendChild(span);
+        host.appendChild(btn);
       });
     }
     const fl = $("#final-label");
@@ -1346,7 +1430,14 @@
     const set = currentSet();
     if (!set) return;
     if (!set.intro) set.intro = {};
-    if (!meetLockHeld(set)) {
+    if (set.startNumber) {
+      if (!Array.isArray(set.meetLock) || !set.meetLock.length) {
+        const slice = window.StartSlice.sliceFrom(set.words || [], set.startNumber, studySize());
+        set.startNumber = slice.startNumber;
+        set.meetLock = slice.ids.slice();
+        persist();
+      }
+    } else if (!meetLockHeld(set)) {
       set.meetLock = batchWords(set).map(function (w) { return w.id; });
       persist();
     }
@@ -2344,6 +2435,15 @@
       setTimeout(function () { startLearnAt("A"); }, 1600);
       return;
     }
+    const passedSet = currentSet();
+    if (passedSet) {
+      window.StartSlice.markPassed(
+        passedSet,
+        (quiz.items || []).map(function (item) { return item && item.id; }),
+        pct
+      );
+      persist();
+    }
     const missLine = misses.length
       ? misses.map(function (m) { return m.en + " = " + meaning(m); }).join(" · ")
       : t("no_mistakes");
@@ -2968,6 +3068,13 @@
       currentSet: currentSet,
       getQuiz: function () { return quiz; },
       PASS_PCT: PASS_PCT,
+      chooseStart: chooseStart,
+      markPassed: function (set, ids, pct) {
+        window.StartSlice.markPassed(set, ids, pct);
+      },
+      StartSlice: window.StartSlice,
+      slimProgress: slimProgress,
+      applyRemote: applyRemote,
     };
   }
   bind();
