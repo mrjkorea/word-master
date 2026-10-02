@@ -95,6 +95,27 @@
   let quiz = blankQuiz();
   let matchGame = null;
   let listenGame = null;
+  let externalPackSrc = null;
+  let externalPack = null;
+
+  function initPackSrcParam() {
+    const PackSrc = window.PackSrc;
+    if (!PackSrc) return;
+    const raw = PackSrc.readPackSrcFromLocation(window.location);
+    if (raw && PackSrc.isAllowedPackSrc(raw)) {
+      externalPackSrc = raw;
+      externalPack = {
+        src: raw,
+        folder: PackSrc.mediaFolderFromSrc(raw),
+        pictureExt: PackSrc.pictureExtFromSrc(raw),
+        sharedLetters: PackSrc.defaultSharedLetters(raw),
+      };
+    }
+  }
+
+  function isExternalPackMode() {
+    return !!externalPackSrc;
+  }
 
   function uid(prefix) {
     return (
@@ -669,6 +690,7 @@
   }
 
   function packBase() {
+    if (externalPack && externalPack.folder) return externalPack.folder;
     return "packs/" + currentPackId();
   }
 
@@ -864,7 +886,9 @@
       window.SpellStop.settle(audio, token);
       return;
     }
-    if (!ok) {
+    if (!ok && externalPack && externalPack.sharedLetters) {
+      ok = await tryPlayLetterSrc(audio, externalPack.sharedLetters + "/" + id + ".mp3", token);
+    } else if (!ok && !isExternalPackMode()) {
       ok = await tryPlayLetterSrc(audio, "packs/nouns100/audio/letters/" + id + ".mp3", token);
     }
     if (window.SpellStop.stale(token)) {
@@ -1125,7 +1149,47 @@
     return (await loadPackFile(DEMO_PACK_ID)) || DEMO_FALLBACK;
   }
 
+  async function loadExternalPackFromSrc(src) {
+    const PackSrc = window.PackSrc;
+    if (!PackSrc || !PackSrc.isAllowedPackSrc(src)) return false;
+    try {
+      const res = await fetch(src, { cache: "no-store" });
+      if (!res.ok) return false;
+      const data = await res.json();
+      if (!data || !data.words || !data.words.length) return false;
+      const pid = String(data.id || PackSrc.packIdFromSrc(src) || "external");
+      externalPack = {
+        src: src,
+        folder: PackSrc.mediaFolderFromSrc(src),
+        pictureExt: PackSrc.pictureExtFromSrc(src),
+        sharedLetters: PackSrc.resolveSharedLettersBase(src, data) || PackSrc.defaultSharedLetters(src),
+      };
+      const words = data.words.map(packWord).filter(function (w) { return w.en && w.ko; });
+      if (!words.length) return false;
+      const existing = Object.keys(state.sets)
+        .map(function (k) { return state.sets[k]; })
+        .find(function (s) { return s.externalPackSrc === src; });
+      if (existing) {
+        existing.title = data.title || pid;
+        existing.words = words;
+        existing.packId = pid;
+        existing.externalPackSrc = src;
+        activateSet(existing);
+      } else {
+        const set = makeSet(data.title || pid, words, pid);
+        set.externalPackSrc = src;
+        activateSet(set);
+      }
+      const lanes = document.querySelector(".index-lanes");
+      if (lanes) lanes.hidden = true;
+      return true;
+    } catch (e) {
+      return false;
+    }
+  }
+
   async function openPack(pid) {
+    if (isExternalPackMode()) return;
     const pack = await loadPackFile(pid);
     if (!pack || !pack.words.length) return;
     const existing = Object.keys(state.sets)
@@ -1464,7 +1528,7 @@
 
   function wordPic(w) {
     const id = String((w && (w.id || w.en)) || "").toLowerCase().replace(/[^a-z]/g, "");
-    return packBase() + "/" + id + ".jpg";
+    return packBase() + "/" + id + "." + ((externalPack && externalPack.pictureExt) || "jpg");
   }
 
   function scramble(en) {
@@ -2821,6 +2885,13 @@
       if (!currentStudentId()) return;
       unlockSpeech();
       setVoice(state.voice);
+      if (externalPackSrc) {
+        loadExternalPackFromSrc(externalPackSrc).then(function () {
+          renderHome();
+          showScreen("home");
+        });
+        return;
+      }
       renderHome();
       showScreen("home");
     });
@@ -3158,6 +3229,7 @@
       applyRemote: applyRemote,
     };
   }
+  initPackSrcParam();
   bind();
   pullSheet();
   probeLinuxTts();
