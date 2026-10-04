@@ -98,6 +98,7 @@ const state = {
   roundStartedAt: "",
   rescued: 0,
   burned: 0,
+  roundPosted: false,
   introT: 0,
   hurryT: 0,
   slamI: 0,
@@ -854,9 +855,29 @@ function beginPlay() {
   state.hurryT = 0;
 }
 
+function postGameDone() {
+  if (state.roundPosted) return;
+  const n = (state.pack && state.pack.items && state.pack.items.length) || 0;
+  const seen = state.itemIndex + 1;
+  if (!n || seen < n) return;
+  state.roundPosted = true;
+  try {
+    if (window.parent && window.parent !== window) {
+      window.parent.postMessage({
+        type: "mrj-wm-game-done",
+        game: "spellfire",
+        items: seen,
+        correct: state.rescued,
+        finished: true,
+      }, "*");
+    }
+  } catch (e) { /* a quit or a closed frame must not unlock the test */ }
+}
+
 function nextWord() {
   const n = state.pack && state.pack.items ? state.pack.items.length : 0;
   if (!n || state.itemIndex >= n - 1) {
+    if (n) postGameDone();
     state.phase = "results";
     caption(`Done. Score ${state.score}.`);
     speak("Great job! Tap play again.");
@@ -871,6 +892,7 @@ function playAgain() {
   state.score = 0;
   state.rescued = 0;
   state.burned = 0;
+  state.roundPosted = false;
   startWord(0);
 }
 
@@ -1238,6 +1260,7 @@ if (applyBtn) {
     state.score = 0;
     state.rescued = 0;
     state.burned = 0;
+    state.roundPosted = false;
     if (state.phase === "boot" || state.phase === "tap") {
       caption(`Custom pack ready (${pack.items.length} words). Tap to play.`);
     } else {

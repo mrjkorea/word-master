@@ -1,3 +1,96 @@
+# CURSOR_RECEIPT — All-pack easy and hard, game before test, TOEIC lane
+
+Date: 2026-10-05
+Command: Every pack shows All N easy and All N hard. One finished game unlocks the tests. Fifteen TOEIC tiles open this site with `?packsrc=`. Push origin main.
+Model: grok-4.7
+
+All N easy calls `startEasy(true)`. All N hard calls `startHard(true)` and stays a typing test. Students see both buttons on every pack, including `?packsrc=`. Until one full game is finished they are disabled and say `Finish one game first`. Teachers can still jump. The home index has a TOEIC lane, `toeic01` through `toeic15`, linking at `word-master-toeic/packs/`.
+
+## Files
+
+| File | Change |
+|---|---|
+| `index.html` | Two all-pack buttons, Test ribbon step, TOEIC lane, `path-lock.js` before `app.js`. Cache `20261001-lock`. |
+| `js/app.js` | Student gate, game-done message, all-pack easy and hard. |
+| `js/path-lock.js` | Round lock. A finished game opens the test. |
+| `css/app.css` | Six-step ribbon, locked steps, TOEIC lane. |
+| `js/i18n.js` | Finish-step and game-finished lines. |
+| `scripts/path_lock_test.js` | The lock rule. |
+| `scripts/load_app_for_test.js` | Loads PathLock. Teacher search so older tests still start. |
+| `games/leap-frog`, `games/snow-jump`, `games/sound-invaders`, `games/spellfire` | Post a finished round only. |
+
+## Test
+
+```
+node scripts/path_lock_test.js
+PATH_LOCK_OK
+```
+
+Browser: a fresh student on Nouns 1–100 sees All 100 easy and All 100 hard disabled, subtitle `Finish one game first`. The Test ribbon step stays locked. A teacher All 100 hard is a typing test, 1/100, meaning on screen. A teacher All 100 easy shows the English word and meaning choices, 1/100. The TOEIC 1–100 tile stays on this site and opens pack `TOEIC 1–100` with the same two buttons.
+
+# CURSOR_RECEIPT — real known count on the score row
+
+Date: 2026-10-04
+Command: A finished study or checkup must post the real count, total, and percent. Do not post score 0 because a screen opened. Do not invent a percent from the book alone. `post()` calls `MRJ_AUTH.noteScore` with the same fields when a student is signed in. No second sign-in. Do not commit.
+Model: grok-4.7
+
+A word counts as known when it has passed at 80% or it has been met and learned twice in each of the three study parts. The score is how many words in the current study list are known, out of that list. A checkup score is the number correct out of the questions just finished, including a real 0. Opening a set, switching books, or saving again with the same count does not post. `MRJ_SCORES.post` still writes the sheet row, and when `MRJ_AUTH.student()` is set it also calls `noteScore` with that row's program, item, count, total, percent, and date.
+
+## Files
+
+| File | Change |
+|---|---|
+| `js/progress.js` | `toOneBook` posts only a finished known count or checkup. It no longer uses the batch size as a fake total. |
+| `js/app.js` | Records the known count when it goes up, and the checkup result when a test finishes. |
+| `mrj-scores.js` | `post()` calls `MRJ_AUTH.noteScore` for a signed-in student. A missing count stays a blank percent. |
+| `index.html` | Cache query `20261004-score` for those three scripts. |
+| `scripts/score_post_test.js` | Screen open, known count, checkup, book-only percent, and `noteScore`. |
+| `scripts/load_app_for_test.js` | Loads the score scripts before the app. |
+| `CURSOR_RECEIPT.md` | This entry. |
+
+## Test
+
+```
+node scripts/score_post_test.js
+SCORE_POST_OK
+node scripts/pack_standing_test.js
+PACK_STANDING_OK 30/100 next w31-w40 seats 30 done + 10 doing
+node scripts/meet_word_lock_test.js
+MEET_LOCK_OK verbs-round stays inside Meet the Words
+```
+
+The app path in `score_post_test.js` opened a set (no row), marked two of four words known (`2/4`, 50%), then finished a checkup at `3/4`, 75%. Each row's `noteScore` fields matched the sheet row. Not committed. The live score sheet was not written.
+
+# CURSOR_RECEIPT — external packsrc loading (Word Master player)
+
+Date: 2026-10-02 KST  
+Command: Add `?packsrc=` loading for mrjkorea.github.io JSON packs only; assets beside JSON; local academic packs unchanged when absent.  
+Model: Composer  
+
+## Files
+
+| File | Change |
+|---|---|
+| `js/pack-src.js` | New: validate `packsrc`, folder + asset URLs, shared letter base from pack JSON. |
+| `js/app.js` | External pack fetch/activate; `packMediaUrl`; letter fallback to shared letters (not nouns100 when external). |
+| `index.html` | Script tag for `pack-src.js`; cache-bust `app.js`. |
+| `scripts/pack_src_test.js` | Node test: reject bad URLs, picture path, local vs external mode. |
+| `scripts/load_app_for_test.js` | Preserve `location.search` for harness tests. |
+| `CURSOR_RECEIPT.md` | This entry. |
+
+## Test
+
+```
+node scripts/pack_src_test.js
+OK pack_src_test
+  reject evil URL
+  picture: https://mrjkorea.github.io/day2-words/packs/basic_a_u1/cat.jpg
+  local PACK_IDS: 35 packs
+  external wordPic: https://mrjkorea.github.io/day2-words/packs/basic_a_u1/cat.jpg
+```
+
+Not committed or pushed.
+
 # CURSOR_RECEIPT — shared MRJ sign-in
 
 Date: 2026-09-29 17:20 KST
@@ -136,3 +229,88 @@ PACK_STANDING_OK 30/100 next w31-w40 seats 30 done + 10 doing
 node scripts/meet_word_lock_test.js
 MEET_LOCK_OK verbs-round stays inside Meet the Words
 ```
+
+# CURSOR_RECEIPT — student lock-step path
+
+Date: 2026-10-01
+Command: Students walk Meet → Learn → Dictation → Write → one finished game → Test. Teachers keep the jump bar. This folder only.
+Model: grok-4.7
+
+## Files
+
+- `js/path-lock.js` — gate. `hold`, `can`, `next`, `markGameDone`, `syncRound`, `isTeacher`. A finished step stays open for that `meetLock`. A new lock is a new round. Old rounds stay in `roundGames` / `pathHeld`.
+- `js/app.js` — `?mode=teacher` or `?teacher=1` is teacher and is remembered. Anything else is student. Jump bar, skip buttons, ribbon jumps, and Learn / Easy / Hard / Games / All 100 / game slots go through `pathAllows`. Parent listens for `mrj-wm-game-done` only while a game it opened is on screen and `finished === true`.
+- `index.html` — teacher badge and Student mode button. Ribbon is not a row of buttons. `path-lock.js` and `app.js` are `?v=20261001-lock`.
+- `css/app.css` — locked steps, teacher badge, lock message.
+- `js/i18n.js` — `finish_step_first`, `teacher_badge`, `teacher_student`, `game_finished` in every language already carried.
+- `scripts/path_lock_test.js`
+- `scripts/load_app_for_test.js` — loads PathLock. Harness search is `?mode=teacher` so the old quiz tests are not stopped by the student gate.
+- `scripts/start_slice_test.js`, `scripts/dictation_audio_stop_test.js` — cache query updated to `20261001-lock`. The strings they checked (`20260930-spellstop`) were already absent from `index.html` (`20261001-spellread`).
+- `scripts/meet_word_lock_test.js` — Leap Frog asset name is the file that exists, `index-Bs4ORQ3Y.js`.
+- `games/leap-frog/assets/index-Bs4ORQ3Y.js` — removed the `./packs/starter-en.json` fallback so that test can pass. A direct open with no session pack no longer loads its own list.
+
+Not edited: `js/meet-lock.js`, `js/progress.js`, `mrj-scores.js`. Other Word Master copies were not touched.
+
+## Tests
+
+```
+node scripts/path_lock_test.js
+PATH_LOCK_OK
+EXIT:0
+node scripts/meet_word_lock_test.js
+MEET_LOCK_OK verbs-round stays inside Meet the Words
+EXIT:0
+node scripts/start_slice_test.js
+START_SLICE_OK
+EXIT:0
+node scripts/pack_standing_test.js
+PACK_STANDING_OK 30/100 next w31-w40 seats 30 done + 10 doing
+EXIT:0
+node scripts/dictation_audio_stop_test.js
+DICTATION_AUDIO_STOP_OK
+EXIT:0
+```
+
+## Browser
+
+`python3 -m http.server 8811 --bind 127.0.0.1`
+
+- Student `http://127.0.0.1:8811/index.html?mode=student&pack=nouns100` — no jump bar (`#teacher-bar` display none). Learn, Easy, Hard, Games, All 100, and ribbon steps 2–5 stay on the set screen and say "Finish step 1 first". Meet opens.
+- Teacher `http://127.0.0.1:8811/index.html?mode=teacher&pack=nouns100` — bar reads "TEACHER Student mode Skip word Skip step 1 Meet 2 Learn 3 Dictation 4 Write 5 Games 6 Test". 5 Games opens Games. 6 Test opens the test.
+- With Meet, Learn, Dictation, and Write done for the current 10 and no game yet, Easy stays locked. Opening Leap Frog and pressing Back does not unlock it. `finished: false` from that frame stays on the game. `finished: true` returns to the set, shows "You finished a game — the test is open", and Easy opens the test (`screen-test`, word "way").
+- Shots: `.playwright-mcp/lockstep-student.png`, `.playwright-mcp/lockstep-teacher.png`, `.playwright-mcp/lockstep-test-open.png`.
+
+The built games do not post `mrj-wm-game-done` themselves. The check posted that message from the Leap Frog frame after the parent had opened it.
+
+## Bugs this job did not cover
+
+- Home "Continue" uses `Algo.startMode(set.words)` for the whole pack. After words 1–10 are done it can still say "Continue from Learn" because words 11–100 are not.
+- Teacher "2 Learn" before the picture round is finished still opens Meet. `startLearnAt` already sent an unfinished tap map back to Meet. 5 Games and 6 Test do jump.
+
+## 2026-10-02 game-done hole
+
+A game counts only when every word in the round was finished. `js/path-lock.js` was not rewritten.
+
+Parent `js/app.js` accepts `mrj-wm-game-done` only on the game screen it opened, for the same game, with `finished: true` and `items` at least `playWords(set).length`. A short count, a string, a missing count, the wrong game, or a message after Back is ignored.
+
+Each game posts that message itself:
+- Leap Frog and Snow Jump: bundle-only. Goal is the pack length. A successful end posts. Death does not.
+- Sound Invaders: bundle-only. Posts after one correct hit per pack word. GAME OVER does not.
+- Spellfire: `games/spellfire/src/engine.js` posts from `nextWord` when the last word is advanced. A loss does not.
+
+Files: `js/app.js`, `games/leap-frog/assets/index-Bs4ORQ3Y.js`, `games/snow-jump/assets/index-DA78ZsQf.js`, `games/sound-invaders/assets/index-BRj5RKfc.js`, `games/spellfire/src/engine.js`, `scripts/path_lock_test.js`. Not touched: `js/path-lock.js`, `js/meet-lock.js`, `js/progress.js`, `mrj-scores.js`. Not pushed.
+
+```
+node scripts/path_lock_test.js
+PATH_LOCK_OK
+node scripts/meet_word_lock_test.js
+MEET_LOCK_OK verbs-round stays inside Meet the Words
+node scripts/start_slice_test.js
+START_SLICE_OK
+node scripts/pack_standing_test.js
+PACK_STANDING_OK 30/100 next w31-w40 seats 30 done + 10 doing
+node scripts/dictation_audio_stop_test.js
+DICTATION_AUDIO_STOP_OK
+```
+
+Browser on `http://127.0.0.1:8812/index.html?mode=student&pack=nouns100`: student bar hidden. One Leap Frog word then Back left the test locked. Dying at 4/10 left the test locked. Finishing all 10 words returned to the set, showed "You finished a game — the test is open", and Easy opened the test. The parent only accepts `items` of at least 10, and the iframe was blanked by that accept path, so the game posted the full round. Teacher `?mode=teacher` shows the jump bar.

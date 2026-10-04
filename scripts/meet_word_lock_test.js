@@ -42,7 +42,7 @@ if (!MeetLock.outsideLock(held.concat(["w11"]), lock).length) {
 const root = path.join(__dirname, "..");
 const checks = [
   "games/spellfire/src/engine.js",
-  "games/leap-frog/assets/index-DRRBcrLV.js",
+  "games/leap-frog/assets/index-Bs4ORQ3Y.js",
   "games/snow-jump/assets/index-DA78ZsQf.js",
 ];
 const banned = ["packs/nouns100.json", "packs/words.txt", "animals.json", "starter-en.json"];

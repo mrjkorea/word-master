@@ -7,7 +7,7 @@
   <meta name="mobile-web-app-capable" content="yes" />
   <meta name="theme-color" content="#f6f3ec" />
   <title>MRJ Word Master</title>
-  <link rel="stylesheet" href="css/app.css?v=20260930-start" />
+  <link rel="stylesheet" href="css/app.css?v=20261001-lock" />
 </head>
 <body>
   <div id="phone" class="phone">
@@ -207,6 +207,26 @@
                 </button>
               </div>
             </section>
+            <section class="lane lane-toeic">
+              <h3>TOEIC</h3>
+              <div class="lane-grid">
+                <a class="pack-tile" href="?packsrc=https://mrjkorea.github.io/word-master-toeic/packs/toeic01.json"><b>1</b><strong>1–100</strong></a>
+                <a class="pack-tile" href="?packsrc=https://mrjkorea.github.io/word-master-toeic/packs/toeic02.json"><b>2</b><strong>101–200</strong></a>
+                <a class="pack-tile" href="?packsrc=https://mrjkorea.github.io/word-master-toeic/packs/toeic03.json"><b>3</b><strong>201–300</strong></a>
+                <a class="pack-tile" href="?packsrc=https://mrjkorea.github.io/word-master-toeic/packs/toeic04.json"><b>4</b><strong>301–400</strong></a>
+                <a class="pack-tile" href="?packsrc=https://mrjkorea.github.io/word-master-toeic/packs/toeic05.json"><b>5</b><strong>401–500</strong></a>
+                <a class="pack-tile" href="?packsrc=https://mrjkorea.github.io/word-master-toeic/packs/toeic06.json"><b>6</b><strong>501–600</strong></a>
+                <a class="pack-tile" href="?packsrc=https://mrjkorea.github.io/word-master-toeic/packs/toeic07.json"><b>7</b><strong>601–700</strong></a>
+                <a class="pack-tile" href="?packsrc=https://mrjkorea.github.io/word-master-toeic/packs/toeic08.json"><b>8</b><strong>701–800</strong></a>
+                <a class="pack-tile" href="?packsrc=https://mrjkorea.github.io/word-master-toeic/packs/toeic09.json"><b>9</b><strong>801–900</strong></a>
+                <a class="pack-tile" href="?packsrc=https://mrjkorea.github.io/word-master-toeic/packs/toeic10.json"><b>10</b><strong>901–1000</strong></a>
+                <a class="pack-tile" href="?packsrc=https://mrjkorea.github.io/word-master-toeic/packs/toeic11.json"><b>11</b><strong>1001–1100</strong></a>
+                <a class="pack-tile" href="?packsrc=https://mrjkorea.github.io/word-master-toeic/packs/toeic12.json"><b>12</b><strong>1101–1200</strong></a>
+                <a class="pack-tile" href="?packsrc=https://mrjkorea.github.io/word-master-toeic/packs/toeic13.json"><b>13</b><strong>1201–1300</strong></a>
+                <a class="pack-tile" href="?packsrc=https://mrjkorea.github.io/word-master-toeic/packs/toeic14.json"><b>14</b><strong>1301–1400</strong></a>
+                <a class="pack-tile" href="?packsrc=https://mrjkorea.github.io/word-master-toeic/packs/toeic15.json"><b>15</b><strong>1401–1500</strong></a>
+              </div>
+            </section>
           </div>
           <button type="button" class="chunk" id="btn-games-home">
             <span class="chip-tag" data-i18n="games">Games</span>
@@ -224,7 +244,9 @@
           <button type="button" class="rib" data-jump="B"><b>3</b><span data-i18n="part_b">Dictation</span></button>
           <button type="button" class="rib" data-jump="C"><b>4</b><span data-i18n="part_c">Write</span></button>
           <button type="button" class="rib" data-jump="games"><b>5</b><span data-i18n="games">Games</span></button>
+          <button type="button" class="rib" data-jump="test"><b>6</b><span>Test</span></button>
         </div>
+        <p class="path-lock-note" id="path-lock-note" hidden></p>
         <p class="pct-line" id="set-pct"></p>
         <div class="standing" id="pack-standing">
           <div class="standing-head">
@@ -251,6 +273,10 @@
             <strong id="learn-label">Start learning</strong>
             <em data-i18n="auto_path">Learn → Dictation → Write, automatic</em>
           </button>
+          <button type="button" class="chunk" id="btn-games-set">
+            <strong data-i18n="games">Games</strong>
+            <em data-i18n="games_set_em">Play with this set</em>
+          </button>
           <button type="button" class="chunk test" id="btn-easy">
             <strong data-i18n="easy">Easy test</strong>
             <em data-i18n="easy_em">See English · tap the meaning</em>
@@ -259,13 +285,13 @@
             <strong data-i18n="hard">Hard test</strong>
             <em data-i18n="hard_em">See the meaning · type English</em>
           </button>
-          <button type="button" class="chunk" id="btn-games-set">
-            <strong data-i18n="games">Games</strong>
-            <em data-i18n="games_set_em">Play with this set</em>
+          <button type="button" class="chunk final" id="btn-final-easy">
+            <strong id="final-easy-label">All 100 easy</strong>
+            <em id="final-easy-meta">See English · tap the meaning · every word</em>
           </button>
-          <button type="button" class="chunk final" id="btn-final-test">
-            <strong id="final-label">All 100 test</strong>
-            <em id="final-meta"></em>
+          <button type="button" class="chunk final" id="btn-final-hard">
+            <strong id="final-hard-label">All 100 hard</strong>
+            <em id="final-hard-meta">See the meaning · type English · every word</em>
           </button>
         </div>
       </section>
@@ -459,11 +485,12 @@
   <script src="js/meet-lock.js?v=20260923-meetlock"></script>
   <script src="js/start-slice.js?v=20260930-start"></script>
   <script src="js/i18n.js?v=20260923-l1"></script>
-  <script src="mrj-scores.js?v=20260928-onebook"></script>
+  <script src="mrj-scores.js?v=20261004-score"></script>
   <script src="js/progress-config.js?v=20260929-sheet"></script>
-  <script src="js/progress.js?v=20260929-auth"></script>
+  <script src="js/progress.js?v=20261004-score"></script>
   <script src="js/spell-stop.js?v=20260930-spellstop"></script>
   <script src="js/pack-src.js?v=20261002-packsrc"></script>
-  <script src="js/app.js?v=20261002-packsrc"></script>
+  <script src="js/path-lock.js?v=20261001-lock"></script>
+  <script src="js/app.js?v=20261001-lock"></script>
 </body>
 </html>

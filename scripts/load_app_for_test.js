@@ -60,6 +60,14 @@ function bootApp() {
     getItem: function () { return null; },
     setItem: function () {},
   };
+  const search =
+    g.location && g.location.search ? String(g.location.search) : "?mode=teacher";
+  g.location = {
+    search: search,
+    href: "http://localhost/" + (search.charAt(0) === "?" ? search : "?" + search),
+    origin: "http://localhost",
+    assign: function () {},
+  };
   g.document = {
     querySelector: function (sel) {
       const m = /^#([\w-]+)$/.exec(String(sel || ""));
@@ -84,7 +92,11 @@ function bootApp() {
   g.MeetLock = require("../js/meet-lock.js");
   g.StartSlice = require("../js/start-slice.js");
   g.SpellStop = require("../js/spell-stop.js");
+  g.PathLock = require("../js/path-lock.js");
+  g.PackSrc = require("../js/pack-src.js");
   g.WM_TEST_HOOK = true;
+  require("../mrj-scores.js");
+  require("../js/progress.js");
   require("../js/app.js");
   return g.WM_TEST;
 }

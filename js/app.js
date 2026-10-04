@@ -83,7 +83,65 @@
     };
   }
 
-  const testerMode = true;
+  const LS_ROLE = "mrj.word_factory.role";
+  let armedGame = "";
+
+  function savedRole() {
+    try { return localStorage.getItem(LS_ROLE) || ""; } catch (e) { return ""; }
+  }
+
+  function rememberRole() {
+    try {
+      if (!window.PathLock) return;
+      const search = window.location && window.location.search ? String(window.location.search) : "";
+      if (window.PathLock.isTeacher(search, "")) localStorage.setItem(LS_ROLE, "teacher");
+      else if (/(?:^|[?&])mode=student(?:&|$)/.test(search)) localStorage.setItem(LS_ROLE, "student");
+    } catch (e) {}
+  }
+
+  function teacherNow() {
+    try {
+      const search = window.location && window.location.search ? String(window.location.search) : "";
+      return !!(window.PathLock && window.PathLock.isTeacher(search, savedRole()));
+    } catch (e) {
+      return false;
+    }
+  }
+
+  function syncPathRound(set) {
+    if (!set || !window.PathLock || typeof window.PathLock.syncRound !== "function") return;
+    try { window.PathLock.syncRound(set); } catch (e) {}
+  }
+
+  function studentLocked(set, step) {
+    if (teacherNow()) return false;
+    if (!set || !window.PathLock) return true;
+    try { return !window.PathLock.can(set, step).ok; } catch (e) { return true; }
+  }
+
+  function showPathLock(gate) {
+    const note = $("#path-lock-note");
+    const order = { intro: 1, A: 2, B: 3, C: 4, games: 5, test: 6 };
+    const need = gate && gate.need;
+    const n = order[need] || 1;
+    if (!note) return;
+    note.hidden = false;
+    note.textContent = t("finish_step_first", { n: n });
+  }
+
+  function pathOpen(step) {
+    if (teacherNow()) return true;
+    const set = currentSet();
+    if (!set || !window.PathLock) return false;
+    try {
+      const gate = window.PathLock.can(set, step);
+      if (gate && gate.ok) return true;
+      showPathLock(gate);
+      return false;
+    } catch (e) {
+      return false;
+    }
+  }
   let currentScreen = "boot";
   let speechUnlocked = false;
   let voices = [];
@@ -160,6 +218,8 @@
   }
 
   let progressTimer = null;
+  let pendingScore = null;
+  let notedKnown = null;
   let authStudentId = "";
 
   function currentStudentId() {
@@ -246,7 +306,10 @@
         srsStage: s.srsStage || 0,
         srsNextAt: s.srsNextAt || null,
         final: s.final || null,
+        check: s.check || null,
         finalMiss: Array.isArray(s.finalMiss) ? s.finalMiss.slice(0, 200) : [],
+        roundGames: s.roundGames && typeof s.roundGames === "object" ? s.roundGames : {},
+        pathHeld: s.pathHeld && typeof s.pathHeld === "object" ? s.pathHeld : {},
       };
     });
     const cur = currentSet();
@@ -311,7 +374,10 @@
         srsStage: s.srsStage || 0,
         srsNextAt: s.srsNextAt || null,
         final: s.final || null,
+        check: s.check || null,
         finalMiss: Array.isArray(s.finalMiss) ? s.finalMiss.slice(0, 200) : [],
+        roundGames: s.roundGames && typeof s.roundGames === "object" ? s.roundGames : {},
+        pathHeld: s.pathHeld && typeof s.pathHeld === "object" ? s.pathHeld : {},
         createdAt: s.lastPlayedAt || Date.now(),
       };
       if (obj.currentPackId === pid) state.currentSetId = id;
@@ -340,7 +406,7 @@
   function progressPayload() {
     const set = currentSet();
     const id = currentStudentId();
-    return {
+    const out = {
       action: "save",
       name: id,
       pin: "",
@@ -353,9 +419,60 @@
       student_id: id,
       progress_json: JSON.stringify(slimProgress()),
     };
+    if (pendingScore && (pendingScore.kind === "known" || pendingScore.kind === "checkup")) {
+      out.scoreKind = pendingScore.kind;
+      out.scoreValue = pendingScore.value;
+      out.scoreMax = pendingScore.max;
+      pendingScore = null;
+    }
+    return out;
+  }
+
+  function studyIds(set) {
+    if (!set) return [];
+    if (Array.isArray(set.meetLock) && set.meetLock.length) return set.meetLock.slice();
+    return playWords(set).map(function (w) { return w && w.id; }).filter(function (id) {
+      return id != null && id !== "";
+    });
+  }
+
+  function wordKnown(set, id) {
+    const passed = (set && set.testPassed) || {};
+    if (Object.prototype.hasOwnProperty.call(passed, id) && Number(passed[id]) >= PASS_PCT) return true;
+    const intro = (set && set.intro) || {};
+    if (!intro[id]) return false;
+    const winsA = (set && set.winsA) || {};
+    const winsB = (set && set.winsB) || {};
+    const winsC = (set && set.winsC) || {};
+    return (winsA[id] || 0) >= 2 && (winsB[id] || 0) >= 2 && (winsC[id] || 0) >= 2;
+  }
+
+  function catchKnown(set) {
+    if (!set) return;
+    const ids = studyIds(set);
+    const total = ids.length;
+    let known = 0;
+    ids.forEach(function (id) {
+      if (wordKnown(set, id)) known += 1;
+    });
+    const pack = set.packId || set.id || "";
+    const prev = notedKnown;
+    if (!(pendingScore && pendingScore.kind === "checkup") && prev && prev.pack === pack && total > 0 && known > prev.count) {
+      pendingScore = { kind: "known", value: known, max: total };
+    }
+    notedKnown = { pack: pack, count: known, total: total };
+  }
+
+  function stampCheck(set, score, total) {
+    const value = Number(score);
+    const max = Number(total);
+    if (!set || !isFinite(value) || !isFinite(max) || !(max > 0)) return;
+    set.check = { score: value, total: max, at: Date.now() };
+    pendingScore = { kind: "checkup", value: value, max: max };
   }
 
   function persist() {
+    catchKnown(currentSet());
     try {
       localStorage.setItem(LS_STATE, JSON.stringify(state));
     } catch (e) {}
@@ -501,7 +618,10 @@
     back.hidden = name === "boot" || name === "home";
     voice.hidden = false;
     const tb = $("#teacher-bar");
-    if (tb) tb.hidden = quiet || typing || name === "playgame";
+    const teacher = teacherNow();
+    document.body.classList.toggle("is-teacher", teacher);
+    document.body.classList.toggle("is-student", !teacher);
+    if (tb) tb.hidden = !teacher || quiet || typing || name === "playgame";
     document.querySelector(".phone").classList.toggle("play", typing || name === "playgame");
     if (name !== "learn") {
       const cap = $("#caption-fallback");
@@ -1007,6 +1127,7 @@
     const slice = window.StartSlice.sliceFrom(set.words || [], startNumber, studySize());
     set.startNumber = slice.startNumber;
     set.meetLock = slice.ids.slice();
+    syncPathRound(set);
     persist();
     return slice;
   }
@@ -1019,12 +1140,14 @@
         const slice = window.StartSlice.sliceFrom(set.words || [], set.startNumber, studySize());
         set.startNumber = slice.startNumber;
         set.meetLock = slice.ids.slice();
+        syncPathRound(set);
         persist();
       }
       return;
     }
     if (!Array.isArray(set.meetLock) || !set.meetLock.length) {
       set.meetLock = batchWords(set).map(function (w) { return w.id; });
+      syncPathRound(set);
       persist();
     }
   }
@@ -1100,6 +1223,7 @@
     state.sets[set.id] = set;
     state.currentSetId = set.id;
     set.lastPlayedAt = Date.now();
+    syncPathRound(set);
     persist();
     syncPack();
   }
@@ -1302,15 +1426,18 @@
     $("#set-pct").textContent = t("pct", { n: pct });
     renderStudySize(set);
     renderPackStanding(set);
+    const held = window.PathLock ? window.PathLock.hold(set) : {};
     $$("#progress-ribbon .rib").forEach(function (el) {
       const jump = el.getAttribute("data-jump");
-      const met = introDone(set);
-      if (jump === "intro") el.classList.toggle("done", met);
+      const locked = studentLocked(set, jump);
+      el.classList.toggle("locked", locked);
+      el.classList.toggle("done", !!held[jump]);
       if (jump === "A" || jump === "B" || jump === "C") {
         const wins = Algo.bucket(ws, jump);
         const round = playWords(set);
-        el.classList.toggle("done", Algo.partDone(round, wins));
-        el.classList.toggle("now", Algo.startMode(round, ws) === jump);
+        el.classList.toggle("now", !locked && Algo.startMode(round, ws) === jump);
+      } else {
+        el.classList.remove("now");
       }
     });
     const chips = $("#word-chips");
@@ -1332,11 +1459,35 @@
     });
     const cleared = factoryCleared(set);
     const met = introDone(set);
-    $("#btn-easy").disabled = false;
-    $("#btn-hard").disabled = false;
+    const testLocked = studentLocked(set, "test");
+    ["#btn-easy", "#btn-hard", "#btn-final-easy", "#btn-final-hard"].forEach(function (sel) {
+      const btn = $(sel);
+      if (!btn) return;
+      btn.hidden = false;
+      btn.disabled = testLocked;
+      btn.classList.toggle("locked", testLocked);
+    });
     $("#btn-easy").classList.toggle("picked", state.testKind === "easy");
     $("#btn-hard").classList.toggle("picked", state.testKind === "hard");
-    $("#btn-learn").disabled = false;
+    const easyMeta = $("#final-easy-meta");
+    const hardMeta = $("#final-hard-meta");
+    const nWords = (set.words || []).length;
+    const easyLabel = $("#final-easy-label");
+    const hardLabel = $("#final-hard-label");
+    if (easyLabel) easyLabel.textContent = "All " + nWords + " easy";
+    if (hardLabel) hardLabel.textContent = "All " + nWords + " hard";
+    if (easyMeta) easyMeta.textContent = testLocked ? "Finish one game first" : "See English · tap the meaning · every word";
+    if (hardMeta) hardMeta.textContent = testLocked ? "Finish one game first" : "See the meaning · type English · every word";
+    const learnBtn = $("#btn-learn");
+    if (learnBtn) {
+      learnBtn.disabled = studentLocked(set, "A");
+      learnBtn.classList.toggle("locked", studentLocked(set, "A"));
+    }
+    const gamesBtn = $("#btn-games-set");
+    if (gamesBtn) {
+      gamesBtn.disabled = studentLocked(set, "games");
+      gamesBtn.classList.toggle("locked", studentLocked(set, "games"));
+    }
     $("#intro-label").textContent = met ? t("intro_again") : t("intro_go");
     if (cleared) {
       $("#learn-label").textContent = t("relearn");
@@ -1370,6 +1521,7 @@
         } else if (live) {
           const slice = window.StartSlice.sliceFrom(live.words || [], lockOrigin(live), n);
           live.meetLock = slice.ids.slice();
+          syncPathRound(live);
           persist();
         } else {
           persist();
@@ -1507,16 +1659,6 @@
         host.appendChild(btn);
       });
     }
-    const fl = $("#final-label");
-    if (fl) fl.textContent = "All " + data.total + " test";
-    const fm = $("#final-meta");
-    if (fm) {
-      if (set.final && set.final.score != null && set.final.total != null) {
-        fm.textContent = "Last: " + set.final.score + " / " + set.final.total + " · " + set.final.pct + "% · " + kstStamp(set.final.at).day;
-      } else {
-        fm.textContent = "Every word in this pack · pass 80%";
-      }
-    }
     paintSheetSync();
     return data;
   }
@@ -1554,10 +1696,12 @@
         const slice = window.StartSlice.sliceFrom(set.words || [], set.startNumber, studySize());
         set.startNumber = slice.startNumber;
         set.meetLock = slice.ids.slice();
+        syncPathRound(set);
         persist();
       }
     } else if (!meetLockHeld(set)) {
       set.meetLock = batchWords(set).map(function (w) { return w.id; });
+      syncPathRound(set);
       persist();
     }
     const words = playWords(set);
@@ -2010,7 +2154,7 @@
   function startLearn(reset) {
     const set = currentSet();
     if (!set) return;
-    if (!testerMode && !introDone(set)) {
+    if (!teacherNow() && !introDone(set)) {
       startTapmap();
       return;
     }
@@ -2030,7 +2174,8 @@
     }
     learn = blankLearn();
     showScreen("learn");
-    $("#tester-bar").hidden = !testerMode;
+    const testerBar = $("#tester-bar");
+    if (testerBar) testerBar.hidden = !teacherNow();
     beginPart(mode);
   }
 
@@ -2329,7 +2474,7 @@
   }
 
   function skipPart() {
-    if (!testerMode) return;
+    if (!teacherNow()) return;
     const set = currentSet();
     const wins = Algo.bucket(winsState(set), learn.mode);
     Algo.testerSkipPart(playWords(set), wins);
@@ -2534,6 +2679,7 @@
         at: Date.now(),
       };
       set.finalMiss = missIds;
+      stampCheck(set, quiz.score, quiz.items.length);
       persist();
     }
   }
@@ -2554,6 +2700,7 @@
     const total = quiz.items.length || 1;
     const pct = Math.round((100 * quiz.score) / total);
     const misses = quiz.mistakes || [];
+    stampCheck(currentSet(), quiz.score, quiz.items.length);
     $("#test-score-title").textContent = pct + "%";
     if (pct < PASS_PCT) {
     $("#forever-box").hidden = true;
@@ -2797,6 +2944,7 @@
       openDemo().then(function () { openPortableGame(kind); });
       return;
     }
+    if (!pathOpen("games")) return;
     ensureMeetLock(set);
     const items = quizItemsFromSet();
     const paths = {
@@ -2844,11 +2992,44 @@
     const frame = $("#game-frame");
     const name = encodeURIComponent(student);
     frame.src = path + "?pack=session&packid=" + encodeURIComponent(currentPackId()) + "&words=" + encodeURIComponent((pack && pack._spellWords) || "") + "&voice=" + encodeURIComponent((pack && pack._spellVoice) || state.voice || "us_m") + "&v=1.11&student=" + name;
+    armGame(kind);
+  }
+
+  function armGame(kind) {
+    armedGame = String(kind || "");
     showScreen("playgame");
+  }
+
+  function leaveGame() {
+    armedGame = "";
+  }
+
+  function deliverGameDone(msg) {
+    const kinds = { leapfrog: 1, snowjump: 1, spellfire: 1, soundinvaders: 1 };
+    if (currentScreen !== "playgame") return;
+    if (!armedGame || !kinds[armedGame]) return;
+    if (!msg || msg.type !== "mrj-wm-game-done") return;
+    if (msg.game !== armedGame || !kinds[msg.game]) return;
+    if (msg.finished !== true) return;
+    const set = currentSet();
+    if (!set || !window.PathLock) return;
+    const need = playWords(set).length;
+    if (typeof msg.items !== "number" || !(msg.items >= need)) return;
+    window.PathLock.markGameDone(set, msg.game);
+    persist();
+    armedGame = "";
+    renderSetHome();
+    showScreen("set");
+    const note = $("#path-lock-note");
+    if (note) {
+      note.hidden = false;
+      note.textContent = t("game_finished");
+    }
   }
 
   function goBack() {
     if (currentScreen === "playgame") {
+      leaveGame();
       const frame = $("#game-frame");
       if (frame) frame.src = "about:blank";
       goGames();
@@ -2985,6 +3166,7 @@
     });
     $("#btn-intro").addEventListener("click", function () {
       if (!currentStudentId()) return;
+      if (!pathOpen("intro")) return;
       startMeet();
     });
     const tapSpeak = $("#btn-tap-speak");
@@ -2993,12 +3175,15 @@
     });
     $("#btn-learn").addEventListener("click", function () {
       if (!currentStudentId()) return;
+      if (!pathOpen("A")) return;
       startLearnAt("A");
     });
     $$("[data-jump]").forEach(function (btn) {
       btn.addEventListener("click", function () {
         if (!currentStudentId()) return;
-        jumpTo(btn.getAttribute("data-jump"));
+        const step = btn.getAttribute("data-jump");
+        if (!teacherNow() && !pathOpen(step)) return;
+        jumpTo(step);
       });
     });
     const meetEn = $("#meet-en");
@@ -3015,6 +3200,7 @@
     if (skipStepBtn) skipStepBtn.addEventListener("click", skipStep);
     $("#btn-easy").addEventListener("click", function () {
       if (!currentStudentId()) return;
+      if (!pathOpen("test")) return;
       state.testKind = "easy";
       persist();
       renderSetHome();
@@ -3022,6 +3208,7 @@
     });
     $("#btn-hard").addEventListener("click", function () {
       if (!currentStudentId()) return;
+      if (!pathOpen("test")) return;
       state.testKind = "hard";
       persist();
       renderSetHome();
@@ -3031,26 +3218,38 @@
     const th = $("#btn-test-hard");
     if (te) te.addEventListener("click", function () {
       if (!currentStudentId()) return;
+      if (!pathOpen("test")) return;
       state.testKind = "easy";
       persist();
       startEasy();
     });
     if (th) th.addEventListener("click", function () {
       if (!currentStudentId()) return;
+      if (!pathOpen("test")) return;
       state.testKind = "hard";
       persist();
       startHard();
     });
     $("#btn-games-set").addEventListener("click", function () {
       if (!currentStudentId()) return;
+      if (!pathOpen("games")) return;
       goGames();
     });
-    const finalBtn = $("#btn-final-test");
-    if (finalBtn) finalBtn.addEventListener("click", function () {
+    const finalEasy = $("#btn-final-easy");
+    if (finalEasy) finalEasy.addEventListener("click", function () {
       if (!currentStudentId()) return;
+      if (!pathOpen("test")) return;
       state.finalTest = true;
       persist();
       startEasy(true);
+    });
+    const finalHard = $("#btn-final-hard");
+    if (finalHard) finalHard.addEventListener("click", function () {
+      if (!currentStudentId()) return;
+      if (!pathOpen("test")) return;
+      state.finalTest = true;
+      persist();
+      startHard(true);
     });
     $("#btn-speak").addEventListener("click", function () {
       if (learn.cur) speak(learn.cur.en);
@@ -3077,6 +3276,14 @@
         if (g === "leapfrog" || g === "snowjump" || g === "spellfire" || g === "soundinvaders") openPortableGame(g);
       });
     });
+    if (window.addEventListener) {
+      window.addEventListener("message", function (ev) {
+        const data = ev && ev.data;
+        if (!data || typeof data !== "object") return;
+        if (data.type !== "mrj-wm-game-done") return;
+        deliverGameDone(data);
+      });
+    }
     $("#btn-listen-speak").addEventListener("click", function () {
       if (listenGame && listenGame.items[listenGame.index]) speak(listenGame.items[listenGame.index].en);
     });
@@ -3218,6 +3425,10 @@
       finishQuiz: finishQuiz,
       activateSet: activateSet,
       currentSet: currentSet,
+      armGame: armGame,
+      deliverGameDone: deliverGameDone,
+      leaveGame: leaveGame,
+      screenName: function () { return currentScreen; },
       getQuiz: function () { return quiz; },
       PASS_PCT: PASS_PCT,
       chooseStart: chooseStart,
@@ -3230,6 +3441,7 @@
     };
   }
   initPackSrcParam();
+  rememberRole();
   bind();
   pullSheet();
   probeLinuxTts();

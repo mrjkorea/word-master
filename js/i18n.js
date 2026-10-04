@@ -124,6 +124,10 @@
     jump_write: "4 Write",
     jump_games: "5 Games",
     jump_test: "6 Test",
+    finish_step_first: "Finish step {n} first",
+    teacher_badge: "Teacher",
+    teacher_student: "Student mode",
+    game_finished: "You finished a game — the test is open",
     pick_test: "Choose Easy or Hard",
     no_mistakes: "No mistakes.",
     forever_help: "Remember forever — we’ll remind you on this phone later (1 day, then 3, 7, 21, 60).",
@@ -246,6 +250,10 @@
     jump_write: "4 쓰기",
     jump_games: "5 게임",
     jump_test: "6 시험",
+    finish_step_first: "{n}단계를 먼저 끝내세요",
+    teacher_badge: "선생님",
+    teacher_student: "학생 모드",
+    game_finished: "게임을 끝냈어요 — 시험이 열렸어요",
     pick_test: "쉬운 시험 또는 어려운 시험을 고르세요",
     no_mistakes: "틀린 것 없음.",
     forever_help: "평생 기억하기 — 나중에 이 휴대폰에서 다시 알려 줍니다 (1일, 3일, 7일, 21일, 60일).",
@@ -690,6 +698,8 @@
       skip_word: "跳过单词", skip_step: "跳过步骤",
       jump_meet: "1 认识", jump_learn: "2 学习", jump_dict: "3 听写", jump_write: "4 书写",
       jump_games: "5 游戏", jump_test: "6 测验", pick_test: "选简单或困难",
+      finish_step_first: "请先完成第 {n} 步", teacher_badge: "老师", teacher_student: "学生模式",
+      game_finished: "你完成了一个游戏 — 测验已打开",
       no_mistakes: "没有错误。", forever_help: "永远记住 — 之后这台手机会提醒你（1、3、7、21、60天）。",
       need_80: "{pct}% — 需要 80%。回到学习。",
       name_title: "你叫什么名字？", name_help: "先填这个。只保存在这台手机。", name_go: "就是我",
@@ -710,6 +720,8 @@
       skip_word: "単語をスキップ", skip_step: "段階をスキップ",
       jump_meet: "1 会う", jump_learn: "2 学習", jump_dict: "3 書き取り", jump_write: "4 綴り",
       jump_games: "5 ゲーム", jump_test: "6 テスト", pick_test: "かんたん／むずかしいを選ぶ",
+      finish_step_first: "先にステップ {n} を終えてください", teacher_badge: "先生", teacher_student: "生徒モード",
+      game_finished: "ゲームを終えました — テストが開きました",
       no_mistakes: "ミスなし。", forever_help: "ずっと覚える — あとでこの端末が知らせます（1・3・7・21・60日）。",
       need_80: "{pct}% — 80%必要。学習に戻る。",
       name_title: "お名前は？", name_help: "最初に。この端末だけに保存します。", name_go: "わたしです",
@@ -744,7 +756,9 @@
       tap_hint_listen: "Escucha. Toca el dibujo que coincide.",
       tap_hint_read: "Lee la palabra. Toca el dibujo que coincide.", tap_done: "Listo", ww_noun: "sustantivo",
       ww_origin: "Origen", ww_like: "Parecido", ww_unlike: "Opuesto", ww_bits: "Partes de la palabra",
-      ww_hear_ex: "Escuchar la frase", jump_test: "6 Prueba"
+      ww_hear_ex: "Escuchar la frase", jump_test: "6 Prueba",
+      finish_step_first: "Termina el paso {n} primero", teacher_badge: "Profesor", teacher_student: "Modo estudiante",
+      game_finished: "Terminaste un juego — el test está abierto"
     },
     hi: {
       intro_title: "शब्द मिलिए", intro_help: "मिली-जुली अक्षरों को टैप कर शब्द बनाएँ। टाइप नहीं।",
@@ -755,6 +769,8 @@
       skip_word: "शब्द छोड़ें", skip_step: "चरण छोड़ें",
       jump_meet: "1 मिलना", jump_learn: "2 सीखना", jump_dict: "3 श्रुतलेख", jump_write: "4 लिखना",
       jump_games: "5 खेल", jump_test: "6 टेस्ट", pick_test: "आसान या कठिन चुनें",
+      finish_step_first: "पहले चरण {n} पूरा करें", teacher_badge: "शिक्षक", teacher_student: "छात्र मोड",
+      game_finished: "आपने एक खेल पूरा किया — टेस्ट खुल गया",
       no_mistakes: "कोई गलती नहीं।", forever_help: "हमेशा याद — बाद में यह फ़ोन याद दिलाएगा (1, 3, 7, 21, 60 दिन)।",
       need_80: "{pct}% — 80% चाहिए। सीखने पर वापस।",
       name_title: "आपका नाम क्या है?", name_help: "सबसे पहले। सिर्फ़ इस फ़ोन पर।", name_go: "यह मैं हूँ",
@@ -790,7 +806,9 @@
       tap_hint_explore: "Tippe jedes Bild. Hör das Wort.", tap_hint_listen: "Hör zu. Tippe das passende Bild.",
       tap_hint_read: "Lies das Wort. Tippe das passende Bild.", tap_done: "Kennenlernen fertig", ww_noun: "Nomen",
       ww_origin: "Herkunft", ww_like: "Ähnlich", ww_unlike: "Gegenteil", ww_bits: "Wortteile",
-      ww_hear_ex: "Satz hören", voice_teenager: "Jugendlicher", jump_test: "6 Prüfung"
+      ww_hear_ex: "Satz hören", voice_teenager: "Jugendlicher", jump_test: "6 Prüfung",
+      finish_step_first: "Beende zuerst Schritt {n}", teacher_badge: "Lehrer", teacher_student: "Schülermodus",
+      game_finished: "Du hast ein Spiel beendet — der Test ist offen"
     },
     vi: {
       intro_title: "Gặp các từ", intro_help: "Chạm chữ bị xáo. Ghép từ. Không gõ.",
@@ -801,6 +819,8 @@
       skip_word: "Bỏ từ", skip_step: "Bỏ bước",
       jump_meet: "1 Gặp", jump_learn: "2 Học", jump_dict: "3 Nghe viết", jump_write: "4 Viết",
       jump_games: "5 Trò chơi", jump_test: "6 Bài", pick_test: "Chọn Dễ hoặc Khó",
+      finish_step_first: "Hãy hoàn thành bước {n} trước", teacher_badge: "Giáo viên", teacher_student: "Chế độ học sinh",
+      game_finished: "Bạn đã chơi xong một game — bài kiểm tra đã mở",
       no_mistakes: "Không sai.", forever_help: "Nhớ mãi — điện thoại này sẽ nhắc (1, 3, 7, 21, 60 ngày).",
       need_80: "{pct}% — cần 80%. Về Học.",
       name_title: "Bạn tên gì?", name_help: "Việc đầu. Chỉ lưu trên máy này.", name_go: "Đó là tôi",
@@ -823,6 +843,8 @@
       skip_word: "Pular palavra", skip_step: "Pular etapa",
       jump_meet: "1 Conhecer", jump_learn: "2 Aprender", jump_dict: "3 Ditado", jump_write: "4 Escrever",
       jump_games: "5 Jogos", jump_test: "6 Teste", pick_test: "Escolha Fácil ou Difícil",
+      finish_step_first: "Termine o passo {n} primeiro", teacher_badge: "Professor", teacher_student: "Modo aluno",
+      game_finished: "Você terminou um jogo — o teste está aberto",
       no_mistakes: "Sem erros.", forever_help: "Lembrar para sempre — este celular avisa depois (1, 3, 7, 21, 60 dias).",
       need_80: "{pct}% — precisa de 80%. Volte a Aprender.",
       name_title: "Qual é o seu nome?", name_help: "Primeiro. Só neste celular.", name_go: "Sou eu",
@@ -846,6 +868,8 @@
       skip_word: "Lewati kata", skip_step: "Lewati langkah",
       jump_meet: "1 Kenalan", jump_learn: "2 Belajar", jump_dict: "3 Dikte", jump_write: "4 Tulis",
       jump_games: "5 Permainan", jump_test: "6 Tes", pick_test: "Pilih Mudah atau Sulit",
+      finish_step_first: "Selesaikan langkah {n} dulu", teacher_badge: "Guru", teacher_student: "Mode siswa",
+      game_finished: "Kamu menyelesaikan satu permainan — tes sudah terbuka",
       no_mistakes: "Tidak ada salah.", forever_help: "Ingat selamanya — HP ini akan mengingatkan (1, 3, 7, 21, 60 hari).",
       need_80: "{pct}% — perlu 80%. Kembali Belajar.",
       name_title: "Siapa namamu?", name_help: "Yang pertama. Hanya di HP ini.", name_go: "Ini saya",
@@ -882,7 +906,9 @@
       tap_hint_listen: "Écoutez. Touchez l’image qui correspond.",
       tap_hint_read: "Lisez le mot. Touchez l’image qui correspond.", tap_done: "Terminé", ww_noun: "nom",
       ww_origin: "Origine", ww_like: "Semblable", ww_unlike: "Contraire", ww_bits: "Morceaux du mot",
-      ww_hear_ex: "Écouter la phrase", jump_test: "6 Contrôle"
+      ww_hear_ex: "Écouter la phrase", jump_test: "6 Contrôle",
+      finish_step_first: "Finis d'abord l'étape {n}", teacher_badge: "Enseignant", teacher_student: "Mode élève",
+      game_finished: "Tu as fini un jeu — le test est ouvert"
     },
     ar: {
       intro_title: "تعرّف على الكلمات", intro_help: "اضغط الحروف المختلطة لبناء الكلمة. بلا كتابة.",
@@ -893,6 +919,8 @@
       skip_word: "تجاوز الكلمة", skip_step: "تجاوز الخطوة",
       jump_meet: "1 تعرّف", jump_learn: "2 تعلّم", jump_dict: "3 إملاء", jump_write: "4 كتابة",
       jump_games: "5 ألعاب", jump_test: "6 اختبار", pick_test: "اختر سهل أو صعب",
+      finish_step_first: "أنهِ الخطوة {n} أولاً", teacher_badge: "معلّم", teacher_student: "وضع الطالب",
+      game_finished: "أنهيت لعبة — الاختبار مفتوح",
       no_mistakes: "لا أخطاء.", forever_help: "تذكّر للأبد — هذا الهاتف يذكّرك لاحقًا (1، 3، 7، 21، 60 يومًا).",
       need_80: "{pct}% — تحتاج 80%. عُد للتعلّم.",
       name_title: "ما اسمك؟", name_help: "أول شيء. يُحفظ على هذا الهاتف فقط.", name_go: "هذا أنا",
@@ -926,7 +954,9 @@
       tap_explore: "Bak", tap_listen: "Dinle", tap_read: "Oku", tap_hint_explore: "Her resme dokun. Kelimeyi duy.",
       tap_hint_listen: "Dinle. Eşleşen resme dokun.", tap_hint_read: "Kelimeyi oku. Eşleşen resme dokun.",
       tap_done: "Tanışma bitti", ww_noun: "isim", ww_origin: "Köken", ww_like: "Benzer", ww_unlike: "Zıt",
-      ww_bits: "Kelime parçaları", ww_hear_ex: "Cümleyi dinle", jump_test: "6 Sınav"
+      ww_bits: "Kelime parçaları", ww_hear_ex: "Cümleyi dinle", jump_test: "6 Sınav",
+      finish_step_first: "Önce {n}. adımı bitir", teacher_badge: "Öğretmen", teacher_student: "Öğrenci modu",
+      game_finished: "Bir oyunu bitirdin — test açık"
     },
     it: {
       intro_title: "Incontra le parole", intro_help: "Tocca le lettere mescolate. Forma la parola. Senza digitare.",
@@ -950,7 +980,9 @@
       tap_hint_listen: "Ascolta. Tocca il disegno giusto.",
       tap_hint_read: "Leggi la parola. Tocca il disegno giusto.", tap_done: "Fatto", ww_noun: "sostantivo",
       ww_origin: "Origine", ww_like: "Simile", ww_unlike: "Opposto", ww_bits: "Parti della parola",
-      ww_hear_ex: "Senti la frase", voice_teenager: "Adolescente", jump_test: "6 Prova"
+      ww_hear_ex: "Senti la frase", voice_teenager: "Adolescente", jump_test: "6 Prova",
+      finish_step_first: "Finisci prima il passo {n}", teacher_badge: "Insegnante", teacher_student: "Modalità studente",
+      game_finished: "Hai finito un gioco — il test è aperto"
     },
     pl: {
       intro_title: "Poznaj słowa", intro_help: "Dotknij pomieszanych liter. Złóż słowo. Bez pisania.",
@@ -974,7 +1006,9 @@
       tap_hint_listen: "Posłuchaj. Dotknij pasującego obrazka.",
       tap_hint_read: "Przeczytaj słowo. Dotknij pasującego obrazka.", tap_done: "Gotowe", ww_noun: "rzeczownik",
       ww_origin: "Pochodzenie", ww_like: "Podobne", ww_unlike: "Przeciwieństwo", ww_bits: "Części słowa",
-      ww_hear_ex: "Usłysz zdanie", jump_test: "6 Sprawdzian"
+      ww_hear_ex: "Usłysz zdanie", jump_test: "6 Sprawdzian",
+      finish_step_first: "Najpierw ukończ krok {n}", teacher_badge: "Nauczyciel", teacher_student: "Tryb ucznia",
+      game_finished: "Skończyłeś grę — test jest otwarty"
     }
   };
 
