@@ -315,6 +315,37 @@
     return parsed;
   }
 
+  function recoveryBlobAllowedForStudent(parsed, id) {
+    if (!parsed || !legacyHasPlayableSets(parsed)) return false;
+    const owner = legacyOwnerStorageKey(parsed);
+    const key = studentStorageKey(id);
+    if (owner) return owner === key;
+    let claimed = "";
+    try {
+      claimed = localStorage.getItem(LS_LEGACY_CLAIMED) || "";
+    } catch (e) {}
+    const claimedKey = studentStorageKey(claimed);
+    return !claimedKey || claimedKey === key;
+  }
+
+  /** Max-merge shared_backup and per-student snapshots (never deletes backup). */
+  function mergeRecoverySnapshots(id) {
+    const blobs = [];
+    try {
+      const backup = localStorage.getItem(LS_STATE_BACKUP);
+      if (backup) blobs.push(JSON.parse(backup));
+    } catch (e) {}
+    try {
+      const per = localStorage.getItem(stateStorageKey(id));
+      if (per) blobs.push(JSON.parse(per));
+    } catch (e) {}
+    blobs.forEach(function (parsed) {
+      if (!recoveryBlobAllowedForStudent(parsed, id)) return;
+      mergeRemoteProgress(slimFromStateObj(parsed));
+    });
+    dedupeSetsByPackId();
+  }
+
   function saveStateToStorage(forId) {
     const id = forId != null ? String(forId).trim() : currentStudentId();
     const key = id ? stateStorageKey(id) : LS_STATE_LEGACY;
@@ -373,6 +404,9 @@
       mergeRemoteProgress(slimFromStateObj(legacyBlob));
       saveStateToStorage();
     }
+    mergeRecoverySnapshots(id);
+    dedupeSetsByPackId();
+    saveStateToStorage();
     if (window.MRJ_WM_progress && typeof window.MRJ_WM_progress.resetSession === "function") {
       window.MRJ_WM_progress.resetSession();
     }
@@ -418,33 +452,107 @@
     return out;
   }
 
+  function mergePackSlim(a, b) {
+    const mergeFn = window.MRJ_WM_mergePack;
+    if (mergeFn) return mergeFn(a, b);
+    return b || a || {};
+  }
+
+  function packSlimFromSet(s) {
+    if (!s) return {};
+    return {
+      title: s.title || "",
+      winsA: s.winsA || {},
+      winsB: s.winsB || {},
+      winsC: s.winsC || {},
+      intro: s.intro || {},
+      meetLock: Array.isArray(s.meetLock) ? s.meetLock.slice() : [],
+      startNumber: (Number(s.startNumber) >= 1) ? Number(s.startNumber) : null,
+      testPassed: copyPassed(s.testPassed),
+      tapmapKey: s.tapmapKey || "",
+      lastPlayedAt: s.lastPlayedAt || 0,
+      srsTrying: !!s.srsTrying,
+      srsForever: !!s.srsForever,
+      srsStage: s.srsStage || 0,
+      srsNextAt: s.srsNextAt || null,
+      final: s.final || null,
+      check: s.check || null,
+      finalMiss: Array.isArray(s.finalMiss) ? s.finalMiss.slice(0, 200) : [],
+      roundGames: s.roundGames && typeof s.roundGames === "object" ? s.roundGames : {},
+      pathHeld: s.pathHeld && typeof s.pathHeld === "object" ? s.pathHeld : {},
+      externalPackSrc: s.externalPackSrc || "",
+    };
+  }
+
+  function applySlimPackToSet(set, slim) {
+    if (!set || !slim) return;
+    const merged = mergePackSlim(packSlimFromSet(set), slim);
+    set.title = merged.title || set.title;
+    set.winsA = merged.winsA || {};
+    set.winsB = merged.winsB || {};
+    set.winsC = merged.winsC || {};
+    set.intro = merged.intro || {};
+    set.meetLock = merged.meetLock || [];
+    set.startNumber = (Number(merged.startNumber) >= 1) ? Number(merged.startNumber) : null;
+    set.testPassed = copyPassed(merged.testPassed);
+    set.tapmapKey = merged.tapmapKey || "";
+    set.lastPlayedAt = merged.lastPlayedAt || set.lastPlayedAt || 0;
+    set.srsTrying = !!merged.srsTrying;
+    set.srsForever = !!merged.srsForever;
+    set.srsStage = merged.srsStage || 0;
+    set.srsNextAt = merged.srsNextAt != null ? merged.srsNextAt : set.srsNextAt;
+    set.final = merged.final || set.final;
+    set.check = merged.check || set.check;
+    set.finalMiss = Array.isArray(merged.finalMiss) ? merged.finalMiss.slice(0, 200) : set.finalMiss;
+    set.roundGames = merged.roundGames && typeof merged.roundGames === "object" ? merged.roundGames : set.roundGames;
+    set.pathHeld = merged.pathHeld && typeof merged.pathHeld === "object" ? merged.pathHeld : set.pathHeld;
+    if (slim.externalPackSrc && !set.externalPackSrc) set.externalPackSrc = slim.externalPackSrc;
+  }
+
+  function findSetByPackId(pid) {
+    const keys = Object.keys(state.sets || {});
+    for (let i = 0; i < keys.length; i++) {
+      const s = state.sets[keys[i]];
+      if (s && s.packId === pid) return s;
+    }
+    return null;
+  }
+
+  function dedupeSetsByPackId() {
+    const seen = {};
+    const keys = Object.keys(state.sets || {});
+    keys.forEach(function (k) {
+      const s = state.sets[k];
+      if (!s || !s.packId) return;
+      const pid = s.packId;
+      if (!seen[pid]) {
+        seen[pid] = s;
+        return;
+      }
+      const keep = seen[pid];
+      const drop = s;
+      applySlimPackToSet(keep, packSlimFromSet(drop));
+      if ((!keep.words || !keep.words.length) && drop.words && drop.words.length) {
+        keep.words = drop.words;
+      }
+      if (drop.externalPackSrc && !keep.externalPackSrc) keep.externalPackSrc = drop.externalPackSrc;
+      delete state.sets[drop.id];
+      if (state.currentSetId === drop.id) state.currentSetId = keep.id;
+    });
+  }
+
   function slimProgress() {
     const sets = {};
     Object.keys(state.sets || {}).forEach(function (k) {
       const s = state.sets[k];
       const pid = s && s.packId;
       if (!pid) return;
-      sets[pid] = {
-        title: s.title || "",
-        winsA: s.winsA || {},
-        winsB: s.winsB || {},
-        winsC: s.winsC || {},
-        intro: s.intro || {},
-        meetLock: Array.isArray(s.meetLock) ? s.meetLock.slice() : [],
-        startNumber: (Number(s.startNumber) >= 1) ? Number(s.startNumber) : null,
-        testPassed: copyPassed(s.testPassed),
-        tapmapKey: s.tapmapKey || "",
-        lastPlayedAt: s.lastPlayedAt || 0,
-        srsTrying: !!s.srsTrying,
-        srsForever: !!s.srsForever,
-        srsStage: s.srsStage || 0,
-        srsNextAt: s.srsNextAt || null,
-        final: s.final || null,
-        check: s.check || null,
-        finalMiss: Array.isArray(s.finalMiss) ? s.finalMiss.slice(0, 200) : [],
-        roundGames: s.roundGames && typeof s.roundGames === "object" ? s.roundGames : {},
-        pathHeld: s.pathHeld && typeof s.pathHeld === "object" ? s.pathHeld : {},
-      };
+      const slim = packSlimFromSet(s);
+      if (sets[pid]) {
+        sets[pid] = mergePackSlim(sets[pid], slim);
+      } else {
+        sets[pid] = slim;
+      }
     });
     const cur = currentSet();
     const payload = {
@@ -496,40 +604,34 @@
     if (!obj.v && obj.currentSetId) {
       state.sets = obj.sets;
       state.currentSetId = obj.currentSetId;
+      dedupeSetsByPackId();
       return;
     }
-    state.sets = {};
-    state.currentSetId = null;
     Object.keys(obj.sets).forEach(function (pid) {
-      const s = obj.sets[pid] || {};
-      const id = "set_" + pid;
-      state.sets[id] = {
-        id: id,
-        packId: pid,
-        title: s.title || pid,
-        words: s.words || [],
-        winsA: s.winsA || {},
-        winsB: s.winsB || {},
-        winsC: s.winsC || {},
-        intro: s.intro || {},
-        meetLock: Array.isArray(s.meetLock) ? s.meetLock.slice() : [],
-        startNumber: (Number(s.startNumber) >= 1) ? Number(s.startNumber) : null,
-        testPassed: copyPassed(s.testPassed),
-        tapmapKey: s.tapmapKey || "",
-        lastPlayedAt: s.lastPlayedAt || 0,
-        srsTrying: !!s.srsTrying,
-        srsForever: !!s.srsForever,
-        srsStage: s.srsStage || 0,
-        srsNextAt: s.srsNextAt || null,
-        final: s.final || null,
-        check: s.check || null,
-        finalMiss: Array.isArray(s.finalMiss) ? s.finalMiss.slice(0, 200) : [],
-        roundGames: s.roundGames && typeof s.roundGames === "object" ? s.roundGames : {},
-        pathHeld: s.pathHeld && typeof s.pathHeld === "object" ? s.pathHeld : {},
-        createdAt: s.lastPlayedAt || Date.now(),
-      };
-      if (obj.currentPackId === pid) state.currentSetId = id;
+      const incoming = obj.sets[pid] || {};
+      let set = findSetByPackId(pid);
+      if (!set) {
+        const id = "set_" + pid;
+        set = {
+          id: id,
+          packId: pid,
+          title: incoming.title || pid,
+          words: incoming.words || [],
+          externalPackSrc: incoming.externalPackSrc || "",
+          winsA: {},
+          winsB: {},
+          winsC: {},
+          intro: {},
+          meetLock: [],
+          createdAt: incoming.lastPlayedAt || Date.now(),
+          lastPlayedAt: incoming.lastPlayedAt || 0,
+        };
+        state.sets[id] = set;
+      }
+      applySlimPackToSet(set, incoming);
+      if (obj.currentPackId === pid) state.currentSetId = set.id;
     });
+    dedupeSetsByPackId();
   }
 
   function pullSheet() {
@@ -540,6 +642,7 @@
     window.MRJ_WM_progress.load().then(function (res) {
       if (gen !== pullGen || currentStudentId() !== id) return;
       if (res && res.found && res.progress_json) mergeRemoteProgress(res.progress_json);
+      dedupeSetsByPackId();
       state.studentId = id;
       saveStateToStorage();
       if (res && res.ok) {
@@ -1451,7 +1554,9 @@
       if (!words.length) return false;
       const existing = Object.keys(state.sets)
         .map(function (k) { return state.sets[k]; })
-        .find(function (s) { return s.externalPackSrc === src; });
+        .find(function (s) {
+          return s && (s.externalPackSrc === src || s.packId === pid);
+        });
       if (existing) {
         existing.title = data.title || pid;
         existing.words = words;
@@ -3627,6 +3732,10 @@
       StartSlice: window.StartSlice,
       slimProgress: slimProgress,
       applyRemote: applyRemote,
+      mergeRemoteProgress: mergeRemoteProgress,
+      dedupeSetsByPackId: dedupeSetsByPackId,
+      findSetByPackId: findSetByPackId,
+      packSlimFromSet: packSlimFromSet,
     };
   }
   initPackSrcParam();
