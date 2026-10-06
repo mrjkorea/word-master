@@ -483,6 +483,7 @@ body.is-teacher .rib { cursor: pointer; }
   color: var(--ink);
 }
 .standing-sync { color: var(--muted); font-weight: 600; font-size: 12px; }
+.save-warn { color: #9a3412; }
 .standing-hint, .standing-slice {
   margin: 8px 0 0;
   font-size: 14px;
