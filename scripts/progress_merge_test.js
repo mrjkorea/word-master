@@ -79,5 +79,20 @@ if (!guarded.sets.nouns100 || guarded.sets.nouns100.testPassed.w1 !== 80) {
   process.exit(1);
 }
 
+const poorer = global.MRJ_WM_progressIsStrictlyPoorer;
+const countPacks = global.MRJ_WM_countNonEmptyPacks;
+if (!poorer || !countPacks) {
+  console.error("richness helpers missing");
+  process.exit(1);
+}
+if (!poorer({ v: 1, sets: {} }, local)) {
+  console.error("empty should be poorer than local");
+  process.exit(1);
+}
+if (countPacks(out) < 1) {
+  console.error("merged should have packs");
+  process.exit(1);
+}
+
 console.log("PROGRESS_MERGE_OK");
 process.exit(0);

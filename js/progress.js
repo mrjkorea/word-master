@@ -10,6 +10,42 @@
   var retryTimer = null;
   var retryAttempt = 0;
   var lastSaveError = "";
+  var serverProgressSnapshot = null;
+
+  function mergeFn() {
+    return root.MRJ_WM_merge
+      || (root.MRJ_WM_progress && root.MRJ_WM_progress.merge);
+  }
+
+  function parseProgressJson(raw) {
+    if (raw && typeof raw === "object") return raw;
+    try {
+      var parsed = JSON.parse(String(raw == null ? "{}" : raw));
+      return parsed && typeof parsed === "object" ? parsed : { v: 1, sets: {} };
+    } catch (e) {
+      return { v: 1, sets: {} };
+    }
+  }
+
+  function localProgressJson() {
+    var cached = readLocal();
+    if (!cached || !cached.progress_json) return null;
+    return cached.progress_json;
+  }
+
+  function mergeSaveProgress(incomingJson) {
+    var merge = mergeFn();
+    var merged = parseProgressJson(incomingJson);
+    if (!merge) return merged;
+    if (serverProgressSnapshot) {
+      merged = merge(merged, parseProgressJson(serverProgressSnapshot));
+    }
+    var localJson = localProgressJson();
+    if (localJson) {
+      merged = merge(merged, parseProgressJson(localJson));
+    }
+    return merged;
+  }
 
   function authStudentId() {
     if (!root.MRJ_AUTH || typeof root.MRJ_AUTH.student !== "function") return "";
@@ -176,6 +212,10 @@
       pendingSave = body;
       return Promise.resolve({ ok: false, error: "not_loaded" });
     }
+    var mergedProgress = mergeSaveProgress(body.progress_json || "{}");
+    body = Object.assign({}, body, {
+      progress_json: JSON.stringify(mergedProgress),
+    });
     var packed = clampProgressJson(body.progress_json || "{}");
     if (packed.trimmed) {
       dispatchSaveStatus(false, { error: "payload_trimmed" });
@@ -192,6 +232,7 @@
       if (ok) {
         retryAttempt = 0;
         lastSaveError = "";
+        serverProgressSnapshot = packed.json;
         writeLocal(body);
         dispatchSaveStatus(true, res);
         return res;
@@ -236,6 +277,11 @@
     }).then(function (res) {
       loadDone = true;
       hydrated = !!(res && res.ok);
+      if (res && res.ok && res.found && res.progress_json) {
+        serverProgressSnapshot = String(res.progress_json);
+      } else if (res && res.ok) {
+        serverProgressSnapshot = null;
+      }
       if (hydrated && pendingSave && pendingSave.progress_json) {
         var snap = pendingSave;
         pendingSave = null;
@@ -253,6 +299,7 @@
     hydrated = false;
     loadDone = false;
     pendingSave = null;
+    // Keep serverProgressSnapshot until the next load_pack completes.
     retryAttempt = 0;
     lastSaveError = "";
     clearRetryTimer();
@@ -272,5 +319,9 @@
     maxProgressChars: MAX_PROGRESS_CHARS,
     program: PROGRAM,
     lastSaveError: function () { return lastSaveError; },
+    mergeSaveProgress: mergeSaveProgress,
+    setServerSnapshot: function (json) {
+      serverProgressSnapshot = json == null ? null : String(json);
+    },
   };
 })(window);
