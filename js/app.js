@@ -1076,47 +1076,74 @@
     return "packs/" + currentPackId();
   }
 
-  function speak(str) {
-    const id = String(str || "").toLowerCase().replace(/[^a-z]/g, "");
-    if (!id) return;
-    const v = state.voice || "us_m";
-    const src = packBase() + "/audio/" + v + "/" + id + ".mp3";
+  function wordFromHint(hint) {
+    if (hint && typeof hint === "object") return hint;
+    const words = (currentSet() && currentSet().words) || [];
+    const raw = String(hint || "");
+    const lower = raw.toLowerCase();
+    const letters = lower.replace(/[^a-z]/g, "");
+    let i;
+    for (i = 0; i < words.length; i++) {
+      const w = words[i];
+      if (w && String(w.id || "").toLowerCase() === lower) return w;
+    }
+    if (!letters) return null;
+    for (i = 0; i < words.length; i++) {
+      const w = words[i];
+      if (!w) continue;
+      const enLetters = String(w.en || "").toLowerCase().replace(/[^a-z]/g, "");
+      const idLetters = String(w.id || "").toLowerCase().replace(/[^a-z]/g, "");
+      if (enLetters === letters || idLetters === letters) return w;
+    }
+    return null;
+  }
+
+  function mediaFile(hint) {
+    const word = wordFromHint(hint);
+    let id = "";
+    if (word && word.id != null && String(word.id) !== "") id = String(word.id);
+    else if (hint && typeof hint === "object") id = String(hint.id || hint.en || "");
+    else id = String(hint || "");
+    id = id.toLowerCase();
+    if (!id) return "";
+    return encodeURIComponent(id);
+  }
+
+  function playClip(src, capMs) {
     const token = window.SpellStop.bump();
-    const audio = new Audio(src);
+    const audio = new Audio();
     window.SpellStop.bind(audio);
     currentAudio = audio;
+    const done = waitAudioEnd(audio, token, capMs);
+    audio.src = src;
     let p = null;
     try {
       p = audio.play();
-    } catch (e) {}
+    } catch (e) {
+      if (typeof audio.onerror === "function") audio.onerror();
+    }
     if (p && typeof p.then === "function") {
       p.then(function () {
         window.SpellStop.settle(audio, token);
       }, function () {
         window.SpellStop.settle(audio, token);
+        if (typeof audio.onerror === "function") audio.onerror();
       });
     }
+    return done;
+  }
+
+  function speak(str) {
+    const id = mediaFile(str);
+    if (!id) return Promise.resolve();
+    const v = state.voice || "us_m";
+    return playClip(packBase() + "/audio/" + v + "/" + id + ".mp3", 8000);
   }
 
   function speakWW(w) {
-    const id = String((w && (w.id || w.en)) || "").toLowerCase().replace(/[^a-z]/g, "");
-    if (!id) return;
-    const src = packBase() + "/audio/ww_us_m/" + id + ".mp3";
-    const token = window.SpellStop.bump();
-    const audio = new Audio(src);
-    window.SpellStop.bind(audio);
-    currentAudio = audio;
-    let p = null;
-    try {
-      p = audio.play();
-    } catch (e) {}
-    if (p && typeof p.then === "function") {
-      p.then(function () {
-        window.SpellStop.settle(audio, token);
-      }, function () {
-        window.SpellStop.settle(audio, token);
-      });
-    }
+    const id = mediaFile(w);
+    if (!id) return Promise.resolve();
+    return playClip(packBase() + "/audio/ww_us_m/" + id + ".mp3", 8000);
   }
 
   function wwLoc(blob) {
@@ -1188,7 +1215,7 @@
     }
   }
 
-  function waitAudioEnd(audio, token) {
+  function waitAudioEnd(audio, token, capMs) {
     return new Promise(function (resolve) {
       if (!audio || (token != null && window.SpellStop.stale(token))) {
         resolve();
@@ -1208,7 +1235,7 @@
         } catch (e) {}
         resolve();
       }
-      safety = setTimeout(finish, 4000);
+      safety = setTimeout(finish, capMs == null ? 4000 : capMs);
       if (token != null) {
         watch = setInterval(function () {
           if (window.SpellStop.stale(token)) finish();
@@ -1957,7 +1984,7 @@
   let introTyped = "";
 
   function wordPic(w) {
-    const id = String((w && (w.id || w.en)) || "").toLowerCase().replace(/[^a-z]/g, "");
+    const id = mediaFile(w);
     return packBase() + "/" + id + "." + ((externalPack && externalPack.pictureExt) || "jpg");
   }
 
@@ -2097,7 +2124,7 @@
     unlockSpeech();
     if (tap.phase === "explore") {
       tap.found[w.id] = true;
-      speak(w.en);
+      const spoken = speak(w.en);
       pulseTile(el, "on");
       logEvent({
         activity_id: "tapmap_explore",
@@ -2112,7 +2139,9 @@
       renderTapmap();
       if (Object.keys(tap.found).length >= tap.words.length) {
         tap.locking = true;
-        wait(550).then(function () { beginTapQuiz("listen"); });
+        Promise.resolve(spoken).then(function () {
+          return wait(400);
+        }).then(function () { beginTapQuiz("listen"); });
       }
       return;
     }
@@ -3204,7 +3233,7 @@
       module_id: "sound-invaders",
       activity_id: "hear_shoot",
       items: words.map(function (w) {
-        const id = String(w.en).toLowerCase().replace(/[^a-z]/g, "");
+        const id = mediaFile(w);
         const label = rockLabel(w);
         const wrong = [];
         for (let i = 0; i < words.length && wrong.length < 3; i++) {
@@ -3247,11 +3276,11 @@
     if (kind === "spellfire") {
       const voice = state.voice || "us_m";
       const spoken = playWords(set).map(function (w) {
-        const word = String(w.en || "").toLowerCase().replace(/[^a-z]/g, "");
+        const file = mediaFile(w);
         return {
           item_id: w.id,
           word: w.en,
-          audio: word ? (location.origin + "/" + packBase() + "/audio/" + voice + "/" + word + ".mp3") : "",
+          audio: file ? (location.origin + "/" + packBase() + "/audio/" + voice + "/" + file + ".mp3") : "",
         };
       }).filter(function (it) { return it.word; });
       pack = {
@@ -3736,6 +3765,14 @@
       dedupeSetsByPackId: dedupeSetsByPackId,
       findSetByPackId: findSetByPackId,
       packSlimFromSet: packSlimFromSet,
+      wordPic: wordPic,
+      speak: speak,
+      speakWW: speakWW,
+      shooterPack: shooterPack,
+      openPortableGame: openPortableGame,
+      startTapmap: startTapmap,
+      onTapTile: onTapTile,
+      tapPhase: function () { return tap.phase; },
     };
   }
   initPackSrcParam();

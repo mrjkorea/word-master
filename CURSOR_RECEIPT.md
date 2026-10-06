@@ -1,3 +1,33 @@
+# CURSOR_RECEIPT — TOEIC hyphen pictures and Meet last word
+
+Date: 2026-10-06
+Command: Use the word id, hyphen included, for pictures and audio. In Meet, wait until the last word's clip ends before the next section. Push origin main.
+Model: grok-4.7
+
+`e-book`, `o-clock`, `ice-cream`, and `by-law` were the only hyphenated ids in the TOEIC packs. The player stripped hyphens and asked for `ebook.jpg`, `oclock.jpg`, `icecream.jpg`, and `bylaw.jpg`. Picture and sound lookups now keep the id and encode it. `speak("o'clock")` finds that word and plays `o-clock.mp3`. Plain ids such as `cat` still resolve to `cat`.
+
+In Meet, the last picture used to start the next section after 550ms, which cut the word off. `speak()` now returns a wait for the end of the clip, capped at 8 seconds, and that last click waits for the clip and then about 400ms. A missing file ends the wait instead of sticking the screen.
+
+## Files
+
+| File | Change |
+|---|---|
+| `js/app.js` | Id-based picture, speak, word-wise, shooter, and spellfire paths. Meet waits for the last word. |
+| `index.html` | Cache query `20261006-toeic-media`. |
+| `scripts/toeic_media_name_test.js` | Fails if those four ids are requested without the hyphen. |
+| `scripts/path_lock_test.js` | Expects the new `app.js` cache query. |
+| `scripts/start_slice_test.js` | Expects the new `app.js` cache query. |
+| `CURSOR_RECEIPT.md` | This entry. |
+
+## Test
+
+```
+node scripts/toeic_media_name_test.js
+TOEIC_MEDIA_OK
+node scripts/path_lock_test.js
+PATH_LOCK_OK
+```
+
 # CURSOR_RECEIPT — All-pack easy and hard, game before test, TOEIC lane
 
 Date: 2026-10-05
