@@ -7,7 +7,7 @@
   <meta name="mobile-web-app-capable" content="yes" />
   <meta name="theme-color" content="#f6f3ec" />
   <title>MRJ Word Master</title>
-  <link rel="stylesheet" href="css/app.css?v=20261001-lock" />
+  <link rel="stylesheet" href="css/app.css?v=20261007-all" />
 </head>
 <body>
   <div id="phone" class="phone">
@@ -256,7 +256,10 @@
           <div class="standing-bar"><i id="stand-fill"></i></div>
           <p class="standing-next" id="stand-next"></p>
           <p class="standing-hint" id="stand-hint">Tap a number to start there.</p>
-          <div class="standing-seats" id="stand-seats"></div>
+          <div class="standing-seat-row">
+            <div class="standing-seats" id="stand-seats"></div>
+            <div class="seat-all-slot" id="seat-all-slot"></div>
+          </div>
           <p class="standing-slice" id="stand-slice"></p>
           <p class="standing-sync" id="stand-sync"></p>
           <p class="standing-sync save-warn" id="save-warn" hidden></p>
@@ -286,11 +289,11 @@
             <strong data-i18n="hard">Hard test</strong>
             <em data-i18n="hard_em">See the meaning · type English</em>
           </button>
-          <button type="button" class="chunk final" id="btn-final-easy">
+          <button type="button" class="chunk final" id="btn-final-easy" hidden>
             <strong id="final-easy-label">All 100 easy</strong>
             <em id="final-easy-meta">See English · tap the meaning · every word</em>
           </button>
-          <button type="button" class="chunk final" id="btn-final-hard">
+          <button type="button" class="chunk final" id="btn-final-hard" hidden>
             <strong id="final-hard-label">All 100 hard</strong>
             <em id="final-hard-meta">See the meaning · type English · every word</em>
           </button>
@@ -490,11 +493,11 @@
   <script src="js/progress-config.js?v=20261006-pack"></script>
   <script src="js/progress-merge.js?v=20261006-save-throttle"></script>
   <script src="js/progress.js?v=20261006-save-throttle"></script>
-  <script>window.WM_BUILD_ID="20261006-save-throttle";</script>
+  <script>window.WM_BUILD_ID="20261007-all";</script>
   <script src="js/version-watch.js?v=20261006-save-throttle"></script>
   <script src="js/spell-stop.js?v=20260930-spellstop"></script>
   <script src="js/pack-src.js?v=20261002-packsrc"></script>
   <script src="js/path-lock.js?v=20261001-lock"></script>
-  <script src="js/app.js?v=20261006-save-throttle"></script>
+  <script src="js/app.js?v=20261007-all"></script>
 </body>
 </html>

@@ -1,3 +1,36 @@
+# CURSOR_RECEIPT — All tile after the number seats
+
+Date: 2026-10-07
+Command: Put All on the number tiles. One finished game still required. Push origin main.
+Model: grok-4.7
+
+The number seats scroll. After them, one tile says All and stays in view. It is wide enough to read. Tap it and, when the test is open, it offers Easy and Hard for every word in the pack. Easy calls `startEasy(true)`. Hard calls `startHard(true)`. A locked test shows the lock note and does not start. The old All 100 buttons stay hidden.
+
+## Files
+
+| File | Change |
+|---|---|
+| `js/app.js` | All tile after the seats. Easy and hard whole-pack tests. Old All buttons stay hidden. |
+| `css/app.css` | Seat row keeps All outside the scroll. All is wider than a number seat. |
+| `index.html` | All slot after `#stand-seats`. Cache `20261007-all`. |
+| `scripts/all_tile_test.js` | Fails if `renderPackStanding` does not add All after the numbers. |
+| `scripts/path_lock_test.js` | Expects the new `app.js` cache query. |
+| `scripts/start_slice_test.js` | Expects the new cache queries. |
+| `CURSOR_RECEIPT.md` | This entry. |
+
+## Test
+
+```
+node scripts/all_tile_test.js
+ALL_TILE_OK
+node scripts/path_lock_test.js
+PATH_LOCK_OK
+node scripts/toeic_media_name_test.js
+TOEIC_MEDIA_OK
+```
+
+Browser: Nouns 1–100 shows seats 1–100 in the scrolling box and All beside them, 64px wide, while 100 is below the fold. All then Easy is an All 100 choice test, 1/100. All then Hard is a typing test, 1/100, meaning on screen. A new student tap on All shows the lock note and stays on the set.
+
 # CURSOR_RECEIPT — TOEIC hyphen pictures and Meet last word
 
 Date: 2026-10-06

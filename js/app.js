@@ -1779,12 +1779,16 @@
     const cleared = factoryCleared(set);
     const met = introDone(set);
     const testLocked = studentLocked(set, "test");
-    ["#btn-easy", "#btn-hard", "#btn-final-easy", "#btn-final-hard"].forEach(function (sel) {
+    ["#btn-easy", "#btn-hard"].forEach(function (sel) {
       const btn = $(sel);
       if (!btn) return;
       btn.hidden = false;
       btn.disabled = testLocked;
       btn.classList.toggle("locked", testLocked);
+    });
+    ["#btn-final-easy", "#btn-final-hard"].forEach(function (sel) {
+      const btn = $(sel);
+      if (btn) btn.hidden = true;
     });
     $("#btn-easy").classList.toggle("picked", state.testKind === "easy");
     $("#btn-hard").classList.toggle("picked", state.testKind === "hard");
@@ -2002,8 +2006,52 @@
         host.appendChild(btn);
       });
     }
+    renderAllTile();
     paintSheetSync();
     return data;
+  }
+
+  function renderAllTile() {
+    const slot = $("#seat-all-slot");
+    if (!slot) return;
+    slot.innerHTML = "";
+    slot.setAttribute("data-all-open", "");
+    const all = document.createElement("button");
+    all.type = "button";
+    all.className = "seat seat-all";
+    all.textContent = "All";
+    all.title = "Test every word";
+    all.setAttribute("aria-label", "All words");
+    all.setAttribute("aria-expanded", "false");
+    all.addEventListener("click", function () {
+      if (!currentStudentId()) return;
+      if (!pathOpen("test")) return;
+      showAllChoices(slot);
+    });
+    slot.appendChild(all);
+  }
+
+  function showAllChoices(slot) {
+    if (!slot || slot.getAttribute("data-all-open") === "1") return;
+    slot.setAttribute("data-all-open", "1");
+    const all = slot.children && slot.children[0];
+    if (all && all.setAttribute) all.setAttribute("aria-expanded", "true");
+    function choice(label, start) {
+      const btn = document.createElement("button");
+      btn.type = "button";
+      btn.className = "seat seat-all-choice";
+      btn.textContent = label;
+      btn.addEventListener("click", function () {
+        if (!currentStudentId()) return;
+        if (!pathOpen("test")) return;
+        state.finalTest = true;
+        persist();
+        start(true);
+      });
+      slot.appendChild(btn);
+    }
+    choice("Easy", startEasy);
+    choice("Hard", startHard);
   }
 
   let introCurId = null;
