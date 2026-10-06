@@ -2,6 +2,7 @@
   "use strict";
 
   var PROGRAM = "word-master";
+  var MAX_PROGRESS_CHARS = 45000;
   var LS_KEY = "mrj.wm.progress";
   var hydrated = false;
   var loadDone = false;
@@ -155,6 +156,14 @@
     }, delay);
   }
 
+  function clampProgressJson(raw) {
+    var str = String(raw == null ? "" : raw);
+    if (str.length <= MAX_PROGRESS_CHARS) {
+      return { json: str, trimmed: false };
+    }
+    return { json: str.substring(0, MAX_PROGRESS_CHARS), trimmed: true };
+  }
+
   function flushSave(body) {
     if (!body) return Promise.resolve(null);
     var id = authStudentId();
@@ -163,16 +172,20 @@
       dispatchSaveStatus(false, { error: "no_auth" });
       return Promise.resolve({ ok: false, error: "no_auth" });
     }
-    if (!loadDone) {
+    if (!loadDone || !hydrated) {
       pendingSave = body;
       return Promise.resolve({ ok: false, error: "not_loaded" });
+    }
+    var packed = clampProgressJson(body.progress_json || "{}");
+    if (packed.trimmed) {
+      dispatchSaveStatus(false, { error: "payload_trimmed" });
     }
     var req = {
       action: "save_pack",
       id: id,
       token: token,
       program: PROGRAM,
-      progress_json: body.progress_json || "{}",
+      progress_json: packed.json,
     };
     return postRemote(req).then(function (res) {
       var ok = !!(res && res.ok && res.saved !== false && !res.error);
@@ -222,8 +235,8 @@
       program: PROGRAM,
     }).then(function (res) {
       loadDone = true;
-      hydrated = true;
-      if (pendingSave && pendingSave.progress_json) {
+      hydrated = !!(res && res.ok);
+      if (hydrated && pendingSave && pendingSave.progress_json) {
         var snap = pendingSave;
         pendingSave = null;
         flushSave(snap);
@@ -232,7 +245,6 @@
     }).catch(function () {
       loadDone = true;
       hydrated = false;
-      dispatchSaveStatus(false, { error: "load_failed" });
       return { ok: false, error: "load_failed" };
     });
   }
@@ -247,7 +259,7 @@
   }
 
   function isReadyToSave() {
-    return loadDone && !!authStudentId() && !!authToken();
+    return loadDone && hydrated && !!authStudentId() && !!authToken();
   }
 
   root.MRJ_WM_progress = {
@@ -257,6 +269,8 @@
     isReadyToSave: isReadyToSave,
     merge: root.MRJ_WM_merge,
     countKnownInProgress: countKnownInProgress,
+    maxProgressChars: MAX_PROGRESS_CHARS,
+    program: PROGRAM,
     lastSaveError: function () { return lastSaveError; },
   };
 })(window);

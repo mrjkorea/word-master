@@ -5,6 +5,7 @@
   const LS_STATE_LEGACY = "mrj.word_factory.state";
   const LS_STATE_PREFIX = "mrj.word_factory.state.";
   const LS_STATE_BACKUP = "mrj.word_factory.state.shared_backup";
+  const LS_LEGACY_CLAIMED = "mrj.word_factory.legacy_claimed_by";
   const LS_EVENTS_LEGACY = "mrj.word_factory.events";
   const LS_EVENTS_PREFIX = "mrj.word_factory.events.";
   const DEMO_PACK_ID = "nouns100";
@@ -244,32 +245,74 @@
     return freshState(id);
   }
 
-  function migrateLegacyStateIfSafe(id) {
+  function legacyHasPlayableSets(parsed) {
+    if (!parsed || !parsed.sets || typeof parsed.sets !== "object") return false;
+    return Object.keys(parsed.sets).length > 0;
+  }
+
+  /** Real sign-in id on the blob, if any (not an anonymous stu_* device id). */
+  function legacyOwnerStorageKey(parsed) {
+    if (!parsed || typeof parsed !== "object") return "";
+    const acct = studentStorageKey(parsed.accountName || "");
+    if (acct) return acct;
+    const sid = String(parsed.studentId || "").trim();
+    const sidKey = studentStorageKey(sid);
+    const disp = studentStorageKey(parsed.displayName || "");
+    if (sidKey && !/^stu[_-]/i.test(sid)) return sidKey;
+    if (disp && !/^stu[_-]/i.test(parsed.displayName || "")) return disp;
+    return "";
+  }
+
+  function slimFromStateObj(st) {
+    const saved = state;
+    state = normalizeStoredState(st);
+    const slim = slimProgress();
+    state = saved;
+    return slim;
+  }
+
+  /**
+   * Moves shared legacy localStorage into this sign-in when allowed.
+   * Ownerless blobs go to the first student on this tablet only (see PR).
+   */
+  function consumeLegacyIfEligible(id) {
     const key = studentStorageKey(id);
-    if (!key) return;
+    if (!key) return null;
     let legacy = "";
     try {
       legacy = localStorage.getItem(LS_STATE_LEGACY) || "";
     } catch (e) {
-      return;
+      return null;
     }
-    if (!legacy) return;
+    if (!legacy) return null;
     let parsed = null;
     try {
       parsed = JSON.parse(legacy);
     } catch (e) {
-      return;
+      return null;
     }
-    if (!parsed || typeof parsed !== "object") return;
-    const legacySid = studentStorageKey(parsed.studentId || "");
-    const legacyName = studentStorageKey(parsed.accountName || parsed.displayName || "");
-    if (legacySid !== key && legacyName !== key) return;
-    const target = stateStorageKey(id);
+    if (!legacyHasPlayableSets(parsed)) return null;
+    const owner = legacyOwnerStorageKey(parsed);
+    if (owner) {
+      if (owner !== key) return null;
+    } else {
+      let claimed = "";
+      try {
+        claimed = localStorage.getItem(LS_LEGACY_CLAIMED) || "";
+      } catch (e) {
+        return null;
+      }
+      const claimedKey = studentStorageKey(claimed);
+      if (claimedKey && claimedKey !== key) return null;
+      try {
+        localStorage.setItem(LS_LEGACY_CLAIMED, id);
+      } catch (e) {}
+    }
     try {
-      if (!localStorage.getItem(target)) localStorage.setItem(target, legacy);
       localStorage.setItem(LS_STATE_BACKUP, legacy);
       localStorage.removeItem(LS_STATE_LEGACY);
     } catch (e) {}
+    return parsed;
   }
 
   function saveStateToStorage(forId) {
@@ -322,10 +365,14 @@
       showScreen("boot");
       return;
     }
-    migrateLegacyStateIfSafe(id);
+    const legacyBlob = consumeLegacyIfEligible(id);
     state = loadStateForStudent(id);
     state.studentId = id;
     state.displayName = id;
+    if (legacyBlob) {
+      mergeRemoteProgress(slimFromStateObj(legacyBlob));
+      saveStateToStorage();
+    }
     if (window.MRJ_WM_progress && typeof window.MRJ_WM_progress.resetSession === "function") {
       window.MRJ_WM_progress.resetSession();
     }
@@ -495,14 +542,18 @@
       if (res && res.found && res.progress_json) mergeRemoteProgress(res.progress_json);
       state.studentId = id;
       saveStateToStorage();
-      noteSheetSync(!!(res && res.ok));
-      paintSaveWarn(!(res && res.ok));
+      if (res && res.ok) {
+        noteSheetSync(true);
+      } else if (res && res.error === "load_failed") {
+        noteSheetLocalOnly();
+      } else {
+        noteSheetSync(false);
+      }
       if (currentScreen === "home") renderHome();
       if (currentScreen === "set") renderSetHome();
     }).catch(function () {
       if (gen !== pullGen) return;
-      noteSheetSync(false);
-      paintSaveWarn(true);
+      noteSheetLocalOnly();
     });
   }
 
@@ -1163,7 +1214,7 @@
 
   const STUDY_SIZES = [5, 10, 15, 20];
   const PASS_PCT = 80;
-  let sheetSync = { ok: null, at: 0 };
+  let sheetSync = { ok: null, at: 0, localOnly: false };
   let tap = blankTap();
 
   function studySize() {
@@ -1651,14 +1702,24 @@
   }
 
   function noteSheetSync(ok) {
-    sheetSync = { ok: !!ok, at: ok ? Date.now() : 0 };
+    sheetSync = { ok: !!ok, at: ok ? Date.now() : 0, localOnly: false };
     paintSheetSync();
     if (ok) paintSaveWarn(false);
+  }
+
+  function noteSheetLocalOnly() {
+    sheetSync = { ok: null, at: 0, localOnly: true };
+    paintSheetSync();
+    paintSaveWarn(false);
   }
 
   function paintSheetSync() {
     const el = $("#stand-sync");
     if (!el) return;
+    if (sheetSync.localOnly) {
+      el.textContent = "Your words are on this tablet. We will sync when the internet is back.";
+      return;
+    }
     if (sheetSync.ok) el.textContent = "Saved to Mr. Jay's book · " + kstStamp(sheetSync.at).time;
     else if (sheetSync.ok === false) el.textContent = "Saving to Mr. Jay's book…";
     else el.textContent = "";
@@ -1674,7 +1735,7 @@
     }
     el.hidden = false;
     el.textContent =
-      "Your words are safe on this tablet. Mr. Jay's book did not update yet — we will keep trying.";
+      "Still saving to Mr. Jay's book — keep going! Your words are safe on this tablet.";
   }
 
   function sliceLine(set, words) {
