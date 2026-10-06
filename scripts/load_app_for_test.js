@@ -96,6 +96,7 @@ function bootApp() {
   g.PackSrc = require("../js/pack-src.js");
   g.WM_TEST_HOOK = true;
   require("../mrj-scores.js");
+  require("../js/progress-merge.js");
   require("../js/progress.js");
   require("../js/app.js");
   return g.WM_TEST;

@@ -2,8 +2,11 @@
   "use strict";
 
   const Algo = window.WordFactoryAlgo;
-  const LS_STATE = "mrj.word_factory.state";
-  const LS_EVENTS = "mrj.word_factory.events";
+  const LS_STATE_LEGACY = "mrj.word_factory.state";
+  const LS_STATE_PREFIX = "mrj.word_factory.state.";
+  const LS_STATE_BACKUP = "mrj.word_factory.state.shared_backup";
+  const LS_EVENTS_LEGACY = "mrj.word_factory.events";
+  const LS_EVENTS_PREFIX = "mrj.word_factory.events.";
   const DEMO_PACK_ID = "nouns100";
   const PACK_IDS = [
     "nouns100", "verbs100", "adjectives100", "nouns200", "little100",
@@ -184,26 +187,23 @@
     );
   }
 
-  function loadState() {
-    try {
-      const raw = localStorage.getItem(LS_STATE);
-      if (raw) {
-        const parsed = JSON.parse(raw);
-        if (parsed && parsed.studentId) {
-          if (!parsed.displayName) parsed.displayName = "";
-          if (!parsed.accountName) parsed.accountName = "";
-          if (!parsed.accountPin) parsed.accountPin = "";
-          if (!parsed.testKind) parsed.testKind = "easy";
-          if (!parsed.studySize) parsed.studySize = 10;
-          if (!parsed.voice || parsed.voice === "man") parsed.voice = "us_m";
-          if (parsed.voice === "woman") parsed.voice = "us_f";
-          if (parsed.voice === "maya" || parsed.voice === "wizard") parsed.voice = parsed.voice === "wizard" ? "grandpa" : "grandma";
-          return parsed;
-        }
-      }
-    } catch (e) {}
+  function studentStorageKey(id) {
+    return String(id || "").trim().toLowerCase().replace(/\s+/g, " ");
+  }
+
+  function stateStorageKey(id) {
+    const k = studentStorageKey(id);
+    return k ? LS_STATE_PREFIX + k : LS_STATE_LEGACY;
+  }
+
+  function eventsStorageKey(id) {
+    const k = studentStorageKey(id);
+    return k ? LS_EVENTS_PREFIX + k : LS_EVENTS_LEGACY;
+  }
+
+  function freshState(forId) {
     return {
-      studentId: uid("stu"),
+      studentId: forId || uid("stu"),
       sessionId: uid("ses"),
       voice: "us_m",
       displayName: "",
@@ -217,10 +217,85 @@
     };
   }
 
+  function normalizeStoredState(parsed) {
+    if (!parsed || typeof parsed !== "object") return freshState();
+    if (!parsed.displayName) parsed.displayName = "";
+    if (!parsed.accountName) parsed.accountName = "";
+    if (!parsed.accountPin) parsed.accountPin = "";
+    if (!parsed.testKind) parsed.testKind = "easy";
+    if (!parsed.studySize) parsed.studySize = 10;
+    if (!parsed.voice || parsed.voice === "man") parsed.voice = "us_m";
+    if (parsed.voice === "woman") parsed.voice = "us_f";
+    if (parsed.voice === "maya" || parsed.voice === "wizard") {
+      parsed.voice = parsed.voice === "wizard" ? "grandpa" : "grandma";
+    }
+    if (!parsed.sets || typeof parsed.sets !== "object") parsed.sets = {};
+    return parsed;
+  }
+
+  function loadStateForStudent(id) {
+    try {
+      const raw = localStorage.getItem(stateStorageKey(id));
+      if (raw) {
+        const parsed = JSON.parse(raw);
+        if (parsed) return normalizeStoredState(parsed);
+      }
+    } catch (e) {}
+    return freshState(id);
+  }
+
+  function migrateLegacyStateIfSafe(id) {
+    const key = studentStorageKey(id);
+    if (!key) return;
+    let legacy = "";
+    try {
+      legacy = localStorage.getItem(LS_STATE_LEGACY) || "";
+    } catch (e) {
+      return;
+    }
+    if (!legacy) return;
+    let parsed = null;
+    try {
+      parsed = JSON.parse(legacy);
+    } catch (e) {
+      return;
+    }
+    if (!parsed || typeof parsed !== "object") return;
+    const legacySid = studentStorageKey(parsed.studentId || "");
+    const legacyName = studentStorageKey(parsed.accountName || parsed.displayName || "");
+    if (legacySid !== key && legacyName !== key) return;
+    const target = stateStorageKey(id);
+    try {
+      if (!localStorage.getItem(target)) localStorage.setItem(target, legacy);
+      localStorage.setItem(LS_STATE_BACKUP, legacy);
+      localStorage.removeItem(LS_STATE_LEGACY);
+    } catch (e) {}
+  }
+
+  function saveStateToStorage(forId) {
+    const id = forId != null ? String(forId).trim() : currentStudentId();
+    const key = id ? stateStorageKey(id) : LS_STATE_LEGACY;
+    try {
+      localStorage.setItem(key, JSON.stringify(state));
+    } catch (e) {}
+  }
+
+  function loadState() {
+    try {
+      const raw = localStorage.getItem(LS_STATE_LEGACY);
+      if (raw) {
+        const parsed = JSON.parse(raw);
+        if (parsed && parsed.studentId) return normalizeStoredState(parsed);
+      }
+    } catch (e) {}
+    return freshState();
+  }
+
   let progressTimer = null;
   let pendingScore = null;
   let notedKnown = null;
   let authStudentId = "";
+  let pullGen = 0;
 
   function currentStudentId() {
     let id = String(authStudentId || "").trim();
@@ -236,6 +311,8 @@
     if (!id && window.MRJ_AUTH && typeof window.MRJ_AUTH.student === "function") {
       id = String(window.MRJ_AUTH.student() || "").trim();
     }
+    const prev = authStudentId;
+    if (prev && prev !== id) saveStateToStorage(prev);
     authStudentId = id;
     state.accountName = "";
     state.accountPin = "";
@@ -245,14 +322,24 @@
       showScreen("boot");
       return;
     }
+    migrateLegacyStateIfSafe(id);
+    state = loadStateForStudent(id);
     state.studentId = id;
     state.displayName = id;
+    if (window.MRJ_WM_progress && typeof window.MRJ_WM_progress.resetSession === "function") {
+      window.MRJ_WM_progress.resetSession();
+    }
     pullSheet();
     if (currentScreen === "home") renderHome();
   }
 
   if (window.addEventListener) {
     window.addEventListener("mrj-auth-ready", onAuthReady);
+    window.addEventListener("mrj-wm-save-status", function (ev) {
+      const ok = !!(ev && ev.detail && ev.detail.ok);
+      noteSheetSync(ok);
+      paintSaveWarn(!ok);
+    });
   }
 
   function isSignedIn() {
@@ -334,6 +421,20 @@
     return payload;
   }
 
+  function mergeRemoteProgress(raw) {
+    if (!raw) return;
+    let remote = raw;
+    if (typeof raw === "string") {
+      try { remote = JSON.parse(raw); } catch (e) { return; }
+    }
+    if (!remote || typeof remote !== "object" || !remote.sets) return;
+    const local = slimProgress();
+    const mergeFn = window.MRJ_WM_merge
+      || (window.MRJ_WM_progress && window.MRJ_WM_progress.merge);
+    const merged = mergeFn ? mergeFn(local, remote) : remote;
+    applyRemote(merged);
+  }
+
   function applyRemote(raw) {
     if (!raw) return;
     let obj = raw;
@@ -388,35 +489,34 @@
     const id = currentStudentId();
     if (!id) return;
     if (!window.MRJ_WM_progress || !window.MRJ_WM_progress.load) return;
-    window.MRJ_WM_progress.load({
-      action: "load",
-      name: id,
-      pin: "",
-      student_id: id,
-    }).then(function (res) {
-      if (!(res && res.found && res.progress_json)) return;
-      applyRemote(res.progress_json);
-      if (currentStudentId()) state.studentId = currentStudentId();
-      try { localStorage.setItem(LS_STATE, JSON.stringify(state)); } catch (e) {}
+    const gen = ++pullGen;
+    window.MRJ_WM_progress.load().then(function (res) {
+      if (gen !== pullGen || currentStudentId() !== id) return;
+      if (res && res.found && res.progress_json) mergeRemoteProgress(res.progress_json);
+      state.studentId = id;
+      saveStateToStorage();
+      noteSheetSync(!!(res && res.ok));
+      paintSaveWarn(!(res && res.ok));
       if (currentScreen === "home") renderHome();
       if (currentScreen === "set") renderSetHome();
-    }).catch(function () {});
+    }).catch(function () {
+      if (gen !== pullGen) return;
+      noteSheetSync(false);
+      paintSaveWarn(true);
+    });
   }
 
   function progressPayload() {
     const set = currentSet();
-    const id = currentStudentId();
+    const screen = currentScreen || "";
+    const packId = set ? (set.packId || set.id || "") : "";
     const out = {
-      action: "save",
-      name: id,
-      pin: "",
-      pack_id: set ? (set.packId || set.id || "") : "",
+      pack_id: packId,
       pack_title: set ? (set.title || "") : "",
-      screen: currentScreen || "",
+      screen: screen,
       word_id: currentWordId(),
       study_size: state.studySize || 10,
       locale: state.locale || "en",
-      student_id: id,
       progress_json: JSON.stringify(slimProgress()),
     };
     if (pendingScore && (pendingScore.kind === "known" || pendingScore.kind === "checkup")) {
@@ -473,9 +573,7 @@
 
   function persist() {
     catchKnown(currentSet());
-    try {
-      localStorage.setItem(LS_STATE, JSON.stringify(state));
-    } catch (e) {}
+    saveStateToStorage();
     if (progressTimer) clearTimeout(progressTimer);
     if (!currentStudentId()) {
       progressTimer = null;
@@ -484,16 +582,26 @@
     progressTimer = setTimeout(function () {
       progressTimer = null;
       if (window.MRJ_WM_progress && typeof window.MRJ_WM_progress.save === "function") {
+        if (window.MRJ_WM_progress.isReadyToSave && !window.MRJ_WM_progress.isReadyToSave()) {
+          return;
+        }
+        const payload = progressPayload();
+        if (payload.screen === "boot" && !payload.pack_id) return;
         try {
-          const pending = window.MRJ_WM_progress.save(progressPayload());
+          const pending = window.MRJ_WM_progress.save(payload);
           if (pending && typeof pending.then === "function") {
             pending.then(function (res) {
               const ok = !!(res && typeof res === "object" && res.ok !== false && !res.error);
               noteSheetSync(ok);
-            }).catch(function () { noteSheetSync(false); });
+              paintSaveWarn(!ok);
+            }).catch(function () {
+              noteSheetSync(false);
+              paintSaveWarn(true);
+            });
           }
         } catch (e) {
           noteSheetSync(false);
+          paintSaveWarn(true);
         }
       }
     }, 1000);
@@ -501,7 +609,7 @@
 
   function loadEvents() {
     try {
-      const raw = localStorage.getItem(LS_EVENTS);
+      const raw = localStorage.getItem(eventsStorageKey(currentStudentId()));
       const arr = raw ? JSON.parse(raw) : [];
       return Array.isArray(arr) ? arr : [];
     } catch (e) {
@@ -533,7 +641,7 @@
     const events = loadEvents();
     events.push(ev);
     try {
-      localStorage.setItem(LS_EVENTS, JSON.stringify(events));
+      localStorage.setItem(eventsStorageKey(currentStudentId()), JSON.stringify(events));
     } catch (e) {}
   }
 
@@ -1545,14 +1653,28 @@
   function noteSheetSync(ok) {
     sheetSync = { ok: !!ok, at: ok ? Date.now() : 0 };
     paintSheetSync();
+    if (ok) paintSaveWarn(false);
   }
 
   function paintSheetSync() {
     const el = $("#stand-sync");
     if (!el) return;
-    if (sheetSync.ok) el.textContent = "Saved to Mr. Jay's sheet · " + kstStamp(sheetSync.at).time;
-    else if (sheetSync.ok === false) el.textContent = "Not saved yet";
+    if (sheetSync.ok) el.textContent = "Saved to Mr. Jay's book · " + kstStamp(sheetSync.at).time;
+    else if (sheetSync.ok === false) el.textContent = "Saving to Mr. Jay's book…";
     else el.textContent = "";
+  }
+
+  function paintSaveWarn(show) {
+    const el = $("#save-warn");
+    if (!el) return;
+    if (!show) {
+      el.hidden = true;
+      el.textContent = "";
+      return;
+    }
+    el.hidden = false;
+    el.textContent =
+      "Your words are safe on this tablet. Mr. Jay's book did not update yet — we will keep trying.";
   }
 
   function sliceLine(set, words) {
@@ -3078,13 +3200,19 @@
     });
     const signOut = $("#btn-signout");
     if (signOut) signOut.addEventListener("click", function () {
+      saveStateToStorage();
       authStudentId = "";
+      state = freshState();
       state.displayName = "";
       state.accountName = "";
       state.accountPin = "";
+      if (window.MRJ_WM_progress && typeof window.MRJ_WM_progress.resetSession === "function") {
+        window.MRJ_WM_progress.resetSession();
+      }
       if (window.MRJ_AUTH && typeof window.MRJ_AUTH.signOut === "function") {
         window.MRJ_AUTH.signOut();
       }
+      paintSaveWarn(false);
       showSharedDoor();
       showScreen("boot");
     });
@@ -3443,7 +3571,6 @@
   initPackSrcParam();
   rememberRole();
   bind();
-  pullSheet();
   probeLinuxTts();
   if (I18n) {
     I18n.setLocale(state.locale || "en");
