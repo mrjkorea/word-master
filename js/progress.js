@@ -4,13 +4,19 @@
   var PROGRAM = "word-master";
   var MAX_PROGRESS_CHARS = 45000;
   var LS_KEY = "mrj.wm.progress";
+  var SAVE_INTERVAL_MS = 17000;
   var hydrated = false;
   var loadDone = false;
   var pendingSave = null;
   var retryTimer = null;
+  var rateLimitTimer = null;
   var retryAttempt = 0;
   var lastSaveError = "";
   var serverProgressSnapshot = null;
+  var inFlightSave = false;
+  var lastSuccessfulPackedJson = "";
+  var lastRemoteSaveAt = 0;
+  var unloadHooksInstalled = false;
 
   function mergeFn() {
     return root.MRJ_WM_merge
@@ -37,12 +43,18 @@
     var merge = mergeFn();
     var merged = parseProgressJson(incomingJson);
     if (!merge) return merged;
+    var serverObj = null;
     if (serverProgressSnapshot) {
-      merged = merge(merged, parseProgressJson(serverProgressSnapshot));
+      serverObj = parseProgressJson(serverProgressSnapshot);
+      merged = merge(merged, serverObj);
     }
     var localJson = localProgressJson();
     if (localJson) {
-      merged = merge(merged, parseProgressJson(localJson));
+      var localObj = parseProgressJson(localJson);
+      var poorer = root.MRJ_WM_progressIsStrictlyPoorer;
+      if (!serverObj || (poorer && poorer(serverObj, localObj))) {
+        merged = merge(merged, localObj);
+      }
     }
     return merged;
   }
@@ -80,14 +92,30 @@
     } catch (e) {}
   }
 
-  function postRemote(payload) {
+  function postRemote(payload, transport) {
     var url = endpoint();
     if (!url) return Promise.resolve({ ok: false, error: "no_endpoint" });
+    var bodyStr = JSON.stringify(payload);
+    transport = transport || {};
+    if (transport.beacon && root.navigator && typeof root.navigator.sendBeacon === "function") {
+      try {
+        var sent = root.navigator.sendBeacon(
+          url,
+          new Blob([bodyStr], { type: "text/plain;charset=utf-8" })
+        );
+        return Promise.resolve(
+          sent ? { ok: true, saved: true, beacon: true } : { ok: false, error: "beacon_failed" }
+        );
+      } catch (e) {
+        return Promise.resolve({ ok: false, error: "beacon_failed" });
+      }
+    }
     return fetch(url, {
       method: "POST",
       headers: { "Content-Type": "text/plain;charset=utf-8" },
-      body: JSON.stringify(payload),
+      body: bodyStr,
       redirect: "follow",
+      keepalive: !!transport.keepalive,
     }).then(function (res) {
       return res.json().catch(function () {
         return { ok: false, error: "bad_json" };
@@ -182,13 +210,20 @@
     }
   }
 
+  function clearRateLimitTimer() {
+    if (rateLimitTimer) {
+      clearTimeout(rateLimitTimer);
+      rateLimitTimer = null;
+    }
+  }
+
   function scheduleRetry(body) {
     clearRetryTimer();
     retryAttempt += 1;
     var delay = Math.min(30000, 2000 * Math.pow(2, Math.min(retryAttempt, 4)));
     retryTimer = setTimeout(function () {
       retryTimer = null;
-      flushSave(body);
+      flushSave(body, { isRetry: true });
     }, delay);
   }
 
@@ -200,7 +235,74 @@
     return { json: str.substring(0, MAX_PROGRESS_CHARS), trimmed: true };
   }
 
-  function flushSave(body) {
+  function buildPackedSave(body) {
+    var mergedProgress = mergeSaveProgress(body.progress_json || "{}");
+    var mergedBody = Object.assign({}, body, {
+      progress_json: JSON.stringify(mergedProgress),
+    });
+    var packed = clampProgressJson(mergedBody.progress_json || "{}");
+    return { body: mergedBody, packed: packed };
+  }
+
+  function canonicalProgressJson(jsonStr) {
+    var merge = mergeFn();
+    var parsed = parseProgressJson(jsonStr);
+    if (!merge) return jsonStr;
+    return JSON.stringify(merge(parsed, parsed));
+  }
+
+  function unchangedSinceLastSave(built) {
+    if (!lastSuccessfulPackedJson) return false;
+    var next = canonicalProgressJson(built.packed.json);
+    if (next === lastSuccessfulPackedJson) return true;
+    var merge = mergeFn();
+    if (!merge) return false;
+    var prev = parseProgressJson(lastSuccessfulPackedJson);
+    var combined = merge(parseProgressJson(next), prev);
+    return JSON.stringify(combined) === JSON.stringify(prev);
+  }
+
+  function scheduleRateLimitedFlush() {
+    if (rateLimitTimer || inFlightSave || !pendingSave) return;
+    if (!loadDone || !hydrated) return;
+    var wait = SAVE_INTERVAL_MS - (Date.now() - lastRemoteSaveAt);
+    if (wait <= 0 || lastRemoteSaveAt <= 0) {
+      flushSave(pendingSave, {});
+      return;
+    }
+    rateLimitTimer = setTimeout(function () {
+      rateLimitTimer = null;
+      if (pendingSave) flushSave(pendingSave, {});
+    }, wait);
+  }
+
+  function afterSaveAttempt(body, packed, res, transport) {
+    var ok = !!(res && res.ok && res.saved !== false && !res.error);
+    if (ok) {
+      retryAttempt = 0;
+      lastSaveError = "";
+      lastRemoteSaveAt = Date.now();
+      var canonicalJson = canonicalProgressJson(packed.json);
+      var canonicalPacked = clampProgressJson(canonicalJson);
+      lastSuccessfulPackedJson = canonicalPacked.json;
+      serverProgressSnapshot = canonicalPacked.json;
+      body = Object.assign({}, body, { progress_json: canonicalPacked.json });
+      writeLocal(body);
+      dispatchSaveStatus(true, res);
+      if (pendingSave === body) pendingSave = null;
+      return res;
+    }
+    lastSaveError = (res && res.error) || "save_failed";
+    if (!transport || !transport.beacon) {
+      dispatchSaveStatus(false, res);
+      scheduleRetry(body);
+    }
+    return res;
+  }
+
+  function flushSave(body, options) {
+    options = options || {};
+    if (!body) body = pendingSave;
     if (!body) return Promise.resolve(null);
     var id = authStudentId();
     var token = authToken();
@@ -212,39 +314,66 @@
       pendingSave = body;
       return Promise.resolve({ ok: false, error: "not_loaded" });
     }
-    var mergedProgress = mergeSaveProgress(body.progress_json || "{}");
-    body = Object.assign({}, body, {
-      progress_json: JSON.stringify(mergedProgress),
-    });
-    var packed = clampProgressJson(body.progress_json || "{}");
-    if (packed.trimmed) {
+    if (inFlightSave) {
+      pendingSave = body;
+      return Promise.resolve({ ok: false, error: "in_flight" });
+    }
+
+    var built = buildPackedSave(body);
+    var outboundJson = canonicalProgressJson(built.packed.json);
+    var outboundPacked = clampProgressJson(outboundJson);
+    if (outboundPacked.trimmed && !options.forceUnload) {
       dispatchSaveStatus(false, { error: "payload_trimmed" });
+    }
+    if (unchangedSinceLastSave({ packed: outboundPacked })) {
+      if (pendingSave === body) pendingSave = null;
+      dispatchSaveStatus(true, { skipped: true });
+      return Promise.resolve({ ok: true, skipped: true });
+    }
+
+    var bypassRateLimit = !!(options.isRetry || options.forceUnload);
+    if (!bypassRateLimit && lastRemoteSaveAt > 0) {
+      var elapsed = Date.now() - lastRemoteSaveAt;
+      if (elapsed < SAVE_INTERVAL_MS) {
+        pendingSave = body;
+        scheduleRateLimitedFlush();
+        return Promise.resolve({ ok: false, error: "rate_limited" });
+      }
     }
     var req = {
       action: "save_pack",
       id: id,
       token: token,
       program: PROGRAM,
-      progress_json: packed.json,
+      progress_json: outboundPacked.json,
     };
-    return postRemote(req).then(function (res) {
-      var ok = !!(res && res.ok && res.saved !== false && !res.error);
-      if (ok) {
-        retryAttempt = 0;
-        lastSaveError = "";
-        serverProgressSnapshot = packed.json;
-        writeLocal(body);
-        dispatchSaveStatus(true, res);
-        return res;
+    var transport = {};
+    if (options.forceUnload) {
+      transport.beacon = true;
+      if (!root.navigator || typeof root.navigator.sendBeacon !== "function") {
+        transport.keepalive = true;
       }
-      lastSaveError = (res && res.error) || "save_failed";
-      dispatchSaveStatus(false, res);
-      scheduleRetry(body);
-      return res;
+    }
+
+    inFlightSave = true;
+    clearRateLimitTimer();
+    return postRemote(req, transport).then(function (res) {
+      inFlightSave = false;
+      var out = afterSaveAttempt(built.body, outboundPacked, res, transport);
+      if (pendingSave && pendingSave !== body) {
+        scheduleRateLimitedFlush();
+      }
+      return out;
     }).catch(function () {
+      inFlightSave = false;
       lastSaveError = "network";
-      dispatchSaveStatus(false, { error: "network" });
-      scheduleRetry(body);
+      if (!transport.beacon) {
+        dispatchSaveStatus(false, { error: "network" });
+        scheduleRetry(built.body);
+      }
+      if (pendingSave && pendingSave !== body) {
+        scheduleRateLimitedFlush();
+      }
       return { ok: false, error: "network" };
     });
   }
@@ -258,7 +387,8 @@
       maybePostScore(body);
     } catch (e) {}
     pendingSave = body;
-    return flushSave(body);
+    clearRetryTimer();
+    return flushSave(body, {});
   }
 
   function load() {
@@ -284,8 +414,7 @@
       }
       if (hydrated && pendingSave && pendingSave.progress_json) {
         var snap = pendingSave;
-        pendingSave = null;
-        flushSave(snap);
+        flushSave(snap, {});
       }
       return res;
     }).catch(function () {
@@ -303,11 +432,35 @@
     retryAttempt = 0;
     lastSaveError = "";
     clearRetryTimer();
+    clearRateLimitTimer();
   }
 
   function isReadyToSave() {
     return loadDone && hydrated && !!authStudentId() && !!authToken();
   }
+
+  function flushOnPageHide() {
+    if (!isReadyToSave()) return;
+    clearRateLimitTimer();
+    var body = pendingSave;
+    if (!body) return;
+    flushSave(body, { forceUnload: true });
+  }
+
+  function installUnloadFlush() {
+    if (unloadHooksInstalled) return;
+    unloadHooksInstalled = true;
+    if (typeof document !== "undefined" && document.addEventListener) {
+      document.addEventListener("visibilitychange", function () {
+        if (document.visibilityState === "hidden") flushOnPageHide();
+      });
+    }
+    if (root.addEventListener) {
+      root.addEventListener("pagehide", flushOnPageHide);
+    }
+  }
+
+  installUnloadFlush();
 
   root.MRJ_WM_progress = {
     save: save,
@@ -318,10 +471,30 @@
     countKnownInProgress: countKnownInProgress,
     maxProgressChars: MAX_PROGRESS_CHARS,
     program: PROGRAM,
+    saveIntervalMs: SAVE_INTERVAL_MS,
     lastSaveError: function () { return lastSaveError; },
     mergeSaveProgress: mergeSaveProgress,
     setServerSnapshot: function (json) {
       serverProgressSnapshot = json == null ? null : String(json);
     },
+    __testHooks: {
+      setSaveIntervalMs: function (ms) {
+        SAVE_INTERVAL_MS = Math.max(0, Number(ms) || 0);
+      },
+      markSessionReady: function () {
+        loadDone = true;
+        hydrated = true;
+      },
+      resetThrottleState: function () {
+        lastRemoteSaveAt = 0;
+        lastSuccessfulPackedJson = "";
+        inFlightSave = false;
+        pendingSave = null;
+        clearRateLimitTimer();
+        clearRetryTimer();
+      },
+      isInFlight: function () { return inFlightSave; },
+      lastSuccessfulPackedJson: function () { return lastSuccessfulPackedJson; },
+    },
   };
-})(window);
+})(typeof window !== "undefined" ? window : global);
