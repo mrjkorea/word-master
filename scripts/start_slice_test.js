@@ -82,7 +82,7 @@ if (index.indexOf("js/start-slice.js") > index.indexOf("js/app.js")) {
 }
 if (index.indexOf("Tap a number to start there.") === -1) fail("missing tap hint");
 if (index.indexOf("css/app.css?v=20261001-lock") === -1) fail("css cache");
-if (index.indexOf("js/app.js?v=20261006-toeic-media") === -1) fail("app cache");
+if (index.indexOf("js/app.js?v=20261006-save-throttle") === -1) fail("app cache");
 if (index.indexOf("js/start-slice.js?v=20260930-start") === -1) fail("start-slice cache");
 
 const api = bootApp();

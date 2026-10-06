@@ -350,6 +350,15 @@
     const id = forId != null ? String(forId).trim() : currentStudentId();
     const key = id ? stateStorageKey(id) : LS_STATE_LEGACY;
     try {
+      if (id && !forId) {
+        const raw = localStorage.getItem(key);
+        if (raw) {
+          try {
+            const existing = JSON.parse(raw);
+            if (existing && existing.sets) mergeRemoteProgress(slimFromStateObj(existing));
+          } catch (e) {}
+        }
+      }
       localStorage.setItem(key, JSON.stringify(state));
     } catch (e) {}
   }
@@ -386,6 +395,7 @@
       id = String(window.MRJ_AUTH.student() || "").trim();
     }
     const prev = authStudentId;
+    const reauth = !!(prev && id && prev === id);
     if (prev && prev !== id) saveStateToStorage(prev);
     authStudentId = id;
     state.accountName = "";
@@ -396,10 +406,21 @@
       showScreen("boot");
       return;
     }
+    let memorySlim = null;
+    if (reauth) {
+      try {
+        memorySlim = slimProgress();
+      } catch (e) {
+        memorySlim = null;
+      }
+    }
     const legacyBlob = consumeLegacyIfEligible(id);
     state = loadStateForStudent(id);
     state.studentId = id;
     state.displayName = id;
+    if (memorySlim && memorySlim.sets && Object.keys(memorySlim.sets).length) {
+      mergeRemoteProgress(memorySlim);
+    }
     if (legacyBlob) {
       mergeRemoteProgress(slimFromStateObj(legacyBlob));
       saveStateToStorage();
@@ -645,6 +666,13 @@
       dedupeSetsByPackId();
       state.studentId = id;
       saveStateToStorage();
+      if (
+        window.MRJ_WM_progress
+        && typeof window.MRJ_WM_progress.isReadyToSave === "function"
+        && window.MRJ_WM_progress.isReadyToSave()
+      ) {
+        persist();
+      }
       if (res && res.ok) {
         noteSheetSync(true);
       } else if (res && res.error === "load_failed") {

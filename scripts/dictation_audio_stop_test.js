@@ -116,6 +116,7 @@ async function main() {
   const speak = extractFunction(app, "speak");
   const speakWW = extractFunction(app, "speakWW");
   const speakLetter = extractFunction(app, "speakLetter");
+  const playClip = extractFunction(app, "playClip");
   if (!advance) fail("advanceLearn missing");
   if (!teach) fail("teachSpelling missing");
   if (advance.indexOf("SpellStop.bump") === -1) fail("advanceLearn does not call SpellStop.bump");
@@ -125,22 +126,24 @@ async function main() {
   [speak, speakWW].forEach(function (body, n) {
     const label = n === 0 ? "speak" : "speakWW";
     if (!body) fail(label + " missing");
-    const bumpAt = body.indexOf("SpellStop.bump");
-    const audioAt = body.indexOf("new Audio");
-    const bindAt = body.indexOf("SpellStop.bind");
-    const playAt = body.indexOf(".play()");
-    const settleAt = body.indexOf("SpellStop.settle");
-    if (bumpAt < 0 || audioAt < 0 || bindAt < 0 || playAt < 0 || settleAt < 0) {
-      fail(label + " missing bump, Audio, bind, play, or settle");
-    }
-    if (!(bumpAt < audioAt && audioAt < bindAt && bindAt < playAt && playAt < settleAt)) {
-      fail(label + " order is not bump, Audio, bind, play, settle");
-    }
+    if (body.indexOf("playClip") === -1) fail(label + " must route through playClip");
   });
+  if (!playClip) fail("playClip missing");
+  const bumpAt = playClip.indexOf("SpellStop.bump");
+  const audioAt = playClip.indexOf("new Audio");
+  const bindAt = playClip.indexOf("SpellStop.bind");
+  const playAt = playClip.indexOf(".play()");
+  const settleAt = playClip.indexOf("SpellStop.settle");
+  if (bumpAt < 0 || audioAt < 0 || bindAt < 0 || playAt < 0 || settleAt < 0) {
+    fail("playClip missing bump, Audio, bind, play, or settle");
+  }
+  if (!(bumpAt < audioAt && audioAt < bindAt && bindAt < playAt && playAt < settleAt)) {
+    fail("playClip order is not bump, Audio, bind, play, settle");
+  }
 
   const index = fs.readFileSync(path.join(root, "index.html"), "utf8");
   const spellSrc = index.indexOf("js/spell-stop.js?v=20260930-spellstop");
-  const appSrc = index.indexOf("js/app.js?v=20261001-lock");
+  const appSrc = index.indexOf("js/app.js?v=20261006-save-throttle");
   if (spellSrc < 0) fail("index.html missing spell-stop cache");
   if (appSrc < 0) fail("index.html missing app.js cache");
   if (spellSrc > appSrc) fail("spell-stop.js must load before app.js");

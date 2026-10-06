@@ -138,6 +138,33 @@
     };
   }
 
+  function countNonEmptyPacks(prog) {
+    prog = prog && typeof prog === "object" ? prog : { sets: {} };
+    var sets = prog.sets && typeof prog.sets === "object" ? prog.sets : {};
+    var n = 0;
+    Object.keys(sets).forEach(function (pid) {
+      if (!packProgressEmpty(sets[pid])) n += 1;
+    });
+    return n;
+  }
+
+  /** True when candidate would lose pack data compared to baseline (server/local). */
+  function progressIsStrictlyPoorer(candidate, baseline) {
+    candidate = candidate && typeof candidate === "object" ? candidate : { sets: {} };
+    baseline = baseline && typeof baseline === "object" ? baseline : { sets: {} };
+    var cSets = candidate.sets && typeof candidate.sets === "object" ? candidate.sets : {};
+    var bSets = baseline.sets && typeof baseline.sets === "object" ? baseline.sets : {};
+    var keys = Object.keys(bSets);
+    for (var i = 0; i < keys.length; i++) {
+      var pid = keys[i];
+      var basePack = bSets[pid];
+      if (packProgressEmpty(basePack)) continue;
+      var candPack = cSets[pid];
+      if (!candPack || packProgressEmpty(candPack)) return true;
+    }
+    return countNonEmptyPacks(candidate) < countNonEmptyPacks(baseline);
+  }
+
   function mergeProgress(local, remote) {
     local = local && typeof local === "object" ? local : { v: 1, sets: {} };
     remote = remote && typeof remote === "object" ? remote : { v: 1, sets: {} };
@@ -190,4 +217,6 @@
   root.MRJ_WM_merge = mergeProgress;
   root.MRJ_WM_mergePack = mergePack;
   root.MRJ_WM_packProgressEmpty = packProgressEmpty;
+  root.MRJ_WM_countNonEmptyPacks = countNonEmptyPacks;
+  root.MRJ_WM_progressIsStrictlyPoorer = progressIsStrictlyPoorer;
 })(typeof window !== "undefined" ? window : global);
