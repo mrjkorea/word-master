@@ -148,8 +148,6 @@
     }
   }
 
-  const SCORE_ROW_CAP = 200;
-
   function mergeScoreRows(a, b) {
     const mergeFn = window.MRJ_WM_mergeScoreRows;
     if (mergeFn) return mergeFn(a, b);
@@ -164,7 +162,7 @@
       out.push(row);
     });
     out.sort(function (x, y) { return (Number(y.at) || 0) - (Number(x.at) || 0); });
-    return out.slice(0, SCORE_ROW_CAP);
+    return out;
   }
 
   function scoreRowHasRealScore(row) {
@@ -800,7 +798,7 @@
       testKind: state.testKind,
       currentPackId: cur ? (cur.packId || "") : "",
       sets: sets,
-      scoreRows: mergeScoreRows(state.scoreRows || [], []).slice(0, SCORE_ROW_CAP),
+      scoreRows: mergeScoreRows(state.scoreRows || [], []),
     };
   }
 

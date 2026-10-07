@@ -142,5 +142,55 @@ if (countPacks(out) < 1) {
   process.exit(1);
 }
 
+const mergeScoreRows = global.MRJ_WM_mergeScoreRows;
+if (!mergeScoreRows) {
+  console.error("MRJ_WM_mergeScoreRows missing");
+  process.exit(1);
+}
+
+function scoreRow(at, pack) {
+  return {
+    at: at,
+    pack: pack || "nouns100",
+    kind: "test_easy",
+    activity: "Easy test",
+    score: 8,
+    total: 10,
+  };
+}
+
+const localRows = [];
+const remoteRows = [];
+for (let i = 1; i <= 500; i += 1) localRows.push(scoreRow(i, "nouns100"));
+for (let j = 501; j <= 1000; j += 1) remoteRows.push(scoreRow(j, "verbs100"));
+
+const rowMerged = merge({ v: 1, sets: {}, scoreRows: localRows }, { v: 1, sets: {}, scoreRows: remoteRows });
+if (!rowMerged.scoreRows || rowMerged.scoreRows.length !== 1000) {
+  console.error("scoreRows union failed", rowMerged.scoreRows ? rowMerged.scoreRows.length : 0);
+  process.exit(1);
+}
+
+const dupRemote = localRows.slice(250, 260).concat(remoteRows);
+const unionMerged = mergeScoreRows(localRows, dupRemote);
+if (unionMerged.length !== 1000) {
+  console.error("mergeScoreRows should not drop rows on overlap", unionMerged.length);
+  process.exit(1);
+}
+
+const snapshotRows = mergeScoreRows(rowMerged.scoreRows, []);
+if (snapshotRows.length !== 1000) {
+  console.error("snapshot merge should keep all score rows", snapshotRows.length);
+  process.exit(1);
+}
+
+const { bootApp } = require("./load_app_for_test");
+const api = bootApp();
+api.applyRemote(rowMerged);
+const snap = api.slimProgress();
+if (!snap.scoreRows || snap.scoreRows.length !== 1000) {
+  console.error("slimProgress snapshot dropped score rows", snap.scoreRows ? snap.scoreRows.length : 0);
+  process.exit(1);
+}
+
 console.log("PROGRESS_MERGE_OK");
 process.exit(0);

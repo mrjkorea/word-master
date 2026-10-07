@@ -117,7 +117,7 @@
     out.sort(function (x, y) {
       return (Number(y.at) || 0) - (Number(x.at) || 0);
     });
-    return out.slice(0, 200);
+    return out;
   }
 
   function mergeScoreBlock(a, b) {
