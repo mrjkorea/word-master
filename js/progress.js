@@ -269,6 +269,10 @@
     }, wait);
   }
 
+  function isTooLargeSaveError(res) {
+    return !!(res && res.error === "too_large");
+  }
+
   function afterSaveAttempt(body, progressJson, res, transport) {
     var ok = !!(res && res.ok && res.saved !== false && !res.error);
     if (ok) {
@@ -285,6 +289,27 @@
       return res;
     }
     lastSaveError = (res && res.error) || "save_failed";
+    if (isTooLargeSaveError(res)) {
+      try {
+        if (root.console && typeof root.console.warn === "function") {
+          root.console.warn(
+            "[word-master] save_pack too_large:",
+            (res && res.message) || "Progress data is too large to store."
+          );
+        }
+      } catch (logErr) {}
+      clearRetryTimer();
+      retryAttempt = 0;
+      try {
+        var localBody = Object.assign({}, body, { progress_json: progressJson });
+        writeLocal(localBody);
+      } catch (localErr) {}
+      if (!transport || !transport.beacon) {
+        dispatchSaveStatus(false, res);
+      }
+      if (pendingSave === body) pendingSave = null;
+      return res;
+    }
     if (!transport || !transport.beacon) {
       dispatchSaveStatus(false, res);
       scheduleRetry(body);
@@ -481,6 +506,7 @@
         clearRetryTimer();
       },
       isInFlight: function () { return inFlightSave; },
+      hasRetryScheduled: function () { return !!retryTimer; },
       lastSuccessfulPackedJson: function () { return lastSuccessfulPackedJson; },
     },
   };

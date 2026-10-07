@@ -148,8 +148,6 @@
     }
   }
 
-  const SCORE_ROW_CAP = 200;
-
   function mergeScoreRows(a, b) {
     const mergeFn = window.MRJ_WM_mergeScoreRows;
     if (mergeFn) return mergeFn(a, b);
@@ -164,7 +162,7 @@
       out.push(row);
     });
     out.sort(function (x, y) { return (Number(y.at) || 0) - (Number(x.at) || 0); });
-    return out.slice(0, SCORE_ROW_CAP);
+    return out;
   }
 
   function scoreRowHasRealScore(row) {
@@ -185,15 +183,39 @@
     return "Activity";
   }
 
+  const recordDateFormatters = {};
+
+  function recordDateFormatter() {
+    const loc = state.locale || "en";
+    if (!Object.prototype.hasOwnProperty.call(recordDateFormatters, loc)) {
+      try {
+        recordDateFormatters[loc] = new Intl.DateTimeFormat(loc, {
+          year: "numeric",
+          month: "short",
+          day: "numeric",
+        });
+      } catch (e) {
+        recordDateFormatters[loc] = null;
+      }
+    }
+    return recordDateFormatters[loc];
+  }
+
   function formatRecordDate(at) {
     const d = new Date(Number(at) || Date.now());
+    const fmt = recordDateFormatter();
+    if (fmt) {
+      try {
+        return fmt.format(d);
+      } catch (e) {}
+    }
     try {
       return d.toLocaleDateString(state.locale || "en", {
         year: "numeric",
         month: "short",
         day: "numeric",
       });
-    } catch (e) {
+    } catch (e2) {
       return d.toISOString().slice(0, 10);
     }
   }
@@ -316,10 +338,15 @@
     return mergeScoreRows(base, rowsFromSetScores());
   }
 
+  let scoreRecordRenderGen = 0;
+  const SCORE_RECORD_RENDER_BATCH = 200;
+
   function renderScoreRecord() {
     const list = $("#score-record-list");
     const empty = $("#score-record-empty");
     if (!list) return;
+    scoreRecordRenderGen += 1;
+    const gen = scoreRecordRenderGen;
     list.innerHTML = "";
     const rows = collectScoreRecordRows();
     if (!rows.length) {
@@ -330,11 +357,22 @@
       return;
     }
     if (empty) empty.hidden = true;
-    rows.forEach(function (row) {
-      const li = document.createElement("li");
-      li.textContent = formatScoreRecordLine(row);
-      list.appendChild(li);
-    });
+    let idx = 0;
+    function appendBatch(count) {
+      if (gen !== scoreRecordRenderGen) return;
+      const end = Math.min(idx + count, rows.length);
+      for (; idx < end; idx += 1) {
+        const li = document.createElement("li");
+        li.textContent = formatScoreRecordLine(rows[idx]);
+        list.appendChild(li);
+      }
+      if (idx < rows.length) {
+        const raf = window.requestAnimationFrame
+          || function (fn) { return setTimeout(fn, 0); };
+        raf(function () { appendBatch(SCORE_RECORD_RENDER_BATCH); });
+      }
+    }
+    appendBatch(SCORE_RECORD_RENDER_BATCH);
   }
 
   function openScoreRecord() {
@@ -654,6 +692,15 @@
     window.addEventListener("mrj-auth-ready", onAuthReady);
     window.addEventListener("mrj-wm-save-status", function (ev) {
       const ok = !!(ev && ev.detail && ev.detail.ok);
+      const err = ev && ev.detail && ev.detail.error ? String(ev.detail.error) : "";
+      if (ok) {
+        setProgressTooLargeWarn(false);
+      } else if (err === "too_large") {
+        setProgressTooLargeWarn(true);
+        noteSheetLocalOnly();
+        paintSaveWarn(false);
+        return;
+      }
       noteSheetSync(ok);
       paintSaveWarn(!ok);
     });
@@ -800,7 +847,7 @@
       testKind: state.testKind,
       currentPackId: cur ? (cur.packId || "") : "",
       sets: sets,
-      scoreRows: mergeScoreRows(state.scoreRows || [], []).slice(0, SCORE_ROW_CAP),
+      scoreRows: mergeScoreRows(state.scoreRows || [], []),
     };
   }
 
@@ -1886,7 +1933,21 @@
     showScreen("set");
   }
 
+  let progressTooLargeWarn = false;
+
+  function setProgressTooLargeWarn(on) {
+    progressTooLargeWarn = !!on;
+    paintProgressTooLargeWarn();
+  }
+
+  function paintProgressTooLargeWarn() {
+    const el = $("#progress-too-large-warn");
+    if (!el) return;
+    el.hidden = !progressTooLargeWarn;
+  }
+
   function renderHome() {
+    paintProgressTooLargeWarn();
     const btn = $("#btn-continue");
     const set = currentSet();
     const hello = $("#hello-line");
@@ -4107,6 +4168,8 @@
       formatScoreRecordLine: formatScoreRecordLine,
       scoreRowHasRealScore: scoreRowHasRealScore,
       collectScoreRecordRows: collectScoreRecordRows,
+      renderScoreRecord: renderScoreRecord,
+      setProgressTooLargeWarn: setProgressTooLargeWarn,
       mergeScoreRows: mergeScoreRows,
       ingestBookProgress: ingestBookProgress,
       wordPic: wordPic,

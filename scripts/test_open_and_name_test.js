@@ -13,9 +13,12 @@ const root = path.join(__dirname, "..");
 const index = fs.readFileSync(path.join(root, "index.html"), "utf8");
 const app = fs.readFileSync(path.join(root, "js/app.js"), "utf8");
 
-if (index.indexOf("css/app.css?v=20261007-testopen") === -1) fail("css cache");
-if (index.indexOf("js/app.js?v=20261007-testopen") === -1) fail("app cache");
+if (index.indexOf("css/app.css?v=20261007-allrows") === -1) fail("css cache");
+if (index.indexOf("js/app.js?v=20261007-allrows") === -1) fail("app cache");
+if (index.indexOf("js/progress-merge.js?v=20261007-allrows") === -1) fail("progress-merge cache");
+if (index.indexOf("js/progress.js?v=20261007-allrows") === -1) fail("progress cache");
 if (index.indexOf('id="btn-student-name"') === -1) fail("missing top-right name button");
+if (index.indexOf("data-mrj-own-record") === -1) fail("name button missing data-mrj-own-record");
 
 const topbarEnd = index.indexOf("</header>");
 const helloAt = index.indexOf('id="hello-line"');
