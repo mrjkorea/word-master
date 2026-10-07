@@ -103,6 +103,23 @@
     return nNew != null ? nNew : nOld;
   }
 
+  function mergeScoreRows(a, b) {
+    var rows = (Array.isArray(a) ? a : []).concat(Array.isArray(b) ? b : []);
+    var seen = {};
+    var out = [];
+    rows.forEach(function (row) {
+      if (!row || typeof row !== "object") return;
+      var key = String(row.at || 0) + "|" + String(row.kind || "") + "|" + String(row.pack || "");
+      if (seen[key]) return;
+      seen[key] = true;
+      out.push(row);
+    });
+    out.sort(function (x, y) {
+      return (Number(y.at) || 0) - (Number(x.at) || 0);
+    });
+    return out.slice(0, 200);
+  }
+
   function mergeScoreBlock(a, b) {
     if (!a && !b) return null;
     if (!a) return b;
@@ -234,10 +251,12 @@
       testKind: base.testKind || other.testKind || "easy",
       currentPackId: currentPackId,
       sets: sets,
+      scoreRows: mergeScoreRows(local.scoreRows, remote.scoreRows),
     };
   }
 
   root.MRJ_WM_merge = mergeProgress;
+  root.MRJ_WM_mergeScoreRows = mergeScoreRows;
   root.MRJ_WM_mergePack = mergePack;
   root.MRJ_WM_packProgressEmpty = packProgressEmpty;
   root.MRJ_WM_countNonEmptyPacks = countNonEmptyPacks;

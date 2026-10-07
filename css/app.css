@@ -63,7 +63,7 @@ button:disabled:not(.choice) { cursor: not-allowed; opacity: 0.38; }
 /* Chrome */
 .topbar {
   display: grid;
-  grid-template-columns: 44px minmax(0, 1fr) auto;
+  grid-template-columns: 44px minmax(0, 1fr) auto auto;
   align-items: center;
   gap: 8px;
   padding: calc(8px + env(safe-area-inset-top)) 12px 8px;
@@ -72,8 +72,41 @@ button:disabled:not(.choice) { cursor: not-allowed; opacity: 0.38; }
   backdrop-filter: saturate(180%) blur(16px);
   border-bottom: 1px solid var(--line);
 }
-.topbar.no-back { grid-template-columns: minmax(0, 1fr) auto; }
+.topbar.no-back { grid-template-columns: minmax(0, 1fr) auto auto; }
 .topbar.no-back .icon-btn { display: none; }
+.student-name-btn {
+  max-width: 120px;
+  min-height: 36px;
+  padding: 0 10px;
+  border-radius: 980px;
+  border: 1px solid var(--line);
+  background: #fff;
+  color: var(--navy);
+  font-size: 12px;
+  font-weight: 700;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.score-record-list {
+  margin: 0;
+  padding: 0 16px 24px;
+  list-style: none;
+}
+.score-record-list li {
+  padding: 10px 0;
+  border-bottom: 1px solid var(--line);
+  font-size: 14px;
+  line-height: 1.35;
+}
+.score-record-empty,
+.record-title {
+  padding: 0 16px;
+}
+.record-title {
+  margin: 12px 0 8px;
+  font-size: 18px;
+}
 .brand h1 {
   margin: 0;
   text-align: center;

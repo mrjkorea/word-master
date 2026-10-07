@@ -119,6 +119,7 @@
 
   function studentLocked(set, step) {
     if (teacherNow()) return false;
+    if (step === "test" && currentStudentId()) return false;
     if (!set || !window.PathLock) return true;
     try { return !window.PathLock.can(set, step).ok; } catch (e) { return true; }
   }
@@ -144,6 +145,216 @@
       return false;
     } catch (e) {
       return false;
+    }
+  }
+
+  const SCORE_ROW_CAP = 200;
+
+  function mergeScoreRows(a, b) {
+    const mergeFn = window.MRJ_WM_mergeScoreRows;
+    if (mergeFn) return mergeFn(a, b);
+    const rows = (Array.isArray(a) ? a : []).concat(Array.isArray(b) ? b : []);
+    const seen = {};
+    const out = [];
+    rows.forEach(function (row) {
+      if (!row || typeof row !== "object") return;
+      const key = String(row.at || 0) + "|" + String(row.kind || "") + "|" + String(row.pack || "");
+      if (seen[key]) return;
+      seen[key] = true;
+      out.push(row);
+    });
+    out.sort(function (x, y) { return (Number(y.at) || 0) - (Number(x.at) || 0); });
+    return out.slice(0, SCORE_ROW_CAP);
+  }
+
+  function scoreRowHasRealScore(row) {
+    if (!row || typeof row !== "object") return false;
+    const score = Number(row.score);
+    const total = Number(row.total);
+    return isFinite(score) && isFinite(total) && total > 0;
+  }
+
+  function activityLabelForKind(kind, extra) {
+    const k = String(kind || "");
+    if (k === "final") return "All-pack test";
+    if (k === "check") return "Checkup";
+    if (k === "test_easy") return "Easy test";
+    if (k === "test_hard") return "Hard test";
+    if (k === "game") return (extra && extra.game) ? String(extra.game) + " game" : "Game";
+    if (extra && extra.activity) return String(extra.activity);
+    return "Activity";
+  }
+
+  function formatRecordDate(at) {
+    const d = new Date(Number(at) || Date.now());
+    try {
+      return d.toLocaleDateString(state.locale || "en", {
+        year: "numeric",
+        month: "short",
+        day: "numeric",
+      });
+    } catch (e) {
+      return d.toISOString().slice(0, 10);
+    }
+  }
+
+  function formatScoreRecordLine(row) {
+    if (!row || typeof row !== "object") return "";
+    const date = formatRecordDate(row.at);
+    const pack = String(row.pack || "").trim();
+    const act = String(row.activity || activityLabelForKind(row.kind, row)).trim();
+    let line = date;
+    if (pack) line += " · " + pack;
+    if (act) line += " · " + act;
+    if (scoreRowHasRealScore(row)) {
+      const pct = Math.round((100 * Number(row.score)) / Number(row.total));
+      line += " · " + pct + "%";
+    }
+    return line;
+  }
+
+  function appendScoreRow(row) {
+    if (!row || !row.pack || !row.kind) return;
+    const entry = {
+      at: Number(row.at) || Date.now(),
+      pack: String(row.pack),
+      kind: String(row.kind),
+      activity: String(row.activity || activityLabelForKind(row.kind, row)),
+    };
+    if (scoreRowHasRealScore(row)) {
+      entry.score = Number(row.score);
+      entry.total = Number(row.total);
+    }
+    if (!state.scoreRows || !Array.isArray(state.scoreRows)) state.scoreRows = [];
+    state.scoreRows = mergeScoreRows(state.scoreRows, [entry]);
+  }
+
+  function bookProgressProgramOk(row) {
+    const prog = String(
+      row.program || row.curriculum_program || row.app_name || row.appName || row.app || ""
+    ).toLowerCase().replace(/\s+/g, "-");
+    return !prog || prog === "word-master" || prog === "word_factory";
+  }
+
+  function rowFromBookProgress(raw) {
+    if (!raw || typeof raw !== "object") return null;
+    if (!bookProgressProgramOk(raw)) return null;
+    const pack = String(
+      raw.pack || raw.pack_id || raw.packId || raw.unit_title || raw.unitTitle || ""
+    ).trim();
+    if (!pack) return null;
+    const kind = String(raw.kind || raw.item_type || raw.itemType || raw.event_kind || "book").trim();
+    const at = Number(raw.at || raw.ended_at || raw.when || raw.ts) || 0;
+    if (!at) return null;
+    const row = {
+      at: at,
+      pack: pack,
+      kind: kind,
+      activity: String(raw.activity || raw.item_type || raw.itemType || activityLabelForKind(kind, raw)).trim(),
+    };
+    const score = raw.score != null ? Number(raw.score) : Number(raw.score_value);
+    const total = raw.total != null ? Number(raw.total) : Number(raw.score_max);
+    if (isFinite(score) && isFinite(total) && total > 0) {
+      row.score = score;
+      row.total = total;
+    }
+    return row;
+  }
+
+  function ingestBookProgress(raw) {
+    if (!raw) return;
+    let list = raw;
+    if (!Array.isArray(list)) {
+      if (Array.isArray(raw.rows)) list = raw.rows;
+      else if (Array.isArray(raw.events)) list = raw.events;
+      else if (Array.isArray(raw.progress)) list = raw.progress;
+      else return;
+    }
+    const kept = [];
+    list.forEach(function (item) {
+      const row = rowFromBookProgress(item);
+      if (row) kept.push(row);
+    });
+    if (!kept.length) return;
+    if (!state.scoreRows || !Array.isArray(state.scoreRows)) state.scoreRows = [];
+    state.scoreRows = mergeScoreRows(state.scoreRows, kept);
+  }
+
+  function rowsFromSetScores() {
+    const out = [];
+    Object.keys(state.sets || {}).forEach(function (k) {
+      const s = state.sets[k];
+      if (!s || !s.packId) return;
+      const fin = s.final;
+      if (fin && isFinite(Number(fin.score)) && isFinite(Number(fin.total)) && Number(fin.total) > 0) {
+        out.push({
+          at: Number(fin.at) || 0,
+          pack: s.packId,
+          kind: "final",
+          activity: "All-pack test",
+          score: Number(fin.score),
+          total: Number(fin.total),
+        });
+      }
+      const chk = s.check;
+      if (chk && isFinite(Number(chk.score)) && isFinite(Number(chk.total)) && Number(chk.total) > 0) {
+        out.push({
+          at: Number(chk.at) || 0,
+          pack: s.packId,
+          kind: "check",
+          activity: "Checkup",
+          score: Number(chk.score),
+          total: Number(chk.total),
+        });
+      }
+    });
+    return out;
+  }
+
+  function collectScoreRecordRows() {
+    const base = state.scoreRows && Array.isArray(state.scoreRows) ? state.scoreRows : [];
+    return mergeScoreRows(base, rowsFromSetScores());
+  }
+
+  function renderScoreRecord() {
+    const list = $("#score-record-list");
+    const empty = $("#score-record-empty");
+    if (!list) return;
+    list.innerHTML = "";
+    const rows = collectScoreRecordRows();
+    if (!rows.length) {
+      if (empty) {
+        empty.hidden = false;
+        empty.textContent = "No scores yet.";
+      }
+      return;
+    }
+    if (empty) empty.hidden = true;
+    rows.forEach(function (row) {
+      const li = document.createElement("li");
+      li.textContent = formatScoreRecordLine(row);
+      list.appendChild(li);
+    });
+  }
+
+  function openScoreRecord() {
+    if (!currentStudentId()) return;
+    renderScoreRecord();
+    showScreen("record");
+  }
+
+  function paintStudentNameBtn() {
+    const btn = $("#btn-student-name");
+    if (!btn) return;
+    const id = currentStudentId();
+    if (id) {
+      btn.hidden = false;
+      btn.textContent = id;
+      btn.title = "Score record";
+    } else {
+      btn.hidden = true;
+      btn.textContent = "";
+      btn.title = "";
     }
   }
   let currentScreen = "boot";
@@ -215,6 +426,7 @@
       locale: "en",
       currentSetId: null,
       sets: {},
+      scoreRows: [],
     };
   }
 
@@ -231,6 +443,7 @@
       parsed.voice = parsed.voice === "wizard" ? "grandpa" : "grandma";
     }
     if (!parsed.sets || typeof parsed.sets !== "object") parsed.sets = {};
+    if (!Array.isArray(parsed.scoreRows)) parsed.scoreRows = [];
     return parsed;
   }
 
@@ -418,6 +631,7 @@
     state = loadStateForStudent(id);
     state.studentId = id;
     state.displayName = id;
+    if (detail.progress) ingestBookProgress(detail.progress);
     if (memorySlim && memorySlim.sets && Object.keys(memorySlim.sets).length) {
       mergeRemoteProgress(memorySlim);
     }
@@ -432,6 +646,7 @@
       window.MRJ_WM_progress.resetSession();
     }
     pullSheet();
+    paintStudentNameBtn();
     if (currentScreen === "home") renderHome();
   }
 
@@ -585,6 +800,7 @@
       testKind: state.testKind,
       currentPackId: cur ? (cur.packId || "") : "",
       sets: sets,
+      scoreRows: mergeScoreRows(state.scoreRows || [], []).slice(0, SCORE_ROW_CAP),
     };
   }
 
@@ -609,6 +825,9 @@
       try { obj = JSON.parse(raw); } catch (e) { return; }
     }
     if (!obj || typeof obj !== "object" || !obj.sets) return;
+    if (Array.isArray(obj.scoreRows)) {
+      state.scoreRows = mergeScoreRows(state.scoreRows || [], obj.scoreRows);
+    }
     if (obj.voice) state.voice = obj.voice;
     if (obj.locale) state.locale = obj.locale;
     if (obj.studySize) state.studySize = obj.studySize;
@@ -893,9 +1112,10 @@
     const typing = name === "learn" || name === "test";
     const quiet = name === "boot" || name === "name" || name === "home";
     if (topbar) {
-      topbar.hidden = name === "boot";
-      topbar.classList.toggle("no-back", name === "home");
+      topbar.hidden = false;
+      topbar.classList.toggle("no-back", name === "home" || name === "boot");
     }
+    paintStudentNameBtn();
     back.hidden = name === "boot" || name === "home";
     voice.hidden = false;
     const tb = $("#teacher-bar");
@@ -3067,6 +3287,14 @@
       };
       set.finalMiss = missIds;
       stampCheck(set, quiz.score, quiz.items.length);
+      appendScoreRow({
+        at: set.final.at,
+        pack: set.packId,
+        kind: "final",
+        activity: "All-pack test",
+        score: quiz.score,
+        total: total,
+      });
       persist();
     }
   }
@@ -3100,6 +3328,18 @@
         set.winsC = empty.winsC;
         persist();
       }
+      const failSet = currentSet();
+      if (failSet) {
+        appendScoreRow({
+          at: Date.now(),
+          pack: failSet.packId,
+          kind: quiz.kind === "hard" ? "test_hard" : "test_easy",
+          activity: quiz.kind === "hard" ? "Hard test" : "Easy test",
+          score: quiz.score,
+          total: total,
+        });
+        persist();
+      }
       setTimeout(function () { startLearnAt("A"); }, 1600);
       return;
     }
@@ -3110,6 +3350,14 @@
         (quiz.items || []).map(function (item) { return item && item.id; }),
         pct
       );
+      appendScoreRow({
+        at: Date.now(),
+        pack: passedSet.packId,
+        kind: quiz.kind === "hard" ? "test_hard" : "test_easy",
+        activity: quiz.kind === "hard" ? "Hard test" : "Easy test",
+        score: quiz.score,
+        total: total,
+      });
       persist();
     }
     const missLine = misses.length
@@ -3402,7 +3650,14 @@
     if (!set || !window.PathLock) return;
     const need = playWords(set).length;
     if (typeof msg.items !== "number" || !(msg.items >= need)) return;
-    window.PathLock.markGameDone(set, msg.game);
+    const rec = window.PathLock.markGameDone(set, msg.game);
+    appendScoreRow({
+      at: rec && rec.at ? rec.at : Date.now(),
+      pack: set.packId,
+      kind: "game",
+      activity: activityLabelForKind("game", { game: msg.game }),
+      game: msg.game,
+    });
     persist();
     armedGame = "";
     renderSetHome();
@@ -3425,6 +3680,16 @@
     if (currentScreen === "intro") {
       renderSetHome();
       showScreen("set");
+      return;
+    }
+    if (currentScreen === "record") {
+      if (currentSet()) {
+        renderSetHome();
+        showScreen("set");
+      } else {
+        renderHome();
+        showScreen("home");
+      }
       return;
     }
     if (currentScreen === "learn" || currentScreen === "test") {
@@ -3516,6 +3781,8 @@
       persist();
     });
     $("#btn-back").addEventListener("click", goBack);
+    const nameBtn = $("#btn-student-name");
+    if (nameBtn) nameBtn.addEventListener("click", openScoreRecord);
     $$(".voice-btn").forEach(function (btn) {
       btn.addEventListener("click", function () {
         setVoice(btn.getAttribute("data-voice"));
@@ -3575,7 +3842,13 @@
       btn.addEventListener("click", function () {
         if (!currentStudentId()) return;
         const step = btn.getAttribute("data-jump");
-        if (!teacherNow() && !pathOpen(step)) return;
+        if (!teacherNow()) {
+          if (step === "test") {
+            jumpTo(step);
+            return;
+          }
+          if (!pathOpen(step)) return;
+        }
         jumpTo(step);
       });
     });
@@ -3593,7 +3866,6 @@
     if (skipStepBtn) skipStepBtn.addEventListener("click", skipStep);
     $("#btn-easy").addEventListener("click", function () {
       if (!currentStudentId()) return;
-      if (!pathOpen("test")) return;
       state.testKind = "easy";
       persist();
       renderSetHome();
@@ -3601,7 +3873,6 @@
     });
     $("#btn-hard").addEventListener("click", function () {
       if (!currentStudentId()) return;
-      if (!pathOpen("test")) return;
       state.testKind = "hard";
       persist();
       renderSetHome();
@@ -3611,14 +3882,12 @@
     const th = $("#btn-test-hard");
     if (te) te.addEventListener("click", function () {
       if (!currentStudentId()) return;
-      if (!pathOpen("test")) return;
       state.testKind = "easy";
       persist();
       startEasy();
     });
     if (th) th.addEventListener("click", function () {
       if (!currentStudentId()) return;
-      if (!pathOpen("test")) return;
       state.testKind = "hard";
       persist();
       startHard();
@@ -3835,6 +4104,11 @@
       dedupeSetsByPackId: dedupeSetsByPackId,
       findSetByPackId: findSetByPackId,
       packSlimFromSet: packSlimFromSet,
+      formatScoreRecordLine: formatScoreRecordLine,
+      scoreRowHasRealScore: scoreRowHasRealScore,
+      collectScoreRecordRows: collectScoreRecordRows,
+      mergeScoreRows: mergeScoreRows,
+      ingestBookProgress: ingestBookProgress,
       wordPic: wordPic,
       speak: speak,
       speakWW: speakWW,

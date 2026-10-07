@@ -1,3 +1,39 @@
+# CURSOR_RECEIPT — Student test open and score record
+
+Date: 2026-10-07
+Model: composer-2.5
+
+Signed-in students can open Test from the ribbon and use Easy or Hard without finishing Meet through Games. The All tile still requires a finished game. The signed-in id stays in the top-right name button on every screen. Tapping it opens a score record built from book progress, pack final and checkup data, and new finished tests and games stored in `progress_json` (`scoreRows`, cap 200).
+
+## Files
+
+| File | Change |
+|---|---|
+| `js/app.js` | Test path bypass for students, score record helpers, name button, record screen. |
+| `js/progress-merge.js` | Merge `scoreRows` on sync. |
+| `index.html` | `btn-student-name`, record screen, cache `20261007-testopen`. |
+| `css/app.css` | Top bar name button and record list. |
+| `version.json` | Build `20261007-testopen`. |
+| `scripts/test_open_and_name_test.js` | New regression tests. |
+| `scripts/path_lock_test.js` | Cache query bump. |
+| `scripts/start_slice_test.js` | Cache query bump. |
+| `scripts/dictation_audio_stop_test.js` | Cache query bump. |
+
+## Test
+
+```
+node scripts/test_open_and_name_test.js
+TEST_OPEN_AND_NAME_OK
+node scripts/start_slice_test.js
+START_SLICE_OK
+node scripts/count_buttons_visible_test.js
+COUNT_BUTTONS_VISIBLE_OK
+node scripts/path_lock_test.js
+PATH_LOCK_OK
+node scripts/progress_merge_test.js
+PROGRESS_MERGE_OK
+```
+
 # CURSOR_RECEIPT — Count buttons and seat start
 
 Date: 2026-10-07
