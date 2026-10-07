@@ -576,7 +576,7 @@
       }
     });
     const cur = currentSet();
-    const payload = {
+    return {
       v: 1,
       studentId: state.studentId,
       voice: state.voice,
@@ -586,15 +586,6 @@
       currentPackId: cur ? (cur.packId || "") : "",
       sets: sets,
     };
-    if (JSON.stringify(payload).length > 45000) {
-      const order = Object.keys(sets).sort(function (a, b) {
-        return (sets[a].lastPlayedAt || 0) - (sets[b].lastPlayedAt || 0);
-      });
-      for (let i = 0; i < order.length && JSON.stringify(payload).length > 45000; i++) {
-        sets[order[i]].finalMiss = [];
-      }
-    }
-    return payload;
   }
 
   function mergeRemoteProgress(raw) {

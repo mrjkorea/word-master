@@ -2,7 +2,6 @@
   "use strict";
 
   var PROGRAM = "word-master";
-  var MAX_PROGRESS_CHARS = 45000;
   var LS_KEY = "mrj.wm.progress";
   var SAVE_INTERVAL_MS = 17000;
   var hydrated = false;
@@ -227,21 +226,15 @@
     }, delay);
   }
 
-  function clampProgressJson(raw) {
-    var str = String(raw == null ? "" : raw);
-    if (str.length <= MAX_PROGRESS_CHARS) {
-      return { json: str, trimmed: false };
-    }
-    return { json: str.substring(0, MAX_PROGRESS_CHARS), trimmed: true };
-  }
-
   function buildPackedSave(body) {
     var mergedProgress = mergeSaveProgress(body.progress_json || "{}");
     var mergedBody = Object.assign({}, body, {
       progress_json: JSON.stringify(mergedProgress),
     });
-    var packed = clampProgressJson(mergedBody.progress_json || "{}");
-    return { body: mergedBody, packed: packed };
+    return {
+      body: mergedBody,
+      progressJson: mergedBody.progress_json || "{}",
+    };
   }
 
   function canonicalProgressJson(jsonStr) {
@@ -251,9 +244,9 @@
     return JSON.stringify(merge(parsed, parsed));
   }
 
-  function unchangedSinceLastSave(built) {
+  function unchangedSinceLastSave(progressJson) {
     if (!lastSuccessfulPackedJson) return false;
-    var next = canonicalProgressJson(built.packed.json);
+    var next = canonicalProgressJson(progressJson);
     if (next === lastSuccessfulPackedJson) return true;
     var merge = mergeFn();
     if (!merge) return false;
@@ -276,17 +269,16 @@
     }, wait);
   }
 
-  function afterSaveAttempt(body, packed, res, transport) {
+  function afterSaveAttempt(body, progressJson, res, transport) {
     var ok = !!(res && res.ok && res.saved !== false && !res.error);
     if (ok) {
       retryAttempt = 0;
       lastSaveError = "";
       lastRemoteSaveAt = Date.now();
-      var canonicalJson = canonicalProgressJson(packed.json);
-      var canonicalPacked = clampProgressJson(canonicalJson);
-      lastSuccessfulPackedJson = canonicalPacked.json;
-      serverProgressSnapshot = canonicalPacked.json;
-      body = Object.assign({}, body, { progress_json: canonicalPacked.json });
+      var canonicalJson = canonicalProgressJson(progressJson);
+      lastSuccessfulPackedJson = canonicalJson;
+      serverProgressSnapshot = canonicalJson;
+      body = Object.assign({}, body, { progress_json: canonicalJson });
       writeLocal(body);
       dispatchSaveStatus(true, res);
       if (pendingSave === body) pendingSave = null;
@@ -320,12 +312,8 @@
     }
 
     var built = buildPackedSave(body);
-    var outboundJson = canonicalProgressJson(built.packed.json);
-    var outboundPacked = clampProgressJson(outboundJson);
-    if (outboundPacked.trimmed && !options.forceUnload) {
-      dispatchSaveStatus(false, { error: "payload_trimmed" });
-    }
-    if (unchangedSinceLastSave({ packed: outboundPacked })) {
+    var outboundJson = canonicalProgressJson(built.progressJson);
+    if (unchangedSinceLastSave(outboundJson)) {
       if (pendingSave === body) pendingSave = null;
       dispatchSaveStatus(true, { skipped: true });
       return Promise.resolve({ ok: true, skipped: true });
@@ -345,7 +333,7 @@
       id: id,
       token: token,
       program: PROGRAM,
-      progress_json: outboundPacked.json,
+      progress_json: outboundJson,
     };
     var transport = {};
     if (options.forceUnload) {
@@ -359,7 +347,7 @@
     clearRateLimitTimer();
     return postRemote(req, transport).then(function (res) {
       inFlightSave = false;
-      var out = afterSaveAttempt(built.body, outboundPacked, res, transport);
+      var out = afterSaveAttempt(built.body, outboundJson, res, transport);
       if (pendingSave && pendingSave !== body) {
         scheduleRateLimitedFlush();
       }
@@ -469,7 +457,6 @@
     isReadyToSave: isReadyToSave,
     merge: root.MRJ_WM_merge,
     countKnownInProgress: countKnownInProgress,
-    maxProgressChars: MAX_PROGRESS_CHARS,
     program: PROGRAM,
     saveIntervalMs: SAVE_INTERVAL_MS,
     lastSaveError: function () { return lastSaveError; },
