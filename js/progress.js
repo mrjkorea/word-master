@@ -25,6 +25,17 @@
   var lastSuccessfulPackedJson = "";
   var lastRemoteSaveAt = 0;
   var unloadHooksInstalled = false;
+  var sessionSeq = 0;
+
+  function progressKeyForId(id) {
+    var k = studentStorageKey(id);
+    return k ? LS_KEY_PREFIX + k : null;
+  }
+
+  function saveInflightStale(reqSeq, reqId) {
+    return reqSeq !== sessionSeq
+      || studentStorageKey(authStudentId()) !== studentStorageKey(reqId);
+  }
 
   function mergeFn() {
     return root.MRJ_WM_merge
@@ -98,9 +109,10 @@
     }
   }
 
-  function writeLocal(payload) {
-    var norm = studentStorageKey(authStudentId());
-    var key = norm ? LS_KEY_PREFIX + norm : null;
+  function writeLocal(payload, forId) {
+    var sid = forId != null ? forId : authStudentId();
+    var norm = studentStorageKey(sid);
+    var key = progressKeyForId(sid);
     if (!key) return;
     try {
       var stored = Object.assign({}, payload || {}, { id: norm });
@@ -233,13 +245,14 @@
     }
   }
 
-  function scheduleRetry(body) {
+  function scheduleRetry(body, reqId, reqSeq) {
     clearRetryTimer();
     retryAttempt += 1;
     var delay = Math.min(30000, 2000 * Math.pow(2, Math.min(retryAttempt, 4)));
     retryTimer = setTimeout(function () {
       retryTimer = null;
-      flushSave(body, { isRetry: true });
+      if (saveInflightStale(reqSeq, reqId)) return;
+      flushSave(body, { isRetry: true, forId: reqId });
     }, delay);
   }
 
@@ -290,7 +303,7 @@
     return !!(res && res.error === "too_large");
   }
 
-  function afterSaveAttempt(body, progressJson, res, transport) {
+  function afterSaveAttempt(body, progressJson, res, transport, reqId, reqSeq) {
     var ok = !!(res && res.ok && res.saved !== false && !res.error);
     if (ok) {
       retryAttempt = 0;
@@ -300,7 +313,7 @@
       lastSuccessfulPackedJson = canonicalJson;
       serverProgressSnapshot = canonicalJson;
       body = Object.assign({}, body, { progress_json: canonicalJson });
-      writeLocal(body);
+      writeLocal(body, reqId);
       dispatchSaveStatus(true, res);
       if (pendingSave === body) pendingSave = null;
       return res;
@@ -319,7 +332,7 @@
       retryAttempt = 0;
       try {
         var localBody = Object.assign({}, body, { progress_json: progressJson });
-        writeLocal(localBody);
+        writeLocal(localBody, reqId);
       } catch (localErr) {}
       if (!transport || !transport.beacon) {
         dispatchSaveStatus(false, res);
@@ -329,15 +342,30 @@
     }
     if (!transport || !transport.beacon) {
       dispatchSaveStatus(false, res);
-      scheduleRetry(body);
+      scheduleRetry(body, reqId, reqSeq);
     }
     return res;
+  }
+
+  function finishStaleInflightSave(body, progressJson, res, reqId) {
+    inFlightSave = false;
+    var ok = !!(res && res.ok && res.saved !== false && !res.error);
+    if (ok) {
+      var canonicalJson = canonicalProgressJson(progressJson);
+      writeLocal(Object.assign({}, body, { progress_json: canonicalJson }), reqId);
+    }
+    if (pendingSave) scheduleRateLimitedFlush();
+    return { ok: false, error: "stale" };
   }
 
   function flushSave(body, options) {
     options = options || {};
     if (!body) body = pendingSave;
     if (!body) return Promise.resolve(null);
+    if (options.forId != null
+      && studentStorageKey(options.forId) !== studentStorageKey(authStudentId())) {
+      return Promise.resolve({ ok: false, error: "student_changed" });
+    }
     var id = authStudentId();
     var token = authToken();
     if (!id || !token) {
@@ -385,21 +413,31 @@
       }
     }
 
+    var reqId = id;
+    var reqSeq = sessionSeq;
     inFlightSave = true;
     clearRateLimitTimer();
     return postRemote(req, transport).then(function (res) {
+      if (saveInflightStale(reqSeq, reqId)) {
+        return finishStaleInflightSave(built.body, outboundJson, res, reqId);
+      }
       inFlightSave = false;
-      var out = afterSaveAttempt(built.body, outboundJson, res, transport);
+      var out = afterSaveAttempt(built.body, outboundJson, res, transport, reqId, reqSeq);
       if (pendingSave && pendingSave !== body) {
         scheduleRateLimitedFlush();
       }
       return out;
     }).catch(function () {
+      if (saveInflightStale(reqSeq, reqId)) {
+        inFlightSave = false;
+        if (pendingSave) scheduleRateLimitedFlush();
+        return { ok: false, error: "stale" };
+      }
       inFlightSave = false;
       lastSaveError = "network";
       if (!transport.beacon) {
         dispatchSaveStatus(false, { error: "network" });
-        scheduleRetry(built.body);
+        scheduleRetry(built.body, reqId, reqSeq);
       }
       if (pendingSave && pendingSave !== body) {
         scheduleRateLimitedFlush();
@@ -429,12 +467,18 @@
     }
     hydrated = false;
     loadDone = false;
+    var loadSeq = sessionSeq;
+    var loadId = id;
     return postRemote({
       action: "load_pack",
       id: id,
       token: token,
       program: PROGRAM,
     }).then(function (res) {
+      if (loadSeq !== sessionSeq
+        || studentStorageKey(authStudentId()) !== studentStorageKey(loadId)) {
+        return { ok: false, error: "stale" };
+      }
       loadDone = true;
       hydrated = !!(res && res.ok);
       if (res && res.ok && res.found && res.progress_json) {
@@ -448,6 +492,10 @@
       }
       return res;
     }).catch(function () {
+      if (loadSeq !== sessionSeq
+        || studentStorageKey(authStudentId()) !== studentStorageKey(loadId)) {
+        return { ok: false, error: "stale" };
+      }
       loadDone = true;
       hydrated = false;
       return { ok: false, error: "load_failed" };
@@ -455,6 +503,7 @@
   }
 
   function resetSession() {
+    sessionSeq += 1;
     hydrated = false;
     loadDone = false;
     pendingSave = null;

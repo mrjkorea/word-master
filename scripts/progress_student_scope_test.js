@@ -100,9 +100,244 @@ function resetForStudent(student) {
   });
 }
 
-function run() {
-  if (!hooks) fail("missing test hooks");
+function assertBNotLeaked(sentBodies, label) {
+  const keyB = progressLsKey(STUDENT_B);
+  if (store[keyB]) {
+    const raw = store[keyB];
+    if (raw.indexOf(MARKER_A) !== -1 || raw.indexOf("word_a_unique") !== -1) {
+      fail(label + ": B local cache contains A marker");
+    }
+  }
+  sentBodies.forEach(function (entry) {
+    if (entry.id !== studentStorageKey(STUDENT_B) && entry.id !== STUDENT_B) return;
+    const pj = entry.progress_json || "";
+    if (pj.indexOf(MARKER_A) !== -1 || pj.indexOf("word_a_unique") !== -1) {
+      fail(label + ": save under B contains A data");
+    }
+  });
+}
 
+function testLateSaveResponse(order) {
+  const sentBodies = [];
+  let releaseA = null;
+  global.fetch = function (_url, opts) {
+    const body = JSON.parse(opts.body);
+    if (body.action === "save_pack") {
+      sentBodies.push({ id: body.id, progress_json: body.progress_json || "" });
+      if (body.id === STUDENT_A && !releaseA) {
+        return new Promise(function (resolve) {
+          releaseA = function () {
+            resolve({
+              json: function () {
+                return Promise.resolve({ ok: true, saved: true });
+              },
+            });
+          };
+        });
+      }
+      return Promise.resolve({
+        json: function () {
+          return Promise.resolve({ ok: true, saved: true });
+        },
+      });
+    }
+    if (body.action === "load_pack") {
+      return Promise.resolve({
+        json: function () {
+          return Promise.resolve({ ok: true, found: false });
+        },
+      });
+    }
+    return Promise.resolve({
+      json: function () {
+        return Promise.resolve({ ok: true, saved: true });
+      },
+    });
+  };
+  currentStudent = STUDENT_A;
+  hooks.resetThrottleState();
+  prog.resetSession();
+  hooks.setSaveIntervalMs(0);
+  const payloadA = payloadForStudent(MARKER_A, "word_a_unique");
+  const tick = function () {
+    return new Promise(function (r) { setTimeout(r, 20); });
+  };
+  return prog.load().then(function () {
+    hooks.markSessionReady();
+    const aSave = prog.save({ progress_json: payloadA, screen: "home", pack_id: MARKER_A });
+    return tick().then(function () {
+      prog.resetSession();
+      currentStudent = STUDENT_B;
+      hooks.resetThrottleState();
+      hooks.setSaveIntervalMs(0);
+      const afterSwitch = order === "resp-before-load"
+        ? (function () {
+          releaseA();
+          return aSave.then(tick).then(function () { return prog.load(); });
+        }())
+        : prog.load().then(function () {
+          releaseA();
+          return aSave;
+        }).then(tick);
+      return afterSwitch.then(function () {
+        hooks.markSessionReady();
+        hooks.resetThrottleState();
+        hooks.setSaveIntervalMs(0);
+        const slimB = JSON.stringify({
+          v: 1,
+          sets: { nouns_empty: { lastPlayedAt: 2 } },
+          scoreRows: [],
+        });
+        return prog.save({ progress_json: slimB, screen: "home", pack_id: "nouns_empty" }).then(function () {
+          assertBNotLeaked(sentBodies, "late-save-" + order);
+        });
+      });
+    });
+  });
+}
+
+function testLateSaveFailureRetry() {
+  const sentBodies = [];
+  let failA = null;
+  const realSetTimeout = setTimeout;
+  global.setTimeout = function (fn, ms) {
+    return realSetTimeout(fn, Math.min(ms, 30));
+  };
+  global.fetch = function (_url, opts) {
+    const body = JSON.parse(opts.body);
+    if (body.action === "save_pack") {
+      sentBodies.push({ id: body.id, progress_json: body.progress_json || "" });
+      if (body.id === STUDENT_A && !failA) {
+        return new Promise(function (_res, rej) {
+          failA = function () { rej(new Error("net")); };
+        });
+      }
+      return Promise.resolve({
+        json: function () {
+          return Promise.resolve({ ok: true, saved: true });
+        },
+      });
+    }
+    if (body.action === "load_pack") {
+      return Promise.resolve({
+        json: function () {
+          return Promise.resolve({
+            ok: true,
+            found: true,
+            progress_json: JSON.stringify({ v: 1, sets: { verbs_server: { winsA: { b0: 1 } } } }),
+          });
+        },
+      });
+    }
+    return Promise.resolve({
+      json: function () {
+        return Promise.resolve({ ok: true, saved: true });
+      },
+    });
+  };
+  currentStudent = STUDENT_A;
+  hooks.resetThrottleState();
+  prog.resetSession();
+  hooks.setSaveIntervalMs(0);
+  const payloadA = payloadForStudent(MARKER_A, "word_a_unique");
+  const tick = function (ms) {
+    return new Promise(function (r) { realSetTimeout(r, ms || 50); });
+  };
+  return prog.load().then(function () {
+    hooks.markSessionReady();
+    prog.save({ progress_json: payloadA, screen: "home", pack_id: MARKER_A });
+    return tick().then(function () {
+      prog.resetSession();
+      currentStudent = STUDENT_B;
+      return prog.load().then(function () {
+        hooks.markSessionReady();
+        failA();
+        return tick(300).then(function () {
+          const bSaves = sentBodies.filter(function (e) {
+            return e.id === STUDENT_B || e.id === studentStorageKey(STUDENT_B);
+          });
+          if (bSaves.length) fail("late-fail-retry: save posted under B");
+          assertBNotLeaked(sentBodies, "late-fail-retry");
+          global.setTimeout = realSetTimeout;
+        });
+      });
+    });
+  });
+}
+
+function testLateLoad() {
+  const sentBodies = [];
+  let relA = null;
+  global.fetch = function (_url, opts) {
+    const body = JSON.parse(opts.body);
+    if (body.action === "save_pack") {
+      sentBodies.push({ id: body.id, progress_json: body.progress_json || "" });
+      return Promise.resolve({
+        json: function () {
+          return Promise.resolve({ ok: true, saved: true });
+        },
+      });
+    }
+    if (body.action === "load_pack" && body.id === STUDENT_A) {
+      return new Promise(function (resolve) {
+        relA = function () {
+          resolve({
+            json: function () {
+              return Promise.resolve({
+                ok: true,
+                found: true,
+                progress_json: payloadForStudent(MARKER_A, "word_a_unique"),
+              });
+            },
+          });
+        };
+      });
+    }
+    if (body.action === "load_pack") {
+      return Promise.resolve({
+        json: function () {
+          return Promise.resolve({ ok: true, found: false });
+        },
+      });
+    }
+    return Promise.resolve({
+      json: function () {
+        return Promise.resolve({ ok: true, saved: true });
+      },
+    });
+  };
+  currentStudent = STUDENT_A;
+  hooks.resetThrottleState();
+  prog.resetSession();
+  hooks.setSaveIntervalMs(0);
+  const payloadA = payloadForStudent(MARKER_A, "word_a_unique");
+  const tick = function (ms) {
+    return new Promise(function (r) { setTimeout(r, ms || 30); });
+  };
+  const la = prog.load();
+  return tick().then(function () {
+    prog.resetSession();
+    currentStudent = STUDENT_B;
+    return prog.load().then(function () {
+      hooks.markSessionReady();
+      relA();
+      return la.then(function () {
+        return tick().then(function () {
+          const slimB = JSON.stringify({
+            v: 1,
+            sets: { nouns_empty: { lastPlayedAt: 2 } },
+            scoreRows: [],
+          });
+          return prog.save({ progress_json: slimB, screen: "home", pack_id: "nouns_empty" }).then(function () {
+            assertBNotLeaked(sentBodies, "late-load");
+          });
+        });
+      });
+    });
+  });
+}
+
+function runBasicScopeTest() {
   const payloadA = payloadForStudent(MARKER_A, "word_a_unique");
   const payloadB = payloadForStudent(MARKER_B, "word_b_unique");
 
@@ -161,13 +396,34 @@ function run() {
             if (mergedStr.indexOf(MARKER_A) === -1 || mergedStr.indexOf("word_a_unique") === -1) {
               fail("student A signing back in did not restore A local progress");
             }
-            console.log("PROGRESS_STUDENT_SCOPE_OK");
-            process.exit(0);
+            return undefined;
           });
         });
       });
     });
   });
+}
+
+function run() {
+  if (!hooks) fail("missing test hooks");
+
+  return runBasicScopeTest()
+    .then(function () {
+      return testLateSaveResponse("resp-after-load");
+    })
+    .then(function () {
+      return testLateSaveResponse("resp-before-load");
+    })
+    .then(function () {
+      return testLateSaveFailureRetry();
+    })
+    .then(function () {
+      return testLateLoad();
+    })
+    .then(function () {
+      console.log("PROGRESS_STUDENT_SCOPE_OK");
+      process.exit(0);
+    });
 }
 
 run().catch(function (e) {
