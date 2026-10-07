@@ -521,6 +521,13 @@ body.is-teacher .rib { cursor: pointer; }
 }
 .standing-sync { color: var(--muted); font-weight: 600; font-size: 12px; }
 .save-warn { color: #9a3412; }
+.progress-too-large-warn {
+  margin: 8px 12px 0;
+  font-size: 14px;
+  line-height: 1.4;
+  color: #9a3412;
+  text-align: center;
+}
 .standing-hint, .standing-slice {
   margin: 8px 0 0;
   font-size: 14px;
