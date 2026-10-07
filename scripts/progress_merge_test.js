@@ -192,5 +192,30 @@ if (!snap.scoreRows || snap.scoreRows.length !== 1000) {
   process.exit(1);
 }
 
+const voiceOut = merge(
+  { v: 1, voice: "grandma", voiceAt: 500, sets: {} },
+  { v: 1, voice: "us_m", voiceAt: 100, sets: {} }
+);
+if (voiceOut.voice !== "grandma" || voiceOut.voiceAt !== 500) {
+  console.error("voiceAt merge failed", voiceOut);
+  process.exit(1);
+}
+
+const allLocal = {
+  v: 1,
+  studySize: 0,
+  sets: { nouns100: { winsA: {}, lastPlayedAt: 400 } },
+};
+const allRemote = {
+  v: 1,
+  studySize: 10,
+  sets: { nouns100: { winsA: {}, lastPlayedAt: 100 } },
+};
+const allOut = merge(allLocal, allRemote);
+if (allOut.studySize !== 0) {
+  console.error("studySize 0 should not snap back", allOut.studySize);
+  process.exit(1);
+}
+
 console.log("PROGRESS_MERGE_OK");
 process.exit(0);

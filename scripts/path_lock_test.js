@@ -132,7 +132,7 @@ if (index.indexOf("js/path-lock.js") > index.indexOf("js/app.js")) {
   fail("path-lock.js must load before app.js");
 }
 if (index.indexOf("js/path-lock.js?v=20261001-lock") === -1) fail("path-lock cache");
-if (index.indexOf("js/app.js?v=20261007-allrows-3") === -1) fail("app cache");
+if (index.indexOf("js/app.js?v=20261008-path") === -1) fail("app cache");
 
 const { bootApp } = require("./load_app_for_test");
 const api = bootApp();
@@ -153,10 +153,14 @@ function doneMsg(game, items, finished) {
 }
 api.armGame("leapfrog");
 api.deliverGameDone(doneMsg("leapfrog", 1));
-if (api.currentSet().roundGame && api.currentSet().roundGame.done) {
-  fail("items below the round length marked the game done");
+if (!api.currentSet().roundGame || api.currentSet().roundGame.done !== true) {
+  fail("one finished item should mark the game done");
 }
-if (PathLock.can(api.currentSet(), "test").ok) fail("items below the round length opened the test");
+if (!PathLock.can(api.currentSet(), "test").ok) fail("finished game should open the test");
+ready.roundGame = { done: false, game: "", at: 0 };
+ready.roundGames = {};
+PathLock.syncRound(ready);
+api.armGame("leapfrog");
 api.deliverGameDone(doneMsg("leapfrog", "2"));
 if (api.currentSet().roundGame && api.currentSet().roundGame.done) fail("string items opened the test");
 api.deliverGameDone({ type: "mrj-wm-game-done", game: "leapfrog", finished: true });
@@ -170,8 +174,10 @@ if (api.currentSet().roundGame && api.currentSet().roundGame.done) fail("unknown
 api.leaveGame();
 api.deliverGameDone(doneMsg("leapfrog", 2));
 if (api.currentSet().roundGame && api.currentSet().roundGame.done) fail("a message off the game screen opened the test");
-if (PathLock.can(api.currentSet(), "test").ok) fail("test opened without a full round");
 
+ready.roundGame = { done: false, game: "", at: 0 };
+ready.roundGames = {};
+PathLock.syncRound(ready);
 api.armGame("leapfrog");
 api.deliverGameDone(doneMsg("leapfrog", 2));
 if (!api.currentSet().roundGame || api.currentSet().roundGame.done !== true || api.currentSet().roundGame.game !== "leapfrog") {

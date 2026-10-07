@@ -119,7 +119,6 @@
 
   function studentLocked(set, step) {
     if (teacherNow()) return false;
-    if (step === "test" && currentStudentId()) return false;
     if (!set || !window.PathLock) return true;
     try { return !window.PathLock.can(set, step).ok; } catch (e) { return true; }
   }
@@ -474,7 +473,8 @@
     if (!parsed.accountName) parsed.accountName = "";
     if (!parsed.accountPin) parsed.accountPin = "";
     if (!parsed.testKind) parsed.testKind = "easy";
-    if (!parsed.studySize) parsed.studySize = 10;
+    var ss = Number(parsed.studySize);
+    if (!(ss === 0 || ss === 5 || ss === 10 || ss === 15 || ss === 20)) parsed.studySize = 10;
     if (!parsed.voice || parsed.voice === "man") parsed.voice = "us_m";
     if (parsed.voice === "woman") parsed.voice = "us_f";
     if (parsed.voice === "maya" || parsed.voice === "wizard") {
@@ -843,6 +843,7 @@
       v: 1,
       studentId: state.studentId,
       voice: state.voice,
+      voiceAt: state.voiceAt || 0,
       locale: state.locale,
       studySize: state.studySize,
       testKind: state.testKind,
@@ -877,8 +878,12 @@
       state.scoreRows = mergeScoreRows(state.scoreRows || [], obj.scoreRows);
     }
     if (obj.voice) state.voice = obj.voice;
+    if (obj.voiceAt != null) state.voiceAt = Number(obj.voiceAt) || 0;
     if (obj.locale) state.locale = obj.locale;
-    if (obj.studySize) state.studySize = obj.studySize;
+    if (obj.studySize != null) {
+      var ss = Number(obj.studySize);
+      if (ss === 0 || ss === 5 || ss === 10 || ss === 15 || ss === 20) state.studySize = ss;
+    }
     if (obj.testKind) state.testKind = obj.testKind;
     if (!obj.v && obj.currentSetId) {
       state.sets = obj.sets;
@@ -1181,6 +1186,7 @@
   function setVoice(code) {
     const ok = { us_m: 1, us_f: 1, uk_m: 1, uk_f: 1, grandma: 1, leo: 1, grandpa: 1, robot: 1 };
     state.voice = ok[code] ? code : "us_m";
+    state.voiceAt = Date.now();
     persist();
     $$(".voice-btn").forEach(function (btn) {
       btn.setAttribute("aria-pressed", btn.getAttribute("data-voice") === state.voice ? "true" : "false");
@@ -1634,9 +1640,22 @@
   let sheetSync = { ok: null, at: 0, localOnly: false };
   let tap = blankTap();
 
-  function studySize() {
-    const n = Number(state.studySize);
-    return STUDY_SIZES.indexOf(n) >= 0 ? n : 10;
+  function studySize(set) {
+    set = set || currentSet();
+    const raw = Number(state.studySize);
+    if (raw === 0) {
+      const total = set && set.words ? set.words.length : 0;
+      return total > 0 ? total : 0;
+    }
+    return STUDY_SIZES.indexOf(raw) >= 0 ? raw : 10;
+  }
+
+  function sliceCount(set, startNumber) {
+    set = set || currentSet();
+    const total = set && set.words ? set.words.length : 0;
+    const start = Math.max(1, Math.floor(Number(startNumber)) || 1);
+    if (Number(state.studySize) === 0) return Math.max(0, total - start + 1);
+    return studySize(set);
   }
 
   function batchWords(set) {
@@ -1700,7 +1719,7 @@
   function chooseStart(set, startNumber) {
     set = set || currentSet();
     if (!set) return null;
-    const slice = window.StartSlice.sliceFrom(set.words || [], startNumber, studySize());
+    const slice = window.StartSlice.sliceFrom(set.words || [], startNumber, sliceCount(set, startNumber));
     set.startNumber = slice.startNumber;
     set.meetLock = slice.ids.slice();
     set.lastPlayedAt = Date.now();
@@ -1714,7 +1733,7 @@
     if (!set) return;
     if (set.startNumber) {
       if (!Array.isArray(set.meetLock) || !set.meetLock.length) {
-        const slice = window.StartSlice.sliceFrom(set.words || [], set.startNumber, studySize());
+        const slice = window.StartSlice.sliceFrom(set.words || [], set.startNumber, sliceCount(set, set.startNumber));
         set.startNumber = slice.startNumber;
         set.meetLock = slice.ids.slice();
         syncPathRound(set);
@@ -2102,13 +2121,12 @@
     if (!host) return;
     host.innerHTML = "";
     const max = set && set.words ? set.words.length : 20;
-    const current = Math.min(studySize(), max);
     STUDY_SIZES.forEach(function (n) {
       const btn = document.createElement("button");
       btn.type = "button";
       btn.textContent = String(n);
       btn.disabled = n > max;
-      btn.classList.toggle("on", n === current);
+      btn.classList.toggle("on", Number(state.studySize) === n);
       btn.addEventListener("click", function () {
         if (n > max) return;
         state.studySize = n;
@@ -2218,8 +2236,9 @@
     const doingCount = seats.filter(function (s) { return s.state.indexOf("doing") !== -1; }).length;
     const total = words.length;
     const nextIds = [];
-    const nextLimit = studySize();
-    for (let ni = 0; ni < words.length && nextIds.length < nextLimit; ni++) {
+    const allMode = Number(state.studySize) === 0;
+    const nextLimit = studySize(set);
+    for (let ni = 0; ni < words.length && (allMode || nextIds.length < nextLimit); ni++) {
       if (!window.StartSlice.isGreen(words[ni], set)) nextIds.push(words[ni].id);
     }
     const nextWords = window.MeetLock.wordsForLock(words, nextIds);
@@ -2290,44 +2309,31 @@
   function renderAllTile() {
     const slot = $("#seat-all-slot");
     if (!slot) return;
+    const set = currentSet();
     slot.innerHTML = "";
-    slot.setAttribute("data-all-open", "");
     const all = document.createElement("button");
     all.type = "button";
     all.className = "seat seat-all";
     all.textContent = "All";
-    all.title = "Test every word";
+    all.title = "Study every word in the pack";
     all.setAttribute("aria-label", "All words");
-    all.setAttribute("aria-expanded", "false");
+    all.classList.toggle("on", Number(state.studySize) === 0);
     all.addEventListener("click", function () {
       if (!currentStudentId()) return;
-      if (!pathOpen("test")) return;
-      showAllChoices(slot);
+      if (!set) return;
+      state.studySize = 0;
+      chooseStart(set, 1);
+      renderSetHome();
     });
     slot.appendChild(all);
   }
 
-  function showAllChoices(slot) {
-    if (!slot || slot.getAttribute("data-all-open") === "1") return;
-    slot.setAttribute("data-all-open", "1");
-    const all = slot.children && slot.children[0];
-    if (all && all.setAttribute) all.setAttribute("aria-expanded", "true");
-    function choice(label, start) {
-      const btn = document.createElement("button");
-      btn.type = "button";
-      btn.className = "seat seat-all-choice";
-      btn.textContent = label;
-      btn.addEventListener("click", function () {
-        if (!currentStudentId()) return;
-        if (!pathOpen("test")) return;
-        state.finalTest = true;
-        persist();
-        start(true);
-      });
-      slot.appendChild(btn);
-    }
-    choice("Easy", startEasy);
-    choice("Hard", startHard);
+  function markRoundGameDone(kind) {
+    const set = currentSet();
+    if (!set || !window.PathLock) return;
+    window.PathLock.markGameDone(set, kind);
+    persist();
+    if (currentSet() === set) renderSetHome();
   }
 
   let introCurId = null;
@@ -2360,7 +2366,7 @@
     if (!set.intro) set.intro = {};
     if (set.startNumber) {
       if (!Array.isArray(set.meetLock) || !set.meetLock.length) {
-        const slice = window.StartSlice.sliceFrom(set.words || [], set.startNumber, studySize());
+        const slice = window.StartSlice.sliceFrom(set.words || [], set.startNumber, sliceCount(set, set.startNumber));
         set.startNumber = slice.startNumber;
         set.meetLock = slice.ids.slice();
         syncPathRound(set);
@@ -3520,6 +3526,7 @@
         clearInterval(matchGame.timer);
         $("#match-win").hidden = false;
         burst(t("match_win"));
+        markRoundGameDone("match");
       }
     } else {
       setTimeout(function () {
@@ -3587,6 +3594,7 @@
     $("#listen-choices").hidden = true;
     $("#listen-score").hidden = false;
     $("#listen-score-line").textContent = t("score_line", { score: listenGame.score, total: listenGame.items.length });
+    markRoundGameDone("listen");
   }
 
   function quizItemsFromSet() {
@@ -3710,8 +3718,7 @@
     if (msg.finished !== true) return;
     const set = currentSet();
     if (!set || !window.PathLock) return;
-    const need = playWords(set).length;
-    if (typeof msg.items !== "number" || !(msg.items >= need)) return;
+    if (typeof msg.items !== "number" || !(msg.items >= 1)) return;
     const rec = window.PathLock.markGameDone(set, msg.game);
     appendScoreRow({
       at: rec && rec.at ? rec.at : Date.now(),
@@ -3904,13 +3911,7 @@
       btn.addEventListener("click", function () {
         if (!currentStudentId()) return;
         const step = btn.getAttribute("data-jump");
-        if (!teacherNow()) {
-          if (step === "test") {
-            jumpTo(step);
-            return;
-          }
-          if (!pathOpen(step)) return;
-        }
+        if (!teacherNow() && !pathOpen(step)) return;
         jumpTo(step);
       });
     });
@@ -3928,6 +3929,7 @@
     if (skipStepBtn) skipStepBtn.addEventListener("click", skipStep);
     $("#btn-easy").addEventListener("click", function () {
       if (!currentStudentId()) return;
+      if (!pathOpen("test")) return;
       state.testKind = "easy";
       persist();
       renderSetHome();
@@ -3935,6 +3937,7 @@
     });
     $("#btn-hard").addEventListener("click", function () {
       if (!currentStudentId()) return;
+      if (!pathOpen("test")) return;
       state.testKind = "hard";
       persist();
       renderSetHome();
@@ -3944,12 +3947,14 @@
     const th = $("#btn-test-hard");
     if (te) te.addEventListener("click", function () {
       if (!currentStudentId()) return;
+      if (!pathOpen("test")) return;
       state.testKind = "easy";
       persist();
       startEasy();
     });
     if (th) th.addEventListener("click", function () {
       if (!currentStudentId()) return;
+      if (!pathOpen("test")) return;
       state.testKind = "hard";
       persist();
       startHard();
@@ -4156,6 +4161,13 @@
       getQuiz: function () { return quiz; },
       PASS_PCT: PASS_PCT,
       chooseStart: chooseStart,
+      studySize: studySize,
+      sliceCount: sliceCount,
+      pathOpen: pathOpen,
+      studentLocked: studentLocked,
+      markRoundGameDone: markRoundGameDone,
+      getState: function () { return state; },
+      setStudySize: function (n) { state.studySize = n; },
       markPassed: function (set, ids, pct) {
         window.StartSlice.markPassed(set, ids, pct);
       },

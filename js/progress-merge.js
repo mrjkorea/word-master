@@ -69,7 +69,7 @@
 
   function validStudySize(n) {
     n = Number(n);
-    return n === 5 || n === 10 || n === 15 || n === 20;
+    return n === 0 || n === 5 || n === 10 || n === 15 || n === 20;
   }
 
   function pickStudySize(local, remote, localAt, remoteAt) {
@@ -78,6 +78,21 @@
     if (validStudySize(newer && newer.studySize)) return Number(newer.studySize);
     if (validStudySize(older && older.studySize)) return Number(older.studySize);
     return 10;
+  }
+
+  function pickVoice(local, remote) {
+    var la = local && local.voiceAt != null ? Number(local.voiceAt) : null;
+    var ra = remote && remote.voiceAt != null ? Number(remote.voiceAt) : null;
+    if (la != null && ra != null) {
+      if (la >= ra) return { voice: local.voice || "us_m", voiceAt: la };
+      return { voice: remote.voice || "us_m", voiceAt: ra };
+    }
+    if (la != null) return { voice: local.voice || "us_m", voiceAt: la };
+    if (ra != null) return { voice: remote.voice || "us_m", voiceAt: ra };
+    return {
+      voice: (remote && remote.voice) || (local && local.voice) || "us_m",
+      voiceAt: 0,
+    };
   }
 
   function mergeShallowObjects(a, b) {
@@ -242,10 +257,12 @@
         }
       }
     }
+    var voicePick = pickVoice(local, remote);
     return {
       v: 1,
       studentId: base.studentId || other.studentId || "",
-      voice: base.voice || other.voice || "us_m",
+      voice: voicePick.voice,
+      voiceAt: voicePick.voiceAt,
       locale: base.locale || other.locale || "en",
       studySize: pickStudySize(local, remote, localAt, remoteAt),
       testKind: base.testKind || other.testKind || "easy",

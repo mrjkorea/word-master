@@ -453,3 +453,44 @@ DICTATION_AUDIO_STOP_OK
 ```
 
 Browser on `http://127.0.0.1:8812/index.html?mode=student&pack=nouns100`: student bar hidden. One Leap Frog word then Back left the test locked. Dying at 4/10 left the test locked. Finishing all 10 words returned to the set, showed "You finished a game — the test is open", and Easy opened the test. The parent only accepts `items` of at least 10, and the iframe was blanked by that accept path, so the game posted the full round. Teacher `?mode=teacher` shows the jump bar.
+
+# CURSOR_RECEIPT — Path lock, All tile, voices
+
+Date: 2026-10-08
+Model: composer-2.5
+
+Restored student test gating: Meet, Learn, Dictation, Write, then one finished game level. Removed the signed-in test bypass. Ribbon Test and Easy/Hard use `pathOpen("test")`. Match and Listen call `PathLock.markGameDone` when the round completes. `deliverGameDone` accepts `finished: true` with `items >= 1`. All seat sets `studySize` 0 (full pack via `sliceCount`) without path lock or starting a test. Voice picks use `voiceAt` on merge. Pack search: sentence "Nature on the tree" not found in this repo (no pack JSON edits).
+
+## Files
+
+| File | Change |
+|---|---|
+| `js/app.js` | Path lock, All tile, match/listen game done, voiceAt, studySize 0 |
+| `js/progress-merge.js` | `validStudySize` 0, `pickVoice` / `voiceAt` |
+| `index.html`, `version.json` | Build `20261008-path` |
+| `scripts/test_open_and_name_test.js` | Student cannot open test without path; runtime checks |
+| `scripts/path_lock_test.js` | `items >= 1` game done |
+| `scripts/progress_merge_test.js` | voiceAt and studySize 0 merge |
+| `scripts/load_app_for_test.js` | `bootApp({ mode: "student" })` |
+| `scripts/start_slice_test.js`, `scripts/dictation_audio_stop_test.js` | Cache bump |
+
+## Test
+
+```
+node scripts/test_open_and_name_test.js
+TEST_OPEN_AND_NAME_OK
+node scripts/path_lock_test.js
+PATH_LOCK_OK
+node scripts/progress_merge_test.js
+PROGRESS_MERGE_OK
+node scripts/all_tile_test.js
+ALL_TILE_OK
+node scripts/start_slice_test.js
+START_SLICE_OK
+node scripts/count_buttons_visible_test.js
+COUNT_BUTTONS_VISIBLE_OK
+node scripts/dictation_audio_stop_test.js
+DICTATION_AUDIO_STOP_OK
+```
+
+Not pushed.

@@ -13,10 +13,10 @@ const root = path.join(__dirname, "..");
 const index = fs.readFileSync(path.join(root, "index.html"), "utf8");
 const app = fs.readFileSync(path.join(root, "js/app.js"), "utf8");
 
-if (index.indexOf("css/app.css?v=20261007-allrows-3") === -1) fail("css cache");
-if (index.indexOf("js/app.js?v=20261007-allrows-3") === -1) fail("app cache");
-if (index.indexOf("js/progress-merge.js?v=20261007-allrows-3") === -1) fail("progress-merge cache");
-if (index.indexOf("js/progress.js?v=20261007-allrows-3") === -1) fail("progress cache");
+if (index.indexOf("css/app.css?v=20261008-path") === -1) fail("css cache");
+if (index.indexOf("js/app.js?v=20261008-path") === -1) fail("app cache");
+if (index.indexOf("js/progress-merge.js?v=20261008-path") === -1) fail("progress-merge cache");
+if (index.indexOf("js/progress.js?v=20261008-path") === -1) fail("progress cache");
 if (index.indexOf('id="btn-student-name"') === -1) fail("missing top-right name button");
 if (index.indexOf("data-mrj-own-record") === -1) fail("name button missing data-mrj-own-record");
 
@@ -28,30 +28,106 @@ if (nameAt > topbarEnd || nameAt > helloAt) {
   fail("name button must live in the top bar, not on the home hello line");
 }
 
-function mustNotGateTest(needle, label) {
+if (app.indexOf('step === "test" && currentStudentId()') !== -1) {
+  fail("studentLocked must not bypass test for signed-in students");
+}
+
+function mustGateTest(needle, label) {
   const start = app.indexOf(needle);
   if (start === -1) fail("missing handler for " + label);
   const slice = app.slice(start, start + 700);
-  if (slice.indexOf('pathOpen("test")') !== -1) {
-    fail(label + " still requires pathOpen(\"test\")");
+  if (slice.indexOf('pathOpen("test")') === -1) {
+    fail(label + " must call pathOpen(\"test\")");
   }
 }
 
-mustNotGateTest('$("#btn-easy").addEventListener("click"', "btn-easy");
-mustNotGateTest('$("#btn-hard").addEventListener("click"', "btn-hard");
-mustNotGateTest('$("#btn-test-easy")', "btn-test-easy");
-mustNotGateTest('$("#btn-test-hard")', "btn-test-hard");
+mustGateTest('$("#btn-easy").addEventListener("click"', "btn-easy");
+mustGateTest('$("#btn-hard").addEventListener("click"', "btn-hard");
+mustGateTest('$("#btn-test-easy")', "btn-test-easy");
+mustGateTest('$("#btn-test-hard")', "btn-test-hard");
 
-const jumpBlock = app.slice(app.indexOf('$$("[data-jump]")'), app.indexOf('$$("[data-jump]")') + 900);
-if (jumpBlock.indexOf('step === "test"') === -1) {
-  fail("ribbon Test must bypass pathOpen for students");
+const jumpBlock = app.slice(app.indexOf('$$("[data-jump]")'), app.indexOf('$$("[data-jump]")') + 500);
+if (jumpBlock.indexOf('if (step === "test")') !== -1 && jumpBlock.indexOf("jumpTo(step)") < jumpBlock.indexOf('step === "test"')) {
+  fail("ribbon Test must not bypass pathOpen");
 }
-if (/step === "test"[\s\S]{0,120}pathOpen\("test"\)/.test(jumpBlock)) {
-  fail("ribbon Test still calls pathOpen(\"test\") for students");
-}
+if (jumpBlock.indexOf('pathOpen(step)') === -1) fail("ribbon jumps must use pathOpen(step)");
 
 const { bootApp } = require("./load_app_for_test");
-const api = bootApp();
+
+function bootStudent() {
+  global.MRJ_AUTH = { student: function () { return "tester"; } };
+  return bootApp({ mode: "student" });
+}
+
+const api = bootStudent();
+if (!api.pathOpen || !api.studentLocked) fail("WM_TEST missing path helpers");
+
+function wordsOf(n) {
+  const words = [];
+  for (let i = 1; i <= n; i++) words.push({ id: "w" + i, en: "word" + i, ko: "ko" + i });
+  return words;
+}
+
+const fresh = {
+  id: "set_fresh",
+  packId: "nouns100",
+  title: "Fresh",
+  words: wordsOf(2),
+  meetLock: ["w1", "w2"],
+  intro: {},
+  winsA: {},
+  winsB: {},
+  winsC: {},
+};
+api.activateSet(fresh);
+if (!api.studentLocked(api.currentSet(), "test")) fail("fresh student should see test locked");
+if (api.pathOpen("test")) fail("fresh student must not open test");
+
+const PathLock = require("../js/path-lock.js");
+function meet(set) {
+  const ids = set.meetLock.slice();
+  set.tapmapKey = ids.join(",");
+  ids.forEach(function (id) { set.intro[id] = true; });
+}
+function wins(set, bucket) {
+  set.meetLock.forEach(function (id) { bucket[id] = 2; });
+}
+const ready = {
+  id: "set_ready",
+  packId: "nouns100",
+  title: "Ready",
+  words: wordsOf(2),
+  meetLock: ["w1", "w2"],
+  intro: {},
+  tapmapKey: "",
+  winsA: {},
+  winsB: {},
+  winsC: {},
+};
+meet(ready);
+wins(ready, ready.winsA);
+wins(ready, ready.winsB);
+wins(ready, ready.winsC);
+api.activateSet(ready);
+if (!PathLock.can(api.currentSet(), "games").ok) fail("fixture did not open games");
+if (PathLock.can(api.currentSet(), "test").ok) fail("test opened before a game");
+api.markRoundGameDone("match");
+if (!PathLock.can(api.currentSet(), "test").ok) fail("steps plus game should open test");
+if (!api.pathOpen("test")) fail("pathOpen(test) should succeed after game");
+
+api.setStudySize(0);
+api.chooseStart(api.currentSet(), 1);
+if (api.currentSet().meetLock.length !== 2) {
+  fail("All should lock every word " + api.currentSet().meetLock.length);
+}
+
+const merge = require("../js/progress-merge.js");
+const merged = global.MRJ_WM_merge(
+  { v: 1, voice: "grandma", voiceAt: 200, sets: {} },
+  { v: 1, voice: "us_m", voiceAt: 100, sets: {} }
+);
+if (merged.voice !== "grandma") fail("voice merge kept old voice " + merged.voice);
+
 if (!api.formatScoreRecordLine || !api.scoreRowHasRealScore) {
   fail("WM_TEST missing score record helpers");
 }

@@ -42,7 +42,8 @@ function makeEl(id) {
   return node;
 }
 
-function bootApp() {
+function bootApp(opts) {
+  opts = opts || {};
   const cache = {};
   function el(id) {
     if (id && cache[id]) return cache[id];
@@ -60,8 +61,9 @@ function bootApp() {
     getItem: function () { return null; },
     setItem: function () {},
   };
-  const search =
-    g.location && g.location.search ? String(g.location.search) : "?mode=teacher";
+  const search = opts.mode === "student"
+    ? "?mode=student"
+    : (g.location && g.location.search ? String(g.location.search) : "?mode=teacher");
   g.location = {
     search: search,
     href: "http://localhost/" + (search.charAt(0) === "?" ? search : "?" + search),
