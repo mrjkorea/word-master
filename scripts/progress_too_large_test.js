@@ -79,7 +79,7 @@ function run() {
     if (prog.lastSaveError() !== "too_large") fail("lastSaveError should be too_large");
     if (hooks.hasRetryScheduled()) fail("too_large must not schedule retry");
 
-    const cached = store["mrj.wm.progress"];
+    const cached = store["mrj.wm.progress.zz_test_too_large"];
     if (!cached) fail("local progress should be written on too_large");
     let parsed;
     try {
@@ -87,6 +87,7 @@ function run() {
     } catch (e) {
       fail("local progress is not JSON");
     }
+    if (!parsed || parsed.id !== "zz_test_too_large") fail("local progress missing scoped id");
     if (!parsed.progress_json || parsed.progress_json.indexOf("w1") === -1) {
       fail("local progress_json missing pack data");
     }

@@ -2,7 +2,16 @@
   "use strict";
 
   var PROGRAM = "word-master";
-  var LS_KEY = "mrj.wm.progress";
+  var LS_KEY_PREFIX = "mrj.wm.progress.";
+
+  function studentStorageKey(id) {
+    return String(id || "").trim().toLowerCase().replace(/\s+/g, " ");
+  }
+
+  function localStorageKeyForStudent() {
+    var k = studentStorageKey(authStudentId());
+    return k ? LS_KEY_PREFIX + k : null;
+  }
   var SAVE_INTERVAL_MS = 17000;
   var hydrated = false;
   var loadDone = false;
@@ -35,6 +44,8 @@
   function localProgressJson() {
     var cached = readLocal();
     if (!cached || !cached.progress_json) return null;
+    var norm = studentStorageKey(authStudentId());
+    if (!norm || cached.id !== norm) return null;
     return cached.progress_json;
   }
 
@@ -75,8 +86,10 @@
   }
 
   function readLocal() {
+    var key = localStorageKeyForStudent();
+    if (!key) return null;
     try {
-      var raw = localStorage.getItem(LS_KEY);
+      var raw = localStorage.getItem(key);
       if (!raw) return null;
       var parsed = JSON.parse(raw);
       return parsed && typeof parsed === "object" ? parsed : null;
@@ -86,8 +99,12 @@
   }
 
   function writeLocal(payload) {
+    var norm = studentStorageKey(authStudentId());
+    var key = norm ? LS_KEY_PREFIX + norm : null;
+    if (!key) return;
     try {
-      localStorage.setItem(LS_KEY, JSON.stringify(payload || {}));
+      var stored = Object.assign({}, payload || {}, { id: norm });
+      localStorage.setItem(key, JSON.stringify(stored));
     } catch (e) {}
   }
 
