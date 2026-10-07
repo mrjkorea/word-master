@@ -649,6 +649,7 @@
     const reauth = !!(prev && id && prev === id);
     if (prev && prev !== id) saveStateToStorage(prev);
     authStudentId = id;
+    setProgressTooLargeWarn(false);
     state.accountName = "";
     state.accountPin = "";
     if (!id) {
@@ -760,7 +761,7 @@
       srsNextAt: s.srsNextAt || null,
       final: s.final || null,
       check: s.check || null,
-      finalMiss: Array.isArray(s.finalMiss) ? s.finalMiss.slice(0, 200) : [],
+      finalMiss: Array.isArray(s.finalMiss) ? s.finalMiss.slice() : [],
       roundGames: s.roundGames && typeof s.roundGames === "object" ? s.roundGames : {},
       pathHeld: s.pathHeld && typeof s.pathHeld === "object" ? s.pathHeld : {},
       externalPackSrc: s.externalPackSrc || "",
@@ -786,7 +787,7 @@
     set.srsNextAt = merged.srsNextAt != null ? merged.srsNextAt : set.srsNextAt;
     set.final = merged.final || set.final;
     set.check = merged.check || set.check;
-    set.finalMiss = Array.isArray(merged.finalMiss) ? merged.finalMiss.slice(0, 200) : set.finalMiss;
+    set.finalMiss = Array.isArray(merged.finalMiss) ? merged.finalMiss.slice() : set.finalMiss;
     set.roundGames = merged.roundGames && typeof merged.roundGames === "object" ? merged.roundGames : set.roundGames;
     set.pathHeld = merged.pathHeld && typeof merged.pathHeld === "object" ? merged.pathHeld : set.pathHeld;
     if (slim.externalPackSrc && !set.externalPackSrc) set.externalPackSrc = slim.externalPackSrc;
@@ -3337,7 +3338,7 @@
     if (set) {
       const missIds = [];
       misses.forEach(function (m) {
-        if (m && m.id != null && missIds.length < 200) missIds.push(m.id);
+        if (m && m.id != null) missIds.push(m.id);
       });
       set.final = {
         score: quiz.score,
