@@ -1435,6 +1435,7 @@
     const slice = window.StartSlice.sliceFrom(set.words || [], startNumber, studySize());
     set.startNumber = slice.startNumber;
     set.meetLock = slice.ids.slice();
+    set.lastPlayedAt = Date.now();
     syncPathRound(set);
     persist();
     return slice;
@@ -1830,13 +1831,9 @@
         if (n > max) return;
         state.studySize = n;
         const live = currentSet();
-        if (live && live.startNumber) {
-          chooseStart(live, live.startNumber);
-        } else if (live) {
-          const slice = window.StartSlice.sliceFrom(live.words || [], lockOrigin(live), n);
-          live.meetLock = slice.ids.slice();
-          syncPathRound(live);
-          persist();
+        if (live) {
+          const start = (Number(live.startNumber) >= 1) ? Number(live.startNumber) : lockOrigin(live);
+          chooseStart(live, start);
         } else {
           persist();
         }
@@ -1844,6 +1841,12 @@
       });
       host.appendChild(btn);
     });
+    const note = document.createElement("p");
+    note.className = "study-from";
+    note.id = "study-from";
+    const start = (set && Number(set.startNumber) >= 1) ? Number(set.startNumber) : lockOrigin(set);
+    note.textContent = studySize() + " words from " + start;
+    host.appendChild(note);
   }
 
   function kstStamp(ts) {

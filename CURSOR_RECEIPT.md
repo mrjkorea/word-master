@@ -1,3 +1,43 @@
+# CURSOR_RECEIPT — Count buttons and seat start
+
+Date: 2026-10-07
+Model: grok-4.7 layout, composer-2.5 merge
+Browser proof: 1280x633 local nouns. The 5 button was inside the window. Tap 5, then seat 11. Result: 5 words from 11. Seats 11–15 marked doing.
+
+# CURSOR_RECEIPT — Seat tap lock survives persist merge
+
+Date: 2026-10-07
+Model: composer-2.5
+
+Tapping a count (e.g. 5) set `meetLock` and `startNumber`, but `persist()` merged an older localStorage snapshot without bumping `lastPlayedAt`, so `studySize` and `meetLock` reverted (union kept stale ids). `chooseStart` now sets `lastPlayedAt` before `persist()`. `progress-merge.js` keeps the newer side’s `meetLock` when it has ids; `studySize` follows the side with the newer pack activity.
+
+## Files
+
+| File | Change |
+|---|---|
+| `js/app.js` | `chooseStart`: `lastPlayedAt` before `persist()`. |
+| `js/progress-merge.js` | `pickMeetLock` / `pickStudySize` instead of union and blind `base.studySize`. |
+| `scripts/progress_merge_test.js` | Newer-lock case; no meetLock union assertion. |
+| `scripts/path_lock_test.js` | Cache query `20261007-count`. |
+| `scripts/dictation_audio_stop_test.js` | Cache query `20261007-count`. |
+
+## Test
+
+```
+node scripts/progress_merge_test.js
+PROGRESS_MERGE_OK
+node scripts/start_slice_test.js
+START_SLICE_OK
+node scripts/count_buttons_visible_test.js
+COUNT_BUTTONS_VISIBLE_OK
+node scripts/all_tile_test.js
+ALL_TILE_OK
+node scripts/path_lock_test.js
+PATH_LOCK_OK
+node scripts/dictation_audio_stop_test.js
+DICTATION_AUDIO_STOP_OK
+```
+
 # CURSOR_RECEIPT — All tile after the number seats
 
 Date: 2026-10-07

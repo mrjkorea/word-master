@@ -190,6 +190,10 @@ body.is-student .teacher-bar { display: none !important; }
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
 }
+#screen-set.active {
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+}
 
 /* Boot — no overlapping chrome */
 .screen-boot {
@@ -510,6 +514,9 @@ body.is-teacher .rib { cursor: pointer; }
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
 }
+@media (max-height: 700px) {
+  .standing-seats { max-height: 112px; }
+}
 .seat-all-slot {
   flex: 0 0 auto;
   display: flex;
@@ -616,7 +623,23 @@ button.seat.seat-all-choice {
   display: flex;
   gap: 8px;
   flex-wrap: wrap;
+  align-items: center;
   margin: 0 0 10px;
+}
+#study-size {
+  flex: 0 0 auto;
+  position: sticky;
+  top: 0;
+  z-index: 6;
+  background: var(--bg);
+  padding: 4px 0 6px;
+}
+.study-from {
+  margin: 0;
+  color: var(--ink);
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.2;
 }
 .study-size button {
   min-width: 52px;

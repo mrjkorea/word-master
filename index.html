@@ -7,7 +7,7 @@
   <meta name="mobile-web-app-capable" content="yes" />
   <meta name="theme-color" content="#f6f3ec" />
   <title>MRJ Word Master</title>
-  <link rel="stylesheet" href="css/app.css?v=20261007-nocut" />
+  <link rel="stylesheet" href="css/app.css?v=20261007-count" />
 </head>
 <body>
   <div id="phone" class="phone">
@@ -246,6 +246,8 @@
           <button type="button" class="rib" data-jump="games"><b>5</b><span data-i18n="games">Games</span></button>
           <button type="button" class="rib" data-jump="test"><b>6</b><span>Test</span></button>
         </div>
+        <p class="tap-word-hint" data-i18n="study_how_many">How many words this time?</p>
+        <div class="study-size" id="study-size" role="group"></div>
         <p class="path-lock-note" id="path-lock-note" hidden></p>
         <p class="pct-line" id="set-pct"></p>
         <div class="standing" id="pack-standing">
@@ -264,8 +266,6 @@
           <p class="standing-sync" id="stand-sync"></p>
           <p class="standing-sync save-warn" id="save-warn" hidden></p>
         </div>
-        <p class="tap-word-hint" data-i18n="study_how_many">How many words this time?</p>
-        <div class="study-size" id="study-size" role="group"></div>
         <p class="tap-word-hint" data-i18n="tap_word_hint">Tap a word to hear it</p>
         <div class="word-list" id="word-chips"></div>
         <div class="home-stack tight">
@@ -493,11 +493,11 @@
   <script src="js/progress-config.js?v=20261006-pack"></script>
   <script src="js/progress-merge.js?v=20261006-save-throttle"></script>
   <script src="js/progress.js?v=20261007-nocut"></script>
-  <script>window.WM_BUILD_ID="20261007-nocut";</script>
+  <script>window.WM_BUILD_ID="20261007-count";</script>
   <script src="js/version-watch.js?v=20261006-save-throttle"></script>
   <script src="js/spell-stop.js?v=20260930-spellstop"></script>
   <script src="js/pack-src.js?v=20261002-packsrc"></script>
   <script src="js/path-lock.js?v=20261001-lock"></script>
-  <script src="js/app.js?v=20261007-nocut"></script>
+  <script src="js/app.js?v=20261007-count"></script>
 </body>
 </html>

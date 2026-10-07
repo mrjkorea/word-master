@@ -41,20 +41,43 @@
     return out;
   }
 
-  function mergeMeetLock(a, b) {
-    var out = [];
-    var seen = {};
-    function add(list) {
-      if (!Array.isArray(list)) return;
-      list.forEach(function (id) {
-        if (id == null || id === "" || seen[id]) return;
-        seen[id] = true;
-        out.push(id);
-      });
+  function meetLockHasIds(list) {
+    if (!Array.isArray(list) || !list.length) return false;
+    for (var i = 0; i < list.length; i++) {
+      if (list[i] != null && list[i] !== "") return true;
     }
-    add(a);
-    add(b);
-    return out;
+    return false;
+  }
+
+  function copyMeetLock(list) {
+    if (!Array.isArray(list)) return [];
+    return list.filter(function (id) {
+      return id != null && id !== "";
+    });
+  }
+
+  function pickMeetLock(a, b) {
+    var aAt = a && a.lastPlayedAt ? Number(a.lastPlayedAt) : 0;
+    var bAt = b && b.lastPlayedAt ? Number(b.lastPlayedAt) : 0;
+    var newer = bAt >= aAt ? b : a;
+    var older = bAt >= aAt ? a : b;
+    if (meetLockHasIds(newer && newer.meetLock)) {
+      return copyMeetLock(newer.meetLock);
+    }
+    return copyMeetLock(older && older.meetLock);
+  }
+
+  function validStudySize(n) {
+    n = Number(n);
+    return n === 5 || n === 10 || n === 15 || n === 20;
+  }
+
+  function pickStudySize(local, remote, localAt, remoteAt) {
+    var newer = remoteAt >= localAt ? remote : local;
+    var older = remoteAt >= localAt ? local : remote;
+    if (validStudySize(newer && newer.studySize)) return Number(newer.studySize);
+    if (validStudySize(older && older.studySize)) return Number(older.studySize);
+    return 10;
   }
 
   function mergeShallowObjects(a, b) {
@@ -119,7 +142,7 @@
       winsB: mergeCountMaps(a.winsB, b.winsB),
       winsC: mergeCountMaps(a.winsC, b.winsC),
       intro: mergeIntro(a.intro, b.intro),
-      meetLock: mergeMeetLock(a.meetLock, b.meetLock),
+      meetLock: pickMeetLock(a, b),
       startNumber: pickStartNumber(a, b),
       testPassed: mergeTestPassed(a.testPassed, b.testPassed),
       tapmapKey: b.tapmapKey || a.tapmapKey || "",
@@ -207,7 +230,7 @@
       studentId: base.studentId || other.studentId || "",
       voice: base.voice || other.voice || "us_m",
       locale: base.locale || other.locale || "en",
-      studySize: base.studySize || other.studySize || 10,
+      studySize: pickStudySize(local, remote, localAt, remoteAt),
       testKind: base.testKind || other.testKind || "easy",
       currentPackId: currentPackId,
       sets: sets,
