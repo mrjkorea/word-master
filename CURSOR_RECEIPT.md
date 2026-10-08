@@ -494,3 +494,25 @@ DICTATION_AUDIO_STOP_OK
 ```
 
 Not pushed.
+
+# CURSOR_RECEIPT — Student path after Write
+
+Date: 2026-10-08
+Model: grok-4.7
+
+Dictation (B) opens Write (C). Write opens Games. One finished game opens the Test picker. `advanceLearn` does not call `showTestPick`. Match, Listen, and `deliverGameDone` call `showTestPick` after a finished game. Existing `mustCopy`, `pendingNxt`, `gradeLearn` try/finally, and `advanceLearn` null-guard fixes stay. Cache bump is `20261008-flow` on the `js/app.js` script tag, `window.WM_BUILD_ID`, and `version.json` only.
+
+## Files
+
+`js/app.js`, `index.html`, `version.json`, `scripts/flow_after_write_test.js`, `scripts/path_lock_test.js`, `scripts/test_open_and_name_test.js`
+
+## Test
+
+```
+node --check js/app.js && node scripts/flow_after_write_test.js && node scripts/path_lock_test.js && node scripts/test_open_and_name_test.js
+FLOW_AFTER_WRITE_OK
+PATH_LOCK_OK
+TEST_OPEN_AND_NAME_OK
+```
+
+Not committed. Not pushed.

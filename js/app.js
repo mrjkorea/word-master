@@ -1118,6 +1118,10 @@
       startedAt: 0,
       locking: false,
       missTeach: false,
+      // Copy-back state for Write (C) misses. Reset here so a stale flag can
+      // never survive a part change (bug: Dictation froze and never reached Write).
+      mustCopy: false,
+      pendingNxt: null,
     };
   }
 
@@ -2867,13 +2871,28 @@
     learn.typed = "";
     learn.missTeach = false;
     learn.locking = false;
+    // A part change must always start clean. Stale copy-back state would
+    // consume the next check and skip a part, so the path never reaches Write.
+    learn.mustCopy = false;
+    learn.pendingNxt = null;
     renderLearn(true);
   }
 
   function renderLearn(doSpeak) {
     updateKbDeskClass();
     const set = currentSet();
-    if (!set || !learn.cur) return;
+    if (!set) return;
+    if (!learn.cur) {
+      // Never show an empty Dictation/Write screen. If the current word is
+      // missing, rebuild it from the part queue before drawing.
+      const words = playWords(set);
+      if (!words.length) return;
+      const wins = Algo.bucket(winsState(set), learn.mode);
+      const nxt = Algo.nextWord(learn.queue || [], words, wins);
+      learn.queue = nxt.queue || [];
+      learn.cur = nxt.cur || words[0];
+      if (!learn.cur) return;
+    }
     const ws = winsState(set);
     const wins = Algo.bucket(ws, learn.mode);
     const metaName = I18n.partName(learn.mode);
@@ -2962,16 +2981,23 @@
     if (learn.locking || learn.mode === "A") return;
     if (!learn.typed) return;
     if (learn.mustCopy) {
-      if (norm(learn.typed) !== norm(learn.cur.en)) {
-        shakeCard();
+      // Copy-back only applies in Write (C). A stale flag anywhere else must
+      // be cleared instead of swallowing the check.
+      if (learn.mode !== "C" || !learn.pendingNxt) {
+        learn.mustCopy = false;
+        learn.pendingNxt = null;
+      } else {
+        if (norm(learn.typed) !== norm(learn.cur.en)) {
+          shakeCard();
+          return;
+        }
+        learn.mustCopy = false;
+        const nxt = learn.pendingNxt;
+        learn.pendingNxt = null;
+        learn.typed = "";
+        advanceLearn(nxt, false, false);
         return;
       }
-      learn.mustCopy = false;
-      const nxt = learn.pendingNxt;
-      learn.pendingNxt = null;
-      learn.typed = "";
-      advanceLearn(nxt, false, false);
-      return;
     }
     const ok = norm(learn.typed) === norm(learn.cur.en);
     gradeLearn(ok, learn.typed);
@@ -2980,6 +3006,15 @@
   async function gradeLearn(ok, response) {
     if (learn.locking) return;
     learn.locking = true;
+    try {
+      await gradeLearnInner(ok, response);
+    } finally {
+      // A thrown audio or vision error must never freeze the student on a step.
+      learn.locking = false;
+    }
+  }
+
+  async function gradeLearnInner(ok, response) {
     const set = currentSet();
     const ws = winsState(set);
     const wins = Algo.bucket(ws, learn.mode);
@@ -3064,16 +3099,30 @@
   async function advanceLearn(nxt, hitTwo, ok) {
     window.SpellStop.bump();
     const set = currentSet();
+    if (!nxt || typeof nxt !== "object") {
+      // Never leave the student stranded on a step. Rebuild from the wins
+      // already saved, so the path always moves forward.
+      const words = playWords(set);
+      const wins = Algo.bucket(winsState(set), learn.mode);
+      nxt = Algo.nextWord([], words, wins);
+      hitTwo = false;
+      ok = false;
+    }
     const meta = Algo.MODE_META[learn.mode];
     if (nxt.partDone) {
-      const nextMode = Algo.nextMode(learn.mode);
-      if (!nextMode) {
-        await burst(t("factory_done"));
-        showTestPick();
+      await burst(hitTwo ? t("two_clean") + " · " + t("part_done", { mode: I18n.partName(learn.mode) }) : t("part_done", { mode: I18n.partName(learn.mode) }));
+      if (learn.mode === "A") {
+        beginPart("B");
         return;
       }
-      await burst(hitTwo ? t("two_clean") + " · " + t("part_done", { mode: I18n.partName(learn.mode) }) : t("part_done", { mode: I18n.partName(learn.mode) }));
-      beginPart(nextMode);
+      if (learn.mode === "B") {
+        beginPart("C");
+        return;
+      }
+      if (learn.mode === "C") {
+        goGames();
+        return;
+      }
       return;
     }
     if (hitTwo) await burst(t("two_clean"));
@@ -3165,7 +3214,7 @@
     if (pick) pick.hidden = false;
     if (play) play.hidden = true;
     $("#test-score").hidden = true;
-    I18n.applyDom(document);
+    if (I18n) I18n.applyDom(document);
   }
 
   function startEasy(wide) {
@@ -3527,6 +3576,7 @@
         $("#match-win").hidden = false;
         burst(t("match_win"));
         markRoundGameDone("match");
+        showTestPick();
       }
     } else {
       setTimeout(function () {
@@ -3595,6 +3645,7 @@
     $("#listen-score").hidden = false;
     $("#listen-score-line").textContent = t("score_line", { score: listenGame.score, total: listenGame.items.length });
     markRoundGameDone("listen");
+    showTestPick();
   }
 
   function quizItemsFromSet() {
@@ -3730,7 +3781,7 @@
     persist();
     armedGame = "";
     renderSetHome();
-    showScreen("set");
+    showTestPick();
     const note = $("#path-lock-note");
     if (note) {
       note.hidden = false;
