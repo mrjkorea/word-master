@@ -1,0 +1,22 @@
+{
+  "pack_id": "animals-1-10-v1",
+  "module_id": "memory-match",
+  "title": "Animals 1–10",
+  "locale": "en",
+  "default_ui_locale": "en",
+  "pair_count": 10,
+  "heat_pairs": 5,
+  "skill_tags": ["vocab", "animals", "beginner"],
+  "items": [
+    {"id": "cat", "en": "cat", "animal": "cat", "audio_id": "en-cat", "l1": {"ko": "고양이", "ja": "ねこ", "zh": "猫", "vi": "mèo", "th": "แมว", "id": "kucing", "tl": "pusa", "es": "gato", "pt": "gato", "ru": "кот", "fr": "chat", "ar": "قطة", "mn": "муур", "hi": "बिल्ली"}},
+    {"id": "dog", "en": "dog", "animal": "dog", "audio_id": "en-dog", "l1": {"ko": "개", "ja": "いぬ", "zh": "狗", "vi": "chó", "th": "หมา", "id": "anjing", "tl": "aso", "es": "perro", "pt": "cão", "ru": "собака", "fr": "chien", "ar": "كلب", "mn": "нохой", "hi": "कुत्ता"}},
+    {"id": "bird", "en": "bird", "animal": "bird", "audio_id": "en-bird", "l1": {"ko": "새", "ja": "とり", "zh": "鸟", "vi": "chim", "th": "นก", "id": "burung", "tl": "ibon", "es": "pájaro", "pt": "pássaro", "ru": "птица", "fr": "oiseau", "ar": "طائر", "mn": "шувуу", "hi": "पक्षी"}},
+    {"id": "fish", "en": "fish", "animal": "fish", "audio_id": "en-fish", "l1": {"ko": "물고기", "ja": "さかな", "zh": "鱼", "vi": "cá", "th": "ปลา", "id": "ikan", "tl": "isda", "es": "pez", "pt": "peixe", "ru": "рыба", "fr": "poisson", "ar": "سمكة", "mn": "загас", "hi": "मछली"}},
+    {"id": "horse", "en": "horse", "animal": "horse", "audio_id": "en-horse", "l1": {"ko": "말", "ja": "うま", "zh": "马", "vi": "ngựa", "th": "ม้า", "id": "kuda", "tl": "kabayo", "es": "caballo", "pt": "cavalo", "ru": "лошадь", "fr": "cheval", "ar": "حصان", "mn": "морь", "hi": "घोड़ा"}},
+    {"id": "cow", "en": "cow", "animal": "cow", "audio_id": "en-cow", "l1": {"ko": "소", "ja": "うし", "zh": "牛", "vi": "bò", "th": "วัว", "id": "sapi", "tl": "baka", "es": "vaca", "pt": "vaca", "ru": "корова", "fr": "vache", "ar": "بقرة", "mn": "үхэр", "hi": "गाय"}},
+    {"id": "pig", "en": "pig", "animal": "pig", "audio_id": "en-pig", "l1": {"ko": "돼지", "ja": "ぶた", "zh": "猪", "vi": "lợn", "th": "หมู", "id": "babi", "tl": "baboy", "es": "cerdo", "pt": "porco", "ru": "свинья", "fr": "cochon", "ar": "خنزير", "mn": "гахай", "hi": "सुअर"}},
+    {"id": "duck", "en": "duck", "animal": "duck", "audio_id": "en-duck", "l1": {"ko": "오리", "ja": "あひる", "zh": "鸭子", "vi": "vịt", "th": "เป็ด", "id": "bebek", "tl": "pato", "es": "pato", "pt": "pato", "ru": "утка", "fr": "canard", "ar": "بطة", "mn": "нугас", "hi": "बत्तख"}},
+    {"id": "frog", "en": "frog", "animal": "frog", "audio_id": "en-frog", "l1": {"ko": "개구리", "ja": "かえる", "zh": "青蛙", "vi": "ếch", "th": "กบ", "id": "katak", "tl": "palaka", "es": "rana", "pt": "rã", "ru": "лягушка", "fr": "grenouille", "ar": "ضفدع", "mn": "мэлхий", "hi": "मेंढक"}},
+    {"id": "bear", "en": "bear", "animal": "bear", "audio_id": "en-bear", "l1": {"ko": "곰", "ja": "くま", "zh": "熊", "vi": "gấu", "th": "หมี", "id": "beruang", "tl": "oso", "es": "oso", "pt": "urso", "ru": "медведь", "fr": "ours", "ar": "دب", "mn": "баавгай", "hi": "भालू"}}
+  ]
+}

@@ -3663,6 +3663,27 @@
     }).filter(function (it) { return it.correct && it.wrong.length >= 1; });
   }
 
+  function memoryPack(set) {
+    const words = playWords(set).filter(function (w) { return w && w.en; });
+    const voice = state.voice || "us_m";
+    return {
+      pack_id: set.id || "nouns100",
+      title: set.title,
+      module_id: "memory-match",
+      ui_locale: localeCode(),
+      items: words.map(function (w) {
+        const file = mediaFile(w);
+        const l1 = w.l1 && typeof w.l1 === "object" ? w.l1 : { ko: w.ko || "" };
+        const item = { id: w.id, en: w.en, l1: l1 };
+        if (file) {
+          item.audio_id = new URL(packBase() + "/audio/" + voice + "/" + file + ".mp3", location.href).href;
+          item.picture = new URL(packBase() + "/" + file + ".jpg", location.href).href;
+        }
+        return item;
+      }),
+    };
+  }
+
   function shooterPack(set) {
     const words = playWords(set).filter(function (w) { return w && w.en && rockLabel(w); });
     const v = state.voice || "us_m";
@@ -3708,6 +3729,7 @@
       snowjump: "games/snow-jump/index.html",
       spellfire: "games/spellfire/index.html",
       soundinvaders: "games/sound-invaders/index.html",
+      memorymatch: "games/memory-match/index.html",
     };
     const path = paths[kind];
     if (!path) return;
@@ -3732,6 +3754,8 @@
       pack._spellVoice = voice;
     } else if (kind === "soundinvaders") {
       pack = shooterPack(set);
+    } else if (kind === "memorymatch") {
+      pack = memoryPack(set);
     } else {
       pack = {
         pack_id: set.id || "nouns100",
@@ -3747,7 +3771,7 @@
     } catch (e) { /* ignore */ }
     const frame = $("#game-frame");
     const name = encodeURIComponent(student);
-    frame.src = path + "?pack=session&packid=" + encodeURIComponent(currentPackId()) + "&words=" + encodeURIComponent((pack && pack._spellWords) || "") + "&voice=" + encodeURIComponent((pack && pack._spellVoice) || state.voice || "us_m") + "&v=1.11&student=" + name;
+    frame.src = path + "?pack=session&packid=" + encodeURIComponent(currentPackId()) + "&words=" + encodeURIComponent((pack && pack._spellWords) || "") + "&voice=" + encodeURIComponent((pack && pack._spellVoice) || state.voice || "us_m") + "&v=1.11&student=" + name + "&locale=" + encodeURIComponent(localeCode());
     armGame(kind);
   }
 
@@ -3761,7 +3785,7 @@
   }
 
   function deliverGameDone(msg) {
-    const kinds = { leapfrog: 1, snowjump: 1, spellfire: 1, soundinvaders: 1 };
+    const kinds = { leapfrog: 1, snowjump: 1, spellfire: 1, soundinvaders: 1, memorymatch: 1 };
     if (currentScreen !== "playgame") return;
     if (!armedGame || !kinds[armedGame]) return;
     if (!msg || msg.type !== "mrj-wm-game-done") return;
@@ -4053,7 +4077,7 @@
       slot.addEventListener("click", function () {
         if (!currentStudentId()) return;
         const g = slot.getAttribute("data-game");
-        if (g === "leapfrog" || g === "snowjump" || g === "spellfire" || g === "soundinvaders") openPortableGame(g);
+        if (g === "leapfrog" || g === "snowjump" || g === "spellfire" || g === "soundinvaders" || g === "memorymatch") openPortableGame(g);
       });
     });
     if (window.addEventListener) {
@@ -4240,6 +4264,7 @@
       speak: speak,
       speakWW: speakWW,
       shooterPack: shooterPack,
+      memoryPack: memoryPack,
       openPortableGame: openPortableGame,
       startTapmap: startTapmap,
       onTapTile: onTapTile,

@@ -1,0 +1,60 @@
+{
+  "pack_id": "starter-en-ko-v1",
+  "module_id": "memory-match",
+  "title": "Starter words",
+  "title_l1": { "ko": "첫 단어" },
+  "locale": "en",
+  "ui_locale": "ko",
+  "pair_count": 6,
+  "grid": { "cols": 4, "rows": 3 },
+  "items": [
+    {
+      "id": "apple",
+      "en": "apple",
+      "l1": { "ko": "사과" },
+      "skill_tags": ["vocab", "food", "beginner"],
+      "image_id": null,
+      "audio_id": null
+    },
+    {
+      "id": "dog",
+      "en": "dog",
+      "l1": { "ko": "개" },
+      "skill_tags": ["vocab", "animals", "beginner"],
+      "image_id": null,
+      "audio_id": null
+    },
+    {
+      "id": "cat",
+      "en": "cat",
+      "l1": { "ko": "고양이" },
+      "skill_tags": ["vocab", "animals", "beginner"],
+      "image_id": null,
+      "audio_id": null
+    },
+    {
+      "id": "water",
+      "en": "water",
+      "l1": { "ko": "물" },
+      "skill_tags": ["vocab", "everyday", "beginner"],
+      "image_id": null,
+      "audio_id": null
+    },
+    {
+      "id": "book",
+      "en": "book",
+      "l1": { "ko": "책" },
+      "skill_tags": ["vocab", "school", "beginner"],
+      "image_id": null,
+      "audio_id": null
+    },
+    {
+      "id": "school",
+      "en": "school",
+      "l1": { "ko": "학교" },
+      "skill_tags": ["vocab", "school", "beginner"],
+      "image_id": null,
+      "audio_id": null
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "packs": [
+    {
+      "id": "animals-1-10",
+      "file": "./packs/animals-1-10.json",
+      "title": "Animals 1–10"
+    },
+    {
+      "id": "numbers-1-10",
+      "file": "./packs/numbers-1-10.json",
+      "title": "Numbers 1–10"
+    }
+  ]
+}

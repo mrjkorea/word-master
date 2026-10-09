@@ -132,7 +132,8 @@ if (index.indexOf("js/path-lock.js") > index.indexOf("js/app.js")) {
   fail("path-lock.js must load before app.js");
 }
 if (index.indexOf("js/path-lock.js?v=20261001-lock") === -1) fail("path-lock cache");
-if (index.indexOf("js/app.js?v=20261008-flow") === -1) fail("app cache");
+if (index.indexOf("js/app.js?v=20261010-memory") === -1) fail("app cache");
+if (index.indexOf('data-game="memorymatch"') === -1) fail("games screen missing memorymatch");
 
 const { bootApp } = require("./load_app_for_test");
 const api = bootApp();
@@ -208,6 +209,51 @@ if (loseAt < 0 || tapAt < loseAt || spell.slice(loseAt, tapAt).indexOf("postGame
 }
 if (spell.indexOf("function postGameDone") === -1 || spell.indexOf("if (n) postGameDone();") === -1) {
   fail("spellfire does not post from the finished round");
+}
+
+function walkFiles(dir, acc) {
+  fs.readdirSync(dir).forEach(function (name) {
+    const p = path.join(dir, name);
+    if (fs.statSync(p).isDirectory()) walkFiles(p, acc);
+    else acc.push(p);
+  });
+  return acc;
+}
+const memoryDir = path.join(root, "games/memory-match");
+if (!fs.existsSync(path.join(memoryDir, "index.html"))) fail("games/memory-match/index.html missing");
+const memoryHit = walkFiles(memoryDir, []).some(function (file) {
+  const text = fs.readFileSync(file);
+  const s = text.toString("utf8");
+  return s.indexOf('game:"memorymatch"') !== -1 || s.indexOf('game: "memorymatch"') !== -1;
+});
+if (!memoryHit) fail("memory-match does not post memorymatch");
+
+ready.words = [{ id: "area", en: "area", ko: "지역", l1: { ko: "지역" } }];
+ready.meetLock = ["area"];
+const memStore = {};
+global.sessionStorage = {
+  getItem: function (k) { return memStore[k] == null ? null : memStore[k]; },
+  setItem: function (k, v) { memStore[k] = String(v); },
+};
+global.MRJ_AUTH = { student: function () { return "mem-student"; } };
+api.openPortableGame("memorymatch");
+if (!memStore["mrj.wm.gamepack"]) fail("memorymatch did not store a pack");
+const memPack = JSON.parse(memStore["mrj.wm.gamepack"]);
+const memItem = (memPack.items || [])[0];
+if (!memItem || memItem.id !== "area" || memItem.en !== "area") fail("memory pack item " + JSON.stringify(memItem));
+if (!memItem.l1 || memItem.l1.ko !== "지역") fail("memory pack l1 " + JSON.stringify(memItem && memItem.l1));
+if (String(memItem.audio_id).indexOf("http") !== 0 || memItem.audio_id.indexOf("/audio/us_m/area.mp3") === -1) {
+  fail("memory audio_id " + memItem.audio_id);
+}
+if (String(memItem.picture).indexOf("http") !== 0 || memItem.picture.indexOf("/area.jpg") === -1) {
+  fail("memory picture " + memItem.picture);
+}
+const memFrame = global.document.querySelector("#game-frame");
+if (!memFrame || memFrame.src.indexOf("games/memory-match/index.html") === -1 || memFrame.src.indexOf("pack=session") === -1) {
+  fail("memory frame " + (memFrame && memFrame.src));
+}
+if (memFrame.src.indexOf("locale=") === -1 || memFrame.src.indexOf("student=") === -1) {
+  fail("memory frame query " + memFrame.src);
 }
 
 console.log("PATH_LOCK_OK");

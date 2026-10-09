@@ -1,0 +1,22 @@
+{
+  "pack_id": "numbers-1-10-v1",
+  "module_id": "memory-match",
+  "title": "Numbers 1–10",
+  "locale": "en",
+  "default_ui_locale": "en",
+  "pair_count": 10,
+  "heat_pairs": 5,
+  "skill_tags": ["vocab", "numbers", "beginner"],
+  "items": [
+    {"id": "n1", "en": "one", "n": 1, "audio_id": "en-one", "l1": {"ko": "하나", "ja": "いち", "zh": "一", "vi": "một", "th": "หนึ่ง", "id": "satu", "tl": "isa", "es": "uno", "pt": "um", "ru": "один", "fr": "un", "ar": "واحد", "mn": "нэг", "hi": "एक"}},
+    {"id": "n2", "en": "two", "n": 2, "audio_id": "en-two", "l1": {"ko": "둘", "ja": "に", "zh": "二", "vi": "hai", "th": "สอง", "id": "dua", "tl": "dalawa", "es": "dos", "pt": "dois", "ru": "два", "fr": "deux", "ar": "اثنان", "mn": "хоёр", "hi": "दो"}},
+    {"id": "n3", "en": "three", "n": 3, "audio_id": "en-three", "l1": {"ko": "셋", "ja": "さん", "zh": "三", "vi": "ba", "th": "สาม", "id": "tiga", "tl": "tatlo", "es": "tres", "pt": "três", "ru": "три", "fr": "trois", "ar": "ثلاثة", "mn": "гурав", "hi": "तीन"}},
+    {"id": "n4", "en": "four", "n": 4, "audio_id": "en-four", "l1": {"ko": "넷", "ja": "よん", "zh": "四", "vi": "bốn", "th": "สี่", "id": "empat", "tl": "apat", "es": "cuatro", "pt": "quatro", "ru": "четыре", "fr": "quatre", "ar": "أربعة", "mn": "дөрөв", "hi": "चार"}},
+    {"id": "n5", "en": "five", "n": 5, "audio_id": "en-five", "l1": {"ko": "다섯", "ja": "ご", "zh": "五", "vi": "năm", "th": "ห้า", "id": "lima", "tl": "lima", "es": "cinco", "pt": "cinco", "ru": "пять", "fr": "cinq", "ar": "خمسة", "mn": "тав", "hi": "पांच"}},
+    {"id": "n6", "en": "six", "n": 6, "audio_id": "en-six", "l1": {"ko": "여섯", "ja": "ろく", "zh": "六", "vi": "sáu", "th": "หก", "id": "enam", "tl": "anim", "es": "seis", "pt": "seis", "ru": "шесть", "fr": "six", "ar": "ستة", "mn": "зургаа", "hi": "छह"}},
+    {"id": "n7", "en": "seven", "n": 7, "audio_id": "en-seven", "l1": {"ko": "일곱", "ja": "なな", "zh": "七", "vi": "bảy", "th": "เจ็ด", "id": "tujuh", "tl": "pito", "es": "siete", "pt": "sete", "ru": "семь", "fr": "sept", "ar": "سبعة", "mn": "долоо", "hi": "सात"}},
+    {"id": "n8", "en": "eight", "n": 8, "audio_id": "en-eight", "l1": {"ko": "여덟", "ja": "はち", "zh": "八", "vi": "tám", "th": "แปด", "id": "delapan", "tl": "walo", "es": "ocho", "pt": "oito", "ru": "восемь", "fr": "huit", "ar": "ثمانية", "mn": "найм", "hi": "आठ"}},
+    {"id": "n9", "en": "nine", "n": 9, "audio_id": "en-nine", "l1": {"ko": "아홉", "ja": "きゅう", "zh": "九", "vi": "chín", "th": "เก้า", "id": "sembilan", "tl": "siyam", "es": "nueve", "pt": "nove", "ru": "девять", "fr": "neuf", "ar": "تسعة", "mn": "ес", "hi": "नौ"}},
+    {"id": "n10", "en": "ten", "n": 10, "audio_id": "en-ten", "l1": {"ko": "열", "ja": "じゅう", "zh": "十", "vi": "mười", "th": "สิบ", "id": "sepuluh", "tl": "sampu", "es": "diez", "pt": "dez", "ru": "десять", "fr": "dix", "ar": "عشرة", "mn": "арав", "hi": "दस"}}
+  ]
+}

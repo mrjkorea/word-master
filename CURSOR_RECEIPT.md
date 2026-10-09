@@ -516,3 +516,29 @@ TEST_OPEN_AND_NAME_OK
 ```
 
 Not committed. Not pushed.
+
+# CURSOR_RECEIPT — Memory Game in the picker
+
+Date: 2026-10-10
+Model: grok-4.7
+
+Games has a fifth slot, Memory Game. It plays the current Word Master set from `games/memory-match/index.html` (`?pack=session`). A real win inside the student frame posts `memorymatch`. Skip does not.
+
+## Command
+
+`npm run build` in memory-match, then copy `dist/` to `games/memory-match/`.
+
+## Files
+
+`memory-match/src/engine.js`, `memory-match/src/main.js`, `memory-match/src/faces.js`, `memory-match/src/pics.js`, `index.html`, `js/app.js`, `version.json`, `games/memory-match/`, `scripts/path_lock_test.js`, `scripts/test_open_and_name_test.js`
+
+## Test
+
+```
+node --input-type=module (session mapper)
+SESSION_MAP_OK
+node scripts/path_lock_test.js
+PATH_LOCK_OK
+```
+
+Not committed. Not pushed.
