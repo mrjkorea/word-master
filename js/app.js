@@ -626,7 +626,6 @@
   }
 
   let progressTimer = null;
-  let pendingScore = null;
   let notedKnown = null;
   let authStudentId = "";
   let pullGen = 0;
@@ -964,12 +963,6 @@
       locale: state.locale || "en",
       progress_json: JSON.stringify(slimProgress()),
     };
-    if (pendingScore && (pendingScore.kind === "known" || pendingScore.kind === "checkup")) {
-      out.scoreKind = pendingScore.kind;
-      out.scoreValue = pendingScore.value;
-      out.scoreMax = pendingScore.max;
-      pendingScore = null;
-    }
     return out;
   }
 
@@ -1002,8 +995,16 @@
     });
     const pack = set.packId || set.id || "";
     const prev = notedKnown;
-    if (!(pendingScore && pendingScore.kind === "checkup") && prev && prev.pack === pack && total > 0 && known > prev.count) {
-      pendingScore = { kind: "known", value: known, max: total };
+    if (prev && prev.pack === pack && total > 0 && known > prev.count) {
+      if (window.MRJ_WM_progress && typeof window.MRJ_WM_progress.logResult === "function") {
+        window.MRJ_WM_progress.logResult({
+          packId: pack,
+          packTitle: set.title || "",
+          kind: "known",
+          score: known,
+          total: total,
+        });
+      }
     }
     notedKnown = { pack: pack, count: known, total: total };
   }
@@ -1013,7 +1014,12 @@
     const max = Number(total);
     if (!set || !isFinite(value) || !isFinite(max) || !(max > 0)) return;
     set.check = { score: value, total: max, at: Date.now() };
-    pendingScore = { kind: "checkup", value: value, max: max };
+  }
+
+  function logActivityResult(r) {
+    if (window.MRJ_WM_progress && typeof window.MRJ_WM_progress.logResult === "function") {
+      window.MRJ_WM_progress.logResult(r);
+    }
   }
 
   function persist() {
@@ -3412,6 +3418,14 @@
         score: quiz.score,
         total: total,
       });
+      logActivityResult({
+        packId: set.packId,
+        packTitle: set.title || "",
+        kind: "final",
+        score: quiz.score,
+        total: total,
+        meta: { misses: missIds, passed: !!passed },
+      });
       persist();
     }
   }
@@ -3447,6 +3461,9 @@
       }
       const failSet = currentSet();
       if (failSet) {
+        const missIds = misses.map(function (m) {
+          return m && m.id != null ? m.id : null;
+        }).filter(function (id) { return id != null && id !== ""; });
         appendScoreRow({
           at: Date.now(),
           pack: failSet.packId,
@@ -3454,6 +3471,14 @@
           activity: quiz.kind === "hard" ? "Hard test" : "Easy test",
           score: quiz.score,
           total: total,
+        });
+        logActivityResult({
+          packId: failSet.packId,
+          packTitle: failSet.title || "",
+          kind: quiz.kind === "hard" ? "test_hard" : "test_easy",
+          score: quiz.score,
+          total: total,
+          meta: { misses: missIds, passed: false },
         });
         persist();
       }
@@ -3467,6 +3492,9 @@
         (quiz.items || []).map(function (item) { return item && item.id; }),
         pct
       );
+      const missIds = misses.map(function (m) {
+        return m && m.id != null ? m.id : null;
+      }).filter(function (id) { return id != null && id !== ""; });
       appendScoreRow({
         at: Date.now(),
         pack: passedSet.packId,
@@ -3474,6 +3502,14 @@
         activity: quiz.kind === "hard" ? "Hard test" : "Easy test",
         score: quiz.score,
         total: total,
+      });
+      logActivityResult({
+        packId: passedSet.packId,
+        packTitle: passedSet.title || "",
+        kind: quiz.kind === "hard" ? "test_hard" : "test_easy",
+        score: quiz.score,
+        total: total,
+        meta: { misses: missIds, passed: true },
       });
       persist();
     }
@@ -3644,6 +3680,16 @@
     $("#listen-choices").hidden = true;
     $("#listen-score").hidden = false;
     $("#listen-score-line").textContent = t("score_line", { score: listenGame.score, total: listenGame.items.length });
+    const set = currentSet();
+    if (set && listenGame && listenGame.items && listenGame.items.length) {
+      logActivityResult({
+        packId: set.packId,
+        packTitle: set.title || "",
+        kind: "listen",
+        score: listenGame.score,
+        total: listenGame.items.length,
+      });
+    }
     markRoundGameDone("listen");
     showTestPick();
   }
@@ -3795,13 +3841,27 @@
     if (!set || !window.PathLock) return;
     if (typeof msg.items !== "number" || !(msg.items >= 1)) return;
     const rec = window.PathLock.markGameDone(set, msg.game);
-    appendScoreRow({
+    const row = {
       at: rec && rec.at ? rec.at : Date.now(),
       pack: set.packId,
       kind: "game",
       activity: activityLabelForKind("game", { game: msg.game }),
       game: msg.game,
-    });
+    };
+    if (typeof msg.correct === "number") {
+      row.score = msg.correct;
+      row.total = msg.items;
+    }
+    appendScoreRow(row);
+    if (typeof msg.correct === "number") {
+      logActivityResult({
+        packId: set.packId,
+        packTitle: set.title || "",
+        kind: "game_" + msg.game,
+        score: msg.correct,
+        total: msg.items,
+      });
+    }
     persist();
     armedGame = "";
     renderSetHome();
