@@ -195,40 +195,56 @@
     return { known: known, total: total };
   }
 
-  function maybePostScore(payload) {
-    var p = payload || {};
-    if (p.scoreKind === "known" || p.scoreKind === "checkup") {
-      var value = Number(p.scoreValue);
-      var max = Number(p.scoreMax);
-      if (!isFinite(value) || !isFinite(max) || !(max > 0)) return Promise.resolve(null);
-      var student = authStudentId();
-      if (!student) return Promise.resolve(null);
-      var itemId = [p.pack_id || "pack", p.scoreKind, p.pack_id || ""].join(":");
-      if (root.MRJ_AUTH && typeof root.MRJ_AUTH.noteScore === "function") {
-        return root.MRJ_AUTH.noteScore({
-          program: "word-master",
-          itemId: itemId,
-          scoreValue: value,
-          scoreMax: max,
-        }).catch(function () {
-          return null;
-        });
-      }
-      if (!window.MRJ_SCORES) return Promise.resolve(null);
-      return window.MRJ_SCORES.post({
-        student: student,
-        program: "word-master",
-        appName: "MRJ Word Master",
-        source: "word-master",
-        bookTitle: p.pack_title || "",
-        unitTitle: p.pack_id || "",
-        itemId: itemId,
-        itemType: p.scoreKind === "checkup" ? "checkup" : "word_study",
-        scoreValue: value,
-        scoreMax: max,
-      });
+  function logResult(r) {
+    r = r || {};
+    var student = authStudentId();
+    if (!student) return;
+    var total = Number(r.total);
+    var score = Number(r.score);
+    if (!isFinite(score) || !isFinite(total) || !(total > 0)) return;
+    var packId = String(r.packId || "").trim();
+    var kind = String(r.kind || "").trim();
+    if (!packId || !kind) return;
+    var itemId = packId + ":" + kind;
+    var pct = Math.round(100 * score / total);
+    var localDateStr =
+      root.MRJ_SCORES && typeof root.MRJ_SCORES.localDate === "function"
+        ? root.MRJ_SCORES.localDate()
+        : "";
+    if (root.MRJ_AUTH && typeof root.MRJ_AUTH.noteScore === "function") {
+      try {
+        root.MRJ_AUTH
+          .noteScore({
+            program: PROGRAM,
+            itemId: itemId,
+            scoreValue: score,
+            scoreMax: total,
+            scorePct: pct,
+            localDate: localDateStr,
+          })
+          .catch(function () {});
+      } catch (e) {}
     }
-    return Promise.resolve(null);
+    if (root.MRJ_SCORES && typeof root.MRJ_SCORES.post === "function") {
+      try {
+        root.MRJ_SCORES
+          .post({
+            student: student,
+            program: PROGRAM,
+            appName: "MRJ Word Master",
+            source: "word-master",
+            bookTitle: r.packTitle || "",
+            unitTitle: packId,
+            itemId: itemId,
+            itemType: kind,
+            scoreValue: score,
+            scoreMax: total,
+            correctness: pct >= 80 ? "correct" : "incorrect",
+            metadata: r.meta || {},
+          })
+          .catch(function () {});
+      } catch (e) {}
+    }
   }
 
   function clearRetryTimer() {
@@ -451,9 +467,6 @@
     if (!id) return Promise.resolve(null);
     var body = payload || {};
     if (!body.progress_json) return Promise.resolve(null);
-    try {
-      maybePostScore(body);
-    } catch (e) {}
     pendingSave = body;
     clearRetryTimer();
     return flushSave(body, {});
@@ -544,6 +557,7 @@
   root.MRJ_WM_progress = {
     save: save,
     load: load,
+    logResult: logResult,
     resetSession: resetSession,
     isReadyToSave: isReadyToSave,
     merge: root.MRJ_WM_merge,
