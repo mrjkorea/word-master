@@ -1407,9 +1407,26 @@
     return (set && (set.packId || set.id)) || DEMO_PACK_ID;
   }
 
+  function mediaSrcForSet(set) {
+    const src = (set && set.externalPackSrc) || "";
+    if (src && window.PackSrc && window.PackSrc.isAllowedPackSrc(src)) return src;
+    return "";
+  }
+
   function packBase() {
-    if (externalPack && externalPack.folder) return externalPack.folder;
+    const set = currentSet();
+    const src = mediaSrcForSet(set);
+    if (src) return window.PackSrc.mediaFolderFromSrc(src);
+    if (!set && externalPack && externalPack.folder) return externalPack.folder;
     return "packs/" + currentPackId();
+  }
+
+  function mediaUrl(path) {
+    try {
+      return new URL(path, window.location.href).href;
+    } catch (e) {
+      return path;
+    }
   }
 
   function wordFromHint(hint) {
@@ -2011,7 +2028,6 @@
   }
 
   async function openPack(pid) {
-    if (isExternalPackMode()) return;
     const pack = await loadPackFile(pid);
     if (!pack || !pack.words.length) return;
     const existing = Object.keys(state.sets)
@@ -2129,9 +2145,30 @@
     });
   }
 
+  function repairStaleLock(set) {
+    if (!set || !Array.isArray(set.meetLock) || !set.meetLock.length) return;
+    if (!set.words || !set.words.length || !window.MeetLock) return;
+    const locked = window.MeetLock.wordsForLock(set.words, set.meetLock);
+    if (locked.length) return;
+    set.meetLock = [];
+    set.startNumber = null;
+    persist();
+  }
+
+  function ensurePackWords(set) {
+    if (!set || (set.words && set.words.length)) return;
+    if (set.externalPackSrc) {
+      loadExternalPackFromSrc(set.externalPackSrc);
+      return;
+    }
+    if (set.packId) openPack(set.packId);
+  }
+
   function renderSetHome() {
     const set = currentSet();
     if (!set) return;
+    repairStaleLock(set);
+    ensurePackWords(set);
     $("#set-title").textContent = set.title;
     const ws = winsState(set);
     const pct = Algo.factoryProgress(set.words, ws);
@@ -2347,9 +2384,11 @@
     if (set && set.final && set.final.pct != null) {
       leftText += " · last all-" + total + ": " + set.final.pct + "%";
     }
-    const nextText = nextWords.length
+    const nextText = !words.length
+      ? "This pack did not load. Open it again."
+      : (nextWords.length
       ? ("Next " + nextWords.length + ": " + nextWords.map(function (w) { return w.en; }).join(" · "))
-      : "This pack is finished. Try the All 100 test.";
+      : "This pack is finished. Try the All 100 test.");
     return {
       total: total,
       doneCount: doneCount,
@@ -2367,6 +2406,7 @@
   function renderPackStanding(set) {
     set = set || currentSet();
     if (!set) return null;
+    repairStaleLock(set);
     const data = packStandingData(set);
     const countEl = $("#stand-count");
     if (countEl) countEl.textContent = data.countText;
@@ -2463,6 +2503,13 @@
   function startTapmap() {
     const set = currentSet();
     if (!set) return;
+    repairStaleLock(set);
+    if (!set.words || !set.words.length) {
+      ensurePackWords(set);
+      renderSetHome();
+      showScreen("set");
+      return;
+    }
     if (roundReadyForGame(set)) return goGames();
     if (introFlagsDone(set)) {
       const mode = Algo.startMode(playWords(set), winsState(set));
@@ -2490,9 +2537,9 @@
     }
     const words = playWords(set);
     if (!words.length) {
-      learn = blankLearn();
-      showScreen("learn");
-      beginPart("A");
+      ensurePackWords(set);
+      renderSetHome();
+      showScreen("set");
       return;
     }
     tap = blankTap();
@@ -3826,8 +3873,8 @@
         const l1 = w.l1 && typeof w.l1 === "object" ? w.l1 : { ko: w.ko || "" };
         const item = { id: w.id, en: w.en, l1: l1 };
         if (file) {
-          item.audio_id = new URL(packBase() + "/audio/" + voice + "/" + file + ".mp3", location.href).href;
-          item.picture = new URL(packBase() + "/" + file + ".jpg", location.href).href;
+          item.audio_id = mediaUrl(packBase() + "/audio/" + voice + "/" + file + ".mp3");
+          item.picture = mediaUrl(wordPic(w));
         }
         return item;
       }),
@@ -3857,7 +3904,7 @@
           prompt: w.en,
           label: label,
           wrong: wrong,
-          audio: id ? ("../../" + packBase() + "/audio/" + v + "/" + id + ".mp3") : null,
+          audio: id ? mediaUrl(packBase() + "/audio/" + v + "/" + id + ".mp3") : null,
         };
       }).filter(function (it) { return it.label; }),
     };
@@ -3891,7 +3938,7 @@
         return {
           item_id: w.id,
           word: w.en,
-          audio: file ? (location.origin + "/" + packBase() + "/audio/" + voice + "/" + file + ".mp3") : "",
+          audio: file ? mediaUrl(packBase() + "/audio/" + voice + "/" + file + ".mp3") : "",
         };
       }).filter(function (it) { return it.word; });
       pack = {
@@ -4418,6 +4465,7 @@
       pathOpen: pathOpen,
       studentLocked: studentLocked,
       roundReadyForGame: roundReadyForGame,
+      packBase: packBase,
       markRoundGameDone: markRoundGameDone,
       getState: function () { return state; },
       setStudySize: function (n) { state.studySize = n; },

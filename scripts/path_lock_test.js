@@ -132,7 +132,7 @@ if (index.indexOf("js/path-lock.js") > index.indexOf("js/app.js")) {
   fail("path-lock.js must load before app.js");
 }
 if (index.indexOf("js/path-lock.js?v=20261001-lock") === -1) fail("path-lock cache");
-if (index.indexOf("js/app.js?v=20261012-play") === -1) fail("app cache");
+if (index.indexOf("js/app.js?v=20261012-packs") === -1) fail("app cache");
 if (index.indexOf('data-game="memorymatch"') === -1) fail("games screen missing memorymatch");
 
 const { bootApp } = require("./load_app_for_test");
