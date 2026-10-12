@@ -124,13 +124,36 @@
   }
 
   function showPathLock(gate) {
-    const note = $("#path-lock-note");
     const order = { intro: 1, A: 2, B: 3, C: 4, games: 5, test: 6 };
-    const need = gate && gate.need;
+    const need = (gate && gate.need) || "intro";
     const n = order[need] || 1;
-    if (!note) return;
-    note.hidden = false;
-    note.textContent = t("finish_step_first", { n: n });
+    const text = t("finish_step_first", { n: n });
+    const note = $("#path-lock-note");
+    if (note) {
+      note.hidden = false;
+      note.textContent = text;
+    }
+    const gamesNote = $("#games-lock-note");
+    if (gamesNote) {
+      gamesNote.hidden = false;
+      gamesNote.textContent = text;
+    }
+    const jump = $("#btn-games-need");
+    if (jump) {
+      jump.hidden = false;
+      jump.textContent = text;
+      jump.setAttribute("data-need", need);
+    }
+  }
+
+  function hideGamesLock() {
+    const gamesNote = $("#games-lock-note");
+    if (gamesNote) {
+      gamesNote.hidden = true;
+      gamesNote.textContent = "";
+    }
+    const jump = $("#btn-games-need");
+    if (jump) jump.hidden = true;
   }
 
   function pathOpen(step) {
@@ -139,7 +162,10 @@
     if (!set || !window.PathLock) return false;
     try {
       const gate = window.PathLock.can(set, step);
-      if (gate && gate.ok) return true;
+      if (gate && gate.ok) {
+        if (step === "games") hideGamesLock();
+        return true;
+      }
       showPathLock(gate);
       return false;
     } catch (e) {
@@ -3525,17 +3551,20 @@
     }
   }
 
+  function showGamesScreen() {
+    const set = currentSet();
+    if (set) syncPack();
+    $("#games-set-hint").textContent = t("games_hint", { title: set ? set.title : "" });
+    showScreen("games");
+    if (pathOpen("games")) hideGamesLock();
+  }
+
   function goGames() {
     if (!currentSet()) {
-      openDemo().then(function () {
-        $("#games-set-hint").textContent = t("games_hint", { title: currentSet().title });
-        showScreen("games");
-      });
+      openDemo().then(showGamesScreen);
       return;
     }
-    syncPack();
-    $("#games-set-hint").textContent = t("games_hint", { title: currentSet().title });
-    showScreen("games");
+    showGamesScreen();
   }
 
   function startMatch() {
@@ -4139,6 +4168,14 @@
         const g = slot.getAttribute("data-game");
         if (g === "leapfrog" || g === "snowjump" || g === "spellfire" || g === "soundinvaders" || g === "memorymatch") openPortableGame(g);
       });
+    });
+    const gamesNeed = $("#btn-games-need");
+    if (gamesNeed) gamesNeed.addEventListener("click", function () {
+      if (!currentStudentId()) return;
+      const step = gamesNeed.getAttribute("data-need") || "intro";
+      if (step === "intro") return startMeet();
+      if (step === "A" || step === "B" || step === "C") return startLearnAt(step);
+      jumpTo(step);
     });
     if (window.addEventListener) {
       window.addEventListener("message", function (ev) {

@@ -4,7 +4,7 @@
 const fs = require("fs");
 const path = require("path");
 
-const BUILD = "20261011-savefix";
+const BUILD = "20261012-games";
 const TEST_STUDENT = "zz_test_mrjmetrics";
 
 function fail(msg) {
