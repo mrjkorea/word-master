@@ -120,7 +120,8 @@
   function studentLocked(set, step) {
     if (teacherNow()) return false;
     if (!set || !window.PathLock) return true;
-    try { return !window.PathLock.can(set, step).ok; } catch (e) { return true; }
+    if (step === "games" && roundReadyForGame(set)) return false;
+    try { return !window.PathLock.can(set, step, pathOpts()).ok; } catch (e) { return true; }
   }
 
   function showPathLock(gate) {
@@ -161,7 +162,13 @@
     const set = currentSet();
     if (!set || !window.PathLock) return false;
     try {
-      const gate = window.PathLock.can(set, step);
+      if (step === "games" && roundReadyForGame(set)) {
+        rememberFinishedMeet(set);
+        hideGamesLock();
+        return true;
+      }
+      rememberFinishedMeet(set);
+      const gate = window.PathLock.can(set, step, pathOpts());
       if (gate && gate.ok) {
         if (step === "games") hideGamesLock();
         return true;
@@ -1788,8 +1795,65 @@
     return playWords(set).map(function (w) { return w.id; }).join(",");
   }
 
+  function pathOpts() {
+    return {
+      playWords: playWords,
+      introDone: function (set) {
+        return introFlagsDone(set);
+      },
+      partDone: function (words, wins) { return Algo.partDone(words, wins); },
+      bucket: function (set, step) { return Algo.bucket(winsState(set), step); },
+    };
+  }
+
+  function introFlagsDone(set) {
+    const words = playWords(set);
+    if (!words.length) return false;
+    const intro = (set && set.intro) || {};
+    return words.every(function (w) { return !!intro[w.id]; });
+  }
+
+  function sliceReady(set, words) {
+    if (!set || !words || !words.length) return false;
+    const intro = set.intro || {};
+    const a = set.winsA || {};
+    const b = set.winsB || {};
+    const c = set.winsC || {};
+    return words.every(function (w) {
+      return !!intro[w.id] && (a[w.id] || 0) >= 2 && (b[w.id] || 0) >= 2 && (c[w.id] || 0) >= 2;
+    });
+  }
+
+  function roundReadyForGame(set) {
+    if (!set) return false;
+    if (set.meetLock && set.meetLock.length && window.MeetLock) {
+      const locked = window.MeetLock.wordsForLock(set.words || [], set.meetLock);
+      if (!locked.length) return false;
+      return sliceReady(set, locked);
+    }
+    const words = set.words || [];
+    const n = studySize(set) || words.length;
+    if (!n) return false;
+    var i;
+    for (i = 0; i < words.length; i += n) {
+      const slice = words.slice(i, i + n);
+      if (slice.length && sliceReady(set, slice)) return true;
+    }
+    return false;
+  }
+
+  function rememberFinishedMeet(set) {
+    if (!introFlagsDone(set)) return;
+    const key = batchKey(set);
+    if (key && set.tapmapKey !== key) {
+      set.tapmapKey = key;
+      persist();
+    }
+  }
+
   function tapmapDone(set) {
     if (!set) return true;
+    if (introFlagsDone(set)) return true;
     const key = batchKey(set);
     if (!key) return true;
     return set.tapmapKey === key;
@@ -2399,6 +2463,17 @@
   function startTapmap() {
     const set = currentSet();
     if (!set) return;
+    if (roundReadyForGame(set)) return goGames();
+    if (introFlagsDone(set)) {
+      const mode = Algo.startMode(playWords(set), winsState(set));
+      if (mode) {
+        learn = blankLearn();
+        showScreen("learn");
+        beginPart(mode);
+        return;
+      }
+      return goGames();
+    }
     if (!set.intro) set.intro = {};
     if (set.startNumber) {
       if (!Array.isArray(set.meetLock) || !set.meetLock.length) {
@@ -4172,6 +4247,11 @@
     const gamesNeed = $("#btn-games-need");
     if (gamesNeed) gamesNeed.addEventListener("click", function () {
       if (!currentStudentId()) return;
+      const set = currentSet();
+      if (set && roundReadyForGame(set)) {
+        hideGamesLock();
+        return;
+      }
       const step = gamesNeed.getAttribute("data-need") || "intro";
       if (step === "intro") return startMeet();
       if (step === "A" || step === "B" || step === "C") return startLearnAt(step);
@@ -4337,6 +4417,7 @@
       sliceCount: sliceCount,
       pathOpen: pathOpen,
       studentLocked: studentLocked,
+      roundReadyForGame: roundReadyForGame,
       markRoundGameDone: markRoundGameDone,
       getState: function () { return state; },
       setStudySize: function (n) { state.studySize = n; },
