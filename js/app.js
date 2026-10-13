@@ -1402,9 +1402,12 @@
     requestAnimationFrame(tick);
   }
 
+  function packIdForSet(set) {
+    return (set && set.packId) || DEMO_PACK_ID;
+  }
+
   function currentPackId() {
-    const set = currentSet();
-    return (set && (set.packId || set.id)) || DEMO_PACK_ID;
+    return packIdForSet(currentSet());
   }
 
   function mediaSrcForSet(set) {
@@ -3864,7 +3867,7 @@
     const words = playWords(set).filter(function (w) { return w && w.en; });
     const voice = state.voice || "us_m";
     return {
-      pack_id: set.id || "nouns100",
+      pack_id: packIdForSet(set),
       title: set.title,
       module_id: "memory-match",
       ui_locale: localeCode(),
@@ -3885,7 +3888,7 @@
     const words = playWords(set).filter(function (w) { return w && w.en && rockLabel(w); });
     const v = state.voice || "us_m";
     return {
-      pack_id: set.id || "nouns100",
+      pack_id: packIdForSet(set),
       title: set.title,
       module_id: "sound-invaders",
       activity_id: "hear_shoot",
@@ -3942,7 +3945,7 @@
         };
       }).filter(function (it) { return it.word; });
       pack = {
-        pack_id: set.id || "nouns100",
+        pack_id: packIdForSet(set),
         title: set.title,
         seconds_per_letter: 5,
         items: spoken,
@@ -3955,7 +3958,7 @@
       pack = memoryPack(set);
     } else {
       pack = {
-        pack_id: set.id || "nouns100",
+        pack_id: packIdForSet(set),
         title: set.title,
         module_id: kind,
         activity_id: kind,
@@ -4491,6 +4494,7 @@
       speakWW: speakWW,
       shooterPack: shooterPack,
       memoryPack: memoryPack,
+      packIdForSet: packIdForSet,
       openPortableGame: openPortableGame,
       startTapmap: startTapmap,
       onTapTile: onTapTile,
