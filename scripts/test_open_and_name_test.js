@@ -15,7 +15,7 @@ const app = fs.readFileSync(path.join(root, "js/app.js"), "utf8");
 
 if (index.indexOf("css/app.css?v=20261008-path") === -1) fail("css cache");
 if (index.indexOf("js/app.js?v=20261012-packs") === -1) fail("app cache");
-if (index.indexOf("js/progress-merge.js?v=20261008-path") === -1) fail("progress-merge cache");
+if (index.indexOf("js/progress-merge.js?v=20261013-packpick") === -1) fail("progress-merge cache");
 if (index.indexOf("js/progress.js?v=20261011-savefix") === -1) fail("progress cache");
 if (index.indexOf("mrj-scores.js?v=20261011-savefix") === -1) fail("mrj-scores cache");
 if (index.indexOf('id="btn-student-name"') === -1) fail("missing top-right name button");

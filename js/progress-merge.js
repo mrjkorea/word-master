@@ -203,6 +203,30 @@
     return n;
   }
 
+  /** Pack the student opened most recently (even with no wins/intro yet). */
+  function pickCurrentPackId(sets, keys, base, other) {
+    var recentPid = "";
+    var recentAt = 0;
+    keys.forEach(function (pid) {
+      var at = Number(sets[pid] && sets[pid].lastPlayedAt) || 0;
+      if (at > recentAt) {
+        recentAt = at;
+        recentPid = pid;
+      }
+    });
+    if (recentPid) return recentPid;
+    var currentPackId = base.currentPackId || other.currentPackId || "";
+    if (packProgressEmpty(sets[currentPackId])) {
+      for (var pi = 0; pi < keys.length; pi++) {
+        if (!packProgressEmpty(sets[keys[pi]])) {
+          currentPackId = keys[pi];
+          break;
+        }
+      }
+    }
+    return currentPackId;
+  }
+
   /** True when candidate would lose pack data compared to baseline (server/local). */
   function progressIsStrictlyPoorer(candidate, baseline) {
     candidate = candidate && typeof candidate === "object" ? candidate : { sets: {} };
@@ -248,15 +272,7 @@
     var preferRemote = remoteAt >= localAt;
     var base = preferRemote ? remote : local;
     var other = preferRemote ? local : remote;
-    var currentPackId = base.currentPackId || other.currentPackId || "";
-    if (packProgressEmpty(sets[currentPackId])) {
-      for (var pi = 0; pi < keys.length; pi++) {
-        if (!packProgressEmpty(sets[keys[pi]])) {
-          currentPackId = keys[pi];
-          break;
-        }
-      }
-    }
+    var currentPackId = pickCurrentPackId(sets, keys, base, other);
     var voicePick = pickVoice(local, remote);
     return {
       v: 1,
