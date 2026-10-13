@@ -1,5 +1,6 @@
 /**
  * Teacher class progress (mrj-signin teacher_list_students / teacher_student_snapshot).
+ * Server must merge word-master@scores when hasScoresShard (see plans/mrj-signin-teacher-snapshot-scores.md).
  */
 (function (root, factory) {
   var api = factory();

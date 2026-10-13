@@ -13,6 +13,8 @@
   var SHARD_PREFIX = PROGRAM + "@pack/";
   var SCORES_PROGRAM = PROGRAM + "@scores";
   var SOFT_CHAR_LIMIT = 450000;
+  /** Keep newest rows only so the scores shard stays under AppProgress limits. */
+  var SCORE_ROWS_MAX = 800;
 
   function globalRoot() {
     return typeof window !== "undefined"
@@ -94,10 +96,41 @@
     return out;
   }
 
+  function capScoreRows(rows) {
+    rows = Array.isArray(rows) ? rows : [];
+    if (rows.length <= SCORE_ROWS_MAX) return rows;
+    return rows.slice(0, SCORE_ROWS_MAX);
+  }
+
   function mergedScoreRowsForSave(progressObj, serverScoreRows) {
     var local = progressObj && Array.isArray(progressObj.scoreRows) ? progressObj.scoreRows : [];
     var server = Array.isArray(serverScoreRows) ? serverScoreRows : [];
-    return mergeScoreRows(local, server);
+    return capScoreRows(mergeScoreRows(local, server));
+  }
+
+  function packShardPart(packId, mergedObj, aggressive) {
+    var v = (mergedObj && mergedObj.v) || 1;
+    var sets = mergedObj && mergedObj.sets && typeof mergedObj.sets === "object" ? mergedObj.sets : {};
+    var slimSets = {};
+    if (sets[packId]) {
+      var slim = trimPack(sets[packId], !!aggressive);
+      if (slim) slimSets[packId] = slim;
+    }
+    var shardObj = trimProgress({ v: v, sets: slimSets }, !!aggressive, null);
+    return {
+      program: shardProgram(packId),
+      progress_json: JSON.stringify(shardObj),
+    };
+  }
+
+  function scoresShardPart(mergedObj) {
+    var rows = capScoreRows(
+      mergedObj && Array.isArray(mergedObj.scoreRows) ? mergedObj.scoreRows : []
+    );
+    return {
+      program: SCORES_PROGRAM,
+      progress_json: JSON.stringify({ v: (mergedObj && mergedObj.v) || 1, scoreRows: rows }),
+    };
   }
 
   function jsonByteLength(obj) {
@@ -166,10 +199,7 @@
     });
     var hasScoresShard = scoreRows && scoreRows.length > 0;
     if (hasScoresShard) {
-      parts.push({
-        program: SCORES_PROGRAM,
-        progress_json: JSON.stringify({ v: compact.v || 1, scoreRows: scoreRows }),
-      });
+      parts.push(scoresShardPart({ v: compact.v || 1, scoreRows: scoreRows }));
     }
     var shell = {
       v: compact.v || 1,
@@ -268,7 +298,11 @@
     PROGRAM: PROGRAM,
     SHARD_PREFIX: SHARD_PREFIX,
     SCORES_PROGRAM: SCORES_PROGRAM,
+    SCORE_ROWS_MAX: SCORE_ROWS_MAX,
     SOFT_CHAR_LIMIT: SOFT_CHAR_LIMIT,
+    capScoreRows: capScoreRows,
+    packShardPart: packShardPart,
+    scoresShardPart: scoresShardPart,
     trimProgress: trimProgress,
     trimPack: trimPack,
     packParts: packParts,
