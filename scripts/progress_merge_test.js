@@ -61,6 +61,45 @@ if (pack.meetLock.length !== 2 || pack.meetLock[0] !== "w2" || pack.meetLock[1] 
   process.exit(1);
 }
 
+const freshPackPick = merge(
+  {
+    v: 1,
+    currentPackId: "verbs100",
+    sets: {
+      nouns100: {
+        winsA: { time: 2 },
+        intro: { time: true },
+        meetLock: ["time"],
+        lastPlayedAt: 5000,
+      },
+      verbs100: {
+        winsA: {},
+        winsB: {},
+        winsC: {},
+        intro: {},
+        meetLock: [],
+        lastPlayedAt: 9000,
+      },
+    },
+  },
+  {
+    v: 1,
+    currentPackId: "nouns100",
+    sets: {
+      nouns100: {
+        winsA: { time: 2 },
+        intro: { time: true },
+        meetLock: ["time"],
+        lastPlayedAt: 5000,
+      },
+    },
+  }
+);
+if (freshPackPick.currentPackId !== "verbs100") {
+  console.error("fresh pack open should stay on verbs100", freshPackPick.currentPackId);
+  process.exit(1);
+}
+
 const emptyRemote = {
   v: 1,
   sets: {
