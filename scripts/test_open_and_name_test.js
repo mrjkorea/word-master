@@ -19,7 +19,7 @@ if (index.indexOf("js/progress-merge.js?v=20261013-packpick") === -1) fail("prog
 if (index.indexOf("js/progress.js?v=20261013-cloud") === -1) fail("progress cache");
 if (index.indexOf("js/wm-pack-save.js?v=20261013-cloud") === -1) fail("wm-pack-save cache");
 if (index.indexOf("btn-class-progress") === -1) fail("class progress button");
-if (index.indexOf("mrj-scores.js?v=20261013-gamepack") === -1) fail("mrj-scores cache");
+if (index.indexOf("mrj-scores.js?v=20261013-scoresrecv") === -1) fail("mrj-scores cache");
 if (index.indexOf('id="btn-student-name"') === -1) fail("missing top-right name button");
 if (index.indexOf("data-mrj-own-record") === -1) fail("name button missing data-mrj-own-record");
 
