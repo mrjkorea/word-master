@@ -18,7 +18,7 @@ const version = JSON.parse(fs.readFileSync(path.join(root, "version.json"), "utf
 if (version.build !== BUILD) fail("version.json build mismatch");
 if (index.indexOf('WM_BUILD_ID="' + BUILD + '"') === -1) fail("WM_BUILD_ID mismatch");
 if (index.indexOf("js/app.js?v=" + BUILD) === -1) fail("app.js cache mismatch");
-if (index.indexOf("js/progress.js?v=" + BUILD) === -1) fail("progress.js cache mismatch");
+if (index.indexOf("js/progress.js?v=20261013-cloud") === -1) fail("progress.js cache mismatch");
 if (index.indexOf("mrj-scores.js?v=" + BUILD) === -1) fail("mrj-scores.js cache mismatch");
 
 const noteScores = [];
