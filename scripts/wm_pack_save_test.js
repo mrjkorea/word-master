@@ -105,4 +105,13 @@ if (beaconOnly.length !== 1 || beaconOnly[0].program !== "word-master") {
   fail("beacon save must stay one part");
 }
 
+const manyRows = [];
+for (let i = 0; i < ps.SCORE_ROWS_MAX + 50; i++) {
+  manyRows.push({ at: i, pack: "nouns100", kind: "final", score: 1, total: 1 });
+}
+const capped = ps.capScoreRows(manyRows);
+if (capped.length !== ps.SCORE_ROWS_MAX) {
+  fail("capScoreRows should keep newest " + ps.SCORE_ROWS_MAX);
+}
+
 console.log("WM_PACK_SAVE_OK");

@@ -7,7 +7,7 @@ require("../js/wm-pack-save.js");
 
 const ps = global.MRJ_WM_packSave;
 const store = {};
-let saveCalls = 0;
+let saveCalls = [];
 
 global.localStorage = {
   getItem: function (k) {
@@ -60,7 +60,7 @@ global.fetch = function (_url, opts) {
     });
   }
   if (body.action === "save_pack") {
-    saveCalls += 1;
+    saveCalls.push(body.program || "word-master");
     return Promise.resolve({
       json: function () {
         return Promise.resolve({ ok: true, saved: true });
@@ -94,24 +94,36 @@ store["mrj.wm.progress.zz_test_mrjmetrics"] = JSON.stringify({
   id: "zz_test_mrjmetrics",
   progress_json: JSON.stringify({
     v: 1,
-    sets: { localonly: { winsA: { x: 1 }, lastPlayedAt: 99 } },
+    sets: {
+      verbs100: { winsA: { go: 2 }, intro: { go: true }, lastPlayedAt: 99 },
+      localonly: { winsA: { x: 1 }, lastPlayedAt: 99 },
+    },
   }),
 });
 
-hooks.markSessionReady();
-saveCalls = 0;
+hooks.resetThrottleState();
+saveCalls = [];
 
 prog.load().then(function (res) {
-  if (!res || res.error !== "missing_shard") fail("expected missing_shard " + JSON.stringify(res));
-  if (hooks.isCloudLoadBlocked() !== true) fail("cloud load should be blocked");
-  if (prog.isReadyToSave()) fail("must not be ready to save over cloud");
+  if (!res || !res.progress_json) fail("expected merged load " + JSON.stringify(res));
+  const merged = JSON.parse(res.progress_json);
+  if (!merged.sets || !merged.sets.verbs100 || !merged.sets.verbs100.intro.go) {
+    fail("verbs100 should be restored from local for repair");
+  }
+  if (hooks.isCloudLoadBlocked()) fail("repair should unblock cloud save");
+  if (!prog.isReadyToSave()) fail("should be ready to save after repair");
+  const repaired = saveCalls.some(function (p) {
+    return p === ps.shardProgram("verbs100");
+  });
+  if (!repaired) fail("expected repair save for verbs100 shard, got " + saveCalls.join(","));
+  saveCalls = [];
   return prog.save({
     progress_json: JSON.stringify({ v: 1, sets: { localonly: { winsA: { x: 2 }, lastPlayedAt: 100 } } }),
     screen: "home",
     pack_id: "localonly",
   });
-}).then(function (saveRes) {
-  if (saveCalls !== 0) fail("save must not run when load blocked, calls=" + saveCalls);
+}).then(function () {
+  if (!saveCalls.length) fail("student save should reach cloud after repair");
   console.log("PROGRESS_MISSING_SHARD_LOAD_OK");
 }).catch(function (e) {
   fail(e.message || e);

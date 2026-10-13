@@ -21,6 +21,7 @@
   var retryAttempt = 0;
   var lastSaveError = "";
   var serverProgressSnapshot = null;
+  var serverSnapshotStudentId = "";
   var inFlightSave = false;
   var lastSuccessfulPackedJson = "";
   var lastRemoteSaveAt = 0;
@@ -35,12 +36,23 @@
 
   function serverScoreRowsFromSnapshot() {
     if (!serverProgressSnapshot) return [];
+    if (serverSnapshotStudentId
+      && studentStorageKey(authStudentId()) !== serverSnapshotStudentId) {
+      return [];
+    }
     try {
       var o = parseProgressJson(serverProgressSnapshot);
       return Array.isArray(o.scoreRows) ? o.scoreRows : [];
     } catch (e) {
       return [];
     }
+  }
+
+  function setServerProgressSnapshot(json, forStudentId) {
+    serverProgressSnapshot = json == null ? null : String(json);
+    serverSnapshotStudentId = forStudentId != null
+      ? studentStorageKey(forStudentId)
+      : studentStorageKey(authStudentId());
   }
 
   function progressKeyForId(id) {
@@ -81,7 +93,9 @@
     var merged = parseProgressJson(incomingJson);
     if (!merge) return merged;
     var serverObj = null;
-    if (serverProgressSnapshot) {
+    if (serverProgressSnapshot
+      && (!serverSnapshotStudentId
+        || serverSnapshotStudentId === studentStorageKey(authStudentId()))) {
       serverObj = parseProgressJson(serverProgressSnapshot);
       merged = merge(merged, serverObj);
     }
@@ -358,14 +372,17 @@
     } catch (e) {}
   }
 
-  function afterAllPartsSaved(body, progressJson, res, transport, reqId) {
+  function afterAllPartsSaved(body, progressJson, res, transport, reqId, reqSeq) {
+    if (saveInflightStale(reqSeq, reqId)) {
+      return { ok: false, error: "stale" };
+    }
     retryAttempt = 0;
     saveSplitLevel = 0;
     lastSaveError = "";
     lastRemoteSaveAt = Date.now();
     var canonicalJson = canonicalProgressJson(progressJson);
     lastSuccessfulPackedJson = canonicalJson;
-    serverProgressSnapshot = canonicalJson;
+    setServerProgressSnapshot(canonicalJson, reqId);
     writeLocalProgress(body, canonicalJson, reqId);
     dispatchSaveStatus(true, res);
     if (pendingSave === body) pendingSave = null;
@@ -373,6 +390,9 @@
   }
 
   function escalatePackSave(body, progressJson, transport, reqId, reqSeq) {
+    if (saveInflightStale(reqSeq, reqId)) {
+      return Promise.resolve({ ok: false, error: "stale" });
+    }
     writeLocalProgress(body, progressJson, reqId);
     if (saveSplitLevel < 2) {
       saveSplitLevel += 1;
@@ -392,6 +412,10 @@
     var parts = built.parts || [];
     var idx = 0;
     function saveNext(prevRes) {
+      if (saveInflightStale(reqSeq, reqId)) {
+        inFlightSave = false;
+        return Promise.resolve({ ok: false, error: "stale" });
+      }
       if (prevRes && isTooLargeSaveError(prevRes)) {
         inFlightSave = false;
         return escalatePackSave(built.body, built.progressJson, transport, reqId, reqSeq);
@@ -412,7 +436,8 @@
           built.progressJson,
           prevRes || { ok: true, saved: true },
           transport,
-          reqId
+          reqId,
+          reqSeq
         ));
       }
       var part = parts[idx];
@@ -428,10 +453,94 @@
     return saveNext(null);
   }
 
+  function postSavePartsSequential(parts, studentId, token, loadSeq) {
+    var i = 0;
+    function next(prev) {
+      if (loadSeq !== sessionSeq
+        || studentStorageKey(authStudentId()) !== studentStorageKey(studentId)) {
+        return Promise.resolve({ ok: false, error: "stale" });
+      }
+      if (prev && !(prev.ok && prev.saved !== false && !prev.error)) {
+        return Promise.resolve(prev);
+      }
+      if (i >= parts.length) return Promise.resolve(prev || { ok: true, saved: true });
+      var part = parts[i];
+      i += 1;
+      return postRemote({
+        action: "save_pack",
+        id: studentId,
+        token: token,
+        program: part.program,
+        progress_json: part.progress_json,
+      }).then(next);
+    }
+    return next(null);
+  }
+
+  function mergeProgressWithLocal(mergedJson) {
+    var merge = mergeFn();
+    var mergedObj = parseProgressJson(mergedJson);
+    if (!merge) return mergedObj;
+    var localJson = localProgressJson();
+    if (localJson) {
+      mergedObj = merge(mergedObj, parseProgressJson(localJson));
+    }
+    return mergedObj;
+  }
+
+  function repairPartsForMissing(ps, shell, missingKeys, mergedObj) {
+    var parts = [];
+    (missingKeys || []).forEach(function (key) {
+      if (key === "scores") {
+        if (shell.hasScoresShard) parts.push(ps.scoresShardPart(mergedObj));
+        return;
+      }
+      parts.push(ps.packShardPart(key, mergedObj, false));
+    });
+    return parts;
+  }
+
+  function repairMissingShards(mainRes, missingKeys, partialLoads, loadId, token, loadSeq) {
+    var ps = packSaveApi();
+    if (!ps) {
+      return Promise.resolve({ ok: false, error: "no_pack_save" });
+    }
+    var shell = ps.parseShell(mainRes.progress_json);
+    var partialMerged = ps.mergeLoadedParts(mainRes.progress_json, partialLoads);
+    var mergedObj = mergeProgressWithLocal(partialMerged);
+    var mergedJson = JSON.stringify(mergedObj);
+    var repairParts = repairPartsForMissing(ps, shell, missingKeys, mergedObj);
+    if (!repairParts.length) {
+      return Promise.resolve({ ok: false, error: "missing_shard" });
+    }
+    return postSavePartsSequential(repairParts, loadId, token, loadSeq).then(function (repairRes) {
+      if (!repairRes || !(repairRes.ok && repairRes.saved !== false && !repairRes.error)) {
+        cloudLoadBlocked = true;
+        hydrated = false;
+        lastSaveError = "shard_repair_failed";
+        dispatchSaveStatus(false, { error: "shard_repair_failed" });
+        return {
+          ok: false,
+          error: "shard_repair_failed",
+          missing: missingKeys,
+          found: !!(mainRes && mainRes.found),
+        };
+      }
+      cloudLoadBlocked = false;
+      setServerProgressSnapshot(mergedJson, loadId);
+      writeLocalProgress(
+        { progress_json: mergedJson, screen: "home" },
+        mergedJson,
+        loadId
+      );
+      return Object.assign({}, mainRes, { progress_json: mergedJson, repaired: true });
+    });
+  }
+
   function afterSaveAttempt(body, progressJson, res, transport, reqId, reqSeq) {
     var ok = !!(res && res.ok && res.saved !== false && !res.error);
     if (ok) {
-      return afterAllPartsSaved(body, progressJson, res, transport, reqId);
+      return afterAllPartsSaved(body, progressJson, res, transport, reqId, reqSeq);
     }
     lastSaveError = (res && res.error) || "save_failed";
     if (isTooLargeSaveError(res)) {
@@ -444,13 +553,8 @@
     return res;
   }
 
-  function finishStaleInflightSave(body, progressJson, res, reqId) {
+  function finishStaleInflightSave(body, progressJson, res, reqId, reqSeq) {
     inFlightSave = false;
-    var ok = !!(res && res.ok && res.saved !== false && !res.error);
-    if (ok) {
-      var canonicalJson = canonicalProgressJson(progressJson);
-      writeLocal(Object.assign({}, body, { progress_json: canonicalJson }), reqId);
-    }
     if (pendingSave) scheduleRateLimitedFlush();
     return { ok: false, error: "stale" };
   }
@@ -518,7 +622,7 @@
     clearRateLimitTimer();
     return savePackParts(built, token, transport, reqId, reqSeq).then(function (res) {
       if (saveInflightStale(reqSeq, reqId)) {
-        return finishStaleInflightSave(built.body, outboundJson, res, reqId);
+        return finishStaleInflightSave(built.body, outboundJson, res, reqId, reqSeq);
       }
       if (pendingSave && pendingSave !== body) {
         scheduleRateLimitedFlush();
@@ -602,20 +706,24 @@
           });
         });
         if (missing.length) {
-          cloudLoadBlocked = true;
-          hydrated = false;
-          lastSaveError = "missing_shard";
-          dispatchSaveStatus(false, { error: "missing_shard" });
-          return {
-            ok: false,
-            error: "missing_shard",
-            missing: missing,
-            found: !!(mainRes && mainRes.found),
-          };
+          return repairMissingShards(
+            mainRes,
+            missing,
+            loads,
+            loadId,
+            token,
+            loadSeq
+          ).then(function (repairedRes) {
+            if (repairedRes && repairedRes.error) {
+              return repairedRes;
+            }
+            hydrated = !!(repairedRes && repairedRes.ok !== false);
+            return repairedRes;
+          });
         }
         cloudLoadBlocked = false;
         var merged = ps.mergeLoadedParts(mainRes.progress_json, loads);
-        serverProgressSnapshot = merged;
+        setServerProgressSnapshot(merged, loadId);
         return Object.assign({}, mainRes, { progress_json: merged });
       });
     }
@@ -644,19 +752,20 @@
         var needsShards = (shell.packShardIds && shell.packShardIds.length) || shell.hasScoresShard;
         if (needsShards) {
           return loadShardParts(res).then(function (mergedRes) {
-            if (mergedRes && mergedRes.error === "missing_shard") {
+            if (mergedRes && (mergedRes.error === "missing_shard"
+              || mergedRes.error === "shard_repair_failed")) {
               return finish(mergedRes);
             }
-            hydrated = !!(mergedRes && mergedRes.ok);
+            hydrated = !!(mergedRes && mergedRes.ok !== false && !mergedRes.error);
             return finish(mergedRes);
           });
         }
         cloudLoadBlocked = false;
-        serverProgressSnapshot = String(res.progress_json);
+        setServerProgressSnapshot(String(res.progress_json), loadId);
         return finish(res);
       }
       if (res && res.ok) {
-        serverProgressSnapshot = null;
+        setServerProgressSnapshot(null, loadId);
       }
       return finish(res);
     }).catch(function () {
@@ -676,7 +785,9 @@
     loadDone = false;
     cloudLoadBlocked = false;
     pendingSave = null;
-    // Keep serverProgressSnapshot until the next load_pack completes.
+    serverProgressSnapshot = null;
+    serverSnapshotStudentId = "";
+    lastSuccessfulPackedJson = "";
     retryAttempt = 0;
     lastSaveError = "";
     clearRetryTimer();
@@ -723,7 +834,7 @@
     lastSaveError: function () { return lastSaveError; },
     mergeSaveProgress: mergeSaveProgress,
     setServerSnapshot: function (json) {
-      serverProgressSnapshot = json == null ? null : String(json);
+      setServerProgressSnapshot(json, authStudentId());
     },
     __testHooks: {
       setSaveIntervalMs: function (ms) {
