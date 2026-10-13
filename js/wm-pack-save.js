@@ -1,6 +1,6 @@
 /**
  * Compact Word Master cloud progress and split oversized saves across AppProgress rows.
- * Scores live in StudentScoreIndex (note_score); pack blobs omit scoreRows.
+ * Pack shards: word-master@pack/<packId>. Score history: word-master@scores (never dropped).
  */
 (function (root, factory) {
   var api = factory();
@@ -11,7 +11,23 @@
 
   var PROGRAM = "word-master";
   var SHARD_PREFIX = PROGRAM + "@pack/";
+  var SCORES_PROGRAM = PROGRAM + "@scores";
   var SOFT_CHAR_LIMIT = 450000;
+
+  function globalRoot() {
+    return typeof window !== "undefined"
+      ? window
+      : typeof globalThis !== "undefined"
+        ? globalThis
+        : this;
+  }
+
+  function mergeScoreRows(a, b) {
+    var mergeFn = globalRoot().MRJ_WM_mergeScoreRows;
+    if (mergeFn) return mergeFn(a, b);
+    var rows = (Array.isArray(a) ? a : []).concat(Array.isArray(b) ? b : []);
+    return rows;
+  }
 
   function mapHasPositive(m) {
     m = m && typeof m === "object" ? m : {};
@@ -55,7 +71,7 @@
     return out;
   }
 
-  function trimProgress(raw, aggressive) {
+  function trimProgress(raw, aggressive, scoreRows) {
     var obj = raw && typeof raw === "object" ? raw : {};
     var out = { v: obj.v || 1 };
     if (obj.studentId) out.studentId = String(obj.studentId);
@@ -66,6 +82,8 @@
     if (obj.testKind) out.testKind = obj.testKind;
     if (obj.currentPackId) out.currentPackId = String(obj.currentPackId);
     if (isNonEmptyArray(obj.packShardIds)) out.packShardIds = obj.packShardIds.slice();
+    if (obj.hasScoresShard) out.hasScoresShard = true;
+    if (scoreRows && scoreRows.length) out.scoreRows = scoreRows;
     var sets = {};
     var src = obj.sets && typeof obj.sets === "object" ? obj.sets : {};
     Object.keys(src).forEach(function (pid) {
@@ -74,6 +92,12 @@
     });
     if (Object.keys(sets).length) out.sets = sets;
     return out;
+  }
+
+  function mergedScoreRowsForSave(progressObj, serverScoreRows) {
+    var local = progressObj && Array.isArray(progressObj.scoreRows) ? progressObj.scoreRows : [];
+    var server = Array.isArray(serverScoreRows) ? serverScoreRows : [];
+    return mergeScoreRows(local, server);
   }
 
   function jsonByteLength(obj) {
@@ -88,27 +112,65 @@
     return String(program || "").indexOf(SHARD_PREFIX) === 0;
   }
 
+  function isScoresProgram(program) {
+    return String(program || "") === SCORES_PROGRAM;
+  }
+
   function packIdFromShardProgram(program) {
     var p = String(program || "");
     if (p.indexOf(SHARD_PREFIX) !== 0) return "";
     return p.slice(SHARD_PREFIX.length);
   }
 
+  function orderPartsForSave(parts) {
+    var shell = [];
+    var rest = [];
+    (parts || []).forEach(function (part) {
+      if (part && part.program === PROGRAM) shell.push(part);
+      else rest.push(part);
+    });
+    return rest.concat(shell);
+  }
+
   function packParts(progressObj, options) {
     options = options || {};
     var aggressive = !!options.aggressive;
     var forceSplit = !!options.forceSplit;
-    var compact = trimProgress(progressObj, aggressive);
-    var singleJson = JSON.stringify(compact);
+    var allowSplit = options.allowSplit !== false;
+    var scoreRows = mergedScoreRowsForSave(progressObj, options.serverScoreRows);
+    var bodyNoScores = trimProgress(progressObj, aggressive, null);
+
+    if (!allowSplit) {
+      var monolith = trimProgress(progressObj, aggressive, scoreRows);
+      return [{ program: PROGRAM, progress_json: JSON.stringify(monolith) }];
+    }
+
+    var singleBody = trimProgress(progressObj, aggressive, scoreRows);
+    var singleJson = JSON.stringify(singleBody);
     if (!forceSplit && singleJson.length <= SOFT_CHAR_LIMIT) {
       return [{ program: PROGRAM, progress_json: singleJson }];
     }
-    return splitParts(compact, aggressive);
+    return orderPartsForSave(splitParts(bodyNoScores, aggressive, scoreRows));
   }
 
-  function splitParts(compact, aggressive) {
+  function splitParts(compact, aggressive, scoreRows) {
     var sets = compact.sets && typeof compact.sets === "object" ? compact.sets : {};
     var packIds = Object.keys(sets);
+    var parts = [];
+    packIds.forEach(function (pid) {
+      var shardObj = trimProgress({ v: compact.v || 1, sets: { [pid]: sets[pid] } }, aggressive, null);
+      parts.push({
+        program: shardProgram(pid),
+        progress_json: JSON.stringify(shardObj),
+      });
+    });
+    var hasScoresShard = scoreRows && scoreRows.length > 0;
+    if (hasScoresShard) {
+      parts.push({
+        program: SCORES_PROGRAM,
+        progress_json: JSON.stringify({ v: compact.v || 1, scoreRows: scoreRows }),
+      });
+    }
     var shell = {
       v: compact.v || 1,
       studentId: compact.studentId,
@@ -119,17 +181,38 @@
       testKind: compact.testKind,
       currentPackId: compact.currentPackId,
       packShardIds: packIds.slice(),
+      hasScoresShard: hasScoresShard,
       sets: {},
     };
-    var parts = [{ program: PROGRAM, progress_json: JSON.stringify(trimProgress(shell, aggressive)) }];
-    packIds.forEach(function (pid) {
-      var shardObj = trimProgress({ v: compact.v || 1, sets: { [pid]: sets[pid] } }, aggressive);
-      parts.push({
-        program: shardProgram(pid),
-        progress_json: JSON.stringify(shardObj),
-      });
+    parts.push({
+      program: PROGRAM,
+      progress_json: JSON.stringify(trimProgress(shell, aggressive, null)),
     });
     return parts;
+  }
+
+  function parseShell(mainJson) {
+    var base = {};
+    try {
+      base = JSON.parse(String(mainJson || "{}"));
+    } catch (e) {
+      return { packShardIds: [], hasScoresShard: false };
+    }
+    if (!base || typeof base !== "object") {
+      return { packShardIds: [], hasScoresShard: false };
+    }
+    var ids = [];
+    if (isNonEmptyArray(base.packShardIds)) {
+      ids = base.packShardIds.map(function (id) { return String(id); });
+    }
+    return {
+      packShardIds: ids,
+      hasScoresShard: !!base.hasScoresShard,
+    };
+  }
+
+  function shardIdsFromShell(mainJson) {
+    return parseShell(mainJson).packShardIds;
   }
 
   function mergeLoadedParts(mainJson, shardLoads) {
@@ -141,8 +224,18 @@
     }
     if (!base || typeof base !== "object") base = { v: 1, sets: {} };
     if (!base.sets) base.sets = {};
+    var scoreRows = Array.isArray(base.scoreRows) ? base.scoreRows : [];
     (shardLoads || []).forEach(function (row) {
       if (!row || !row.progress_json) return;
+      if (isScoresProgram(row.program)) {
+        try {
+          var scoresObj = JSON.parse(String(row.progress_json));
+          if (scoresObj && Array.isArray(scoresObj.scoreRows)) {
+            scoreRows = mergeScoreRows(scoreRows, scoresObj.scoreRows);
+          }
+        } catch (e1) {}
+        return;
+      }
       var pid = packIdFromShardProgram(row.program);
       try {
         var obj = JSON.parse(String(row.progress_json));
@@ -157,32 +250,38 @@
       } catch (e2) {}
     });
     delete base.packShardIds;
-    return JSON.stringify(trimProgress(base, false));
+    delete base.hasScoresShard;
+    var merged = trimProgress(base, false, scoreRows.length ? scoreRows : null);
+    return JSON.stringify(merged);
   }
 
-  function shardIdsFromShell(mainJson) {
-    var base = {};
-    try {
-      base = JSON.parse(String(mainJson || "{}"));
-    } catch (e) {
-      return [];
-    }
-    if (!base || !isNonEmptyArray(base.packShardIds)) return [];
-    return base.packShardIds.map(function (id) { return String(id); });
+  function requiredLoadPrograms(mainJson) {
+    var shell = parseShell(mainJson);
+    var programs = shell.packShardIds.map(function (pid) {
+      return shardProgram(pid);
+    });
+    if (shell.hasScoresShard) programs.push(SCORES_PROGRAM);
+    return programs;
   }
 
   return {
     PROGRAM: PROGRAM,
     SHARD_PREFIX: SHARD_PREFIX,
+    SCORES_PROGRAM: SCORES_PROGRAM,
     SOFT_CHAR_LIMIT: SOFT_CHAR_LIMIT,
     trimProgress: trimProgress,
     trimPack: trimPack,
     packParts: packParts,
+    orderPartsForSave: orderPartsForSave,
     mergeLoadedParts: mergeLoadedParts,
+    mergedScoreRowsForSave: mergedScoreRowsForSave,
     shardProgram: shardProgram,
     isShardProgram: isShardProgram,
+    isScoresProgram: isScoresProgram,
     packIdFromShardProgram: packIdFromShardProgram,
     shardIdsFromShell: shardIdsFromShell,
+    parseShell: parseShell,
+    requiredLoadPrograms: requiredLoadPrograms,
     jsonByteLength: jsonByteLength,
   };
 });

@@ -27,9 +27,20 @@
   var unloadHooksInstalled = false;
   var sessionSeq = 0;
   var saveSplitLevel = 0;
+  var cloudLoadBlocked = false;
 
   function packSaveApi() {
     return root.MRJ_WM_packSave || null;
+  }
+
+  function serverScoreRowsFromSnapshot() {
+    if (!serverProgressSnapshot) return [];
+    try {
+      var o = parseProgressJson(serverProgressSnapshot);
+      return Array.isArray(o.scoreRows) ? o.scoreRows : [];
+    } catch (e) {
+      return [];
+    }
   }
 
   function progressKeyForId(id) {
@@ -286,7 +297,10 @@
       parts = ps.packParts(mergedProgress, {
         forceSplit: !!packOptions.forceSplit || saveSplitLevel > 0,
         aggressive: !!packOptions.aggressive || saveSplitLevel > 1,
+        allowSplit: packOptions.allowSplit !== false,
+        serverScoreRows: serverScoreRowsFromSnapshot(),
       });
+      if (ps.orderPartsForSave) parts = ps.orderPartsForSave(parts);
     } else {
       parts = [{
         program: PROGRAM,
@@ -455,18 +469,23 @@
       dispatchSaveStatus(false, { error: "no_auth" });
       return Promise.resolve({ ok: false, error: "no_auth" });
     }
-    if (!loadDone || !hydrated) {
+    if (!loadDone || !hydrated || cloudLoadBlocked) {
       pendingSave = body;
-      return Promise.resolve({ ok: false, error: "not_loaded" });
+      return Promise.resolve({
+        ok: false,
+        error: cloudLoadBlocked ? "missing_shard" : "not_loaded",
+      });
     }
     if (inFlightSave) {
       pendingSave = body;
       return Promise.resolve({ ok: false, error: "in_flight" });
     }
 
+    var isBeacon = !!options.forceUnload;
     var packOpts = {
-      forceSplit: !!(options.fromTooLarge || saveSplitLevel > 0),
+      forceSplit: !isBeacon && !!(options.fromTooLarge || saveSplitLevel > 0),
       aggressive: saveSplitLevel > 1,
+      allowSplit: !isBeacon,
     };
     var built = buildPackedSave(body, packOpts);
     var outboundJson = canonicalProgressJson(built.progressJson);
@@ -544,27 +563,57 @@
     loadDone = false;
     var loadSeq = sessionSeq;
     var loadId = id;
-    function loadShardParts(mainRes, shardIds) {
+    function loadShardParts(mainRes) {
       var ps = packSaveApi();
-      if (!ps || !shardIds.length) return Promise.resolve(mainRes);
+      if (!ps) return Promise.resolve(mainRes);
+      var shell = ps.parseShell(mainRes.progress_json);
+      var packIds = shell.packShardIds || [];
       var token = authToken();
-      return Promise.all(shardIds.map(function (pid) {
+      var programs = [];
+      packIds.forEach(function (pid) {
+        programs.push({ program: ps.shardProgram(pid), packId: pid });
+      });
+      if (shell.hasScoresShard) {
+        programs.push({ program: ps.SCORES_PROGRAM, packId: "scores" });
+      }
+      if (!programs.length) return Promise.resolve(mainRes);
+      return Promise.all(programs.map(function (spec) {
         return postRemote({
           action: "load_pack",
           id: loadId,
           token: token,
-          program: ps.shardProgram(pid),
+          program: spec.program,
+        }).then(function (row) {
+          return { spec: spec, row: row };
         });
-      })).then(function (shardRows) {
+      })).then(function (results) {
+        var missing = [];
         var loads = [];
-        shardRows.forEach(function (row, i) {
-          if (row && row.ok && row.found && row.progress_json) {
-            loads.push({
-              program: ps.shardProgram(shardIds[i]),
-              progress_json: row.progress_json,
-            });
+        results.forEach(function (entry) {
+          var row = entry.row;
+          var ok = row && row.ok && row.found && row.progress_json;
+          if (!ok) {
+            missing.push(entry.spec.packId);
+            return;
           }
+          loads.push({
+            program: entry.spec.program,
+            progress_json: row.progress_json,
+          });
         });
+        if (missing.length) {
+          cloudLoadBlocked = true;
+          hydrated = false;
+          lastSaveError = "missing_shard";
+          dispatchSaveStatus(false, { error: "missing_shard" });
+          return {
+            ok: false,
+            error: "missing_shard",
+            missing: missing,
+            found: !!(mainRes && mainRes.found),
+          };
+        }
+        cloudLoadBlocked = false;
         var merged = ps.mergeLoadedParts(mainRes.progress_json, loads);
         serverProgressSnapshot = merged;
         return Object.assign({}, mainRes, { progress_json: merged });
@@ -584,19 +633,25 @@
       loadDone = true;
       hydrated = !!(res && res.ok);
       var finish = function (finalRes) {
-        if (hydrated && pendingSave && pendingSave.progress_json) {
+        if (hydrated && !cloudLoadBlocked && pendingSave && pendingSave.progress_json) {
           flushSave(pendingSave, {});
         }
         return finalRes;
       };
       if (res && res.ok && res.found && res.progress_json) {
         var ps = packSaveApi();
-        var shardIds = ps ? ps.shardIdsFromShell(res.progress_json) : [];
-        if (shardIds.length) {
-          return loadShardParts(res, shardIds).then(function (mergedRes) {
+        var shell = ps ? ps.parseShell(res.progress_json) : { packShardIds: [], hasScoresShard: false };
+        var needsShards = (shell.packShardIds && shell.packShardIds.length) || shell.hasScoresShard;
+        if (needsShards) {
+          return loadShardParts(res).then(function (mergedRes) {
+            if (mergedRes && mergedRes.error === "missing_shard") {
+              return finish(mergedRes);
+            }
+            hydrated = !!(mergedRes && mergedRes.ok);
             return finish(mergedRes);
           });
         }
+        cloudLoadBlocked = false;
         serverProgressSnapshot = String(res.progress_json);
         return finish(res);
       }
@@ -619,6 +674,7 @@
     sessionSeq += 1;
     hydrated = false;
     loadDone = false;
+    cloudLoadBlocked = false;
     pendingSave = null;
     // Keep serverProgressSnapshot until the next load_pack completes.
     retryAttempt = 0;
@@ -628,7 +684,7 @@
   }
 
   function isReadyToSave() {
-    return loadDone && hydrated && !!authStudentId() && !!authToken();
+    return loadDone && hydrated && !cloudLoadBlocked && !!authStudentId() && !!authToken();
   }
 
   function flushOnPageHide() {
@@ -690,6 +746,8 @@
       lastSuccessfulPackedJson: function () { return lastSuccessfulPackedJson; },
       getSaveSplitLevel: function () { return saveSplitLevel; },
       setSaveSplitLevel: function (n) { saveSplitLevel = Math.max(0, Number(n) || 0); },
+      isCloudLoadBlocked: function () { return cloudLoadBlocked; },
+      setCloudLoadBlocked: function (v) { cloudLoadBlocked = !!v; },
     },
   };
 })(typeof window !== "undefined" ? window : global);

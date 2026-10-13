@@ -145,14 +145,24 @@
       state.loading = false;
       if (!res || !res.ok) {
         state.error = (res && res.error) || "load_failed";
+        if (window.MRJ_WM_teacherClassroom) {
+          window.MRJ_WM_teacherClassroom.paintIncompleteWarning("");
+        }
         paintStatus("Could not load snapshot (" + state.error + ").");
         return;
       }
+      var incompleteMeta = window.MRJ_WM_teacherClassroom
+        ? window.MRJ_WM_teacherClassroom.applySnapshotIncompleteFlags(res)
+        : { incomplete: false, missingShards: [] };
       state.snapshot = CP.parseProgressJson(res.progress_json);
       state.error = "";
       var packs = Object.keys(state.snapshot.sets || {});
       state.packId = packs[0] || "";
-      paintStatus(studentId + " · " + packs.length + " pack(s)");
+      var statusLine = studentId + " · " + packs.length + " pack(s)";
+      if (incompleteMeta.incomplete) {
+        statusLine += " · incomplete cloud data";
+      }
+      paintStatus(statusLine);
       renderPackPicker();
       renderWordTable();
     });

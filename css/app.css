@@ -179,6 +179,17 @@ body.is-student .teacher-bar { display: none !important; }
   font-size: 14px;
   color: var(--muted);
 }
+.class-progress-incomplete-warn {
+  margin: 0 0 12px;
+  padding: 10px 12px;
+  border-radius: 10px;
+  border: 1px solid #e8b4b4;
+  background: #fff5f5;
+  color: #8b1e1e;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.4;
+}
 .class-progress-students,
 .class-progress-packs {
   display: flex;
