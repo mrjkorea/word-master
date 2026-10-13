@@ -26,6 +26,22 @@
   var lastRemoteSaveAt = 0;
   var unloadHooksInstalled = false;
   var sessionSeq = 0;
+  var saveSplitLevel = 0;
+  var cloudLoadBlocked = false;
+
+  function packSaveApi() {
+    return root.MRJ_WM_packSave || null;
+  }
+
+  function serverScoreRowsFromSnapshot() {
+    if (!serverProgressSnapshot) return [];
+    try {
+      var o = parseProgressJson(serverProgressSnapshot);
+      return Array.isArray(o.scoreRows) ? o.scoreRows : [];
+    } catch (e) {
+      return [];
+    }
+  }
 
   function progressKeyForId(id) {
     var k = studentStorageKey(id);
@@ -272,14 +288,30 @@
     }, delay);
   }
 
-  function buildPackedSave(body) {
+  function buildPackedSave(body, packOptions) {
+    packOptions = packOptions || {};
     var mergedProgress = mergeSaveProgress(body.progress_json || "{}");
-    var mergedBody = Object.assign({}, body, {
-      progress_json: JSON.stringify(mergedProgress),
-    });
+    var ps = packSaveApi();
+    var parts;
+    if (ps) {
+      parts = ps.packParts(mergedProgress, {
+        forceSplit: !!packOptions.forceSplit || saveSplitLevel > 0,
+        aggressive: !!packOptions.aggressive || saveSplitLevel > 1,
+        allowSplit: packOptions.allowSplit !== false,
+        serverScoreRows: serverScoreRowsFromSnapshot(),
+      });
+      if (ps.orderPartsForSave) parts = ps.orderPartsForSave(parts);
+    } else {
+      parts = [{
+        program: PROGRAM,
+        progress_json: JSON.stringify(mergedProgress),
+      }];
+    }
+    var mergedJson = JSON.stringify(mergedProgress);
     return {
-      body: mergedBody,
-      progressJson: mergedBody.progress_json || "{}",
+      body: body,
+      parts: parts,
+      progressJson: mergedJson,
     };
   }
 
@@ -319,42 +351,91 @@
     return !!(res && res.error === "too_large");
   }
 
+  function writeLocalProgress(body, progressJson, reqId) {
+    try {
+      var localBody = Object.assign({}, body, { progress_json: progressJson });
+      writeLocal(localBody, reqId);
+    } catch (e) {}
+  }
+
+  function afterAllPartsSaved(body, progressJson, res, transport, reqId) {
+    retryAttempt = 0;
+    saveSplitLevel = 0;
+    lastSaveError = "";
+    lastRemoteSaveAt = Date.now();
+    var canonicalJson = canonicalProgressJson(progressJson);
+    lastSuccessfulPackedJson = canonicalJson;
+    serverProgressSnapshot = canonicalJson;
+    writeLocalProgress(body, canonicalJson, reqId);
+    dispatchSaveStatus(true, res);
+    if (pendingSave === body) pendingSave = null;
+    return res;
+  }
+
+  function escalatePackSave(body, progressJson, transport, reqId, reqSeq) {
+    writeLocalProgress(body, progressJson, reqId);
+    if (saveSplitLevel < 2) {
+      saveSplitLevel += 1;
+      if (!transport || !transport.beacon) {
+        return flushSave(body, { isRetry: true, forId: reqId, fromTooLarge: true });
+      }
+    }
+    lastSaveError = "too_large";
+    if (!transport || !transport.beacon) {
+      dispatchSaveStatus(false, { error: "too_large" });
+      scheduleRetry(body, reqId, reqSeq);
+    }
+    return Promise.resolve({ ok: false, error: "too_large" });
+  }
+
+  function savePackParts(built, token, transport, reqId, reqSeq) {
+    var parts = built.parts || [];
+    var idx = 0;
+    function saveNext(prevRes) {
+      if (prevRes && isTooLargeSaveError(prevRes)) {
+        inFlightSave = false;
+        return escalatePackSave(built.body, built.progressJson, transport, reqId, reqSeq);
+      }
+      if (prevRes && !(prevRes.ok && prevRes.saved !== false && !prevRes.error)) {
+        inFlightSave = false;
+        lastSaveError = (prevRes && prevRes.error) || "save_failed";
+        if (!transport || !transport.beacon) {
+          dispatchSaveStatus(false, prevRes);
+          scheduleRetry(built.body, reqId, reqSeq);
+        }
+        return Promise.resolve(prevRes);
+      }
+      if (idx >= parts.length) {
+        inFlightSave = false;
+        return Promise.resolve(afterAllPartsSaved(
+          built.body,
+          built.progressJson,
+          prevRes || { ok: true, saved: true },
+          transport,
+          reqId
+        ));
+      }
+      var part = parts[idx];
+      idx += 1;
+      return postRemote({
+        action: "save_pack",
+        id: reqId,
+        token: token,
+        program: part.program || PROGRAM,
+        progress_json: part.progress_json,
+      }, transport).then(saveNext);
+    }
+    return saveNext(null);
+  }
+
   function afterSaveAttempt(body, progressJson, res, transport, reqId, reqSeq) {
     var ok = !!(res && res.ok && res.saved !== false && !res.error);
     if (ok) {
-      retryAttempt = 0;
-      lastSaveError = "";
-      lastRemoteSaveAt = Date.now();
-      var canonicalJson = canonicalProgressJson(progressJson);
-      lastSuccessfulPackedJson = canonicalJson;
-      serverProgressSnapshot = canonicalJson;
-      body = Object.assign({}, body, { progress_json: canonicalJson });
-      writeLocal(body, reqId);
-      dispatchSaveStatus(true, res);
-      if (pendingSave === body) pendingSave = null;
-      return res;
+      return afterAllPartsSaved(body, progressJson, res, transport, reqId);
     }
     lastSaveError = (res && res.error) || "save_failed";
     if (isTooLargeSaveError(res)) {
-      try {
-        if (root.console && typeof root.console.warn === "function") {
-          root.console.warn(
-            "[word-master] save_pack too_large:",
-            (res && res.message) || "Progress data is too large to store."
-          );
-        }
-      } catch (logErr) {}
-      clearRetryTimer();
-      retryAttempt = 0;
-      try {
-        var localBody = Object.assign({}, body, { progress_json: progressJson });
-        writeLocal(localBody, reqId);
-      } catch (localErr) {}
-      if (!transport || !transport.beacon) {
-        dispatchSaveStatus(false, res);
-      }
-      if (pendingSave === body) pendingSave = null;
-      return res;
+      return escalatePackSave(body, progressJson, transport, reqId, reqSeq);
     }
     if (!transport || !transport.beacon) {
       dispatchSaveStatus(false, res);
@@ -388,16 +469,25 @@
       dispatchSaveStatus(false, { error: "no_auth" });
       return Promise.resolve({ ok: false, error: "no_auth" });
     }
-    if (!loadDone || !hydrated) {
+    if (!loadDone || !hydrated || cloudLoadBlocked) {
       pendingSave = body;
-      return Promise.resolve({ ok: false, error: "not_loaded" });
+      return Promise.resolve({
+        ok: false,
+        error: cloudLoadBlocked ? "missing_shard" : "not_loaded",
+      });
     }
     if (inFlightSave) {
       pendingSave = body;
       return Promise.resolve({ ok: false, error: "in_flight" });
     }
 
-    var built = buildPackedSave(body);
+    var isBeacon = !!options.forceUnload;
+    var packOpts = {
+      forceSplit: !isBeacon && !!(options.fromTooLarge || saveSplitLevel > 0),
+      aggressive: saveSplitLevel > 1,
+      allowSplit: !isBeacon,
+    };
+    var built = buildPackedSave(body, packOpts);
     var outboundJson = canonicalProgressJson(built.progressJson);
     if (unchangedSinceLastSave(outboundJson)) {
       if (pendingSave === body) pendingSave = null;
@@ -405,7 +495,7 @@
       return Promise.resolve({ ok: true, skipped: true });
     }
 
-    var bypassRateLimit = !!(options.isRetry || options.forceUnload);
+    var bypassRateLimit = !!(options.isRetry || options.forceUnload || options.fromTooLarge);
     if (!bypassRateLimit && lastRemoteSaveAt > 0) {
       var elapsed = Date.now() - lastRemoteSaveAt;
       if (elapsed < SAVE_INTERVAL_MS) {
@@ -414,13 +504,6 @@
         return Promise.resolve({ ok: false, error: "rate_limited" });
       }
     }
-    var req = {
-      action: "save_pack",
-      id: id,
-      token: token,
-      program: PROGRAM,
-      progress_json: outboundJson,
-    };
     var transport = {};
     if (options.forceUnload) {
       transport.beacon = true;
@@ -433,16 +516,14 @@
     var reqSeq = sessionSeq;
     inFlightSave = true;
     clearRateLimitTimer();
-    return postRemote(req, transport).then(function (res) {
+    return savePackParts(built, token, transport, reqId, reqSeq).then(function (res) {
       if (saveInflightStale(reqSeq, reqId)) {
         return finishStaleInflightSave(built.body, outboundJson, res, reqId);
       }
-      inFlightSave = false;
-      var out = afterSaveAttempt(built.body, outboundJson, res, transport, reqId, reqSeq);
       if (pendingSave && pendingSave !== body) {
         scheduleRateLimitedFlush();
       }
-      return out;
+      return res;
     }).catch(function () {
       if (saveInflightStale(reqSeq, reqId)) {
         inFlightSave = false;
@@ -482,6 +563,63 @@
     loadDone = false;
     var loadSeq = sessionSeq;
     var loadId = id;
+    function loadShardParts(mainRes) {
+      var ps = packSaveApi();
+      if (!ps) return Promise.resolve(mainRes);
+      var shell = ps.parseShell(mainRes.progress_json);
+      var packIds = shell.packShardIds || [];
+      var token = authToken();
+      var programs = [];
+      packIds.forEach(function (pid) {
+        programs.push({ program: ps.shardProgram(pid), packId: pid });
+      });
+      if (shell.hasScoresShard) {
+        programs.push({ program: ps.SCORES_PROGRAM, packId: "scores" });
+      }
+      if (!programs.length) return Promise.resolve(mainRes);
+      return Promise.all(programs.map(function (spec) {
+        return postRemote({
+          action: "load_pack",
+          id: loadId,
+          token: token,
+          program: spec.program,
+        }).then(function (row) {
+          return { spec: spec, row: row };
+        });
+      })).then(function (results) {
+        var missing = [];
+        var loads = [];
+        results.forEach(function (entry) {
+          var row = entry.row;
+          var ok = row && row.ok && row.found && row.progress_json;
+          if (!ok) {
+            missing.push(entry.spec.packId);
+            return;
+          }
+          loads.push({
+            program: entry.spec.program,
+            progress_json: row.progress_json,
+          });
+        });
+        if (missing.length) {
+          cloudLoadBlocked = true;
+          hydrated = false;
+          lastSaveError = "missing_shard";
+          dispatchSaveStatus(false, { error: "missing_shard" });
+          return {
+            ok: false,
+            error: "missing_shard",
+            missing: missing,
+            found: !!(mainRes && mainRes.found),
+          };
+        }
+        cloudLoadBlocked = false;
+        var merged = ps.mergeLoadedParts(mainRes.progress_json, loads);
+        serverProgressSnapshot = merged;
+        return Object.assign({}, mainRes, { progress_json: merged });
+      });
+    }
+
     return postRemote({
       action: "load_pack",
       id: id,
@@ -494,16 +632,33 @@
       }
       loadDone = true;
       hydrated = !!(res && res.ok);
+      var finish = function (finalRes) {
+        if (hydrated && !cloudLoadBlocked && pendingSave && pendingSave.progress_json) {
+          flushSave(pendingSave, {});
+        }
+        return finalRes;
+      };
       if (res && res.ok && res.found && res.progress_json) {
+        var ps = packSaveApi();
+        var shell = ps ? ps.parseShell(res.progress_json) : { packShardIds: [], hasScoresShard: false };
+        var needsShards = (shell.packShardIds && shell.packShardIds.length) || shell.hasScoresShard;
+        if (needsShards) {
+          return loadShardParts(res).then(function (mergedRes) {
+            if (mergedRes && mergedRes.error === "missing_shard") {
+              return finish(mergedRes);
+            }
+            hydrated = !!(mergedRes && mergedRes.ok);
+            return finish(mergedRes);
+          });
+        }
+        cloudLoadBlocked = false;
         serverProgressSnapshot = String(res.progress_json);
-      } else if (res && res.ok) {
+        return finish(res);
+      }
+      if (res && res.ok) {
         serverProgressSnapshot = null;
       }
-      if (hydrated && pendingSave && pendingSave.progress_json) {
-        var snap = pendingSave;
-        flushSave(snap, {});
-      }
-      return res;
+      return finish(res);
     }).catch(function () {
       if (loadSeq !== sessionSeq
         || studentStorageKey(authStudentId()) !== studentStorageKey(loadId)) {
@@ -519,6 +674,7 @@
     sessionSeq += 1;
     hydrated = false;
     loadDone = false;
+    cloudLoadBlocked = false;
     pendingSave = null;
     // Keep serverProgressSnapshot until the next load_pack completes.
     retryAttempt = 0;
@@ -528,7 +684,7 @@
   }
 
   function isReadyToSave() {
-    return loadDone && hydrated && !!authStudentId() && !!authToken();
+    return loadDone && hydrated && !cloudLoadBlocked && !!authStudentId() && !!authToken();
   }
 
   function flushOnPageHide() {
@@ -588,6 +744,10 @@
       isInFlight: function () { return inFlightSave; },
       hasRetryScheduled: function () { return !!retryTimer; },
       lastSuccessfulPackedJson: function () { return lastSuccessfulPackedJson; },
+      getSaveSplitLevel: function () { return saveSplitLevel; },
+      setSaveSplitLevel: function (n) { saveSplitLevel = Math.max(0, Number(n) || 0); },
+      isCloudLoadBlocked: function () { return cloudLoadBlocked; },
+      setCloudLoadBlocked: function (v) { cloudLoadBlocked = !!v; },
     },
   };
 })(typeof window !== "undefined" ? window : global);

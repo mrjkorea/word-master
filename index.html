@@ -32,6 +32,7 @@
       <button type="button" data-jump="C" data-i18n="jump_write">4 Write</button>
       <button type="button" data-jump="games" data-i18n="jump_games">5 Games</button>
       <button type="button" data-jump="test" data-i18n="jump_test">6 Test</button>
+      <button type="button" id="btn-class-progress">Class progress</button>
     </div>
     <div class="voice-bar" id="voice-toggle">
       <button type="button" class="voice-btn" data-voice="us_m" data-i18n="voice_us_m" aria-pressed="true">US male</button>
@@ -66,6 +67,17 @@
         <h2 class="record-title">Score record</h2>
         <ul class="score-record-list" id="score-record-list"></ul>
         <p class="score-record-empty" id="score-record-empty" hidden>No scores yet.</p>
+      </section>
+
+      <section class="screen" id="screen-class-progress" data-screen="class-progress">
+        <h2 class="record-title">Class progress</h2>
+        <p class="class-progress-status" id="class-progress-status"></p>
+        <p class="class-progress-incomplete-warn" id="class-progress-incomplete-warn" hidden></p>
+        <div class="class-progress-students" id="class-progress-students"></div>
+        <div class="class-progress-packs" id="class-progress-packs"></div>
+        <div class="class-progress-table-wrap">
+          <table class="class-progress-table" id="class-progress-table"></table>
+        </div>
       </section>
 
       <section class="screen" id="screen-home" data-screen="home">
@@ -507,10 +519,14 @@
   <script src="js/meet-lock.js?v=20260923-meetlock"></script>
   <script src="js/start-slice.js?v=20260930-start"></script>
   <script src="js/i18n.js?v=20260923-l1"></script>
-  <script src="mrj-scores.js?v=20261011-savefix"></script>
+  <script src="mrj-scores.js?v=20261013-gamepack"></script>
   <script src="js/progress-config.js?v=20261006-pack"></script>
   <script src="js/progress-merge.js?v=20261013-packpick"></script>
-  <script src="js/progress.js?v=20261011-savefix"></script>
+  <script src="js/wm-pack-save.js?v=20261013-cloud"></script>
+  <script src="js/progress.js?v=20261013-cloud"></script>
+  <script src="js/class-progress.js?v=20261013-cloud"></script>
+  <script src="js/teacher-classroom.js?v=20261013-cloud"></script>
+  <script src="js/class-progress-ui.js?v=20261013-cloud"></script>
   <script>window.WM_BUILD_ID="20261013-gamepack";</script>
   <script src="js/version-watch.js?v=20261006-save-throttle"></script>
   <script src="js/spell-stop.js?v=20260930-spellstop"></script>

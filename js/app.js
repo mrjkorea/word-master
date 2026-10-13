@@ -1225,6 +1225,7 @@
       if (cap) cap.hidden = true;
     }
   }
+  window.MRJ_WM_showScreen = showScreen;
 
   function setVoice(code) {
     const ok = { us_m: 1, us_f: 1, uk_m: 1, uk_f: 1, grandma: 1, leo: 1, grandpa: 1, robot: 1 };
@@ -4048,6 +4049,11 @@
         renderHome();
         showScreen("home");
       }
+      return;
+    }
+    if (currentScreen === "class-progress") {
+      renderHome();
+      showScreen("home");
       return;
     }
     if (currentScreen === "learn" || currentScreen === "test") {
