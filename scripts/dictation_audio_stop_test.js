@@ -143,7 +143,7 @@ async function main() {
 
   const index = fs.readFileSync(path.join(root, "index.html"), "utf8");
   const spellSrc = index.indexOf("js/spell-stop.js?v=20260930-spellstop");
-  const appSrc = index.indexOf("js/app.js?v=20261013-gamepack");
+  const appSrc = index.indexOf("js/app.js?v=20261014-daily");
   if (spellSrc < 0) fail("index.html missing spell-stop cache");
   if (appSrc < 0) fail("index.html missing app.js cache");
   if (spellSrc > appSrc) fail("spell-stop.js must load before app.js");
