@@ -215,6 +215,32 @@ body.is-student .teacher-bar { display: none !important; }
 .class-student-btn.locked {
   opacity: 0.55;
 }
+.class-progress-daily {
+  margin: 0.75rem 0 1rem;
+  text-align: left;
+}
+.class-progress-daily-title {
+  font-size: 1rem;
+  margin: 0 0 0.5rem;
+}
+.class-progress-day h4 {
+  margin: 0.5rem 0 0.25rem;
+  font-size: 0.95rem;
+}
+.class-progress-day-line {
+  margin: 0.15rem 0;
+  font-size: 0.9rem;
+  line-height: 1.35;
+}
+.score-record-day {
+  font-weight: 800;
+  margin-top: 0.75rem;
+}
+.score-record-day-words {
+  font-size: 0.92rem;
+  opacity: 0.95;
+  margin-left: 0.25rem;
+}
 .class-progress-table-wrap {
   overflow: auto;
   max-height: 55vh;

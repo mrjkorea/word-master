@@ -274,7 +274,13 @@
     var other = preferRemote ? local : remote;
     var currentPackId = pickCurrentPackId(sets, keys, base, other);
     var voicePick = pickVoice(local, remote);
-    return {
+    var dailyWordLog = null;
+    if (root.MRJ_WM_scoreDayLog && typeof root.MRJ_WM_scoreDayLog.mergeDailyLogs === "function") {
+      dailyWordLog = root.MRJ_WM_scoreDayLog.mergeDailyLogs(local.dailyWordLog, remote.dailyWordLog);
+    } else if (local.dailyWordLog || remote.dailyWordLog) {
+      dailyWordLog = local.dailyWordLog || remote.dailyWordLog;
+    }
+    var merged = {
       v: 1,
       studentId: base.studentId || other.studentId || "",
       voice: voicePick.voice,
@@ -286,6 +292,10 @@
       sets: sets,
       scoreRows: mergeScoreRows(local.scoreRows, remote.scoreRows),
     };
+    if (dailyWordLog && dailyWordLog.days && Object.keys(dailyWordLog.days).length) {
+      merged.dailyWordLog = dailyWordLog;
+    }
+    return merged;
   }
 
   root.MRJ_WM_merge = mergeProgress;

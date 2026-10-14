@@ -89,6 +89,39 @@
     });
   }
 
+  function renderDailyWords() {
+    var host = document.getElementById("class-progress-daily");
+    if (!host) return;
+    host.innerHTML = "";
+    if (!state.snapshot) return;
+    var SDL = window.MRJ_WM_scoreDayLog;
+    if (!SDL) return;
+    var days = SDL.summariesByDate(state.snapshot.dailyWordLog, { limit: 30 });
+    if (!days.length) {
+      host.hidden = true;
+      return;
+    }
+    host.hidden = false;
+    var title = document.createElement("h3");
+    title.className = "class-progress-daily-title";
+    title.textContent = "Words by day";
+    host.appendChild(title);
+    days.forEach(function (day) {
+      var block = document.createElement("div");
+      block.className = "class-progress-day";
+      var h = document.createElement("h4");
+      h.textContent = day.date;
+      block.appendChild(h);
+      (day.packs || []).forEach(function (p) {
+        var pEl = document.createElement("p");
+        pEl.className = "class-progress-day-line";
+        pEl.textContent = (p.pack ? p.pack + " · " : "") + p.line;
+        block.appendChild(pEl);
+      });
+      host.appendChild(block);
+    });
+  }
+
   function renderWordTable() {
     var table = document.getElementById("class-progress-table");
     if (!table) return;
@@ -163,6 +196,7 @@
         statusLine += " · incomplete cloud data";
       }
       paintStatus(statusLine);
+      renderDailyWords();
       renderPackPicker();
       renderWordTable();
     });

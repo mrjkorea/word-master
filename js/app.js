@@ -267,6 +267,16 @@
     return line;
   }
 
+  function recordScoreDayWords(packId, words, at) {
+    const SDL = window.MRJ_WM_scoreDayLog;
+    if (!SDL || !packId || !words || !words.length) return;
+    const set = Object.keys(state.sets || {})
+      .map(function (k) { return state.sets[k]; })
+      .filter(function (s) { return s && s.packId === packId; })[0];
+    const packWords = (set && set.words) || [];
+    SDL.recordWords(state, packId, words, packWords, at || Date.now());
+  }
+
   function appendScoreRow(row) {
     if (!row || !row.pack || !row.kind) return;
     const entry = {
@@ -278,6 +288,13 @@
     if (scoreRowHasRealScore(row)) {
       entry.score = Number(row.score);
       entry.total = Number(row.total);
+    }
+    if (row.wordIds && row.wordIds.length) entry.wordIds = row.wordIds.slice();
+    if (row.wordEns && row.wordEns.length) entry.wordEns = row.wordEns.slice();
+    if (row.wordFrom != null) entry.wordFrom = row.wordFrom;
+    if (row.wordTo != null) entry.wordTo = row.wordTo;
+    if (row.words && row.words.length) {
+      recordScoreDayWords(row.pack, row.words, entry.at);
     }
     if (!state.scoreRows || !Array.isArray(state.scoreRows)) state.scoreRows = [];
     state.scoreRows = mergeScoreRows(state.scoreRows, [entry]);
@@ -380,8 +397,24 @@
     scoreRecordRenderGen += 1;
     const gen = scoreRecordRenderGen;
     list.innerHTML = "";
+    const SDL = window.MRJ_WM_scoreDayLog;
+    const daySummaries = SDL ? SDL.summariesByDate(state.dailyWordLog, { limit: 60 }) : [];
+    if (daySummaries.length) {
+      daySummaries.forEach(function (day) {
+        const head = document.createElement("li");
+        head.className = "score-record-day";
+        head.textContent = day.date;
+        list.appendChild(head);
+        (day.packs || []).forEach(function (p) {
+          const li = document.createElement("li");
+          li.className = "score-record-day-words";
+          li.textContent = (p.pack ? p.pack + " · " : "") + p.line;
+          list.appendChild(li);
+        });
+      });
+    }
     const rows = collectScoreRecordRows();
-    if (!rows.length) {
+    if (!rows.length && !daySummaries.length) {
       if (empty) {
         empty.hidden = false;
         empty.textContent = "No scores yet.";
@@ -871,7 +904,7 @@
       }
     });
     const cur = currentSet();
-    return {
+    const out = {
       v: 1,
       studentId: state.studentId,
       voice: state.voice,
@@ -883,6 +916,10 @@
       sets: sets,
       scoreRows: mergeScoreRows(state.scoreRows || [], []),
     };
+    if (state.dailyWordLog && state.dailyWordLog.days && Object.keys(state.dailyWordLog.days).length) {
+      out.dailyWordLog = state.dailyWordLog;
+    }
+    return out;
   }
 
   function mergeRemoteProgress(raw) {
@@ -908,6 +945,11 @@
     if (!obj || typeof obj !== "object" || !obj.sets) return;
     if (Array.isArray(obj.scoreRows)) {
       state.scoreRows = mergeScoreRows(state.scoreRows || [], obj.scoreRows);
+    }
+    if (obj.dailyWordLog && window.MRJ_WM_scoreDayLog) {
+      state.dailyWordLog = window.MRJ_WM_scoreDayLog.mergeDailyLogs(state.dailyWordLog, obj.dailyWordLog);
+    } else if (obj.dailyWordLog) {
+      state.dailyWordLog = obj.dailyWordLog;
     }
     if (obj.voice) state.voice = obj.voice;
     if (obj.voiceAt != null) state.voiceAt = Number(obj.voiceAt) || 0;
@@ -3569,6 +3611,9 @@
         activity: "All-pack test",
         score: quiz.score,
         total: total,
+        words: (quiz.items || []).map(function (it) {
+          return { id: it.id, en: it.en };
+        }),
       });
       logActivityResult({
         packId: set.packId,
@@ -3623,6 +3668,9 @@
           activity: quiz.kind === "hard" ? "Hard test" : "Easy test",
           score: quiz.score,
           total: total,
+          words: (quiz.items || []).map(function (it) {
+            return { id: it.id, en: it.en };
+          }),
         });
         logActivityResult({
           packId: failSet.packId,
@@ -3654,6 +3702,9 @@
         activity: quiz.kind === "hard" ? "Hard test" : "Easy test",
         score: quiz.score,
         total: total,
+        words: (quiz.items || []).map(function (it) {
+          return { id: it.id, en: it.en };
+        }),
       });
       logActivityResult({
         packId: passedSet.packId,
@@ -4007,6 +4058,9 @@
       row.score = msg.correct;
       row.total = msg.items;
     }
+    row.words = playWords(set).map(function (w) {
+      return { id: w.id, en: w.en };
+    });
     appendScoreRow(row);
     if (typeof msg.correct === "number") {
       logActivityResult({
@@ -4454,6 +4508,10 @@
   }
 
   window.MRJ_WORD_FACTORY_PACK = { words: [] };
+  window.MRJ_WM_dailyWordLog = function () {
+    return state.dailyWordLog;
+  };
+
   if (window.WM_TEST_HOOK) {
     window.WM_TEST = {
       renderPackStanding: renderPackStanding,

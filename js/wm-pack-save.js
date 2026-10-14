@@ -86,6 +86,9 @@
     if (isNonEmptyArray(obj.packShardIds)) out.packShardIds = obj.packShardIds.slice();
     if (obj.hasScoresShard) out.hasScoresShard = true;
     if (scoreRows && scoreRows.length) out.scoreRows = scoreRows;
+    if (obj.dailyWordLog && obj.dailyWordLog.days && Object.keys(obj.dailyWordLog.days).length) {
+      out.dailyWordLog = obj.dailyWordLog;
+    }
     var sets = {};
     var src = obj.sets && typeof obj.sets === "object" ? obj.sets : {};
     Object.keys(src).forEach(function (pid) {
