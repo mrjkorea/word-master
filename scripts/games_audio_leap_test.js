@@ -20,7 +20,7 @@ if (frogJs.indexOf("studentId:lfEmbedStudent,autostart:!!lfEmbedStudent") === -1
 }
 if (frogJs.indexOf("as&&st&&S(st)") === -1) fail("leap frog missing autostart call");
 
-const memJs = fs.readFileSync(path.join(root, "games/memory-match/assets/index-D8iULXsI.js"), "utf8");
+const memJs = fs.readFileSync(path.join(root, "games/memory-match/assets/index-CjSx5yu_.js"), "utf8");
 if (memJs.indexOf("function mmResolveMedia(i)") === -1) fail("memory match missing session media resolver");
 if (memJs.indexOf("speechSynthesis") === -1) fail("memory match missing speech synthesis fallback");
 if (memJs.indexOf("itemEn:String(a.en") === -1) fail("memory match cards missing itemEn");
