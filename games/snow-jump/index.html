@@ -1,6 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <script>
+      /* Word Master public mode (news packs): this game saves nothing on the device. */
+      (function () {
+        try {
+          var p = window.parent;
+          if (p && p !== window && p.WM_PUBLIC_PACK && typeof p.WM_useMemoryStorage === "function") {
+            p.WM_useMemoryStorage(window);
+          }
+        } catch (e) {}
+      })();
+    </script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, maximum-scale=1" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
