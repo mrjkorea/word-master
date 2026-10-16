@@ -4394,7 +4394,6 @@
     $("#btn-listen-home").addEventListener("click", goGames);
 
     const langSel = $("#lang-select");
-    const langBoot = $("#lang-select-boot");
     function wireLang(sel) {
       if (!sel || !I18n) return;
       I18n.fillSelect(sel);
@@ -4406,7 +4405,6 @@
     if (I18n) {
       I18n.setLocale(state.locale || "en");
       wireLang(langSel);
-      wireLang(langBoot);
     }
 
     document.addEventListener("keydown", function (e) {
@@ -4495,9 +4493,8 @@
     state.locale = I18n.setLocale(code || state.locale || "en");
     persist();
     I18n.applyDom(document);
-    $$("#lang-select, #lang-select-boot").forEach(function (sel) {
-      if (sel) sel.value = state.locale;
-    });
+    const langSel = $("#lang-select");
+    if (langSel) langSel.value = state.locale;
     if (currentScreen === "home") renderHome();
     if (currentScreen === "set") renderSetHome();
     if (currentScreen === "learn" && learn.cur) renderLearn(false);
@@ -4590,7 +4587,6 @@
   if (I18n) {
     I18n.setLocale(state.locale || "en");
     I18n.fillSelect($("#lang-select"));
-    I18n.fillSelect($("#lang-select-boot"));
     I18n.applyDom(document);
   }
   setVoice(state.voice);

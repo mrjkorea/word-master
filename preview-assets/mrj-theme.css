@@ -147,7 +147,7 @@ html[data-book] body { background: radial-gradient(1200px 500px at 50% -200px, v
 :root { --chunk: 0 6px 0 rgba(0,0,0,.10), 0 14px 30px rgba(20,36,24,.08); --radius: 22px; }
 
 /* Header bar in book colour */
-html[data-book] .topbar { background: linear-gradient(135deg, var(--accent), var(--accent-dark)); color: #fff; border-radius: 0 0 26px 26px; margin: -1rem -1rem 1.4rem; padding: .9rem 1.2rem; box-shadow: var(--chunk); }
+html[data-book] .topbar { background: linear-gradient(135deg, var(--accent), var(--accent-dark)); color: #fff; border-radius: 0 0 26px 26px; margin: 0 -1rem 1.4rem; padding: .9rem 1.2rem; box-shadow: var(--chunk); }
 html[data-book] .topbar .brand, html[data-book] .topbar .back-link { color: #fff; }
 html[data-book="green"] .topbar .brand::before { content: "🌿 "; }
 html[data-book="blue"] .topbar .brand::before { content: "💎 "; }
@@ -252,7 +252,7 @@ html[data-view="index"] .exercise-btn:active { transform: translateY(3px); box-s
 @keyframes pv-bounce { 0%,100% { transform: translateY(0) } 40% { transform: translateY(-14px) scale(1.1) } }
 
 @media (max-width: 600px) {
-  html[data-book] .topbar { margin: -.75rem -.75rem 1rem; border-radius: 0 0 22px 22px; padding: .7rem .9rem; }
+  html[data-book] .topbar { margin: 0 -.75rem 1rem; border-radius: 0 0 22px 22px; padding: .7rem .9rem; }
   h1 { font-size: 1.6rem; }
   .pv-books { grid-template-columns: repeat(2, 1fr); gap: .7rem; }
   .pv-book { min-height: 112px; }
