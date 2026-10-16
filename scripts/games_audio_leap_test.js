@@ -20,14 +20,14 @@ if (frogJs.indexOf("studentId:lfEmbedStudent,autostart:!!lfEmbedStudent") === -1
 }
 if (frogJs.indexOf("as&&st&&S(st)") === -1) fail("leap frog missing autostart call");
 
-const memJs = fs.readFileSync(path.join(root, "games/memory-match/assets/index-CjSx5yu_.js"), "utf8");
-if (memJs.indexOf("function mmResolveMedia(i)") === -1) fail("memory match missing session media resolver");
-if (memJs.indexOf("speechSynthesis") === -1) fail("memory match missing speech synthesis fallback");
-if (memJs.indexOf("itemEn:String(a.en") === -1) fail("memory match cards missing itemEn");
-
-if (memJs.indexOf("Or(s.audio_id)&&(u.audio_id") !== -1) {
-  fail("memory match session parser still drops non-https audio_id");
-}
+// Memory Game is a Vite build now (rebuilt 2026-10): read the bundle named in index.html. Baked audio only, no TTS.
+const memHtml = fs.readFileSync(path.join(root, "games/memory-match/index.html"), "utf8");
+const memJs = fs.readFileSync(path.join(root, "games/memory-match/assets/" + ((memHtml.match(/assets\/(index-[\w-]+\.js)/) || [])[1] || "missing.js")), "utf8");
+if (memHtml.indexOf('<meta name="mrj-host" content="word-master"') === -1) fail("memory match is not the Word Master build");
+if (memJs.indexOf("mrj.wm.gamepack") === -1) fail("memory match missing session pack");
+if (memJs.indexOf("speechSynthesis") !== -1) fail("memory match still uses speech synthesis");
+if (memJs.indexOf("itemEn:String(") === -1) fail("memory match cards missing itemEn");
+if (memJs.indexOf("blob:") === -1 || memJs.indexOf("new URL(") === -1) fail("memory match missing session media resolver");
 
 function mmResolveMedia(i) {
   const e = String(i || "").trim();
