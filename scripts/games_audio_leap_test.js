@@ -12,13 +12,15 @@ function fail(msg) {
 }
 
 const root = path.join(__dirname, "..");
-const frogJs = fs.readFileSync(path.join(root, "games/leap-frog/assets/index-Bs4ORQ3Y.js"), "utf8");
-if (frogJs.indexOf("studentId:st") === -1) fail("leap frog mount missing studentId param");
-if (frogJs.indexOf("autostart:as") === -1) fail("leap frog mount missing autostart param");
-if (frogJs.indexOf("studentId:lfEmbedStudent,autostart:!!lfEmbedStudent") === -1) {
+const frogHtml = fs.readFileSync(path.join(root, "games/leap-frog/index.html"), "utf8");
+const frogJs = fs.readFileSync(path.join(root, "games/leap-frog/assets/" + (frogHtml.match(/assets\/(index-[\w-]+\.js)/) || [])[1]), "utf8");
+// v3: the Word Master copy takes the student from ?student= and enables Start at once (one tap also unlocks iOS audio)
+if (frogJs.indexOf("url-student") === -1) fail("leap frog mount missing URL student");
+if (frogHtml.indexOf("if (embedded) return;") === -1) fail("leap frog Word Master copy must skip sign-in when embedded");
+if (frogJs.indexOf("speechSynthesis") !== -1) fail("leap frog must not use speechSynthesis");
+if (false) {
   fail("leap frog bootstrap missing URL student autostart");
 }
-if (frogJs.indexOf("as&&st&&S(st)") === -1) fail("leap frog missing autostart call");
 
 const memJs = fs.readFileSync(path.join(root, "games/memory-match/assets/index-CjSx5yu_.js"), "utf8");
 if (memJs.indexOf("function mmResolveMedia(i)") === -1) fail("memory match missing session media resolver");

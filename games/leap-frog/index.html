@@ -1,45 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <script>
-      /* Word Master public mode (news packs): this game saves nothing on the device. */
-      (function () {
-        try {
-          var p = window.parent;
-          if (p && p !== window && p.WM_PUBLIC_PACK && typeof p.WM_useMemoryStorage === "function") {
-            p.WM_useMemoryStorage(window);
-          }
-        } catch (e) {}
-      })();
-    </script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, maximum-scale=1" />
     <meta name="mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="theme-color" content="#1683a8" />
     <meta http-equiv="Cache-Control" content="no-store" />
+    <meta name="mrj-build" content="3.0.0-20261016-rebuild" />
     <title>Leap Frog — MRJ English</title>
-    <script type="module" crossorigin src="./assets/index-Bs4ORQ3Y.js"></script>
-    <link rel="stylesheet" crossorigin href="./assets/index-_ugF6KvY.css">
+    <meta name="mrj-host" content="word-master" />
+    <script>
+      /* Word Master public mode (news packs): this game saves nothing on the device. */
+      (function () { try { var p = window.parent; if (p && p !== window && p.WM_PUBLIC_PACK && typeof p.WM_useMemoryStorage === "function") p.WM_useMemoryStorage(window); } catch (e) {} })();
+    </script>
+    <script type="module" crossorigin src="./assets/index-yvt2oEg1.js?v=3.0.0-20261016-rebuild"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-BywC558_.css?v=3.0.0-20261016-rebuild">
   </head>
   <body>
     <div id="app"></div>
     <script>
+      /* Opened on its own (not inside Word Master): show the MRJ sign-in door. Embedded: Word Master reports. */
       (function () {
         var q = location.search || "";
         var embedded = window.parent !== window || /(?:^|[?&])pack=session(?:&|$)/.test(q);
         if (embedded) return;
-        var css = document.createElement("link");
-        css.rel = "stylesheet";
-        css.href = "https://mrjkorea.github.io/mrj-signin/mrj-auth.css";
-        document.head.appendChild(css);
-        var auth = document.createElement("script");
-        auth.src = "https://mrjkorea.github.io/mrj-signin/mrj-auth.js";
-        auth.onload = function () {
-          var boot = document.createElement("script");
-          boot.src = "https://mrjkorea.github.io/mrj-signin/mrj-auth-boot.js";
-          boot.setAttribute("data-mrj-app", "leap-frog");
-          document.body.appendChild(boot);
-        };
+        var css = document.createElement("link"); css.rel = "stylesheet"; css.href = "https://mrjkorea.github.io/mrj-signin/mrj-auth.css"; document.head.appendChild(css);
+        var auth = document.createElement("script"); auth.src = "https://mrjkorea.github.io/mrj-signin/mrj-auth.js";
+        auth.onload = function () { var boot = document.createElement("script"); boot.src = "https://mrjkorea.github.io/mrj-signin/mrj-auth-boot.js"; boot.setAttribute("data-mrj-app", "leap-frog"); document.body.appendChild(boot); };
         document.body.appendChild(auth);
       })();
     </script>
