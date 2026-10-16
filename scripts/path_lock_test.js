@@ -192,8 +192,13 @@ function mustInclude(rel, needle) {
   if (text.indexOf(needle) === -1) fail(rel + " missing " + needle);
   return text;
 }
-mustInclude("games/leap-frog/assets/index-Bs4ORQ3Y.js", 'game:"leapfrog"');
-mustInclude("games/leap-frog/assets/index-Bs4ORQ3Y.js", "((e.items&&e.items.length)||0)-c.corrects");
+const frogHtml = fs.readFileSync(path.join(root, "games/leap-frog/index.html"), "utf8");
+const frogJs = (frogHtml.match(/assets\/(index-[\w-]+\.js)/) || [])[1];
+if (!frogJs) fail("leap frog index.html has no bundle");
+if (frogHtml.indexOf('name="mrj-host" content="word-master"') === -1) fail("leap frog copy is not marked as the Word Master host");
+const frog = mustInclude("games/leap-frog/assets/" + frogJs, 'game:"leapfrog"');
+if (frog.indexOf("wm:all-items") === -1) fail("leap frog still ends at a fixed count");
+if (frog.indexOf("mrj.wm.gamepack") === -1) fail("leap frog does not read the Word Master gamepack");
 const snow = mustInclude("games/snow-jump/assets/index-DA78ZsQf.js", 'game:"snowjump"');
 if (snow.indexOf("((e.items&&e.items.length)||0)-c.corrects") === -1) fail("snow jump still ends at a fixed count");
 const invaders = mustInclude("games/sound-invaders/assets/index-BRj5RKfc.js", 'game:"soundinvaders"');
