@@ -196,8 +196,13 @@ mustInclude("games/leap-frog/assets/index-Bs4ORQ3Y.js", 'game:"leapfrog"');
 mustInclude("games/leap-frog/assets/index-Bs4ORQ3Y.js", "((e.items&&e.items.length)||0)-c.corrects");
 const snow = mustInclude("games/snow-jump/assets/index-DA78ZsQf.js", 'game:"snowjump"');
 if (snow.indexOf("((e.items&&e.items.length)||0)-c.corrects") === -1) fail("snow jump still ends at a fixed count");
-const invaders = mustInclude("games/sound-invaders/assets/index-BRj5RKfc.js", 'game:"soundinvaders"');
-const overAt = invaders.indexOf('title:"GAME OVER"');
+const invHtml = fs.readFileSync(path.join(root, "games/sound-invaders/index.html"), "utf8");
+const invJs = (invHtml.match(/assets\/(index-[\w-]+\.js)/) || [])[1];
+if (!invJs) fail("sound invaders index.html has no bundle");
+if (invHtml.indexOf('name="mrj-host" content="word-master"') === -1) fail("sound invaders copy is not marked as the Word Master host");
+const invaders = mustInclude("games/sound-invaders/assets/" + invJs, 'game:"soundinvaders"');
+if (invaders.indexOf("mrj.wm.gamepack") === -1) fail("sound invaders does not read the Word Master gamepack");
+const overAt = invaders.indexOf("GAME OVER");
 if (overAt < 0 || invaders.slice(overAt, overAt + 700).indexOf("mrj-wm-game-done") !== -1) {
   fail("sound invaders posts on game over");
 }
