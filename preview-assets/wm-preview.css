@@ -101,3 +101,10 @@ html[data-book] .topbar .brand::before { content: none !important; }
 .pack-tile em { font-size: .75rem !important; color: var(--muted) !important; }
 /* no brand marks on preview */ .logo-mark { display: none !important; }
 html .mrj-auth .mrj-auth-door-login, html .mrj-auth .mrj-auth-submit { background: linear-gradient(180deg, #22a559, #137a3d) !important; }
+/* Language popup must sit above the voice bar and screens below the top bar
+   (the voice chips were painting over the popup and swallowing taps). */
+.topbar { position: relative; z-index: 400; }
+.topbar .pv-lang { z-index: 401; }
+.pv-lang-pop { z-index: 402; max-width: calc(100vw - 16px); max-height: calc(100vh - 90px); overflow-y: auto; }
+.pv-lang-chip { cursor: pointer; pointer-events: auto; }
+@media (max-width: 480px) { .pv-lang-pop { grid-template-columns: repeat(2, minmax(0, 1fr)); width: min(340px, calc(100vw - 16px)); } }

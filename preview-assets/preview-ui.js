@@ -24,7 +24,10 @@
   function picker(id) {
     var sel = document.getElementById(id);
     if (!sel || !sel.options.length) return false;
-    if (sel.getAttribute("data-pv")) return true;
+    if (sel.getAttribute("data-pv")) {
+      if (sel.__pvWrap && document.contains(sel.__pvWrap)) return true;
+      sel.removeAttribute("data-pv");
+    }
     sel.setAttribute("data-pv", "1");
     var host = sel.closest("label") || sel;
     host.classList.add("pv-hidden-control");
@@ -63,9 +66,12 @@
         c.setAttribute("aria-selected", o.value === sel.value ? "true" : "false");
         c.addEventListener("click", function (ev) {
           ev.stopPropagation();
-          sel.value = o.value;
-          sel.dispatchEvent(new Event("change", { bubbles: true }));
-          label();
+          if (sel.value !== o.value) {
+            sel.value = o.value;
+            sel.dispatchEvent(new Event("input", { bubbles: true }));
+            sel.dispatchEvent(new Event("change", { bubbles: true }));
+          }
+          sync();
           setOpen(false);
         });
         pop.appendChild(c);
@@ -84,12 +90,26 @@
       if (ev.target === wrap) toggle(ev);
     });
 
-    sel.addEventListener("change", label);
+    function sync() {
+      label();
+      if (!pop.hidden) fill();
+    }
+    sel.addEventListener("change", sync);
+    sel.addEventListener("input", sync);
+    /* The app refills options / sets select.value on re-render without events: re-sync. */
+    if (typeof MutationObserver === "function") {
+      new MutationObserver(sync).observe(sel, { childList: true, subtree: true, attributes: true, characterData: true });
+    }
+    var lastVal = sel.value;
+    setInterval(function () {
+      if (sel.value !== lastVal) { lastVal = sel.value; sync(); }
+    }, 400);
     bindOutsideClose(wrap, pop);
     label();
     wrap.appendChild(btn);
     wrap.appendChild(pop);
     host.parentNode.insertBefore(wrap, host.nextSibling);
+    sel.__pvWrap = wrap;
     return true;
   }
 
@@ -115,4 +135,12 @@
     howto();
     if (!ok && k++ < 100) setTimeout(wait, 100);
   })();
+  if (typeof MutationObserver === "function") {
+    var pend = false;
+    new MutationObserver(function () {
+      if (pend) return;
+      pend = true;
+      setTimeout(function () { pend = false; picker("lang-select"); howto(); }, 50);
+    }).observe(document.documentElement, { childList: true, subtree: true });
+  }
 })();
