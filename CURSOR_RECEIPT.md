@@ -435,9 +435,11 @@ Parent `js/app.js` accepts `mrj-wm-game-done` only on the game screen it opened,
 Each game posts that message itself:
 - Leap Frog and Snow Jump: bundle-only. Goal is the pack length. A successful end posts. Death does not.
 - Sound Invaders: bundle-only. Posts after one correct hit per pack word. GAME OVER does not.
-- Spellfire: `games/spellfire/src/engine.js` posts from `nextWord` when the last word is advanced. A loss does not.
+- Spellfire: the rebuilt Vite bundle (named in `games/spellfire/index.html`) posts `finished: true` when the last word is spelled. A loss does not. (The old `games/spellfire/src/engine.js` was removed in the 2026-10-19 cleanup.)
 
-Files: `js/app.js`, `games/leap-frog/assets/index-Bs4ORQ3Y.js`, `games/snow-jump/assets/index-DA78ZsQf.js`, `games/sound-invaders/assets/index-BRj5RKfc.js`, `games/spellfire/src/engine.js`, `scripts/path_lock_test.js`. Not touched: `js/path-lock.js`, `js/meet-lock.js`, `js/progress.js`, `mrj-scores.js`. Not pushed.
+Files: `js/app.js`, `games/leap-frog/assets/index-Bs4ORQ3Y.js`, `games/snow-jump/assets/index-DA78ZsQf.js`, `games/sound-invaders/assets/index-BRj5RKfc.js`, `games/spellfire/src/engine.js`, `scripts/path_lock_test.js`.
+
+Update 2026-10-19: those old game bundles and the Spellfire engine were replaced by the rebuilt games and removed as unused; `scripts/path_lock_test.js`, `scripts/meet_word_lock_test.js` and `scripts/games_audio_leap_test.js` now read the bundle named in each game's `index.html`. Not touched: `js/path-lock.js`, `js/meet-lock.js`, `js/progress.js`, `mrj-scores.js`. Not pushed.
 
 ```
 node scripts/path_lock_test.js
