@@ -8,5 +8,5 @@ Sound effects
 Voices
 - audio/carnies/*, audio/prize/*, audio/en-*.mp3: the game's existing baked clips (unchanged). Word Master words use the pack's baked mp3 (audio_id). No text-to-speech.
 Art
-- pics/*.webp: the game's existing animal pictures (pics/*.jpg), cropped + compressed.
+- pics/*.webp: the game's original animal pictures (the old pics/*.jpg, removed 2026-10-19), cropped + compressed.
 - Carnival booth, cards, carnies, ammo and prizes are drawn in code. Font: Fredoka (OFL) via @fontsource; Noto Sans (OFL) for other languages.

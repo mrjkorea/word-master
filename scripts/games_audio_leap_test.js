@@ -12,22 +12,21 @@ function fail(msg) {
 }
 
 const root = path.join(__dirname, "..");
-const frogJs = fs.readFileSync(path.join(root, "games/leap-frog/assets/index-Bs4ORQ3Y.js"), "utf8");
-if (frogJs.indexOf("studentId:st") === -1) fail("leap frog mount missing studentId param");
-if (frogJs.indexOf("autostart:as") === -1) fail("leap frog mount missing autostart param");
-if (frogJs.indexOf("studentId:lfEmbedStudent,autostart:!!lfEmbedStudent") === -1) {
-  fail("leap frog bootstrap missing URL student autostart");
+// Game bundles are Vite builds (3D v2, 2026-10-19): read the bundle named in each game's index.html.
+function liveBundle(game) {
+  const html = fs.readFileSync(path.join(root, "games/" + game + "/index.html"), "utf8");
+  const js = (html.match(/assets\/(index-[\w-]+\.js)/) || [])[1];
+  if (!js) fail(game + " index.html has no bundle");
+  return fs.readFileSync(path.join(root, "games/" + game + "/assets/" + js), "utf8");
 }
-if (frogJs.indexOf("as&&st&&S(st)") === -1) fail("leap frog missing autostart call");
+const frogJs = liveBundle("leap-frog");
+if (frogJs.indexOf('game:"leapfrog"') === -1) fail("leap frog bundle missing WM done message");
+if (frogJs.indexOf("mrj.wm.gamepack") === -1) fail("leap frog does not read the Word Master gamepack");
 
-const memJs = fs.readFileSync(path.join(root, "games/memory-match/assets/index-CjSx5yu_.js"), "utf8");
-if (memJs.indexOf("function mmResolveMedia(i)") === -1) fail("memory match missing session media resolver");
-if (memJs.indexOf("speechSynthesis") === -1) fail("memory match missing speech synthesis fallback");
-if (memJs.indexOf("itemEn:String(a.en") === -1) fail("memory match cards missing itemEn");
-
-if (memJs.indexOf("Or(s.audio_id)&&(u.audio_id") !== -1) {
-  fail("memory match session parser still drops non-https audio_id");
-}
+const memJs = liveBundle("memory-match");
+if (memJs.indexOf('game:"memorymatch"') === -1) fail("memory match bundle missing WM done message");
+if (memJs.indexOf("mrj.wm.gamepack") === -1) fail("memory match does not read the Word Master gamepack");
+if (memJs.indexOf("audio_id") === -1) fail("memory match cards missing audio_id");
 
 function mmResolveMedia(i) {
   const e = String(i || "").trim();

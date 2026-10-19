@@ -192,18 +192,24 @@ function mustInclude(rel, needle) {
   if (text.indexOf(needle) === -1) fail(rel + " missing " + needle);
   return text;
 }
-mustInclude("games/leap-frog/assets/index-Bs4ORQ3Y.js", 'game:"leapfrog"');
-mustInclude("games/leap-frog/assets/index-Bs4ORQ3Y.js", "((e.items&&e.items.length)||0)-c.corrects");
+// Game bundles are Vite builds: read the bundle named in each game's index.html.
+function liveBundle(game) {
+  const html = fs.readFileSync(path.join(root, "games/" + game + "/index.html"), "utf8");
+  return "games/" + game + "/assets/" + ((html.match(/assets\/(index-[\w-]+\.js)/) || [])[1] || "missing.js");
+}
+const frog = mustInclude(liveBundle("leap-frog"), 'game:"leapfrog"');
+if (frog.indexOf("finished:!0") === -1) fail("leap frog does not post a finished round");
 const snowHtml = fs.readFileSync(path.join(root, "games/snow-jump/index.html"), "utf8");
 const snowJs = (snowHtml.match(/assets\/(index-[\w-]+\.js)/) || [])[1];
 if (!snowJs) fail("snow jump index.html has no bundle");
 const snow = mustInclude("games/snow-jump/assets/" + snowJs, 'game:"snowjump"');
 if (snow.indexOf("wm:all-items") === -1) fail("snow jump still ends at a fixed count");
 if (snow.indexOf("mrj.wm.gamepack") === -1) fail("snow jump does not read the Word Master gamepack");
-const invaders = mustInclude("games/sound-invaders/assets/index-BRj5RKfc.js", 'game:"soundinvaders"');
-const overAt = invaders.indexOf('title:"GAME OVER"');
-if (overAt < 0 || invaders.slice(overAt, overAt + 700).indexOf("mrj-wm-game-done") !== -1) {
-  fail("sound invaders posts on game over");
+const invaders = mustInclude(liveBundle("sound-invaders"), 'game:"soundinvaders"');
+// the done message may only be sent once every item is answered right (never on game over)
+const doneAt = invaders.indexOf("mrj-wm-game-done");
+if (doneAt < 0 || invaders.slice(Math.max(0, doneAt - 300), doneAt).indexOf("corrects>=") === -1) {
+  fail("sound invaders done message is not gated on all items correct");
 }
 // Spellfire is a Vite build now (rebuilt 2026-10): read the bundle named in index.html.
 const spellHtml = mustInclude("games/spellfire/index.html", '<meta name="mrj-host" content="word-master"');
