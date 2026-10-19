@@ -43,7 +43,7 @@ const root = path.join(__dirname, "..");
 const checks = [
   "games/spellfire/assets/" + (fs.readFileSync(path.join(__dirname, "..", "games/spellfire/index.html"), "utf8").match(/assets\/(index-[\w-]+\.js)/) || [])[1],
   "games/leap-frog/assets/index-Bs4ORQ3Y.js",
-  "games/snow-jump/assets/index-DA78ZsQf.js",
+  "games/snow-jump/assets/" + (fs.readFileSync(path.join(__dirname, "..", "games/snow-jump/index.html"), "utf8").match(/assets\/(index-[\w-]+\.js)/) || [])[1],
 ];
 const banned = ["packs/nouns100.json", "packs/words.txt", "animals.json", "starter-en.json"];
 checks.forEach(function (rel) {
