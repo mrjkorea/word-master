@@ -1,0 +1,12 @@
+Memory Game — audio + art credits
+
+Music
+- audio/music-town-theme.mp3: "Town Theme RPG" by cynicmusic, CC0 (public domain).
+  https://opengameart.org/content/town-theme-rpg  (re-encoded 64 kbps)
+Sound effects
+- audio/sfx/*.mp3: made for MRJ English with a procedural generator (own work), released CC0. The combo chime is synthesized live.
+Voices
+- audio/carnies/*, audio/prize/*, audio/en-*.mp3: the game's existing baked clips (unchanged). Word Master words use the pack's baked mp3 (audio_id). No text-to-speech.
+Art
+- pics/*.webp: the game's existing animal pictures (pics/*.jpg), cropped + compressed.
+- Carnival booth, cards, carnies, ammo and prizes are drawn in code. Font: Fredoka (OFL) via @fontsource; Noto Sans (OFL) for other languages.

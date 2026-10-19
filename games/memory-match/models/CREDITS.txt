@@ -1,0 +1,8 @@
+3D models — all CC0 1.0 Universal (public domain) by Kenney (www.kenney.nl):
+  town/  Kenney "Fantasy Town Kit": stall-red, stall-green (background stalls), lantern,
+         banner-red, banner-green, tree-high-round (+ Textures/colormap.png). See town/ licence file.
+  pets/  Kenney "Cube Pets": animal-cat, -dog, -pig, -bunny, -panda, -lion, -penguin, -chick (prize-shelf plushies and
+         the prize the carny hands over) (+ Textures/colormap.png). See pets/KENNEY-CUBE-PETS-LICENSE.txt.
+The booths, targets (bottles, plush bears, bullseyes, balloons, stumps, coins), carnies, first-person hand and ammo, and
+the card faces are procedural three.js code ported from the original game (app/src/scene3d.js).
+Rendering: three.js (MIT). Pictures (pics/) and all audio: unchanged, see ../audio/CREDITS.txt.
