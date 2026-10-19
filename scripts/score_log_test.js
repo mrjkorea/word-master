@@ -4,7 +4,7 @@
 const fs = require("fs");
 const path = require("path");
 
-const BUILD = "20261013-gamepack";
+const BUILD = "20261016-public";
 const MRJ_SCORES_CACHE = "20261013-scoresrecv";
 const TEST_STUDENT = "zz_test_mrjmetrics";
 

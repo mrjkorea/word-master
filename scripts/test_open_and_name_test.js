@@ -14,7 +14,7 @@ const index = fs.readFileSync(path.join(root, "index.html"), "utf8");
 const app = fs.readFileSync(path.join(root, "js/app.js"), "utf8");
 
 if (index.indexOf("css/app.css?v=20261014-daily") === -1) fail("css cache");
-if (index.indexOf("js/app.js?v=20261014-daily") === -1) fail("app cache");
+if (index.indexOf("js/app.js?v=20261016-public") === -1) fail("app cache");
 if (index.indexOf("js/progress-merge.js?v=20261013-packpick") === -1) fail("progress-merge cache");
 if (index.indexOf("js/progress.js?v=20261013-cloud") === -1) fail("progress cache");
 if (index.indexOf("js/wm-pack-save.js?v=20261013-cloud") === -1) fail("wm-pack-save cache");

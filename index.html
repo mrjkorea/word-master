@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-book="blue">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, maximum-scale=1, user-scalable=no" />
@@ -47,10 +47,6 @@
 
     <main id="stage" class="stage">
       <section class="screen screen-boot active" id="screen-boot" data-screen="boot">
-        <label class="boot-lang">
-          <span class="sr-only" data-i18n="lang_label">Language</span>
-          <select id="lang-select-boot" aria-label="Language"></select>
-        </label>
         <div class="boot-hero">
           <div class="logo-mark" aria-hidden="true">MRJ</div>
           <p class="eyebrow" data-i18n="boot_kicker">Learn English words</p>
@@ -514,8 +510,18 @@
   </div>
 
   <link rel="stylesheet" href="https://mrjkorea.github.io/mrj-signin/mrj-auth.css">
-  <script src="https://mrjkorea.github.io/mrj-signin/mrj-auth.js"></script>
-  <script src="https://mrjkorea.github.io/mrj-signin/mrj-auth-boot.js" data-mrj-app="word-master"></script>
+  <link rel="stylesheet" href="preview-assets/mrj-theme.css?v=live3">
+  <link rel="stylesheet" href="preview-assets/wm-preview.css?v=live3">
+  <script src="preview-assets/preview-ui.js?v=live3" defer></script>
+  <script src="js/pack-src.js?v=20261016-public"></script>
+  <script src="js/public-pack.js?v=20261016-public"></script>
+  <script>
+    /* News packs (public mode) skip the sign-in door. Everything else signs in as before. */
+    if (!window.WM_PUBLIC_PACK) {
+      document.write('<script src="https://mrjkorea.github.io/mrj-signin/mrj-auth.js"><\/script>');
+      document.write('<script src="https://mrjkorea.github.io/mrj-signin/mrj-auth-boot.js" data-mrj-app="word-master"><\/script>');
+    }
+  </script>
   <script src="js/factory-algo.js"></script>
   <script src="js/meet-lock.js?v=20260923-meetlock"></script>
   <script src="js/start-slice.js?v=20260930-start"></script>
@@ -530,11 +536,10 @@
   <script src="js/teacher-classroom.js?v=20261013-cloud"></script>
   <script src="js/class-progress-ui.js?v=20261014-daily"></script>
   <script src="js/score-progress-panel.js?v=20261014-daily"></script>
-  <script>window.WM_BUILD_ID="20261013-gamepack";</script>
+  <script>window.WM_BUILD_ID="20261016-public";</script>
   <script src="js/version-watch.js?v=20261006-save-throttle"></script>
   <script src="js/spell-stop.js?v=20260930-spellstop"></script>
-  <script src="js/pack-src.js?v=20261002-packsrc"></script>
   <script src="js/path-lock.js?v=20261001-lock"></script>
-  <script src="js/app.js?v=20261014-daily"></script>
+  <script src="js/app.js?v=20261016-public"></script>
 </body>
 </html>

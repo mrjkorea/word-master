@@ -132,7 +132,7 @@ if (index.indexOf("js/path-lock.js") > index.indexOf("js/app.js")) {
   fail("path-lock.js must load before app.js");
 }
 if (index.indexOf("js/path-lock.js?v=20261001-lock") === -1) fail("path-lock cache");
-if (index.indexOf("js/app.js?v=20261014-daily") === -1) fail("app cache");
+if (index.indexOf("js/app.js?v=20261016-public") === -1) fail("app cache");
 if (index.indexOf('data-game="memorymatch"') === -1) fail("games screen missing memorymatch");
 
 const { bootApp } = require("./load_app_for_test");
@@ -205,14 +205,16 @@ const overAt = invaders.indexOf('title:"GAME OVER"');
 if (overAt < 0 || invaders.slice(overAt, overAt + 700).indexOf("mrj-wm-game-done") !== -1) {
   fail("sound invaders posts on game over");
 }
-const spell = mustInclude("games/spellfire/src/engine.js", 'game: "spellfire"');
-const loseAt = spell.indexOf("function loseRound");
-const tapAt = spell.indexOf("function tapWindow");
-if (loseAt < 0 || tapAt < loseAt || spell.slice(loseAt, tapAt).indexOf("postGameDone") !== -1) {
+// Spellfire is a Vite build now (rebuilt 2026-10): read the bundle named in index.html.
+const spellHtml = mustInclude("games/spellfire/index.html", '<meta name="mrj-host" content="word-master"');
+const spellJs = "games/spellfire/assets/" + ((spellHtml.match(/assets\/(index-[\w-]+\.js)/) || [])[1] || "missing.js");
+const spell = mustInclude(spellJs, 'game:"spellfire"');
+if (spell.indexOf('type:"mrj-wm-game-done"') === -1 || spell.indexOf("finished:!0") === -1) fail("spellfire does not post a finished round");
+if (spell.indexOf("mrj.wm.gamepack") === -1) fail("spellfire does not read the session pack");
+// a loss (phase "lose") must not post: the lose block may not reach the done message
+const loseAt = spell.indexOf('loseStage:"fire"');
+if (loseAt < 0 || spell.slice(Math.max(0, loseAt - 300), loseAt + 500).indexOf("mrj-wm-game-done") !== -1) {
   fail("spellfire posts on a loss");
-}
-if (spell.indexOf("function postGameDone") === -1 || spell.indexOf("if (n) postGameDone();") === -1) {
-  fail("spellfire does not post from the finished round");
 }
 
 function walkFiles(dir, acc) {

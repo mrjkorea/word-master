@@ -41,7 +41,7 @@ if (!MeetLock.outsideLock(held.concat(["w11"]), lock).length) {
 
 const root = path.join(__dirname, "..");
 const checks = [
-  "games/spellfire/src/engine.js",
+  "games/spellfire/assets/" + (fs.readFileSync(path.join(__dirname, "..", "games/spellfire/index.html"), "utf8").match(/assets\/(index-[\w-]+\.js)/) || [])[1],
   "games/leap-frog/assets/index-Bs4ORQ3Y.js",
   "games/snow-jump/assets/" + (fs.readFileSync(path.join(__dirname, "..", "games/snow-jump/index.html"), "utf8").match(/assets\/(index-[\w-]+\.js)/) || [])[1],
 ];

@@ -95,6 +95,7 @@
   }
 
   function rememberRole() {
+    if (isPublicMode()) return;
     try {
       if (!window.PathLock) return;
       const search = window.location && window.location.search ? String(window.location.search) : "";
@@ -441,7 +442,7 @@
   }
 
   function openScoreRecord() {
-    if (!currentStudentId()) return;
+    if (!currentStudentId()) return; /* sign-in only */
     renderScoreRecord();
     showScreen("record");
   }
@@ -664,6 +665,7 @@
   }
 
   function saveStateToStorage(forId) {
+    if (isPublicMode()) return;
     const id = forId != null ? String(forId).trim() : currentStudentId();
     const key = id ? stateStorageKey(id) : LS_STATE_LEGACY;
     try {
@@ -774,6 +776,16 @@
 
   function isSignedIn() {
     return !!currentStudentId();
+  }
+
+  /** Public news pack (js/public-pack.js): play with no sign-in, save nothing. */
+  function isPublicMode() {
+    return !!window.WM_PUBLIC_PACK && !!externalPackSrc
+      && !!(window.PackSrc && window.PackSrc.isPublicPackSrc && window.PackSrc.isPublicPackSrc(externalPackSrc));
+  }
+
+  function canPlay() {
+    return !!currentStudentId() || isPublicMode();
   }
 
   function showSharedDoor() {
@@ -1144,6 +1156,7 @@
   }
 
   function logEvent(partial) {
+    if (isPublicMode()) return;
     const set = currentSet();
     const ev = {
       student_id: currentStudentId(),
@@ -2157,7 +2170,7 @@
       if (dueSet) due.textContent = t("due_line", { title: dueSet.title });
     }
     markIndexNext();
-    if (!signed || !set) {
+    if (!canPlay() || !set) {
       if (btn) btn.hidden = true;
       return;
     }
@@ -2505,7 +2518,7 @@
     all.setAttribute("aria-label", "All words");
     all.classList.toggle("on", Number(state.studySize) === 0);
     all.addEventListener("click", function () {
-      if (!currentStudentId()) return;
+      if (!canPlay()) return;
       if (!set) return;
       state.studySize = 0;
       chooseStart(set, 1);
@@ -3966,7 +3979,7 @@
   }
 
   function openPortableGame(kind) {
-    const student = currentStudentId();
+    const student = currentStudentId() || (isPublicMode() ? "guest" : "");
     if (!student) return;
     const set = currentSet();
     if (!set) {
@@ -4133,7 +4146,7 @@
 
   function bind() {
     $("#btn-tap-start").addEventListener("click", function () {
-      if (!currentStudentId()) return;
+      if (!canPlay()) return;
       unlockSpeech();
       setVoice(state.voice);
       if (externalPackSrc) {
@@ -4166,7 +4179,7 @@
     });
     const listBtn = $("#btn-word-list");
     if (listBtn) listBtn.addEventListener("click", function () {
-      if (!currentStudentId()) return;
+      if (!canPlay()) return;
       openDemo().then(function () {
         const box = $("#alpha-list");
         box.innerHTML = "";
@@ -4217,7 +4230,7 @@
       });
     });
     $("#btn-continue").addEventListener("click", function () {
-      if (!currentStudentId()) return;
+      if (!canPlay()) return;
       const set = currentSet();
       if (set && set.packId && !(set.words || []).length) {
         openPack(set.packId);
@@ -4228,22 +4241,22 @@
     });
     const demoBtn = $("#btn-demo");
     if (demoBtn) demoBtn.addEventListener("click", function () {
-      if (!currentStudentId()) return;
+      if (!canPlay()) return;
       openDemo();
     });
     PACK_IDS.forEach(function (pid) {
       const el = $("#btn-pack-" + pid);
       if (el) el.addEventListener("click", function () {
-        if (!currentStudentId()) return;
+        if (!canPlay()) return;
         openPack(pid);
       });
     });
     $("#btn-games-home").addEventListener("click", function () {
-      if (!currentStudentId()) return;
+      if (!canPlay()) return;
       goGames();
     });
     $("#btn-intro").addEventListener("click", function () {
-      if (!currentStudentId()) return;
+      if (!canPlay()) return;
       if (!pathOpen("intro")) return;
       startMeet();
     });
@@ -4252,13 +4265,13 @@
       if (tap.cur) speak(tap.cur.en);
     });
     $("#btn-learn").addEventListener("click", function () {
-      if (!currentStudentId()) return;
+      if (!canPlay()) return;
       if (!pathOpen("A")) return;
       startLearnAt("A");
     });
     $$("[data-jump]").forEach(function (btn) {
       btn.addEventListener("click", function () {
-        if (!currentStudentId()) return;
+        if (!canPlay()) return;
         const step = btn.getAttribute("data-jump");
         if (!teacherNow() && !pathOpen(step)) return;
         jumpTo(step);
@@ -4277,7 +4290,7 @@
     const skipStepBtn = $("#btn-skip-step");
     if (skipStepBtn) skipStepBtn.addEventListener("click", skipStep);
     $("#btn-easy").addEventListener("click", function () {
-      if (!currentStudentId()) return;
+      if (!canPlay()) return;
       if (!pathOpen("test")) return;
       state.testKind = "easy";
       persist();
@@ -4285,7 +4298,7 @@
       startEasy();
     });
     $("#btn-hard").addEventListener("click", function () {
-      if (!currentStudentId()) return;
+      if (!canPlay()) return;
       if (!pathOpen("test")) return;
       state.testKind = "hard";
       persist();
@@ -4295,27 +4308,27 @@
     const te = $("#btn-test-easy");
     const th = $("#btn-test-hard");
     if (te) te.addEventListener("click", function () {
-      if (!currentStudentId()) return;
+      if (!canPlay()) return;
       if (!pathOpen("test")) return;
       state.testKind = "easy";
       persist();
       startEasy();
     });
     if (th) th.addEventListener("click", function () {
-      if (!currentStudentId()) return;
+      if (!canPlay()) return;
       if (!pathOpen("test")) return;
       state.testKind = "hard";
       persist();
       startHard();
     });
     $("#btn-games-set").addEventListener("click", function () {
-      if (!currentStudentId()) return;
+      if (!canPlay()) return;
       if (!pathOpen("games")) return;
       goGames();
     });
     const finalEasy = $("#btn-final-easy");
     if (finalEasy) finalEasy.addEventListener("click", function () {
-      if (!currentStudentId()) return;
+      if (!canPlay()) return;
       if (!pathOpen("test")) return;
       state.finalTest = true;
       persist();
@@ -4323,7 +4336,7 @@
     });
     const finalHard = $("#btn-final-hard");
     if (finalHard) finalHard.addEventListener("click", function () {
-      if (!currentStudentId()) return;
+      if (!canPlay()) return;
       if (!pathOpen("test")) return;
       state.finalTest = true;
       persist();
@@ -4349,14 +4362,14 @@
     });
     $$("#game-slots .slot.playable").forEach(function (slot) {
       slot.addEventListener("click", function () {
-        if (!currentStudentId()) return;
+        if (!canPlay()) return;
         const g = slot.getAttribute("data-game");
         if (g === "leapfrog" || g === "snowjump" || g === "spellfire" || g === "soundinvaders" || g === "memorymatch") openPortableGame(g);
       });
     });
     const gamesNeed = $("#btn-games-need");
     if (gamesNeed) gamesNeed.addEventListener("click", function () {
-      if (!currentStudentId()) return;
+      if (!canPlay()) return;
       const set = currentSet();
       if (set && roundReadyForGame(set)) {
         hideGamesLock();
@@ -4381,7 +4394,6 @@
     $("#btn-listen-home").addEventListener("click", goGames);
 
     const langSel = $("#lang-select");
-    const langBoot = $("#lang-select-boot");
     function wireLang(sel) {
       if (!sel || !I18n) return;
       I18n.fillSelect(sel);
@@ -4393,7 +4405,6 @@
     if (I18n) {
       I18n.setLocale(state.locale || "en");
       wireLang(langSel);
-      wireLang(langBoot);
     }
 
     document.addEventListener("keydown", function (e) {
@@ -4482,9 +4493,8 @@
     state.locale = I18n.setLocale(code || state.locale || "en");
     persist();
     I18n.applyDom(document);
-    $$("#lang-select, #lang-select-boot").forEach(function (sel) {
-      if (sel) sel.value = state.locale;
-    });
+    const langSel = $("#lang-select");
+    if (langSel) langSel.value = state.locale;
     if (currentScreen === "home") renderHome();
     if (currentScreen === "set") renderSetHome();
     if (currentScreen === "learn" && learn.cur) renderLearn(false);
@@ -4514,6 +4524,11 @@
 
   if (window.WM_TEST_HOOK) {
     window.WM_TEST = {
+      isPublicMode: isPublicMode,
+      canPlay: canPlay,
+      persist: persist,
+      logEvent: logEvent,
+      saveStateToStorage: saveStateToStorage,
       renderPackStanding: renderPackStanding,
       startEasy: startEasy,
       startHard: startHard,
@@ -4572,7 +4587,6 @@
   if (I18n) {
     I18n.setLocale(state.locale || "en");
     I18n.fillSelect($("#lang-select"));
-    I18n.fillSelect($("#lang-select-boot"));
     I18n.applyDom(document);
   }
   setVoice(state.voice);

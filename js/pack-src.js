@@ -17,6 +17,18 @@
     return true;
   }
 
+  /**
+   * Public packs open with no sign-in and save nothing (Daily ESL News words).
+   * Only flat files in news-words/packs/ count, e.g. packs/news-2026-10-16.json.
+   */
+  var PUBLIC_RE = /^https:\/\/mrjkorea\.github\.io\/news-words\/packs\/[A-Za-z0-9_-][A-Za-z0-9._-]*\.json$/;
+
+  function isPublicPackSrc(raw) {
+    var s = String(raw || "").trim();
+    if (!isAllowedPackSrc(s)) return false;
+    return PUBLIC_RE.test(s);
+  }
+
   function packFolderFromSrc(src) {
     var s = String(src || "").trim();
     var slash = s.lastIndexOf("/");
@@ -115,6 +127,7 @@
   return {
     PREFIX: PREFIX,
     isAllowedPackSrc: isAllowedPackSrc,
+    isPublicPackSrc: isPublicPackSrc,
     packFolderFromSrc: packFolderFromSrc,
     mediaFolderFromSrc: mediaFolderFromSrc,
     pictureExtFromSrc: pictureExtFromSrc,

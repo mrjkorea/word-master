@@ -100,6 +100,7 @@ function bootApp(opts) {
   require("../mrj-scores.js");
   require("../js/progress-merge.js");
   require("../js/progress.js");
+  if (typeof opts.beforeApp === "function") opts.beforeApp(g);
   require("../js/app.js");
   return g.WM_TEST;
 }
