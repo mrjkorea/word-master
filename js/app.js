@@ -2438,7 +2438,7 @@
       if (!window.StartSlice.isGreen(words[ni], set)) nextIds.push(words[ni].id);
     }
     const nextWords = window.MeetLock.wordsForLock(words, nextIds);
-    const countText = doneCount + " / " + total + " words finished";
+    const countText = doneCount + " / " + total + (total ? " (" + Math.round((100 * doneCount) / total) + "%)" : "") + " words finished";
     let leftText = (total - doneCount) + " to go";
     if (set && set.final && set.final.pct != null) {
       leftText += " · last all-" + total + ": " + set.final.pct + "%";
@@ -3732,7 +3732,7 @@
     const missLine = misses.length
       ? misses.map(function (m) { return m.en + " = " + meaning(m); }).join(" · ")
       : t("no_mistakes");
-    $("#test-score-line").textContent = quiz.score + " / " + total + "  ·  " + missLine;
+    $("#test-score-line").textContent = quiz.score + " / " + total + " (" + Math.round((100 * quiz.score) / total) + "%)  ·  " + missLine;
     const box = $("#forever-box");
     const chk = $("#chk-forever");
     if (box) {
@@ -3898,7 +3898,7 @@
   function finishListen() {
     $("#listen-choices").hidden = true;
     $("#listen-score").hidden = false;
-    $("#listen-score-line").textContent = t("score_line", { score: listenGame.score, total: listenGame.items.length });
+    $("#listen-score-line").textContent = t("score_line", { score: listenGame.score, total: listenGame.items.length }) + (listenGame.items.length ? " (" + Math.round((100 * listenGame.score) / listenGame.items.length) + "%)" : "");
     const set = currentSet();
     if (set && listenGame && listenGame.items && listenGame.items.length) {
       logActivityResult({
