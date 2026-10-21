@@ -1253,6 +1253,7 @@
   }
 
   function showScreen(name) {
+    if (currentScreen === "playgame" && name !== "playgame") closeGameFrame();
     currentScreen = name;
     $$(".screen").forEach(function (el) {
       el.classList.toggle("active", el.getAttribute("data-screen") === name);
@@ -4035,11 +4036,39 @@
     try {
       sessionStorage.setItem("mrj.wm.gamepack", JSON.stringify(pack));
     } catch (e) { /* ignore */ }
-    const frame = $("#game-frame");
+    const frame = gameFrame();
     const name = encodeURIComponent(student);
     frame.src = path + "?pack=session&packid=" + encodeURIComponent(currentPackId()) + "&words=" + encodeURIComponent((pack && pack._spellWords) || "") + "&voice=" + encodeURIComponent((pack && pack._spellVoice) || state.voice || "us_m") + "&v=1.11&student=" + name + "&locale=" + encodeURIComponent(localeCode());
     armGame(kind);
   }
+
+  // Game iframe lifecycle: a fresh iframe per game; on close/finish tell the game to stop ("mrj-stop"),
+  // blank it and REMOVE it so no music or loop can keep playing in a hidden frame.
+  function gameFrame() {
+    let f = $("#game-frame");
+    if (f) return f;
+    const host = $("#screen-playgame");
+    if (!host || !document.createElement) return f;
+    f = document.createElement("iframe");
+    f.id = "game-frame";
+    f.title = "Game";
+    f.setAttribute("allow", "autoplay; fullscreen");
+    host.appendChild(f);
+    return f;
+  }
+  function closeGameFrame() {
+    const f = $("#game-frame");
+    if (!f) return;
+    try { if (f.contentWindow) f.contentWindow.postMessage({ type: "mrj-stop" }, "*"); } catch (e) { /* cross-origin / gone */ }
+    try { f.removeAttribute && f.removeAttribute("id"); } catch (e) { /* ignore */ }
+    const kill = function () {
+      try { f.src = "about:blank"; } catch (e) { /* ignore */ }
+      try { if (f.parentNode) f.parentNode.removeChild(f); else if (f.remove) f.remove(); } catch (e) { /* ignore */ }
+    };
+    // give the game one tick to handle mrj-stop, then blank + remove (unload also stops its audio)
+    if (typeof setTimeout === "function") setTimeout(kill, 60); else kill();
+  }
+  window.MRJ_WM_closeGameFrame = closeGameFrame;
 
   function armGame(kind) {
     armedGame = String(kind || "");
@@ -4087,6 +4116,7 @@
     }
     persist();
     armedGame = "";
+    closeGameFrame();
     renderSetHome();
     showTestPick();
     const note = $("#path-lock-note");
@@ -4099,8 +4129,7 @@
   function goBack() {
     if (currentScreen === "playgame") {
       leaveGame();
-      const frame = $("#game-frame");
-      if (frame) frame.src = "about:blank";
+      closeGameFrame();
       goGames();
       return;
     }
@@ -4576,6 +4605,7 @@
       memoryPack: memoryPack,
       packIdForSet: packIdForSet,
       openPortableGame: openPortableGame,
+      gameFrame: function () { return document.querySelector("#game-frame"); },
       startTapmap: startTapmap,
       onTapTile: onTapTile,
       tapPhase: function () { return tap.phase; },
