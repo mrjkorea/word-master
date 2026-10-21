@@ -3585,10 +3585,10 @@
     const pct = Math.round((100 * quiz.score) / total);
     const passed = pct >= PASS_PCT;
     const misses = quiz.mistakes || [];
-    $("#test-score-title").textContent = quiz.score + " / " + total + " — " + pct + "%";
-    $("#test-score-line").textContent = passed
+    $("#test-score-title").textContent = pct + "%";
+    $("#test-score-line").textContent = quiz.score + " / " + total + " right  ·  " + (passed
       ? "Passed ✅ Pack finished."
-      : "Needs work — keep learning the words in red.";
+      : "Needs work — keep learning the words in red.");
     const box = $("#forever-box");
     if (box) box.hidden = true;
     const list = $("#test-misses");

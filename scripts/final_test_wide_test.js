@@ -64,10 +64,10 @@ const passed = api.currentSet().final;
 if (!passed || passed.passed !== true || passed.pct !== 80 || passed.score !== 80 || passed.total !== 100) {
   fail("80% should pass " + JSON.stringify(passed));
 }
-if (document.querySelector("#test-score-title").textContent !== "80 / 100 — 80%") {
+if (document.querySelector("#test-score-title").textContent !== "80%") {
   fail("pass title " + document.querySelector("#test-score-title").textContent);
 }
-if (document.querySelector("#test-score-line").textContent !== "Passed ✅ Pack finished.") {
+if (document.querySelector("#test-score-line").textContent !== "80 / 100 right  ·  Passed ✅ Pack finished.") {
   fail("pass line " + document.querySelector("#test-score-line").textContent);
 }
 
@@ -79,7 +79,7 @@ if (!failed || failed.passed !== false || failed.pct !== 79) fail("79% should fa
 if (api.currentSet().finalMiss.join(",") !== "w9") fail("finalMiss " + api.currentSet().finalMiss.join(","));
 const winsAfter = JSON.stringify(api.currentSet().winsA) + JSON.stringify(api.currentSet().winsB) + JSON.stringify(api.currentSet().winsC);
 if (winsAfter !== winsBefore) fail("final test changed wins");
-if (document.querySelector("#test-score-line").textContent !== "Needs work — keep learning the words in red.") {
+if (document.querySelector("#test-score-line").textContent !== "79 / 100 right  ·  Needs work — keep learning the words in red.") {
   fail("fail line " + document.querySelector("#test-score-line").textContent);
 }
 if (document.querySelector("#test-kind").textContent !== "ALL") fail("test-kind " + document.querySelector("#test-kind").textContent);
