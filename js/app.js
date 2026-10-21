@@ -3898,6 +3898,7 @@
   function finishListen() {
     $("#listen-choices").hidden = true;
     $("#listen-score").hidden = false;
+    if ($("#listen-score-pct")) $("#listen-score-pct").textContent = (listenGame.items.length ? Math.round((100 * listenGame.score) / listenGame.items.length) : 0) + "%";
     $("#listen-score-line").textContent = t("score_line", { score: listenGame.score, total: listenGame.items.length }) + (listenGame.items.length ? " (" + Math.round((100 * listenGame.score) / listenGame.items.length) + "%)" : "");
     const set = currentSet();
     if (set && listenGame && listenGame.items && listenGame.items.length) {
