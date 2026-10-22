@@ -4,7 +4,7 @@
 const fs = require("fs");
 const path = require("path");
 
-const BUILD = "20261021-fix2";
+const BUILD = "20261022-teacher-mode";
 const MRJ_SCORES_CACHE = "20261013-scoresrecv";
 const TEST_STUDENT = "zz_test_mrjmetrics";
 
