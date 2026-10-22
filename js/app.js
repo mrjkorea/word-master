@@ -106,8 +106,9 @@
 
   function teacherNow() {
     try {
-      const search = window.location && window.location.search ? String(window.location.search) : "";
-      return !!(window.PathLock && window.PathLock.isTeacher(search, savedRole()));
+      if (window.MRJTeacherUnlock && window.MRJTeacherUnlock.isMrjTeacher()) return true;
+      const api = window.MRJSignin || window.MRJ_AUTH;
+      return !!(api && typeof api.isTeacher === "function" && api.isTeacher());
     } catch (e) {
       return false;
     }
@@ -758,6 +759,10 @@
 
   if (window.addEventListener) {
     window.addEventListener("mrj-auth-ready", onAuthReady);
+    document.addEventListener("mrj-teacher", function () {
+      if (currentScreen === "set") renderSetHome();
+      else if (currentScreen === "home") renderHome();
+    });
     window.addEventListener("mrj-wm-save-status", function (ev) {
       const ok = !!(ev && ev.detail && ev.detail.ok);
       const err = ev && ev.detail && ev.detail.error ? String(ev.detail.error) : "";
