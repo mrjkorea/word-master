@@ -3,66 +3,66 @@
   "title": "IELTS 1301–1400",
   "band": "IELTS",
   "pos": "mixed",
-  "source": "IELTS Master 1500 (AWL + IELTS academic), ranks 1301–1400 by frequency.",
+  "source": "IELTS Master 1500 (AWL + Cambridge/Barron IELTS), frequency ranks 1001–1500",
   "words": [
     {
       "id": "explosion",
       "en": "explosion",
-      "ko": "explosion",
-      "picture_prompt": "Photorealistic photo illustrating the idea of explosion in a university study setting, no text, no letters, no logos",
+      "ko": "폭발",
+      "picture_prompt": "candy picture-book oil-paint of a distant fireball with smoke rising beyond hills, one subject, no text no letters no numbers no watermark",
       "l1": {
-        "en": "a word used in academic English: explosion",
-        "ko": "explosion",
-        "zh-Hans": "a word used in academic English: explosion",
-        "ja": "a word used in academic English: explosion",
-        "es": "a word used in academic English: explosion",
-        "hi": "a word used in academic English: explosion",
-        "de": "a word used in academic English: explosion",
-        "vi": "a word used in academic English: explosion",
-        "pt-BR": "a word used in academic English: explosion",
-        "id": "a word used in academic English: explosion",
-        "fr": "a word used in academic English: explosion",
-        "ar": "a word used in academic English: explosion",
-        "tr": "a word used in academic English: explosion",
-        "it": "a word used in academic English: explosion",
-        "pl": "a word used in academic English: explosion"
+        "en": "sudden burst with loud noise",
+        "ko": "폭발",
+        "zh-Hans": "突然大吵大闹",
+        "ja": "突然大騒ぎでバースト",
+        "es": "ráfago repentino con ruido fuerte",
+        "hi": "जोर से शोर के साथ अचानक फट गया",
+        "de": "Plötzliches Platzen mit lautem Geräusch",
+        "vi": "Đột nhiên nổ với tiếng ồn lớn",
+        "pt-BR": "explosão súbita com ruído alto",
+        "id": "tiba-tiba meledak dengan suara keras",
+        "fr": "soudaine explosion de bruit",
+        "ar": "انفجرت فجأة بالضوضاء",
+        "tr": "Aniden yüksek gürültü ile patladı",
+        "it": "improvviso scoppio con rumore forte",
+        "pl": "Nagły wybuch z głośnym hałasem"
       },
       "ww": {
-        "sense_id": "explosion.n.s1",
+        "sense_id": "explosion.s1",
         "pos": "n",
         "def": {
-          "en": "an academic term: explosion",
-          "ko": "학술 영어 단어: explosion",
-          "zh-Hans": "an academic term: explosion",
-          "ja": "an academic term: explosion",
-          "es": "an academic term: explosion",
-          "hi": "an academic term: explosion",
-          "de": "an academic term: explosion",
-          "vi": "an academic term: explosion",
-          "pt-BR": "an academic term: explosion",
-          "id": "an academic term: explosion",
-          "fr": "an academic term: explosion",
-          "ar": "an academic term: explosion",
-          "tr": "an academic term: explosion",
-          "it": "an academic term: explosion",
-          "pl": "an academic term: explosion"
+          "en": "a sudden burst that makes a loud noise and releases energy",
+          "ko": "폭발",
+          "zh-Hans": "突然爆裂 发出响亮的噪音 释放能量",
+          "ja": "ノイズを発生させ、エネルギーを解放する突然のバースト",
+          "es": "una explosión repentina que hace ruido fuerte y libera energía",
+          "hi": "अचानक फटना जो जोर से शोर करता है और ऊर्जा जारी करता है",
+          "de": "ein plötzlicher Ausbruch, der ein lautes Geräusch macht und Energie freisetzt",
+          "vi": "một vụ nổ bất ngờ tạo ra một tiếng ồn lớn và giải phóng năng lượng",
+          "pt-BR": "uma explosão súbita que faz um barulho alto e libera energia",
+          "id": "ledakan tiba-tiba yang membuat suara keras dan melepaskan energi",
+          "fr": "une explosion soudaine qui fait un bruit fort et libère de l'énergie",
+          "ar": "إنفجار مفاجئ يسبب ضوضاء عالية ويطلق الطاقة",
+          "tr": "Yüksek bir gürültü yapan ve enerji salıveren ani bir patlama",
+          "it": "un improvviso scoppio che fa un forte rumore e rilascia energia",
+          "pl": "nagły wybuch, który powoduje hałas i uwalnia energię"
         },
         "example": {
-          "en": "The report uses the word \"explosion\" in an academic context.",
-          "ko": "보고서는 학술 맥락에서 \"explosion\"(을)를 사용한다.",
-          "zh-Hans": "The report uses the word \"explosion\" in an academic context.",
-          "ja": "The report uses the word \"explosion\" in an academic context.",
-          "es": "The report uses the word \"explosion\" in an academic context.",
-          "hi": "The report uses the word \"explosion\" in an academic context.",
-          "de": "The report uses the word \"explosion\" in an academic context.",
-          "vi": "The report uses the word \"explosion\" in an academic context.",
-          "pt-BR": "The report uses the word \"explosion\" in an academic context.",
-          "id": "The report uses the word \"explosion\" in an academic context.",
-          "fr": "The report uses the word \"explosion\" in an academic context.",
-          "ar": "The report uses the word \"explosion\" in an academic context.",
-          "tr": "The report uses the word \"explosion\" in an academic context.",
-          "it": "The report uses the word \"explosion\" in an academic context.",
-          "pl": "The report uses the word \"explosion\" in an academic context."
+          "en": "An explosion was heard far from the city.",
+          "ko": "폭발은 도시에서 멀리 들었다.",
+          "zh-Hans": "在远离城市的地方听到爆炸声。",
+          "ja": "街から遠く離れたところには、爆発が聞こえていました。",
+          "es": "Una explosión fue escuchada lejos de la ciudad.",
+          "hi": "एक विस्फोट शहर से दूर सुना था।",
+          "de": "Eine Explosion war weit von der Stadt zu hören.",
+          "vi": "Một vụ nổ được nghe từ xa thành phố.",
+          "pt-BR": "Uma explosão foi ouvida longe da cidade.",
+          "id": "Sebuah ledakan terdengar jauh dari kota.",
+          "fr": "Une explosion a été entendue loin de la ville.",
+          "ar": "لقد سمع انفجار بعيد عن المدينة",
+          "tr": "Şehirden uzak bir patlama duyuldu.",
+          "it": "Un'esplosione è stata sentita lontana dalla città.",
+          "pl": "Wybuch był słyszalny daleko od miasta."
         }
       }
     },
@@ -89,7 +89,7 @@
         "pl": "wyraz"
       },
       "ww": {
-        "sense_id": "expression.n.s1",
+        "sense_id": "expression.s1",
         "pos": "n",
         "def": {
           "en": "a look on a face showing feeling",
@@ -150,7 +150,7 @@
         "pl": "przedłużyć"
       },
       "ww": {
-        "sense_id": "extend.v.s1",
+        "sense_id": "extend.s1",
         "pos": "v",
         "def": {
           "en": "to make something longer",
@@ -211,7 +211,7 @@
         "pl": "dobudówka"
       },
       "ww": {
-        "sense_id": "extension.n.s1",
+        "sense_id": "extension.s1",
         "pos": "n",
         "def": {
           "en": "an extra part that is added to something",
@@ -272,7 +272,7 @@
         "pl": "rozległy"
       },
       "ww": {
-        "sense_id": "extensive.a.s1",
+        "sense_id": "extensive.s1",
         "pos": "a",
         "def": {
           "en": "covering a large area",
@@ -333,7 +333,7 @@
         "pl": "zakres"
       },
       "ww": {
-        "sense_id": "extent.n.s1",
+        "sense_id": "extent.s1",
         "pos": "n",
         "def": {
           "en": "how big or far something is",
@@ -394,7 +394,7 @@
         "pl": "dodatkowy (E)"
       },
       "ww": {
-        "sense_id": "extra.a.s1",
+        "sense_id": "extra.s1",
         "pos": "a",
         "def": {
           "en": "more than is needed",
@@ -455,7 +455,7 @@
         "pl": "nadzwyczajny"
       },
       "ww": {
-        "sense_id": "extraordinary.a.s1",
+        "sense_id": "extraordinary.s1",
         "pos": "a",
         "def": {
           "en": "to be very special and surprising",
@@ -516,7 +516,7 @@
         "pl": "skrajny"
       },
       "ww": {
-        "sense_id": "extreme.a.s1",
+        "sense_id": "extreme.s1",
         "pos": "a",
         "def": {
           "en": "to be very great or strong",
@@ -577,7 +577,7 @@
         "pl": "niezwykle"
       },
       "ww": {
-        "sense_id": "extremely.adv.s1",
+        "sense_id": "extremely.s1",
         "pos": "adv",
         "def": {
           "en": "to a very high degree",
@@ -638,7 +638,7 @@
         "pl": "oko"
       },
       "ww": {
-        "sense_id": "eye.n.s1",
+        "sense_id": "eye.s1",
         "pos": "n",
         "def": {
           "en": "the part of the face we see with",
@@ -699,7 +699,7 @@
         "pl": "twarz"
       },
       "ww": {
-        "sense_id": "face.n.s1",
+        "sense_id": "face.s1",
         "pos": "n",
         "def": {
           "en": "the front part of the head",
@@ -760,7 +760,7 @@
         "pl": "obiekt"
       },
       "ww": {
-        "sense_id": "facility.n.s1",
+        "sense_id": "facility.s1",
         "pos": "n",
         "def": {
           "en": "a building or place for a service",
@@ -821,7 +821,7 @@
         "pl": "fakt"
       },
       "ww": {
-        "sense_id": "fact.n.s1",
+        "sense_id": "fact.s1",
         "pos": "n",
         "def": {
           "en": "a true piece of information",
@@ -882,7 +882,7 @@
         "pl": "fabryka"
       },
       "ww": {
-        "sense_id": "factory.n.s1",
+        "sense_id": "factory.s1",
         "pos": "n",
         "def": {
           "en": "a building where things are made",
@@ -923,61 +923,61 @@
     {
       "id": "faculty",
       "en": "faculty",
-      "ko": "faculty",
-      "picture_prompt": "Photorealistic photo illustrating the idea of faculty in a university study setting, no text, no letters, no logos",
+      "ko": "교수진",
+      "picture_prompt": "candy picture-book oil-paint of professors meeting around a table on a campus, one subject, no text no letters no numbers no watermark",
       "l1": {
-        "en": "a word used in academic English: faculty",
-        "ko": "faculty",
-        "zh-Hans": "a word used in academic English: faculty",
-        "ja": "a word used in academic English: faculty",
-        "es": "a word used in academic English: faculty",
-        "hi": "a word used in academic English: faculty",
-        "de": "a word used in academic English: faculty",
-        "vi": "a word used in academic English: faculty",
-        "pt-BR": "a word used in academic English: faculty",
-        "id": "a word used in academic English: faculty",
-        "fr": "a word used in academic English: faculty",
-        "ar": "a word used in academic English: faculty",
-        "tr": "a word used in academic English: faculty",
-        "it": "a word used in academic English: faculty",
-        "pl": "a word used in academic English: faculty"
+        "en": "teachers at a college",
+        "ko": "교수진",
+        "zh-Hans": "大学的教师",
+        "ja": "大学の教師",
+        "es": "profesores en una universidad",
+        "hi": "कॉलेज में अध्यापक",
+        "de": "Lehrer an einem College",
+        "vi": "Giáo viên đại học",
+        "pt-BR": "professores em uma faculdade",
+        "id": "guru di sebuah perguruan tinggi",
+        "fr": "enseignants dans un collège",
+        "ar": "مدرسون في الكلية",
+        "tr": "Bir üniversitede öğretmenler",
+        "it": "insegnanti in un college",
+        "pl": "nauczyciele w koledżu"
       },
       "ww": {
-        "sense_id": "faculty.n.s1",
+        "sense_id": "faculty.s1",
         "pos": "n",
         "def": {
-          "en": "an academic term: faculty",
-          "ko": "학술 영어 단어: faculty",
-          "zh-Hans": "an academic term: faculty",
-          "ja": "an academic term: faculty",
-          "es": "an academic term: faculty",
-          "hi": "an academic term: faculty",
-          "de": "an academic term: faculty",
-          "vi": "an academic term: faculty",
-          "pt-BR": "an academic term: faculty",
-          "id": "an academic term: faculty",
-          "fr": "an academic term: faculty",
-          "ar": "an academic term: faculty",
-          "tr": "an academic term: faculty",
-          "it": "an academic term: faculty",
-          "pl": "an academic term: faculty"
+          "en": "the teachers at a university or college",
+          "ko": "교수진",
+          "zh-Hans": "大学或学院的教师;",
+          "ja": "大学や大学の教師",
+          "es": "los profesores de una universidad o universidad",
+          "hi": "एक विश्वविद्यालय या कॉलेज में अध्यापक",
+          "de": "Die Lehrer an einer Universität oder Hochschule",
+          "vi": "Các giáo viên ở trường đại học",
+          "pt-BR": "os professores de uma universidade ou faculdade",
+          "id": "guru di universitas atau perguruan tinggi",
+          "fr": "les enseignants d'une université ou d'un collège",
+          "ar": "المدرسون في جامعة أو كلية",
+          "tr": "Bir üniversitede veya kolejdeki öğretmenler",
+          "it": "gli insegnanti in un'università o college",
+          "pl": "nauczycieli uniwersytetu lub kolegium"
         },
         "example": {
-          "en": "The report uses the word \"faculty\" in an academic context.",
-          "ko": "보고서는 학술 맥락에서 \"faculty\"(을)를 사용한다.",
-          "zh-Hans": "The report uses the word \"faculty\" in an academic context.",
-          "ja": "The report uses the word \"faculty\" in an academic context.",
-          "es": "The report uses the word \"faculty\" in an academic context.",
-          "hi": "The report uses the word \"faculty\" in an academic context.",
-          "de": "The report uses the word \"faculty\" in an academic context.",
-          "vi": "The report uses the word \"faculty\" in an academic context.",
-          "pt-BR": "The report uses the word \"faculty\" in an academic context.",
-          "id": "The report uses the word \"faculty\" in an academic context.",
-          "fr": "The report uses the word \"faculty\" in an academic context.",
-          "ar": "The report uses the word \"faculty\" in an academic context.",
-          "tr": "The report uses the word \"faculty\" in an academic context.",
-          "it": "The report uses the word \"faculty\" in an academic context.",
-          "pl": "The report uses the word \"faculty\" in an academic context."
+          "en": "The faculty voted on the new policy.",
+          "ko": "새로운 정책에 투표.",
+          "zh-Hans": "院系对新政策进行了投票.",
+          "ja": "新たな政策に選ばれた教員。",
+          "es": "La facultad votó sobre la nueva política.",
+          "hi": "संकाय ने नई नीति पर मतदान किया।",
+          "de": "Die Fakultät stimmte über die neue Politik ab.",
+          "vi": "Giáo viên đã bỏ phiếu cho chính sách mới.",
+          "pt-BR": "A faculdade votou sobre a nova política.",
+          "id": "Fakultas memilih kebijakan baru.",
+          "fr": "La faculté a voté sur la nouvelle politique.",
+          "ar": "وصوتت الهيئة على السياسة الجديدة.",
+          "tr": "Fakülte yeni politikaya oy verdi.",
+          "it": "La facoltà ha votato sulla nuova politica.",
+          "pl": "Wydział głosował nad nową polityką."
         }
       }
     },
@@ -1004,7 +1004,7 @@
         "pl": "zawieść"
       },
       "ww": {
-        "sense_id": "fail.v.s1",
+        "sense_id": "fail.s1",
         "pos": "v",
         "def": {
           "en": "to not succeed in doing something",
@@ -1065,7 +1065,7 @@
         "pl": "porażka"
       },
       "ww": {
-        "sense_id": "failure.n.s1",
+        "sense_id": "failure.s1",
         "pos": "n",
         "def": {
           "en": "the result when you do not succeed",
@@ -1126,7 +1126,7 @@
         "pl": "sprawiedliwy"
       },
       "ww": {
-        "sense_id": "fair.a.s1",
+        "sense_id": "fair.s1",
         "pos": "a",
         "def": {
           "en": "treating people equally",
@@ -1187,7 +1187,7 @@
         "pl": "dość (F)"
       },
       "ww": {
-        "sense_id": "fairly.adv.s1",
+        "sense_id": "fairly.s1",
         "pos": "adv",
         "def": {
           "en": "to a reasonable degree",
@@ -1248,7 +1248,7 @@
         "pl": "wiara"
       },
       "ww": {
-        "sense_id": "faith.n.s1",
+        "sense_id": "faith.s1",
         "pos": "n",
         "def": {
           "en": "strong trust that someone or something is good and true",
@@ -1309,7 +1309,7 @@
         "pl": "jesień"
       },
       "ww": {
-        "sense_id": "fall.n.s1",
+        "sense_id": "fall.s1",
         "pos": "n",
         "def": {
           "en": "the season when leaves change color and drop",
@@ -1370,7 +1370,7 @@
         "pl": "fałszywy"
       },
       "ww": {
-        "sense_id": "false.a.s1",
+        "sense_id": "false.s1",
         "pos": "a",
         "def": {
           "en": "not the real thing",
@@ -1431,7 +1431,7 @@
         "pl": "znajomy"
       },
       "ww": {
-        "sense_id": "familiar.a.s1",
+        "sense_id": "familiar.s1",
         "pos": "a",
         "def": {
           "en": "known or seen many times",
@@ -1492,7 +1492,7 @@
         "pl": "rodzina"
       },
       "ww": {
-        "sense_id": "family.n.s1",
+        "sense_id": "family.s1",
         "pos": "n",
         "def": {
           "en": "people who live together",
@@ -1553,7 +1553,7 @@
         "pl": "sławny"
       },
       "ww": {
-        "sense_id": "famous.a.s1",
+        "sense_id": "famous.s1",
         "pos": "a",
         "def": {
           "en": "well known by many people",
@@ -1617,7 +1617,7 @@
         "pl": "wentylator"
       },
       "ww": {
-        "sense_id": "fan.n.s1",
+        "sense_id": "fan.s1",
         "pos": "n",
         "def": {
           "en": "a machine with blades that spin to blow cool air",
@@ -1678,7 +1678,7 @@
         "pl": "chcieć"
       },
       "ww": {
-        "sense_id": "fancy.v.s1",
+        "sense_id": "fancy.s1",
         "pos": "v",
         "def": {
           "en": "to like something and want it",
@@ -1739,7 +1739,7 @@
         "pl": "daleki"
       },
       "ww": {
-        "sense_id": "far.a.s1",
+        "sense_id": "far.s1",
         "pos": "a",
         "def": {
           "en": "a long way from here",
@@ -1800,7 +1800,7 @@
         "pl": "farma"
       },
       "ww": {
-        "sense_id": "farm.n.s1",
+        "sense_id": "farm.s1",
         "pos": "n",
         "def": {
           "en": "a place to grow food and raise animals",
@@ -1861,7 +1861,7 @@
         "pl": "rolnik"
       },
       "ww": {
-        "sense_id": "farmer.n.s1",
+        "sense_id": "farmer.s1",
         "pos": "n",
         "def": {
           "en": "a person who grows food on a farm",
@@ -1922,7 +1922,7 @@
         "pl": "moda"
       },
       "ww": {
-        "sense_id": "fashion.n.s1",
+        "sense_id": "fashion.s1",
         "pos": "n",
         "def": {
           "en": "the popular style of clothes at a certain time",
@@ -1983,7 +1983,7 @@
         "pl": "szybki (F)"
       },
       "ww": {
-        "sense_id": "fast.a.s1",
+        "sense_id": "fast.s1",
         "pos": "a",
         "def": {
           "en": "moves very quickly",
@@ -2033,7 +2033,7 @@
       "ko": "뚱뚱한",
       "picture_prompt": "a round, plump orange cat sitting",
       "l1": {
-        "en": "having a lot of body",
+        "en": "having a lot of extra flesh on the body",
         "ko": "뚱뚱한",
         "zh-Hans": "胖的",
         "ja": "太った",
@@ -2050,10 +2050,10 @@
         "pl": "gruby"
       },
       "ww": {
-        "sense_id": "fat.a.s1",
+        "sense_id": "fat.s1",
         "pos": "a",
         "def": {
-          "en": "to have a big round body",
+          "en": "having a lot of extra flesh on the body",
           "ko": "뚱뚱한",
           "zh-Hans": "胖的",
           "ja": "太った",
@@ -2111,7 +2111,7 @@
         "pl": "ojciec"
       },
       "ww": {
-        "sense_id": "father.n.s1",
+        "sense_id": "father.s1",
         "pos": "n",
         "def": {
           "en": "a male parent",
@@ -2172,7 +2172,7 @@
         "pl": "wina"
       },
       "ww": {
-        "sense_id": "fault.n.s1",
+        "sense_id": "fault.s1",
         "pos": "n",
         "def": {
           "en": "a mistake that is someone's responsibility",
@@ -2233,7 +2233,7 @@
         "pl": "przysługa"
       },
       "ww": {
-        "sense_id": "favour.n.s1",
+        "sense_id": "favour.s1",
         "pos": "n",
         "def": {
           "en": "a kind act or help given",
@@ -2294,7 +2294,7 @@
         "pl": "ulubiony"
       },
       "ww": {
-        "sense_id": "favourite.a.s1",
+        "sense_id": "favourite.s1",
         "pos": "a",
         "def": {
           "en": "most liked by someone",
@@ -2355,7 +2355,7 @@
         "pl": "strach"
       },
       "ww": {
-        "sense_id": "fear.n.s1",
+        "sense_id": "fear.s1",
         "pos": "n",
         "def": {
           "en": "feeling of being scared",
@@ -2416,7 +2416,7 @@
         "pl": "karmić"
       },
       "ww": {
-        "sense_id": "feed.v.s1",
+        "sense_id": "feed.s1",
         "pos": "v",
         "def": {
           "en": "to give food to a person or animal",
@@ -2477,7 +2477,7 @@
         "pl": "czuć"
       },
       "ww": {
-        "sense_id": "feel.v.s1",
+        "sense_id": "feel.s1",
         "pos": "v",
         "def": {
           "en": "to sense something by touch",
@@ -2541,7 +2541,7 @@
         "pl": "uczucie"
       },
       "ww": {
-        "sense_id": "feeling.n.s1",
+        "sense_id": "feeling.s1",
         "pos": "n",
         "def": {
           "en": "an emotion you have inside",
@@ -2602,7 +2602,7 @@
         "pl": "towarzysz"
       },
       "ww": {
-        "sense_id": "fellow.a.s1",
+        "sense_id": "fellow.s1",
         "pos": "a",
         "def": {
           "en": "being nice and friendly with others",
@@ -2663,7 +2663,7 @@
         "pl": "żeński"
       },
       "ww": {
-        "sense_id": "female.a.s1",
+        "sense_id": "female.s1",
         "pos": "a",
         "def": {
           "en": "of the girl or woman kind",
@@ -2704,122 +2704,122 @@
     {
       "id": "fence",
       "en": "fence",
-      "ko": "fence",
-      "picture_prompt": "Photorealistic photo illustrating the idea of fence in a university study setting, no text, no letters, no logos",
+      "ko": "울타리",
+      "picture_prompt": "candy picture-book oil-paint of a white picket fence around a small garden, one subject, no text no letters no numbers no watermark",
       "l1": {
-        "en": "a word used in academic English: fence",
-        "ko": "fence",
-        "zh-Hans": "a word used in academic English: fence",
-        "ja": "a word used in academic English: fence",
-        "es": "a word used in academic English: fence",
-        "hi": "a word used in academic English: fence",
-        "de": "a word used in academic English: fence",
-        "vi": "a word used in academic English: fence",
-        "pt-BR": "a word used in academic English: fence",
-        "id": "a word used in academic English: fence",
-        "fr": "a word used in academic English: fence",
-        "ar": "a word used in academic English: fence",
-        "tr": "a word used in academic English: fence",
-        "it": "a word used in academic English: fence",
-        "pl": "a word used in academic English: fence"
+        "en": "barrier around a yard",
+        "ko": "울타리",
+        "zh-Hans": "院子周围的屏障",
+        "ja": "庭の周りの障壁",
+        "es": "barrera alrededor de un patio",
+        "hi": "एक यार्ड के आसपास बाधा",
+        "de": "Barriere um einen Hof",
+        "vi": "Hàng rào bao quanh sân.",
+        "pt-BR": "barreira em torno de um quintal",
+        "id": "penghalang sekitar halaman",
+        "fr": "barrière autour d'une cour",
+        "ar": "حاجز حول ساحة",
+        "tr": "Bir bahçe etrafında bariyer",
+        "it": "barriera intorno a un cortile",
+        "pl": "bariera wokół podwórza"
       },
       "ww": {
-        "sense_id": "fence.n.s1",
+        "sense_id": "fence.s1",
         "pos": "n",
         "def": {
-          "en": "an academic term: fence",
-          "ko": "학술 영어 단어: fence",
-          "zh-Hans": "an academic term: fence",
-          "ja": "an academic term: fence",
-          "es": "an academic term: fence",
-          "hi": "an academic term: fence",
-          "de": "an academic term: fence",
-          "vi": "an academic term: fence",
-          "pt-BR": "an academic term: fence",
-          "id": "an academic term: fence",
-          "fr": "an academic term: fence",
-          "ar": "an academic term: fence",
-          "tr": "an academic term: fence",
-          "it": "an academic term: fence",
-          "pl": "an academic term: fence"
+          "en": "a structure that divides or encloses an area outdoors",
+          "ko": "울타리",
+          "zh-Hans": "以户外方式划分或包围一个地区的结构",
+          "ja": "エリアの屋外を分割または囲む構造",
+          "es": "una estructura que divide o encierra una zona al aire libre",
+          "hi": "एक संरचना जो किसी क्षेत्र को बाहर विभाजित या संलग्न करती है",
+          "de": "eine Struktur, die einen Bereich im Freien teilt oder umschließt",
+          "vi": "một cấu trúc phân chia hoặc bao gồm một khu vực bên ngoài",
+          "pt-BR": "uma estrutura que divide ou encerra uma área exterior",
+          "id": "struktur yang membagi atau melingkupi area di luar ruangan",
+          "fr": "une structure qui divise ou enferme une zone à l'extérieur",
+          "ar": "a structure that divides or attacheds an area outdoors",
+          "tr": "Bir bölgeyi bölmek veya kapatan bir yapı",
+          "it": "una struttura che divide o racchiude un'area all'aperto",
+          "pl": "konstrukcji, która dzieli lub otacza obszar na zewnątrz"
         },
         "example": {
-          "en": "The report uses the word \"fence\" in an academic context.",
-          "ko": "보고서는 학술 맥락에서 \"fence\"(을)를 사용한다.",
-          "zh-Hans": "The report uses the word \"fence\" in an academic context.",
-          "ja": "The report uses the word \"fence\" in an academic context.",
-          "es": "The report uses the word \"fence\" in an academic context.",
-          "hi": "The report uses the word \"fence\" in an academic context.",
-          "de": "The report uses the word \"fence\" in an academic context.",
-          "vi": "The report uses the word \"fence\" in an academic context.",
-          "pt-BR": "The report uses the word \"fence\" in an academic context.",
-          "id": "The report uses the word \"fence\" in an academic context.",
-          "fr": "The report uses the word \"fence\" in an academic context.",
-          "ar": "The report uses the word \"fence\" in an academic context.",
-          "tr": "The report uses the word \"fence\" in an academic context.",
-          "it": "The report uses the word \"fence\" in an academic context.",
-          "pl": "The report uses the word \"fence\" in an academic context."
+          "en": "They painted the wooden fence white.",
+          "ko": "그들은 나무로 되는 담 백색을 그렸습니다.",
+          "zh-Hans": "他们把木栅栏涂成白色.",
+          "ja": "木製の塀の白を塗った。",
+          "es": "Pintaron la valla de madera blanca.",
+          "hi": "उन्होंने लकड़ी के बाड़ को सफेद रंग में चित्रित किया।",
+          "de": "Sie malten den Holzzaun weiß.",
+          "vi": "Họ sơn hàng rào gỗ màu trắng.",
+          "pt-BR": "Pintaram a cerca de madeira branca.",
+          "id": "Mereka mengecat putih pagar kayu.",
+          "fr": "Ils ont peint la clôture en bois blanc.",
+          "ar": "لقد رسموا السياج الخشبي الأبيض",
+          "tr": "Ahşap çit beyazı boyadılar.",
+          "it": "Hanno dipinto la recinzione di legno bianco.",
+          "pl": "Pomalowali drewniany płot na biało."
         }
       }
     },
     {
       "id": "few",
       "en": "few",
-      "ko": "적은",
-      "picture_prompt": "three small red apples on a wooden table",
+      "ko": "소수",
+      "picture_prompt": "three small red apples on a big empty white plate",
       "l1": {
-        "en": "not many things",
-        "ko": "적은",
+        "en": "a small number of things",
+        "ko": "소수",
         "zh-Hans": "少数",
         "ja": "少数",
         "es": "pocos",
-        "hi": "थोड़े",
+        "hi": "कुछ",
         "de": "wenige",
-        "vi": "ít (F)",
+        "vi": "một vài",
         "pt-BR": "poucos",
-        "id": "sedikit (F)",
-        "fr": "peu (F)",
-        "ar": "قليل (F)",
-        "tr": "az (F)",
+        "id": "sedikit",
+        "fr": "peu",
+        "ar": "قليل",
+        "tr": "az",
         "it": "pochi",
-        "pl": "niewiele"
+        "pl": "kilka"
       },
       "ww": {
-        "sense_id": "few.det.s1",
-        "pos": "det",
+        "sense_id": "few.s1",
+        "pos": "n",
         "def": {
-          "en": "not many things",
-          "ko": "적은",
+          "en": "a small number of things",
+          "ko": "소수",
           "zh-Hans": "少数",
           "ja": "少数",
           "es": "pocos",
-          "hi": "थोड़े",
+          "hi": "कुछ",
           "de": "wenige",
-          "vi": "ít (F)",
+          "vi": "một vài",
           "pt-BR": "poucos",
-          "id": "sedikit (F)",
-          "fr": "peu (F)",
-          "ar": "قليل (F)",
-          "tr": "az (F)",
+          "id": "sedikit",
+          "fr": "peu",
+          "ar": "قليل",
+          "tr": "az",
           "it": "pochi",
-          "pl": "niewiele"
+          "pl": "kilka"
         },
         "example": {
-          "en": "A few birds are on the tree.",
-          "ko": "나무 위에 새가 몇 마리 있어요.",
-          "zh-Hans": "树上有几只鸟。",
-          "ja": "木に少しの鳥がいます。",
-          "es": "Hay unos pocos pájaros en el árbol.",
-          "hi": "पेड़ पर कुछ पक्षी हैं।",
-          "de": "Wenige Vögel sitzen auf dem Baum.",
-          "vi": "Một vài con chim đang ở trên cây.",
-          "pt-BR": "Alguns pássaros estão na árvore.",
-          "id": "Beberapa burung ada di pohon.",
-          "fr": "Quelques oiseaux sont dans l’arbre.",
-          "ar": "هناك قليل من الطيور على الشجرة.",
-          "tr": "Ağaçta birkaç kuş var.",
-          "it": "Pochi uccelli sono sull’albero.",
-          "pl": "Kilka ptaków jest na drzewie."
+          "en": "A few students came early.",
+          "ko": "소수의 학생들이 일찍 왔습니다.",
+          "zh-Hans": "少数学生早到了。",
+          "ja": "少数の生徒が早く来ました。",
+          "es": "Unos pocos estudiantes llegaron temprano.",
+          "hi": "कुछ छात्र जल्दी आए।",
+          "de": "Ein paar Schüler kamen früh.",
+          "vi": "Một vài học sinh đến sớm.",
+          "pt-BR": "Alguns poucos alunos chegaram cedo.",
+          "id": "Beberapa siswa datang lebih awal.",
+          "fr": "Quelques élèves sont arrivés tôt.",
+          "ar": "جاء عدد قليل من الطلاب مبكرًا.",
+          "tr": "Birkaç öğrenci erken geldi.",
+          "it": "Pochi studenti sono arrivati presto.",
+          "pl": "Kilka uczniów przyszło wcześnie."
         }
       }
     },
@@ -2846,7 +2846,7 @@
         "pl": "pole"
       },
       "ww": {
-        "sense_id": "field.n.s1",
+        "sense_id": "field.s1",
         "pos": "n",
         "def": {
           "en": "a large open grassy area",
@@ -2907,7 +2907,7 @@
         "pl": "walka"
       },
       "ww": {
-        "sense_id": "fight.n.s1",
+        "sense_id": "fight.s1",
         "pos": "n",
         "def": {
           "en": "a struggle between people who try to beat each other",
@@ -2968,7 +2968,7 @@
         "pl": "postać"
       },
       "ww": {
-        "sense_id": "figure.n.s1",
+        "sense_id": "figure.s1",
         "pos": "n",
         "def": {
           "en": "shape of a person or thing",
@@ -3029,7 +3029,7 @@
         "pl": "wypełniać"
       },
       "ww": {
-        "sense_id": "fill.v.s1",
+        "sense_id": "fill.s1",
         "pos": "v",
         "def": {
           "en": "to make something full of something",
@@ -3090,7 +3090,7 @@
         "pl": "film"
       },
       "ww": {
-        "sense_id": "film.n.s1",
+        "sense_id": "film.s1",
         "pos": "n",
         "def": {
           "en": "a story shown on a screen",
@@ -3151,7 +3151,7 @@
         "pl": "w końcu"
       },
       "ww": {
-        "sense_id": "finally.adv.s1",
+        "sense_id": "finally.s1",
         "pos": "adv",
         "def": {
           "en": "after a long time or at the end",
@@ -3212,7 +3212,7 @@
         "pl": "finansowy"
       },
       "ww": {
-        "sense_id": "financial.a.s1",
+        "sense_id": "financial.s1",
         "pos": "a",
         "def": {
           "en": "about money or money matters",
@@ -3273,7 +3273,7 @@
         "pl": "znaleźć"
       },
       "ww": {
-        "sense_id": "find.v.s1",
+        "sense_id": "find.s1",
         "pos": "v",
         "def": {
           "en": "to see or get something you look for",
@@ -3334,7 +3334,7 @@
         "pl": "odkrycie"
       },
       "ww": {
-        "sense_id": "finding.n.s1",
+        "sense_id": "finding.s1",
         "pos": "n",
         "def": {
           "en": "something you found or learned after looking carefully",
@@ -3395,7 +3395,7 @@
         "pl": "wspaniały"
       },
       "ww": {
-        "sense_id": "fine.a.s1",
+        "sense_id": "fine.s1",
         "pos": "a",
         "def": {
           "en": "very good or nice",
@@ -3456,7 +3456,7 @@
         "pl": "palec"
       },
       "ww": {
-        "sense_id": "finger.n.s1",
+        "sense_id": "finger.s1",
         "pos": "n",
         "def": {
           "en": "a long part on your hand",
@@ -3517,7 +3517,7 @@
         "pl": "zakończyć (F)"
       },
       "ww": {
-        "sense_id": "finish.v.s1",
+        "sense_id": "finish.s1",
         "pos": "v",
         "def": {
           "en": "to bring something to an end",
@@ -3578,7 +3578,7 @@
         "pl": "ogień"
       },
       "ww": {
-        "sense_id": "fire.n.s1",
+        "sense_id": "fire.s1",
         "pos": "n",
         "def": {
           "en": "hot bright flames",
@@ -3639,7 +3639,7 @@
         "pl": "twardy"
       },
       "ww": {
-        "sense_id": "firm.a.s1",
+        "sense_id": "firm.s1",
         "pos": "a",
         "def": {
           "en": "hard and solid",
@@ -3700,7 +3700,7 @@
         "pl": "pierwszy"
       },
       "ww": {
-        "sense_id": "first.a.s1",
+        "sense_id": "first.s1",
         "pos": "a",
         "def": {
           "en": "comes before everything else",
@@ -3764,7 +3764,7 @@
         "pl": "ryba"
       },
       "ww": {
-        "sense_id": "fish.n.s1",
+        "sense_id": "fish.s1",
         "pos": "n",
         "def": {
           "en": "an animal that lives in water",
@@ -3805,61 +3805,61 @@
     {
       "id": "fishing",
       "en": "fishing",
-      "ko": "fishing",
-      "picture_prompt": "Photorealistic photo illustrating the idea of fishing in a university study setting, no text, no letters, no logos",
+      "ko": "낚시",
+      "picture_prompt": "candy picture-book oil-paint of a person holding a fishing rod beside a calm lake, one subject, no text no letters no numbers no watermark",
       "l1": {
-        "en": "a word used in academic English: fishing",
-        "ko": "fishing",
-        "zh-Hans": "a word used in academic English: fishing",
-        "ja": "a word used in academic English: fishing",
-        "es": "a word used in academic English: fishing",
-        "hi": "a word used in academic English: fishing",
-        "de": "a word used in academic English: fishing",
-        "vi": "a word used in academic English: fishing",
-        "pt-BR": "a word used in academic English: fishing",
-        "id": "a word used in academic English: fishing",
-        "fr": "a word used in academic English: fishing",
-        "ar": "a word used in academic English: fishing",
-        "tr": "a word used in academic English: fishing",
-        "it": "a word used in academic English: fishing",
-        "pl": "a word used in academic English: fishing"
+        "en": "catching fish as a hobby",
+        "ko": "낚시",
+        "zh-Hans": "钓鱼是一种爱好",
+        "ja": "趣味で魚を釣る",
+        "es": "pescar como un hobby",
+        "hi": "एक शौक के रूप में मछली पकड़ना",
+        "de": "Fischfang als Hobby",
+        "vi": "Bắt cá như một sở thích",
+        "pt-BR": "captura de peixes como um hobby",
+        "id": "menangkap ikan sebagai hobi",
+        "fr": "attraper le poisson comme un passe-temps",
+        "ar": "صيد السمك كهواية",
+        "tr": "Bir hobi olarak balık yakalamak",
+        "it": "pescare il pesce come un hobby",
+        "pl": "Łapanie ryb jako hobby"
       },
       "ww": {
-        "sense_id": "fishing.n.s1",
+        "sense_id": "fishing.s1",
         "pos": "n",
         "def": {
-          "en": "an academic term: fishing",
-          "ko": "학술 영어 단어: fishing",
-          "zh-Hans": "an academic term: fishing",
-          "ja": "an academic term: fishing",
-          "es": "an academic term: fishing",
-          "hi": "an academic term: fishing",
-          "de": "an academic term: fishing",
-          "vi": "an academic term: fishing",
-          "pt-BR": "an academic term: fishing",
-          "id": "an academic term: fishing",
-          "fr": "an academic term: fishing",
-          "ar": "an academic term: fishing",
-          "tr": "an academic term: fishing",
-          "it": "an academic term: fishing",
-          "pl": "an academic term: fishing"
+          "en": "the activity of catching fish",
+          "ko": "낚시",
+          "zh-Hans": "捕鱼活动",
+          "ja": "魚を捕獲する活動",
+          "es": "la actividad de pesca",
+          "hi": "मछली पकड़ने की गतिविधि",
+          "de": "die Tätigkeit des Fischfangs",
+          "vi": "hoạt động bắt cá",
+          "pt-BR": "A actividade de captura de peixes",
+          "id": "aktivitas penangkapan ikan",
+          "fr": "l'activité de capture du poisson",
+          "ar": "نشاط صيد الأسماك",
+          "tr": "Balık yakalamak için",
+          "it": "l'attività di pesca del pesce",
+          "pl": "w sprawie działalności połowowej"
         },
         "example": {
-          "en": "The report uses the word \"fishing\" in an academic context.",
-          "ko": "보고서는 학술 맥락에서 \"fishing\"(을)를 사용한다.",
-          "zh-Hans": "The report uses the word \"fishing\" in an academic context.",
-          "ja": "The report uses the word \"fishing\" in an academic context.",
-          "es": "The report uses the word \"fishing\" in an academic context.",
-          "hi": "The report uses the word \"fishing\" in an academic context.",
-          "de": "The report uses the word \"fishing\" in an academic context.",
-          "vi": "The report uses the word \"fishing\" in an academic context.",
-          "pt-BR": "The report uses the word \"fishing\" in an academic context.",
-          "id": "The report uses the word \"fishing\" in an academic context.",
-          "fr": "The report uses the word \"fishing\" in an academic context.",
-          "ar": "The report uses the word \"fishing\" in an academic context.",
-          "tr": "The report uses the word \"fishing\" in an academic context.",
-          "it": "The report uses the word \"fishing\" in an academic context.",
-          "pl": "The report uses the word \"fishing\" in an academic context."
+          "en": "Fishing is popular on the lake.",
+          "ko": "낚시는 호수에 인기가 있습니다.",
+          "zh-Hans": "这一议题很受欢迎",
+          "ja": "湖で釣りが人気です。",
+          "es": "La pesca es popular en el lago.",
+          "hi": "मत्स्य पालन झील पर लोकप्रिय है।",
+          "de": "Angeln ist auf dem See beliebt.",
+          "vi": "Câu cá rất phổ biến trên hồ.",
+          "pt-BR": "Pesca é popular no lago.",
+          "id": "Memancing populer di danau.",
+          "fr": "La pêche est populaire sur le lac.",
+          "ar": "الصيد مشهور على البحيرة",
+          "tr": "Balıkçılık gölde popülerdir.",
+          "it": "La pesca è popolare sul lago.",
+          "pl": "Rybołówstwo jest popularne na jeziorze."
         }
       }
     },
@@ -3886,7 +3886,7 @@
         "pl": "pasujący"
       },
       "ww": {
-        "sense_id": "fit.a.s1",
+        "sense_id": "fit.s1",
         "pos": "a",
         "def": {
           "en": "the right size for you",
@@ -3927,122 +3927,122 @@
     {
       "id": "fitness",
       "en": "fitness",
-      "ko": "fitness",
-      "picture_prompt": "Photorealistic photo illustrating the idea of fitness in a university study setting, no text, no letters, no logos",
+      "ko": "체력",
+      "picture_prompt": "candy picture-book oil-paint of a person jogging on a path in fresh air, one subject, no text no letters no numbers no watermark",
       "l1": {
-        "en": "a word used in academic English: fitness",
-        "ko": "fitness",
-        "zh-Hans": "a word used in academic English: fitness",
-        "ja": "a word used in academic English: fitness",
-        "es": "a word used in academic English: fitness",
-        "hi": "a word used in academic English: fitness",
-        "de": "a word used in academic English: fitness",
-        "vi": "a word used in academic English: fitness",
-        "pt-BR": "a word used in academic English: fitness",
-        "id": "a word used in academic English: fitness",
-        "fr": "a word used in academic English: fitness",
-        "ar": "a word used in academic English: fitness",
-        "tr": "a word used in academic English: fitness",
-        "it": "a word used in academic English: fitness",
-        "pl": "a word used in academic English: fitness"
+        "en": "being strong and healthy",
+        "ko": "체력",
+        "zh-Hans": "强壮健康",
+        "ja": "強く、健康であること",
+        "es": "ser fuerte y saludable",
+        "hi": "मजबूत और स्वस्थ होना",
+        "de": "Stark und gesund sein",
+        "vi": "mạnh mẽ và khỏe mạnh",
+        "pt-BR": "ser forte e saudável",
+        "id": "menjadi kuat dan sehat",
+        "fr": "être forte et saine",
+        "ar": "كوني قوية وصحية",
+        "tr": "Güçlü ve sağlıklı olmak",
+        "it": "essere forte e sano",
+        "pl": "bycie silnym i zdrowym"
       },
       "ww": {
-        "sense_id": "fitness.n.s1",
+        "sense_id": "fitness.s1",
         "pos": "n",
         "def": {
-          "en": "an academic term: fitness",
-          "ko": "학술 영어 단어: fitness",
-          "zh-Hans": "an academic term: fitness",
-          "ja": "an academic term: fitness",
-          "es": "an academic term: fitness",
-          "hi": "an academic term: fitness",
-          "de": "an academic term: fitness",
-          "vi": "an academic term: fitness",
-          "pt-BR": "an academic term: fitness",
-          "id": "an academic term: fitness",
-          "fr": "an academic term: fitness",
-          "ar": "an academic term: fitness",
-          "tr": "an academic term: fitness",
-          "it": "an academic term: fitness",
-          "pl": "an academic term: fitness"
+          "en": "the condition of being physically strong and healthy",
+          "ko": "체력",
+          "zh-Hans": "2. 体型强及健康;",
+          "ja": "物理的に強く、健康である状態",
+          "es": "la condición de ser físicamente fuerte y saludable",
+          "hi": "शारीरिक रूप से मजबूत और स्वस्थ होने की स्थिति",
+          "de": "der Zustand, körperlich stark und gesund zu sein",
+          "vi": "trạng thái khỏe mạnh và khỏe mạnh",
+          "pt-BR": "a condição de ser fisicamente forte e saudável",
+          "id": "kondisi menjadi fisik kuat dan sehat",
+          "fr": "la condition d'être physiquement forte et en bonne santé",
+          "ar": "حالة القوة البدنية والصحة",
+          "tr": "Fiziksel olarak güçlü ve sağlıklı olma durumu",
+          "it": "la condizione di essere fisicamente forte e sano",
+          "pl": "stan bycia fizycznie silnym i zdrowym"
         },
         "example": {
-          "en": "The report uses the word \"fitness\" in an academic context.",
-          "ko": "보고서는 학술 맥락에서 \"fitness\"(을)를 사용한다.",
-          "zh-Hans": "The report uses the word \"fitness\" in an academic context.",
-          "ja": "The report uses the word \"fitness\" in an academic context.",
-          "es": "The report uses the word \"fitness\" in an academic context.",
-          "hi": "The report uses the word \"fitness\" in an academic context.",
-          "de": "The report uses the word \"fitness\" in an academic context.",
-          "vi": "The report uses the word \"fitness\" in an academic context.",
-          "pt-BR": "The report uses the word \"fitness\" in an academic context.",
-          "id": "The report uses the word \"fitness\" in an academic context.",
-          "fr": "The report uses the word \"fitness\" in an academic context.",
-          "ar": "The report uses the word \"fitness\" in an academic context.",
-          "tr": "The report uses the word \"fitness\" in an academic context.",
-          "it": "The report uses the word \"fitness\" in an academic context.",
-          "pl": "The report uses the word \"fitness\" in an academic context."
+          "en": "Regular exercise improves fitness.",
+          "ko": "일반 운동은 피트니스를 향상시킵니다.",
+          "zh-Hans": "定期锻炼可以提高健身能力。",
+          "ja": "定期的な運動はフィットネスを改善します。",
+          "es": "El ejercicio regular mejora la aptitud.",
+          "hi": "नियमित व्यायाम",
+          "de": "Regelmäßige Bewegung verbessert die Fitness.",
+          "vi": "Tập thể dục đều đặn cải thiện thể dục.",
+          "pt-BR": "CORDO DE EQUIPAMENTO",
+          "id": "Latihan rutin meningkatkan kebugaran.",
+          "fr": "L'exercice régulier améliore la condition physique.",
+          "ar": "التدريب المنتظم يحسن اللياقة",
+          "tr": "Düzenli egzersiz fitness geliştirir.",
+          "it": "L'esercizio in corso.",
+          "pl": "Regularne ćwiczenia poprawiZrozumiały."
         }
       }
     },
     {
       "id": "five",
       "en": "five",
-      "ko": "five",
-      "picture_prompt": "Photorealistic photo illustrating the idea of five in a university study setting, no text, no letters, no logos",
+      "ko": "5",
+      "picture_prompt": "candy picture-book oil-paint of five red apples lined up on a counter, one subject, no text no letters no numbers no watermark",
       "l1": {
-        "en": "having the quality of five",
-        "ko": "five",
-        "zh-Hans": "having the quality of five",
-        "ja": "having the quality of five",
-        "es": "having the quality of five",
-        "hi": "having the quality of five",
-        "de": "having the quality of five",
-        "vi": "having the quality of five",
-        "pt-BR": "having the quality of five",
-        "id": "having the quality of five",
-        "fr": "having the quality of five",
-        "ar": "having the quality of five",
-        "tr": "having the quality of five",
-        "it": "having the quality of five",
-        "pl": "having the quality of five"
+        "en": "the number 5",
+        "ko": "5",
+        "zh-Hans": "数字 5",
+        "ja": "番号5",
+        "es": "el número 5",
+        "hi": "संख्या 5",
+        "de": "die Zahl 5",
+        "vi": "số 5",
+        "pt-BR": "o número 5",
+        "id": "nomor 5",
+        "fr": "le numéro 5",
+        "ar": "العدد 5",
+        "tr": "5 numara",
+        "it": "il numero 5",
+        "pl": "numer 5"
       },
       "ww": {
-        "sense_id": "five.adj.s1",
-        "pos": "adj",
+        "sense_id": "five.s1",
+        "pos": "num",
         "def": {
-          "en": "an academic term: five",
-          "ko": "학술 영어 단어: five",
-          "zh-Hans": "an academic term: five",
-          "ja": "an academic term: five",
-          "es": "an academic term: five",
-          "hi": "an academic term: five",
-          "de": "an academic term: five",
-          "vi": "an academic term: five",
-          "pt-BR": "an academic term: five",
-          "id": "an academic term: five",
-          "fr": "an academic term: five",
-          "ar": "an academic term: five",
-          "tr": "an academic term: five",
-          "it": "an academic term: five",
-          "pl": "an academic term: five"
+          "en": "the number 5",
+          "ko": "5",
+          "zh-Hans": "数字 5",
+          "ja": "番号5",
+          "es": "el número 5",
+          "hi": "संख्या 5",
+          "de": "die Zahl 5",
+          "vi": "số 5",
+          "pt-BR": "o número 5",
+          "id": "nomor 5",
+          "fr": "le numéro 5",
+          "ar": "العدد 5",
+          "tr": "5 numara",
+          "it": "il numero 5",
+          "pl": "numer 5"
         },
         "example": {
-          "en": "The report uses the word \"five\" in an academic context.",
-          "ko": "보고서는 학술 맥락에서 \"five\"(을)를 사용한다.",
-          "zh-Hans": "The report uses the word \"five\" in an academic context.",
-          "ja": "The report uses the word \"five\" in an academic context.",
-          "es": "The report uses the word \"five\" in an academic context.",
-          "hi": "The report uses the word \"five\" in an academic context.",
-          "de": "The report uses the word \"five\" in an academic context.",
-          "vi": "The report uses the word \"five\" in an academic context.",
-          "pt-BR": "The report uses the word \"five\" in an academic context.",
-          "id": "The report uses the word \"five\" in an academic context.",
-          "fr": "The report uses the word \"five\" in an academic context.",
-          "ar": "The report uses the word \"five\" in an academic context.",
-          "tr": "The report uses the word \"five\" in an academic context.",
-          "it": "The report uses the word \"five\" in an academic context.",
-          "pl": "The report uses the word \"five\" in an academic context."
+          "en": "She counted five apples in the bag.",
+          "ko": "그녀는 가방에 5 개의 사과를 계산했습니다.",
+          "zh-Hans": "她在包里数了五个苹果.",
+          "ja": "袋にリンゴを5個数えました。",
+          "es": "Contó cinco manzanas en la bolsa.",
+          "hi": "उन्होंने बैग में पांच सेब की गिनती की।",
+          "de": "Sie zählte fünf Äpfel in der Tasche.",
+          "vi": "Cô ấy đếm 5 quả táo trong túi.",
+          "pt-BR": "Ela contou cinco maçãs no saco.",
+          "id": "Dia menghitung lima apel dalam tas.",
+          "fr": "Elle a compté cinq pommes dans le sac.",
+          "ar": "لقد عدّت خمس تفاحات في الحقيبة",
+          "tr": "Çantada beş elma saydı.",
+          "it": "Ha contato cinque mele nella borsa.",
+          "pl": "Policzyła pięć jabłek w torbie."
         }
       }
     },
@@ -4069,7 +4069,7 @@
         "pl": "naprawić"
       },
       "ww": {
-        "sense_id": "fix.v.s1",
+        "sense_id": "fix.s1",
         "pos": "v",
         "def": {
           "en": "to make something broken work again",
@@ -4110,122 +4110,122 @@
     {
       "id": "flag",
       "en": "flag",
-      "ko": "flag",
-      "picture_prompt": "Photorealistic photo illustrating the idea of flag in a university study setting, no text, no letters, no logos",
+      "ko": "깃발",
+      "picture_prompt": "candy picture-book oil-paint of a bright flag waving on a pole against blue sky, one subject, no text no letters no numbers no watermark",
       "l1": {
-        "en": "a word used in academic English: flag",
-        "ko": "flag",
-        "zh-Hans": "a word used in academic English: flag",
-        "ja": "a word used in academic English: flag",
-        "es": "a word used in academic English: flag",
-        "hi": "a word used in academic English: flag",
-        "de": "a word used in academic English: flag",
-        "vi": "a word used in academic English: flag",
-        "pt-BR": "a word used in academic English: flag",
-        "id": "a word used in academic English: flag",
-        "fr": "a word used in academic English: flag",
-        "ar": "a word used in academic English: flag",
-        "tr": "a word used in academic English: flag",
-        "it": "a word used in academic English: flag",
-        "pl": "a word used in academic English: flag"
+        "en": "cloth symbol on a pole",
+        "ko": "깃발",
+        "zh-Hans": "柱子上的布料符号",
+        "ja": "棒の布の印",
+        "es": "símbolo de tela en un poste",
+        "hi": "पोल पर कपड़ा प्रतीक",
+        "de": "Tuchsymbol auf einer Stange",
+        "vi": "biểu tượng vải trên một cây cột",
+        "pt-BR": "símbolo de pano em um poste",
+        "id": "simbol kain pada tiang",
+        "fr": "symbole de tissu sur un poteau",
+        "ar": "رمز القماش على القطب",
+        "tr": "Bir kutupta bek sembolü",
+        "it": "simbolo di panno su un palo",
+        "pl": "Symbol tkaniny na słupie"
       },
       "ww": {
-        "sense_id": "flag.n.s1",
+        "sense_id": "flag.s1",
         "pos": "n",
         "def": {
-          "en": "an academic term: flag",
-          "ko": "학술 영어 단어: flag",
-          "zh-Hans": "an academic term: flag",
-          "ja": "an academic term: flag",
-          "es": "an academic term: flag",
-          "hi": "an academic term: flag",
-          "de": "an academic term: flag",
-          "vi": "an academic term: flag",
-          "pt-BR": "an academic term: flag",
-          "id": "an academic term: flag",
-          "fr": "an academic term: flag",
-          "ar": "an academic term: flag",
-          "tr": "an academic term: flag",
-          "it": "an academic term: flag",
-          "pl": "an academic term: flag"
+          "en": "a piece of cloth with colors or symbols, attached to a pole",
+          "ko": "깃발",
+          "zh-Hans": "一块有颜色或符号的布 贴在柱子上",
+          "ja": "棒に付す色または記号が付いている布の部分",
+          "es": "un pedazo de tela con colores o símbolos, unido a un poste",
+          "hi": "रंगों या प्रतीकों के साथ कपड़े का एक टुकड़ा, एक पोल से जुड़ा हुआ है",
+          "de": "ein Stück Stoff mit Farben oder Symbolen, an einem Pol befestigt",
+          "vi": "một mảnh vải với màu sắc hoặc biểu tượng, gắn liền với một cột",
+          "pt-BR": "um pedaço de pano com coresόs ou símbolos, preso a um poste",
+          "id": "sepotong kain dengan warna atau simbol, melekat pada tiang",
+          "fr": "un morceau de tissu avec des couleurs ou des symboles, attaché à un poteau",
+          "ar": "قطعة من القماش مع الألوان أو الرموز، ملتصقة بعمود",
+          "tr": "Renkler veya sembollerle bir parça bez, bir kutupa bağlı",
+          "it": "un pezzo di stoffa con colori o simboli, attaccato a un palo",
+          "pl": "kawałek tkaniny z kolorami lub symbolami, przymocowany do słupa"
         },
         "example": {
-          "en": "The report uses the word \"flag\" in an academic context.",
-          "ko": "보고서는 학술 맥락에서 \"flag\"(을)를 사용한다.",
-          "zh-Hans": "The report uses the word \"flag\" in an academic context.",
-          "ja": "The report uses the word \"flag\" in an academic context.",
-          "es": "The report uses the word \"flag\" in an academic context.",
-          "hi": "The report uses the word \"flag\" in an academic context.",
-          "de": "The report uses the word \"flag\" in an academic context.",
-          "vi": "The report uses the word \"flag\" in an academic context.",
-          "pt-BR": "The report uses the word \"flag\" in an academic context.",
-          "id": "The report uses the word \"flag\" in an academic context.",
-          "fr": "The report uses the word \"flag\" in an academic context.",
-          "ar": "The report uses the word \"flag\" in an academic context.",
-          "tr": "The report uses the word \"flag\" in an academic context.",
-          "it": "The report uses the word \"flag\" in an academic context.",
-          "pl": "The report uses the word \"flag\" in an academic context."
+          "en": "The national flag flew above the school.",
+          "ko": "학교 위의 국가 플래그가 흐릅니다.",
+          "zh-Hans": "国旗飞过学校上空.",
+          "ja": "学校の上の国の旗が飛び込んでいます。",
+          "es": "La bandera nacional voló por encima de la escuela.",
+          "hi": "राष्ट्रीय ध्वज स्कूल के ऊपर उड़ गया।",
+          "de": "Die Nationalflagge flog über der Schule.",
+          "vi": "Lá cờ quốc gia bay trên trường.",
+          "pt-BR": "A bandeira nacional voou acima da escola.",
+          "id": "Bendera nasional terbang di atas sekolah.",
+          "fr": "Le drapeau national survolait l'école.",
+          "ar": "العلم الوطني طار فوق المدرسة",
+          "tr": "Milli bayrak okul üzerinde uçtu.",
+          "it": "La bandiera nazionale volava sopra la scuola.",
+          "pl": "Flaga narodowa przeleciała nad szkołą."
         }
       }
     },
     {
       "id": "flame",
       "en": "flame",
-      "ko": "flame",
-      "picture_prompt": "Photorealistic photo illustrating the idea of flame in a university study setting, no text, no letters, no logos",
+      "ko": "불꽃",
+      "picture_prompt": "candy picture-book oil-paint of a candle with a single orange flame in a dark room, one subject, no text no letters no numbers no watermark",
       "l1": {
-        "en": "a word used in academic English: flame",
-        "ko": "flame",
-        "zh-Hans": "a word used in academic English: flame",
-        "ja": "a word used in academic English: flame",
-        "es": "a word used in academic English: flame",
-        "hi": "a word used in academic English: flame",
-        "de": "a word used in academic English: flame",
-        "vi": "a word used in academic English: flame",
-        "pt-BR": "a word used in academic English: flame",
-        "id": "a word used in academic English: flame",
-        "fr": "a word used in academic English: flame",
-        "ar": "a word used in academic English: flame",
-        "tr": "a word used in academic English: flame",
-        "it": "a word used in academic English: flame",
-        "pl": "a word used in academic English: flame"
+        "en": "hot bright part of fire",
+        "ko": "불꽃",
+        "zh-Hans": "热亮的火焰部分",
+        "ja": "火の熱い明るい部分",
+        "es": "caliente parte brillante del fuego",
+        "hi": "आग का गर्म उज्ज्वल हिस्सा",
+        "de": "Heißer heller Teil des Feuers",
+        "vi": "phần sáng rực rỡ của lửa",
+        "pt-BR": "parte brilhante quente do fogo",
+        "id": "panas terang bagian dari api",
+        "fr": "Partie chaude et lumineuse du feu",
+        "ar": "الجزء المشرق الساخن من النار",
+        "tr": "Sıcak parlak ateş parçası",
+        "it": "caldo parte luminosa del fuoco",
+        "pl": "gorące jasne części ognia"
       },
       "ww": {
-        "sense_id": "flame.n.s1",
+        "sense_id": "flame.s1",
         "pos": "n",
         "def": {
-          "en": "an academic term: flame",
-          "ko": "학술 영어 단어: flame",
-          "zh-Hans": "an academic term: flame",
-          "ja": "an academic term: flame",
-          "es": "an academic term: flame",
-          "hi": "an academic term: flame",
-          "de": "an academic term: flame",
-          "vi": "an academic term: flame",
-          "pt-BR": "an academic term: flame",
-          "id": "an academic term: flame",
-          "fr": "an academic term: flame",
-          "ar": "an academic term: flame",
-          "tr": "an academic term: flame",
-          "it": "an academic term: flame",
-          "pl": "an academic term: flame"
+          "en": "the hot, bright gas that you see when something burns",
+          "ko": "불꽃",
+          "zh-Hans": "热亮的气体,当你看到的东西燃烧",
+          "ja": "何かが燃えるとき見る熱い、明るいガス",
+          "es": "el gas caliente y brillante que ves cuando algo quema",
+          "hi": "गर्म, उज्ज्वल गैस जो आप देखते हैं जब कुछ जलता है",
+          "de": "das heiße, helle Gas, das Sie sehen, wenn etwas brennt",
+          "vi": "Khí nóng rực mà bạn thấy khi một cái gì đó cháy",
+          "pt-BR": "o gás quente e brilhante Division que você vê quando algo queima",
+          "id": "panas, gas cerah yang Anda lihat ketika sesuatu terbakar",
+          "fr": "le gaz chaud et lumineux que vous voyez quand quelque chose brûle",
+          "ar": "الغاز المشرق الساخن الذي تراه عندما يحترق شيء ما",
+          "tr": "Sıcak, parlak gaz, bir şey yandığında gördüğünüz",
+          "it": "il gas caldo e luminoso che si vede quando qualcosa brucia",
+          "pl": "Gorący, jasny gaz, który widzisz, kiedy coś płonie"
         },
         "example": {
-          "en": "The report uses the word \"flame\" in an academic context.",
-          "ko": "보고서는 학술 맥락에서 \"flame\"(을)를 사용한다.",
-          "zh-Hans": "The report uses the word \"flame\" in an academic context.",
-          "ja": "The report uses the word \"flame\" in an academic context.",
-          "es": "The report uses the word \"flame\" in an academic context.",
-          "hi": "The report uses the word \"flame\" in an academic context.",
-          "de": "The report uses the word \"flame\" in an academic context.",
-          "vi": "The report uses the word \"flame\" in an academic context.",
-          "pt-BR": "The report uses the word \"flame\" in an academic context.",
-          "id": "The report uses the word \"flame\" in an academic context.",
-          "fr": "The report uses the word \"flame\" in an academic context.",
-          "ar": "The report uses the word \"flame\" in an academic context.",
-          "tr": "The report uses the word \"flame\" in an academic context.",
-          "it": "The report uses the word \"flame\" in an academic context.",
-          "pl": "The report uses the word \"flame\" in an academic context."
+          "en": "A small flame lit the candle.",
+          "ko": "작은 불꽃은 촛불을 밝힙니다.",
+          "zh-Hans": "一个小火点燃蜡烛。",
+          "ja": "キャンドルを照らす小さな炎。",
+          "es": "Una pequeña llama encendió la vela.",
+          "hi": "एक छोटी लौ ने मोमबत्ती को जला दिया।",
+          "de": "Eine kleine Flamme zündete die Kerze an.",
+          "vi": "Một ngọn lửa nhỏ thắp sáng ngọn nến.",
+          "pt-BR": "Uma pequena chama acendeu a vela.",
+          "id": "Sebuah api kecil menyalakan lilin.",
+          "fr": "Une petite flamme a allumé la bougie.",
+          "ar": "لهيب صغير أشعل الشمعة",
+          "tr": "Küçük bir alev mumu yaktı.",
+          "it": "Una piccola fiamma accendeva la candela.",
+          "pl": "Mały płomień zapalił świecę."
         }
       }
     },
@@ -4252,7 +4252,7 @@
         "pl": "płaski"
       },
       "ww": {
-        "sense_id": "flat.a.s1",
+        "sense_id": "flat.s1",
         "pos": "a",
         "def": {
           "en": "smooth and level",
@@ -4293,61 +4293,61 @@
     {
       "id": "flavour",
       "en": "flavour",
-      "ko": "flavour",
-      "picture_prompt": "Photorealistic photo illustrating the idea of flavour in a university study setting, no text, no letters, no logos",
+      "ko": "맛",
+      "picture_prompt": "candy picture-book oil-paint of a scoop of chocolate ice cream in a waffle cone, one subject, no text no letters no numbers no watermark",
       "l1": {
-        "en": "a word used in academic English: flavour",
-        "ko": "flavour",
-        "zh-Hans": "a word used in academic English: flavour",
-        "ja": "a word used in academic English: flavour",
-        "es": "a word used in academic English: flavour",
-        "hi": "a word used in academic English: flavour",
-        "de": "a word used in academic English: flavour",
-        "vi": "a word used in academic English: flavour",
-        "pt-BR": "a word used in academic English: flavour",
-        "id": "a word used in academic English: flavour",
-        "fr": "a word used in academic English: flavour",
-        "ar": "a word used in academic English: flavour",
-        "tr": "a word used in academic English: flavour",
-        "it": "a word used in academic English: flavour",
-        "pl": "a word used in academic English: flavour"
+        "en": "taste of food",
+        "ko": "맛",
+        "zh-Hans": "食物的味道",
+        "ja": "食の味",
+        "es": "sabor a la comida",
+        "hi": "भोजन का स्वाद",
+        "de": "Geschmack von Lebensmitteln",
+        "vi": "Mùi thức ăn",
+        "pt-BR": "sabor dos alimentos",
+        "id": "rasa makanan",
+        "fr": "goût des aliments",
+        "ar": "طعم الطعام",
+        "tr": "Gıda tadı",
+        "it": "gusto di cibo",
+        "pl": "smak żywności"
       },
       "ww": {
-        "sense_id": "flavour.n.s1",
+        "sense_id": "flavour.s1",
         "pos": "n",
         "def": {
-          "en": "an academic term: flavour",
-          "ko": "학술 영어 단어: flavour",
-          "zh-Hans": "an academic term: flavour",
-          "ja": "an academic term: flavour",
-          "es": "an academic term: flavour",
-          "hi": "an academic term: flavour",
-          "de": "an academic term: flavour",
-          "vi": "an academic term: flavour",
-          "pt-BR": "an academic term: flavour",
-          "id": "an academic term: flavour",
-          "fr": "an academic term: flavour",
-          "ar": "an academic term: flavour",
-          "tr": "an academic term: flavour",
-          "it": "an academic term: flavour",
-          "pl": "an academic term: flavour"
+          "en": "the taste of food or drink",
+          "ko": "맛",
+          "zh-Hans": "食物或饮料的味道;",
+          "ja": "食べ物や飲み物の味",
+          "es": "el sabor de la comida o la bebida",
+          "hi": "भोजन या पेय का स्वाद",
+          "de": "Geschmack von Speisen oder Getränken",
+          "vi": "Vị của thức ăn và thức uống",
+          "pt-BR": "o sabor da comida ou bebida",
+          "id": "(Makanan dan minuman sesuai dengan keadaan mereka) menurut suatu qiraat dibaca Tsamaraatin dalam bentuk jamak, yakni makanan dan minuman yang dimaksudnya adalah makanan dan minuman dari musim panas.",
+          "fr": "le goût des aliments ou des boissons",
+          "ar": "طعم الطعام أو الشرب",
+          "tr": "Yiyecek veya içecek tadı",
+          "it": "il gusto del cibo o della bevanda",
+          "pl": "smak jedzenia lub picia"
         },
         "example": {
-          "en": "The report uses the word \"flavour\" in an academic context.",
-          "ko": "보고서는 학술 맥락에서 \"flavour\"(을)를 사용한다.",
-          "zh-Hans": "The report uses the word \"flavour\" in an academic context.",
-          "ja": "The report uses the word \"flavour\" in an academic context.",
-          "es": "The report uses the word \"flavour\" in an academic context.",
-          "hi": "The report uses the word \"flavour\" in an academic context.",
-          "de": "The report uses the word \"flavour\" in an academic context.",
-          "vi": "The report uses the word \"flavour\" in an academic context.",
-          "pt-BR": "The report uses the word \"flavour\" in an academic context.",
-          "id": "The report uses the word \"flavour\" in an academic context.",
-          "fr": "The report uses the word \"flavour\" in an academic context.",
-          "ar": "The report uses the word \"flavour\" in an academic context.",
-          "tr": "The report uses the word \"flavour\" in an academic context.",
-          "it": "The report uses the word \"flavour\" in an academic context.",
-          "pl": "The report uses the word \"flavour\" in an academic context."
+          "en": "This ice cream has a chocolate flavour.",
+          "ko": "이 아이스크림은 초콜릿 맛을 가지고 있습니다.",
+          "zh-Hans": "这冰淇淋有巧克力味",
+          "ja": "チョコレート風味のアイスクリーム。",
+          "es": "Este helado tiene sabor a chocolate.",
+          "hi": "इस आइसक्रीम में एक चॉकलेट स्वाद है।",
+          "de": "Dieses Eis hat einen Schokoladengeschmack.",
+          "vi": "Kem này có vị sô cô la.",
+          "pt-BR": "Este gelado tem um sabor de chocolate.",
+          "id": "Es krim ini memiliki rasa coklat.",
+          "fr": "Cette crème glacée a une saveur de chocolat.",
+          "ar": "هذه الآيس كريم لديها نكهة شوكولاتة",
+          "tr": "Bu dondurmanın çikolata tadı var.",
+          "it": "Questo gelato ha un sapore di cioccolato.",
+          "pl": "Te lody mają smak czekolady."
         }
       }
     },
@@ -4374,7 +4374,7 @@
         "pl": "uciekać"
       },
       "ww": {
-        "sense_id": "flee.v.s1",
+        "sense_id": "flee.s1",
         "pos": "v",
         "def": {
           "en": "to run away quickly from danger",
@@ -4415,61 +4415,61 @@
     {
       "id": "flesh",
       "en": "flesh",
-      "ko": "flesh",
-      "picture_prompt": "Photorealistic photo illustrating the idea of flesh in a university study setting, no text, no letters, no logos",
+      "ko": "살·육체",
+      "picture_prompt": "candy picture-book oil-paint of a sliced peach showing soft orange flesh, one subject, no text no letters no numbers no watermark",
       "l1": {
-        "en": "a word used in academic English: flesh",
-        "ko": "flesh",
-        "zh-Hans": "a word used in academic English: flesh",
-        "ja": "a word used in academic English: flesh",
-        "es": "a word used in academic English: flesh",
-        "hi": "a word used in academic English: flesh",
-        "de": "a word used in academic English: flesh",
-        "vi": "a word used in academic English: flesh",
-        "pt-BR": "a word used in academic English: flesh",
-        "id": "a word used in academic English: flesh",
-        "fr": "a word used in academic English: flesh",
-        "ar": "a word used in academic English: flesh",
-        "tr": "a word used in academic English: flesh",
-        "it": "a word used in academic English: flesh",
-        "pl": "a word used in academic English: flesh"
+        "en": "soft body tissue under skin",
+        "ko": "살·육체",
+        "zh-Hans": "体型",
+        "ja": "皮膚の下軟体組織",
+        "es": "tejido corporal blando bajo la piel",
+        "hi": "त्वचा के नीचे नरम शरीर ऊतक",
+        "de": "Weiches Körpergewebe unter der Haut",
+        "vi": "Các mô mềm dưới da",
+        "pt-BR": "tecido mole do corpo sob a pele",
+        "id": "soft body tissue under skin",
+        "fr": "tissu mou du corps sous la peau",
+        "ar": "أنسجة الجسم الناعمة تحت الجلد",
+        "tr": "Deri altındaki yumuşak vücut dokusu",
+        "it": "tessuto corpo morbido sotto pelle",
+        "pl": "miękkie tkanki ciała pod skórą"
       },
       "ww": {
-        "sense_id": "flesh.n.s1",
+        "sense_id": "flesh.s1",
         "pos": "n",
         "def": {
-          "en": "an academic term: flesh",
-          "ko": "학술 영어 단어: flesh",
-          "zh-Hans": "an academic term: flesh",
-          "ja": "an academic term: flesh",
-          "es": "an academic term: flesh",
-          "hi": "an academic term: flesh",
-          "de": "an academic term: flesh",
-          "vi": "an academic term: flesh",
-          "pt-BR": "an academic term: flesh",
-          "id": "an academic term: flesh",
-          "fr": "an academic term: flesh",
-          "ar": "an academic term: flesh",
-          "tr": "an academic term: flesh",
-          "it": "an academic term: flesh",
-          "pl": "an academic term: flesh"
+          "en": "the soft part of a body between the skin and the bones",
+          "ko": "살·육체",
+          "zh-Hans": "身体在皮肤和骨头之间柔软的部分",
+          "ja": "皮膚と骨の間の身体の柔らかい部分",
+          "es": "la parte suave de un cuerpo entre la piel y los huesos",
+          "hi": "त्वचा और हड्डियों के बीच एक शरीर का नरम हिस्सा",
+          "de": "der weiche Teil eines Körpers zwischen Haut und Knochen",
+          "vi": "phần mềm của cơ thể giữa da và xương",
+          "pt-BR": "a parte macia de um corpo entre a pele e os ossos",
+          "id": "bagian lembut dari tubuh antara kulit dan tulang",
+          "fr": "la partie molle d'un corps entre la peau et les os",
+          "ar": "الجزء الناعم من الجسم بين الجلد والعظام",
+          "tr": "Deri ve kemik arasındaki bir vücudun yumuşak kısmı",
+          "it": "la parte morbida di un corpo tra la pelle e le ossa",
+          "pl": "miękka część ciała między skórą a kośćmi"
         },
         "example": {
-          "en": "The report uses the word \"flesh\" in an academic context.",
-          "ko": "보고서는 학술 맥락에서 \"flesh\"(을)를 사용한다.",
-          "zh-Hans": "The report uses the word \"flesh\" in an academic context.",
-          "ja": "The report uses the word \"flesh\" in an academic context.",
-          "es": "The report uses the word \"flesh\" in an academic context.",
-          "hi": "The report uses the word \"flesh\" in an academic context.",
-          "de": "The report uses the word \"flesh\" in an academic context.",
-          "vi": "The report uses the word \"flesh\" in an academic context.",
-          "pt-BR": "The report uses the word \"flesh\" in an academic context.",
-          "id": "The report uses the word \"flesh\" in an academic context.",
-          "fr": "The report uses the word \"flesh\" in an academic context.",
-          "ar": "The report uses the word \"flesh\" in an academic context.",
-          "tr": "The report uses the word \"flesh\" in an academic context.",
-          "it": "The report uses the word \"flesh\" in an academic context.",
-          "pl": "The report uses the word \"flesh\" in an academic context."
+          "en": "The fruit has sweet flesh inside.",
+          "ko": "과일은 내부에 달콤한 살이 있습니다.",
+          "zh-Hans": "果实内有甜肉.",
+          "ja": "フルーツは内側に甘い肉を持っています。",
+          "es": "El fruto tiene carne dulce dentro.",
+          "hi": "फल के अंदर मीठा मांस होता है।",
+          "de": "Die Frucht hat süßes Fleisch im Inneren.",
+          "vi": "Trái cây có thịt ngọt bên trong.",
+          "pt-BR": "O fruto tem carne doce dentro.",
+          "id": "Buah memiliki daging manis Saling ada di dalamnya.",
+          "fr": "Le fruit a de la chair douce à l'intérieur.",
+          "ar": "الفاكهة لها لحم جميل بالداخل",
+          "tr": "Meyvenin içinde tatlı eti vardır.",
+          "it": "Il frutto ha una dolce carne dentro.",
+          "pl": "W owocu jest słodkie mięso."
         }
       }
     },
@@ -4496,7 +4496,7 @@
         "pl": "lot"
       },
       "ww": {
-        "sense_id": "flight.n.s1",
+        "sense_id": "flight.s1",
         "pos": "n",
         "def": {
           "en": "a trip on an airplane",
@@ -4557,7 +4557,7 @@
         "pl": "unosić się"
       },
       "ww": {
-        "sense_id": "float.v.s1",
+        "sense_id": "float.s1",
         "pos": "v",
         "def": {
           "en": "to stay on top of water without sinking",
@@ -4618,7 +4618,7 @@
         "pl": "podłoga"
       },
       "ww": {
-        "sense_id": "floor.n.s1",
+        "sense_id": "floor.s1",
         "pos": "n",
         "def": {
           "en": "the flat surface we walk on inside",
@@ -4679,7 +4679,7 @@
         "pl": "przepływ"
       },
       "ww": {
-        "sense_id": "flow.n.s1",
+        "sense_id": "flow.s1",
         "pos": "n",
         "def": {
           "en": "the smooth movement of a liquid from one place to another",
@@ -4740,7 +4740,7 @@
         "pl": "kwiat"
       },
       "ww": {
-        "sense_id": "flower.n.s1",
+        "sense_id": "flower.s1",
         "pos": "n",
         "def": {
           "en": "a pretty part of a plant",
@@ -4801,7 +4801,7 @@
         "pl": "latać"
       },
       "ww": {
-        "sense_id": "fly.v.s1",
+        "sense_id": "fly.s1",
         "pos": "v",
         "def": {
           "en": "to move through the air",
@@ -4842,61 +4842,61 @@
     {
       "id": "folk",
       "en": "folk",
-      "ko": "folk",
-      "picture_prompt": "Photorealistic photo illustrating the idea of folk in a university study setting, no text, no letters, no logos",
+      "ko": "사람들·민속",
+      "picture_prompt": "candy picture-book oil-paint of musicians playing traditional instruments at a village fair, one subject, no text no letters no numbers no watermark",
       "l1": {
-        "en": "a word used in academic English: folk",
-        "ko": "folk",
-        "zh-Hans": "a word used in academic English: folk",
-        "ja": "a word used in academic English: folk",
-        "es": "a word used in academic English: folk",
-        "hi": "a word used in academic English: folk",
-        "de": "a word used in academic English: folk",
-        "vi": "a word used in academic English: folk",
-        "pt-BR": "a word used in academic English: folk",
-        "id": "a word used in academic English: folk",
-        "fr": "a word used in academic English: folk",
-        "ar": "a word used in academic English: folk",
-        "tr": "a word used in academic English: folk",
-        "it": "a word used in academic English: folk",
-        "pl": "a word used in academic English: folk"
+        "en": "people in general",
+        "ko": "사람들·민속",
+        "zh-Hans": "普通民众",
+        "ja": "一般の方",
+        "es": "personas en general",
+        "hi": "सामान्य लोग",
+        "de": "Menschen im Allgemeinen",
+        "vi": "con người nói chung",
+        "pt-BR": "pessoas em geral",
+        "id": "orang pada umumnya",
+        "fr": "Personnes en général",
+        "ar": "الناس بوجه عام",
+        "tr": "Genel olarak insanlar",
+        "it": "persone in generale",
+        "pl": "W sumie"
       },
       "ww": {
-        "sense_id": "folk.n.s1",
+        "sense_id": "folk.s1",
         "pos": "n",
         "def": {
-          "en": "an academic term: folk",
-          "ko": "학술 영어 단어: folk",
-          "zh-Hans": "an academic term: folk",
-          "ja": "an academic term: folk",
-          "es": "an academic term: folk",
-          "hi": "an academic term: folk",
-          "de": "an academic term: folk",
-          "vi": "an academic term: folk",
-          "pt-BR": "an academic term: folk",
-          "id": "an academic term: folk",
-          "fr": "an academic term: folk",
-          "ar": "an academic term: folk",
-          "tr": "an academic term: folk",
-          "it": "an academic term: folk",
-          "pl": "an academic term: folk"
+          "en": "people in general, or traditional culture of ordinary people",
+          "ko": "사람들·민속",
+          "zh-Hans": "普通人的传统文化",
+          "ja": "一般の人々、または一般の人々の伝統文化",
+          "es": "personas en general, o cultura tradicional de la gente común",
+          "hi": "सामान्य लोगों में, या साधारण लोगों की पारंपरिक संस्कृति",
+          "de": "Menschen im Allgemeinen oder traditionelle Kultur der gewöhnlichen Menschen",
+          "vi": "con người nói chung, hay văn hóa truyền thống của người bình thường",
+          "pt-BR": "pessoas em geral, ou cultura tradicional de pessoas comuns",
+          "id": "orang pada umumnya, atau budaya tradisional orang biasa",
+          "fr": "les personnes en général, ou la culture traditionnelle des gens ordinaires",
+          "ar": "عامة الناس أو الثقافة التقليدية للناس العاديين",
+          "tr": "Genel olarak insanlar veya sıradan insanların geleneksel kültürü",
+          "it": "persone in generale, o cultura tradizionale della gente comune",
+          "pl": "ludzi w ogóle, lub tradycyjnej kultury zwykłych ludzi"
         },
         "example": {
-          "en": "The report uses the word \"folk\" in an academic context.",
-          "ko": "보고서는 학술 맥락에서 \"folk\"(을)를 사용한다.",
-          "zh-Hans": "The report uses the word \"folk\" in an academic context.",
-          "ja": "The report uses the word \"folk\" in an academic context.",
-          "es": "The report uses the word \"folk\" in an academic context.",
-          "hi": "The report uses the word \"folk\" in an academic context.",
-          "de": "The report uses the word \"folk\" in an academic context.",
-          "vi": "The report uses the word \"folk\" in an academic context.",
-          "pt-BR": "The report uses the word \"folk\" in an academic context.",
-          "id": "The report uses the word \"folk\" in an academic context.",
-          "fr": "The report uses the word \"folk\" in an academic context.",
-          "ar": "The report uses the word \"folk\" in an academic context.",
-          "tr": "The report uses the word \"folk\" in an academic context.",
-          "it": "The report uses the word \"folk\" in an academic context.",
-          "pl": "The report uses the word \"folk\" in an academic context."
+          "en": "Local folk shared stories at the festival.",
+          "ko": "축제의 지역 주민 공유 이야기.",
+          "zh-Hans": "当地民间在节日分享故事.",
+          "ja": "祭りで地元の民俗話を共有しました。",
+          "es": "La gente local compartió historias en el festival.",
+          "hi": "स्थानीय लोक ने त्योहार में कहानियां साझा की।",
+          "de": "Einheimische teilten Geschichten auf dem Festival.",
+          "vi": "Người dân địa phương kể chuyện trong lễ hội.",
+          "pt-BR": "As pessoas locais compartilharam histórias no penteado.",
+          "id": "Warga lokal berbagi cerita di festival.",
+          "fr": "Des gens locaux ont partagé des histoires au festival.",
+          "ar": "الشعب المحلي يتشارك القصص في المهرجان",
+          "tr": "Yerel halk festivalde hikayeler paylaştı.",
+          "it": "La gente locale ha condiviso storie al festival.",
+          "pl": "Miejscowi ludzie dzielili się historiami na festiwalu."
         }
       }
     },
@@ -4923,7 +4923,7 @@
         "pl": "podążać"
       },
       "ww": {
-        "sense_id": "follow.v.s1",
+        "sense_id": "follow.s1",
         "pos": "v",
         "def": {
           "en": "to go after someone",
@@ -4984,7 +4984,7 @@
         "pl": "następny"
       },
       "ww": {
-        "sense_id": "following.a.s1",
+        "sense_id": "following.s1",
         "pos": "a",
         "def": {
           "en": "coming right after something",
@@ -5045,7 +5045,7 @@
         "pl": "jedzenie"
       },
       "ww": {
-        "sense_id": "food.n.s1",
+        "sense_id": "food.s1",
         "pos": "n",
         "def": {
           "en": "things people eat to live",
@@ -5106,7 +5106,7 @@
         "pl": "stopa"
       },
       "ww": {
-        "sense_id": "foot.n.s1",
+        "sense_id": "foot.s1",
         "pos": "n",
         "def": {
           "en": "the part of your body you stand and walk on",
@@ -5167,7 +5167,7 @@
         "pl": "piłka"
       },
       "ww": {
-        "sense_id": "football.n.s1",
+        "sense_id": "football.s1",
         "pos": "n",
         "def": {
           "en": "a round ball for kicking",
@@ -5228,7 +5228,7 @@
         "pl": "dla"
       },
       "ww": {
-        "sense_id": "for.adv.s1",
+        "sense_id": "for.s1",
         "pos": "adv",
         "def": {
           "en": "in order to help or support",
@@ -5289,7 +5289,7 @@
         "pl": "siła"
       },
       "ww": {
-        "sense_id": "force.n.s1",
+        "sense_id": "force.s1",
         "pos": "n",
         "def": {
           "en": "power used to push or pull things",
@@ -5350,7 +5350,7 @@
         "pl": "zagraniczny"
       },
       "ww": {
-        "sense_id": "foreign.a.s1",
+        "sense_id": "foreign.s1",
         "pos": "a",
         "def": {
           "en": "from another country",
@@ -5411,7 +5411,7 @@
         "pl": "las"
       },
       "ww": {
-        "sense_id": "forest.n.s1",
+        "sense_id": "forest.s1",
         "pos": "n",
         "def": {
           "en": "a large area full of trees",
@@ -5472,7 +5472,7 @@
         "pl": "na zawsze"
       },
       "ww": {
-        "sense_id": "forever.adv.s1",
+        "sense_id": "forever.s1",
         "pos": "adv",
         "def": {
           "en": "for all time",
@@ -5533,7 +5533,7 @@
         "pl": "zapomnieć"
       },
       "ww": {
-        "sense_id": "forget.v.s1",
+        "sense_id": "forget.s1",
         "pos": "v",
         "def": {
           "en": "to not remember something",
@@ -5594,7 +5594,7 @@
         "pl": "formularz"
       },
       "ww": {
-        "sense_id": "form.n.s1",
+        "sense_id": "form.s1",
         "pos": "n",
         "def": {
           "en": "a paper with questions",
@@ -5655,7 +5655,7 @@
         "pl": "formalny"
       },
       "ww": {
-        "sense_id": "formal.a.s1",
+        "sense_id": "formal.s1",
         "pos": "a",
         "def": {
           "en": "serious and proper",
@@ -5716,7 +5716,7 @@
         "pl": "formacja"
       },
       "ww": {
-        "sense_id": "formation.n.s1",
+        "sense_id": "formation.s1",
         "pos": "n",
         "def": {
           "en": "the way a group of things is arranged into a shape",
@@ -5757,61 +5757,61 @@
     {
       "id": "former",
       "en": "former",
-      "ko": "전자",
-      "picture_prompt": "two simple cartoon kids, one slightly in front of the other",
+      "ko": "이전의",
+      "picture_prompt": "candy picture-book oil-paint of an older leader waving beside a portrait of their younger self, one subject, no text no letters no numbers no watermark",
       "l1": {
-        "en": "the first of two",
-        "ko": "전자",
-        "zh-Hans": "前者",
-        "ja": "前者",
-        "es": "primero",
-        "hi": "पहला",
-        "de": "erster",
-        "vi": "trước (F)",
-        "pt-BR": "primeiro",
-        "id": "pertama",
-        "fr": "premier",
-        "ar": "الأول",
-        "tr": "ilki",
-        "it": "primo",
-        "pl": "pierwszy"
+        "en": "from an earlier time",
+        "ko": "이전의",
+        "zh-Hans": "从早期",
+        "ja": "以前の時間から",
+        "es": "de una época anterior",
+        "hi": "पहली बार",
+        "de": "aus einer früheren Zeit",
+        "vi": "từ thời gian trước",
+        "pt-BR": "de um tempo anterior",
+        "id": "dari masa lalu",
+        "fr": "d'une époque antérieure",
+        "ar": "من وقت سابق",
+        "tr": "Daha önceki bir zamanda",
+        "it": "da un tempo precedente",
+        "pl": "od wcześniejszego czasu"
       },
       "ww": {
-        "sense_id": "former.det.s1",
-        "pos": "det",
+        "sense_id": "former.s1",
+        "pos": "adj",
         "def": {
-          "en": "the first of two things",
-          "ko": "전자",
-          "zh-Hans": "前者",
-          "ja": "前者",
-          "es": "primero",
-          "hi": "पहला",
-          "de": "erster",
-          "vi": "trước (F)",
-          "pt-BR": "primeiro",
-          "id": "pertama",
-          "fr": "premier",
-          "ar": "الأول",
-          "tr": "ilki",
-          "it": "primo",
-          "pl": "pierwszy"
+          "en": "existing earlier, or having a position in the past",
+          "ko": "이전의",
+          "zh-Hans": "已存在,或过去曾有职位",
+          "ja": "以前、または過去にポジションを持つ",
+          "es": "existente anteriormente, o tener una posición en el pasado",
+          "hi": "पहले मौजूद, या अतीत में एक स्थिति होना",
+          "de": "früher existieren oder eine Position in der Vergangenheit haben",
+          "vi": "đã tồn tại trước đó, hoặc có một vị trí trong quá khứ",
+          "pt-BR": "existente anteriormente, ou tendo uma posição no passado",
+          "id": "ada sebelumnya, atau memiliki posisi di masa lalu",
+          "fr": "existant plus tôt, ou ayant une position dans le passé",
+          "ar": "القائمة في وقت سابق، أو التي لها موقف في الماضي",
+          "tr": "Mevcut daha önceki veya geçmişte bir pozisyona sahip olmak",
+          "it": "esistente in precedenza, o avere una posizione in passato",
+          "pl": "istniejące wcześniej lub mające pozycję w przeszłości"
         },
         "example": {
-          "en": "I like the former book.",
-          "ko": "나는 전자의 책을 좋아해.",
-          "zh-Hans": "我喜欢前面的那本书。",
-          "ja": "前者の本が好きです。",
-          "es": "Me gusta el primer libro.",
-          "hi": "मुझे पहली किताब पसंद है।",
-          "de": "Ich mag das erste Buch.",
-          "vi": "Tôi thích cuốn sách đầu tiên.",
-          "pt-BR": "Eu gosto do primeiro livro.",
-          "id": "Saya suka buku yang pertama.",
-          "fr": "J'aime le premier livre.",
-          "ar": "أحب الكتاب الأول.",
-          "tr": "İlk kitabı severim.",
-          "it": "Mi piace il primo libro.",
-          "pl": "Lubię pierwszą książkę."
+          "en": "The former president spoke at the event.",
+          "ko": "전 대통령은 행사에서 말했다.",
+          "zh-Hans": "前总统在会上发言。",
+          "ja": "社長が登壇しました。",
+          "es": "El ex presidente habló en el evento.",
+          "hi": "पूर्व राष्ट्रपति ने घटना पर बात की।",
+          "de": "Der ehemalige Präsident sprach bei der Veranstaltung.",
+          "vi": "Cựu tổng thống đã phát biểu tại sự kiện này.",
+          "pt-BR": "O ex-presidente falou no evento.",
+          "id": "Mantan presiden berbicara di acara itu.",
+          "fr": "L'ancien président a pris la parole.",
+          "ar": "الرئيس السابق تحدث في الحدث",
+          "tr": "Eski başkan olayda konuştu.",
+          "it": "L'ex presidente ha parlato all'evento.",
+          "pl": "Były prezydent przemawiał na imprezie."
         }
       }
     },
@@ -5838,7 +5838,7 @@
         "pl": "naprzód"
       },
       "ww": {
-        "sense_id": "forth.adv.s1",
+        "sense_id": "forth.s1",
         "pos": "adv",
         "def": {
           "en": "out or forward",
@@ -5899,7 +5899,7 @@
         "pl": "fortuna"
       },
       "ww": {
-        "sense_id": "fortune.n.s1",
+        "sense_id": "fortune.s1",
         "pos": "n",
         "def": {
           "en": "a very large amount of money",
@@ -5960,7 +5960,7 @@
         "pl": "przedni"
       },
       "ww": {
-        "sense_id": "forward.a.s1",
+        "sense_id": "forward.s1",
         "pos": "a",
         "def": {
           "en": "toward the front",
@@ -6001,122 +6001,122 @@
     {
       "id": "founder",
       "en": "founder",
-      "ko": "founder",
-      "picture_prompt": "Photorealistic photo illustrating the idea of founder in a university study setting, no text, no letters, no logos",
+      "ko": "창립자",
+      "picture_prompt": "candy picture-book oil-paint of a person opening the first tiny storefront with a proud smile, one subject, no text no letters no numbers no watermark",
       "l1": {
-        "en": "a word used in academic English: founder",
-        "ko": "founder",
-        "zh-Hans": "a word used in academic English: founder",
-        "ja": "a word used in academic English: founder",
-        "es": "a word used in academic English: founder",
-        "hi": "a word used in academic English: founder",
-        "de": "a word used in academic English: founder",
-        "vi": "a word used in academic English: founder",
-        "pt-BR": "a word used in academic English: founder",
-        "id": "a word used in academic English: founder",
-        "fr": "a word used in academic English: founder",
-        "ar": "a word used in academic English: founder",
-        "tr": "a word used in academic English: founder",
-        "it": "a word used in academic English: founder",
-        "pl": "a word used in academic English: founder"
+        "en": "person who starts an organization",
+        "ko": "창립자",
+        "zh-Hans": "发起组织的人",
+        "ja": "組織を始める者",
+        "es": "persona que inicia una organización",
+        "hi": "जो व्यक्ति एक संगठन शुरू करता है",
+        "de": "Person, die eine Organisation startet",
+        "vi": "người bắt đầu một tổ chức",
+        "pt-BR": "pessoa que inicia uma organização",
+        "id": "orang yang memulai sebuah organisasi",
+        "fr": "personne qui commence une organisation",
+        "ar": "الشخص الذي يبدأ منظمة",
+        "tr": "Bir organizasyona başlayan kişi",
+        "it": "persona che inizia un'organizzazione",
+        "pl": "osoba, która rozpoczyna organizację"
       },
       "ww": {
-        "sense_id": "founder.n.s1",
+        "sense_id": "founder.s1",
         "pos": "n",
         "def": {
-          "en": "an academic term: founder",
-          "ko": "학술 영어 단어: founder",
-          "zh-Hans": "an academic term: founder",
-          "ja": "an academic term: founder",
-          "es": "an academic term: founder",
-          "hi": "an academic term: founder",
-          "de": "an academic term: founder",
-          "vi": "an academic term: founder",
-          "pt-BR": "an academic term: founder",
-          "id": "an academic term: founder",
-          "fr": "an academic term: founder",
-          "ar": "an academic term: founder",
-          "tr": "an academic term: founder",
-          "it": "an academic term: founder",
-          "pl": "an academic term: founder"
+          "en": "a person who starts a company or organization",
+          "ko": "창립자",
+          "zh-Hans": "创办公司或组织的人",
+          "ja": "会社や組織を始める人",
+          "es": "una persona que inicia una empresa u organización",
+          "hi": "वह व्यक्ति जो एक कंपनी या संगठन शुरू करता है",
+          "de": "Eine Person, die ein Unternehmen oder eine Organisation gründet",
+          "vi": "người Check a công ty hay tổ chức",
+          "pt-BR": "uma pessoa que inicia uma empresa ou organização",
+          "id": "Seseorang yang memulai perusahaan atau organisasi",
+          "fr": "une personne qui crée une entreprise ou une socket",
+          "ar": "الشخص الذي يبدأ شركة أو منظمة",
+          "tr": "Bir şirket veya organizasyona başlayan bir kişi",
+          "it": "una persona che avvia una società o un'organizzazione",
+          "pl": "osoba, która otwiera firmę lub organizację"
         },
         "example": {
-          "en": "The report uses the word \"founder\" in an academic context.",
-          "ko": "보고서는 학술 맥락에서 \"founder\"(을)를 사용한다.",
-          "zh-Hans": "The report uses the word \"founder\" in an academic context.",
-          "ja": "The report uses the word \"founder\" in an academic context.",
-          "es": "The report uses the word \"founder\" in an academic context.",
-          "hi": "The report uses the word \"founder\" in an academic context.",
-          "de": "The report uses the word \"founder\" in an academic context.",
-          "vi": "The report uses the word \"founder\" in an academic context.",
-          "pt-BR": "The report uses the word \"founder\" in an academic context.",
-          "id": "The report uses the word \"founder\" in an academic context.",
-          "fr": "The report uses the word \"founder\" in an academic context.",
-          "ar": "The report uses the word \"founder\" in an academic context.",
-          "tr": "The report uses the word \"founder\" in an academic context.",
-          "it": "The report uses the word \"founder\" in an academic context.",
-          "pl": "The report uses the word \"founder\" in an academic context."
+          "en": "The founder built the business from one small shop.",
+          "ko": "창업자는 한 작은 가게에서 사업을 시작했습니다.",
+          "zh-Hans": "创始人从一家小店里建立了这个企业.",
+          "ja": "創業者が小小店から事業を築いた。",
+          "es": "El fundador construyó el negocio de una pequeña tienda.",
+          "hi": "संस्थापक ने एक छोटी दुकान से व्यवसाय का निर्माण किया।",
+          "de": "Der Gründer baute das Geschäft aus einem kleinen Geschäft auf.",
+          "vi": "Người sáng lập đã xây dựng doanh nghiệp từ một cửa hàng nhỏ.",
+          "pt-BR": "O fundador construiu o negócio de uma pequena loja.",
+          "id": "Founder membangun bisnis dari satu toko kecil.",
+          "fr": "Le fondateur a construit l'entreprise d'une petite boutique.",
+          "ar": "المؤسس بنى العمل من متجر صغير",
+          "tr": "Kurucu, işi küçük bir dükkandan inşa etti.",
+          "it": "Il fondatore ha costruito il business da un piccolo negozio.",
+          "pl": "Założyciel zbudował firmę z jednego małego sklepu."
         }
       }
     },
     {
       "id": "four",
       "en": "four",
-      "ko": "four",
-      "picture_prompt": "Photorealistic photo illustrating the idea of four in a university study setting, no text, no letters, no logos",
+      "ko": "4",
+      "picture_prompt": "candy picture-book oil-paint of four chairs evenly spaced around a square table, one subject, no text no letters no numbers no watermark",
       "l1": {
-        "en": "a word used in academic English: four",
-        "ko": "four",
-        "zh-Hans": "a word used in academic English: four",
-        "ja": "a word used in academic English: four",
-        "es": "a word used in academic English: four",
-        "hi": "a word used in academic English: four",
-        "de": "a word used in academic English: four",
-        "vi": "a word used in academic English: four",
-        "pt-BR": "a word used in academic English: four",
-        "id": "a word used in academic English: four",
-        "fr": "a word used in academic English: four",
-        "ar": "a word used in academic English: four",
-        "tr": "a word used in academic English: four",
-        "it": "a word used in academic English: four",
-        "pl": "a word used in academic English: four"
+        "en": "the number 4",
+        "ko": "4",
+        "zh-Hans": "数字 4",
+        "ja": "番号 4",
+        "es": "el número 4",
+        "hi": "संख्या 4",
+        "de": "die Zahl 4",
+        "vi": "Bury",
+        "pt-BR": "o número 4",
+        "id": "nomor 4",
+        "fr": "le numéro 4",
+        "ar": "التقرير الرابع",
+        "tr": "4 numara",
+        "it": "il numero 4",
+        "pl": "numer 4"
       },
       "ww": {
-        "sense_id": "four.n.s1",
-        "pos": "n",
+        "sense_id": "four.s1",
+        "pos": "num",
         "def": {
-          "en": "an academic term: four",
-          "ko": "학술 영어 단어: four",
-          "zh-Hans": "an academic term: four",
-          "ja": "an academic term: four",
-          "es": "an academic term: four",
-          "hi": "an academic term: four",
-          "de": "an academic term: four",
-          "vi": "an academic term: four",
-          "pt-BR": "an academic term: four",
-          "id": "an academic term: four",
-          "fr": "an academic term: four",
-          "ar": "an academic term: four",
-          "tr": "an academic term: four",
-          "it": "an academic term: four",
-          "pl": "an academic term: four"
+          "en": "the number 4",
+          "ko": "4",
+          "zh-Hans": "数字 4",
+          "ja": "番号 4",
+          "es": "el número 4",
+          "hi": "संख्या 4",
+          "de": "die Zahl 4",
+          "vi": "Bury",
+          "pt-BR": "o número 4",
+          "id": "nomor 4",
+          "fr": "le numéro 4",
+          "ar": "التقرير الرابع",
+          "tr": "4 numara",
+          "it": "il numero 4",
+          "pl": "numer 4"
         },
         "example": {
-          "en": "The report uses the word \"four\" in an academic context.",
-          "ko": "보고서는 학술 맥락에서 \"four\"(을)를 사용한다.",
-          "zh-Hans": "The report uses the word \"four\" in an academic context.",
-          "ja": "The report uses the word \"four\" in an academic context.",
-          "es": "The report uses the word \"four\" in an academic context.",
-          "hi": "The report uses the word \"four\" in an academic context.",
-          "de": "The report uses the word \"four\" in an academic context.",
-          "vi": "The report uses the word \"four\" in an academic context.",
-          "pt-BR": "The report uses the word \"four\" in an academic context.",
-          "id": "The report uses the word \"four\" in an academic context.",
-          "fr": "The report uses the word \"four\" in an academic context.",
-          "ar": "The report uses the word \"four\" in an academic context.",
-          "tr": "The report uses the word \"four\" in an academic context.",
-          "it": "The report uses the word \"four\" in an academic context.",
-          "pl": "The report uses the word \"four\" in an academic context."
+          "en": "Four chairs stood around the table.",
+          "ko": "테이블 주위에 서 4 의자.",
+          "zh-Hans": "四张椅子站在桌子上",
+          "ja": "四椅子はテーブルの周りに立っていました。",
+          "es": "Cuatro sillas estaban alrededor de la mesa.",
+          "hi": "चार कुर्सियां टेबल के चारों ओर खड़ी थीं।",
+          "de": "Vier Stühle standen um den Tisch.",
+          "vi": "Bốn cái ghế đứng xung quanh Rotten.",
+          "pt-BR": "Quatro cadeiras à volta da mesa.",
+          "id": "Empat kursi berdiri di sekitar meja.",
+          "fr": "Quatre chaises se tenaient autour de la table.",
+          "ar": "أربعة كراسي وقفت حول الطاولة.",
+          "tr": "Masanın etrafında dört sandalye durdu.",
+          "it": "Quattro sedie stavano intorno al tavolo.",
+          "pl": "Cztery krzesła stały wokół stołu."
         }
       }
     }

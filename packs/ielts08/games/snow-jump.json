@@ -1,7 +1,7 @@
 {
   "pack_id": "ielts08",
   "title": "IELTS 701–800",
-  "module_id": "word_master",
+  "module_id": "snow_jump",
   "seconds": 15,
   "items": [
     {
@@ -176,7 +176,7 @@
     },
     {
       "item_id": "basket",
-      "question": "a word used in academic English: basket",
+      "question": "container with handles",
       "correct": "basket",
       "wrong": [
         "bath",
@@ -366,7 +366,7 @@
     },
     {
       "item_id": "belt",
-      "question": "a word used in academic English: belt",
+      "question": "strap around waist",
       "correct": "belt",
       "wrong": [
         "bench",
@@ -376,7 +376,7 @@
     },
     {
       "item_id": "bench",
-      "question": "a word used in academic English: bench",
+      "question": "long seat",
       "correct": "bench",
       "wrong": [
         "bend",
@@ -476,7 +476,7 @@
     },
     {
       "item_id": "billion",
-      "question": "a word used in academic English: billion",
+      "question": "thousand million",
       "correct": "billion",
       "wrong": [
         "bind",
@@ -556,7 +556,7 @@
     },
     {
       "item_id": "blade",
-      "question": "a word used in academic English: blade",
+      "question": "sharp cutting edge",
       "correct": "blade",
       "wrong": [
         "blame",
@@ -666,7 +666,7 @@
     },
     {
       "item_id": "boil",
-      "question": "a word used in academic English: boil",
+      "question": "heat until bubbling",
       "correct": "boil",
       "wrong": [
         "bomb",
@@ -706,7 +706,7 @@
     },
     {
       "item_id": "boom",
-      "question": "a word used in academic English: boom",
+      "question": "sudden growth",
       "correct": "boom",
       "wrong": [
         "boot",
@@ -736,7 +736,7 @@
     },
     {
       "item_id": "bore",
-      "question": "a word used in academic English: bore",
+      "question": "make tired and uninterested",
       "correct": "bore",
       "wrong": [
         "born",
@@ -746,7 +746,7 @@
     },
     {
       "item_id": "born",
-      "question": "a word used in academic English: born",
+      "question": "came into life",
       "correct": "born",
       "wrong": [
         "borrow",
@@ -826,7 +826,7 @@
     },
     {
       "item_id": "bowl",
-      "question": "a word used in academic English: bowl",
+      "question": "round deep dish",
       "correct": "bowl",
       "wrong": [
         "box",
@@ -876,7 +876,7 @@
     },
     {
       "item_id": "brand",
-      "question": "a word used in academic English: brand",
+      "question": "product name mark",
       "correct": "brand",
       "wrong": [
         "brave",
@@ -926,7 +926,7 @@
     },
     {
       "item_id": "breast",
-      "question": "a word used in academic English: breast",
+      "question": "chest front part",
       "correct": "breast",
       "wrong": [
         "breath",
@@ -966,7 +966,7 @@
     },
     {
       "item_id": "brick",
-      "question": "a word used in academic English: brick",
+      "question": "baked clay block",
       "correct": "brick",
       "wrong": [
         "bridge",

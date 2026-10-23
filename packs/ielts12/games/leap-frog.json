@@ -146,7 +146,7 @@
     },
     {
       "item_id": "dirt",
-      "question": "a word used in academic English: dirt",
+      "question": "soil or dust on the ground",
       "correct": "dirt",
       "wrong": [
         "dirty",
@@ -166,7 +166,7 @@
     },
     {
       "item_id": "disability",
-      "question": "a word used in academic English: disability",
+      "question": "condition that limits movement or senses",
       "correct": "disability",
       "wrong": [
         "disagree",
@@ -226,7 +226,7 @@
     },
     {
       "item_id": "discount",
-      "question": "a word used in academic English: discount",
+      "question": "lower price than usual",
       "correct": "discount",
       "wrong": [
         "discover",
@@ -306,7 +306,7 @@
     },
     {
       "item_id": "disorder",
-      "question": "a word used in academic English: disorder",
+      "question": "illness or messy state",
       "correct": "disorder",
       "wrong": [
         "dispute",
@@ -396,7 +396,7 @@
     },
     {
       "item_id": "diversity",
-      "question": "a word used in academic English: diversity",
+      "question": "many different kinds together",
       "correct": "diversity",
       "wrong": [
         "divide",
@@ -426,7 +426,7 @@
     },
     {
       "item_id": "divorce",
-      "question": "a word used in academic English: divorce",
+      "question": "legal end of a marriage",
       "correct": "divorce",
       "wrong": [
         "do",
@@ -486,7 +486,7 @@
     },
     {
       "item_id": "donate",
-      "question": "to do something related to donate",
+      "question": "give money or goods to help",
       "correct": "donate",
       "wrong": [
         "door",
@@ -536,7 +536,7 @@
     },
     {
       "item_id": "downtown",
-      "question": "a word used in academic English: downtown",
+      "question": "center of a city",
       "correct": "downtown",
       "wrong": [
         "dozen",
@@ -546,7 +546,7 @@
     },
     {
       "item_id": "dozen",
-      "question": "a word used in academic English: dozen",
+      "question": "group of twelve",
       "correct": "dozen",
       "wrong": [
         "drag",
@@ -696,7 +696,7 @@
     },
     {
       "item_id": "during",
-      "question": "throughout a period of time",
+      "question": "through a period of time",
       "correct": "during",
       "wrong": [
         "dust",
@@ -706,7 +706,7 @@
     },
     {
       "item_id": "dust",
-      "question": "a word used in academic English: dust",
+      "question": "fine dry powder in the air",
       "correct": "dust",
       "wrong": [
         "duty",
@@ -726,7 +726,7 @@
     },
     {
       "item_id": "each",
-      "question": "every single one separately",
+      "question": "every one separately",
       "correct": "each",
       "wrong": [
         "eager",
@@ -866,7 +866,7 @@
     },
     {
       "item_id": "economist",
-      "question": "a word used in academic English: economist",
+      "question": "expert on money and markets",
       "correct": "economist",
       "wrong": [
         "edge",
@@ -936,7 +936,7 @@
     },
     {
       "item_id": "educator",
-      "question": "a word used in academic English: educator",
+      "question": "person who teaches professionally",
       "correct": "educator",
       "wrong": [
         "effect",

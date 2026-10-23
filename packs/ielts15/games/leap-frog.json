@@ -106,7 +106,7 @@
     },
     {
       "item_id": "friendship",
-      "question": "a word used in academic English: friendship",
+      "question": "close bond between friends",
       "correct": "friendship",
       "wrong": [
         "from",
@@ -116,7 +116,7 @@
     },
     {
       "item_id": "from",
-      "question": "starting point or source",
+      "question": "starting point of movement",
       "correct": "from",
       "wrong": [
         "front",
@@ -146,7 +146,7 @@
     },
     {
       "item_id": "frustrate",
-      "question": "to do something related to frustrate",
+      "question": "make someone annoyed",
       "correct": "frustrate",
       "wrong": [
         "fuel",
@@ -196,7 +196,7 @@
     },
     {
       "item_id": "funding",
-      "question": "a word used in academic English: funding",
+      "question": "money for a project",
       "correct": "funding",
       "wrong": [
         "funeral",
@@ -206,7 +206,7 @@
     },
     {
       "item_id": "funeral",
-      "question": "a word used in academic English: funeral",
+      "question": "ceremony for someone who died",
       "correct": "funeral",
       "wrong": [
         "funny",
@@ -266,7 +266,7 @@
     },
     {
       "item_id": "galaxy",
-      "question": "a word used in academic English: galaxy",
+      "question": "huge group of stars",
       "correct": "galaxy",
       "wrong": [
         "game",
@@ -296,7 +296,7 @@
     },
     {
       "item_id": "garage",
-      "question": "a word used in academic English: garage",
+      "question": "building for a car",
       "correct": "garage",
       "wrong": [
         "garden",
@@ -366,7 +366,7 @@
     },
     {
       "item_id": "gear",
-      "question": "a word used in academic English: gear",
+      "question": "equipment or machine parts",
       "correct": "gear",
       "wrong": [
         "gene",
@@ -446,7 +446,7 @@
     },
     {
       "item_id": "geography",
-      "question": "a word used in academic English: geography",
+      "question": "study of Earth places",
       "correct": "geography",
       "wrong": [
         "gesture",
@@ -456,7 +456,7 @@
     },
     {
       "item_id": "gesture",
-      "question": "a word used in academic English: gesture",
+      "question": "movement that shows meaning",
       "correct": "gesture",
       "wrong": [
         "get",
@@ -506,7 +506,7 @@
     },
     {
       "item_id": "girlfriend",
-      "question": "a word used in academic English: girlfriend",
+      "question": "woman someone dates",
       "correct": "girlfriend",
       "wrong": [
         "give",
@@ -566,7 +566,7 @@
     },
     {
       "item_id": "glove",
-      "question": "a word used in academic English: glove",
+      "question": "covering for the hand",
       "correct": "glove",
       "wrong": [
         "go",
@@ -676,7 +676,7 @@
     },
     {
       "item_id": "graduate",
-      "question": "to do something related to graduate",
+      "question": "finish a degree",
       "correct": "graduate",
       "wrong": [
         "grain",
@@ -686,7 +686,7 @@
     },
     {
       "item_id": "grain",
-      "question": "a word used in academic English: grain",
+      "question": "seeds of wheat or rice",
       "correct": "grain",
       "wrong": [
         "grand",
@@ -706,7 +706,7 @@
     },
     {
       "item_id": "grandfather",
-      "question": "a word used in academic English: grandfather",
+      "question": "father of your parent",
       "correct": "grandfather",
       "wrong": [
         "grandmother",
@@ -716,7 +716,7 @@
     },
     {
       "item_id": "grandmother",
-      "question": "a word used in academic English: grandmother",
+      "question": "mother of your parent",
       "correct": "grandmother",
       "wrong": [
         "grass",
@@ -746,7 +746,7 @@
     },
     {
       "item_id": "gravity",
-      "question": "a word used in academic English: gravity",
+      "question": "force that pulls things down",
       "correct": "gravity",
       "wrong": [
         "great",
@@ -786,7 +786,7 @@
     },
     {
       "item_id": "grocery",
-      "question": "a word used in academic English: grocery",
+      "question": "food sold in a store",
       "correct": "grocery",
       "wrong": [
         "ground",

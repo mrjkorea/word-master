@@ -1,7 +1,7 @@
 {
   "pack_id": "ielts13",
   "title": "IELTS 1201–1300",
-  "module_id": "word_master",
+  "module_id": "snow_jump",
   "seconds": 15,
   "items": [
     {
@@ -16,7 +16,7 @@
     },
     {
       "item_id": "eight",
-      "question": "a word used in academic English: eight",
+      "question": "the number 8",
       "correct": "eight",
       "wrong": [
         "either",
@@ -106,7 +106,7 @@
     },
     {
       "item_id": "elementary",
-      "question": "a word used in academic English: elementary",
+      "question": "basic or for young learners",
       "correct": "elementary",
       "wrong": [
         "elite",
@@ -116,7 +116,7 @@
     },
     {
       "item_id": "elite",
-      "question": "a word used in academic English: elite",
+      "question": "the best or most powerful group",
       "correct": "elite",
       "wrong": [
         "else",
@@ -146,7 +146,7 @@
     },
     {
       "item_id": "email",
-      "question": "a word used in academic English: email",
+      "question": "message sent on a computer",
       "correct": "email",
       "wrong": [
         "embarrass",
@@ -156,7 +156,7 @@
     },
     {
       "item_id": "embarrass",
-      "question": "a word used in academic English: embarrass",
+      "question": "make someone feel shy or awkward",
       "correct": "embarrass",
       "wrong": [
         "emergency",
@@ -366,7 +366,7 @@
     },
     {
       "item_id": "entertainment",
-      "question": "having the quality of entertainment",
+      "question": "shows or fun activities",
       "correct": "entertainment",
       "wrong": [
         "entire",
@@ -426,7 +426,7 @@
     },
     {
       "item_id": "episode",
-      "question": "a word used in academic English: episode",
+      "question": "one part of a series",
       "correct": "episode",
       "wrong": [
         "equal",
@@ -466,7 +466,7 @@
     },
     {
       "item_id": "era",
-      "question": "a word used in academic English: era",
+      "question": "a period in history",
       "correct": "era",
       "wrong": [
         "escape",
@@ -496,7 +496,7 @@
     },
     {
       "item_id": "essay",
-      "question": "a word used in academic English: essay",
+      "question": "short piece of writing on a topic",
       "correct": "essay",
       "wrong": [
         "essential",
@@ -586,7 +586,7 @@
     },
     {
       "item_id": "every",
-      "question": "each one in a group",
+      "question": "all members of a group",
       "correct": "every",
       "wrong": [
         "everybody",
@@ -596,7 +596,7 @@
     },
     {
       "item_id": "everybody",
-      "question": "every single person",
+      "question": "every person",
       "correct": "everybody",
       "wrong": [
         "everyday",
@@ -616,7 +616,7 @@
     },
     {
       "item_id": "everyone",
-      "question": "all the people",
+      "question": "every person",
       "correct": "everyone",
       "wrong": [
         "everything",
@@ -626,7 +626,7 @@
     },
     {
       "item_id": "everything",
-      "question": "all the things",
+      "question": "all things",
       "correct": "everything",
       "wrong": [
         "everywhere",
@@ -666,7 +666,7 @@
     },
     {
       "item_id": "evolution",
-      "question": "a word used in academic English: evolution",
+      "question": "slow change over long time",
       "correct": "evolution",
       "wrong": [
         "exact",
@@ -696,7 +696,7 @@
     },
     {
       "item_id": "exam",
-      "question": "a word used in academic English: exam",
+      "question": "formal school test",
       "correct": "exam",
       "wrong": [
         "examination",
@@ -746,7 +746,7 @@
     },
     {
       "item_id": "except",
-      "question": "not including one thing",
+      "question": "not including",
       "correct": "except",
       "wrong": [
         "exception",
@@ -786,7 +786,7 @@
     },
     {
       "item_id": "excitement",
-      "question": "having the quality of excitement",
+      "question": "feeling of eager happiness",
       "correct": "excitement",
       "wrong": [
         "exciting",
@@ -886,7 +886,7 @@
     },
     {
       "item_id": "exit",
-      "question": "a word used in academic English: exit",
+      "question": "way out of a place",
       "correct": "exit",
       "wrong": [
         "expansion",

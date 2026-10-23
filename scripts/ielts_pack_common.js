@@ -111,60 +111,11 @@ function normalizeWord(w, en) {
   return out;
 }
 
-function guessPos(en) {
-  if (/^(in|un|re|de|dis)/.test(en) && en.endsWith("ate")) return "v";
-  if (en.endsWith("ly")) return "adv";
-  if (en.endsWith("ive") || en.endsWith("ent") || en.endsWith("ous") || en.endsWith("ful")) return "adj";
-  if (en.endsWith("ate") || en.endsWith("ify") || en.endsWith("ise") || en.endsWith("ize")) return "v";
-  return "n";
-}
-
-function stubLexicon(en) {
-  const pos = guessPos(en);
-  const gloss =
-    pos === "v"
-      ? "to do something related to " + en
-      : pos === "adj"
-        ? "having the quality of " + en
-        : "a word used in academic English: " + en;
-  const defEn =
-    pos === "v"
-      ? "to " + en.replace(/e$/, "") + " (academic sense)"
-      : "an academic term: " + en;
-  const exEn = "The report uses the word \"" + en + "\" in an academic context.";
-  const l1 = {};
-  const def = {};
-  const example = {};
-  for (const lang of LANGS) {
-    l1[lang] = lang === "en" ? gloss : gloss;
-    def[lang] = lang === "en" ? defEn : defEn;
-    example[lang] = lang === "en" ? exEn : exEn;
-  }
-  l1.ko = en;
-  def.ko = "학술 영어 단어: " + en;
-  example.ko = "보고서는 학술 맥락에서 \"" + en + "\"(을)를 사용한다.";
-  return normalizeWord(
-    {
-      id: en,
-      en,
-      ko: en,
-      picture_prompt:
-        "Photorealistic photo illustrating the idea of " +
-        en +
-        " in a university study setting, no text, no letters, no logos",
-      l1,
-      ww: { sense_id: en + "." + pos + ".s1", pos, def, example },
-    },
-    en
-  );
-}
-
-function resolveWord(en, packIndex, overrides, opts) {
+function resolveWord(en, packIndex, overrides) {
   const key = wordSlug(en);
   if (overrides.has(key)) return normalizeWord(overrides.get(key), en);
   const hit = packIndex.get(key);
   if (hit) return normalizeWord(hit.word, en);
-  if (opts && opts.allowStubLexicon) return stubLexicon(en);
   throw new Error("No lexical entry for: " + en);
 }
 
@@ -366,7 +317,7 @@ function writePack(packNum, packIndex, overrides, opts) {
   const { id, lo, hi } = packRange(packNum);
   const list = parseWordList(path.join(ROOT, "data", "ielts_1500.txt"));
   const slice = list.filter((w) => w.rank >= lo && w.rank <= hi);
-  const words = slice.map((row) => resolveWord(row.en, packIndex, overrides, opts));
+  const words = slice.map((row) => resolveWord(row.en, packIndex, overrides));
   const pack = buildPackJson(packNum, words);
   const packJsonPath = path.join(ROOT, "packs", id + ".json");
   fs.writeFileSync(packJsonPath, JSON.stringify(pack, null, 2) + "\n");

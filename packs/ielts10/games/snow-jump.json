@@ -1,12 +1,12 @@
 {
   "pack_id": "ielts10",
   "title": "IELTS 901–1000",
-  "module_id": "word_master",
+  "module_id": "snow_jump",
   "seconds": 15,
   "items": [
     {
       "item_id": "clinic",
-      "question": "a word used in academic English: clinic",
+      "question": "small medical centre",
       "correct": "clinic",
       "wrong": [
         "clock",
@@ -76,7 +76,7 @@
     },
     {
       "item_id": "clue",
-      "question": "a word used in academic English: clue",
+      "question": "hint to solve",
       "correct": "clue",
       "wrong": [
         "cluster",
@@ -86,7 +86,7 @@
     },
     {
       "item_id": "cluster",
-      "question": "a word used in academic English: cluster",
+      "question": "group of similar things",
       "correct": "cluster",
       "wrong": [
         "coach",
@@ -246,7 +246,7 @@
     },
     {
       "item_id": "comfort",
-      "question": "a word used in academic English: comfort",
+      "question": "ease and calm",
       "correct": "comfort",
       "wrong": [
         "comfortable",
@@ -426,7 +426,7 @@
     },
     {
       "item_id": "composition",
-      "question": "a word used in academic English: composition",
+      "question": "way parts are arranged",
       "correct": "composition",
       "wrong": [
         "computer",
@@ -466,7 +466,7 @@
     },
     {
       "item_id": "concert",
-      "question": "a word used in academic English: concert",
+      "question": "live music show",
       "correct": "concert",
       "wrong": [
         "conclusion",
@@ -676,7 +676,7 @@
     },
     {
       "item_id": "container",
-      "question": "a word used in academic English: container",
+      "question": "box for holding things",
       "correct": "container",
       "wrong": [
         "content",
@@ -696,7 +696,7 @@
     },
     {
       "item_id": "contest",
-      "question": "a word used in academic English: contest",
+      "question": "competition",
       "correct": "contest",
       "wrong": [
         "continent",
@@ -706,7 +706,7 @@
     },
     {
       "item_id": "continent",
-      "question": "having the quality of continent",
+      "question": "large land mass",
       "correct": "continent",
       "wrong": [
         "continue",
@@ -756,7 +756,7 @@
     },
     {
       "item_id": "convenience",
-      "question": "a word used in academic English: convenience",
+      "question": "ease and usefulness",
       "correct": "convenience",
       "wrong": [
         "convenient",
@@ -846,7 +846,7 @@
     },
     {
       "item_id": "corn",
-      "question": "a word used in academic English: corn",
+      "question": "yellow grain crop",
       "correct": "corn",
       "wrong": [
         "corner",
@@ -886,7 +886,7 @@
     },
     {
       "item_id": "cotton",
-      "question": "a word used in academic English: cotton",
+      "question": "soft plant fibre",
       "correct": "cotton",
       "wrong": [
         "couch",
@@ -896,7 +896,7 @@
     },
     {
       "item_id": "couch",
-      "question": "a word used in academic English: couch",
+      "question": "long soft seat",
       "correct": "couch",
       "wrong": [
         "could",
@@ -936,7 +936,7 @@
     },
     {
       "item_id": "counter",
-      "question": "a word used in academic English: counter",
+      "question": "shop service desk",
       "correct": "counter",
       "wrong": [
         "country",
@@ -986,7 +986,7 @@
     },
     {
       "item_id": "cousin",
-      "question": "a word used in academic English: cousin",
+      "question": "parent's sibling's child",
       "correct": "cousin",
       "wrong": [
         "cover",

@@ -18,13 +18,11 @@ function parseArgs(argv) {
   let force = false;
   let skipTts = false;
   let manifestOnly = false;
-  let allowStubLexicon = false;
   for (let i = 2; i < argv.length; i++) {
     const a = argv[i];
     if (a === "--force-audio") force = true;
     else if (a === "--skip-tts") skipTts = true;
     else if (a === "--manifest-only") manifestOnly = true;
-    else if (a === "--allow-stub-lexicon") allowStubLexicon = true;
     else if (a === "--pack" && argv[i + 1]) {
       const spec = argv[++i];
       if (spec.includes("-")) {
@@ -34,10 +32,10 @@ function parseArgs(argv) {
     }
   }
   if (!packs.length) packs.push(1, 2, 3, 4, 5);
-  return { packs, force, skipTts, manifestOnly, allowStubLexicon };
+  return { packs, force, skipTts, manifestOnly };
 }
 
-const { packs, force, skipTts, manifestOnly, allowStubLexicon } = parseArgs(process.argv);
+const { packs, force, skipTts, manifestOnly } = parseArgs(process.argv);
 const packIndex = common.loadPackWordIndex();
 const overrides = common.loadOverrides();
 
@@ -50,15 +48,13 @@ for (const n of packs) {
     const { id, lo, hi } = common.packRange(n);
     const list = common.parseWordList(require("path").join(common.ROOT, "data", "ielts_1500.txt"));
     const slice = list.filter((w) => w.rank >= lo && w.rank <= hi);
-    const words = slice.map((row) =>
-      common.resolveWord(row.en, packIndex, overrides, { allowStubLexicon })
-    );
+    const words = slice.map((row) => common.resolveWord(row.en, packIndex, overrides));
     const pack = common.buildPackJson(n, words);
     const manifest = common.writeManifest(id, pack, words, { missing_files: [] });
     console.log(id, "pictures missing:", manifest.missing_files.filter((f) => f.endsWith(".jpg")).length);
     continue;
   }
-  const result = common.writePack(n, packIndex, overrides, { force, skipTts, allowStubLexicon });
+  const result = common.writePack(n, packIndex, overrides, { force, skipTts });
   const picMiss = result.manifest.missing_files.filter((f) => f.endsWith(".jpg"));
   console.log(
     "OK",

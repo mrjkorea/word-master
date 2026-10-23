@@ -1,12 +1,12 @@
 {
   "pack_id": "ielts14",
   "title": "IELTS 1301–1400",
-  "module_id": "word_master",
+  "module_id": "snow_jump",
   "seconds": 15,
   "items": [
     {
       "item_id": "explosion",
-      "question": "a word used in academic English: explosion",
+      "question": "sudden burst with loud noise",
       "correct": "explosion",
       "wrong": [
         "expression",
@@ -156,7 +156,7 @@
     },
     {
       "item_id": "faculty",
-      "question": "a word used in academic English: faculty",
+      "question": "teachers at a college",
       "correct": "faculty",
       "wrong": [
         "fail",
@@ -336,7 +336,7 @@
     },
     {
       "item_id": "fat",
-      "question": "having a lot of body",
+      "question": "having a lot of extra flesh on the body",
       "correct": "fat",
       "wrong": [
         "father",
@@ -446,7 +446,7 @@
     },
     {
       "item_id": "fence",
-      "question": "a word used in academic English: fence",
+      "question": "barrier around a yard",
       "correct": "fence",
       "wrong": [
         "few",
@@ -456,7 +456,7 @@
     },
     {
       "item_id": "few",
-      "question": "not many things",
+      "question": "a small number of things",
       "correct": "few",
       "wrong": [
         "field",
@@ -626,7 +626,7 @@
     },
     {
       "item_id": "fishing",
-      "question": "a word used in academic English: fishing",
+      "question": "catching fish as a hobby",
       "correct": "fishing",
       "wrong": [
         "fit",
@@ -646,7 +646,7 @@
     },
     {
       "item_id": "fitness",
-      "question": "a word used in academic English: fitness",
+      "question": "being strong and healthy",
       "correct": "fitness",
       "wrong": [
         "five",
@@ -656,7 +656,7 @@
     },
     {
       "item_id": "five",
-      "question": "having the quality of five",
+      "question": "the number 5",
       "correct": "five",
       "wrong": [
         "fix",
@@ -676,7 +676,7 @@
     },
     {
       "item_id": "flag",
-      "question": "a word used in academic English: flag",
+      "question": "cloth symbol on a pole",
       "correct": "flag",
       "wrong": [
         "flame",
@@ -686,7 +686,7 @@
     },
     {
       "item_id": "flame",
-      "question": "a word used in academic English: flame",
+      "question": "hot bright part of fire",
       "correct": "flame",
       "wrong": [
         "flat",
@@ -706,7 +706,7 @@
     },
     {
       "item_id": "flavour",
-      "question": "a word used in academic English: flavour",
+      "question": "taste of food",
       "correct": "flavour",
       "wrong": [
         "flee",
@@ -726,7 +726,7 @@
     },
     {
       "item_id": "flesh",
-      "question": "a word used in academic English: flesh",
+      "question": "soft body tissue under skin",
       "correct": "flesh",
       "wrong": [
         "flight",
@@ -796,7 +796,7 @@
     },
     {
       "item_id": "folk",
-      "question": "a word used in academic English: folk",
+      "question": "people in general",
       "correct": "folk",
       "wrong": [
         "follow",
@@ -946,7 +946,7 @@
     },
     {
       "item_id": "former",
-      "question": "the first of two",
+      "question": "from an earlier time",
       "correct": "former",
       "wrong": [
         "forth",
@@ -986,7 +986,7 @@
     },
     {
       "item_id": "founder",
-      "question": "a word used in academic English: founder",
+      "question": "person who starts an organization",
       "correct": "founder",
       "wrong": [
         "four",
@@ -996,7 +996,7 @@
     },
     {
       "item_id": "four",
-      "question": "a word used in academic English: four",
+      "question": "the number 4",
       "correct": "four",
       "wrong": [
         "explosion",

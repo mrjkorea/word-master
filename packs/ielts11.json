@@ -3,127 +3,127 @@
   "title": "IELTS 1001–1100",
   "band": "IELTS",
   "pos": "mixed",
-  "source": "IELTS Master 1500 (AWL + IELTS academic), ranks 1001–1100 by frequency.",
+  "source": "IELTS Master 1500 (AWL + Cambridge/Barron IELTS), frequency ranks 1001–1500",
   "words": [
     {
       "id": "coverage",
       "en": "coverage",
-      "ko": "coverage",
-      "picture_prompt": "Photorealistic photo illustrating the idea of coverage in a university study setting, no text, no letters, no logos",
+      "ko": "보도·보장 범위",
+      "picture_prompt": "candy picture-book oil-paint of a television screen showing a map with shaded regions for a news story, one subject, no text no letters no numbers no watermark",
       "l1": {
-        "en": "a word used in academic English: coverage",
-        "ko": "coverage",
-        "zh-Hans": "a word used in academic English: coverage",
-        "ja": "a word used in academic English: coverage",
-        "es": "a word used in academic English: coverage",
-        "hi": "a word used in academic English: coverage",
-        "de": "a word used in academic English: coverage",
-        "vi": "a word used in academic English: coverage",
-        "pt-BR": "a word used in academic English: coverage",
-        "id": "a word used in academic English: coverage",
-        "fr": "a word used in academic English: coverage",
-        "ar": "a word used in academic English: coverage",
-        "tr": "a word used in academic English: coverage",
-        "it": "a word used in academic English: coverage",
-        "pl": "a word used in academic English: coverage"
+        "en": "how much news or insurance protects",
+        "ko": "보도·보장 범위",
+        "zh-Hans": "多少新闻或保险保护",
+        "ja": "ニュースや保険がどれだけ保護するか",
+        "es": "cuánta noticia o seguro protege",
+        "hi": "कितना समाचार या बीमा सुरक्षा करता है",
+        "de": "Wie viel Nachrichten oder Versicherung schützt",
+        "vi": "Bao nhiêu tin tức hoặc bảo vệ",
+        "pt-BR": "quanta notícia ou seguro protege",
+        "id": "berapa banyak berita atau asuransi yang melindungi",
+        "fr": "combien de nouvelles ou d'assurance protège",
+        "ar": "كم من الأخبار أو التأمين يحمي",
+        "tr": "Ne kadar haber veya sigorta koruyor",
+        "it": "quanta notizia o assicurazione protegge",
+        "pl": "jak wiele wiadomości lub ubezpieczenia chroni"
       },
       "ww": {
-        "sense_id": "coverage.n.s1",
+        "sense_id": "coverage.s1",
         "pos": "n",
         "def": {
-          "en": "an academic term: coverage",
-          "ko": "학술 영어 단어: coverage",
-          "zh-Hans": "an academic term: coverage",
-          "ja": "an academic term: coverage",
-          "es": "an academic term: coverage",
-          "hi": "an academic term: coverage",
-          "de": "an academic term: coverage",
-          "vi": "an academic term: coverage",
-          "pt-BR": "an academic term: coverage",
-          "id": "an academic term: coverage",
-          "fr": "an academic term: coverage",
-          "ar": "an academic term: coverage",
-          "tr": "an academic term: coverage",
-          "it": "an academic term: coverage",
-          "pl": "an academic term: coverage"
+          "en": "the amount or area that news or insurance includes",
+          "ko": "보도·보장 범위",
+          "zh-Hans": "新闻或保险包括的金额或地区",
+          "ja": "ニュースや保険に含まれている金額または地域",
+          "es": "la cantidad o área que noticias o seguros incluye",
+          "hi": "जिस राशि या क्षेत्र में समाचार या बीमा शामिल है",
+          "de": "Betrag oder Bereich, den Nachrichten oder Versicherungen enthalten",
+          "vi": "số lượng hoặc khu vực tin tức hoặc bảo hiểm bao gồm",
+          "pt-BR": "o montante ou a área que a notícia ou o seguro inclui",
+          "id": "jumlah atau area berita atau asuransi termasuk",
+          "fr": "le montant ou la zone que les nouvelles ou l'assurance comprennent",
+          "ar": "المبلغ أو المساحة التي تشملها الأخبار أو التأمين",
+          "tr": "Bu haber veya sigorta içeren miktar veya alan içerir",
+          "it": "l'importo o l'area che include notizie o assicurazioni",
+          "pl": "kwotę lub obszar, który obejmuje informacje lub ubezpieczenie"
         },
         "example": {
-          "en": "The report uses the word \"coverage\" in an academic context.",
-          "ko": "보고서는 학술 맥락에서 \"coverage\"(을)를 사용한다.",
-          "zh-Hans": "The report uses the word \"coverage\" in an academic context.",
-          "ja": "The report uses the word \"coverage\" in an academic context.",
-          "es": "The report uses the word \"coverage\" in an academic context.",
-          "hi": "The report uses the word \"coverage\" in an academic context.",
-          "de": "The report uses the word \"coverage\" in an academic context.",
-          "vi": "The report uses the word \"coverage\" in an academic context.",
-          "pt-BR": "The report uses the word \"coverage\" in an academic context.",
-          "id": "The report uses the word \"coverage\" in an academic context.",
-          "fr": "The report uses the word \"coverage\" in an academic context.",
-          "ar": "The report uses the word \"coverage\" in an academic context.",
-          "tr": "The report uses the word \"coverage\" in an academic context.",
-          "it": "The report uses the word \"coverage\" in an academic context.",
-          "pl": "The report uses the word \"coverage\" in an academic context."
+          "en": "The news channel gave full coverage of the election.",
+          "ko": "뉴스 채널은 선거의 전체 범위를 준.",
+          "zh-Hans": "新闻频道全面报道选举情况.",
+          "ja": "ニュースチャンネルは、選挙のフルカバレッジを与えました.",
+          "es": "El canal de noticias dio cobertura completa de las elecciones.",
+          "hi": "समाचार चैनल ने चुनाव का पूरा कवरेज दिया।",
+          "de": "Der Nachrichtensender berichtete vollständig über die Wahl.",
+          "vi": "Kênh tin tức đã đưa tin đầy đủ soap về cuộc bầu cử.",
+          "pt-BR": "O canal de notícias deu cobertura total da eleição.",
+          "id": "Saluran berita memberikan liputan penuh pemilu.",
+          "fr": "La chaîne d'information a assuré la couverture complète de l'élection.",
+          "ar": "The news channel gave full coverage of the election.",
+          "tr": "Haber kanalı seçimin tam kapsamını verdi.",
+          "it": "Il canale di notizie ha dato piena copertura delle elezioni.",
+          "pl": "Kanał informacyjny dał pełny opis wyborów."
         }
       }
     },
     {
       "id": "cow",
       "en": "cow",
-      "ko": "cow",
-      "picture_prompt": "Photorealistic photo illustrating the idea of cow in a university study setting, no text, no letters, no logos",
+      "ko": "소",
+      "picture_prompt": "candy picture-book oil-paint of a friendly brown cow standing in a sunny meadow, one subject, no text no letters no numbers no watermark",
       "l1": {
-        "en": "a word used in academic English: cow",
-        "ko": "cow",
-        "zh-Hans": "a word used in academic English: cow",
-        "ja": "a word used in academic English: cow",
-        "es": "a word used in academic English: cow",
-        "hi": "a word used in academic English: cow",
-        "de": "a word used in academic English: cow",
-        "vi": "a word used in academic English: cow",
-        "pt-BR": "a word used in academic English: cow",
-        "id": "a word used in academic English: cow",
-        "fr": "a word used in academic English: cow",
-        "ar": "a word used in academic English: cow",
-        "tr": "a word used in academic English: cow",
-        "it": "a word used in academic English: cow",
-        "pl": "a word used in academic English: cow"
+        "en": "farm animal that gives milk",
+        "ko": "소",
+        "zh-Hans": "养奶的动物",
+        "ja": "ミルクを与える農場の動物",
+        "es": "animal de granja que da leche",
+        "hi": "खेत पशु जो दूध देता है",
+        "de": "Nutztier, das Milch liefert",
+        "vi": "Động vật nông nghiệp cho sữa",
+        "pt-BR": "animal de criação que dá leite",
+        "id": "hewan pertanian yang memberikan susu",
+        "fr": "animal de ferme qui donne du lait",
+        "ar": "حيوان المزارع الذي يعطي الحليب",
+        "tr": "süt veren hayvan",
+        "it": "animale da fattoria che dà latte",
+        "pl": "zwierząt gospodarskich, które daje mleko"
       },
       "ww": {
-        "sense_id": "cow.n.s1",
+        "sense_id": "cow.s1",
         "pos": "n",
         "def": {
-          "en": "an academic term: cow",
-          "ko": "학술 영어 단어: cow",
-          "zh-Hans": "an academic term: cow",
-          "ja": "an academic term: cow",
-          "es": "an academic term: cow",
-          "hi": "an academic term: cow",
-          "de": "an academic term: cow",
-          "vi": "an academic term: cow",
-          "pt-BR": "an academic term: cow",
-          "id": "an academic term: cow",
-          "fr": "an academic term: cow",
-          "ar": "an academic term: cow",
-          "tr": "an academic term: cow",
-          "it": "an academic term: cow",
-          "pl": "an academic term: cow"
+          "en": "a large farm animal kept for milk or meat",
+          "ko": "소",
+          "zh-Hans": "为牛奶或肉类而保存的大农场动物",
+          "ja": "牛乳や肉のために保管される大規模な農場の動物",
+          "es": "un gran animal de granja guardado para leche o carne",
+          "hi": "एक बड़े खेत जानवर दूध या मांस के लिए रखा",
+          "de": "ein großes Nutztier, das für Milch oder Fleisch gehalten wird",
+          "vi": "Một con thú nông trại lớn giữ sữa hay thịt",
+          "pt-BR": "um animal de grande exploração, destinado ao leite ou à carne",
+          "id": "hewan pertanian besar disimpan untuk susu atau daging",
+          "fr": "un grand animal d'élevage destiné au lait ou à la viande",
+          "ar": "a large farm animal kept for milk or meat",
+          "tr": "Büyük bir çiftlik hayvanı süt veya et için tuttu",
+          "it": "un grande animale agricolo tenuto per latte o carne",
+          "pl": "duże zwierzę gospodarskie trzymane na mleko lub mięso"
         },
         "example": {
-          "en": "The report uses the word \"cow\" in an academic context.",
-          "ko": "보고서는 학술 맥락에서 \"cow\"(을)를 사용한다.",
-          "zh-Hans": "The report uses the word \"cow\" in an academic context.",
-          "ja": "The report uses the word \"cow\" in an academic context.",
-          "es": "The report uses the word \"cow\" in an academic context.",
-          "hi": "The report uses the word \"cow\" in an academic context.",
-          "de": "The report uses the word \"cow\" in an academic context.",
-          "vi": "The report uses the word \"cow\" in an academic context.",
-          "pt-BR": "The report uses the word \"cow\" in an academic context.",
-          "id": "The report uses the word \"cow\" in an academic context.",
-          "fr": "The report uses the word \"cow\" in an academic context.",
-          "ar": "The report uses the word \"cow\" in an academic context.",
-          "tr": "The report uses the word \"cow\" in an academic context.",
-          "it": "The report uses the word \"cow\" in an academic context.",
-          "pl": "The report uses the word \"cow\" in an academic context."
+          "en": "A brown cow grazes in the green field.",
+          "ko": "녹색 필드에 갈색 소 grazes.",
+          "zh-Hans": "安全理事会,",
+          "ja": "緑地に茶色の牛が見えます。",
+          "es": "Una vaca marrón se pasta en el campo verde.",
+          "hi": "ग्रीन फील्ड में एक भूरे रंग का गाय ग्रेज।",
+          "de": "Eine braune Kuh weidet auf dem grünen Feld.",
+          "vi": "Một con bò nâu gặm cỏ trong cánh đồng xanh.",
+          "pt-BR": "Uma vaca castanha pasta no campo verde.",
+          "id": "Seekor sapi coklat merumput di lapangan hijau.",
+          "fr": "Une vache brune paît dans le champ vert.",
+          "ar": "رمادي بقر بني في الحقل الأخضر",
+          "tr": "Yeşil alanda kahverengi bir inek grazes.",
+          "it": "Una mucca marrone si blocca nel campo verde.",
+          "pl": "Brązowa krowa drapie się na zielonym polu."
         }
       }
     },
@@ -150,7 +150,7 @@
         "pl": "rozbijać"
       },
       "ww": {
-        "sense_id": "crack.v.s1",
+        "sense_id": "crack.s1",
         "pos": "v",
         "def": {
           "en": "to break something so a line appears",
@@ -191,61 +191,61 @@
     {
       "id": "craft",
       "en": "craft",
-      "ko": "craft",
-      "picture_prompt": "Photorealistic photo illustrating the idea of craft in a university study setting, no text, no letters, no logos",
+      "ko": "공예·솜씨",
+      "picture_prompt": "candy picture-book oil-paint of a child gluing colorful paper shapes into a handmade card, one subject, no text no letters no numbers no watermark",
       "l1": {
-        "en": "a word used in academic English: craft",
-        "ko": "craft",
-        "zh-Hans": "a word used in academic English: craft",
-        "ja": "a word used in academic English: craft",
-        "es": "a word used in academic English: craft",
-        "hi": "a word used in academic English: craft",
-        "de": "a word used in academic English: craft",
-        "vi": "a word used in academic English: craft",
-        "pt-BR": "a word used in academic English: craft",
-        "id": "a word used in academic English: craft",
-        "fr": "a word used in academic English: craft",
-        "ar": "a word used in academic English: craft",
-        "tr": "a word used in academic English: craft",
-        "it": "a word used in academic English: craft",
-        "pl": "a word used in academic English: craft"
+        "en": "skill making things by hand",
+        "ko": "공예·솜씨",
+        "zh-Hans": "手工制作东西",
+        "ja": "手で物事を作るスキル",
+        "es": "habilidad haciendo cosas a mano",
+        "hi": "हाथ से कौशल निर्माण",
+        "de": "Geschick, Dinge von Hand zu machen",
+        "vi": "Kĩ năng chế tạo mọi thứ bằng tay.",
+        "pt-BR": "habilidade fazendo as coisas à mão",
+        "id": "keterampilan membuat hal-hal dengan tangan",
+        "fr": "savoir faire les choses à la main",
+        "ar": "صنع الأشياء باليد",
+        "tr": "İşler el el el el el el elle",
+        "it": "abilità facendo le cose a mano",
+        "pl": "umiejętności tworzenia rzeczy ręcznie"
       },
       "ww": {
-        "sense_id": "craft.n.s1",
+        "sense_id": "craft.s1",
         "pos": "n",
         "def": {
-          "en": "an academic term: craft",
-          "ko": "학술 영어 단어: craft",
-          "zh-Hans": "an academic term: craft",
-          "ja": "an academic term: craft",
-          "es": "an academic term: craft",
-          "hi": "an academic term: craft",
-          "de": "an academic term: craft",
-          "vi": "an academic term: craft",
-          "pt-BR": "an academic term: craft",
-          "id": "an academic term: craft",
-          "fr": "an academic term: craft",
-          "ar": "an academic term: craft",
-          "tr": "an academic term: craft",
-          "it": "an academic term: craft",
-          "pl": "an academic term: craft"
+          "en": "skill in making things by hand, or things made that way",
+          "ko": "공예·솜씨",
+          "zh-Hans": "手动制造东西的技巧 或做事情的方式",
+          "ja": "手で物事を作るためのスキル、またはその方法を作るもの",
+          "es": "habilidad para hacer las cosas a mano, o cosas hechas de esa manera",
+          "hi": "हाथ से चीजों को बनाने में कौशल, या इस तरह की चीज़ें बनाईं हैं",
+          "de": "Geschick, Dinge von Hand zu machen, oder Dinge, die so gemacht werden",
+          "vi": "Kĩ năng làm ra mọi thứ bằng tay, hoặc làm mọi thứ theo cách đó",
+          "pt-BR": "habilidade em fazer as coisas à mão, ou as coisas feitas dessa maneira",
+          "id": "keterampilan dalam membuat hal-hal dengan tangan, atau hal-hal yang membuat seperti itu",
+          "fr": "l'habileté à faire les choses à la main, ou les choses faites de cette façon",
+          "ar": "المهارة في صنع الأشياء باليد، أو الأشياء جعلت من هذا الطريق",
+          "tr": "İşler el yoluyla yapabilme becerisi veya işler bu şekilde yaptı",
+          "it": "abilità nel fare le cose a mano, o cose fatte in quel modo",
+          "pl": "umiejętności w tworzeniu rzeczy ręcznie, lub rzeczy wykonane w ten sposób"
         },
         "example": {
-          "en": "The report uses the word \"craft\" in an academic context.",
-          "ko": "보고서는 학술 맥락에서 \"craft\"(을)를 사용한다.",
-          "zh-Hans": "The report uses the word \"craft\" in an academic context.",
-          "ja": "The report uses the word \"craft\" in an academic context.",
-          "es": "The report uses the word \"craft\" in an academic context.",
-          "hi": "The report uses the word \"craft\" in an academic context.",
-          "de": "The report uses the word \"craft\" in an academic context.",
-          "vi": "The report uses the word \"craft\" in an academic context.",
-          "pt-BR": "The report uses the word \"craft\" in an academic context.",
-          "id": "The report uses the word \"craft\" in an academic context.",
-          "fr": "The report uses the word \"craft\" in an academic context.",
-          "ar": "The report uses the word \"craft\" in an academic context.",
-          "tr": "The report uses the word \"craft\" in an academic context.",
-          "it": "The report uses the word \"craft\" in an academic context.",
-          "pl": "The report uses the word \"craft\" in an academic context."
+          "en": "She sells paper craft at the weekend market.",
+          "ko": "그녀는 주말 시장에서 종이 공예를 판매합니다.",
+          "zh-Hans": "她在周末市场卖造纸工艺.",
+          "ja": "週末のマーケットで紙工芸品を販売しています。",
+          "es": "Vende papelería en el mercado del fin de semana.",
+          "hi": "वह सप्ताहांत बाजार में कागज शिल्प बेचती है।",
+          "de": "Sie verkauft Papierhandwerk auf dem Wochenendmarkt.",
+          "vi": "Cô ấy bán giấy ở chợ cuối tuần.",
+          "pt-BR": "Ela vende artigos de papel no mercado de fim de semana.",
+          "id": "Dia menjual kerajinan kertas di pasar akhir pekan.",
+          "fr": "Elle vend du papier au marché du week-end.",
+          "ar": "تبيع الورق في سوق نهاية الأسبوع",
+          "tr": "Hafta sonu pazarında kağıt zanaatını satıyor.",
+          "it": "Vende carta artigianale al mercato del fine settimana.",
+          "pl": "Sprzedaje papierZajęcia na weekendowym rynku."
         }
       }
     },
@@ -272,7 +272,7 @@
         "pl": "rozbijać"
       },
       "ww": {
-        "sense_id": "crash.v.s1",
+        "sense_id": "crash.s1",
         "pos": "v",
         "def": {
           "en": "to hit something hard and stop or break",
@@ -333,7 +333,7 @@
         "pl": "szalony"
       },
       "ww": {
-        "sense_id": "crazy.a.s1",
+        "sense_id": "crazy.s1",
         "pos": "a",
         "def": {
           "en": "very wild, silly, or hard to believe",
@@ -374,61 +374,61 @@
     {
       "id": "cream",
       "en": "cream",
-      "ko": "cream",
-      "picture_prompt": "Photorealistic photo illustrating the idea of cream in a university study setting, no text, no letters, no logos",
+      "ko": "크림",
+      "picture_prompt": "candy picture-book oil-paint of a small pitcher of cream beside a bowl of berries, one subject, no text no letters no numbers no watermark",
       "l1": {
-        "en": "a word used in academic English: cream",
-        "ko": "cream",
-        "zh-Hans": "a word used in academic English: cream",
-        "ja": "a word used in academic English: cream",
-        "es": "a word used in academic English: cream",
-        "hi": "a word used in academic English: cream",
-        "de": "a word used in academic English: cream",
-        "vi": "a word used in academic English: cream",
-        "pt-BR": "a word used in academic English: cream",
-        "id": "a word used in academic English: cream",
-        "fr": "a word used in academic English: cream",
-        "ar": "a word used in academic English: cream",
-        "tr": "a word used in academic English: cream",
-        "it": "a word used in academic English: cream",
-        "pl": "a word used in academic English: cream"
+        "en": "thick white dairy topping",
+        "ko": "크림",
+        "zh-Hans": "... ................................................................................................................................................................................................................................................................................................................................................................................................,..........................................................................................................................................................................................,.....................鹳.....................................................................................................................................................................",
+        "ja": "厚い白い酪農場のトッピング",
+        "es": "gruesa lácteos blancos",
+        "hi": "मोटी सफेद डेयरी टॉपिंग",
+        "de": "dickes weißes Milchtier",
+        "vi": "Làm từ sữa trắng dày",
+        "pt-BR": "cobertura de leite branco grosso",
+        "id": "topping susu putih tebal",
+        "fr": "à la garniture de lait blanc",
+        "ar": "الألبان البيضاء السميكة",
+        "tr": "kalın beyaz süt topping",
+        "it": "spesso bianco latticini",
+        "pl": "grube białe nabiałowe wykończenie"
       },
       "ww": {
-        "sense_id": "cream.n.s1",
+        "sense_id": "cream.s1",
         "pos": "n",
         "def": {
-          "en": "an academic term: cream",
-          "ko": "학술 영어 단어: cream",
-          "zh-Hans": "an academic term: cream",
-          "ja": "an academic term: cream",
-          "es": "an academic term: cream",
-          "hi": "an academic term: cream",
-          "de": "an academic term: cream",
-          "vi": "an academic term: cream",
-          "pt-BR": "an academic term: cream",
-          "id": "an academic term: cream",
-          "fr": "an academic term: cream",
-          "ar": "an academic term: cream",
-          "tr": "an academic term: cream",
-          "it": "an academic term: cream",
-          "pl": "an academic term: cream"
+          "en": "the thick white part of milk used in food",
+          "ko": "크림",
+          "zh-Hans": "食品中使用的牛奶的厚白色部分",
+          "ja": "食品に使われている牛乳の厚い白部分",
+          "es": "la parte blanca gruesa de la leche utilizada en la comida",
+          "hi": "दूध का मोटा हिस्सा भोजन में इस्तेमाल किया जाता है",
+          "de": "der dicke weiße Teil der in Lebensmitteln verwendeten Milch",
+          "vi": "phần sữa trắng dày dùng trong thức ăn",
+          "pt-BR": "a parte branca espessa do leite utilizado nos alimentos",
+          "id": "bagian tebal putih susu yang digunakan dalam makanan",
+          "fr": "la partie blanche épaisse du lait utilisé dans les denrées alimentaires",
+          "ar": "الجزء الأبيض السميك من الحليب المستخدم في الغذاء",
+          "tr": "Yemekte kullanılan sütün kalın beyaz kısmı",
+          "it": "la parte bianca spessa del latte utilizzata nel cibo",
+          "pl": "grube białe części mleka stosowane w żywności"
         },
         "example": {
-          "en": "The report uses the word \"cream\" in an academic context.",
-          "ko": "보고서는 학술 맥락에서 \"cream\"(을)를 사용한다.",
-          "zh-Hans": "The report uses the word \"cream\" in an academic context.",
-          "ja": "The report uses the word \"cream\" in an academic context.",
-          "es": "The report uses the word \"cream\" in an academic context.",
-          "hi": "The report uses the word \"cream\" in an academic context.",
-          "de": "The report uses the word \"cream\" in an academic context.",
-          "vi": "The report uses the word \"cream\" in an academic context.",
-          "pt-BR": "The report uses the word \"cream\" in an academic context.",
-          "id": "The report uses the word \"cream\" in an academic context.",
-          "fr": "The report uses the word \"cream\" in an academic context.",
-          "ar": "The report uses the word \"cream\" in an academic context.",
-          "tr": "The report uses the word \"cream\" in an academic context.",
-          "it": "The report uses the word \"cream\" in an academic context.",
-          "pl": "The report uses the word \"cream\" in an academic context."
+          "en": "He poured cream over the fresh strawberries.",
+          "ko": "그는 신선한 딸기 위에 크림을 붓는다.",
+          "zh-Hans": "他在新鲜草莓上浇了奶油",
+          "ja": "新鮮なイチゴの上にクリームを注ぎました。",
+          "es": "Derramó crema sobre las fresas frescas.",
+          "hi": "उन्होंने ताजा स्ट्रॉबेरी पर क्रीम डाला।",
+          "de": "Er goss Sahne über die frischen Erdbeeren.",
+          "vi": "Ông ấy đổ kem lên dâu tươi.",
+          "pt-BR": "Ele derramou creme sobre os morangos frescos.",
+          "id": "Dia menuangkan krim di atas stroberi segar.",
+          "fr": "Il a versé de la crème sur les fraises fraîches.",
+          "ar": "لقد صب الكريم على الفراولة الطازجة",
+          "tr": "Taze çilekler üzerinde krem döküldü.",
+          "it": "Ha versato la crema sulle fragole fresche.",
+          "pl": "Wylał śmietankę na świeże truskawki."
         }
       }
     },
@@ -455,7 +455,7 @@
         "pl": "dzieło"
       },
       "ww": {
-        "sense_id": "creation.n.s1",
+        "sense_id": "creation.s1",
         "pos": "n",
         "def": {
           "en": "something that a person has made",
@@ -516,7 +516,7 @@
         "pl": "kreatywny"
       },
       "ww": {
-        "sense_id": "creative.a.s1",
+        "sense_id": "creative.s1",
         "pos": "a",
         "def": {
           "en": "good at thinking of new ideas",
@@ -577,7 +577,7 @@
         "pl": "stworzenie"
       },
       "ww": {
-        "sense_id": "creature.n.s1",
+        "sense_id": "creature.s1",
         "pos": "n",
         "def": {
           "en": "a living animal, especially an unusual one",
@@ -638,7 +638,7 @@
         "pl": "załoga"
       },
       "ww": {
-        "sense_id": "crew.n.s1",
+        "sense_id": "crew.s1",
         "pos": "n",
         "def": {
           "en": "a group of people who work together on a ship or plane",
@@ -699,7 +699,7 @@
         "pl": "przestępstwo"
       },
       "ww": {
-        "sense_id": "crime.n.s1",
+        "sense_id": "crime.s1",
         "pos": "n",
         "def": {
           "en": "something bad and against the law",
@@ -760,7 +760,7 @@
         "pl": "przestępczy"
       },
       "ww": {
-        "sense_id": "criminal.a.s1",
+        "sense_id": "criminal.s1",
         "pos": "a",
         "def": {
           "en": "related to breaking the law",
@@ -821,7 +821,7 @@
         "pl": "kryzys"
       },
       "ww": {
-        "sense_id": "crisis.n.s1",
+        "sense_id": "crisis.s1",
         "pos": "n",
         "def": {
           "en": "a sudden and serious problem",
@@ -882,7 +882,7 @@
         "pl": "krytyk"
       },
       "ww": {
-        "sense_id": "critic.n.s1",
+        "sense_id": "critic.s1",
         "pos": "n",
         "def": {
           "en": "a person whose job is to say if a book, film, or art is good",
@@ -943,7 +943,7 @@
         "pl": "krytyczny"
       },
       "ww": {
-        "sense_id": "critical.a.s1",
+        "sense_id": "critical.s1",
         "pos": "a",
         "def": {
           "en": "finding good and bad points",
@@ -1004,7 +1004,7 @@
         "pl": "krytyka"
       },
       "ww": {
-        "sense_id": "criticism.n.s1",
+        "sense_id": "criticism.s1",
         "pos": "n",
         "def": {
           "en": "to say what could be better",
@@ -1065,7 +1065,7 @@
         "pl": "krytykować"
       },
       "ww": {
-        "sense_id": "criticize.v.s1",
+        "sense_id": "criticize.s1",
         "pos": "v",
         "def": {
           "en": "to say what is wrong with something",
@@ -1106,61 +1106,61 @@
     {
       "id": "crop",
       "en": "crop",
-      "ko": "crop",
-      "picture_prompt": "Photorealistic photo illustrating the idea of crop in a university study setting, no text, no letters, no logos",
+      "ko": "작물",
+      "picture_prompt": "candy picture-book oil-paint of rows of golden wheat ready for harvest, one subject, no text no letters no numbers no watermark",
       "l1": {
-        "en": "a word used in academic English: crop",
-        "ko": "crop",
-        "zh-Hans": "a word used in academic English: crop",
-        "ja": "a word used in academic English: crop",
-        "es": "a word used in academic English: crop",
-        "hi": "a word used in academic English: crop",
-        "de": "a word used in academic English: crop",
-        "vi": "a word used in academic English: crop",
-        "pt-BR": "a word used in academic English: crop",
-        "id": "a word used in academic English: crop",
-        "fr": "a word used in academic English: crop",
-        "ar": "a word used in academic English: crop",
-        "tr": "a word used in academic English: crop",
-        "it": "a word used in academic English: crop",
-        "pl": "a word used in academic English: crop"
+        "en": "plants grown on a farm",
+        "ko": "작물",
+        "zh-Hans": "在农场种植的植物",
+        "ja": "農場で育つ植物",
+        "es": "plantas cultivadas en una granja",
+        "hi": "एक खेत पर उगाए जाने वाले पौधे",
+        "de": "Auf einem landwirtschaftlichen Betrieb angebaute Pflanzen",
+        "vi": "Cây trồng ở nông trại",
+        "pt-BR": "plantas cultivadas numa exploração agrícola",
+        "id": "tanaman tumbuh di sebuah peternakan",
+        "fr": "Plantes cultivées sur une ferme",
+        "ar": "نباتات تزرع في مزرعة",
+        "tr": "Bitkiler bir çiftlikte büyüdü",
+        "it": "piante coltivate in una fattoria",
+        "pl": "rośliny uprawiane w gospodarstwie"
       },
       "ww": {
-        "sense_id": "crop.n.s1",
+        "sense_id": "crop.s1",
         "pos": "n",
         "def": {
-          "en": "an academic term: crop",
-          "ko": "학술 영어 단어: crop",
-          "zh-Hans": "an academic term: crop",
-          "ja": "an academic term: crop",
-          "es": "an academic term: crop",
-          "hi": "an academic term: crop",
-          "de": "an academic term: crop",
-          "vi": "an academic term: crop",
-          "pt-BR": "an academic term: crop",
-          "id": "an academic term: crop",
-          "fr": "an academic term: crop",
-          "ar": "an academic term: crop",
-          "tr": "an academic term: crop",
-          "it": "an academic term: crop",
-          "pl": "an academic term: crop"
+          "en": "plants such as wheat or rice grown for food",
+          "ko": "작물",
+          "zh-Hans": "种植小麦或大米作为食物的植物",
+          "ja": "食品用に栽培された小麦や米などの植物",
+          "es": "plantas como el trigo o el arroz cultivados para alimentos",
+          "hi": "गेहूं या चावल जैसे पौधे भोजन के लिए उगाए जाते हैं",
+          "de": "Pflanzen wie Weizen oder Reis, die für Lebensmittel angebaut werden",
+          "vi": "Cây cối như lúa mì hoặc lúa mì được trồng để ăn",
+          "pt-BR": "plantas como trigo ou arroz cultivados para alimentação",
+          "id": "tanaman seperti gandum atau beras tumbuh untuk makanan",
+          "fr": "Plantes telles que le blé ou le riz cultivés pour l'alimentation",
+          "ar": "نباتات مثل القمح أو الأرز الذي يزرع من أجل الغذاء",
+          "tr": "Buğday veya pirinç gibi bitkiler yiyecek için büyüdü",
+          "it": "piante come il grano o il riso coltivate per il cibo",
+          "pl": "rośliny, takie jak pszenica lub ryż uprawiane na żywność"
         },
         "example": {
-          "en": "The report uses the word \"crop\" in an academic context.",
-          "ko": "보고서는 학술 맥락에서 \"crop\"(을)를 사용한다.",
-          "zh-Hans": "The report uses the word \"crop\" in an academic context.",
-          "ja": "The report uses the word \"crop\" in an academic context.",
-          "es": "The report uses the word \"crop\" in an academic context.",
-          "hi": "The report uses the word \"crop\" in an academic context.",
-          "de": "The report uses the word \"crop\" in an academic context.",
-          "vi": "The report uses the word \"crop\" in an academic context.",
-          "pt-BR": "The report uses the word \"crop\" in an academic context.",
-          "id": "The report uses the word \"crop\" in an academic context.",
-          "fr": "The report uses the word \"crop\" in an academic context.",
-          "ar": "The report uses the word \"crop\" in an academic context.",
-          "tr": "The report uses the word \"crop\" in an academic context.",
-          "it": "The report uses the word \"crop\" in an academic context.",
-          "pl": "The report uses the word \"crop\" in an academic context."
+          "en": "The rice crop was larger after the rainy season.",
+          "ko": "밥 작물은 비오는 계절 후에 더 큽니다.",
+          "zh-Hans": "雨季之后,水稻产量较大。",
+          "ja": "雨が降った後、米の作物が大きくなりました。",
+          "es": "El cultivo de arroz fue más grande después de la temporada de lluvias.",
+          "hi": "चावल की फसल बरसात के मौसम के बाद बड़ी थी।",
+          "de": "Die Reisernte war nach der Regenzeit größer.",
+          "vi": "Sau mùa mưa, vụ mùa lúa mì lớn hơn.",
+          "pt-BR": "A cultura do arroz foi maior após a estação chuvosa.",
+          "id": "Tanaman beras lebih besar setelah musim hujan.",
+          "fr": "La récolte de riz était plus importante après la saison des pluies.",
+          "ar": "محصول الأرز كان أكبر بعد موسم الأمطار",
+          "tr": "Pilav eki yağmur mevsiminden sonra daha büyükydi.",
+          "it": "la sera la settimana scorsa, la settimana, la settimana scorsa, la settimana scorsa, la settimana scorsa, la settimana scorsa, la settimana scorsa, la settimana scorsa, la vigilia di una settimana di riposo.",
+          "pl": "Uprawa ryżu była większa po sezonie deszczowym."
         }
       }
     },
@@ -1187,7 +1187,7 @@
         "pl": "krzyż"
       },
       "ww": {
-        "sense_id": "cross.n.s1",
+        "sense_id": "cross.s1",
         "pos": "n",
         "def": {
           "en": "a shape made of two bars that meet in the middle",
@@ -1248,7 +1248,7 @@
         "pl": "tłum"
       },
       "ww": {
-        "sense_id": "crowd.n.s1",
+        "sense_id": "crowd.s1",
         "pos": "n",
         "def": {
           "en": "a large group of people",
@@ -1309,7 +1309,7 @@
         "pl": "płakać"
       },
       "ww": {
-        "sense_id": "cry.v.s1",
+        "sense_id": "cry.s1",
         "pos": "v",
         "def": {
           "en": "to have tears come from your eyes when sad",
@@ -1370,7 +1370,7 @@
         "pl": "kulturowy"
       },
       "ww": {
-        "sense_id": "cultural.a.s1",
+        "sense_id": "cultural.s1",
         "pos": "a",
         "def": {
           "en": "about a group's customs",
@@ -1431,7 +1431,7 @@
         "pl": "kubek"
       },
       "ww": {
-        "sense_id": "cup.n.s1",
+        "sense_id": "cup.s1",
         "pos": "n",
         "def": {
           "en": "a small round container with a handle for drinks",
@@ -1472,61 +1472,61 @@
     {
       "id": "cure",
       "en": "cure",
-      "ko": "cure",
-      "picture_prompt": "Photorealistic photo illustrating the idea of cure in a university study setting, no text, no letters, no logos",
+      "ko": "치료하다",
+      "picture_prompt": "candy picture-book oil-paint of a doctor handing medicine to a smiling patient, one subject, no text no letters no numbers no watermark",
       "l1": {
-        "en": "a word used in academic English: cure",
-        "ko": "cure",
-        "zh-Hans": "a word used in academic English: cure",
-        "ja": "a word used in academic English: cure",
-        "es": "a word used in academic English: cure",
-        "hi": "a word used in academic English: cure",
-        "de": "a word used in academic English: cure",
-        "vi": "a word used in academic English: cure",
-        "pt-BR": "a word used in academic English: cure",
-        "id": "a word used in academic English: cure",
-        "fr": "a word used in academic English: cure",
-        "ar": "a word used in academic English: cure",
-        "tr": "a word used in academic English: cure",
-        "it": "a word used in academic English: cure",
-        "pl": "a word used in academic English: cure"
+        "en": "make a sickness go away",
+        "ko": "치료하다",
+        "zh-Hans": "让病情消失",
+        "ja": "病気を離れる",
+        "es": "hacer desaparecer una enfermedad",
+        "hi": "बीमारियां दूर हो जाती हैं",
+        "de": "Machen Sie eine Krankheit gehen weg",
+        "vi": "Làm cho căn bệnh biến mất",
+        "pt-BR": "fazer uma doença desaparecer",
+        "id": "membuat penyakit pergi",
+        "fr": "faire disparaître une maladie",
+        "ar": "جعل المرض يذهب بعيدا",
+        "tr": "Bir hastalık ortadan kaybolur",
+        "it": "fare una malattia andare via",
+        "pl": "Niech choroba zniknie."
       },
       "ww": {
-        "sense_id": "cure.n.s1",
-        "pos": "n",
+        "sense_id": "cure.s1",
+        "pos": "v",
         "def": {
-          "en": "an academic term: cure",
-          "ko": "학술 영어 단어: cure",
-          "zh-Hans": "an academic term: cure",
-          "ja": "an academic term: cure",
-          "es": "an academic term: cure",
-          "hi": "an academic term: cure",
-          "de": "an academic term: cure",
-          "vi": "an academic term: cure",
-          "pt-BR": "an academic term: cure",
-          "id": "an academic term: cure",
-          "fr": "an academic term: cure",
-          "ar": "an academic term: cure",
-          "tr": "an academic term: cure",
-          "it": "an academic term: cure",
-          "pl": "an academic term: cure"
+          "en": "to make an illness or problem go away",
+          "ko": "치료하다",
+          "zh-Hans": "让疾病或问题消失",
+          "ja": "病気や問題が消えてしまう",
+          "es": "para hacer una enfermedad o problema desaparece",
+          "hi": "किसी बीमारी या समस्या को दूर करने के लिए",
+          "de": "um eine Krankheit oder ein Problem verschwinden zu lassen",
+          "vi": "để làm cho bệnh tật hoặc vấn đề biến mất",
+          "pt-BR": "para fazer uma doença ou problema desaparecer",
+          "id": "untuk membuat penyakit atau masalah pergi",
+          "fr": "faire disparaître une maladie ou un problème",
+          "ar": "لجعل المرض أو المشكلة تذهب بعيدا",
+          "tr": "Bir hastalık ya da problem ortadan kaybolur",
+          "it": "per fare una malattia o un problema andare via",
+          "pl": "do choroby lub problemu odejść"
         },
         "example": {
-          "en": "The report uses the word \"cure\" in an academic context.",
-          "ko": "보고서는 학술 맥락에서 \"cure\"(을)를 사용한다.",
-          "zh-Hans": "The report uses the word \"cure\" in an academic context.",
-          "ja": "The report uses the word \"cure\" in an academic context.",
-          "es": "The report uses the word \"cure\" in an academic context.",
-          "hi": "The report uses the word \"cure\" in an academic context.",
-          "de": "The report uses the word \"cure\" in an academic context.",
-          "vi": "The report uses the word \"cure\" in an academic context.",
-          "pt-BR": "The report uses the word \"cure\" in an academic context.",
-          "id": "The report uses the word \"cure\" in an academic context.",
-          "fr": "The report uses the word \"cure\" in an academic context.",
-          "ar": "The report uses the word \"cure\" in an academic context.",
-          "tr": "The report uses the word \"cure\" in an academic context.",
-          "it": "The report uses the word \"cure\" in an academic context.",
-          "pl": "The report uses the word \"cure\" in an academic context."
+          "en": "Doctors hope to cure the disease with a new drug.",
+          "ko": "의사는 새로운 약물로 질병을 치료 할 희망.",
+          "zh-Hans": "医者冀以新药治病.",
+          "ja": "医師は、新しい薬で病気を治すことを願っています。",
+          "es": "Los médicos esperan curar la enfermedad con una nueva droga.",
+          "hi": "डॉक्टरों को एक नई दवा के साथ रोग का इलाज करने की उम्मीद है।",
+          "de": "Ärzte hoffen, die Krankheit mit einem neuen Medikament zu heilen.",
+          "vi": "Các bác sĩ hy vọng chữa được bệnh bằng thuốc mới.",
+          "pt-BR": "Os médicos esperam curar a doença com uma nova droga.",
+          "id": "Dokter berharap untuk menyembuhkan penyakit dengan obat baru.",
+          "fr": "Les médecins espèrent guérir la maladie avec un nouveau médicament.",
+          "ar": "الأطباء يأملون في علاج المرض مع عقار جديد",
+          "tr": "Doktorlar hastalığı yeni bir ilaçla tedavi etmeyi umuyorlar.",
+          "it": "I medici sperano di curare la malattia con un nuovo farmaco.",
+          "pl": "Lekarze mają nadzieję wyleczyć chorobę nowym lekiem."
         }
       }
     },
@@ -1553,7 +1553,7 @@
         "pl": "ciekawy"
       },
       "ww": {
-        "sense_id": "curious.a.s1",
+        "sense_id": "curious.s1",
         "pos": "a",
         "def": {
           "en": "wanting to learn or see new things",
@@ -1617,7 +1617,7 @@
         "pl": "aktualny"
       },
       "ww": {
-        "sense_id": "current.a.s1",
+        "sense_id": "current.s1",
         "pos": "a",
         "def": {
           "en": "happening right now",
@@ -1678,7 +1678,7 @@
         "pl": "obecnie"
       },
       "ww": {
-        "sense_id": "currently.adv.s1",
+        "sense_id": "currently.s1",
         "pos": "adv",
         "def": {
           "en": "right now",
@@ -1739,7 +1739,7 @@
         "pl": "program"
       },
       "ww": {
-        "sense_id": "curriculum.n.s1",
+        "sense_id": "curriculum.s1",
         "pos": "n",
         "def": {
           "en": "the set of subjects taught in a school",
@@ -1800,7 +1800,7 @@
         "pl": "zasłona"
       },
       "ww": {
-        "sense_id": "curtain.n.s1",
+        "sense_id": "curtain.s1",
         "pos": "n",
         "def": {
           "en": "a piece of cloth that hangs over a window",
@@ -1861,7 +1861,7 @@
         "pl": "krzywa"
       },
       "ww": {
-        "sense_id": "curve.n.s1",
+        "sense_id": "curve.s1",
         "pos": "n",
         "def": {
           "en": "a line or path that bends in a smooth round way",
@@ -1922,7 +1922,7 @@
         "pl": "zwyczaj"
       },
       "ww": {
-        "sense_id": "custom.n.s1",
+        "sense_id": "custom.s1",
         "pos": "n",
         "def": {
           "en": "a usual way of doing something in a group or country",
@@ -1983,7 +1983,7 @@
         "pl": "klient (Cu)"
       },
       "ww": {
-        "sense_id": "customer.n.s1",
+        "sense_id": "customer.s1",
         "pos": "n",
         "def": {
           "en": "a person who buys things",
@@ -2044,7 +2044,7 @@
         "pl": "skaleczenie"
       },
       "ww": {
-        "sense_id": "cut.n.s1",
+        "sense_id": "cut.s1",
         "pos": "n",
         "def": {
           "en": "a small open mark on the skin",
@@ -2085,61 +2085,61 @@
     {
       "id": "dad",
       "en": "dad",
-      "ko": "dad",
-      "picture_prompt": "Photorealistic photo illustrating the idea of dad in a university study setting, no text, no letters, no logos",
+      "ko": "아빠",
+      "picture_prompt": "candy picture-book oil-paint of a father walking hand in hand with a young child, one subject, no text no letters no numbers no watermark",
       "l1": {
-        "en": "a word used in academic English: dad",
-        "ko": "dad",
-        "zh-Hans": "a word used in academic English: dad",
-        "ja": "a word used in academic English: dad",
-        "es": "a word used in academic English: dad",
-        "hi": "a word used in academic English: dad",
-        "de": "a word used in academic English: dad",
-        "vi": "a word used in academic English: dad",
-        "pt-BR": "a word used in academic English: dad",
-        "id": "a word used in academic English: dad",
-        "fr": "a word used in academic English: dad",
-        "ar": "a word used in academic English: dad",
-        "tr": "a word used in academic English: dad",
-        "it": "a word used in academic English: dad",
-        "pl": "a word used in academic English: dad"
+        "en": "your father",
+        "ko": "아빠",
+        "zh-Hans": "你父亲 听着",
+        "ja": "あなたの父",
+        "es": "tu padre",
+        "hi": "पिता",
+        "de": "Dein Vater",
+        "vi": "Bố của con",
+        "pt-BR": "seu pai",
+        "id": "Ayahmu",
+        "fr": "ton père",
+        "ar": "والدك",
+        "tr": "Baban baban",
+        "it": "tuo padre",
+        "pl": "Twój ojciec"
       },
       "ww": {
-        "sense_id": "dad.n.s1",
+        "sense_id": "dad.s1",
         "pos": "n",
         "def": {
-          "en": "an academic term: dad",
-          "ko": "학술 영어 단어: dad",
-          "zh-Hans": "an academic term: dad",
-          "ja": "an academic term: dad",
-          "es": "an academic term: dad",
-          "hi": "an academic term: dad",
-          "de": "an academic term: dad",
-          "vi": "an academic term: dad",
-          "pt-BR": "an academic term: dad",
-          "id": "an academic term: dad",
-          "fr": "an academic term: dad",
-          "ar": "an academic term: dad",
-          "tr": "an academic term: dad",
-          "it": "an academic term: dad",
-          "pl": "an academic term: dad"
+          "en": "your father",
+          "ko": "아빠",
+          "zh-Hans": "你父亲 听着",
+          "ja": "あなたの父",
+          "es": "tu padre",
+          "hi": "पिता",
+          "de": "Dein Vater",
+          "vi": "Bố của con",
+          "pt-BR": "seu pai",
+          "id": "Ayahmu",
+          "fr": "ton père",
+          "ar": "والدك",
+          "tr": "Baban baban",
+          "it": "tuo padre",
+          "pl": "Twój ojciec"
         },
         "example": {
-          "en": "The report uses the word \"dad\" in an academic context.",
-          "ko": "보고서는 학술 맥락에서 \"dad\"(을)를 사용한다.",
-          "zh-Hans": "The report uses the word \"dad\" in an academic context.",
-          "ja": "The report uses the word \"dad\" in an academic context.",
-          "es": "The report uses the word \"dad\" in an academic context.",
-          "hi": "The report uses the word \"dad\" in an academic context.",
-          "de": "The report uses the word \"dad\" in an academic context.",
-          "vi": "The report uses the word \"dad\" in an academic context.",
-          "pt-BR": "The report uses the word \"dad\" in an academic context.",
-          "id": "The report uses the word \"dad\" in an academic context.",
-          "fr": "The report uses the word \"dad\" in an academic context.",
-          "ar": "The report uses the word \"dad\" in an academic context.",
-          "tr": "The report uses the word \"dad\" in an academic context.",
-          "it": "The report uses the word \"dad\" in an academic context.",
-          "pl": "The report uses the word \"dad\" in an academic context."
+          "en": "My dad drives me to school every morning.",
+          "ko": "내 아빠는 아침에 학교에 나를 운전.",
+          "zh-Hans": "我爸每天早上送我上学",
+          "ja": "お父さんは毎日午前中学校に連れて行きます。",
+          "es": "Mi padre me lleva a la escuela cada mañana.",
+          "hi": "मेरा पिता हर सुबह स्कूल में चला जाता है।",
+          "de": "Mein Vater fährt mich jeden Morgen zur Schule.",
+          "vi": "Bố tôi đưa tôi đến trường mỗi sáng.",
+          "pt-BR": "O meu pai leva-me à escola todas as manhãs.",
+          "id": "Ayahku mengantarku ke sekolah setiap pagi.",
+          "fr": "Mon père me conduit à l'école tous les matins.",
+          "ar": "والدي يقودني إلى المدرسة كل صباح",
+          "tr": "Babam beni her sabah okula götürüyor.",
+          "it": "Mio padre mi porta a scuola ogni mattina.",
+          "pl": "Tata woził mnie do szkoły każdego ranka."
         }
       }
     },
@@ -2166,7 +2166,7 @@
         "pl": "codzienny"
       },
       "ww": {
-        "sense_id": "daily.a.s1",
+        "sense_id": "daily.s1",
         "pos": "a",
         "def": {
           "en": "happening every day",
@@ -2227,7 +2227,7 @@
         "pl": "uszkodzenie"
       },
       "ww": {
-        "sense_id": "damage.n.s1",
+        "sense_id": "damage.s1",
         "pos": "n",
         "def": {
           "en": "harm or break to an object",
@@ -2288,7 +2288,7 @@
         "pl": "taniec"
       },
       "ww": {
-        "sense_id": "dance.n.s1",
+        "sense_id": "dance.s1",
         "pos": "n",
         "def": {
           "en": "a way of moving your body to music",
@@ -2349,7 +2349,7 @@
         "pl": "niebezpieczeństwo"
       },
       "ww": {
-        "sense_id": "danger.n.s1",
+        "sense_id": "danger.s1",
         "pos": "n",
         "def": {
           "en": "something that can hurt you",
@@ -2410,7 +2410,7 @@
         "pl": "niebezpieczny"
       },
       "ww": {
-        "sense_id": "dangerous.a.s1",
+        "sense_id": "dangerous.s1",
         "pos": "a",
         "def": {
           "en": "can hurt or harm you",
@@ -2471,7 +2471,7 @@
         "pl": "odważać się"
       },
       "ww": {
-        "sense_id": "dare.v.s1",
+        "sense_id": "dare.s1",
         "pos": "v",
         "def": {
           "en": "to be brave enough to try",
@@ -2532,7 +2532,7 @@
         "pl": "ciemny"
       },
       "ww": {
-        "sense_id": "dark.a.s1",
+        "sense_id": "dark.s1",
         "pos": "a",
         "def": {
           "en": "having little light",
@@ -2593,7 +2593,7 @@
         "pl": "data"
       },
       "ww": {
-        "sense_id": "date.n.s1",
+        "sense_id": "date.s1",
         "pos": "n",
         "def": {
           "en": "a day shown on the calendar",
@@ -2654,7 +2654,7 @@
         "pl": "córka"
       },
       "ww": {
-        "sense_id": "daughter.n.s1",
+        "sense_id": "daughter.s1",
         "pos": "n",
         "def": {
           "en": "a parent's female child",
@@ -2715,7 +2715,7 @@
         "pl": "dzień"
       },
       "ww": {
-        "sense_id": "day.n.s1",
+        "sense_id": "day.s1",
         "pos": "n",
         "def": {
           "en": "time from morning to night",
@@ -2776,7 +2776,7 @@
         "pl": "martwy"
       },
       "ww": {
-        "sense_id": "dead.a.s1",
+        "sense_id": "dead.s1",
         "pos": "a",
         "def": {
           "en": "not alive anymore",
@@ -2837,7 +2837,7 @@
         "pl": "umowa"
       },
       "ww": {
-        "sense_id": "deal.n.s1",
+        "sense_id": "deal.s1",
         "pos": "n",
         "def": {
           "en": "to agree to trade things",
@@ -2898,7 +2898,7 @@
         "pl": "sprzedawca"
       },
       "ww": {
-        "sense_id": "dealer.n.s1",
+        "sense_id": "dealer.s1",
         "pos": "n",
         "def": {
           "en": "a person whose job is to sell things",
@@ -2959,7 +2959,7 @@
         "pl": "drogi"
       },
       "ww": {
-        "sense_id": "dear.a.s1",
+        "sense_id": "dear.s1",
         "pos": "a",
         "def": {
           "en": "loved very much",
@@ -3020,7 +3020,7 @@
         "pl": "śmierć"
       },
       "ww": {
-        "sense_id": "death.n.s1",
+        "sense_id": "death.s1",
         "pos": "n",
         "def": {
           "en": "when a living thing stops living",
@@ -3081,7 +3081,7 @@
         "pl": "decydować"
       },
       "ww": {
-        "sense_id": "decide.v.s1",
+        "sense_id": "decide.s1",
         "pos": "v",
         "def": {
           "en": "to choose what to do",
@@ -3142,7 +3142,7 @@
         "pl": "decyzja"
       },
       "ww": {
-        "sense_id": "decision.n.s1",
+        "sense_id": "decision.s1",
         "pos": "n",
         "def": {
           "en": "a choice you make",
@@ -3183,61 +3183,61 @@
     {
       "id": "deck",
       "en": "deck",
-      "ko": "deck",
-      "picture_prompt": "Photorealistic photo illustrating the idea of deck in a university study setting, no text, no letters, no logos",
+      "ko": "갑판·데크",
+      "picture_prompt": "candy picture-book oil-paint of a wooden deck behind a house with chairs and plants, one subject, no text no letters no numbers no watermark",
       "l1": {
-        "en": "a word used in academic English: deck",
-        "ko": "deck",
-        "zh-Hans": "a word used in academic English: deck",
-        "ja": "a word used in academic English: deck",
-        "es": "a word used in academic English: deck",
-        "hi": "a word used in academic English: deck",
-        "de": "a word used in academic English: deck",
-        "vi": "a word used in academic English: deck",
-        "pt-BR": "a word used in academic English: deck",
-        "id": "a word used in academic English: deck",
-        "fr": "a word used in academic English: deck",
-        "ar": "a word used in academic English: deck",
-        "tr": "a word used in academic English: deck",
-        "it": "a word used in academic English: deck",
-        "pl": "a word used in academic English: deck"
+        "en": "floor on a ship or outside a house",
+        "ko": "갑판·데크",
+        "zh-Hans": "船舶上或房屋外的地板",
+        "ja": "船上または家外の床",
+        "es": "en un barco o fuera de una casa",
+        "hi": "एक जहाज या घर के बाहर फर्श",
+        "de": "Boden auf einem Schiff oder außerhalb eines Hauses",
+        "vi": "Sàn nhà trên tàu hoặc ngoài nhà",
+        "pt-BR": "piso em um navio ou fora de uma casa",
+        "id": "lantai di atas kapal atau di luar rumah",
+        "fr": "plancher sur un navire ou à l'extérieur d'une maison",
+        "ar": "على متن سفينة أو خارج منزل",
+        "tr": "Bir gemide veya bir evin dışında",
+        "it": "piano su una nave o fuori una casa",
+        "pl": "podłoga na statku lub poza domem"
       },
       "ww": {
-        "sense_id": "deck.n.s1",
+        "sense_id": "deck.s1",
         "pos": "n",
         "def": {
-          "en": "an academic term: deck",
-          "ko": "학술 영어 단어: deck",
-          "zh-Hans": "an academic term: deck",
-          "ja": "an academic term: deck",
-          "es": "an academic term: deck",
-          "hi": "an academic term: deck",
-          "de": "an academic term: deck",
-          "vi": "an academic term: deck",
-          "pt-BR": "an academic term: deck",
-          "id": "an academic term: deck",
-          "fr": "an academic term: deck",
-          "ar": "an academic term: deck",
-          "tr": "an academic term: deck",
-          "it": "an academic term: deck",
-          "pl": "an academic term: deck"
+          "en": "the floor on a ship, or a wooden floor built outside a house",
+          "ko": "갑판·데크",
+          "zh-Hans": "船上的地板,或房屋外建的木地板",
+          "ja": "船上フロア、家外に建つ木製フロア",
+          "es": "el piso en un barco, o un piso de madera construido fuera de una casa",
+          "hi": "एक जहाज पर फर्श, या एक लकड़ी का फर्श एक घर के बाहर बनाया गया",
+          "de": "den Boden auf einem Schiff oder einen Holzboden, der außerhalb eines Hauses gebaut wurde",
+          "vi": "sàn nhà trên tàu, hoặc sàn gỗ được xây bên ngoài một ngôi nhà",
+          "pt-BR": "o chão em um navio, ou um chão de madeira construído fora de uma casa",
+          "id": "lantai di atas kapal, atau lantai kayu dibangun di luar rumah",
+          "fr": "le plancher sur un navire, ou un plancher en bois construit à l'extérieur d'une maison",
+          "ar": "الأرض على متن سفينة، أو أرض خشبية بنيت خارج منزل",
+          "tr": "Bir gemideki zemin veya bir ahşap zemin bir evin dışında inşa edilmiştir",
+          "it": "il pavimento su una nave, o un pavimento in legno costruito fuori una casa",
+          "pl": "podłoga na statku lub drewniana podłoga zbudowana na zewnątrz domu"
         },
         "example": {
-          "en": "The report uses the word \"deck\" in an academic context.",
-          "ko": "보고서는 학술 맥락에서 \"deck\"(을)를 사용한다.",
-          "zh-Hans": "The report uses the word \"deck\" in an academic context.",
-          "ja": "The report uses the word \"deck\" in an academic context.",
-          "es": "The report uses the word \"deck\" in an academic context.",
-          "hi": "The report uses the word \"deck\" in an academic context.",
-          "de": "The report uses the word \"deck\" in an academic context.",
-          "vi": "The report uses the word \"deck\" in an academic context.",
-          "pt-BR": "The report uses the word \"deck\" in an academic context.",
-          "id": "The report uses the word \"deck\" in an academic context.",
-          "fr": "The report uses the word \"deck\" in an academic context.",
-          "ar": "The report uses the word \"deck\" in an academic context.",
-          "tr": "The report uses the word \"deck\" in an academic context.",
-          "it": "The report uses the word \"deck\" in an academic context.",
-          "pl": "The report uses the word \"deck\" in an academic context."
+          "en": "We ate lunch on the ship's deck.",
+          "ko": "배의 갑판에 점심을 먹습니다.",
+          "zh-Hans": "我们在船甲板上吃午饭",
+          "ja": "船のデッキでランチを食べます。",
+          "es": "Comimos el almuerzo en la cubierta del barco.",
+          "hi": "हम जहाज के डेक पर दोपहर का भोजन करते हैं।",
+          "de": "Wir aßen Mittagessen auf dem Deck des Schiffes.",
+          "vi": "Chúng tôi ăn trưa trên boong tàu.",
+          "pt-BR": "Almoçamos no convés do navio.",
+          "id": "Kami makan siang di dek kapal.",
+          "fr": "On a mangé le déjeuner sur le pont du navire.",
+          "ar": "أكلنا الغداء على سطح السفينة",
+          "tr": "Geminin güvertesinde öğle yemeği yedik.",
+          "it": "Abbiamo mangiato il pranzo sul ponte della nave.",
+          "pl": "Jedliśmy lunch na pokładzie statku."
         }
       }
     },
@@ -3264,7 +3264,7 @@
         "pl": "ogłosić"
       },
       "ww": {
-        "sense_id": "declare.v.s1",
+        "sense_id": "declare.s1",
         "pos": "v",
         "def": {
           "en": "to say something loudly and clearly",
@@ -3325,7 +3325,7 @@
         "pl": "zmniejszać"
       },
       "ww": {
-        "sense_id": "decrease.v.s1",
+        "sense_id": "decrease.s1",
         "pos": "v",
         "def": {
           "en": "to make something smaller in amount",
@@ -3386,7 +3386,7 @@
         "pl": "głęboki"
       },
       "ww": {
-        "sense_id": "deep.a.s1",
+        "sense_id": "deep.s1",
         "pos": "a",
         "def": {
           "en": "to go far down",
@@ -3447,7 +3447,7 @@
         "pl": "głęboko (Deepl)"
       },
       "ww": {
-        "sense_id": "deeply.adv.s1",
+        "sense_id": "deeply.s1",
         "pos": "adv",
         "def": {
           "en": "to do something with great feeling",
@@ -3488,61 +3488,61 @@
     {
       "id": "deer",
       "en": "deer",
-      "ko": "deer",
-      "picture_prompt": "Photorealistic photo illustrating the idea of deer in a university study setting, no text, no letters, no logos",
+      "ko": "사슴",
+      "picture_prompt": "candy picture-book oil-paint of a gentle deer standing at the edge of a forest, one subject, no text no letters no numbers no watermark",
       "l1": {
-        "en": "a word used in academic English: deer",
-        "ko": "deer",
-        "zh-Hans": "a word used in academic English: deer",
-        "ja": "a word used in academic English: deer",
-        "es": "a word used in academic English: deer",
-        "hi": "a word used in academic English: deer",
-        "de": "a word used in academic English: deer",
-        "vi": "a word used in academic English: deer",
-        "pt-BR": "a word used in academic English: deer",
-        "id": "a word used in academic English: deer",
-        "fr": "a word used in academic English: deer",
-        "ar": "a word used in academic English: deer",
-        "tr": "a word used in academic English: deer",
-        "it": "a word used in academic English: deer",
-        "pl": "a word used in academic English: deer"
+        "en": "wild animal with antlers",
+        "ko": "사슴",
+        "zh-Hans": "有鹿角的野生动物",
+        "ja": "アントラーと野生動物",
+        "es": "animal salvaje con hormigueros",
+        "hi": "जानवरों के साथ जंगली जानवर",
+        "de": "Wildtiere mit Geweihen",
+        "vi": "thú có sừng",
+        "pt-BR": "animais selvagens com chifres",
+        "id": "Hewan liar dengan tanduk",
+        "fr": "animal sauvage avec des bois",
+        "ar": "حيوان بري مع نمل",
+        "tr": "Antlers ile vahşi hayvan",
+        "it": "animale selvatico con forbici",
+        "pl": "dzikie zwierzęta z porożami"
       },
       "ww": {
-        "sense_id": "deer.n.s1",
+        "sense_id": "deer.s1",
         "pos": "n",
         "def": {
-          "en": "an academic term: deer",
-          "ko": "학술 영어 단어: deer",
-          "zh-Hans": "an academic term: deer",
-          "ja": "an academic term: deer",
-          "es": "an academic term: deer",
-          "hi": "an academic term: deer",
-          "de": "an academic term: deer",
-          "vi": "an academic term: deer",
-          "pt-BR": "an academic term: deer",
-          "id": "an academic term: deer",
-          "fr": "an academic term: deer",
-          "ar": "an academic term: deer",
-          "tr": "an academic term: deer",
-          "it": "an academic term: deer",
-          "pl": "an academic term: deer"
+          "en": "a wild animal with long legs and antlers on the male",
+          "ko": "사슴",
+          "zh-Hans": "长腿和鹿角的野兽",
+          "ja": "男性の長い脚とアントラーを持つ野生動物",
+          "es": "un animal salvaje con piernas largas y hormigueros en el macho",
+          "hi": "पुरुष पर लंबे पैरों और बिछुआ के साथ एक जंगली जानवर",
+          "de": "ein wildes Tier mit langen Beinen und Geweihen am Männchen",
+          "vi": "Một con thú hoang có chân dài và sừng nai trên con đực",
+          "pt-BR": "um animal selvagem com pernas longas e chifres no macho",
+          "id": "hewan liar dengan kaki panjang dan tanduk pada laki-laki",
+          "fr": "un animal sauvage aux jambes longues et aux bois sur le mâle",
+          "ar": "حيوان بري ذو ساقين طويلتين ونملة على الذكور",
+          "tr": "Uzun bacaklar ve erkeklerde vahşi bir hayvan",
+          "it": "un animale selvatico con lunghe gambe e forbici sul maschio",
+          "pl": "dzikie zwierzę z długimi nogami i rogami na samcu"
         },
         "example": {
-          "en": "The report uses the word \"deer\" in an academic context.",
-          "ko": "보고서는 학술 맥락에서 \"deer\"(을)를 사용한다.",
-          "zh-Hans": "The report uses the word \"deer\" in an academic context.",
-          "ja": "The report uses the word \"deer\" in an academic context.",
-          "es": "The report uses the word \"deer\" in an academic context.",
-          "hi": "The report uses the word \"deer\" in an academic context.",
-          "de": "The report uses the word \"deer\" in an academic context.",
-          "vi": "The report uses the word \"deer\" in an academic context.",
-          "pt-BR": "The report uses the word \"deer\" in an academic context.",
-          "id": "The report uses the word \"deer\" in an academic context.",
-          "fr": "The report uses the word \"deer\" in an academic context.",
-          "ar": "The report uses the word \"deer\" in an academic context.",
-          "tr": "The report uses the word \"deer\" in an academic context.",
-          "it": "The report uses the word \"deer\" in an academic context.",
-          "pl": "The report uses the word \"deer\" in an academic context."
+          "en": "A deer crossed the road at dawn.",
+          "ko": "새벽에 도로를 건너.",
+          "zh-Hans": "一鹿拂子过路.",
+          "ja": "鹿は夜明けに道を渡しました。",
+          "es": "Un ciervo cruzó el camino al amanecer.",
+          "hi": "एक हिरण ने सड़क को सुबह में पार कर लिया।",
+          "de": "Ein Hirsch überquerte die Straße im Morgengrauen.",
+          "vi": "Một con nai băng qua đường lúc bình minh.",
+          "pt-BR": "Um veado atravessou a estrada ao amanhecer.",
+          "id": "Seekor rusa menyeberangi jalan saat fajar.",
+          "fr": "Un cerf a traversé la route à l'aube.",
+          "ar": "الغزال عبر الطريق عند الفجر",
+          "tr": "Bir deer şafağın yolunu geçti.",
+          "it": "Un cervo ha attraversato la strada all'alba.",
+          "pl": "Jeleń przekroczył drogę o świcie."
         }
       }
     },
@@ -3569,7 +3569,7 @@
         "pl": "porażka"
       },
       "ww": {
-        "sense_id": "defeat.n.s1",
+        "sense_id": "defeat.s1",
         "pos": "n",
         "def": {
           "en": "the act of losing a game, race, or fight",
@@ -3630,7 +3630,7 @@
         "pl": "bronić"
       },
       "ww": {
-        "sense_id": "defend.v.s1",
+        "sense_id": "defend.s1",
         "pos": "v",
         "def": {
           "en": "to keep safe from attack",
@@ -3671,61 +3671,61 @@
     {
       "id": "defense",
       "en": "defense",
-      "ko": "defense",
-      "picture_prompt": "Photorealistic photo illustrating the idea of defense in a university study setting, no text, no letters, no logos",
+      "ko": "방어",
+      "picture_prompt": "candy picture-book oil-paint of players in uniforms blocking a ball near a goal, one subject, no text no letters no numbers no watermark",
       "l1": {
-        "en": "a word used in academic English: defense",
-        "ko": "defense",
-        "zh-Hans": "a word used in academic English: defense",
-        "ja": "a word used in academic English: defense",
-        "es": "a word used in academic English: defense",
-        "hi": "a word used in academic English: defense",
-        "de": "a word used in academic English: defense",
-        "vi": "a word used in academic English: defense",
-        "pt-BR": "a word used in academic English: defense",
-        "id": "a word used in academic English: defense",
-        "fr": "a word used in academic English: defense",
-        "ar": "a word used in academic English: defense",
-        "tr": "a word used in academic English: defense",
-        "it": "a word used in academic English: defense",
-        "pl": "a word used in academic English: defense"
+        "en": "protecting against attack",
+        "ko": "방어",
+        "zh-Hans": "保护免受攻击",
+        "ja": "攻撃からの保護",
+        "es": "Protección contra ataque",
+        "hi": "हमले के खिलाफ सुरक्षा",
+        "de": "Schutz vor Angriffen",
+        "vi": "Bảo vệ chống lại tấn công",
+        "pt-BR": "proteção contra ataque",
+        "id": "melindungi terhadap serangan",
+        "fr": "Protection contre les attaques",
+        "ar": "الحماية من الهجوم",
+        "tr": "Saldırıya karşı koruma",
+        "it": "protezione contro l'attacco",
+        "pl": "ochrona przed atakiem"
       },
       "ww": {
-        "sense_id": "defense.n.s1",
+        "sense_id": "defense.s1",
         "pos": "n",
         "def": {
-          "en": "an academic term: defense",
-          "ko": "학술 영어 단어: defense",
-          "zh-Hans": "an academic term: defense",
-          "ja": "an academic term: defense",
-          "es": "an academic term: defense",
-          "hi": "an academic term: defense",
-          "de": "an academic term: defense",
-          "vi": "an academic term: defense",
-          "pt-BR": "an academic term: defense",
-          "id": "an academic term: defense",
-          "fr": "an academic term: defense",
-          "ar": "an academic term: defense",
-          "tr": "an academic term: defense",
-          "it": "an academic term: defense",
-          "pl": "an academic term: defense"
+          "en": "action taken to protect against attack or danger",
+          "ko": "방어",
+          "zh-Hans": "为防范攻击或危险而采取的行动",
+          "ja": "攻撃や危険から保護するために取られた行動",
+          "es": "medidas adoptadas para proteger contra el ataque o el peligro",
+          "hi": "हमले या खतरे के खिलाफ सुरक्षा के लिए कार्रवाई की गई",
+          "de": "Maßnahmen zum Schutz vor Angriffen oder Gefahren",
+          "vi": "hành động để bảo vệ chống lại sự tấn công hoặc nguy hiểm",
+          "pt-BR": "medidas tomadas para proteger contra ataques ou perigos",
+          "id": "tindakan diambil untuk melindungi terhadap serangan atau bahaya",
+          "fr": "mesures prises pour protéger contre les attaques ou les dangers",
+          "ar": "الإجراءات المتخذة للحماية من الهجوم أو الخطر",
+          "tr": "Saldırıya veya tehlikeye karşı korumak için harekete geçirilen eylem",
+          "it": "azione intrapresa per proteggere da attacchi o pericoli",
+          "pl": "działania podjęte w celu ochrony przed atakiem lub niebezpieczeństwem"
         },
         "example": {
-          "en": "The report uses the word \"defense\" in an academic context.",
-          "ko": "보고서는 학술 맥락에서 \"defense\"(을)를 사용한다.",
-          "zh-Hans": "The report uses the word \"defense\" in an academic context.",
-          "ja": "The report uses the word \"defense\" in an academic context.",
-          "es": "The report uses the word \"defense\" in an academic context.",
-          "hi": "The report uses the word \"defense\" in an academic context.",
-          "de": "The report uses the word \"defense\" in an academic context.",
-          "vi": "The report uses the word \"defense\" in an academic context.",
-          "pt-BR": "The report uses the word \"defense\" in an academic context.",
-          "id": "The report uses the word \"defense\" in an academic context.",
-          "fr": "The report uses the word \"defense\" in an academic context.",
-          "ar": "The report uses the word \"defense\" in an academic context.",
-          "tr": "The report uses the word \"defense\" in an academic context.",
-          "it": "The report uses the word \"defense\" in an academic context.",
-          "pl": "The report uses the word \"defense\" in an academic context."
+          "en": "The team worked on its defense before the match.",
+          "ko": "팀은 경기 전에 방어에 종사했습니다.",
+          "zh-Hans": "球队在比赛前致力于防御.",
+          "ja": "チームは試合前にその防衛に取り組んできました。",
+          "es": "El equipo trabajó en su defensa antes del partido.",
+          "hi": "टीम ने मैच से पहले अपनी रक्षा पर काम किया।",
+          "de": "Das Team arbeitete vor dem Spiel an seiner Verteidigung.",
+          "vi": "Đội đã làm việc để phòng thủ trước trận đấu.",
+          "pt-BR": "A equipe gelatina trabalhou em sua defesa antes da partida.",
+          "id": "Tim bekerja pada pertahanan sebelum pertandingan.",
+          "fr": "L'équipe a travaillé sur sa défense avant le match.",
+          "ar": "عمل الفريق على دفاعه قبل المباراة",
+          "tr": "Ekip maçtan önce savunma üzerinde çalıştı.",
+          "it": "La squadra ha lavorato sulla sua difesa prima della partita.",
+          "pl": "Zespół pracował nad Mechanizmem przed meczem."
         }
       }
     },
@@ -3752,7 +3752,7 @@
         "pl": "na pewno"
       },
       "ww": {
-        "sense_id": "definitely.adv.s1",
+        "sense_id": "definitely.s1",
         "pos": "adv",
         "def": {
           "en": "for sure, no doubt",
@@ -3813,7 +3813,7 @@
         "pl": "definicja"
       },
       "ww": {
-        "sense_id": "definition.n.s1",
+        "sense_id": "definition.s1",
         "pos": "n",
         "def": {
           "en": "what a word means",
@@ -3874,7 +3874,7 @@
         "pl": "stopień"
       },
       "ww": {
-        "sense_id": "degree.n.s1",
+        "sense_id": "degree.s1",
         "pos": "n",
         "def": {
           "en": "a unit to measure temperature or angle",
@@ -3935,7 +3935,7 @@
         "pl": "opóźnienie"
       },
       "ww": {
-        "sense_id": "delay.n.s1",
+        "sense_id": "delay.s1",
         "pos": "n",
         "def": {
           "en": "extra waiting time before something starts",
@@ -3996,7 +3996,7 @@
         "pl": "dostarczać"
       },
       "ww": {
-        "sense_id": "deliver.v.s1",
+        "sense_id": "deliver.s1",
         "pos": "v",
         "def": {
           "en": "to take something to a person or place",
@@ -4057,7 +4057,7 @@
         "pl": "dostawa"
       },
       "ww": {
-        "sense_id": "delivery.n.s1",
+        "sense_id": "delivery.s1",
         "pos": "n",
         "def": {
           "en": "the act of bringing something to a person or place",
@@ -4118,7 +4118,7 @@
         "pl": "żądanie"
       },
       "ww": {
-        "sense_id": "demand.n.s1",
+        "sense_id": "demand.s1",
         "pos": "n",
         "def": {
           "en": "a strong request for something",
@@ -4179,7 +4179,7 @@
         "pl": "demokracja"
       },
       "ww": {
-        "sense_id": "democracy.n.s1",
+        "sense_id": "democracy.s1",
         "pos": "n",
         "def": {
           "en": "a way of choosing leaders in which people vote",
@@ -4240,7 +4240,7 @@
         "pl": "demokratyczny"
       },
       "ww": {
-        "sense_id": "democratic.a.s1",
+        "sense_id": "democratic.s1",
         "pos": "a",
         "def": {
           "en": "people choose their leaders",
@@ -4301,7 +4301,7 @@
         "pl": "pokaz"
       },
       "ww": {
-        "sense_id": "demonstration.n.s1",
+        "sense_id": "demonstration.s1",
         "pos": "n",
         "def": {
           "en": "an act of showing how something is done",
@@ -4362,7 +4362,7 @@
         "pl": "dział"
       },
       "ww": {
-        "sense_id": "department.n.s1",
+        "sense_id": "department.s1",
         "pos": "n",
         "def": {
           "en": "a part of a big company",
@@ -4423,7 +4423,7 @@
         "pl": "zależeć"
       },
       "ww": {
-        "sense_id": "depend.v.s1",
+        "sense_id": "depend.s1",
         "pos": "v",
         "def": {
           "en": "to need help from someone",
@@ -4484,7 +4484,7 @@
         "pl": "zależny"
       },
       "ww": {
-        "sense_id": "dependent.a.s1",
+        "sense_id": "dependent.s1",
         "pos": "a",
         "def": {
           "en": "to need help from others",
@@ -4545,7 +4545,7 @@
         "pl": "zależny"
       },
       "ww": {
-        "sense_id": "depending.a.s1",
+        "sense_id": "depending.s1",
         "pos": "a",
         "def": {
           "en": "needing something else to happen",
@@ -4606,7 +4606,7 @@
         "pl": "przedstawiać"
       },
       "ww": {
-        "sense_id": "depict.v.s1",
+        "sense_id": "depict.s1",
         "pos": "v",
         "def": {
           "en": "to show something in a picture",
@@ -4647,61 +4647,61 @@
     {
       "id": "depression",
       "en": "depression",
-      "ko": "depression",
-      "picture_prompt": "Photorealistic photo illustrating the idea of depression in a university study setting, no text, no letters, no logos",
+      "ko": "우울·불황",
+      "picture_prompt": "candy picture-book oil-paint of a quiet city street with closed shop shutters, one subject, no text no letters no numbers no watermark",
       "l1": {
-        "en": "a word used in academic English: depression",
-        "ko": "depression",
-        "zh-Hans": "a word used in academic English: depression",
-        "ja": "a word used in academic English: depression",
-        "es": "a word used in academic English: depression",
-        "hi": "a word used in academic English: depression",
-        "de": "a word used in academic English: depression",
-        "vi": "a word used in academic English: depression",
-        "pt-BR": "a word used in academic English: depression",
-        "id": "a word used in academic English: depression",
-        "fr": "a word used in academic English: depression",
-        "ar": "a word used in academic English: depression",
-        "tr": "a word used in academic English: depression",
-        "it": "a word used in academic English: depression",
-        "pl": "a word used in academic English: depression"
+        "en": "long sadness or an economic slump",
+        "ko": "우울·불황",
+        "zh-Hans": "长期悲伤或经济萧条",
+        "ja": "長い悲しみや経済のスラムプ",
+        "es": "larga tristeza o una crisis económica",
+        "hi": "लंबे समय तक उदासी या आर्थिक मंदी",
+        "de": "Lange Traurigkeit oder wirtschaftlicher Einbruch",
+        "vi": "Nỗi buồn kéo dài hoặc kinh tế suy thoái",
+        "pt-BR": "longa tristeza ou uma crise econômica",
+        "id": "kesedihan panjang atau kemerosotan ekonomi",
+        "fr": "longue tristesse ou une crise économique",
+        "ar": "حزن طويل أو هبوط اقتصادي",
+        "tr": "Uzun bir üzüntü veya ekonomik bir slump",
+        "it": "lunga tristezza o un crollo economico",
+        "pl": "długi smutek lub kryzys gospodarczy"
       },
       "ww": {
-        "sense_id": "depression.n.s1",
+        "sense_id": "depression.s1",
         "pos": "n",
         "def": {
-          "en": "an academic term: depression",
-          "ko": "학술 영어 단어: depression",
-          "zh-Hans": "an academic term: depression",
-          "ja": "an academic term: depression",
-          "es": "an academic term: depression",
-          "hi": "an academic term: depression",
-          "de": "an academic term: depression",
-          "vi": "an academic term: depression",
-          "pt-BR": "an academic term: depression",
-          "id": "an academic term: depression",
-          "fr": "an academic term: depression",
-          "ar": "an academic term: depression",
-          "tr": "an academic term: depression",
-          "it": "an academic term: depression",
-          "pl": "an academic term: depression"
+          "en": "a long period of sadness, or a time when business is very slow",
+          "ko": "우울·불황",
+          "zh-Hans": "一段漫长的悲哀时期,或生意非常缓慢的时期",
+          "ja": "長期にわたる悲しみ、またはビジネスが非常に遅くなるとき",
+          "es": "un largo período de tristeza, o un tiempo cuando el negocio es muy lento",
+          "hi": "उदासी की एक लंबी अवधि, या एक समय जब व्यापार बहुत धीमी है",
+          "de": "eine lange Zeit der Traurigkeit oder eine Zeit, in der das Geschäft sehr langsam ist",
+          "vi": "một thời gian dài buồn bã, hay một thời gian khi kinh doanh rất chậm",
+          "pt-BR": "um longo período de tristeza, ou um tempo em que o negócio é muito lento",
+          "id": "periode panjang kesedihan, atau waktu ketika bisnis sangat lambat",
+          "fr": "une longue période de tristesse, ou une période où les affaires sont très lentes",
+          "ar": "فترة طويلة من الحزن، أو وقت يكون فيه العمل بطيئا جدا",
+          "tr": "Uzun bir üzüntü veya iş çok yavaş olduğunda bir zaman",
+          "it": "un lungo periodo di tristezza, o un tempo in cui il business è molto lento",
+          "pl": "długi okres smutku, lub czas, kiedy biznes jest bardzo powolny"
         },
         "example": {
-          "en": "The report uses the word \"depression\" in an academic context.",
-          "ko": "보고서는 학술 맥락에서 \"depression\"(을)를 사용한다.",
-          "zh-Hans": "The report uses the word \"depression\" in an academic context.",
-          "ja": "The report uses the word \"depression\" in an academic context.",
-          "es": "The report uses the word \"depression\" in an academic context.",
-          "hi": "The report uses the word \"depression\" in an academic context.",
-          "de": "The report uses the word \"depression\" in an academic context.",
-          "vi": "The report uses the word \"depression\" in an academic context.",
-          "pt-BR": "The report uses the word \"depression\" in an academic context.",
-          "id": "The report uses the word \"depression\" in an academic context.",
-          "fr": "The report uses the word \"depression\" in an academic context.",
-          "ar": "The report uses the word \"depression\" in an academic context.",
-          "tr": "The report uses the word \"depression\" in an academic context.",
-          "it": "The report uses the word \"depression\" in an academic context.",
-          "pl": "The report uses the word \"depression\" in an academic context."
+          "en": "The country faced a deep economic depression.",
+          "ko": "국가는 깊은 경제 우울증을 직면했다.",
+          "zh-Hans": "该国面临着严重的经济萧条。",
+          "ja": "国は深い経済のうつ病に直面しました。",
+          "es": "El país se enfrenta a una profunda depresión económica.",
+          "hi": "देश को गहरे आर्थिक अवसाद का सामना करना पड़ा।",
+          "de": "Das Land stand vor einer tiefen wirtschaftlichen Depression.",
+          "vi": "Nước này bị khủng hoảng kinh tế trầm trọng.",
+          "pt-BR": "O país enfrentou uma profunda depressão econômica.",
+          "id": "Negara ini menghadapi depresi ekonomi yang mendalam.",
+          "fr": "Le pays est d e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e",
+          "ar": "ويواجه البلد كسادا اقتصاديا عميقا.",
+          "tr": "Ülke derin bir ekonomik depresyonla karşı karşıya kaldı.",
+          "it": "Il paese ha affrontato una profonda depressione economica.",
+          "pl": "Kraj stanął w obliczu głębokiej depresji gospodarczej."
         }
       }
     },
@@ -4728,7 +4728,7 @@
         "pl": "głębokość"
       },
       "ww": {
-        "sense_id": "depth.n.s1",
+        "sense_id": "depth.s1",
         "pos": "n",
         "def": {
           "en": "how far down something goes from the top",
@@ -4789,7 +4789,7 @@
         "pl": "zastępca"
       },
       "ww": {
-        "sense_id": "deputy.n.s1",
+        "sense_id": "deputy.s1",
         "pos": "n",
         "def": {
           "en": "a person who helps the leader and acts when the leader is away",
@@ -4850,7 +4850,7 @@
         "pl": "opisywać"
       },
       "ww": {
-        "sense_id": "describe.v.s1",
+        "sense_id": "describe.s1",
         "pos": "v",
         "def": {
           "en": "to tell how something looks or feels",
@@ -4911,7 +4911,7 @@
         "pl": "opis"
       },
       "ww": {
-        "sense_id": "description.n.s1",
+        "sense_id": "description.s1",
         "pos": "n",
         "def": {
           "en": "words that tell about something",
@@ -4952,61 +4952,61 @@
     {
       "id": "desert",
       "en": "desert",
-      "ko": "desert",
-      "picture_prompt": "Photorealistic photo illustrating the idea of desert in a university study setting, no text, no letters, no logos",
+      "ko": "사막",
+      "picture_prompt": "candy picture-book oil-paint of sand dunes under a bright sun with one camel, one subject, no text no letters no numbers no watermark",
       "l1": {
-        "en": "a word used in academic English: desert",
-        "ko": "desert",
-        "zh-Hans": "a word used in academic English: desert",
-        "ja": "a word used in academic English: desert",
-        "es": "a word used in academic English: desert",
-        "hi": "a word used in academic English: desert",
-        "de": "a word used in academic English: desert",
-        "vi": "a word used in academic English: desert",
-        "pt-BR": "a word used in academic English: desert",
-        "id": "a word used in academic English: desert",
-        "fr": "a word used in academic English: desert",
-        "ar": "a word used in academic English: desert",
-        "tr": "a word used in academic English: desert",
-        "it": "a word used in academic English: desert",
-        "pl": "a word used in academic English: desert"
+        "en": "very dry sandy land",
+        "ko": "사막",
+        "zh-Hans": "非常干燥的沙质土地",
+        "ja": "非常に乾燥した砂浜",
+        "es": "tierra de arena muy seca",
+        "hi": "बहुत शुष्क रेतीली भूमि",
+        "de": "sehr trockenes Sandland",
+        "vi": "vùng đất khô cằn",
+        "pt-BR": "terras arenosas muito secas",
+        "id": "tanah berpasir sangat kering",
+        "fr": "terrain sableux très sec",
+        "ar": "أرض رملية جافة جدا",
+        "tr": "Çok kuru kumlu toprak",
+        "it": "terra di sabbia molto secca",
+        "pl": "bardzo suchy piaszczysty ląd"
       },
       "ww": {
-        "sense_id": "desert.n.s1",
+        "sense_id": "desert.s1",
         "pos": "n",
         "def": {
-          "en": "an academic term: desert",
-          "ko": "학술 영어 단어: desert",
-          "zh-Hans": "an academic term: desert",
-          "ja": "an academic term: desert",
-          "es": "an academic term: desert",
-          "hi": "an academic term: desert",
-          "de": "an academic term: desert",
-          "vi": "an academic term: desert",
-          "pt-BR": "an academic term: desert",
-          "id": "an academic term: desert",
-          "fr": "an academic term: desert",
-          "ar": "an academic term: desert",
-          "tr": "an academic term: desert",
-          "it": "an academic term: desert",
-          "pl": "an academic term: desert"
+          "en": "a large area of dry land with little rain and few plants",
+          "ko": "사막",
+          "zh-Hans": "一片大片干燥的土地 少雨少植物",
+          "ja": "雨や少ない植物が少ない乾燥した土地の大きな面積",
+          "es": "un gran área de tierra seca con poca lluvia y pocas plantas",
+          "hi": "छोटी बारिश और कुछ पौधों के साथ शुष्क भूमि का एक बड़ा क्षेत्र",
+          "de": "ein großes Gebiet mit wenig Regen und wenigen Pflanzen",
+          "vi": "một vùng đất khô hạn với ít mưa và ít cây cối",
+          "pt-BR": "uma grande área de terra seca com pouca chuva e poucas plantas",
+          "id": "area besar tanah kering dengan sedikit hujan dan beberapa tanaman",
+          "fr": "une grande surface de terre sèche avec peu de pluie et peu de plantes",
+          "ar": "مساحة كبيرة من الأراضي الجافة ذات الأمطار الصغيرة والنباتات القليلة",
+          "tr": "Küçük yağmur ve birkaç bitki ile büyük bir kuru arazi alanı",
+          "it": "una grande area di terra secca con poca pioggia e poche piante",
+          "pl": "duży obszar suchej ziemi z małym deszczem i kilka roślin"
         },
         "example": {
-          "en": "The report uses the word \"desert\" in an academic context.",
-          "ko": "보고서는 학술 맥락에서 \"desert\"(을)를 사용한다.",
-          "zh-Hans": "The report uses the word \"desert\" in an academic context.",
-          "ja": "The report uses the word \"desert\" in an academic context.",
-          "es": "The report uses the word \"desert\" in an academic context.",
-          "hi": "The report uses the word \"desert\" in an academic context.",
-          "de": "The report uses the word \"desert\" in an academic context.",
-          "vi": "The report uses the word \"desert\" in an academic context.",
-          "pt-BR": "The report uses the word \"desert\" in an academic context.",
-          "id": "The report uses the word \"desert\" in an academic context.",
-          "fr": "The report uses the word \"desert\" in an academic context.",
-          "ar": "The report uses the word \"desert\" in an academic context.",
-          "tr": "The report uses the word \"desert\" in an academic context.",
-          "it": "The report uses the word \"desert\" in an academic context.",
-          "pl": "The report uses the word \"desert\" in an academic context."
+          "en": "Camels travel across the hot desert.",
+          "ko": "뜨거운 사막의 여행.",
+          "zh-Hans": "骆驼穿越炎热的沙漠",
+          "ja": "キャメルは熱い砂漠を渡って旅行します。",
+          "es": "Los camellos viajan por el desierto caliente.",
+          "hi": "कैमल गर्म रेगिस्तान में यात्रा करते हैं।",
+          "de": "Kamele reisen durch die heiße Wüste.",
+          "vi": "Lạc đà đi qua sa mạc nóng bức.",
+          "pt-BR": "Os camelos atravessam o deserto quente.",
+          "id": "Unta-unta melintasi gurun panas.",
+          "fr": "Camel voyage à travers le désert chaud",
+          "ar": "(كاملز) يسافر عبر الصحراء الساخنة",
+          "tr": "Camels sıcak çölde seyahat ediyor.",
+          "it": "I cammelli viaggiano attraverso il deserto caldo.",
+          "pl": "Wielbłądy podróżują przez gorącą pustynię."
         }
       }
     },
@@ -5033,7 +5033,7 @@
         "pl": "zasługiwać"
       },
       "ww": {
-        "sense_id": "deserve.v.s1",
+        "sense_id": "deserve.s1",
         "pos": "v",
         "def": {
           "en": "to earn something good",
@@ -5074,61 +5074,61 @@
     {
       "id": "designer",
       "en": "designer",
-      "ko": "designer",
-      "picture_prompt": "Photorealistic photo illustrating the idea of designer in a university study setting, no text, no letters, no logos",
+      "ko": "디자이너",
+      "picture_prompt": "candy picture-book oil-paint of a designer sketching a dress at a desk with fabric samples, one subject, no text no letters no numbers no watermark",
       "l1": {
-        "en": "a word used in academic English: designer",
-        "ko": "designer",
-        "zh-Hans": "a word used in academic English: designer",
-        "ja": "a word used in academic English: designer",
-        "es": "a word used in academic English: designer",
-        "hi": "a word used in academic English: designer",
-        "de": "a word used in academic English: designer",
-        "vi": "a word used in academic English: designer",
-        "pt-BR": "a word used in academic English: designer",
-        "id": "a word used in academic English: designer",
-        "fr": "a word used in academic English: designer",
-        "ar": "a word used in academic English: designer",
-        "tr": "a word used in academic English: designer",
-        "it": "a word used in academic English: designer",
-        "pl": "a word used in academic English: designer"
+        "en": "person who plans how things look",
+        "ko": "디자이너",
+        "zh-Hans": "一个人谁计划案件的看起来",
+        "ja": "物事がどのように見えるかを計画する人",
+        "es": "persona que planea cómo se ven las cosas",
+        "hi": "वह व्यक्ति जो चीजों की योजना बना रहा है",
+        "de": "Person, die plant, wie die Dinge aussehen",
+        "vi": "người có kế hoạch như thế nào",
+        "pt-BR": "pessoa que planeja como as coisas parecem",
+        "id": "orang yang merencanakan bagaimana hal-hal terlihat",
+        "fr": "qui planifie les choses",
+        "ar": "الشخص الذي يخطط كيف تبدو الأمور",
+        "tr": "Şeylerin nasıl göründüğünü planlayan kişi",
+        "it": "persona che progetta come le cose sembrano",
+        "pl": "osoba, która planuje, jak rzeczy wyglądają"
       },
       "ww": {
-        "sense_id": "designer.n.s1",
+        "sense_id": "designer.s1",
         "pos": "n",
         "def": {
-          "en": "an academic term: designer",
-          "ko": "학술 영어 단어: designer",
-          "zh-Hans": "an academic term: designer",
-          "ja": "an academic term: designer",
-          "es": "an academic term: designer",
-          "hi": "an academic term: designer",
-          "de": "an academic term: designer",
-          "vi": "an academic term: designer",
-          "pt-BR": "an academic term: designer",
-          "id": "an academic term: designer",
-          "fr": "an academic term: designer",
-          "ar": "an academic term: designer",
-          "tr": "an academic term: designer",
-          "it": "an academic term: designer",
-          "pl": "an academic term: designer"
+          "en": "a person whose job is to plan how things look or work",
+          "ko": "디자이너",
+          "zh-Hans": "一个人的工作是规划 事物的外观或工作",
+          "ja": "仕事が物事がどのように見えるかを計画している人",
+          "es": "una persona cuyo trabajo es planificar cómo las cosas se ven o trabajan",
+          "hi": "एक व्यक्ति जिसका नौकरी यह है कि कैसे चीज़ें दिखती हैं या काम करती हैं",
+          "de": "Eine Person, deren Aufgabe es ist zu planen, wie die Dinge aussehen oder funktionieren",
+          "vi": "Một người có công việc lên kế hoạch cho mọi việc",
+          "pt-BR": "uma pessoa cujo trabalho é planejar como as coisas parecem ou funcionam",
+          "id": "seseorang yang pekerjaannya adalah untuk merencanakan bagaimana hal-hal yang terlihat atau bekerja",
+          "fr": "une personne dont le travail consiste à planifier l'aspect ou le travail des choses",
+          "ar": "الشخص الذي يكون عمله هو تخطيط كيف تبدو الأمور أو العمل",
+          "tr": "İşi olan bir kişi, şeylerin nasıl göründüğünü veya çalıştığını planlamaktır",
+          "it": "una persona il cui lavoro è quello di pianificare come le cose sembrano o lavorano",
+          "pl": "osoba, której zadaniem jest planowanie jak rzeczy wyglądają lub działają"
         },
         "example": {
-          "en": "The report uses the word \"designer\" in an academic context.",
-          "ko": "보고서는 학술 맥락에서 \"designer\"(을)를 사용한다.",
-          "zh-Hans": "The report uses the word \"designer\" in an academic context.",
-          "ja": "The report uses the word \"designer\" in an academic context.",
-          "es": "The report uses the word \"designer\" in an academic context.",
-          "hi": "The report uses the word \"designer\" in an academic context.",
-          "de": "The report uses the word \"designer\" in an academic context.",
-          "vi": "The report uses the word \"designer\" in an academic context.",
-          "pt-BR": "The report uses the word \"designer\" in an academic context.",
-          "id": "The report uses the word \"designer\" in an academic context.",
-          "fr": "The report uses the word \"designer\" in an academic context.",
-          "ar": "The report uses the word \"designer\" in an academic context.",
-          "tr": "The report uses the word \"designer\" in an academic context.",
-          "it": "The report uses the word \"designer\" in an academic context.",
-          "pl": "The report uses the word \"designer\" in an academic context."
+          "en": "The designer drew plans for a new school building.",
+          "ko": "디자이너는 새로운 학교 건물을 계획합니다.",
+          "zh-Hans": "设计师提出新校舍规划.",
+          "ja": "デザイナーが新校舎を計画する",
+          "es": "El diseñador dibujado planea un nuevo edificio escolar.",
+          "hi": "डिजाइनर ने एक नए स्कूल भवन के लिए योजना बनाई।",
+          "de": "Der Designer zeichnete Pläne für ein neues Schulgebäude.",
+          "vi": "Nhà thiết kế đã lên kế hoạch xây dựng một tòa nhà mới.",
+          "pt-BR": "O designer desenhou planos para um novo edifício escolar.",
+          "id": "Desainer menggambar rencana untuk bangunan sekolah baru.",
+          "fr": "Le concepteur a élaboré des plans pour un nouveau bâtiment scolaire.",
+          "ar": "رسم المصمم خططاً لبناء مدرسة جديدة",
+          "tr": "Tasarımcı yeni bir okul binası için planlar çekti.",
+          "it": "Il designer ha disegnato i piani per un nuovo edificio scolastico.",
+          "pl": "Projektant narysował plany nowego budynku szkolnego."
         }
       }
     },
@@ -5155,7 +5155,7 @@
         "pl": "pragnienie"
       },
       "ww": {
-        "sense_id": "desire.n.s1",
+        "sense_id": "desire.s1",
         "pos": "n",
         "def": {
           "en": "a strong wish",
@@ -5216,7 +5216,7 @@
         "pl": "biurko"
       },
       "ww": {
-        "sense_id": "desk.n.s1",
+        "sense_id": "desk.s1",
         "pos": "n",
         "def": {
           "en": "a table where you sit to write and study",
@@ -5277,7 +5277,7 @@
         "pl": "zdesperowany"
       },
       "ww": {
-        "sense_id": "desperate.a.s1",
+        "sense_id": "desperate.s1",
         "pos": "a",
         "def": {
           "en": "feeling very worried and hopeless",
@@ -5338,7 +5338,7 @@
         "pl": "zniszczyć"
       },
       "ww": {
-        "sense_id": "destroy.v.s1",
+        "sense_id": "destroy.s1",
         "pos": "v",
         "def": {
           "en": "to break something so it is gone",
@@ -5382,61 +5382,61 @@
     {
       "id": "destruction",
       "en": "destruction",
-      "ko": "destruction",
-      "picture_prompt": "Photorealistic photo illustrating the idea of destruction in a university study setting, no text, no letters, no logos",
+      "ko": "파괴",
+      "picture_prompt": "candy picture-book oil-paint of a fallen tree and broken roof after a storm, one subject, no text no letters no numbers no watermark",
       "l1": {
-        "en": "a word used in academic English: destruction",
-        "ko": "destruction",
-        "zh-Hans": "a word used in academic English: destruction",
-        "ja": "a word used in academic English: destruction",
-        "es": "a word used in academic English: destruction",
-        "hi": "a word used in academic English: destruction",
-        "de": "a word used in academic English: destruction",
-        "vi": "a word used in academic English: destruction",
-        "pt-BR": "a word used in academic English: destruction",
-        "id": "a word used in academic English: destruction",
-        "fr": "a word used in academic English: destruction",
-        "ar": "a word used in academic English: destruction",
-        "tr": "a word used in academic English: destruction",
-        "it": "a word used in academic English: destruction",
-        "pl": "a word used in academic English: destruction"
+        "en": "great damage or ruin",
+        "ko": "파괴",
+        "zh-Hans": "大破坏或毁灭",
+        "ja": "大きい損傷かルイン",
+        "es": "gran daño o ruina",
+        "hi": "महान क्षति या बर्बाद",
+        "de": "Großer Schaden oder Ruine",
+        "vi": "tổn thất lớn hoặc phá hủy",
+        "pt-BR": "grandes danos ou ruína",
+        "id": "kerusakan besar atau kerusakan",
+        "fr": "grands precautions ou ruine",
+        "ar": ")د(",
+        "tr": "Büyük hasar veya mahvetme",
+        "it": "grande danno o rovina",
+        "pl": "wielkie szkody lub ruiny"
       },
       "ww": {
-        "sense_id": "destruction.n.s1",
+        "sense_id": "destruction.s1",
         "pos": "n",
         "def": {
-          "en": "an academic term: destruction",
-          "ko": "학술 영어 단어: destruction",
-          "zh-Hans": "an academic term: destruction",
-          "ja": "an academic term: destruction",
-          "es": "an academic term: destruction",
-          "hi": "an academic term: destruction",
-          "de": "an academic term: destruction",
-          "vi": "an academic term: destruction",
-          "pt-BR": "an academic term: destruction",
-          "id": "an academic term: destruction",
-          "fr": "an academic term: destruction",
-          "ar": "an academic term: destruction",
-          "tr": "an academic term: destruction",
-          "it": "an academic term: destruction",
-          "pl": "an academic term: destruction"
+          "en": "severe damage that ruins something",
+          "ko": "파괴",
+          "zh-Hans": "严重的破坏 破坏的东西,",
+          "ja": "何かを台無しにする深刻な損傷",
+          "es": "daño grave que arruina algo",
+          "hi": "गंभीर क्षति जो कुछ को बर्बाद कर देती है",
+          "de": "Schwere Schäden, die etwas ruinieren",
+          "vi": "Thiệt hại nặng nề làm hư hại một cái gì đó",
+          "pt-BR": "danos graves que estragam alguma coisa",
+          "id": "kerusakan parah yang selfie kan sesuatu",
+          "fr": "De graves dégâts qui ruinent quelque chose",
+          "ar": "ضرر شديد يدمر شيئا",
+          "tr": "Bir şeyi mahveden şiddetli hasar",
+          "it": "danno grave che rovina qualcosa",
+          "pl": "poważne uszkodzenie, które coś niszczy"
         },
         "example": {
-          "en": "The report uses the word \"destruction\" in an academic context.",
-          "ko": "보고서는 학술 맥락에서 \"destruction\"(을)를 사용한다.",
-          "zh-Hans": "The report uses the word \"destruction\" in an academic context.",
-          "ja": "The report uses the word \"destruction\" in an academic context.",
-          "es": "The report uses the word \"destruction\" in an academic context.",
-          "hi": "The report uses the word \"destruction\" in an academic context.",
-          "de": "The report uses the word \"destruction\" in an academic context.",
-          "vi": "The report uses the word \"destruction\" in an academic context.",
-          "pt-BR": "The report uses the word \"destruction\" in an academic context.",
-          "id": "The report uses the word \"destruction\" in an academic context.",
-          "fr": "The report uses the word \"destruction\" in an academic context.",
-          "ar": "The report uses the word \"destruction\" in an academic context.",
-          "tr": "The report uses the word \"destruction\" in an academic context.",
-          "it": "The report uses the word \"destruction\" in an academic context.",
-          "pl": "The report uses the word \"destruction\" in an academic context."
+          "en": "The storm caused wide destruction along the coast.",
+          "ko": "폭풍은 해안을 따라 넓은 파괴를 발생했습니다.",
+          "zh-Hans": "风暴在沿岸造成广泛破坏.",
+          "ja": "海岸沿いの広い破壊を引き起こした嵐。",
+          "es": "La tormenta causó una gran destrucción en la costa.",
+          "hi": "तूफान के कारण तट पर व्यापक विनाश हुआ।",
+          "de": "Der Sturm verursachte große Zerstörung entlang der Küste.",
+          "vi": "Cơn bão gây ra sự tàn phá khắp bờ biển.",
+          "pt-BR": "- Não, não!",
+          "id": "Badai menyebabkan kehancuran luas di sepanjang pantai.",
+          "fr": "La tempête a causé une grande destruction Partnership le long de la côte.",
+          "ar": "العاصفة تسببت في تدمير واسع على طول الساحل",
+          "tr": "Fırtına sahil boyunca geniş bir yıkıma neden oldu.",
+          "it": "La tempesta ha causato un'ampia distruzione lungo la costa.",
+          "pl": "Burza spowodowała rozległe zniszczenia wzdłuż wybrzeża."
         }
       }
     },
@@ -5463,7 +5463,7 @@
         "pl": "szczegół"
       },
       "ww": {
-        "sense_id": "detail.n.s1",
+        "sense_id": "detail.s1",
         "pos": "n",
         "def": {
           "en": "a small extra part",
@@ -5524,7 +5524,7 @@
         "pl": "szczegółowy"
       },
       "ww": {
-        "sense_id": "detailed.a.s1",
+        "sense_id": "detailed.s1",
         "pos": "a",
         "def": {
           "en": "full of small facts",
@@ -5585,7 +5585,7 @@
         "pl": "określać"
       },
       "ww": {
-        "sense_id": "determine.v.s1",
+        "sense_id": "determine.s1",
         "pos": "v",
         "def": {
           "en": "to decide something after thinking",
@@ -5646,7 +5646,7 @@
         "pl": "rozwijać"
       },
       "ww": {
-        "sense_id": "develop.v.s1",
+        "sense_id": "develop.s1",
         "pos": "v",
         "def": {
           "en": "to grow or become better",
@@ -5707,7 +5707,7 @@
         "pl": "rozwój"
       },
       "ww": {
-        "sense_id": "development.n.s1",
+        "sense_id": "development.s1",
         "pos": "n",
         "def": {
           "en": "the process of growing bigger",
@@ -5748,305 +5748,305 @@
     {
       "id": "diagram",
       "en": "diagram",
-      "ko": "diagram",
-      "picture_prompt": "Photorealistic photo illustrating the idea of diagram in a university study setting, no text, no letters, no logos",
+      "ko": "도표",
+      "picture_prompt": "candy picture-book oil-paint of a chalkboard sketch of arrows showing rain and clouds, one subject, no text no letters no numbers no watermark",
       "l1": {
-        "en": "a word used in academic English: diagram",
-        "ko": "diagram",
-        "zh-Hans": "a word used in academic English: diagram",
-        "ja": "a word used in academic English: diagram",
-        "es": "a word used in academic English: diagram",
-        "hi": "a word used in academic English: diagram",
-        "de": "a word used in academic English: diagram",
-        "vi": "a word used in academic English: diagram",
-        "pt-BR": "a word used in academic English: diagram",
-        "id": "a word used in academic English: diagram",
-        "fr": "a word used in academic English: diagram",
-        "ar": "a word used in academic English: diagram",
-        "tr": "a word used in academic English: diagram",
-        "it": "a word used in academic English: diagram",
-        "pl": "a word used in academic English: diagram"
+        "en": "simple drawing that explains",
+        "ko": "도표",
+        "zh-Hans": "简单的绘图来解释",
+        "ja": "説明する簡単な図面",
+        "es": "dibujo simple que explica",
+        "hi": "सरल ड्राइंग जो बताते हैं",
+        "de": "Einfache Zeichnung, die erklärt",
+        "vi": "vẽ đơn giản giải thích",
+        "pt-BR": "desenho simples que explica",
+        "id": "gambar sederhana yang menjelaskan",
+        "fr": "dessin simple qui explique",
+        "ar": "رسم بسيط يشرح",
+        "tr": "Açıklamayı açıklayan basit çizim",
+        "it": "disegno semplice che spiega",
+        "pl": "prosty rysunek, który wyjaśnia"
       },
       "ww": {
-        "sense_id": "diagram.n.s1",
+        "sense_id": "diagram.s1",
         "pos": "n",
         "def": {
-          "en": "an academic term: diagram",
-          "ko": "학술 영어 단어: diagram",
-          "zh-Hans": "an academic term: diagram",
-          "ja": "an academic term: diagram",
-          "es": "an academic term: diagram",
-          "hi": "an academic term: diagram",
-          "de": "an academic term: diagram",
-          "vi": "an academic term: diagram",
-          "pt-BR": "an academic term: diagram",
-          "id": "an academic term: diagram",
-          "fr": "an academic term: diagram",
-          "ar": "an academic term: diagram",
-          "tr": "an academic term: diagram",
-          "it": "an academic term: diagram",
-          "pl": "an academic term: diagram"
+          "en": "a simple drawing that shows how something works or is built",
+          "ko": "도표",
+          "zh-Hans": "简单的绘图,显示东西是如何工作或构造的",
+          "ja": "何かがどのように機能するか、または構築されているかを示すシンプルな図面",
+          "es": "un simple dibujo que muestra cómo funciona o se construye",
+          "hi": "एक साधारण ड्राइंग जो दिखाता है कि कुछ काम किस प्रकार करता है या बनाया गया है",
+          "de": "eine einfache Zeichnung, die zeigt, wie etwas funktioniert oder aufgebaut ist",
+          "vi": "Một bức vẽ đơn giản cho thấy cách mà vật thể hoạt động hoặc được xây dựng",
+          "pt-BR": "um desenho simples que mostra como algo funciona ou é construído",
+          "id": "gambar sederhana yang menunjukkan bagaimana sesuatu bekerja atau dibangun",
+          "fr": "un dessin simple qui montre comment quelque chose fonctionne ou est construit",
+          "ar": "رسم بسيط يبين كيف يعمل شيء أو يبني",
+          "tr": "Bir şeyin nasıl çalıştığını veya inşa edildiğini gösteren basit bir çizim",
+          "it": "un semplice disegno che mostra come funziona qualcosa o è costruito",
+          "pl": "prosty rysunek, który pokazuje jak coś działa lub jest zbudowany"
         },
         "example": {
-          "en": "The report uses the word \"diagram\" in an academic context.",
-          "ko": "보고서는 학술 맥락에서 \"diagram\"(을)를 사용한다.",
-          "zh-Hans": "The report uses the word \"diagram\" in an academic context.",
-          "ja": "The report uses the word \"diagram\" in an academic context.",
-          "es": "The report uses the word \"diagram\" in an academic context.",
-          "hi": "The report uses the word \"diagram\" in an academic context.",
-          "de": "The report uses the word \"diagram\" in an academic context.",
-          "vi": "The report uses the word \"diagram\" in an academic context.",
-          "pt-BR": "The report uses the word \"diagram\" in an academic context.",
-          "id": "The report uses the word \"diagram\" in an academic context.",
-          "fr": "The report uses the word \"diagram\" in an academic context.",
-          "ar": "The report uses the word \"diagram\" in an academic context.",
-          "tr": "The report uses the word \"diagram\" in an academic context.",
-          "it": "The report uses the word \"diagram\" in an academic context.",
-          "pl": "The report uses the word \"diagram\" in an academic context."
+          "en": "The teacher drew a diagram of the water cycle.",
+          "ko": "교사는 물주기의 다이어그램을 흘렸습니다.",
+          "zh-Hans": "师画水循环图.",
+          "ja": "教師は水循環の図を描きました。",
+          "es": "El maestro dibujó un diagrama del ciclo del agua.",
+          "hi": "शिक्षक ने जल चक्र का आरेख आकर्षित किया।",
+          "de": "Der Lehrer zeichnete ein Diagramm des Wasserkreislaufs.",
+          "vi": "Thầy giáo vẽ biểu đồ chu trình của nước.",
+          "pt-BR": "O professor desenhou um diagrama do ciclo da água.",
+          "id": "Guru menggambar diagram siklus air.",
+          "fr": "L'enseignant a dessiné un diagramme du cycle de l'eau.",
+          "ar": "قام المعلم برسم مخطط لدورة المياه",
+          "tr": "Öğretmen su döngüsünün bir diyagramını çizdi.",
+          "it": "L'insegnante ha disegnato un diagramma del ciclo dell'acqua.",
+          "pl": "Nauczyciel narysował schemat cyklu wodnego."
         }
       }
     },
     {
       "id": "dialogue",
       "en": "dialogue",
-      "ko": "dialogue",
-      "picture_prompt": "Photorealistic photo illustrating the idea of dialogue in a university study setting, no text, no letters, no logos",
+      "ko": "대화",
+      "picture_prompt": "candy picture-book oil-paint of two people facing each other talking over coffee, one subject, no text no letters no numbers no watermark",
       "l1": {
-        "en": "a word used in academic English: dialogue",
-        "ko": "dialogue",
-        "zh-Hans": "a word used in academic English: dialogue",
-        "ja": "a word used in academic English: dialogue",
-        "es": "a word used in academic English: dialogue",
-        "hi": "a word used in academic English: dialogue",
-        "de": "a word used in academic English: dialogue",
-        "vi": "a word used in academic English: dialogue",
-        "pt-BR": "a word used in academic English: dialogue",
-        "id": "a word used in academic English: dialogue",
-        "fr": "a word used in academic English: dialogue",
-        "ar": "a word used in academic English: dialogue",
-        "tr": "a word used in academic English: dialogue",
-        "it": "a word used in academic English: dialogue",
-        "pl": "a word used in academic English: dialogue"
+        "en": "talk between people",
+        "ko": "대화",
+        "zh-Hans": "人际对话",
+        "ja": "人との交流",
+        "es": "hablar entre la gente",
+        "hi": "लोगों के बीच बातचीत",
+        "de": "Gespräch zwischen Menschen",
+        "vi": "Nói chuyện giữa mọi người",
+        "pt-BR": "conversa0-0.",
+        "id": "bicara antara orang",
+        "fr": "parler entre les gens",
+        "ar": "الحديث بين الناس",
+        "tr": "İnsanlar arasında konuşma",
+        "it": "parlare tra le persone",
+        "pl": "Rozmowy między ludźmi"
       },
       "ww": {
-        "sense_id": "dialogue.n.s1",
+        "sense_id": "dialogue.s1",
         "pos": "n",
         "def": {
-          "en": "an academic term: dialogue",
-          "ko": "학술 영어 단어: dialogue",
-          "zh-Hans": "an academic term: dialogue",
-          "ja": "an academic term: dialogue",
-          "es": "an academic term: dialogue",
-          "hi": "an academic term: dialogue",
-          "de": "an academic term: dialogue",
-          "vi": "an academic term: dialogue",
-          "pt-BR": "an academic term: dialogue",
-          "id": "an academic term: dialogue",
-          "fr": "an academic term: dialogue",
-          "ar": "an academic term: dialogue",
-          "tr": "an academic term: dialogue",
-          "it": "an academic term: dialogue",
-          "pl": "an academic term: dialogue"
+          "en": "a conversation between two or more people",
+          "ko": "대화",
+          "zh-Hans": "两个或两个以上人之间的对话",
+          "ja": "2名以上の人との会話",
+          "es": "una conversación entre dos o más personas",
+          "hi": "दो या अधिक लोगों के बीच बातचीत",
+          "de": "Ein Gespräch zwischen zwei oder mehr Personen",
+          "vi": "một cuộc trò chuyện giữa hai người hay nhiều người",
+          "pt-BR": "NOVA IORQUE",
+          "id": "percakapan antara dua atau lebih orang",
+          "fr": "une conversation entre deux personnes ou plus",
+          "ar": "محادثة بين شخصين أو أكثر",
+          "tr": "İki veya daha fazla insan arasındaki bir konuşma",
+          "it": "una conversazione tra due o più persone",
+          "pl": "rozmowa między dwoma lub więcej osobami"
         },
         "example": {
-          "en": "The report uses the word \"dialogue\" in an academic context.",
-          "ko": "보고서는 학술 맥락에서 \"dialogue\"(을)를 사용한다.",
-          "zh-Hans": "The report uses the word \"dialogue\" in an academic context.",
-          "ja": "The report uses the word \"dialogue\" in an academic context.",
-          "es": "The report uses the word \"dialogue\" in an academic context.",
-          "hi": "The report uses the word \"dialogue\" in an academic context.",
-          "de": "The report uses the word \"dialogue\" in an academic context.",
-          "vi": "The report uses the word \"dialogue\" in an academic context.",
-          "pt-BR": "The report uses the word \"dialogue\" in an academic context.",
-          "id": "The report uses the word \"dialogue\" in an academic context.",
-          "fr": "The report uses the word \"dialogue\" in an academic context.",
-          "ar": "The report uses the word \"dialogue\" in an academic context.",
-          "tr": "The report uses the word \"dialogue\" in an academic context.",
-          "it": "The report uses the word \"dialogue\" in an academic context.",
-          "pl": "The report uses the word \"dialogue\" in an academic context."
+          "en": "The play opens with a short dialogue between friends.",
+          "ko": "놀이는 친구와 짧은 대화로 열립니다.",
+          "zh-Hans": "本剧开场时朋友之间进行了简短的对话.",
+          "ja": "友達同士の短い対話でプレイが開かれます。",
+          "es": "La obra abre un breve diálogo entre amigos.",
+          "hi": "यह नाटक दोस्तों के बीच एक लघु संवाद के साथ खुलता है।",
+          "de": "Das Stück beginnt mit einem kurzen Dialog zwischen Freunden.",
+          "vi": "Vở kịch mở đầu với một cuộc đối thoại ngắn giữa bạn bè.",
+          "pt-BR": "A peça começa com um breve diálogo entre amigos.",
+          "id": "Drama ini dibuka dengan dialog singkat antara teman-teman.",
+          "fr": "La pièce s'ouvre avec un court dialogue entre amis.",
+          "ar": "المسرحية مفتوحة مع حوار قصير بين الأصدقاء",
+          "tr": "Oyun, arkadaşlar arasında kısa bir diyalogla açılır.",
+          "it": "Il gioco si apre con un breve dialogo tra amici.",
+          "pl": "Sztuka rozpoczyna się krótkim dialogiem między przyjaciółmi."
         }
       }
     },
     {
       "id": "diamond",
       "en": "diamond",
-      "ko": "diamond",
-      "picture_prompt": "Photorealistic photo illustrating the idea of diamond in a university study setting, no text, no letters, no logos",
+      "ko": "다이아몬드",
+      "picture_prompt": "candy picture-book oil-paint of a sparkling diamond ring in a velvet box, one subject, no text no letters no numbers no watermark",
       "l1": {
-        "en": "a word used in academic English: diamond",
-        "ko": "diamond",
-        "zh-Hans": "a word used in academic English: diamond",
-        "ja": "a word used in academic English: diamond",
-        "es": "a word used in academic English: diamond",
-        "hi": "a word used in academic English: diamond",
-        "de": "a word used in academic English: diamond",
-        "vi": "a word used in academic English: diamond",
-        "pt-BR": "a word used in academic English: diamond",
-        "id": "a word used in academic English: diamond",
-        "fr": "a word used in academic English: diamond",
-        "ar": "a word used in academic English: diamond",
-        "tr": "a word used in academic English: diamond",
-        "it": "a word used in academic English: diamond",
-        "pl": "a word used in academic English: diamond"
+        "en": "very hard shiny gem",
+        "ko": "다이아몬드",
+        "zh-Hans": "非常闪亮的宝石",
+        "ja": "非常に硬い光沢のある宝石",
+        "es": "joya brillante muy dura",
+        "hi": "चमकदार रत्न",
+        "de": "sehr harte glänzende Edelsteine",
+        "vi": "viên ngọc lấp lánh",
+        "pt-BR": "muito duro brilhante gema",
+        "id": "permata mengkilap sangat keras",
+        "fr": "gemme brillante très dure",
+        "ar": "جوهرة لامعة",
+        "tr": "Çok sert parlak gem",
+        "it": "gemma molto lucida",
+        "pl": "bardzo twardy błyszczący klejnot"
       },
       "ww": {
-        "sense_id": "diamond.n.s1",
+        "sense_id": "diamond.s1",
         "pos": "n",
         "def": {
-          "en": "an academic term: diamond",
-          "ko": "학술 영어 단어: diamond",
-          "zh-Hans": "an academic term: diamond",
-          "ja": "an academic term: diamond",
-          "es": "an academic term: diamond",
-          "hi": "an academic term: diamond",
-          "de": "an academic term: diamond",
-          "vi": "an academic term: diamond",
-          "pt-BR": "an academic term: diamond",
-          "id": "an academic term: diamond",
-          "fr": "an academic term: diamond",
-          "ar": "an academic term: diamond",
-          "tr": "an academic term: diamond",
-          "it": "an academic term: diamond",
-          "pl": "an academic term: diamond"
+          "en": "a clear, very hard stone used in jewellery",
+          "ko": "다이아몬드",
+          "zh-Hans": "一颗明晰,非常坚硬的石头 用于珠宝",
+          "ja": "宝石で使用されている透明で非常に硬い石",
+          "es": "una piedra clara y muy dura utilizada en joyas",
+          "hi": "आभूषण में इस्तेमाल किया जाने वाला एक स्पष्ट, बहुत कठोर पत्थर",
+          "de": "ein klarer, sehr harter Stein, der in Schmuck verwendet wird",
+          "vi": "Một hòn đá trong suốt, cứng dùng trong ngành kim hoàn",
+          "pt-BR": "uma pedra clara, muito dura usada em jóias",
+          "id": "jelas, batu yang sangat keras digunakan dalam perhiasan",
+          "fr": "une pierre claire et très dure utilisée dans les bijoux",
+          "ar": "حجر واضح جداً مستعمل في المجوهرات",
+          "tr": "Açık, mücevherleryde kullanılan çok sert bir taş",
+          "it": "una pietra chiara, molto dura utilizzata nei gioielli",
+          "pl": "przezroczysty, bardzo twardy kamień stosowany w biżuterii"
         },
         "example": {
-          "en": "The report uses the word \"diamond\" in an academic context.",
-          "ko": "보고서는 학술 맥락에서 \"diamond\"(을)를 사용한다.",
-          "zh-Hans": "The report uses the word \"diamond\" in an academic context.",
-          "ja": "The report uses the word \"diamond\" in an academic context.",
-          "es": "The report uses the word \"diamond\" in an academic context.",
-          "hi": "The report uses the word \"diamond\" in an academic context.",
-          "de": "The report uses the word \"diamond\" in an academic context.",
-          "vi": "The report uses the word \"diamond\" in an academic context.",
-          "pt-BR": "The report uses the word \"diamond\" in an academic context.",
-          "id": "The report uses the word \"diamond\" in an academic context.",
-          "fr": "The report uses the word \"diamond\" in an academic context.",
-          "ar": "The report uses the word \"diamond\" in an academic context.",
-          "tr": "The report uses the word \"diamond\" in an academic context.",
-          "it": "The report uses the word \"diamond\" in an academic context.",
-          "pl": "The report uses the word \"diamond\" in an academic context."
+          "en": "She wore a ring with a small diamond.",
+          "ko": "작은 다이아몬드와 반지를 착용합니다.",
+          "zh-Hans": "她戴着小钻石戒指",
+          "ja": "小さなダイヤモンドでリングを着ています。",
+          "es": "Llevaba un anillo con un pequeño diamante.",
+          "hi": "वह एक छोटी हीरे के साथ एक अंगूठी पहनती थी।",
+          "de": "Sie trug einen Ring mit einem kleinen Diamanten.",
+          "vi": "Cô ấy đeo nhẫn với một viên kim cương nhỏ.",
+          "pt-BR": "Ela usava um anel com um pequeno diamante.",
+          "id": "Dia memakai cincin dengan berlian kecil.",
+          "fr": "Elle portait une bague avec un petit diamant.",
+          "ar": "كانت ترتدي خاتماً مع ألماسة صغيرة",
+          "tr": "Küçük bir elmasla bir yüzük giyiyordu.",
+          "it": "Indossava un anello con un piccolo diamante.",
+          "pl": "Nosiła pierścionek z małym diamentem."
         }
       }
     },
     {
       "id": "diary",
       "en": "diary",
-      "ko": "diary",
-      "picture_prompt": "Photorealistic photo illustrating the idea of diary in a university study setting, no text, no letters, no logos",
+      "ko": "일기",
+      "picture_prompt": "candy picture-book oil-paint of an open notebook with a pen on a bedside table, one subject, no text no letters no numbers no watermark",
       "l1": {
-        "en": "a word used in academic English: diary",
-        "ko": "diary",
-        "zh-Hans": "a word used in academic English: diary",
-        "ja": "a word used in academic English: diary",
-        "es": "a word used in academic English: diary",
-        "hi": "a word used in academic English: diary",
-        "de": "a word used in academic English: diary",
-        "vi": "a word used in academic English: diary",
-        "pt-BR": "a word used in academic English: diary",
-        "id": "a word used in academic English: diary",
-        "fr": "a word used in academic English: diary",
-        "ar": "a word used in academic English: diary",
-        "tr": "a word used in academic English: diary",
-        "it": "a word used in academic English: diary",
-        "pl": "a word used in academic English: diary"
+        "en": "book where you write each day",
+        "ko": "일기",
+        "zh-Hans": "每天写的书",
+        "ja": "日ごとに書いてある本",
+        "es": "libro donde escribes cada día",
+        "hi": "पुस्तक जहाँ आप प्रत्येक दिन लिखते हैं",
+        "de": "Buch, in dem Sie jeden Tag schreiben",
+        "vi": "sách nơi bạn viết mỗi ngày",
+        "pt-BR": "livro onde você escreve todos os dias",
+        "id": "buku dimana kau menulis setiap hari",
+        "fr": "livre où vous écrivez chaque jour",
+        "ar": "كتاب حيث تكتب كل يوم",
+        "tr": "Her gün yazdığınız kitap",
+        "it": "libro dove si scrive ogni giorno",
+        "pl": "książki gdzie piszesz każdego dnia"
       },
       "ww": {
-        "sense_id": "diary.n.s1",
+        "sense_id": "diary.s1",
         "pos": "n",
         "def": {
-          "en": "an academic term: diary",
-          "ko": "학술 영어 단어: diary",
-          "zh-Hans": "an academic term: diary",
-          "ja": "an academic term: diary",
-          "es": "an academic term: diary",
-          "hi": "an academic term: diary",
-          "de": "an academic term: diary",
-          "vi": "an academic term: diary",
-          "pt-BR": "an academic term: diary",
-          "id": "an academic term: diary",
-          "fr": "an academic term: diary",
-          "ar": "an academic term: diary",
-          "tr": "an academic term: diary",
-          "it": "an academic term: diary",
-          "pl": "an academic term: diary"
+          "en": "a book where you write what happens each day",
+          "ko": "일기",
+          "zh-Hans": "一本书,你写 每天发生的事情",
+          "ja": "毎日何が起こるか書いてある本",
+          "es": "un libro donde escribes lo que sucede cada día",
+          "hi": "एक पुस्तक जहाँ आप लिखते हैं कि हर दिन क्या होता है",
+          "de": "Ein Buch, in dem Sie schreiben, was jeden Tag passiert",
+          "vi": "một cuốn sách nơi bạn viết những gì xảy ra mỗi ngày",
+          "pt-BR": "um livro onde você escreve o que acontece todos os dias",
+          "id": "sebuah buku di mana Anda menulis apa yang terjadi setiap hari",
+          "fr": "un livre où vous écrivez ce qui se passe chaque jour",
+          "ar": "كتاب حيث تكتب ما يحدث كل يوم",
+          "tr": "Her gün ne olduğunu yazdığın bir kitap",
+          "it": "un libro dove scrivi quello che succede ogni giorno",
+          "pl": "książki, w której piszesz co się dzieje każdego dnia"
         },
         "example": {
-          "en": "The report uses the word \"diary\" in an academic context.",
-          "ko": "보고서는 학술 맥락에서 \"diary\"(을)를 사용한다.",
-          "zh-Hans": "The report uses the word \"diary\" in an academic context.",
-          "ja": "The report uses the word \"diary\" in an academic context.",
-          "es": "The report uses the word \"diary\" in an academic context.",
-          "hi": "The report uses the word \"diary\" in an academic context.",
-          "de": "The report uses the word \"diary\" in an academic context.",
-          "vi": "The report uses the word \"diary\" in an academic context.",
-          "pt-BR": "The report uses the word \"diary\" in an academic context.",
-          "id": "The report uses the word \"diary\" in an academic context.",
-          "fr": "The report uses the word \"diary\" in an academic context.",
-          "ar": "The report uses the word \"diary\" in an academic context.",
-          "tr": "The report uses the word \"diary\" in an academic context.",
-          "it": "The report uses the word \"diary\" in an academic context.",
-          "pl": "The report uses the word \"diary\" in an academic context."
+          "en": "He writes in his diary before bed.",
+          "ko": "그는 침대 앞에 그의 일기에서 쓴다.",
+          "zh-Hans": "他睡觉前的日记里写着",
+          "ja": "寝る前に日記に書いています。",
+          "es": "Escribe en su diario antes de acostarse.",
+          "hi": "वह बिस्तर से पहले अपनी डायरी में लिखते हैं।",
+          "de": "Er schreibt in sein Tagebuch vor dem Schlafengehen.",
+          "vi": "Ổng viết nhật ký trước khi đi ngủ.",
+          "pt-BR": "Ele escreve no seu diário antes de dormir.",
+          "id": "Dia menulis di buku hariannya sebelum tidur.",
+          "fr": "Il écrit dans son journal avant de se coucher.",
+          "ar": "يكتب في مذكراته قبل النوم",
+          "tr": "Yatağından önce günlüğünde yazıyor.",
+          "it": "Scrive nel suo diario prima di andare a letto.",
+          "pl": "Pisze w swoim pamiętniku przed snem."
         }
       }
     },
     {
       "id": "dictionary",
       "en": "dictionary",
-      "ko": "dictionary",
-      "picture_prompt": "Photorealistic photo illustrating the idea of dictionary in a university study setting, no text, no letters, no logos",
+      "ko": "사전",
+      "picture_prompt": "candy picture-book oil-paint of a thick dictionary lying open on a desk, one subject, no text no letters no numbers no watermark",
       "l1": {
-        "en": "a word used in academic English: dictionary",
-        "ko": "dictionary",
-        "zh-Hans": "a word used in academic English: dictionary",
-        "ja": "a word used in academic English: dictionary",
-        "es": "a word used in academic English: dictionary",
-        "hi": "a word used in academic English: dictionary",
-        "de": "a word used in academic English: dictionary",
-        "vi": "a word used in academic English: dictionary",
-        "pt-BR": "a word used in academic English: dictionary",
-        "id": "a word used in academic English: dictionary",
-        "fr": "a word used in academic English: dictionary",
-        "ar": "a word used in academic English: dictionary",
-        "tr": "a word used in academic English: dictionary",
-        "it": "a word used in academic English: dictionary",
-        "pl": "a word used in academic English: dictionary"
+        "en": "book of word meanings",
+        "ko": "사전",
+        "zh-Hans": "字义书",
+        "ja": "単語の意味の本",
+        "es": "libro de significados de palabra",
+        "hi": "शब्द अर्थ की पुस्तक",
+        "de": "Buch der Wortbedeutungen",
+        "vi": "sách ý nghĩa từ",
+        "pt-BR": "livro de significados de palavras",
+        "id": "buku arti kata",
+        "fr": "livre de significations de mots",
+        "ar": "كتاب معنى الكلمة",
+        "tr": "Kelimenin kitabı anlamları",
+        "it": "libro di significati di parola",
+        "pl": "Księga znaczeń słów"
       },
       "ww": {
-        "sense_id": "dictionary.n.s1",
+        "sense_id": "dictionary.s1",
         "pos": "n",
         "def": {
-          "en": "an academic term: dictionary",
-          "ko": "학술 영어 단어: dictionary",
-          "zh-Hans": "an academic term: dictionary",
-          "ja": "an academic term: dictionary",
-          "es": "an academic term: dictionary",
-          "hi": "an academic term: dictionary",
-          "de": "an academic term: dictionary",
-          "vi": "an academic term: dictionary",
-          "pt-BR": "an academic term: dictionary",
-          "id": "an academic term: dictionary",
-          "fr": "an academic term: dictionary",
-          "ar": "an academic term: dictionary",
-          "tr": "an academic term: dictionary",
-          "it": "an academic term: dictionary",
-          "pl": "an academic term: dictionary"
+          "en": "a book or app that lists words and their meanings",
+          "ko": "사전",
+          "zh-Hans": "列出单词及其含义的书或应用程序",
+          "ja": "単語とその意味をリストする本またはアプリ",
+          "es": "un libro o aplicación que lista palabras y sus significados",
+          "hi": "एक पुस्तक या ऐप जो शब्दों और उनके अर्थों को सूचीबद्ध करता है",
+          "de": "ein Buch oder eine App, die Wörter und ihre Bedeutungen auflistet",
+          "vi": "một cuốn sách hay ứng dụng liệt kê các từ và ý nghĩa của chúng",
+          "pt-BR": "e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e aplauso e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e Diretório e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e",
+          "id": "buku atau aplikasi yang daftar kata dan makna mereka",
+          "fr": "un livre ou une application qui énumère les mots et leurs significations",
+          "ar": "a book or app that lists words and their meanings",
+          "tr": "Kelimeleri ve anlamlarını listeleyen bir kitap veya uygulama",
+          "it": "un libro o un'app che elenca parole e significati",
+          "pl": "książki lub aplikacji, która zawiera listę słów i ich znaczenia"
         },
         "example": {
-          "en": "The report uses the word \"dictionary\" in an academic context.",
-          "ko": "보고서는 학술 맥락에서 \"dictionary\"(을)를 사용한다.",
-          "zh-Hans": "The report uses the word \"dictionary\" in an academic context.",
-          "ja": "The report uses the word \"dictionary\" in an academic context.",
-          "es": "The report uses the word \"dictionary\" in an academic context.",
-          "hi": "The report uses the word \"dictionary\" in an academic context.",
-          "de": "The report uses the word \"dictionary\" in an academic context.",
-          "vi": "The report uses the word \"dictionary\" in an academic context.",
-          "pt-BR": "The report uses the word \"dictionary\" in an academic context.",
-          "id": "The report uses the word \"dictionary\" in an academic context.",
-          "fr": "The report uses the word \"dictionary\" in an academic context.",
-          "ar": "The report uses the word \"dictionary\" in an academic context.",
-          "tr": "The report uses the word \"dictionary\" in an academic context.",
-          "it": "The report uses the word \"dictionary\" in an academic context.",
-          "pl": "The report uses the word \"dictionary\" in an academic context."
+          "en": "She looked up the word in a dictionary.",
+          "ko": "그녀는 사전의 단어를 보았다.",
+          "zh-Hans": "她查了字典里的词",
+          "ja": "辞書で単語を調べました。",
+          "es": "Ella miró la palabra en un diccionario.",
+          "hi": "उन्होंने शब्द को शब्दकोश में देखा।",
+          "de": "Sie schaute das Wort in einem Wörterbuch nach.",
+          "vi": "Cô ấy tra từ trong từ điển.",
+          "pt-BR": "Ela procurou a palavra num dicionário.",
+          "id": "Dia mendongak kata dalam kamus.",
+          "fr": "Elle amunait dans un dictionnaire.",
+          "ar": "بحثت عن الكلمة في قاموس",
+          "tr": "Bir sözlükte kelimeyi baktı.",
+          "it": "Ha cercato la parola in un dizionario.",
+          "pl": "Sprawdziła słowo w słowniku."
         }
       }
     },
@@ -6073,7 +6073,7 @@
         "pl": "umrzeć"
       },
       "ww": {
-        "sense_id": "die.v.s1",
+        "sense_id": "die.s1",
         "pos": "v",
         "def": {
           "en": "to stop living",

@@ -6,7 +6,7 @@
   "items": [
     {
       "item_id": "coverage",
-      "question": "a word used in academic English: coverage",
+      "question": "how much news or insurance protects",
       "correct": "coverage",
       "wrong": [
         "cow",
@@ -16,7 +16,7 @@
     },
     {
       "item_id": "cow",
-      "question": "a word used in academic English: cow",
+      "question": "farm animal that gives milk",
       "correct": "cow",
       "wrong": [
         "crack",
@@ -36,7 +36,7 @@
     },
     {
       "item_id": "craft",
-      "question": "a word used in academic English: craft",
+      "question": "skill making things by hand",
       "correct": "craft",
       "wrong": [
         "crash",
@@ -66,7 +66,7 @@
     },
     {
       "item_id": "cream",
-      "question": "a word used in academic English: cream",
+      "question": "thick white dairy topping",
       "correct": "cream",
       "wrong": [
         "creation",
@@ -186,7 +186,7 @@
     },
     {
       "item_id": "crop",
-      "question": "a word used in academic English: crop",
+      "question": "plants grown on a farm",
       "correct": "crop",
       "wrong": [
         "cross",
@@ -246,7 +246,7 @@
     },
     {
       "item_id": "cure",
-      "question": "a word used in academic English: cure",
+      "question": "make a sickness go away",
       "correct": "cure",
       "wrong": [
         "curious",
@@ -346,7 +346,7 @@
     },
     {
       "item_id": "dad",
-      "question": "a word used in academic English: dad",
+      "question": "your father",
       "correct": "dad",
       "wrong": [
         "daily",
@@ -526,7 +526,7 @@
     },
     {
       "item_id": "deck",
-      "question": "a word used in academic English: deck",
+      "question": "floor on a ship or outside a house",
       "correct": "deck",
       "wrong": [
         "declare",
@@ -576,7 +576,7 @@
     },
     {
       "item_id": "deer",
-      "question": "a word used in academic English: deer",
+      "question": "wild animal with antlers",
       "correct": "deer",
       "wrong": [
         "defeat",
@@ -606,7 +606,7 @@
     },
     {
       "item_id": "defense",
-      "question": "a word used in academic English: defense",
+      "question": "protecting against attack",
       "correct": "defense",
       "wrong": [
         "definitely",
@@ -766,7 +766,7 @@
     },
     {
       "item_id": "depression",
-      "question": "a word used in academic English: depression",
+      "question": "long sadness or an economic slump",
       "correct": "depression",
       "wrong": [
         "depth",
@@ -816,7 +816,7 @@
     },
     {
       "item_id": "desert",
-      "question": "a word used in academic English: desert",
+      "question": "very dry sandy land",
       "correct": "desert",
       "wrong": [
         "deserve",
@@ -836,7 +836,7 @@
     },
     {
       "item_id": "designer",
-      "question": "a word used in academic English: designer",
+      "question": "person who plans how things look",
       "correct": "designer",
       "wrong": [
         "desire",
@@ -886,7 +886,7 @@
     },
     {
       "item_id": "destruction",
-      "question": "a word used in academic English: destruction",
+      "question": "great damage or ruin",
       "correct": "destruction",
       "wrong": [
         "detail",
@@ -946,7 +946,7 @@
     },
     {
       "item_id": "diagram",
-      "question": "a word used in academic English: diagram",
+      "question": "simple drawing that explains",
       "correct": "diagram",
       "wrong": [
         "dialogue",
@@ -956,7 +956,7 @@
     },
     {
       "item_id": "dialogue",
-      "question": "a word used in academic English: dialogue",
+      "question": "talk between people",
       "correct": "dialogue",
       "wrong": [
         "diamond",
@@ -966,7 +966,7 @@
     },
     {
       "item_id": "diamond",
-      "question": "a word used in academic English: diamond",
+      "question": "very hard shiny gem",
       "correct": "diamond",
       "wrong": [
         "diary",
@@ -976,7 +976,7 @@
     },
     {
       "item_id": "diary",
-      "question": "a word used in academic English: diary",
+      "question": "book where you write each day",
       "correct": "diary",
       "wrong": [
         "dictionary",
@@ -986,7 +986,7 @@
     },
     {
       "item_id": "dictionary",
-      "question": "a word used in academic English: dictionary",
+      "question": "book of word meanings",
       "correct": "dictionary",
       "wrong": [
         "die",

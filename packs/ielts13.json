@@ -3,7 +3,7 @@
   "title": "IELTS 1201–1300",
   "band": "IELTS",
   "pos": "mixed",
-  "source": "IELTS Master 1500 (AWL + IELTS academic), ranks 1201–1300 by frequency.",
+  "source": "IELTS Master 1500 (AWL + Cambridge/Barron IELTS), frequency ranks 1001–1500",
   "words": [
     {
       "id": "egg",
@@ -28,7 +28,7 @@
         "pl": "jajko"
       },
       "ww": {
-        "sense_id": "egg.n.s1",
+        "sense_id": "egg.s1",
         "pos": "n",
         "def": {
           "en": "a round food from a hen",
@@ -69,61 +69,61 @@
     {
       "id": "eight",
       "en": "eight",
-      "ko": "eight",
-      "picture_prompt": "Photorealistic photo illustrating the idea of eight in a university study setting, no text, no letters, no logos",
+      "ko": "8",
+      "picture_prompt": "candy picture-book oil-paint of eight colorful chairs arranged around a round table, one subject, no text no letters no numbers no watermark",
       "l1": {
-        "en": "a word used in academic English: eight",
-        "ko": "eight",
-        "zh-Hans": "a word used in academic English: eight",
-        "ja": "a word used in academic English: eight",
-        "es": "a word used in academic English: eight",
-        "hi": "a word used in academic English: eight",
-        "de": "a word used in academic English: eight",
-        "vi": "a word used in academic English: eight",
-        "pt-BR": "a word used in academic English: eight",
-        "id": "a word used in academic English: eight",
-        "fr": "a word used in academic English: eight",
-        "ar": "a word used in academic English: eight",
-        "tr": "a word used in academic English: eight",
-        "it": "a word used in academic English: eight",
-        "pl": "a word used in academic English: eight"
+        "en": "the number 8",
+        "ko": "8",
+        "zh-Hans": "数字 8",
+        "ja": "番号 8",
+        "es": "el número 8",
+        "hi": "संख्या 8",
+        "de": "die Zahl 8",
+        "vi": "số 8",
+        "pt-BR": "o número 8",
+        "id": "nomor 8",
+        "fr": "le numéro 8",
+        "ar": "العدد 8",
+        "tr": "8 numara",
+        "it": "il numero 8",
+        "pl": "numer 8"
       },
       "ww": {
-        "sense_id": "eight.n.s1",
-        "pos": "n",
+        "sense_id": "eight.s1",
+        "pos": "num",
         "def": {
-          "en": "an academic term: eight",
-          "ko": "학술 영어 단어: eight",
-          "zh-Hans": "an academic term: eight",
-          "ja": "an academic term: eight",
-          "es": "an academic term: eight",
-          "hi": "an academic term: eight",
-          "de": "an academic term: eight",
-          "vi": "an academic term: eight",
-          "pt-BR": "an academic term: eight",
-          "id": "an academic term: eight",
-          "fr": "an academic term: eight",
-          "ar": "an academic term: eight",
-          "tr": "an academic term: eight",
-          "it": "an academic term: eight",
-          "pl": "an academic term: eight"
+          "en": "the number 8",
+          "ko": "8",
+          "zh-Hans": "数字 8",
+          "ja": "番号 8",
+          "es": "el número 8",
+          "hi": "संख्या 8",
+          "de": "die Zahl 8",
+          "vi": "số 8",
+          "pt-BR": "o número 8",
+          "id": "nomor 8",
+          "fr": "le numéro 8",
+          "ar": "العدد 8",
+          "tr": "8 numara",
+          "it": "il numero 8",
+          "pl": "numer 8"
         },
         "example": {
-          "en": "The report uses the word \"eight\" in an academic context.",
-          "ko": "보고서는 학술 맥락에서 \"eight\"(을)를 사용한다.",
-          "zh-Hans": "The report uses the word \"eight\" in an academic context.",
-          "ja": "The report uses the word \"eight\" in an academic context.",
-          "es": "The report uses the word \"eight\" in an academic context.",
-          "hi": "The report uses the word \"eight\" in an academic context.",
-          "de": "The report uses the word \"eight\" in an academic context.",
-          "vi": "The report uses the word \"eight\" in an academic context.",
-          "pt-BR": "The report uses the word \"eight\" in an academic context.",
-          "id": "The report uses the word \"eight\" in an academic context.",
-          "fr": "The report uses the word \"eight\" in an academic context.",
-          "ar": "The report uses the word \"eight\" in an academic context.",
-          "tr": "The report uses the word \"eight\" in an academic context.",
-          "it": "The report uses the word \"eight\" in an academic context.",
-          "pl": "The report uses the word \"eight\" in an academic context."
+          "en": "There are eight chairs around the table.",
+          "ko": "테이블 주위에 8 의자가 있습니다.",
+          "zh-Hans": "桌旁有八张椅子.",
+          "ja": "テーブルの周りには8つの椅子があります。",
+          "es": "Hay ocho sillas alrededor de la mesa.",
+          "hi": "टेबल के चारों ओर आठ कुर्सियां हैं।",
+          "de": "Es gibt acht Stühle am Tisch.",
+          "vi": "Có tám cái ghế quanh bàn.",
+          "pt-BR": "Há oito cadeiras na mesa.",
+          "id": "Ada delapan kursi di sekitar meja.",
+          "fr": "Il y a huit chaises autour de la table.",
+          "ar": "هناك ثمانية كراسي حول الطاولة",
+          "tr": "Masanın etrafında sekiz sandalye var.",
+          "it": "Ci sono otto sedie intorno al tavolo.",
+          "pl": "Przy stole jest osiem krzeseł."
         }
       }
     },
@@ -150,7 +150,7 @@
         "pl": "też (E)"
       },
       "ww": {
-        "sense_id": "either.adv.s1",
+        "sense_id": "either.s1",
         "pos": "adv",
         "def": {
           "en": "also or as well",
@@ -211,7 +211,7 @@
         "pl": "starszy"
       },
       "ww": {
-        "sense_id": "elderly.a.s1",
+        "sense_id": "elderly.s1",
         "pos": "a",
         "def": {
           "en": "to be old in years",
@@ -272,7 +272,7 @@
         "pl": "wybierać"
       },
       "ww": {
-        "sense_id": "elect.v.s1",
+        "sense_id": "elect.s1",
         "pos": "v",
         "def": {
           "en": "to choose someone by voting",
@@ -333,7 +333,7 @@
         "pl": "wybory"
       },
       "ww": {
-        "sense_id": "election.n.s1",
+        "sense_id": "election.s1",
         "pos": "n",
         "def": {
           "en": "a time to choose leaders by voting",
@@ -394,7 +394,7 @@
         "pl": "elektryczny"
       },
       "ww": {
-        "sense_id": "electric.a.s1",
+        "sense_id": "electric.s1",
         "pos": "a",
         "def": {
           "en": "to work using electric power",
@@ -455,7 +455,7 @@
         "pl": "elektryczny"
       },
       "ww": {
-        "sense_id": "electrical.a.s1",
+        "sense_id": "electrical.s1",
         "pos": "a",
         "def": {
           "en": "to do with electricity or power",
@@ -516,7 +516,7 @@
         "pl": "elektryczność"
       },
       "ww": {
-        "sense_id": "electricity.n.s1",
+        "sense_id": "electricity.s1",
         "pos": "n",
         "def": {
           "en": "power that makes lights and machines work",
@@ -577,7 +577,7 @@
         "pl": "elektroniczny"
       },
       "ww": {
-        "sense_id": "electronic.a.s1",
+        "sense_id": "electronic.s1",
         "pos": "a",
         "def": {
           "en": "powered by electricity",
@@ -618,122 +618,122 @@
     {
       "id": "elementary",
       "en": "elementary",
-      "ko": "elementary",
-      "picture_prompt": "Photorealistic photo illustrating the idea of elementary in a university study setting, no text, no letters, no logos",
+      "ko": "초등의·기본의",
+      "picture_prompt": "candy picture-book oil-paint of young children raising hands in a bright primary classroom, one subject, no text no letters no numbers no watermark",
       "l1": {
-        "en": "a word used in academic English: elementary",
-        "ko": "elementary",
-        "zh-Hans": "a word used in academic English: elementary",
-        "ja": "a word used in academic English: elementary",
-        "es": "a word used in academic English: elementary",
-        "hi": "a word used in academic English: elementary",
-        "de": "a word used in academic English: elementary",
-        "vi": "a word used in academic English: elementary",
-        "pt-BR": "a word used in academic English: elementary",
-        "id": "a word used in academic English: elementary",
-        "fr": "a word used in academic English: elementary",
-        "ar": "a word used in academic English: elementary",
-        "tr": "a word used in academic English: elementary",
-        "it": "a word used in academic English: elementary",
-        "pl": "a word used in academic English: elementary"
+        "en": "basic or for young learners",
+        "ko": "초등의·기본의",
+        "zh-Hans": "基础或青年学习者",
+        "ja": "基礎的または若い学習者のための",
+        "es": "básico o para jóvenes estudiantes",
+        "hi": "बुनियादी या युवा शिक्षार्थियों के लिए",
+        "de": "Basis oder für junge Lernende",
+        "vi": "Cơ bản hay cho người trẻ học",
+        "pt-BR": "básico ou para jovens aprendizes",
+        "id": "dasar atau untuk pelajar muda",
+        "fr": "base ou pour les jeunes apprenants",
+        "ar": "الأساسي أو للتلاميذ الصغار",
+        "tr": "Temel veya genç öğrenciler için",
+        "it": "base o per giovani studenti",
+        "pl": "podstawowe lub dla młodych uczniów"
       },
       "ww": {
-        "sense_id": "elementary.n.s1",
-        "pos": "n",
+        "sense_id": "elementary.s1",
+        "pos": "adj",
         "def": {
-          "en": "an academic term: elementary",
-          "ko": "학술 영어 단어: elementary",
-          "zh-Hans": "an academic term: elementary",
-          "ja": "an academic term: elementary",
-          "es": "an academic term: elementary",
-          "hi": "an academic term: elementary",
-          "de": "an academic term: elementary",
-          "vi": "an academic term: elementary",
-          "pt-BR": "an academic term: elementary",
-          "id": "an academic term: elementary",
-          "fr": "an academic term: elementary",
-          "ar": "an academic term: elementary",
-          "tr": "an academic term: elementary",
-          "it": "an academic term: elementary",
-          "pl": "an academic term: elementary"
+          "en": "relating to the first years of school, or simple and basic",
+          "ko": "초등의·기본의",
+          "zh-Hans": "或简单和基本的",
+          "ja": "初めての学校、またはシンプルで基本的なことに関すること",
+          "es": "en relación con los primeros años de escuela, o simple y básico",
+          "hi": "स्कूल के पहले वर्षों से संबंधित, या सरल और बुनियादी",
+          "de": "in Bezug auf die ersten Schuljahre oder einfach und grundlegend",
+          "vi": "Nói về những năm đầu ở trường, hay đơn giản và cơ bản",
+          "pt-BR": "relativo aos primeiros anos de escola, ou simples e básico",
+          "id": "berhubungan dengan tahun pertama sekolah, atau sederhana dan dasar",
+          "fr": "concernant les premières années d'études, ou simples et de base",
+          "ar": "فيما يتعلق بالسنوات الأولى من التعليم، أو بسيطة وأساسية",
+          "tr": "Okulun ilk yılları veya basit ve temel",
+          "it": "relativo ai primi anni di scuola, o semplice e di base",
+          "pl": "odnoszące się do pierwszych lat szkoły, lub proste i podstawowe"
         },
         "example": {
-          "en": "The report uses the word \"elementary\" in an academic context.",
-          "ko": "보고서는 학술 맥락에서 \"elementary\"(을)를 사용한다.",
-          "zh-Hans": "The report uses the word \"elementary\" in an academic context.",
-          "ja": "The report uses the word \"elementary\" in an academic context.",
-          "es": "The report uses the word \"elementary\" in an academic context.",
-          "hi": "The report uses the word \"elementary\" in an academic context.",
-          "de": "The report uses the word \"elementary\" in an academic context.",
-          "vi": "The report uses the word \"elementary\" in an academic context.",
-          "pt-BR": "The report uses the word \"elementary\" in an academic context.",
-          "id": "The report uses the word \"elementary\" in an academic context.",
-          "fr": "The report uses the word \"elementary\" in an academic context.",
-          "ar": "The report uses the word \"elementary\" in an academic context.",
-          "tr": "The report uses the word \"elementary\" in an academic context.",
-          "it": "The report uses the word \"elementary\" in an academic context.",
-          "pl": "The report uses the word \"elementary\" in an academic context."
+          "en": "She teaches elementary mathematics.",
+          "ko": "그녀는 초등 수학을 가르칩니다.",
+          "zh-Hans": "她教小学数学.",
+          "ja": "小学校の数学を教えています。",
+          "es": "Ella enseña matemáticas elementales.",
+          "hi": "वह प्राथमिक गणित सिखाती है।",
+          "de": "Sie lehrt elementare Mathematik.",
+          "vi": "Cô ấy dạy toán cơ bản.",
+          "pt-BR": "Ela ensina matemática elementar.",
+          "id": "Dia mengajar matematika dasar.",
+          "fr": "Elle pole Elle enseigne les mathématiques élémentaires.",
+          "ar": "إنها تعلم الرياضيات الأولية",
+          "tr": "Temel matematik öğretir.",
+          "it": "Insegna matematica elementare.",
+          "pl": "Uczy podstawowej matematyki."
         }
       }
     },
     {
       "id": "elite",
       "en": "elite",
-      "ko": "elite",
-      "picture_prompt": "Photorealistic photo illustrating the idea of elite in a university study setting, no text, no letters, no logos",
+      "ko": "엘리트",
+      "picture_prompt": "candy picture-book oil-paint of runners on a track wearing medals and training gear, one subject, no text no letters no numbers no watermark",
       "l1": {
-        "en": "a word used in academic English: elite",
-        "ko": "elite",
-        "zh-Hans": "a word used in academic English: elite",
-        "ja": "a word used in academic English: elite",
-        "es": "a word used in academic English: elite",
-        "hi": "a word used in academic English: elite",
-        "de": "a word used in academic English: elite",
-        "vi": "a word used in academic English: elite",
-        "pt-BR": "a word used in academic English: elite",
-        "id": "a word used in academic English: elite",
-        "fr": "a word used in academic English: elite",
-        "ar": "a word used in academic English: elite",
-        "tr": "a word used in academic English: elite",
-        "it": "a word used in academic English: elite",
-        "pl": "a word used in academic English: elite"
+        "en": "the best or most powerful group",
+        "ko": "엘리트",
+        "zh-Hans": "最佳或最强大的团体",
+        "ja": "最高の、最も強力なグループ",
+        "es": "el grupo mejor o más poderoso",
+        "hi": "सबसे अच्छा या सबसे शक्तिशाली समूह",
+        "de": "Die beste oder mächtigste Gruppe",
+        "vi": "nhóm tốt nhất hoặc mạnh nhất",
+        "pt-BR": "o melhor ou mais poderoso grupo",
+        "id": "kelompok terbaik atau paling kuat",
+        "fr": "le groupe le mieux ou le plus puissant",
+        "ar": "أفضل أو أقوى مجموعة",
+        "tr": "En iyi veya en güçlü grup",
+        "it": "il gruppo migliore o più potente",
+        "pl": "najlepsza lub najpotężniejsza grupa"
       },
       "ww": {
-        "sense_id": "elite.n.s1",
+        "sense_id": "elite.s1",
         "pos": "n",
         "def": {
-          "en": "an academic term: elite",
-          "ko": "학술 영어 단어: elite",
-          "zh-Hans": "an academic term: elite",
-          "ja": "an academic term: elite",
-          "es": "an academic term: elite",
-          "hi": "an academic term: elite",
-          "de": "an academic term: elite",
-          "vi": "an academic term: elite",
-          "pt-BR": "an academic term: elite",
-          "id": "an academic term: elite",
-          "fr": "an academic term: elite",
-          "ar": "an academic term: elite",
-          "tr": "an academic term: elite",
-          "it": "an academic term: elite",
-          "pl": "an academic term: elite"
+          "en": "a small group that is considered the best or most powerful",
+          "ko": "엘리트",
+          "zh-Hans": "一个被认为最优秀或最强大的小团体",
+          "ja": "最高または最も強力な考慮される小さなグループ",
+          "es": "un pequeño grupo que se considera el mejor o más poderoso",
+          "hi": "एक छोटा समूह जिसे सबसे अच्छा या सबसे शक्तिशाली माना जाता है",
+          "de": "eine kleine Gruppe, die als die beste oder mächtigste angesehen wird",
+          "vi": "một nhóm nhỏ được xem là giỏi nhất hoặc mạnh nhất",
+          "pt-BR": "um pequeno grupo que é considerado o melhor ou mais poderoso",
+          "id": "Sebuah kelompok kecil yang dianggap terbaik atau paling kuat.",
+          "fr": "un petit groupe considéré comme le meilleur ou le plus puissant",
+          "ar": "a small group that is considered the best or most powerful",
+          "tr": "En iyi veya en güçlü olarak kabul edilen küçük bir grup",
+          "it": "un piccolo gruppo che è considerato il migliore o più potente",
+          "pl": "mała grupa, która jest uważana za najlepszą lub najpotężniejszą"
         },
         "example": {
-          "en": "The report uses the word \"elite\" in an academic context.",
-          "ko": "보고서는 학술 맥락에서 \"elite\"(을)를 사용한다.",
-          "zh-Hans": "The report uses the word \"elite\" in an academic context.",
-          "ja": "The report uses the word \"elite\" in an academic context.",
-          "es": "The report uses the word \"elite\" in an academic context.",
-          "hi": "The report uses the word \"elite\" in an academic context.",
-          "de": "The report uses the word \"elite\" in an academic context.",
-          "vi": "The report uses the word \"elite\" in an academic context.",
-          "pt-BR": "The report uses the word \"elite\" in an academic context.",
-          "id": "The report uses the word \"elite\" in an academic context.",
-          "fr": "The report uses the word \"elite\" in an academic context.",
-          "ar": "The report uses the word \"elite\" in an academic context.",
-          "tr": "The report uses the word \"elite\" in an academic context.",
-          "it": "The report uses the word \"elite\" in an academic context.",
-          "pl": "The report uses the word \"elite\" in an academic context."
+          "en": "The elite athletes trained every day.",
+          "ko": "엘리트 선수는 매일 훈련.",
+          "zh-Hans": "精英运动员每天都在训练.",
+          "ja": "毎日訓練されたエリート選手。",
+          "es": "Los atletas de élite entrenaron todos los días.",
+          "hi": "कुलीन एथलीटों ने हर दिन प्रशिक्षित किया।",
+          "de": "Die Elitesportler trainierten jeden Tag.",
+          "vi": "Những vận động viên ưu tú được huấn luyện hàng ngày.",
+          "pt-BR": "Os atletas de elite treinaram todos os dias.",
+          "id": "Atlet elit dilatih setiap hari.",
+          "fr": "Les athlètes d'élite s'entraînent tous les jours.",
+          "ar": "الرياضيين النخبة يدربون كل يوم",
+          "tr": "Elit sporcular her gün eğitilmiştir.",
+          "it": "Gli atleti d'elite si allenavano ogni giorno.",
+          "pl": "ElitarPUBLIczni sportowcy ćwiczyli codziennie. anomalies"
         }
       }
     },
@@ -760,7 +760,7 @@
         "pl": "inny"
       },
       "ww": {
-        "sense_id": "else.adv.s1",
+        "sense_id": "else.s1",
         "pos": "adv",
         "def": {
           "en": "in a different way",
@@ -821,7 +821,7 @@
         "pl": "gdzie indziej"
       },
       "ww": {
-        "sense_id": "elsewhere.adv.s1",
+        "sense_id": "elsewhere.s1",
         "pos": "adv",
         "def": {
           "en": "in a different place",
@@ -862,122 +862,122 @@
     {
       "id": "email",
       "en": "email",
-      "ko": "email",
-      "picture_prompt": "Photorealistic photo illustrating the idea of email in a university study setting, no text, no letters, no logos",
+      "ko": "이메일",
+      "picture_prompt": "candy picture-book oil-paint of a laptop screen showing a simple inbox with one new message, one subject, no text no letters no numbers no watermark",
       "l1": {
-        "en": "a word used in academic English: email",
-        "ko": "email",
-        "zh-Hans": "a word used in academic English: email",
-        "ja": "a word used in academic English: email",
-        "es": "a word used in academic English: email",
-        "hi": "a word used in academic English: email",
-        "de": "a word used in academic English: email",
-        "vi": "a word used in academic English: email",
-        "pt-BR": "a word used in academic English: email",
-        "id": "a word used in academic English: email",
-        "fr": "a word used in academic English: email",
-        "ar": "a word used in academic English: email",
-        "tr": "a word used in academic English: email",
-        "it": "a word used in academic English: email",
-        "pl": "a word used in academic English: email"
+        "en": "message sent on a computer",
+        "ko": "이메일",
+        "zh-Hans": "在计算机上发送信件",
+        "ja": "コンピュータに送信されたメッセージ",
+        "es": "mensaje enviado en un ordenador",
+        "hi": "कंप्यूटर पर भेजे गए संदेश",
+        "de": "auf einem Computer gesendete Nachricht",
+        "vi": "Name",
+        "pt-BR": "mensagem enviada num computador",
+        "id": "pesan yang dikirim pada komputer",
+        "fr": "message envoyé sur un ordinateur",
+        "ar": "رسالة أرسلت على حاسوب",
+        "tr": "Bir bilgisayar üzerinde gönderilen mesaj",
+        "it": "messaggio inviato su un computer",
+        "pl": "wiadomość wysłana na komputerze"
       },
       "ww": {
-        "sense_id": "email.n.s1",
+        "sense_id": "email.s1",
         "pos": "n",
         "def": {
-          "en": "an academic term: email",
-          "ko": "학술 영어 단어: email",
-          "zh-Hans": "an academic term: email",
-          "ja": "an academic term: email",
-          "es": "an academic term: email",
-          "hi": "an academic term: email",
-          "de": "an academic term: email",
-          "vi": "an academic term: email",
-          "pt-BR": "an academic term: email",
-          "id": "an academic term: email",
-          "fr": "an academic term: email",
-          "ar": "an academic term: email",
-          "tr": "an academic term: email",
-          "it": "an academic term: email",
-          "pl": "an academic term: email"
+          "en": "a message sent electronically between computers",
+          "ko": "이메일",
+          "zh-Hans": "计算机之间以电子方式发送的信息",
+          "ja": "コンピュータ間で電子的に送信されたメッセージ",
+          "es": "un mensaje enviado electrónicamente entre ordenadores",
+          "hi": "कंप्यूटर के बीच इलेक्ट्रॉनिक रूप से भेजे गए संदेश",
+          "de": "eine elektronisch zwischen Computern gesendete Nachricht",
+          "vi": "Name",
+          "pt-BR": "uma mensagem enviada electronicamente entre computadores",
+          "id": "pesan dikirim elektronik antara komputer",
+          "fr": "un message envoyé électroniquement entre ordinateurs",
+          "ar": "رسالة ترسل إلكترونيا بين الحواسيب",
+          "tr": "Bilgisayarlar arasında elektronik olarak gönderilen bir mesaj",
+          "it": "un messaggio inviato elettronicamente tra computer",
+          "pl": "wiadomość wysyłana elektronicznie między komputerami"
         },
         "example": {
-          "en": "The report uses the word \"email\" in an academic context.",
-          "ko": "보고서는 학술 맥락에서 \"email\"(을)를 사용한다.",
-          "zh-Hans": "The report uses the word \"email\" in an academic context.",
-          "ja": "The report uses the word \"email\" in an academic context.",
-          "es": "The report uses the word \"email\" in an academic context.",
-          "hi": "The report uses the word \"email\" in an academic context.",
-          "de": "The report uses the word \"email\" in an academic context.",
-          "vi": "The report uses the word \"email\" in an academic context.",
-          "pt-BR": "The report uses the word \"email\" in an academic context.",
-          "id": "The report uses the word \"email\" in an academic context.",
-          "fr": "The report uses the word \"email\" in an academic context.",
-          "ar": "The report uses the word \"email\" in an academic context.",
-          "tr": "The report uses the word \"email\" in an academic context.",
-          "it": "The report uses the word \"email\" in an academic context.",
-          "pl": "The report uses the word \"email\" in an academic context."
+          "en": "I sent an email to confirm the meeting.",
+          "ko": "회의를 확인하기 위해 이메일을 보냈습니다.",
+          "zh-Hans": "我发了封邮件确认会议",
+          "ja": "ミーティングを確認するためにメールをお送りしました。",
+          "es": "Envié un correo electrónico para confirmar la reunión.",
+          "hi": "मैंने बैठक की पुष्टि करने के लिए एक ईमेल भेजा।",
+          "de": "Ich schickte eine E-Mail, um das Treffen zu bestätigen.",
+          "vi": "Tôi đã gửi email để xác nhận cuộc họp.",
+          "pt-BR": "Enviei um e-mail para confirmar a efectivos.",
+          "id": "Aku mengirim email untuk mengkonfirmasi pertemuannya.",
+          "fr": "J'ai envoyé un courriel pour confirmer la réunion.",
+          "ar": "أرسلت رسالة إلكترونية لتأكيد الاجتماع",
+          "tr": "Toplantıyı doğrulamak için bir e-posta gönderdim.",
+          "it": "Ho mandato una mail per confermare l'incontro.",
+          "pl": "Wysłałem maila, żeby potwierdzić spotkanie."
         }
       }
     },
     {
       "id": "embarrass",
       "en": "embarrass",
-      "ko": "embarrass",
-      "picture_prompt": "Photorealistic photo illustrating the idea of embarrass in a university study setting, no text, no letters, no logos",
+      "ko": "당황하게 하다",
+      "picture_prompt": "candy picture-book oil-paint of a student blushing after dropping papers on stage, one subject, no text no letters no numbers no watermark",
       "l1": {
-        "en": "a word used in academic English: embarrass",
-        "ko": "embarrass",
-        "zh-Hans": "a word used in academic English: embarrass",
-        "ja": "a word used in academic English: embarrass",
-        "es": "a word used in academic English: embarrass",
-        "hi": "a word used in academic English: embarrass",
-        "de": "a word used in academic English: embarrass",
-        "vi": "a word used in academic English: embarrass",
-        "pt-BR": "a word used in academic English: embarrass",
-        "id": "a word used in academic English: embarrass",
-        "fr": "a word used in academic English: embarrass",
-        "ar": "a word used in academic English: embarrass",
-        "tr": "a word used in academic English: embarrass",
-        "it": "a word used in academic English: embarrass",
-        "pl": "a word used in academic English: embarrass"
+        "en": "make someone feel shy or awkward",
+        "ko": "당황하게 하다",
+        "zh-Hans": "让人觉得害羞或尴尬",
+        "ja": "誰かが恥ずかしい、または厄介を感じるようにする",
+        "es": "hacer que alguien se sienta tímido o incómodo",
+        "hi": "किसी को शर्मीला या अजीब लग रहा है",
+        "de": "Machen Sie jemanden schüchtern oder unangenehm",
+        "vi": "Làm cho ai đó cảm thấy nhút nhát hay khó xử",
+        "pt-BR": "fazer alguém se sentir tímido ou estranho",
+        "id": "membuat seseorang merasa malu atau canggung",
+        "fr": "faire en sorte que quelqu'un se sente timide ou maladroit",
+        "ar": "جعل شخص يشعر بالخجل أو الحرج",
+        "tr": "Birisi utangaç veya garip hissettiriyor",
+        "it": "far sentire qualcuno timido o imbarazzante",
+        "pl": "sprawiają, że ktoś czuje się nieśmiały lub niezręczny"
       },
       "ww": {
-        "sense_id": "embarrass.n.s1",
-        "pos": "n",
+        "sense_id": "embarrass.s1",
+        "pos": "v",
         "def": {
-          "en": "an academic term: embarrass",
-          "ko": "학술 영어 단어: embarrass",
-          "zh-Hans": "an academic term: embarrass",
-          "ja": "an academic term: embarrass",
-          "es": "an academic term: embarrass",
-          "hi": "an academic term: embarrass",
-          "de": "an academic term: embarrass",
-          "vi": "an academic term: embarrass",
-          "pt-BR": "an academic term: embarrass",
-          "id": "an academic term: embarrass",
-          "fr": "an academic term: embarrass",
-          "ar": "an academic term: embarrass",
-          "tr": "an academic term: embarrass",
-          "it": "an academic term: embarrass",
-          "pl": "an academic term: embarrass"
+          "en": "to make someone feel shy, awkward, or ashamed",
+          "ko": "당황하게 하다",
+          "zh-Hans": "让人感到羞愧、尴尬或羞愧",
+          "ja": "誰かに恥ずかしい、または恥ずかしい感じさせるため",
+          "es": "para hacer que alguien se sienta tímido, incómodo o avergonzado",
+          "hi": "किसी को शर्मीला, अजीब या शर्म महसूस करने के लिए",
+          "de": "jemanden schüchtern, unbeholfen oder beschämt fühlen zu lassen",
+          "vi": "để làm cho một người cảm thấy nhút nhát, lúng túng, hoặc xấu hổ",
+          "pt-BR": "para fazer alguém se sentir tímido, estranho, ou envergonhado",
+          "id": "untuk membuat seseorang merasa malu, canggung, atau malu",
+          "fr": "pour rendre quelqu'un timide, maladroit ou honteux",
+          "ar": "لجعل شخص ما يشعر بالخجل أو بالحرج",
+          "tr": "Birisi utangaç, garip ya da utandırıyor",
+          "it": "per far sentire qualcuno timido, imbarazzante, o vergognarsi",
+          "pl": "aby ktoś czuł się nieśmiały, niezręczny lub zawstydzony"
         },
         "example": {
-          "en": "The report uses the word \"embarrass\" in an academic context.",
-          "ko": "보고서는 학술 맥락에서 \"embarrass\"(을)를 사용한다.",
-          "zh-Hans": "The report uses the word \"embarrass\" in an academic context.",
-          "ja": "The report uses the word \"embarrass\" in an academic context.",
-          "es": "The report uses the word \"embarrass\" in an academic context.",
-          "hi": "The report uses the word \"embarrass\" in an academic context.",
-          "de": "The report uses the word \"embarrass\" in an academic context.",
-          "vi": "The report uses the word \"embarrass\" in an academic context.",
-          "pt-BR": "The report uses the word \"embarrass\" in an academic context.",
-          "id": "The report uses the word \"embarrass\" in an academic context.",
-          "fr": "The report uses the word \"embarrass\" in an academic context.",
-          "ar": "The report uses the word \"embarrass\" in an academic context.",
-          "tr": "The report uses the word \"embarrass\" in an academic context.",
-          "it": "The report uses the word \"embarrass\" in an academic context.",
-          "pl": "The report uses the word \"embarrass\" in an academic context."
+          "en": "Loud mistakes can embarrass a speaker.",
+          "ko": "Loud 실수는 스피커를 embarrass 할 수 있습니다.",
+          "zh-Hans": "犯大错会让演讲者难堪",
+          "ja": "ラウドの間違いはスピーカーを恥ずかせることができます。",
+          "es": "Los errores en voz alta pueden avergonzar a un orador.",
+          "hi": "लॉड गलतियां एक स्पीकर को शर्मिंदा कर सकती हैं।",
+          "de": "Laute Fehler können einen Sprecher in Verlegenheit bringen.",
+          "vi": "Những sai lầm nghiêm trọng có thể làm xấu mặt một diễn giả.",
+          "pt-BR": "Erros altos podem envergonhar um orador.",
+          "id": "Kesalahan keras bisa mempermalukan pembicara.",
+          "fr": "Des erreurs lourdes peuvent embarrasser un orateur.",
+          "ar": "الأخطاء البشعة يمكن أن تحرج مكبر الصوت",
+          "tr": "Loud hataları bir konuşmacıyı mahvedebilir.",
+          "it": "Imbarazzanti errori possono mettere in imbarazzo un oratore.",
+          "pl": "Głośne błędy mogą zawstyauthorize głośnik."
         }
       }
     },
@@ -1004,7 +1004,7 @@
         "pl": "nagły wypadek"
       },
       "ww": {
-        "sense_id": "emergency.n.s1",
+        "sense_id": "emergency.s1",
         "pos": "n",
         "def": {
           "en": "a sudden dangerous problem that needs help right away",
@@ -1065,7 +1065,7 @@
         "pl": "emocja"
       },
       "ww": {
-        "sense_id": "emotion.n.s1",
+        "sense_id": "emotion.s1",
         "pos": "n",
         "def": {
           "en": "a strong feeling such as joy, fear, or sadness",
@@ -1126,7 +1126,7 @@
         "pl": "emocjonalny"
       },
       "ww": {
-        "sense_id": "emotional.a.s1",
+        "sense_id": "emotional.s1",
         "pos": "a",
         "def": {
           "en": "full of strong feelings",
@@ -1187,7 +1187,7 @@
         "pl": "podkreślać"
       },
       "ww": {
-        "sense_id": "emphasize.v.s1",
+        "sense_id": "emphasize.s1",
         "pos": "v",
         "def": {
           "en": "to show that something is important",
@@ -1248,7 +1248,7 @@
         "pl": "zatrudniać"
       },
       "ww": {
-        "sense_id": "employ.v.s1",
+        "sense_id": "employ.s1",
         "pos": "v",
         "def": {
           "en": "to give someone paid work",
@@ -1309,7 +1309,7 @@
         "pl": "pracownik"
       },
       "ww": {
-        "sense_id": "employee.n.s1",
+        "sense_id": "employee.s1",
         "pos": "n",
         "def": {
           "en": "a person who works for a company or boss",
@@ -1370,7 +1370,7 @@
         "pl": "pracodawca"
       },
       "ww": {
-        "sense_id": "employer.n.s1",
+        "sense_id": "employer.s1",
         "pos": "n",
         "def": {
           "en": "a person or company that pays workers",
@@ -1431,7 +1431,7 @@
         "pl": "zatrudnienie"
       },
       "ww": {
-        "sense_id": "employment.n.s1",
+        "sense_id": "employment.s1",
         "pos": "n",
         "def": {
           "en": "a paid job",
@@ -1492,7 +1492,7 @@
         "pl": "pusty"
       },
       "ww": {
-        "sense_id": "empty.a.s1",
+        "sense_id": "empty.s1",
         "pos": "a",
         "def": {
           "en": "with nothing inside",
@@ -1553,7 +1553,7 @@
         "pl": "zachęcać"
       },
       "ww": {
-        "sense_id": "encourage.v.s1",
+        "sense_id": "encourage.s1",
         "pos": "v",
         "def": {
           "en": "to give someone hope or support",
@@ -1614,7 +1614,7 @@
         "pl": "koniec"
       },
       "ww": {
-        "sense_id": "end.n.s1",
+        "sense_id": "end.s1",
         "pos": "n",
         "def": {
           "en": "the last point or part of something",
@@ -1675,7 +1675,7 @@
         "pl": "wróg"
       },
       "ww": {
-        "sense_id": "enemy.n.s1",
+        "sense_id": "enemy.s1",
         "pos": "n",
         "def": {
           "en": "a person who is against you and not your friend",
@@ -1736,7 +1736,7 @@
         "pl": "uczestniczyć"
       },
       "ww": {
-        "sense_id": "engage.v.s1",
+        "sense_id": "engage.s1",
         "pos": "v",
         "def": {
           "en": "to take part in something",
@@ -1797,7 +1797,7 @@
         "pl": "silnik"
       },
       "ww": {
-        "sense_id": "engine.n.s1",
+        "sense_id": "engine.s1",
         "pos": "n",
         "def": {
           "en": "a machine that makes a car move",
@@ -1858,7 +1858,7 @@
         "pl": "inżynier"
       },
       "ww": {
-        "sense_id": "engineer.n.s1",
+        "sense_id": "engineer.s1",
         "pos": "n",
         "def": {
           "en": "a person who designs or builds machines and buildings",
@@ -1919,7 +1919,7 @@
         "pl": "inżynieria"
       },
       "ww": {
-        "sense_id": "engineering.n.s1",
+        "sense_id": "engineering.s1",
         "pos": "n",
         "def": {
           "en": "the work of planning and making machines, roads, and buildings",
@@ -1980,7 +1980,7 @@
         "pl": "cieszyć się"
       },
       "ww": {
-        "sense_id": "enjoy.v.s1",
+        "sense_id": "enjoy.s1",
         "pos": "v",
         "def": {
           "en": "to like something very much",
@@ -2044,7 +2044,7 @@
         "pl": "dość"
       },
       "ww": {
-        "sense_id": "enough.adv.s1",
+        "sense_id": "enough.s1",
         "pos": "adv",
         "def": {
           "en": "as much as needed",
@@ -2105,7 +2105,7 @@
         "pl": "wchodzić"
       },
       "ww": {
-        "sense_id": "enter.v.s1",
+        "sense_id": "enter.s1",
         "pos": "v",
         "def": {
           "en": "to go inside a place",
@@ -2166,7 +2166,7 @@
         "pl": "przedsiębiorstwo"
       },
       "ww": {
-        "sense_id": "enterprise.n.s1",
+        "sense_id": "enterprise.s1",
         "pos": "n",
         "def": {
           "en": "to start and run a business",
@@ -2207,61 +2207,61 @@
     {
       "id": "entertainment",
       "en": "entertainment",
-      "ko": "entertainment",
-      "picture_prompt": "Photorealistic photo illustrating the idea of entertainment in a university study setting, no text, no letters, no logos",
+      "ko": "오락",
+      "picture_prompt": "candy picture-book oil-paint of a family watching a cheerful performance in a theater, one subject, no text no letters no numbers no watermark",
       "l1": {
-        "en": "having the quality of entertainment",
-        "ko": "entertainment",
-        "zh-Hans": "having the quality of entertainment",
-        "ja": "having the quality of entertainment",
-        "es": "having the quality of entertainment",
-        "hi": "having the quality of entertainment",
-        "de": "having the quality of entertainment",
-        "vi": "having the quality of entertainment",
-        "pt-BR": "having the quality of entertainment",
-        "id": "having the quality of entertainment",
-        "fr": "having the quality of entertainment",
-        "ar": "having the quality of entertainment",
-        "tr": "having the quality of entertainment",
-        "it": "having the quality of entertainment",
-        "pl": "having the quality of entertainment"
+        "en": "shows or fun activities",
+        "ko": "오락",
+        "zh-Hans": "表演或娱乐活动",
+        "ja": "ショーや楽しいアクティビティ",
+        "es": "espectáculos o actividades divertidas",
+        "hi": "शो या मज़ा गतिविधियों",
+        "de": "Shows oder lustige Aktivitäten",
+        "vi": "Hiển thị hay vui chơi",
+        "pt-BR": "shows ou atividades divertidas",
+        "id": "acara atau kegiatan menyenangkan",
+        "fr": "spectacles ou activités amusantes",
+        "ar": "عروض أو أنشطة ممتعة",
+        "tr": "Gösteriler veya eğlenceli aktiviteler",
+        "it": "spettacoli o attività divertenti",
+        "pl": "Pokazy lub zabawy"
       },
       "ww": {
-        "sense_id": "entertainment.adj.s1",
-        "pos": "adj",
+        "sense_id": "entertainment.s1",
+        "pos": "n",
         "def": {
-          "en": "an academic term: entertainment",
-          "ko": "학술 영어 단어: entertainment",
-          "zh-Hans": "an academic term: entertainment",
-          "ja": "an academic term: entertainment",
-          "es": "an academic term: entertainment",
-          "hi": "an academic term: entertainment",
-          "de": "an academic term: entertainment",
-          "vi": "an academic term: entertainment",
-          "pt-BR": "an academic term: entertainment",
-          "id": "an academic term: entertainment",
-          "fr": "an academic term: entertainment",
-          "ar": "an academic term: entertainment",
-          "tr": "an academic term: entertainment",
-          "it": "an academic term: entertainment",
-          "pl": "an academic term: entertainment"
+          "en": "films, music, games, or other activities that amuse people",
+          "ko": "오락",
+          "zh-Hans": "电影、音乐、游戏或其他娱乐活动",
+          "ja": "映画、音楽、ゲーム、その他人々を愉しむ活動",
+          "es": "películas, música, juegos u otras actividades que amusen a la gente",
+          "hi": "फिल्मों, संगीत, खेल, या अन्य गतिविधियों जो लोगों का दुरुपयोग करते हैं",
+          "de": "Filme, Musik, Spiele oder andere Aktivitäten, die Menschen amüsieren",
+          "vi": "Phim ảnh, âm nhạc, trò chơi hoặc những hoạt động khác làm người ta thích thú",
+          "pt-BR": "filmes, música, jogos ou outras atividades que divertem as pessoas",
+          "id": "Film, musik, permainan, atau kegiatan lain yang menghibur orang",
+          "fr": "des films, de la musique, des jeux ou d'autres activités qui amusent les gens",
+          "ar": "الأفلام أو الموسيقى أو الألعاب أو الأنشطة الأخرى التي تسخر من الناس",
+          "tr": "Filmler, müzik, oyunlar veya insanları kullanan diğer aktiviteler",
+          "it": "film, musica, giochi o altre attività che divertono le persone",
+          "pl": "filmy, muzyka, gry lub inne działania, które rozbawiają ludzi"
         },
         "example": {
-          "en": "The report uses the word \"entertainment\" in an academic context.",
-          "ko": "보고서는 학술 맥락에서 \"entertainment\"(을)를 사용한다.",
-          "zh-Hans": "The report uses the word \"entertainment\" in an academic context.",
-          "ja": "The report uses the word \"entertainment\" in an academic context.",
-          "es": "The report uses the word \"entertainment\" in an academic context.",
-          "hi": "The report uses the word \"entertainment\" in an academic context.",
-          "de": "The report uses the word \"entertainment\" in an academic context.",
-          "vi": "The report uses the word \"entertainment\" in an academic context.",
-          "pt-BR": "The report uses the word \"entertainment\" in an academic context.",
-          "id": "The report uses the word \"entertainment\" in an academic context.",
-          "fr": "The report uses the word \"entertainment\" in an academic context.",
-          "ar": "The report uses the word \"entertainment\" in an academic context.",
-          "tr": "The report uses the word \"entertainment\" in an academic context.",
-          "it": "The report uses the word \"entertainment\" in an academic context.",
-          "pl": "The report uses the word \"entertainment\" in an academic context."
+          "en": "The city offers many forms of entertainment.",
+          "ko": "도시는 엔터테인먼트의 많은 형태를 제공합니다.",
+          "zh-Hans": "该市提供多种形式的娱乐.",
+          "ja": "市内にはたくさんのエンターテインメントがあります。",
+          "es": "La ciudad ofrece muchas formas de entretenimiento.",
+          "hi": "शहर मनोरंजन के कई रूपों प्रदान करता है।",
+          "de": "Die Stadt bietet viele Formen der Unterhaltung.",
+          "vi": "Thành phố này cung cấp nhiều hình thức giải trí Dedication.",
+          "pt-BR": "A cidade oferece muitas formas de entretenimento.",
+          "id": "Kota ini menawarkan berbagai bentuk hiburan.",
+          "fr": "La ville offre de nombreuses formes de divertissement.",
+          "ar": "وتوفر المدينة أشكالا كثيرة من الترفيه.",
+          "tr": "Şehir birçok eğlence biçimini sunuyor.",
+          "it": "La città offre molte forme di intrattenimento.",
+          "pl": "Miasto oferuje wiele form rozrywki."
         }
       }
     },
@@ -2288,7 +2288,7 @@
         "pl": "cały"
       },
       "ww": {
-        "sense_id": "entire.a.s1",
+        "sense_id": "entire.s1",
         "pos": "a",
         "def": {
           "en": "to be whole or complete",
@@ -2349,7 +2349,7 @@
         "pl": "całkowicie (E)"
       },
       "ww": {
-        "sense_id": "entirely.adv.s1",
+        "sense_id": "entirely.s1",
         "pos": "adv",
         "def": {
           "en": "in every way",
@@ -2410,7 +2410,7 @@
         "pl": "wejście"
       },
       "ww": {
-        "sense_id": "entrance.n.s1",
+        "sense_id": "entrance.s1",
         "pos": "n",
         "def": {
           "en": "the door or opening you use to go in",
@@ -2471,7 +2471,7 @@
         "pl": "wejście"
       },
       "ww": {
-        "sense_id": "entry.n.s1",
+        "sense_id": "entry.s1",
         "pos": "n",
         "def": {
           "en": "a door or opening to go in",
@@ -2532,7 +2532,7 @@
         "pl": "środowiskowy"
       },
       "ww": {
-        "sense_id": "environmental.a.s1",
+        "sense_id": "environmental.s1",
         "pos": "a",
         "def": {
           "en": "about nature and the world around us",
@@ -2573,61 +2573,61 @@
     {
       "id": "episode",
       "en": "episode",
-      "ko": "episode",
-      "picture_prompt": "Photorealistic photo illustrating the idea of episode in a university study setting, no text, no letters, no logos",
+      "ko": "에피소드",
+      "picture_prompt": "candy picture-book oil-paint of a television showing one scene from a drama series, one subject, no text no letters no numbers no watermark",
       "l1": {
-        "en": "a word used in academic English: episode",
-        "ko": "episode",
-        "zh-Hans": "a word used in academic English: episode",
-        "ja": "a word used in academic English: episode",
-        "es": "a word used in academic English: episode",
-        "hi": "a word used in academic English: episode",
-        "de": "a word used in academic English: episode",
-        "vi": "a word used in academic English: episode",
-        "pt-BR": "a word used in academic English: episode",
-        "id": "a word used in academic English: episode",
-        "fr": "a word used in academic English: episode",
-        "ar": "a word used in academic English: episode",
-        "tr": "a word used in academic English: episode",
-        "it": "a word used in academic English: episode",
-        "pl": "a word used in academic English: episode"
+        "en": "one part of a series",
+        "ko": "에피소드",
+        "zh-Hans": "系列的一部分",
+        "ja": "シリーズの1つの部分",
+        "es": "una parte de una serie",
+        "hi": "एक श्रृंखला का एक हिस्सा",
+        "de": "ein Teil einer Serie",
+        "vi": "một phần của loạt bài",
+        "pt-BR": "uma parte de uma série",
+        "id": "satu bagian dari seri",
+        "fr": "une partie d'une série",
+        "ar": "جزء من سلسلة",
+        "tr": "Bir serinin bir parçası",
+        "it": "una parte di una serie",
+        "pl": "część serii"
       },
       "ww": {
-        "sense_id": "episode.n.s1",
+        "sense_id": "episode.s1",
         "pos": "n",
         "def": {
-          "en": "an academic term: episode",
-          "ko": "학술 영어 단어: episode",
-          "zh-Hans": "an academic term: episode",
-          "ja": "an academic term: episode",
-          "es": "an academic term: episode",
-          "hi": "an academic term: episode",
-          "de": "an academic term: episode",
-          "vi": "an academic term: episode",
-          "pt-BR": "an academic term: episode",
-          "id": "an academic term: episode",
-          "fr": "an academic term: episode",
-          "ar": "an academic term: episode",
-          "tr": "an academic term: episode",
-          "it": "an academic term: episode",
-          "pl": "an academic term: episode"
+          "en": "one part of a television or podcast series",
+          "ko": "에피소드",
+          "zh-Hans": "电视或播客系列的一部分",
+          "ja": "テレビやポッドキャストシリーズの1つの部分",
+          "es": "una parte de una serie de televisión o podcast",
+          "hi": "टेलीविजन या पॉडकास्ट श्रृंखला का एक हिस्सा",
+          "de": "Ein Teil einer Fernseh- oder Podcast-Serie",
+          "vi": "là một phần của chương trình truyền hình hay prapcast",
+          "pt-BR": "uma parte de uma série de televisão ou podcast",
+          "id": "satu bagian dari seri televisi atau podcast",
+          "fr": "une partie d'une série télévisée ou podcast",
+          "ar": "جزء من سلسلة تليفزيونية أو مذاهب",
+          "tr": "Bir televizyon veya podcast serisinin bir parçası",
+          "it": "una parte di una serie televisiva o podcast",
+          "pl": "jedna część serii telewizyjnej lub podcastu"
         },
         "example": {
-          "en": "The report uses the word \"episode\" in an academic context.",
-          "ko": "보고서는 학술 맥락에서 \"episode\"(을)를 사용한다.",
-          "zh-Hans": "The report uses the word \"episode\" in an academic context.",
-          "ja": "The report uses the word \"episode\" in an academic context.",
-          "es": "The report uses the word \"episode\" in an academic context.",
-          "hi": "The report uses the word \"episode\" in an academic context.",
-          "de": "The report uses the word \"episode\" in an academic context.",
-          "vi": "The report uses the word \"episode\" in an academic context.",
-          "pt-BR": "The report uses the word \"episode\" in an academic context.",
-          "id": "The report uses the word \"episode\" in an academic context.",
-          "fr": "The report uses the word \"episode\" in an academic context.",
-          "ar": "The report uses the word \"episode\" in an academic context.",
-          "tr": "The report uses the word \"episode\" in an academic context.",
-          "it": "The report uses the word \"episode\" in an academic context.",
-          "pl": "The report uses the word \"episode\" in an academic context."
+          "en": "We watched the final episode of the show.",
+          "ko": "우리는 쇼의 마지막 에피소드를 보았습니다.",
+          "zh-Hans": "我们看了节目的最后一集",
+          "ja": "ショーの最終エピソードをご覧いただけます。",
+          "es": "Vimos el episodio final del espectáculo.",
+          "hi": "हमने शो के अंतिम एपिसोड को देखा।",
+          "de": "Wir haben die letzte Episode der Show gesehen.",
+          "vi": "Chúng tôi đã xem tập cuối của chương trình.",
+          "pt-BR": "Vimos o último episódio do programa.",
+          "id": "Kami menyaksikan episode terakhir pertunjukan.",
+          "fr": "Nous avons regardé spread Le dernier épisode du spectacle.",
+          "ar": "شاهدنا الحلقة الأخيرة من العرض",
+          "tr": "Şovun son bölümünü izledik.",
+          "it": "Abbiamo guardato l'episodio finale dello show.",
+          "pl": "Oglądaliśmy ostatni odcinek serialu."
         }
       }
     },
@@ -2654,7 +2654,7 @@
         "pl": "równy"
       },
       "ww": {
-        "sense_id": "equal.a.s1",
+        "sense_id": "equal.s1",
         "pos": "a",
         "def": {
           "en": "the same in amount or size",
@@ -2715,7 +2715,7 @@
         "pl": "równo"
       },
       "ww": {
-        "sense_id": "equally.adv.s1",
+        "sense_id": "equally.s1",
         "pos": "adv",
         "def": {
           "en": "in the same amount",
@@ -2776,7 +2776,7 @@
         "pl": "sprzęt"
       },
       "ww": {
-        "sense_id": "equipment.n.s1",
+        "sense_id": "equipment.s1",
         "pos": "n",
         "def": {
           "en": "tools or things for play or work",
@@ -2817,61 +2817,61 @@
     {
       "id": "era",
       "en": "era",
-      "ko": "era",
-      "picture_prompt": "Photorealistic photo illustrating the idea of era in a university study setting, no text, no letters, no logos",
+      "ko": "시대",
+      "picture_prompt": "candy picture-book oil-paint of a timeline mural showing old tools beside modern computers, one subject, no text no letters no numbers no watermark",
       "l1": {
-        "en": "a word used in academic English: era",
-        "ko": "era",
-        "zh-Hans": "a word used in academic English: era",
-        "ja": "a word used in academic English: era",
-        "es": "a word used in academic English: era",
-        "hi": "a word used in academic English: era",
-        "de": "a word used in academic English: era",
-        "vi": "a word used in academic English: era",
-        "pt-BR": "a word used in academic English: era",
-        "id": "a word used in academic English: era",
-        "fr": "a word used in academic English: era",
-        "ar": "a word used in academic English: era",
-        "tr": "a word used in academic English: era",
-        "it": "a word used in academic English: era",
-        "pl": "a word used in academic English: era"
+        "en": "a period in history",
+        "ko": "시대",
+        "zh-Hans": "历史时期",
+        "ja": "歴史の時代",
+        "es": "un período de historia",
+        "hi": "इतिहास की अवधि",
+        "de": "Eine Periode in der Geschichte",
+        "vi": "một giai đoạn lịch sử",
+        "pt-BR": "um período na história",
+        "id": "sebuah periode dalam sejarah",
+        "fr": "une période historique",
+        "ar": "فترة من التاريخ",
+        "tr": "Tarihte Bir Dönem",
+        "it": "un periodo di storia",
+        "pl": "okres w historii"
       },
       "ww": {
-        "sense_id": "era.n.s1",
+        "sense_id": "era.s1",
         "pos": "n",
         "def": {
-          "en": "an academic term: era",
-          "ko": "학술 영어 단어: era",
-          "zh-Hans": "an academic term: era",
-          "ja": "an academic term: era",
-          "es": "an academic term: era",
-          "hi": "an academic term: era",
-          "de": "an academic term: era",
-          "vi": "an academic term: era",
-          "pt-BR": "an academic term: era",
-          "id": "an academic term: era",
-          "fr": "an academic term: era",
-          "ar": "an academic term: era",
-          "tr": "an academic term: era",
-          "it": "an academic term: era",
-          "pl": "an academic term: era"
+          "en": "a long period of history with particular features",
+          "ko": "시대",
+          "zh-Hans": "一段具有特殊特征的漫长历史",
+          "ja": "特定の機能を持つ長い歴史",
+          "es": "un largo período de historia con características particulares",
+          "hi": "विशेष सुविधाओं के साथ इतिहास की लंबी अवधि",
+          "de": "eine lange Geschichte mit besonderen Merkmalen",
+          "vi": "một thời gian dài lịch sử với các tính năng cụ thể",
+          "pt-BR": "umnel longo da históriaCD com características particulares",
+          "id": "periode panjang sejarah dengan fitur tertentu",
+          "fr": "une longue période d'histoire avec des caractéristiques particulières",
+          "ar": "فترة طويلة من التاريخ مع سمات معينة",
+          "tr": "Özellikle özelliklerle uzun bir tarih dönemi",
+          "it": "un lungo periodo di storia con caratteristiche particolari",
+          "pl": "długi okres historii o szczególnych cechach"
         },
         "example": {
-          "en": "The report uses the word \"era\" in an academic context.",
-          "ko": "보고서는 학술 맥락에서 \"era\"(을)를 사용한다.",
-          "zh-Hans": "The report uses the word \"era\" in an academic context.",
-          "ja": "The report uses the word \"era\" in an academic context.",
-          "es": "The report uses the word \"era\" in an academic context.",
-          "hi": "The report uses the word \"era\" in an academic context.",
-          "de": "The report uses the word \"era\" in an academic context.",
-          "vi": "The report uses the word \"era\" in an academic context.",
-          "pt-BR": "The report uses the word \"era\" in an academic context.",
-          "id": "The report uses the word \"era\" in an academic context.",
-          "fr": "The report uses the word \"era\" in an academic context.",
-          "ar": "The report uses the word \"era\" in an academic context.",
-          "tr": "The report uses the word \"era\" in an academic context.",
-          "it": "The report uses the word \"era\" in an academic context.",
-          "pl": "The report uses the word \"era\" in an academic context."
+          "en": "The digital era changed how we work.",
+          "ko": "디지털 시대는 우리가 일하는 방법을 변경했습니다.",
+          "zh-Hans": "数字时代改变了我们的工作方式。",
+          "ja": "デジタル時代は、私たちがどのように機能するかを変えました。",
+          "es": "La era digital cambió cómo trabajamos.",
+          "hi": "डिजिटल युग बदल गया हम कैसे काम करते हैं।",
+          "de": "Das digitale Zeitalter hat unsere Arbeitsweise verändert.",
+          "vi": "Thời đại kỹ thuật số thay đổi cách chúng ta làm việc.",
+          "pt-BR": "A era digital mudou a forma como trabalhamos.",
+          "id": "Era digital mengubah cara kerja kita.",
+          "fr": "L'ère numérique a changé notre façon de travailler.",
+          "ar": "لقد تغير العصر الرقمي كيف نعمل",
+          "tr": "Dijital dönem nasıl çalıştığımızı değiştirdi.",
+          "it": "L'era digitale ha cambiato come lavoriamo.",
+          "pl": "Era cyfrowa zmieniła naszą pracę."
         }
       }
     },
@@ -2898,7 +2898,7 @@
         "pl": "uciekać"
       },
       "ww": {
-        "sense_id": "escape.v.s1",
+        "sense_id": "escape.s1",
         "pos": "v",
         "def": {
           "en": "to run away from danger",
@@ -2959,7 +2959,7 @@
         "pl": "zwłaszcza"
       },
       "ww": {
-        "sense_id": "especially.adv.s1",
+        "sense_id": "especially.s1",
         "pos": "adv",
         "def": {
           "en": "more than other things",
@@ -3000,61 +3000,61 @@
     {
       "id": "essay",
       "en": "essay",
-      "ko": "essay",
-      "picture_prompt": "Photorealistic photo illustrating the idea of essay in a university study setting, no text, no letters, no logos",
+      "ko": "에세이·작문",
+      "picture_prompt": "candy picture-book oil-paint of a student typing an essay on a laptop at a desk, one subject, no text no letters no numbers no watermark",
       "l1": {
-        "en": "a word used in academic English: essay",
-        "ko": "essay",
-        "zh-Hans": "a word used in academic English: essay",
-        "ja": "a word used in academic English: essay",
-        "es": "a word used in academic English: essay",
-        "hi": "a word used in academic English: essay",
-        "de": "a word used in academic English: essay",
-        "vi": "a word used in academic English: essay",
-        "pt-BR": "a word used in academic English: essay",
-        "id": "a word used in academic English: essay",
-        "fr": "a word used in academic English: essay",
-        "ar": "a word used in academic English: essay",
-        "tr": "a word used in academic English: essay",
-        "it": "a word used in academic English: essay",
-        "pl": "a word used in academic English: essay"
+        "en": "short piece of writing on a topic",
+        "ko": "에세이·작문",
+        "zh-Hans": "关于一个专题的短篇著作",
+        "ja": "トピックに関する文章の短い部分",
+        "es": "corta pieza de escritura sobre un tema",
+        "hi": "एक विषय पर लेखन का संक्षिप्त टुकड़ा",
+        "de": "Kurzes Schreiben zu einem Thema",
+        "vi": "mảnh viết ngắn về đề tài",
+        "pt-BR": "pequeno pedaço de escrita sobre um tópico",
+        "id": "potongan pendek menulis pada sebuah topik",
+        "fr": "court morceau d'écriture sur un sujet",
+        "ar": "قطعة صغيرة من الكتابة عن موضوع",
+        "tr": "Bir konu hakkında kısa yazı parçası",
+        "it": "breve pezzo di scrittura su un argomento",
+        "pl": "krótki kawałek pisania na temat"
       },
       "ww": {
-        "sense_id": "essay.n.s1",
+        "sense_id": "essay.s1",
         "pos": "n",
         "def": {
-          "en": "an academic term: essay",
-          "ko": "학술 영어 단어: essay",
-          "zh-Hans": "an academic term: essay",
-          "ja": "an academic term: essay",
-          "es": "an academic term: essay",
-          "hi": "an academic term: essay",
-          "de": "an academic term: essay",
-          "vi": "an academic term: essay",
-          "pt-BR": "an academic term: essay",
-          "id": "an academic term: essay",
-          "fr": "an academic term: essay",
-          "ar": "an academic term: essay",
-          "tr": "an academic term: essay",
-          "it": "an academic term: essay",
-          "pl": "an academic term: essay"
+          "en": "a short piece of writing on a subject, especially for school",
+          "ko": "에세이·작문",
+          "zh-Hans": "写一篇关于一个主题的短篇小说,特别是针对学校",
+          "ja": "特に学校のために、被写体に書かれた短い作品",
+          "es": "una pequeña escritura sobre un tema, especialmente para la escuela",
+          "hi": "विशेष रूप से स्कूल के लिए एक विषय पर लेखन का एक छोटा सा टुकड़ा",
+          "de": "ein kurzes Schreiben zu einem Thema, insbesondere für die Schule",
+          "vi": "Một bài viết ngắn về một chủ đề, đặc biệt là cho trường học",
+          "pt-BR": "um pequeno pedaço de escrita sobre um assunto, especialmente para a escola",
+          "id": "sepotong pendek menulis pada subjek, terutama untuk sekolah",
+          "fr": "un court morceau d'écriture sur une matière, en particulier pour l'école",
+          "ar": "قطعة قصيرة من الكتابة عن موضوع، لا سيما للمدرسة",
+          "tr": "Bir konu hakkında kısa bir yazı parçası, özellikle okul için",
+          "it": "un breve pezzo di scrittura su un soggetto, soprattutto per la scuola",
+          "pl": "krótki kawałek pisania na temat, zwłaszcza dla szkoły"
         },
         "example": {
-          "en": "The report uses the word \"essay\" in an academic context.",
-          "ko": "보고서는 학술 맥락에서 \"essay\"(을)를 사용한다.",
-          "zh-Hans": "The report uses the word \"essay\" in an academic context.",
-          "ja": "The report uses the word \"essay\" in an academic context.",
-          "es": "The report uses the word \"essay\" in an academic context.",
-          "hi": "The report uses the word \"essay\" in an academic context.",
-          "de": "The report uses the word \"essay\" in an academic context.",
-          "vi": "The report uses the word \"essay\" in an academic context.",
-          "pt-BR": "The report uses the word \"essay\" in an academic context.",
-          "id": "The report uses the word \"essay\" in an academic context.",
-          "fr": "The report uses the word \"essay\" in an academic context.",
-          "ar": "The report uses the word \"essay\" in an academic context.",
-          "tr": "The report uses the word \"essay\" in an academic context.",
-          "it": "The report uses the word \"essay\" in an academic context.",
-          "pl": "The report uses the word \"essay\" in an academic context."
+          "en": "She wrote an essay about climate change.",
+          "ko": "그녀는 기후 변화에 대한 에세이를 썼습니다.",
+          "zh-Hans": "问题以及她写过一篇关于气候变化的文章。",
+          "ja": "気候変動に関するエッセイを書きました。",
+          "es": "Escribió un ensayo sobre el cambio climático.",
+          "hi": "उन्होंने जलवायु परिवर्तन के बारे में एक निबंध लिखा।",
+          "de": "Sie schrieb einen Essay über den Klimawandel.",
+          "vi": "Cô ấy đã viết một bài luận về biến đổi khí hậu.",
+          "pt-BR": "Ela escreveu um ensaio sobre as alterações climáticas.",
+          "id": "Dia menulis esai tentang perubahan iklim.",
+          "fr": "Elle a écrit un essai sur le changement climatique.",
+          "ar": "كتبت مقالة عن تغير المناخ.",
+          "tr": "İklim değişikliği hakkında bir makale yazdı.",
+          "it": "Ha scritto un saggio sul cambiamento climatico.",
+          "pl": "Napisała esej o zmianach klimatycznych."
         }
       }
     },
@@ -3081,7 +3081,7 @@
         "pl": "niezbędny"
       },
       "ww": {
-        "sense_id": "essential.a.s1",
+        "sense_id": "essential.s1",
         "pos": "a",
         "def": {
           "en": "to be very important and needed",
@@ -3142,7 +3142,7 @@
         "pl": "zakład"
       },
       "ww": {
-        "sense_id": "establishment.n.s1",
+        "sense_id": "establishment.s1",
         "pos": "n",
         "def": {
           "en": "a shop, restaurant, or other business that has been set up",
@@ -3203,7 +3203,7 @@
         "pl": "ocena"
       },
       "ww": {
-        "sense_id": "evaluation.n.s1",
+        "sense_id": "evaluation.s1",
         "pos": "n",
         "def": {
           "en": "the act of judging how good something is",
@@ -3264,7 +3264,7 @@
         "pl": "nawet"
       },
       "ww": {
-        "sense_id": "even.adv.s1",
+        "sense_id": "even.s1",
         "pos": "adv",
         "def": {
           "en": "also or as well",
@@ -3325,7 +3325,7 @@
         "pl": "wieczór"
       },
       "ww": {
-        "sense_id": "evening.n.s1",
+        "sense_id": "evening.s1",
         "pos": "n",
         "def": {
           "en": "the time after the sun goes down",
@@ -3386,7 +3386,7 @@
         "pl": "wydarzenie"
       },
       "ww": {
-        "sense_id": "event.n.s1",
+        "sense_id": "event.s1",
         "pos": "n",
         "def": {
           "en": "a special thing that happens",
@@ -3447,7 +3447,7 @@
         "pl": "w końcu"
       },
       "ww": {
-        "sense_id": "eventually.adv.s1",
+        "sense_id": "eventually.s1",
         "pos": "adv",
         "def": {
           "en": "to happen after a long time",
@@ -3508,7 +3508,7 @@
         "pl": "kiedykolwiek"
       },
       "ww": {
-        "sense_id": "ever.adv.s1",
+        "sense_id": "ever.s1",
         "pos": "adv",
         "def": {
           "en": "at any time in life",
@@ -3549,122 +3549,122 @@
     {
       "id": "every",
       "en": "every",
-      "ko": "마다",
-      "picture_prompt": "a row of five identical blue cups on a shelf",
+      "ko": "모든",
+      "picture_prompt": "candy picture-book oil-paint of a classroom where each desk holds an identical notebook, one subject, no text no letters no numbers no watermark",
       "l1": {
-        "en": "each one in a group",
-        "ko": "마다",
-        "zh-Hans": "每个 (Ev)",
-        "ja": "すべての (E)",
-        "es": "cada (Ev)",
-        "hi": "हर",
-        "de": "jede",
-        "vi": "mỗi (Ev)",
-        "pt-BR": "todo (E)",
-        "id": "setiap (Ev)",
-        "fr": "chaque (Ev)",
-        "ar": "كل (Ev)",
-        "tr": "her (Ev)",
-        "it": "ogni (Ev)",
-        "pl": "każdy (Ev)"
+        "en": "all members of a group",
+        "ko": "모든",
+        "zh-Hans": "一组的所有成员",
+        "ja": "グループのメンバー全員",
+        "es": "todos los miembros de un grupo",
+        "hi": "समूह के सभी सदस्य",
+        "de": "Alle Mitglieder einer Gruppe",
+        "vi": "tất cả thành viên của một nhóm",
+        "pt-BR": "todos os membros de um grupo",
+        "id": "semua anggota kelompok",
+        "fr": "tous les membres d'un groupe",
+        "ar": "جميع أعضاء المجموعة",
+        "tr": "Bir grubun tüm üyeleri",
+        "it": "tutti i membri di un gruppo",
+        "pl": "wszyscy członkowie grupy"
       },
       "ww": {
-        "sense_id": "every.det.s1",
+        "sense_id": "every.s1",
         "pos": "det",
         "def": {
-          "en": "used before each one",
-          "ko": "마다",
-          "zh-Hans": "每个 (Ev)",
-          "ja": "すべての (E)",
-          "es": "cada (Ev)",
-          "hi": "हर",
-          "de": "jede",
-          "vi": "mỗi (Ev)",
-          "pt-BR": "todo (E)",
-          "id": "setiap (Ev)",
-          "fr": "chaque (Ev)",
-          "ar": "كل (Ev)",
-          "tr": "her (Ev)",
-          "it": "ogni (Ev)",
-          "pl": "każdy (Ev)"
+          "en": "used to refer to all the members of a group",
+          "ko": "모든",
+          "zh-Hans": "用来指一个集团的所有成员",
+          "ja": "グループのすべてのメンバーを参照するために使用される",
+          "es": "utilizado para referirse a todos los miembros de un grupo",
+          "hi": "किसी समूह के सभी सदस्यों को संदर्भित करने के लिए उपयोग किया जाता है",
+          "de": "verwendet, um sich auf alle Mitglieder einer Gruppe zu beziehen",
+          "vi": "được dùng để chỉ tất cả các thành viên của một nhóm",
+          "pt-BR": "usado para se referir a todos os membros de um grupo",
+          "id": "digunakan untuk merujuk ke semua anggota kelompok",
+          "fr": "utilisé pour désigner tous les membres d'un groupe",
+          "ar": "يُستخدم للإشارة إلى جميع أعضاء المجموعة",
+          "tr": "Bir grubun tüm üyelerine atıfta bulunmak için kullanılır",
+          "it": "usato per riferire a tutti i membri di un gruppo",
+          "pl": "używane w odniesieniu do wszystkich członków grupy"
         },
         "example": {
-          "en": "Every child has a book.",
-          "ko": "모든 아이가 책을 가지고 있다.",
-          "zh-Hans": "每个孩子都有一本书。",
-          "ja": "どの子供も本を持っています。",
-          "es": "Cada niño tiene un libro.",
-          "hi": "हर बच्चे के पास किताब है。",
-          "de": "Jedes Kind hat ein Buch.",
-          "vi": "Mỗi đứa trẻ đều có sách.",
-          "pt-BR": "Toda criança tem um livro.",
-          "id": "Setiap anak punya buku.",
-          "fr": "Chaque enfant a un livre.",
-          "ar": "كل طفل لديه كتاب.",
-          "tr": "Her çocuğun bir kitabı var.",
-          "it": "Ogni bambino ha un libro.",
-          "pl": "Każde dziecko ma książkę."
+          "en": "Every student must bring a notebook.",
+          "ko": "모든 학생은 노트북을 가져야합니다.",
+          "zh-Hans": "每个学生都必须带一本笔记本",
+          "ja": "生徒一人ひとりがノートを持参しなければなりません。",
+          "es": "Cada estudiante debe traer un cuaderno.",
+          "hi": "प्रत्येक छात्र को नोटबुक लाना होगा।",
+          "de": "Jeder Schüler muss ein Notizbuch mitbringen.",
+          "vi": "Mỗi học sinh phải mang theo một cuốn sổ.",
+          "pt-BR": "Todos os alunos devem trazer um caderno.",
+          "id": "Setiap siswa harus membawa buku catatan.",
+          "fr": "Chaque élève doit apporter un cahier.",
+          "ar": "كل طالب يجب أن يحضر مفكرة",
+          "tr": "Her öğrenci bir not defteri getirmelidir.",
+          "it": "Ogni studente deve portare un taccuino.",
+          "pl": "Każdy uczeń musi przynieść notes."
         }
       }
     },
     {
       "id": "everybody",
       "en": "everybody",
-      "ko": "모두 (Everyb)",
-      "picture_prompt": "a big circle of smiling children holding hands",
+      "ko": "모든 사람",
+      "picture_prompt": "candy picture-book oil-paint of a crowd clapping together in a gymnasium, one subject, no text no letters no numbers no watermark",
       "l1": {
-        "en": "every single person",
-        "ko": "모두 (Everyb)",
-        "zh-Hans": "大家 (Everyb)",
-        "ja": "みんな (Everyb)",
-        "es": "todos (Everyb)",
-        "hi": "सभी (Everyb)",
-        "de": "alle (Everyb)",
-        "vi": "mọi người (Everyb)",
-        "pt-BR": "todos (Everyb)",
-        "id": "semua orang (Everyb)",
-        "fr": "tous (Everyb)",
-        "ar": "الجميع (Everyb)",
-        "tr": "herkes (Everyb)",
-        "it": "tutti (Everyb)",
-        "pl": "wszyscy (Everyb)"
+        "en": "every person",
+        "ko": "모든 사람",
+        "zh-Hans": "每个人",
+        "ja": "ご利用人数",
+        "es": "cada persona",
+        "hi": "प्रत्येक व्यक्ति",
+        "de": "jede Person",
+        "vi": "mỗi người",
+        "pt-BR": "cada pessoa",
+        "id": "setiap orang",
+        "fr": "chaque personne",
+        "ar": "كل شخص",
+        "tr": "Her kişi",
+        "it": "ogni persona",
+        "pl": "każda osoba"
       },
       "ww": {
-        "sense_id": "everybody.pron.s1",
+        "sense_id": "everybody.s1",
         "pos": "pron",
         "def": {
-          "en": "every person in a group",
-          "ko": "모두 (Everyb)",
-          "zh-Hans": "大家 (Everyb)",
-          "ja": "みんな (Everyb)",
-          "es": "todos (Everyb)",
-          "hi": "सभी (Everyb)",
-          "de": "alle (Everyb)",
-          "vi": "mọi người (Everyb)",
-          "pt-BR": "todos (Everyb)",
-          "id": "semua orang (Everyb)",
-          "fr": "tous (Everyb)",
-          "ar": "الجميع (Everyb)",
-          "tr": "herkes (Everyb)",
-          "it": "tutti (Everyb)",
-          "pl": "wszyscy (Everyb)"
+          "en": "every person",
+          "ko": "모든 사람",
+          "zh-Hans": "每个人",
+          "ja": "ご利用人数",
+          "es": "cada persona",
+          "hi": "प्रत्येक व्यक्ति",
+          "de": "jede Person",
+          "vi": "mỗi người",
+          "pt-BR": "cada pessoa",
+          "id": "setiap orang",
+          "fr": "chaque personne",
+          "ar": "كل شخص",
+          "tr": "Her kişi",
+          "it": "ogni persona",
+          "pl": "każda osoba"
         },
         "example": {
-          "en": "Everybody likes ice cream.",
-          "ko": "모두가 아이스크림을 좋아한다.",
-          "zh-Hans": "每个人都喜欢冰淇淋。",
-          "ja": "みんながアイスクリームが好きだ。",
-          "es": "A todo el mundo le gusta el helado.",
-          "hi": "हर कोई आइसक्रीम पसंद करता है।",
-          "de": "Jeder mag Eiscreme.",
-          "vi": "Mọi người đều thích kem.",
-          "pt-BR": "Todo mundo gosta de sorvete.",
-          "id": "Semua orang suka es krim.",
-          "fr": "Tout le monde aime la crème glacée.",
-          "ar": "الجميع يحب الآيس كريم.",
-          "tr": "Herkes dondurma sever.",
-          "it": "A tutti piace il gelato.",
-          "pl": "Wszyscy lubią lody."
+          "en": "Everybody clapped when the team won.",
+          "ko": "팀이 이겼을 때 모든 사람이 복제.",
+          "zh-Hans": "当球队获胜时,每个人都扑了过来",
+          "ja": "チームが勝ち取ったとき、誰もが拍手。",
+          "es": "Todos aplaudieron cuando el equipo ganó.",
+          "hi": "जब टीम जीत गई तो हर किसी ने पकड़ लिया।",
+          "de": "Alle klatschten, als das Team gewann.",
+          "vi": "Mọi người đều vỗ tay khi cả đội thắng.",
+          "pt-BR": "Todos aplaudiram quando a equipa ganhou.",
+          "id": "Semua orang bertepuk tangan ketika tim menang.",
+          "fr": "Tout le monde s'est battu quand l'équipe a gagné.",
+          "ar": "الجميع صفقوا عندما فاز الفريق",
+          "tr": "Herkes takım kazandığında alkışladı.",
+          "it": "Tutti hanno battuto quando la squadra ha vinto.",
+          "pl": "Wszyscy klaskali, gdy drużyna wygrała."
         }
       }
     },
@@ -3691,7 +3691,7 @@
         "pl": "codzienny"
       },
       "ww": {
-        "sense_id": "everyday.a.s1",
+        "sense_id": "everyday.s1",
         "pos": "a",
         "def": {
           "en": "happening or used every day",
@@ -3732,122 +3732,122 @@
     {
       "id": "everyone",
       "en": "everyone",
-      "ko": "모두 (Everyo)",
-      "picture_prompt": "a happy circle of children holding hands",
+      "ko": "모든 사람",
+      "picture_prompt": "candy picture-book oil-paint of a diverse group sharing food at a park picnic, one subject, no text no letters no numbers no watermark",
       "l1": {
-        "en": "all the people",
-        "ko": "모두 (Everyo)",
-        "zh-Hans": "大家 (Everyo)",
-        "ja": "みんな (Everyo)",
-        "es": "todos (Everyo)",
-        "hi": "सभी (Everyo)",
-        "de": "alle (Everyo)",
-        "vi": "mọi người (Everyo)",
-        "pt-BR": "todos (Everyo)",
-        "id": "semua orang (Everyo)",
-        "fr": "tous (Everyo)",
-        "ar": "الجميع (Everyo)",
-        "tr": "herkes (Everyo)",
-        "it": "tutti (Everyo)",
-        "pl": "wszyscy (Everyo)"
+        "en": "every person",
+        "ko": "모든 사람",
+        "zh-Hans": "每个人",
+        "ja": "ご利用人数",
+        "es": "cada persona",
+        "hi": "प्रत्येक व्यक्ति",
+        "de": "jede Person",
+        "vi": "mỗi người",
+        "pt-BR": "cada pessoa",
+        "id": "setiap orang",
+        "fr": "chaque personne",
+        "ar": "كل شخص",
+        "tr": "Her kişi",
+        "it": "ogni persona",
+        "pl": "każda osoba"
       },
       "ww": {
-        "sense_id": "everyone.pron.s1",
+        "sense_id": "everyone.s1",
         "pos": "pron",
         "def": {
-          "en": "all the people in a group",
-          "ko": "모두 (Everyo)",
-          "zh-Hans": "大家 (Everyo)",
-          "ja": "みんな (Everyo)",
-          "es": "todos (Everyo)",
-          "hi": "सभी (Everyo)",
-          "de": "alle (Everyo)",
-          "vi": "mọi người (Everyo)",
-          "pt-BR": "todos (Everyo)",
-          "id": "semua orang (Everyo)",
-          "fr": "tous (Everyo)",
-          "ar": "الجميع (Everyo)",
-          "tr": "herkes (Everyo)",
-          "it": "tutti (Everyo)",
-          "pl": "wszyscy (Everyo)"
+          "en": "every person",
+          "ko": "모든 사람",
+          "zh-Hans": "每个人",
+          "ja": "ご利用人数",
+          "es": "cada persona",
+          "hi": "प्रत्येक व्यक्ति",
+          "de": "jede Person",
+          "vi": "mỗi người",
+          "pt-BR": "cada pessoa",
+          "id": "setiap orang",
+          "fr": "chaque personne",
+          "ar": "كل شخص",
+          "tr": "Her kişi",
+          "it": "ogni persona",
+          "pl": "każda osoba"
         },
         "example": {
-          "en": "Everyone likes ice cream.",
-          "ko": "모두가 아이스크림을 좋아한다.",
-          "zh-Hans": "每个人都喜欢冰淇淋。",
-          "ja": "みんなアイスクリームが好きだ。",
-          "es": "A todos les gusta el helado.",
-          "hi": "सभी को आइसक्रीम पसंद है।",
-          "de": "Alle mögen Eis.",
-          "vi": "Mọi người đều thích kem.",
-          "pt-BR": "Todos gostam de sorvete.",
-          "id": "Semua orang suka es krim.",
-          "fr": "Tout le monde aime la glace.",
-          "ar": "الجميع يحب الآيس كريم.",
-          "tr": "Herkes dondurmayı sever.",
-          "it": "A tutti piace il gelato.",
-          "pl": "Wszyscy lubią lody."
+          "en": "Everyone is welcome at the community picnic.",
+          "ko": "모두가 공동체 피크닉에 오신 것을 환영합니다.",
+          "zh-Hans": "欢迎每个人参加社区野餐。",
+          "ja": "コミュニティピクニックで皆様をお待ちしております。",
+          "es": "Todos son bienvenidos en el picnic comunitario.",
+          "hi": "हर कोई समुदाय पिकनिक पर स्वागत करता है।",
+          "de": "Alle sind beim Community Picknick willkommen.",
+          "vi": "Mọi người được chào đón tại buổi dã ngoại cộng đồng.",
+          "pt-BR": "Todos são bem-vindos no piquenique comunitário.",
+          "id": "Semua orang diterima di piknik masyarakat.",
+          "fr": "Tout le monde est le bienvenu au pique-nique communautaire.",
+          "ar": "الجميع مرحب بهم في نزهة المجتمع",
+          "tr": "Herkes topluluk pikyonunda hoşlanır.",
+          "it": "Tutti sono i benvenuti al picnic della comunità.",
+          "pl": "Wszyscy są mile widziani na wspólnym pikniku."
         }
       }
     },
     {
       "id": "everything",
       "en": "everything",
-      "ko": "전부",
-      "picture_prompt": "a big open box full of colorful toys and books",
+      "ko": "모든 것",
+      "picture_prompt": "candy picture-book oil-paint of packed suitcases and tickets arranged by the door, one subject, no text no letters no numbers no watermark",
       "l1": {
-        "en": "all the things",
-        "ko": "전부",
-        "zh-Hans": "一切",
-        "ja": "全て",
-        "es": "todo",
-        "hi": "सब",
-        "de": "alles",
-        "vi": "tất cả",
-        "pt-BR": "tudo",
-        "id": "semuanya",
-        "fr": "tout",
+        "en": "all things",
+        "ko": "모든 것",
+        "zh-Hans": "所有的东西",
+        "ja": "すべての事柄",
+        "es": "todas las cosas",
+        "hi": "सब कुछ",
+        "de": "Alle Dinge",
+        "vi": "Tất cả mọi thứ",
+        "pt-BR": "todas as coisas",
+        "id": "semua hal",
+        "fr": "toutes les choses",
         "ar": "كل شيء",
-        "tr": "her şey",
-        "it": "tutto",
-        "pl": "wszystko"
+        "tr": "Bütün şeyler",
+        "it": "tutte le cose",
+        "pl": "Wszystko."
       },
       "ww": {
-        "sense_id": "everything.pron.s1",
+        "sense_id": "everything.s1",
         "pos": "pron",
         "def": {
-          "en": "all the things",
-          "ko": "전부",
-          "zh-Hans": "一切",
-          "ja": "全て",
-          "es": "todo",
-          "hi": "सब",
-          "de": "alles",
-          "vi": "tất cả",
-          "pt-BR": "tudo",
-          "id": "semuanya",
-          "fr": "tout",
-          "ar": "كل شيء",
-          "tr": "her şey",
-          "it": "tutto",
-          "pl": "wszystko"
+          "en": "all things or the whole of something",
+          "ko": "모든 것",
+          "zh-Hans": "所有的事情或所有的东西",
+          "ja": "何かの全部または全部",
+          "es": "todas las cosas o todo algo",
+          "hi": "सभी चीजें या कुछ",
+          "de": "Alle Dinge oder das Ganze von etwas",
+          "vi": "Tất cả mọi thứ hoặc của một cái gì đó",
+          "pt-BR": "todas as coisas ou todas as coisas",
+          "id": "semua hal atau seluruh sesuatu",
+          "fr": "toutes les choses ou l'ensemble de quelque chose",
+          "ar": "كل شيء أو كل شيء",
+          "tr": "Her şey ya da bir şeyin bütünü",
+          "it": "tutto o tutto ciò",
+          "pl": "Wszystko albo całe coś."
         },
         "example": {
-          "en": "She packed everything in her bag.",
-          "ko": "그녀는 모든 것을 가방에 챙겼어요.",
-          "zh-Hans": "她把所有东西都装进了包里。",
-          "ja": "彼女はすべてのものをカバンに詰めました。",
-          "es": "Ella metió todas las cosas en su bolso.",
-          "hi": "उसने अपनी थैली में सब कुछ पैक कर लिया।",
-          "de": "Sie packte alle Dinge in ihre Tasche.",
-          "vi": "Cô ấy đóng gói tất cả mọi thứ vào túi.",
-          "pt-BR": "Ela colocou todas as coisas na bolsa.",
-          "id": "Dia memasukkan semua benda ke dalam tasnya.",
-          "fr": "Elle a mis toutes les choses dans son sac.",
-          "ar": "حزمت كل الأشياء في حقيبتها.",
-          "tr": "Çantasının içine her şeyi koydu.",
-          "it": "Ha messo tutte le cose nella borsa.",
-          "pl": "Włożyła wszystkie rzeczy do torby."
+          "en": "Everything was ready for the trip.",
+          "ko": "모든 것이 여행 준비가되었습니다.",
+          "zh-Hans": "一切都准备好了",
+          "ja": "旅行の準備ができました。",
+          "es": "Todo estaba listo para el viaje.",
+          "hi": "सब कुछ यात्रा के लिए तैयार था।",
+          "de": "Alles war bereit für die Reise.",
+          "vi": "Mọi thứ đã sẵn sàng cho chuyến đi.",
+          "pt-BR": "Estava tudo pronto para a viagem.",
+          "id": "Semuanya sudah siap untuk perjalanan.",
+          "fr": "Tout était prêt pour le voyage.",
+          "ar": "كل شيء كان جاهزاً للرحلة",
+          "tr": "Her şey seyahat için hazırdı.",
+          "it": "Tutto era pronto per il viaggio.",
+          "pl": "Wszystko było gotowe na podróż."
         }
       }
     },
@@ -3874,7 +3874,7 @@
         "pl": "wszędzie"
       },
       "ww": {
-        "sense_id": "everywhere.adv.s1",
+        "sense_id": "everywhere.s1",
         "pos": "adv",
         "def": {
           "en": "in or to every place",
@@ -3935,7 +3935,7 @@
         "pl": "dowód"
       },
       "ww": {
-        "sense_id": "evidence.n.s1",
+        "sense_id": "evidence.s1",
         "pos": "n",
         "def": {
           "en": "something that shows what really happened",
@@ -3996,7 +3996,7 @@
         "pl": "zły"
       },
       "ww": {
-        "sense_id": "evil.a.s1",
+        "sense_id": "evil.s1",
         "pos": "a",
         "def": {
           "en": "very mean and wanting to hurt",
@@ -4037,61 +4037,61 @@
     {
       "id": "evolution",
       "en": "evolution",
-      "ko": "evolution",
-      "picture_prompt": "Photorealistic photo illustrating the idea of evolution in a university study setting, no text, no letters, no logos",
+      "ko": "진화",
+      "picture_prompt": "candy picture-book oil-paint of a museum display of fossils from simple to complex life, one subject, no text no letters no numbers no watermark",
       "l1": {
-        "en": "a word used in academic English: evolution",
-        "ko": "evolution",
-        "zh-Hans": "a word used in academic English: evolution",
-        "ja": "a word used in academic English: evolution",
-        "es": "a word used in academic English: evolution",
-        "hi": "a word used in academic English: evolution",
-        "de": "a word used in academic English: evolution",
-        "vi": "a word used in academic English: evolution",
-        "pt-BR": "a word used in academic English: evolution",
-        "id": "a word used in academic English: evolution",
-        "fr": "a word used in academic English: evolution",
-        "ar": "a word used in academic English: evolution",
-        "tr": "a word used in academic English: evolution",
-        "it": "a word used in academic English: evolution",
-        "pl": "a word used in academic English: evolution"
+        "en": "slow change over long time",
+        "ko": "진화",
+        "zh-Hans": "长期缓慢变化",
+        "ja": "長い時間上の遅い変更",
+        "es": "cambio lento durante mucho tiempo",
+        "hi": "लंबे समय से बदलाव",
+        "de": "Langsame Veränderung über lange Zeit",
+        "vi": "chậm thay đổi theo thời gian dài",
+        "pt-BR": "mudança lenta ao longo de muito tempo",
+        "id": "perubahan lambat lebih lama",
+        "fr": "changement lent sur de longues périodes",
+        "ar": "التغير البطيء على مر الزمن",
+        "tr": "Yavaş yavaş uzun zaman içinde değişir",
+        "it": "lento cambiamento nel tempo",
+        "pl": "powolne zmiany w długim czasie"
       },
       "ww": {
-        "sense_id": "evolution.n.s1",
+        "sense_id": "evolution.s1",
         "pos": "n",
         "def": {
-          "en": "an academic term: evolution",
-          "ko": "학술 영어 단어: evolution",
-          "zh-Hans": "an academic term: evolution",
-          "ja": "an academic term: evolution",
-          "es": "an academic term: evolution",
-          "hi": "an academic term: evolution",
-          "de": "an academic term: evolution",
-          "vi": "an academic term: evolution",
-          "pt-BR": "an academic term: evolution",
-          "id": "an academic term: evolution",
-          "fr": "an academic term: evolution",
-          "ar": "an academic term: evolution",
-          "tr": "an academic term: evolution",
-          "it": "an academic term: evolution",
-          "pl": "an academic term: evolution"
+          "en": "the slow change in living things over many generations",
+          "ko": "진화",
+          "zh-Hans": "许多世代以来 生物的缓慢变化",
+          "ja": "多くの世代にわたって生きたもののスローチェンジ",
+          "es": "el lento cambio en las cosas vivientes durante muchas generaciones",
+          "hi": "कई पीढ़ियों से जीवित चीजों में धीमी गति से बदलाव",
+          "de": "die langsame Veränderung der Lebewesen über viele Generationen hinweg",
+          "vi": "Sự thay đổi chậm chạp trong các sinh vật qua nhiều thế hệ",
+          "pt-BR": "a lenta mudança nas coisas vivas ao longo de muitas gerações",
+          "id": "perubahan lambat dalam hal-hal hidup selama banyak generasi",
+          "fr": "le changement lent des choses vivantes sur de nombreuses générations",
+          "ar": "التغير البطيء في الحياة على مدى أجيال عديدة",
+          "tr": "Birçok nesil üzerinde yaşamakta yavaş değişim",
+          "it": "il lento cambiamento nelle cose viventi di molte generazioni",
+          "pl": "powopowopowopowolna zmiana w żyżyżyżyżyżyżyje od wielu pokoleń"
         },
         "example": {
-          "en": "The report uses the word \"evolution\" in an academic context.",
-          "ko": "보고서는 학술 맥락에서 \"evolution\"(을)를 사용한다.",
-          "zh-Hans": "The report uses the word \"evolution\" in an academic context.",
-          "ja": "The report uses the word \"evolution\" in an academic context.",
-          "es": "The report uses the word \"evolution\" in an academic context.",
-          "hi": "The report uses the word \"evolution\" in an academic context.",
-          "de": "The report uses the word \"evolution\" in an academic context.",
-          "vi": "The report uses the word \"evolution\" in an academic context.",
-          "pt-BR": "The report uses the word \"evolution\" in an academic context.",
-          "id": "The report uses the word \"evolution\" in an academic context.",
-          "fr": "The report uses the word \"evolution\" in an academic context.",
-          "ar": "The report uses the word \"evolution\" in an academic context.",
-          "tr": "The report uses the word \"evolution\" in an academic context.",
-          "it": "The report uses the word \"evolution\" in an academic context.",
-          "pl": "The report uses the word \"evolution\" in an academic context."
+          "en": "The museum exhibit explains evolution.",
+          "ko": "박물관 전시는 진화를 설명합니다.",
+          "zh-Hans": "博物馆展品解释进化.",
+          "ja": "博物館展示では、進化について説明しています。",
+          "es": "La exposición del museo explica la evolución.",
+          "hi": "संग्रहालय प्रदर्शन विकास की व्याख्या करता है।",
+          "de": "Die Museumsausstellung erklärt die Evolution.",
+          "vi": "Bảo tàng triển lãm giải thích sự tiến hóa.",
+          "pt-BR": "A exposição do museu explica a evolução.",
+          "id": "Pameran museum menjelaskan evolusi.",
+          "fr": "L'exposition du musée explique l'évolution.",
+          "ar": "معرض المتحف يشرح التطور",
+          "tr": "Müze sergisi evrimi açıklıyor.",
+          "it": "La mostra del museo spiega l'evoluzione.",
+          "pl": "potwierdzić ewolucję."
         }
       }
     },
@@ -4118,7 +4118,7 @@
         "pl": "dokładny"
       },
       "ww": {
-        "sense_id": "exact.a.s1",
+        "sense_id": "exact.s1",
         "pos": "a",
         "def": {
           "en": "to be completely right or correct",
@@ -4179,7 +4179,7 @@
         "pl": "dokładnie"
       },
       "ww": {
-        "sense_id": "exactly.adv.s1",
+        "sense_id": "exactly.s1",
         "pos": "adv",
         "def": {
           "en": "in a completely correct way",
@@ -4220,61 +4220,61 @@
     {
       "id": "exam",
       "en": "exam",
-      "ko": "exam",
-      "picture_prompt": "Photorealistic photo illustrating the idea of exam in a university study setting, no text, no letters, no logos",
+      "ko": "시험",
+      "picture_prompt": "candy picture-book oil-paint of students sitting at desks with papers and pencils, one subject, no text no letters no numbers no watermark",
       "l1": {
-        "en": "a word used in academic English: exam",
-        "ko": "exam",
-        "zh-Hans": "a word used in academic English: exam",
-        "ja": "a word used in academic English: exam",
-        "es": "a word used in academic English: exam",
-        "hi": "a word used in academic English: exam",
-        "de": "a word used in academic English: exam",
-        "vi": "a word used in academic English: exam",
-        "pt-BR": "a word used in academic English: exam",
-        "id": "a word used in academic English: exam",
-        "fr": "a word used in academic English: exam",
-        "ar": "a word used in academic English: exam",
-        "tr": "a word used in academic English: exam",
-        "it": "a word used in academic English: exam",
-        "pl": "a word used in academic English: exam"
+        "en": "formal school test",
+        "ko": "시험",
+        "zh-Hans": "正规学校考试",
+        "ja": "正式な学校のテスト",
+        "es": "prueba escolar formal",
+        "hi": "औपचारिक स्कूल परीक्षण",
+        "de": "formaler Schultest",
+        "vi": "Comment",
+        "pt-BR": "prova escolar formal",
+        "id": "tes sekolah formal",
+        "fr": "test scolaire formel",
+        "ar": "اختبار المدارس الرسمية",
+        "tr": "formal okul testi",
+        "it": "prova scolastica formale",
+        "pl": "egzamin szkolny"
       },
       "ww": {
-        "sense_id": "exam.n.s1",
+        "sense_id": "exam.s1",
         "pos": "n",
         "def": {
-          "en": "an academic term: exam",
-          "ko": "학술 영어 단어: exam",
-          "zh-Hans": "an academic term: exam",
-          "ja": "an academic term: exam",
-          "es": "an academic term: exam",
-          "hi": "an academic term: exam",
-          "de": "an academic term: exam",
-          "vi": "an academic term: exam",
-          "pt-BR": "an academic term: exam",
-          "id": "an academic term: exam",
-          "fr": "an academic term: exam",
-          "ar": "an academic term: exam",
-          "tr": "an academic term: exam",
-          "it": "an academic term: exam",
-          "pl": "an academic term: exam"
+          "en": "a formal test of knowledge or skill",
+          "ko": "시험",
+          "zh-Hans": "正式测试知识或技能;",
+          "ja": "知識やスキルの正式なテスト",
+          "es": "una prueba formal de conocimiento o habilidad",
+          "hi": "ज्ञान या कौशल का औपचारिक परीक्षण",
+          "de": "eine formale Prüfung der Kenntnisse oder Fähigkeiten",
+          "vi": "kiểm tra kiến thức và kỹ năng",
+          "pt-BR": "um teste formal de conhecimento ou habilidade",
+          "id": "ujian formal pengetahuan atau Janganlah kemampuan",
+          "fr": "un test formel de connaissances ou de compétences",
+          "ar": "a formal test of knowledge or skills",
+          "tr": "Bir bilgi veya beceri testi",
+          "it": "una prova formale di conoscenza o abilità",
+          "pl": "formalne badanie wiedzy lub umiejętności"
         },
         "example": {
-          "en": "The report uses the word \"exam\" in an academic context.",
-          "ko": "보고서는 학술 맥락에서 \"exam\"(을)를 사용한다.",
-          "zh-Hans": "The report uses the word \"exam\" in an academic context.",
-          "ja": "The report uses the word \"exam\" in an academic context.",
-          "es": "The report uses the word \"exam\" in an academic context.",
-          "hi": "The report uses the word \"exam\" in an academic context.",
-          "de": "The report uses the word \"exam\" in an academic context.",
-          "vi": "The report uses the word \"exam\" in an academic context.",
-          "pt-BR": "The report uses the word \"exam\" in an academic context.",
-          "id": "The report uses the word \"exam\" in an academic context.",
-          "fr": "The report uses the word \"exam\" in an academic context.",
-          "ar": "The report uses the word \"exam\" in an academic context.",
-          "tr": "The report uses the word \"exam\" in an academic context.",
-          "it": "The report uses the word \"exam\" in an academic context.",
-          "pl": "The report uses the word \"exam\" in an academic context."
+          "en": "The final exam covers all chapters.",
+          "ko": "최종 시험은 모든 장들을 다룹니다.",
+          "zh-Hans": "期末考试涵盖所有章节.",
+          "ja": "最終試験はすべての章をカバーしています。",
+          "es": "El examen final abarca todos los capítulos.",
+          "hi": "अंतिम परीक्षा में सभी अध्याय शामिल हैं।",
+          "de": "Die Abschlussprüfung umfasst alle Kapitel.",
+          "vi": "Bài thi cuối cùng bao gồm tất cả các chương.",
+          "pt-BR": "O exame final abrange todos os capítulos.",
+          "id": "Ujian akhir mencakup semua bab.",
+          "fr": "L'examen final couvre tous les chapitres.",
+          "ar": "ويغطي الامتحان النهائي جميع الفصول.",
+          "tr": "Son sınav tüm bölümleri kapsar.",
+          "it": "L'esame finale copre tutti i capitoli.",
+          "pl": "Egzamin końcowy obejmuje wszystkie rozdziały."
         }
       }
     },
@@ -4301,7 +4301,7 @@
         "pl": "egzamin"
       },
       "ww": {
-        "sense_id": "examination.n.s1",
+        "sense_id": "examination.s1",
         "pos": "n",
         "def": {
           "en": "a test of what you know",
@@ -4362,7 +4362,7 @@
         "pl": "badać"
       },
       "ww": {
-        "sense_id": "examine.v.s1",
+        "sense_id": "examine.s1",
         "pos": "v",
         "def": {
           "en": "to look at something carefully",
@@ -4423,7 +4423,7 @@
         "pl": "przykład"
       },
       "ww": {
-        "sense_id": "example.n.s1",
+        "sense_id": "example.s1",
         "pos": "n",
         "def": {
           "en": "a thing or action that shows how something works",
@@ -4484,7 +4484,7 @@
         "pl": "doskonały"
       },
       "ww": {
-        "sense_id": "excellent.a.s1",
+        "sense_id": "excellent.s1",
         "pos": "a",
         "def": {
           "en": "very very good",
@@ -4528,61 +4528,61 @@
     {
       "id": "except",
       "en": "except",
-      "ko": "빼고 (Except)",
-      "picture_prompt": "a row of colorful balloons with one balloon missing",
+      "ko": "~을 제외하고",
+      "picture_prompt": "candy picture-book oil-paint of a team photo with one empty chair labeled by a missing jersey, one subject, no text no letters no numbers no watermark",
       "l1": {
-        "en": "not including one thing",
-        "ko": "빼고 (Except)",
-        "zh-Hans": "除了 (E)",
-        "ja": "以外 (Except)",
-        "es": "excepto (Except)",
-        "hi": "सिवा (Except)",
-        "de": "außer (E)",
-        "vi": "trừ (E)",
-        "pt-BR": "exceto (Except)",
-        "id": "kecuali (E)",
-        "fr": "sauf (E)",
-        "ar": "إلا",
-        "tr": "hariç (Except)",
-        "it": "tranne",
-        "pl": "oprócz (E)"
+        "en": "not including",
+        "ko": "~을 제외하고",
+        "zh-Hans": "不包括",
+        "ja": "含まれていません",
+        "es": "no incluido",
+        "hi": "शामिल नहीं",
+        "de": "nicht einschließlich",
+        "vi": "không gồm",
+        "pt-BR": "não incluindo",
+        "id": "tidak termasuk",
+        "fr": "non compris",
+        "ar": "لا يشمل",
+        "tr": "dahil olmak dahil değil de dahil değil de",
+        "it": "non incluso",
+        "pl": "z wyłączeniem"
       },
       "ww": {
-        "sense_id": "except.conj.s1",
-        "pos": "conj",
+        "sense_id": "except.s1",
+        "pos": "prep",
         "def": {
-          "en": "not including one person or thing",
-          "ko": "빼고 (Except)",
-          "zh-Hans": "除了 (E)",
-          "ja": "以外 (Except)",
-          "es": "excepto (Except)",
-          "hi": "सिवा (Except)",
-          "de": "außer (E)",
-          "vi": "trừ (E)",
-          "pt-BR": "exceto (Except)",
-          "id": "kecuali (E)",
-          "fr": "sauf (E)",
-          "ar": "إلا",
-          "tr": "hariç (Except)",
-          "it": "tranne",
-          "pl": "oprócz (E)"
+          "en": "not including; other than",
+          "ko": "~을 제외하고",
+          "zh-Hans": "不包括;为其他",
+          "ja": "含まれていない; 以外",
+          "es": "no incluido;",
+          "hi": "नहीं; इसके अलावा",
+          "de": "ausgenommen:",
+          "vi": "không bao gồm; khác hơn",
+          "pt-BR": "não incluindo; excepto",
+          "id": "tidak termasuk; selain dari",
+          "fr": "non compris, à l'exclusion de",
+          "ar": "غير ذلك؛",
+          "tr": "dahil değil; diğeri",
+          "it": "non incluso; diverso da",
+          "pl": "z wyjątkiem:"
         },
         "example": {
-          "en": "Everyone came except Tom.",
-          "ko": "톰을 제외하고 모두 왔다.",
-          "zh-Hans": "除了汤姆，大家都来了。",
-          "ja": "トムを除いてみんな来ました。",
-          "es": "Todos vinieron excepto Tom.",
-          "hi": "टॉम को छोड़कर सब आए।",
-          "de": "Alle kamen außer Tom.",
-          "vi": "Mọi người đều đến trừ Tom.",
-          "pt-BR": "Todos vieram, exceto Tom.",
-          "id": "Semua datang kecuali Tom.",
-          "fr": "Tout le monde est venu sauf Tom.",
-          "ar": "جاء الجميع ما عدا توم.",
-          "tr": "Tom hariç herkes geldi.",
-          "it": "Tutti sono venuti tranne Tom.",
-          "pl": "Wszyscy przyszli oprócz Toma."
+          "en": "Everyone came except the captain.",
+          "ko": "모두가 선장을 제외하고 왔습니다.",
+          "zh-Hans": "除了船长,所有人都来了",
+          "ja": "キャプテン以外にみんなが来た。",
+          "es": "Todos vinieron excepto el capitán.",
+          "hi": "हर कोई कप्तान को छोड़कर आया।",
+          "de": "Alle kamen, außer dem Kapitän.",
+          "vi": "Mọi người đều đến trừ thuyền trưởng.",
+          "pt-BR": "Todos vieram, excepto o capitão.",
+          "id": "Semua orang datang kecuali kapten.",
+          "fr": "Tout le monde est venu sauf le capitaine.",
+          "ar": "الجميع جاء عدا الكابتن",
+          "tr": "Herkes kaptan dışında geldi.",
+          "it": "Sono venuti tutti tranne il capitano.",
+          "pl": "Wszyscy przyszli oprócz kapitana."
         }
       }
     },
@@ -4609,7 +4609,7 @@
         "pl": "wyjątek"
       },
       "ww": {
-        "sense_id": "exception.n.s1",
+        "sense_id": "exception.s1",
         "pos": "n",
         "def": {
           "en": "a person or thing that is not included in a usual rule",
@@ -4670,7 +4670,7 @@
         "pl": "wymiana"
       },
       "ww": {
-        "sense_id": "exchange.n.s1",
+        "sense_id": "exchange.s1",
         "pos": "n",
         "def": {
           "en": "to give something and get something back",
@@ -4731,7 +4731,7 @@
         "pl": "ekscytować"
       },
       "ww": {
-        "sense_id": "excite.v.s1",
+        "sense_id": "excite.s1",
         "pos": "v",
         "def": {
           "en": "to make someone feel very happy and eager",
@@ -4772,61 +4772,61 @@
     {
       "id": "excitement",
       "en": "excitement",
-      "ko": "excitement",
-      "picture_prompt": "Photorealistic photo illustrating the idea of excitement in a university study setting, no text, no letters, no logos",
+      "ko": "흥분",
+      "picture_prompt": "candy picture-book oil-paint of children jumping with joy outside a concert hall, one subject, no text no letters no numbers no watermark",
       "l1": {
-        "en": "having the quality of excitement",
-        "ko": "excitement",
-        "zh-Hans": "having the quality of excitement",
-        "ja": "having the quality of excitement",
-        "es": "having the quality of excitement",
-        "hi": "having the quality of excitement",
-        "de": "having the quality of excitement",
-        "vi": "having the quality of excitement",
-        "pt-BR": "having the quality of excitement",
-        "id": "having the quality of excitement",
-        "fr": "having the quality of excitement",
-        "ar": "having the quality of excitement",
-        "tr": "having the quality of excitement",
-        "it": "having the quality of excitement",
-        "pl": "having the quality of excitement"
+        "en": "feeling of eager happiness",
+        "ko": "흥분",
+        "zh-Hans": "渴望快乐的感觉",
+        "ja": "幸福感",
+        "es": "sentimiento de felicidad ansiosa",
+        "hi": "उत्सुक खुशी की भावना",
+        "de": "Gefühl des eifrigen Glücks",
+        "vi": "Cảm thấy trong tâm tâm sự, tâm sự, tâm sự, tâm tâm sự, tâm sự, tâm sự, tâm sự, tâm sự, tâm sự, tâm sự, tâm tâm sự, tâm sự, khiến khiến khiến khiến khiến nhau nhau nhau nhau nhau nhau nhau nhau nhau nhau nhau nhau, khiến khiến và nhau nhau nhau nhau nhau nhau nhau nhau nhau nhau nhau nhau nhau nhau nhau nhau nhau nhau nhau nhau nhau nhau nhau nhau nhau nhau nhau nhau nhau nhau nhau nhau nhau,,,,,, khiến và và nhau nhau nhau nhau nhau nhau nhau nhau nhau nhau nhau nhau nhau nhau nhau nhau nhau nhau nhau nhau nhau nhau nhau nhau nhau nhau nhau nhau nhau nhau nhau nhau nhau nhau nhau nhau nhau nhau nhau nhau nhau nhau nhau nhau nhau nhau nhau nhau nhau nhau nhau,,,,,, chổi hư hư hư hư hư hư hư hư hư hư hư hư hư hư,,,,,,,,,,,, hư hư hư hư hư hư hư hư hư hư hư hư hư hư hư hư hư hư hư hư hư hư hư hư hư hư hư hư hư hư hư hư hư hư hư hư hư hư hư hư hư hư hư hư hư hư hư hư hư hư hư hư hư hư,,,,,,,,,,,,,",
+        "pt-BR": "sentimento de ansiosa felicidade",
+        "id": "merasa bahagia",
+        "fr": "sentiment de bonheur avide",
+        "ar": "الشعور بالسعادة المتلهفة",
+        "tr": "Heyecan verici mutluluk hissi",
+        "it": "sensazione di felicità impaziente",
+        "pl": "uczucie gorliwego szczęścia"
       },
       "ww": {
-        "sense_id": "excitement.adj.s1",
-        "pos": "adj",
+        "sense_id": "excitement.s1",
+        "pos": "n",
         "def": {
-          "en": "an academic term: excitement",
-          "ko": "학술 영어 단어: excitement",
-          "zh-Hans": "an academic term: excitement",
-          "ja": "an academic term: excitement",
-          "es": "an academic term: excitement",
-          "hi": "an academic term: excitement",
-          "de": "an academic term: excitement",
-          "vi": "an academic term: excitement",
-          "pt-BR": "an academic term: excitement",
-          "id": "an academic term: excitement",
-          "fr": "an academic term: excitement",
-          "ar": "an academic term: excitement",
-          "tr": "an academic term: excitement",
-          "it": "an academic term: excitement",
-          "pl": "an academic term: excitement"
+          "en": "a feeling of eager happiness and energy",
+          "ko": "흥분",
+          "zh-Hans": "一种渴望快乐和精力的感觉",
+          "ja": "幸福感とエネルギー感",
+          "es": "un sentimiento de felicidad y energía ansiosas",
+          "hi": "उत्सुक खुशी और ऊर्जा की भावना",
+          "de": "ein Gefühl von eifrigem Glück und Energie",
+          "vi": "một cảm giác háo hức hạnh phúc và năng lực",
+          "pt-BR": "um sentimento de ansiosa felicidade e energia",
+          "id": "perasaan kebahagiaan dan energi",
+          "fr": "un sentiment de bonheur et d'énergie.",
+          "ar": "شعور بالسعادة و الطاقة",
+          "tr": "istekli bir mutluluk ve enerji hissi",
+          "it": "una sensazione di felicità ansiosa ed energia",
+          "pl": "uczucie gorliwego szczęścia i energii"
         },
         "example": {
-          "en": "The report uses the word \"excitement\" in an academic context.",
-          "ko": "보고서는 학술 맥락에서 \"excitement\"(을)를 사용한다.",
-          "zh-Hans": "The report uses the word \"excitement\" in an academic context.",
-          "ja": "The report uses the word \"excitement\" in an academic context.",
-          "es": "The report uses the word \"excitement\" in an academic context.",
-          "hi": "The report uses the word \"excitement\" in an academic context.",
-          "de": "The report uses the word \"excitement\" in an academic context.",
-          "vi": "The report uses the word \"excitement\" in an academic context.",
-          "pt-BR": "The report uses the word \"excitement\" in an academic context.",
-          "id": "The report uses the word \"excitement\" in an academic context.",
-          "fr": "The report uses the word \"excitement\" in an academic context.",
-          "ar": "The report uses the word \"excitement\" in an academic context.",
-          "tr": "The report uses the word \"excitement\" in an academic context.",
-          "it": "The report uses the word \"excitement\" in an academic context.",
-          "pl": "The report uses the word \"excitement\" in an academic context."
+          "en": "There was excitement before the concert began.",
+          "ko": "콘서트가 시작되기 전에 흥분되었습니다.",
+          "zh-Hans": "音乐会开始前曾有过兴奋情绪.",
+          "ja": "コンサートが始まる前に、盛り上がっていました。",
+          "es": "Hubo emoción antes de que empezara el concierto.",
+          "hi": "संगीत कार्यक्रम शुरू होने से पहले उत्साह था।",
+          "de": "Es gab Aufregung, bevor das Konzert begann.",
+          "vi": "Đã có sự phấn khích trước khi buổi hòa nhạc bắt đầu.",
+          "pt-BR": "Houve excitação antes do concerto começar.",
+          "id": "Ada kegembiraan sebelum konser dimulai.",
+          "fr": "Il y avait de l'excitation avant le début du concert.",
+          "ar": "كان هناك حماس قبل أن يبدأ الحفل",
+          "tr": "Konser başlamadan önce heyecan vardı.",
+          "it": "C'era eccitazione prima dell'inizio del concerto.",
+          "pl": "Przed rozpoczęciem koncertu były emocje."
         }
       }
     },
@@ -4853,7 +4853,7 @@
         "pl": "ekscytujący"
       },
       "ww": {
-        "sense_id": "exciting.a.s1",
+        "sense_id": "exciting.s1",
         "pos": "a",
         "def": {
           "en": "making you feel happy and thrilled",
@@ -4914,7 +4914,7 @@
         "pl": "usprawiedliwiać"
       },
       "ww": {
-        "sense_id": "excuse.v.s1",
+        "sense_id": "excuse.s1",
         "pos": "v",
         "def": {
           "en": "to say a small mistake is all right",
@@ -4975,7 +4975,7 @@
         "pl": "wykonywać"
       },
       "ww": {
-        "sense_id": "execute.v.s1",
+        "sense_id": "execute.s1",
         "pos": "v",
         "def": {
           "en": "to do a planned job from start to finish",
@@ -5036,7 +5036,7 @@
         "pl": "wykonawczy"
       },
       "ww": {
-        "sense_id": "executive.a.s1",
+        "sense_id": "executive.s1",
         "pos": "a",
         "def": {
           "en": "about the people who run a company or make the big choices",
@@ -5097,7 +5097,7 @@
         "pl": "ćwiczenie"
       },
       "ww": {
-        "sense_id": "exercise.n.s1",
+        "sense_id": "exercise.s1",
         "pos": "n",
         "def": {
           "en": "physical activity to stay healthy",
@@ -5158,7 +5158,7 @@
         "pl": "wystawa"
       },
       "ww": {
-        "sense_id": "exhibition.n.s1",
+        "sense_id": "exhibition.s1",
         "pos": "n",
         "def": {
           "en": "a show of art or things",
@@ -5219,7 +5219,7 @@
         "pl": "istnieć"
       },
       "ww": {
-        "sense_id": "exist.v.s1",
+        "sense_id": "exist.s1",
         "pos": "v",
         "def": {
           "en": "to be real or to be present",
@@ -5280,7 +5280,7 @@
         "pl": "istnienie"
       },
       "ww": {
-        "sense_id": "existence.n.s1",
+        "sense_id": "existence.s1",
         "pos": "n",
         "def": {
           "en": "the state of being real",
@@ -5341,7 +5341,7 @@
         "pl": "istniejący"
       },
       "ww": {
-        "sense_id": "existing.a.s1",
+        "sense_id": "existing.s1",
         "pos": "a",
         "def": {
           "en": "to be already here",
@@ -5382,61 +5382,61 @@
     {
       "id": "exit",
       "en": "exit",
-      "ko": "exit",
-      "picture_prompt": "Photorealistic photo illustrating the idea of exit in a university study setting, no text, no letters, no logos",
+      "ko": "출구",
+      "picture_prompt": "candy picture-book oil-paint of a green exit sign above a door in a hallway, one subject, no text no letters no numbers no watermark",
       "l1": {
-        "en": "a word used in academic English: exit",
-        "ko": "exit",
-        "zh-Hans": "a word used in academic English: exit",
-        "ja": "a word used in academic English: exit",
-        "es": "a word used in academic English: exit",
-        "hi": "a word used in academic English: exit",
-        "de": "a word used in academic English: exit",
-        "vi": "a word used in academic English: exit",
-        "pt-BR": "a word used in academic English: exit",
-        "id": "a word used in academic English: exit",
-        "fr": "a word used in academic English: exit",
-        "ar": "a word used in academic English: exit",
-        "tr": "a word used in academic English: exit",
-        "it": "a word used in academic English: exit",
-        "pl": "a word used in academic English: exit"
+        "en": "way out of a place",
+        "ko": "출구",
+        "zh-Hans": "离开一个地方",
+        "ja": "場所から抜ける",
+        "es": "fuera de un lugar",
+        "hi": "एक जगह से बाहर",
+        "de": "Weg aus einem Ort",
+        "vi": "♪ Ra khỏi một nơi ♪",
+        "pt-BR": "- Não.",
+        "id": "jalan keluar dari tempat",
+        "fr": "d'une manière de sortir d'un endroit, d'une manière de sortir d'un endroit,",
+        "ar": "مخرج من المكان",
+        "tr": "Bir yerden çıkış yolu",
+        "it": "fuori da un posto",
+        "pl": "sposób z miejsca"
       },
       "ww": {
-        "sense_id": "exit.n.s1",
+        "sense_id": "exit.s1",
         "pos": "n",
         "def": {
-          "en": "an academic term: exit",
-          "ko": "학술 영어 단어: exit",
-          "zh-Hans": "an academic term: exit",
-          "ja": "an academic term: exit",
-          "es": "an academic term: exit",
-          "hi": "an academic term: exit",
-          "de": "an academic term: exit",
-          "vi": "an academic term: exit",
-          "pt-BR": "an academic term: exit",
-          "id": "an academic term: exit",
-          "fr": "an academic term: exit",
-          "ar": "an academic term: exit",
-          "tr": "an academic term: exit",
-          "it": "an academic term: exit",
-          "pl": "an academic term: exit"
+          "en": "a door or way out of a building",
+          "ko": "출구",
+          "zh-Hans": "门或走出建筑物",
+          "ja": "建物のドアか方法",
+          "es": "una puerta o salida de un edificio",
+          "hi": "एक इमारत से बाहर दरवाजा या रास्ता",
+          "de": "Eine Tür oder ein Weg aus einem Gebäude",
+          "vi": "♪ Một cánh cửa hay một lối ra khỏi tòa nhà",
+          "pt-BR": "workforce uma porta ou saída de um edifício",
+          "id": "pintu atau jalan keluar dari gedung",
+          "fr": "une porte ou une sortie d'un immeuble",
+          "ar": "باب أو مخرج من المبنى",
+          "tr": "Bir kapı veya binadan çıkış yolu",
+          "it": "una porta o uscire da un edificio",
+          "pl": "drzwi lub wyjście z budynku"
         },
         "example": {
-          "en": "The report uses the word \"exit\" in an academic context.",
-          "ko": "보고서는 학술 맥락에서 \"exit\"(을)를 사용한다.",
-          "zh-Hans": "The report uses the word \"exit\" in an academic context.",
-          "ja": "The report uses the word \"exit\" in an academic context.",
-          "es": "The report uses the word \"exit\" in an academic context.",
-          "hi": "The report uses the word \"exit\" in an academic context.",
-          "de": "The report uses the word \"exit\" in an academic context.",
-          "vi": "The report uses the word \"exit\" in an academic context.",
-          "pt-BR": "The report uses the word \"exit\" in an academic context.",
-          "id": "The report uses the word \"exit\" in an academic context.",
-          "fr": "The report uses the word \"exit\" in an academic context.",
-          "ar": "The report uses the word \"exit\" in an academic context.",
-          "tr": "The report uses the word \"exit\" in an academic context.",
-          "it": "The report uses the word \"exit\" in an academic context.",
-          "pl": "The report uses the word \"exit\" in an academic context."
+          "en": "Follow the signs to the nearest exit.",
+          "ko": "가장 가까운 출구에 표지판을 따르십시오.",
+          "zh-Hans": "跟着标志到最近的出口",
+          "ja": "一番近い出口の標識に従ってください。",
+          "es": "Siga las indicaciones a la salida más cercana.",
+          "hi": "निकटतम निकास के संकेत का पालन करें।",
+          "de": "Folgen Sie den Schildern zum nächstgelegenen Ausgang.",
+          "vi": "Theo biển hiệu đến lối ra gần nhất.",
+          "pt-BR": "Siga os sinais para a saída mais próxima.",
+          "id": "Ikuti tanda ke pintu keluar terdekat.",
+          "fr": "Suivez les panneaux jusqu'à la sortie la plus proche.",
+          "ar": "إتبع العلامات إلى أقرب مخرج",
+          "tr": "En yakın çıkışın işaretlerini takip edin.",
+          "it": "Seguire le indicazioni per l'uscita più vicina.",
+          "pl": "Podążaj za znakami do najbliższego wyjścia."
         }
       }
     },
@@ -5463,7 +5463,7 @@
         "pl": "rozszerzenie"
       },
       "ww": {
-        "sense_id": "expansion.n.s1",
+        "sense_id": "expansion.s1",
         "pos": "n",
         "def": {
           "en": "the act of becoming larger",
@@ -5524,7 +5524,7 @@
         "pl": "oczekiwać"
       },
       "ww": {
-        "sense_id": "expect.v.s1",
+        "sense_id": "expect.s1",
         "pos": "v",
         "def": {
           "en": "to think something will happen",
@@ -5585,7 +5585,7 @@
         "pl": "oczekiwanie"
       },
       "ww": {
-        "sense_id": "expectation.n.s1",
+        "sense_id": "expectation.s1",
         "pos": "n",
         "def": {
           "en": "a belief about what will happen",
@@ -5646,7 +5646,7 @@
         "pl": "wydatek"
       },
       "ww": {
-        "sense_id": "expense.n.s1",
+        "sense_id": "expense.s1",
         "pos": "n",
         "def": {
           "en": "money you spend to buy or do something",
@@ -5707,7 +5707,7 @@
         "pl": "drogi"
       },
       "ww": {
-        "sense_id": "expensive.a.s1",
+        "sense_id": "expensive.s1",
         "pos": "a",
         "def": {
           "en": "costs a lot of money",
@@ -5768,7 +5768,7 @@
         "pl": "doświadczenie"
       },
       "ww": {
-        "sense_id": "experience.n.s1",
+        "sense_id": "experience.s1",
         "pos": "n",
         "def": {
           "en": "something you learn by doing",
@@ -5829,7 +5829,7 @@
         "pl": "eksperyment"
       },
       "ww": {
-        "sense_id": "experiment.n.s1",
+        "sense_id": "experiment.s1",
         "pos": "n",
         "def": {
           "en": "a test done to find out what happens",
@@ -5890,7 +5890,7 @@
         "pl": "wyjaśniać"
       },
       "ww": {
-        "sense_id": "explain.v.s1",
+        "sense_id": "explain.s1",
         "pos": "v",
         "def": {
           "en": "to tell how or why something happens",
@@ -5951,7 +5951,7 @@
         "pl": "wyjaśnienie"
       },
       "ww": {
-        "sense_id": "explanation.n.s1",
+        "sense_id": "explanation.s1",
         "pos": "n",
         "def": {
           "en": "words that make something clear",
@@ -6012,7 +6012,7 @@
         "pl": "wybuchać"
       },
       "ww": {
-        "sense_id": "explode.v.s1",
+        "sense_id": "explode.s1",
         "pos": "v",
         "def": {
           "en": "to burst apart with a loud bang",
@@ -6073,7 +6073,7 @@
         "pl": "eksplorować"
       },
       "ww": {
-        "sense_id": "explore.v.s1",
+        "sense_id": "explore.s1",
         "pos": "v",
         "def": {
           "en": "to go and look around a new place",

@@ -1,7 +1,7 @@
 {
   "pack_id": "ielts07",
   "title": "IELTS 601–700",
-  "module_id": "word_master",
+  "module_id": "snow_jump",
   "seconds": 15,
   "items": [
     {
@@ -166,7 +166,7 @@
     },
     {
       "item_id": "airline",
-      "question": "a word used in academic English: airline",
+      "question": "air travel company",
       "correct": "airline",
       "wrong": [
         "airport",
@@ -176,7 +176,7 @@
     },
     {
       "item_id": "airport",
-      "question": "a word used in academic English: airport",
+      "question": "place for planes",
       "correct": "airport",
       "wrong": [
         "alarm",
@@ -196,7 +196,7 @@
     },
     {
       "item_id": "album",
-      "question": "a word used in academic English: album",
+      "question": "book of photos or songs",
       "correct": "album",
       "wrong": [
         "alcohol",
@@ -306,7 +306,7 @@
     },
     {
       "item_id": "amaze",
-      "question": "a word used in academic English: amaze",
+      "question": "surprise greatly",
       "correct": "amaze",
       "wrong": [
         "ambition",
@@ -316,7 +316,7 @@
     },
     {
       "item_id": "ambition",
-      "question": "a word used in academic English: ambition",
+      "question": "strong desire to succeed",
       "correct": "ambition",
       "wrong": [
         "among",
@@ -466,7 +466,7 @@
     },
     {
       "item_id": "anymore",
-      "question": "a word used in academic English: anymore",
+      "question": "no longer",
       "correct": "anymore",
       "wrong": [
         "anyone",
@@ -526,7 +526,7 @@
     },
     {
       "item_id": "apartment",
-      "question": "having the quality of apartment",
+      "question": "home in a building",
       "correct": "apartment",
       "wrong": [
         "apologize",
@@ -536,7 +536,7 @@
     },
     {
       "item_id": "apologize",
-      "question": "to do something related to apologize",
+      "question": "say sorry",
       "correct": "apologize",
       "wrong": [
         "appeal",
@@ -636,7 +636,7 @@
     },
     {
       "item_id": "argument",
-      "question": "a strong disagreement",
+      "question": "reasons supporting an opinion",
       "correct": "argument",
       "wrong": [
         "arise",
@@ -866,7 +866,7 @@
     },
     {
       "item_id": "athlete",
-      "question": "a word used in academic English: athlete",
+      "question": "sport competitor",
       "correct": "athlete",
       "wrong": [
         "atmosphere",
@@ -936,7 +936,7 @@
     },
     {
       "item_id": "attraction",
-      "question": "a word used in academic English: attraction",
+      "question": "something that draws interest",
       "correct": "attraction",
       "wrong": [
         "attractive",

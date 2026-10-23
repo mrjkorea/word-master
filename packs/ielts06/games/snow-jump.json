@@ -1,12 +1,12 @@
 {
   "pack_id": "ielts06",
   "title": "IELTS 501–600",
-  "module_id": "word_master",
+  "module_id": "snow_jump",
   "seconds": 15,
   "items": [
     {
       "item_id": "duration",
-      "question": "a word used in academic English: duration",
+      "question": "length of time",
       "correct": "duration",
       "wrong": [
         "erode",
@@ -16,7 +16,7 @@
     },
     {
       "item_id": "erode",
-      "question": "a word used in academic English: erode",
+      "question": "wear away gradually",
       "correct": "erode",
       "wrong": [
         "ethic",
@@ -26,7 +26,7 @@
     },
     {
       "item_id": "ethic",
-      "question": "a word used in academic English: ethic",
+      "question": "moral standard",
       "correct": "ethic",
       "wrong": [
         "format",
@@ -36,7 +36,7 @@
     },
     {
       "item_id": "format",
-      "question": "a word used in academic English: format",
+      "question": "layout or structure",
       "correct": "format",
       "wrong": [
         "found",
@@ -66,7 +66,7 @@
     },
     {
       "item_id": "insight",
-      "question": "a word used in academic English: insight",
+      "question": "deep understanding",
       "correct": "insight",
       "wrong": [
         "integral",
@@ -116,7 +116,7 @@
     },
     {
       "item_id": "mediate",
-      "question": "to do something related to mediate",
+      "question": "help sides agree",
       "correct": "mediate",
       "wrong": [
         "medium",
@@ -166,7 +166,7 @@
     },
     {
       "item_id": "norm",
-      "question": "a word used in academic English: norm",
+      "question": "usual standard",
       "correct": "norm",
       "wrong": [
         "overlap",
@@ -176,7 +176,7 @@
     },
     {
       "item_id": "overlap",
-      "question": "a word used in academic English: overlap",
+      "question": "cover partly at same time",
       "correct": "overlap",
       "wrong": [
         "passive",
@@ -196,7 +196,7 @@
     },
     {
       "item_id": "portion",
-      "question": "a word used in academic English: portion",
+      "question": "part of a whole",
       "correct": "portion",
       "wrong": [
         "preliminary",
@@ -216,7 +216,7 @@
     },
     {
       "item_id": "protocol",
-      "question": "a word used in academic English: protocol",
+      "question": "official procedure",
       "correct": "protocol",
       "wrong": [
         "qualitative",
@@ -226,7 +226,7 @@
     },
     {
       "item_id": "qualitative",
-      "question": "having the quality of qualitative",
+      "question": "about quality not numbers",
       "correct": "qualitative",
       "wrong": [
         "refine",
@@ -236,7 +236,7 @@
     },
     {
       "item_id": "refine",
-      "question": "a word used in academic English: refine",
+      "question": "improve by small changes",
       "correct": "refine",
       "wrong": [
         "relax",
@@ -256,7 +256,7 @@
     },
     {
       "item_id": "restrain",
-      "question": "a word used in academic English: restrain",
+      "question": "hold back",
       "correct": "restrain",
       "wrong": [
         "revolution",
@@ -296,7 +296,7 @@
     },
     {
       "item_id": "scenario",
-      "question": "a word used in academic English: scenario",
+      "question": "possible situation",
       "correct": "scenario",
       "wrong": [
         "sphere",
@@ -306,7 +306,7 @@
     },
     {
       "item_id": "sphere",
-      "question": "a word used in academic English: sphere",
+      "question": "area of activity",
       "correct": "sphere",
       "wrong": [
         "subordinate",
@@ -316,7 +316,7 @@
     },
     {
       "item_id": "subordinate",
-      "question": "to do something related to subordinate",
+      "question": "lower in rank",
       "correct": "subordinate",
       "wrong": [
         "supplement",
@@ -366,7 +366,7 @@
     },
     {
       "item_id": "trigger",
-      "question": "a word used in academic English: trigger",
+      "question": "cause to start",
       "correct": "trigger",
       "wrong": [
         "unify",
@@ -376,7 +376,7 @@
     },
     {
       "item_id": "unify",
-      "question": "to do something related to unify",
+      "question": "bring together",
       "correct": "unify",
       "wrong": [
         "violate",
@@ -386,7 +386,7 @@
     },
     {
       "item_id": "violate",
-      "question": "to do something related to violate",
+      "question": "break a rule",
       "correct": "violate",
       "wrong": [
         "vision",
@@ -486,7 +486,7 @@
     },
     {
       "item_id": "depress",
-      "question": "a word used in academic English: depress",
+      "question": "lower or weaken",
       "correct": "depress",
       "wrong": [
         "encounter",
@@ -526,7 +526,7 @@
     },
     {
       "item_id": "incline",
-      "question": "a word used in academic English: incline",
+      "question": "tend toward",
       "correct": "incline",
       "wrong": [
         "integrity",
@@ -536,7 +536,7 @@
     },
     {
       "item_id": "integrity",
-      "question": "a word used in academic English: integrity",
+      "question": "honesty and principles",
       "correct": "integrity",
       "wrong": [
         "intrinsic",
@@ -546,7 +546,7 @@
     },
     {
       "item_id": "intrinsic",
-      "question": "a word used in academic English: intrinsic",
+      "question": "built-in by nature",
       "correct": "intrinsic",
       "wrong": [
         "invoke",
@@ -556,7 +556,7 @@
     },
     {
       "item_id": "invoke",
-      "question": "a word used in academic English: invoke",
+      "question": "call upon formally",
       "correct": "invoke",
       "wrong": [
         "levy",
@@ -566,7 +566,7 @@
     },
     {
       "item_id": "levy",
-      "question": "a word used in academic English: levy",
+      "question": "impose a tax or fee",
       "correct": "levy",
       "wrong": [
         "likewise",
@@ -596,7 +596,7 @@
     },
     {
       "item_id": "notwithstanding",
-      "question": "a word used in academic English: notwithstanding",
+      "question": "in spite of",
       "correct": "notwithstanding",
       "wrong": [
         "odd",
@@ -616,7 +616,7 @@
     },
     {
       "item_id": "ongoing",
-      "question": "a word used in academic English: ongoing",
+      "question": "still continuing",
       "correct": "ongoing",
       "wrong": [
         "panel",
@@ -656,7 +656,7 @@
     },
     {
       "item_id": "reluctance",
-      "question": "a word used in academic English: reluctance",
+      "question": "unwilling feeling",
       "correct": "reluctance",
       "wrong": [
         "so-called",
@@ -665,7 +665,7 @@
       "word": "reluctance"
     },
     {
-      "item_id": "so-called",
+      "item_id": "socalled",
       "question": "called by that name",
       "correct": "so-called",
       "wrong": [
@@ -966,7 +966,7 @@
     },
     {
       "item_id": "adventure",
-      "question": "a word used in academic English: adventure",
+      "question": "exciting experience",
       "correct": "adventure",
       "wrong": [
         "advertise",

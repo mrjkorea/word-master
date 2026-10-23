@@ -3,7 +3,7 @@
   "title": "IELTS 601–700",
   "band": "IELTS",
   "pos": "mixed",
-  "source": "IELTS Master 1500 (AWL + IELTS academic), ranks 601–700 by frequency.",
+  "source": "IELTS 1,500 high-frequency words (ranks 601–700), list order preserved.",
   "words": [
     {
       "id": "afford",
@@ -28,7 +28,7 @@
         "pl": "pozwolić sobie"
       },
       "ww": {
-        "sense_id": "afford.v.s1",
+        "sense_id": "afford.s1",
         "pos": "v",
         "def": {
           "en": "to have enough money to buy something",
@@ -89,7 +89,7 @@
         "pl": "przestraszony"
       },
       "ww": {
-        "sense_id": "afraid.a.s1",
+        "sense_id": "afraid.s1",
         "pos": "a",
         "def": {
           "en": "feeling scared",
@@ -150,7 +150,7 @@
         "pl": "po (After)"
       },
       "ww": {
-        "sense_id": "after.prep.s1",
+        "sense_id": "after.s1",
         "pos": "prep",
         "def": {
           "en": "shows time later than",
@@ -211,7 +211,7 @@
         "pl": "znowu"
       },
       "ww": {
-        "sense_id": "again.adv.s1",
+        "sense_id": "again.s1",
         "pos": "adv",
         "def": {
           "en": "to do something once more",
@@ -272,7 +272,7 @@
         "pl": "o (Ag)"
       },
       "ww": {
-        "sense_id": "against.prep.s1",
+        "sense_id": "against.s1",
         "pos": "prep",
         "def": {
           "en": "shows contact or opposition",
@@ -333,7 +333,7 @@
         "pl": "wiek"
       },
       "ww": {
-        "sense_id": "age.n.s1",
+        "sense_id": "age.s1",
         "pos": "n",
         "def": {
           "en": "how old someone is",
@@ -394,7 +394,7 @@
         "pl": "agencja"
       },
       "ww": {
-        "sense_id": "agency.n.s1",
+        "sense_id": "agency.s1",
         "pos": "n",
         "def": {
           "en": "a group or company that does a special job",
@@ -455,7 +455,7 @@
         "pl": "agent"
       },
       "ww": {
-        "sense_id": "agent.n.s1",
+        "sense_id": "agent.s1",
         "pos": "n",
         "def": {
           "en": "a person who acts for another",
@@ -516,7 +516,7 @@
         "pl": "temu"
       },
       "ww": {
-        "sense_id": "ago.adv.s1",
+        "sense_id": "ago.s1",
         "pos": "adv",
         "def": {
           "en": "time before now",
@@ -638,7 +638,7 @@
         "pl": "porozumienie"
       },
       "ww": {
-        "sense_id": "agreement.n.s1",
+        "sense_id": "agreement.s1",
         "pos": "n",
         "def": {
           "en": "when people decide the same thing",
@@ -699,7 +699,7 @@
         "pl": "rolnictwo"
       },
       "ww": {
-        "sense_id": "agriculture.n.s1",
+        "sense_id": "agriculture.s1",
         "pos": "n",
         "def": {
           "en": "the work of growing food on farms",
@@ -760,7 +760,7 @@
         "pl": "do przodu"
       },
       "ww": {
-        "sense_id": "ahead.adv.s1",
+        "sense_id": "ahead.s1",
         "pos": "adv",
         "def": {
           "en": "in front or forward",
@@ -821,7 +821,7 @@
         "pl": "cel"
       },
       "ww": {
-        "sense_id": "aim.n.s1",
+        "sense_id": "aim.s1",
         "pos": "n",
         "def": {
           "en": "a goal you want to reach",
@@ -882,7 +882,7 @@
         "pl": "powietrze"
       },
       "ww": {
-        "sense_id": "air.n.s1",
+        "sense_id": "air.s1",
         "pos": "n",
         "def": {
           "en": "what we breathe",
@@ -943,7 +943,7 @@
         "pl": "samolot"
       },
       "ww": {
-        "sense_id": "aircraft.n.s1",
+        "sense_id": "aircraft.s1",
         "pos": "n",
         "def": {
           "en": "a machine that flies in the sky",
@@ -984,122 +984,122 @@
     {
       "id": "airline",
       "en": "airline",
-      "ko": "airline",
-      "picture_prompt": "Photorealistic photo illustrating the idea of airline in a university study setting, no text, no letters, no logos",
+      "ko": "항공사",
+      "picture_prompt": "candy picture-book oil-paint of one smiling airplane with a round window beside a tiny control tower, one subject, no text no letters no numbers no watermark",
       "l1": {
-        "en": "a word used in academic English: airline",
-        "ko": "airline",
-        "zh-Hans": "a word used in academic English: airline",
-        "ja": "a word used in academic English: airline",
-        "es": "a word used in academic English: airline",
-        "hi": "a word used in academic English: airline",
-        "de": "a word used in academic English: airline",
-        "vi": "a word used in academic English: airline",
-        "pt-BR": "a word used in academic English: airline",
-        "id": "a word used in academic English: airline",
-        "fr": "a word used in academic English: airline",
-        "ar": "a word used in academic English: airline",
-        "tr": "a word used in academic English: airline",
-        "it": "a word used in academic English: airline",
-        "pl": "a word used in academic English: airline"
+        "en": "air travel company",
+        "ko": "항공사",
+        "zh-Hans": "航空公司",
+        "ja": "航空会社",
+        "es": "aerolínea",
+        "hi": "एयरलाइन",
+        "de": "Fluggesellschaft",
+        "vi": "hãng hàng không",
+        "pt-BR": "companhia aérea",
+        "id": "maskapai",
+        "fr": "compagnie aérienne",
+        "ar": "شركة طيران",
+        "tr": "havayolu",
+        "it": "compagnia aerea",
+        "pl": "linia lotnicza"
       },
       "ww": {
-        "sense_id": "airline.n.s1",
+        "sense_id": "airline.s1",
         "pos": "n",
         "def": {
-          "en": "an academic term: airline",
-          "ko": "학술 영어 단어: airline",
-          "zh-Hans": "an academic term: airline",
-          "ja": "an academic term: airline",
-          "es": "an academic term: airline",
-          "hi": "an academic term: airline",
-          "de": "an academic term: airline",
-          "vi": "an academic term: airline",
-          "pt-BR": "an academic term: airline",
-          "id": "an academic term: airline",
-          "fr": "an academic term: airline",
-          "ar": "an academic term: airline",
-          "tr": "an academic term: airline",
-          "it": "an academic term: airline",
-          "pl": "an academic term: airline"
+          "en": "a company that provides regular flights",
+          "ko": "정기 항공편을 제공하는 회사",
+          "zh-Hans": "提供定期航班的公司",
+          "ja": "定期便を運航する会社",
+          "es": "empresa que ofrece vuelos regulares",
+          "hi": "नियमित उड़ानें देने वाली कंपनी",
+          "de": "Unternehmen, das Linienflüge anbietet",
+          "vi": "công ty cung cấp chuyến bay thường lệ",
+          "pt-BR": "empresa que oferece voos regulares",
+          "id": "perusahaan yang menyediakan penerbangan reguler",
+          "fr": "entreprise qui assure des vols réguliers",
+          "ar": "شركة تقدم رحلات منتظمة",
+          "tr": "düzenli uçuşlar sunan şirket",
+          "it": "azienda che offre voli di linea",
+          "pl": "firma oferująca regularne loty"
         },
         "example": {
-          "en": "The report uses the word \"airline\" in an academic context.",
-          "ko": "보고서는 학술 맥락에서 \"airline\"(을)를 사용한다.",
-          "zh-Hans": "The report uses the word \"airline\" in an academic context.",
-          "ja": "The report uses the word \"airline\" in an academic context.",
-          "es": "The report uses the word \"airline\" in an academic context.",
-          "hi": "The report uses the word \"airline\" in an academic context.",
-          "de": "The report uses the word \"airline\" in an academic context.",
-          "vi": "The report uses the word \"airline\" in an academic context.",
-          "pt-BR": "The report uses the word \"airline\" in an academic context.",
-          "id": "The report uses the word \"airline\" in an academic context.",
-          "fr": "The report uses the word \"airline\" in an academic context.",
-          "ar": "The report uses the word \"airline\" in an academic context.",
-          "tr": "The report uses the word \"airline\" in an academic context.",
-          "it": "The report uses the word \"airline\" in an academic context.",
-          "pl": "The report uses the word \"airline\" in an academic context."
+          "en": "We booked our tickets through a budget airline.",
+          "ko": "우리는 저가 항공사로 티켓을 예약했다.",
+          "zh-Hans": "我们通过一家廉价航空公司订票。",
+          "ja": "格安航空会社でチケットを予約した。",
+          "es": "Reservamos los billetes con una aerolínea de bajo coste.",
+          "hi": "हमने एक बजट एयरलाइन से टिकट बुक किए।",
+          "de": "Wir buchten unsere Tickets bei einer Billigfluggesellschaft.",
+          "vi": "Chúng tôi đặt vé qua hãng hàng không giá rẻ.",
+          "pt-BR": "Reservamos passagens por uma companhia aérea de baixo custo.",
+          "id": "Kami memesan tiket melalui maskapai murah.",
+          "fr": "Nous avons réservé nos billets via une compagnie low-cost.",
+          "ar": "حجزنا تذاكرنا عبر شركة طيران اقتصادية.",
+          "tr": "Biletlerimizi düşük maliyetli bir havayoluyla ayırttık.",
+          "it": "Abbiamo prenotato i biglietti con una compagnia low-cost.",
+          "pl": "Zarezerwowaliśmy bilety przez tanią linię lotniczą."
         }
       }
     },
     {
       "id": "airport",
       "en": "airport",
-      "ko": "airport",
-      "picture_prompt": "Photorealistic photo illustrating the idea of airport in a university study setting, no text, no letters, no logos",
+      "ko": "공항",
+      "picture_prompt": "candy picture-book oil-paint of one small airplane parked beside a sunny terminal building, one subject, no text no letters no numbers no watermark",
       "l1": {
-        "en": "a word used in academic English: airport",
-        "ko": "airport",
-        "zh-Hans": "a word used in academic English: airport",
-        "ja": "a word used in academic English: airport",
-        "es": "a word used in academic English: airport",
-        "hi": "a word used in academic English: airport",
-        "de": "a word used in academic English: airport",
-        "vi": "a word used in academic English: airport",
-        "pt-BR": "a word used in academic English: airport",
-        "id": "a word used in academic English: airport",
-        "fr": "a word used in academic English: airport",
-        "ar": "a word used in academic English: airport",
-        "tr": "a word used in academic English: airport",
-        "it": "a word used in academic English: airport",
-        "pl": "a word used in academic English: airport"
+        "en": "place for planes",
+        "ko": "공항",
+        "zh-Hans": "机场",
+        "ja": "空港",
+        "es": "aeropuerto",
+        "hi": "हवाई अड्डा",
+        "de": "Flughafen",
+        "vi": "sân bay",
+        "pt-BR": "aeroporto",
+        "id": "bandara",
+        "fr": "aéroport",
+        "ar": "مطار",
+        "tr": "havalimanı",
+        "it": "aeroporto",
+        "pl": "lotnisko"
       },
       "ww": {
-        "sense_id": "airport.n.s1",
+        "sense_id": "airport.s1",
         "pos": "n",
         "def": {
-          "en": "an academic term: airport",
-          "ko": "학술 영어 단어: airport",
-          "zh-Hans": "an academic term: airport",
-          "ja": "an academic term: airport",
-          "es": "an academic term: airport",
-          "hi": "an academic term: airport",
-          "de": "an academic term: airport",
-          "vi": "an academic term: airport",
-          "pt-BR": "an academic term: airport",
-          "id": "an academic term: airport",
-          "fr": "an academic term: airport",
-          "ar": "an academic term: airport",
-          "tr": "an academic term: airport",
-          "it": "an academic term: airport",
-          "pl": "an academic term: airport"
+          "en": "a place where aircraft take off and land",
+          "ko": "비행기가 이착륙하는 곳",
+          "zh-Hans": "飞机起降的场所",
+          "ja": "飛行機が離着陸する場所",
+          "es": "lugar donde los aviones despegan y aterrizan",
+          "hi": "जहाँ विमान उड़ान भरते और उतरते हैं",
+          "de": "Ort, an dem Flugzeuge starten und landen",
+          "vi": "nơi máy bay cất cánh và hạ cánh",
+          "pt-BR": "lugar onde aviões decolam e pousam",
+          "id": "tempat pesawat lepas landas dan mendarat",
+          "fr": "lieu où les avions décollent et atterrissent",
+          "ar": "مكان إقلاع و هبوط الطائرات",
+          "tr": "uçakların kalkıp indiği yer",
+          "it": "luogo dove gli aerei decollano e atterrano",
+          "pl": "miejsce, gdzie samoloty startują i lądują"
         },
         "example": {
-          "en": "The report uses the word \"airport\" in an academic context.",
-          "ko": "보고서는 학술 맥락에서 \"airport\"(을)를 사용한다.",
-          "zh-Hans": "The report uses the word \"airport\" in an academic context.",
-          "ja": "The report uses the word \"airport\" in an academic context.",
-          "es": "The report uses the word \"airport\" in an academic context.",
-          "hi": "The report uses the word \"airport\" in an academic context.",
-          "de": "The report uses the word \"airport\" in an academic context.",
-          "vi": "The report uses the word \"airport\" in an academic context.",
-          "pt-BR": "The report uses the word \"airport\" in an academic context.",
-          "id": "The report uses the word \"airport\" in an academic context.",
-          "fr": "The report uses the word \"airport\" in an academic context.",
-          "ar": "The report uses the word \"airport\" in an academic context.",
-          "tr": "The report uses the word \"airport\" in an academic context.",
-          "it": "The report uses the word \"airport\" in an academic context.",
-          "pl": "The report uses the word \"airport\" in an academic context."
+          "en": "We arrived at the airport two hours early.",
+          "ko": "우리는 두 시간 일찍 공항에 도착했다.",
+          "zh-Hans": "我们提前两小时到达机场。",
+          "ja": "私たちは二時間早く空港に着いた。",
+          "es": "Llegamos al aeropuerto dos horas antes.",
+          "hi": "हम दो घंटे पहले हवाई अड्डे पर पहुँचे।",
+          "de": "Wir kamen zwei Stunden früher am Flughafen an.",
+          "vi": "Chúng tôi đến sân bay sớm hai tiếng.",
+          "pt-BR": "Chegamos ao aeroporto duas horas antes.",
+          "id": "Kami tiba di bandara dua jam lebih awal.",
+          "fr": "Nous sommes arrivés à l'aéroport deux heures en avance.",
+          "ar": "وصلنا إلى المطار قبل ساعتين.",
+          "tr": "Havalimanına iki saat erken vardık.",
+          "it": "Siamo arrivati in aeroporto con due ore di anticipo.",
+          "pl": "Dotarliśmy na lotnisko dwie godziny wcześniej."
         }
       }
     },
@@ -1126,7 +1126,7 @@
         "pl": "niepokoić"
       },
       "ww": {
-        "sense_id": "alarm.v.s1",
+        "sense_id": "alarm.s1",
         "pos": "v",
         "def": {
           "en": "to make someone feel suddenly worried or scared",
@@ -1167,61 +1167,61 @@
     {
       "id": "album",
       "en": "album",
-      "ko": "album",
-      "picture_prompt": "Photorealistic photo illustrating the idea of album in a university study setting, no text, no letters, no logos",
+      "ko": "앨범",
+      "picture_prompt": "candy picture-book oil-paint of one child holding a colourful photo album with blank pages, one subject, no text no letters no numbers no watermark",
       "l1": {
-        "en": "a word used in academic English: album",
-        "ko": "album",
-        "zh-Hans": "a word used in academic English: album",
-        "ja": "a word used in academic English: album",
-        "es": "a word used in academic English: album",
-        "hi": "a word used in academic English: album",
-        "de": "a word used in academic English: album",
-        "vi": "a word used in academic English: album",
-        "pt-BR": "a word used in academic English: album",
-        "id": "a word used in academic English: album",
-        "fr": "a word used in academic English: album",
-        "ar": "a word used in academic English: album",
-        "tr": "a word used in academic English: album",
-        "it": "a word used in academic English: album",
-        "pl": "a word used in academic English: album"
+        "en": "book of photos or songs",
+        "ko": "앨범",
+        "zh-Hans": "相册",
+        "ja": "アルバム",
+        "es": "álbum",
+        "hi": "एल्बम",
+        "de": "Album",
+        "vi": "album",
+        "pt-BR": "álbum",
+        "id": "album",
+        "fr": "album",
+        "ar": "ألبوم",
+        "tr": "albüm",
+        "it": "album",
+        "pl": "album"
       },
       "ww": {
-        "sense_id": "album.n.s1",
+        "sense_id": "album.s1",
         "pos": "n",
         "def": {
-          "en": "an academic term: album",
-          "ko": "학술 영어 단어: album",
-          "zh-Hans": "an academic term: album",
-          "ja": "an academic term: album",
-          "es": "an academic term: album",
-          "hi": "an academic term: album",
-          "de": "an academic term: album",
-          "vi": "an academic term: album",
-          "pt-BR": "an academic term: album",
-          "id": "an academic term: album",
-          "fr": "an academic term: album",
-          "ar": "an academic term: album",
-          "tr": "an academic term: album",
-          "it": "an academic term: album",
-          "pl": "an academic term: album"
+          "en": "a book for photographs or a collection of songs",
+          "ko": "사진을 넣는 책이나 노래 모음",
+          "zh-Hans": "放照片的书或歌曲合集",
+          "ja": "写真を入れる本や曲の集まり",
+          "es": "libro de fotos o colección de canciones",
+          "hi": "तस्वीरों की किताब या गानों का संग्रह",
+          "de": "Buch für Fotos oder Sammlung von Liedern",
+          "vi": "sách ảnh hoặc tập hợp bài hát",
+          "pt-BR": "livro de fotos ou coleção de músicas",
+          "id": "buku foto atau kumpulan lagu",
+          "fr": "livre de photos ou collection de chansons",
+          "ar": "كتاب للصور أو مجموعة أغاني",
+          "tr": "fotoğraflar için kitap veya şarkı koleksiyonu",
+          "it": "libro di foto o raccolta di canzoni",
+          "pl": "książka na zdjęcia lub zbiór utworów"
         },
         "example": {
-          "en": "The report uses the word \"album\" in an academic context.",
-          "ko": "보고서는 학술 맥락에서 \"album\"(을)를 사용한다.",
-          "zh-Hans": "The report uses the word \"album\" in an academic context.",
-          "ja": "The report uses the word \"album\" in an academic context.",
-          "es": "The report uses the word \"album\" in an academic context.",
-          "hi": "The report uses the word \"album\" in an academic context.",
-          "de": "The report uses the word \"album\" in an academic context.",
-          "vi": "The report uses the word \"album\" in an academic context.",
-          "pt-BR": "The report uses the word \"album\" in an academic context.",
-          "id": "The report uses the word \"album\" in an academic context.",
-          "fr": "The report uses the word \"album\" in an academic context.",
-          "ar": "The report uses the word \"album\" in an academic context.",
-          "tr": "The report uses the word \"album\" in an academic context.",
-          "it": "The report uses the word \"album\" in an academic context.",
-          "pl": "The report uses the word \"album\" in an academic context."
+          "en": "She pasted holiday photos into a new album.",
+          "ko": "그녀는 휴가 사진을 새 앨범에 붙였다.",
+          "zh-Hans": "她把度假照片贴进了一本新相册。",
+          "ja": "彼女は休暇の写真を新しいアルバムに貼った。",
+          "es": "Pegó las fotos de vacaciones en un álbum nuevo.",
+          "hi": "उसने छुट्टी की तस्वीरें नए एल्बम में चिपकाईं।",
+          "de": "Sie klebte Urlaubsfotos in ein neues Album.",
+          "vi": "Cô dán ảnh kỳ nghỉ vào album mới.",
+          "pt-BR": "Ela colou fotos de férias num álbum novo.",
+          "id": "Dia menempel foto liburan ke album baru.",
+          "fr": "Elle a collé des photos de vacances dans un nouvel album.",
+          "ar": "لصقت صور العطلة في ألبوم جديد.",
+          "tr": "Tatil fotoğraflarını yeni bir albüme yapıştırdı.",
+          "it": "Ha incollato le foto delle vacanze in un nuovo album.",
+          "pl": "Wkleiła zdjęcia z wakacji do nowego albumu."
         }
       }
     },
@@ -1248,7 +1248,7 @@
         "pl": "alkohol"
       },
       "ww": {
-        "sense_id": "alcohol.n.s1",
+        "sense_id": "alcohol.s1",
         "pos": "n",
         "def": {
           "en": "a strong drink for adults that can make people dizzy",
@@ -1309,7 +1309,7 @@
         "pl": "żywy"
       },
       "ww": {
-        "sense_id": "alive.a.s1",
+        "sense_id": "alive.s1",
         "pos": "a",
         "def": {
           "en": "living and breathing",
@@ -1370,7 +1370,7 @@
         "pl": "wszystko"
       },
       "ww": {
-        "sense_id": "all.adv.s1",
+        "sense_id": "all.s1",
         "pos": "adv",
         "def": {
           "en": "to the complete degree",
@@ -1492,7 +1492,7 @@
         "pl": "prawie"
       },
       "ww": {
-        "sense_id": "almost.adv.s1",
+        "sense_id": "almost.s1",
         "pos": "adv",
         "def": {
           "en": "very close to happening",
@@ -1553,7 +1553,7 @@
         "pl": "sam"
       },
       "ww": {
-        "sense_id": "alone.a.s1",
+        "sense_id": "alone.s1",
         "pos": "a",
         "def": {
           "en": "with no other people",
@@ -1614,7 +1614,7 @@
         "pl": "wzdłuż"
       },
       "ww": {
-        "sense_id": "along.adv.s1",
+        "sense_id": "along.s1",
         "pos": "adv",
         "def": {
           "en": "to move forward beside something",
@@ -1675,7 +1675,7 @@
         "pl": "już"
       },
       "ww": {
-        "sense_id": "already.adv.s1",
+        "sense_id": "already.s1",
         "pos": "adv",
         "def": {
           "en": "before this moment",
@@ -1736,7 +1736,7 @@
         "pl": "też (A)"
       },
       "ww": {
-        "sense_id": "also.adv.s1",
+        "sense_id": "also.s1",
         "pos": "adv",
         "def": {
           "en": "in addition to something",
@@ -1797,7 +1797,7 @@
         "pl": "zawsze"
       },
       "ww": {
-        "sense_id": "always.adv.s1",
+        "sense_id": "always.s1",
         "pos": "adv",
         "def": {
           "en": "at every time",
@@ -1838,122 +1838,122 @@
     {
       "id": "amaze",
       "en": "amaze",
-      "ko": "amaze",
-      "picture_prompt": "Photorealistic photo illustrating the idea of amaze in a university study setting, no text, no letters, no logos",
+      "ko": "놀라게 하다",
+      "picture_prompt": "candy picture-book oil-paint of one child staring wide-eyed at a floating soap bubble, one subject, no text no letters no numbers no watermark",
       "l1": {
-        "en": "a word used in academic English: amaze",
-        "ko": "amaze",
-        "zh-Hans": "a word used in academic English: amaze",
-        "ja": "a word used in academic English: amaze",
-        "es": "a word used in academic English: amaze",
-        "hi": "a word used in academic English: amaze",
-        "de": "a word used in academic English: amaze",
-        "vi": "a word used in academic English: amaze",
-        "pt-BR": "a word used in academic English: amaze",
-        "id": "a word used in academic English: amaze",
-        "fr": "a word used in academic English: amaze",
-        "ar": "a word used in academic English: amaze",
-        "tr": "a word used in academic English: amaze",
-        "it": "a word used in academic English: amaze",
-        "pl": "a word used in academic English: amaze"
+        "en": "surprise greatly",
+        "ko": "놀라게 하다",
+        "zh-Hans": "使惊奇",
+        "ja": "驚かす",
+        "es": "asombrar",
+        "hi": "चकित करना",
+        "de": "verblüffen",
+        "vi": "làm kinh ngạc",
+        "pt-BR": "surpreender",
+        "id": "mengejutkan",
+        "fr": "étonner",
+        "ar": "يدهش",
+        "tr": "hayrete düşürmek",
+        "it": "stupire",
+        "pl": "zdumiewać"
       },
       "ww": {
-        "sense_id": "amaze.n.s1",
-        "pos": "n",
+        "sense_id": "amaze.s1",
+        "pos": "v",
         "def": {
-          "en": "an academic term: amaze",
-          "ko": "학술 영어 단어: amaze",
-          "zh-Hans": "an academic term: amaze",
-          "ja": "an academic term: amaze",
-          "es": "an academic term: amaze",
-          "hi": "an academic term: amaze",
-          "de": "an academic term: amaze",
-          "vi": "an academic term: amaze",
-          "pt-BR": "an academic term: amaze",
-          "id": "an academic term: amaze",
-          "fr": "an academic term: amaze",
-          "ar": "an academic term: amaze",
-          "tr": "an academic term: amaze",
-          "it": "an academic term: amaze",
-          "pl": "an academic term: amaze"
+          "en": "to surprise someone very much",
+          "ko": "누군가를 매우 놀라게 하다",
+          "zh-Hans": "使某人非常惊讶",
+          "ja": "人をとても驚かせる",
+          "es": "sorprender mucho a alguien",
+          "hi": "किसी को बहुत आश्चर्यचकित करना",
+          "de": "jemanden sehr überraschen",
+          "vi": "làm ai đó rất ngạc nhiên",
+          "pt-BR": "surpreender muito alguém",
+          "id": "sangat mengejutkan seseorang",
+          "fr": "surprendre beaucoup quelqu'un",
+          "ar": "أن يفاجئ شخصاً كثيراً",
+          "tr": "birini çok şaşırtmak",
+          "it": "sorprendere molto qualcuno",
+          "pl": "bardzo zaskoczyć kogoś"
         },
         "example": {
-          "en": "The report uses the word \"amaze\" in an academic context.",
-          "ko": "보고서는 학술 맥락에서 \"amaze\"(을)를 사용한다.",
-          "zh-Hans": "The report uses the word \"amaze\" in an academic context.",
-          "ja": "The report uses the word \"amaze\" in an academic context.",
-          "es": "The report uses the word \"amaze\" in an academic context.",
-          "hi": "The report uses the word \"amaze\" in an academic context.",
-          "de": "The report uses the word \"amaze\" in an academic context.",
-          "vi": "The report uses the word \"amaze\" in an academic context.",
-          "pt-BR": "The report uses the word \"amaze\" in an academic context.",
-          "id": "The report uses the word \"amaze\" in an academic context.",
-          "fr": "The report uses the word \"amaze\" in an academic context.",
-          "ar": "The report uses the word \"amaze\" in an academic context.",
-          "tr": "The report uses the word \"amaze\" in an academic context.",
-          "it": "The report uses the word \"amaze\" in an academic context.",
-          "pl": "The report uses the word \"amaze\" in an academic context."
+          "en": "The magic trick amazed the whole class.",
+          "ko": "마술이 반 전체를 놀라게 했다.",
+          "zh-Hans": "魔术让整个班都惊呆了。",
+          "ja": "手品はクラス全体を驚かせた。",
+          "es": "El truco de magia asombró a toda la clase.",
+          "hi": "जादू का खेल ने पूरी कक्षा को चकित कर दिया।",
+          "de": "Der Zaubertrick verblüffte die ganze Klasse.",
+          "vi": "Màn ảo thuật làm cả lớp kinh ngạc.",
+          "pt-BR": "O truque de mágica surpreendeu a turma inteira.",
+          "id": "Sulap itu mengejutkan seluruh kelas.",
+          "fr": "Le tour de magie a étonné toute la classe.",
+          "ar": "أدهش العرض السحري الصف بأكمله.",
+          "tr": "Sihir numarası tüm sınıfı hayrete düşürdü.",
+          "it": "Il trucco di magia ha stupito tutta la classe.",
+          "pl": "Sztuczka magiczna zdumiała całą klasę."
         }
       }
     },
     {
       "id": "ambition",
       "en": "ambition",
-      "ko": "ambition",
-      "picture_prompt": "Photorealistic photo illustrating the idea of ambition in a university study setting, no text, no letters, no logos",
+      "ko": "야망",
+      "picture_prompt": "photorealistic graduate in cap and gown looking toward a city skyline, no text no letters no numbers no watermark",
       "l1": {
-        "en": "a word used in academic English: ambition",
-        "ko": "ambition",
-        "zh-Hans": "a word used in academic English: ambition",
-        "ja": "a word used in academic English: ambition",
-        "es": "a word used in academic English: ambition",
-        "hi": "a word used in academic English: ambition",
-        "de": "a word used in academic English: ambition",
-        "vi": "a word used in academic English: ambition",
-        "pt-BR": "a word used in academic English: ambition",
-        "id": "a word used in academic English: ambition",
-        "fr": "a word used in academic English: ambition",
-        "ar": "a word used in academic English: ambition",
-        "tr": "a word used in academic English: ambition",
-        "it": "a word used in academic English: ambition",
-        "pl": "a word used in academic English: ambition"
+        "en": "strong desire to succeed",
+        "ko": "야망",
+        "zh-Hans": "雄心",
+        "ja": "野心",
+        "es": "ambición",
+        "hi": "महत्वाकांक्षा",
+        "de": "Ehrgeiz",
+        "vi": "tham vọng",
+        "pt-BR": "ambição",
+        "id": "ambisi",
+        "fr": "ambition",
+        "ar": "طموح",
+        "tr": "hırs",
+        "it": "ambizione",
+        "pl": "ambicja"
       },
       "ww": {
-        "sense_id": "ambition.n.s1",
+        "sense_id": "ambition.s1",
         "pos": "n",
         "def": {
-          "en": "an academic term: ambition",
-          "ko": "학술 영어 단어: ambition",
-          "zh-Hans": "an academic term: ambition",
-          "ja": "an academic term: ambition",
-          "es": "an academic term: ambition",
-          "hi": "an academic term: ambition",
-          "de": "an academic term: ambition",
-          "vi": "an academic term: ambition",
-          "pt-BR": "an academic term: ambition",
-          "id": "an academic term: ambition",
-          "fr": "an academic term: ambition",
-          "ar": "an academic term: ambition",
-          "tr": "an academic term: ambition",
-          "it": "an academic term: ambition",
-          "pl": "an academic term: ambition"
+          "en": "a strong desire to achieve success, power, or fame",
+          "ko": "성공·권력·명성을 이루고 싶은 강한 욕구",
+          "zh-Hans": "实现成功、权力或名望的强烈愿望",
+          "ja": "成功・権力・名声を得たい強い欲求",
+          "es": "fuerte deseo de lograr éxito, poder o fama",
+          "hi": "सफलता, शक्ति या प्रसिद्धि पाने की तीव्र इच्छा",
+          "de": "starker Wunsch, Erfolg, Macht oder Ruhm zu erreichen",
+          "vi": "mong muốn mạnh mẽ đạt thành công, quyền lực hoặc danh tiếng",
+          "pt-BR": "forte desejo de alcançar sucesso, poder ou fama",
+          "id": "keinginan kuat mencapai kesuksesan, kekuasaan, atau ketenaran",
+          "fr": "fort désir de réussir, de pouvoir ou de gloire",
+          "ar": "رغبة قوية في تحقيق النجاح أو السلطة أو الشهرة",
+          "tr": "başarı, güç veya ün elde etme arzusu",
+          "it": "forte desiderio di successo, potere o fama",
+          "pl": "silne pragnienie sukcesu, władzy lub sławy"
         },
         "example": {
-          "en": "The report uses the word \"ambition\" in an academic context.",
-          "ko": "보고서는 학술 맥락에서 \"ambition\"(을)를 사용한다.",
-          "zh-Hans": "The report uses the word \"ambition\" in an academic context.",
-          "ja": "The report uses the word \"ambition\" in an academic context.",
-          "es": "The report uses the word \"ambition\" in an academic context.",
-          "hi": "The report uses the word \"ambition\" in an academic context.",
-          "de": "The report uses the word \"ambition\" in an academic context.",
-          "vi": "The report uses the word \"ambition\" in an academic context.",
-          "pt-BR": "The report uses the word \"ambition\" in an academic context.",
-          "id": "The report uses the word \"ambition\" in an academic context.",
-          "fr": "The report uses the word \"ambition\" in an academic context.",
-          "ar": "The report uses the word \"ambition\" in an academic context.",
-          "tr": "The report uses the word \"ambition\" in an academic context.",
-          "it": "The report uses the word \"ambition\" in an academic context.",
-          "pl": "The report uses the word \"ambition\" in an academic context."
+          "en": "Her ambition is to lead a research team.",
+          "ko": "그녀의 야망은 연구팀을 이끄는 것이다.",
+          "zh-Hans": "她的抱负是领导一个研究团队。",
+          "ja": "彼女の野心は研究チームを率いることだ。",
+          "es": "Su ambición es dirigir un equipo de investigación.",
+          "hi": "उसकी महत्वाकांक्षा शोध टीम का नेतृत्व करना है।",
+          "de": "Ihr Ehrgeiz ist es, ein Forschungsteam zu leiten.",
+          "vi": "Tham vọng của cô là dẫn dắt một nhóm nghiên cứu.",
+          "pt-BR": "Sua ambição é liderar uma equipe de pesquisa.",
+          "id": "Ambisinya memimpin tim penelitian.",
+          "fr": "Son ambition est de diriger une équipe de recherche.",
+          "ar": "طموحها أن تقود فريقاً بحثياً.",
+          "tr": "Hırsı bir araştırma ekibine liderlik etmek.",
+          "it": "La sua ambizione è guidare un team di ricerca.",
+          "pl": "Jej ambicją jest poprowadzić zespół badawczy."
         }
       }
     },
@@ -1980,7 +1980,7 @@
         "pl": "wśród (Among)"
       },
       "ww": {
-        "sense_id": "among.prep.s1",
+        "sense_id": "among.s1",
         "pos": "prep",
         "def": {
           "en": "in the middle of a group",
@@ -2041,7 +2041,7 @@
         "pl": "ilość"
       },
       "ww": {
-        "sense_id": "amount.n.s1",
+        "sense_id": "amount.s1",
         "pos": "n",
         "def": {
           "en": "how much of something",
@@ -2102,7 +2102,7 @@
         "pl": "starożytny"
       },
       "ww": {
-        "sense_id": "ancient.a.s1",
+        "sense_id": "ancient.s1",
         "pos": "a",
         "def": {
           "en": "very old from long ago",
@@ -2163,7 +2163,7 @@
         "pl": "i"
       },
       "ww": {
-        "sense_id": "and.conj.s1",
+        "sense_id": "and.s1",
         "pos": "conj",
         "def": {
           "en": "joins words or ideas in a list",
@@ -2224,7 +2224,7 @@
         "pl": "złość"
       },
       "ww": {
-        "sense_id": "anger.n.s1",
+        "sense_id": "anger.s1",
         "pos": "n",
         "def": {
           "en": "a strong feeling of being very mad",
@@ -2285,7 +2285,7 @@
         "pl": "kąt"
       },
       "ww": {
-        "sense_id": "angle.n.s1",
+        "sense_id": "angle.s1",
         "pos": "n",
         "def": {
           "en": "the corner made when two lines or edges meet",
@@ -2346,7 +2346,7 @@
         "pl": "zły"
       },
       "ww": {
-        "sense_id": "angry.a.s1",
+        "sense_id": "angry.s1",
         "pos": "a",
         "def": {
           "en": "feeling or showing strong anger",
@@ -2407,7 +2407,7 @@
         "pl": "zwierzę"
       },
       "ww": {
-        "sense_id": "animal.n.s1",
+        "sense_id": "animal.s1",
         "pos": "n",
         "def": {
           "en": "a living creature that is not a plant",
@@ -2468,7 +2468,7 @@
         "pl": "ogłaszać"
       },
       "ww": {
-        "sense_id": "announce.v.s1",
+        "sense_id": "announce.s1",
         "pos": "v",
         "def": {
           "en": "to tell people something new",
@@ -2529,7 +2529,7 @@
         "pl": "inny"
       },
       "ww": {
-        "sense_id": "another.det.s1",
+        "sense_id": "another.s1",
         "pos": "det",
         "def": {
           "en": "adds one more of the same kind",
@@ -2590,7 +2590,7 @@
         "pl": "odpowiedź"
       },
       "ww": {
-        "sense_id": "answer.n.s1",
+        "sense_id": "answer.s1",
         "pos": "n",
         "def": {
           "en": "what you say or write back",
@@ -2651,7 +2651,7 @@
         "pl": "niepokój"
       },
       "ww": {
-        "sense_id": "anxiety.n.s1",
+        "sense_id": "anxiety.s1",
         "pos": "n",
         "def": {
           "en": "a strong feeling of worry that something bad may happen",
@@ -2712,7 +2712,7 @@
         "pl": "jakikolwiek"
       },
       "ww": {
-        "sense_id": "any.det.s1",
+        "sense_id": "any.s1",
         "pos": "det",
         "def": {
           "en": "used when the exact one does not matter",
@@ -2773,7 +2773,7 @@
         "pl": "ktokolwiek (Anyb)"
       },
       "ww": {
-        "sense_id": "anybody.pron.s1",
+        "sense_id": "anybody.s1",
         "pos": "pron",
         "def": {
           "en": "any person you choose",
@@ -2814,61 +2814,61 @@
     {
       "id": "anymore",
       "en": "anymore",
-      "ko": "anymore",
-      "picture_prompt": "Photorealistic photo illustrating the idea of anymore in a university study setting, no text, no letters, no logos",
+      "ko": "더 이상",
+      "picture_prompt": "candy picture-book oil-paint of one empty swing still moving slightly at dusk, one subject, no text no letters no numbers no watermark",
       "l1": {
-        "en": "a word used in academic English: anymore",
-        "ko": "anymore",
-        "zh-Hans": "a word used in academic English: anymore",
-        "ja": "a word used in academic English: anymore",
-        "es": "a word used in academic English: anymore",
-        "hi": "a word used in academic English: anymore",
-        "de": "a word used in academic English: anymore",
-        "vi": "a word used in academic English: anymore",
-        "pt-BR": "a word used in academic English: anymore",
-        "id": "a word used in academic English: anymore",
-        "fr": "a word used in academic English: anymore",
-        "ar": "a word used in academic English: anymore",
-        "tr": "a word used in academic English: anymore",
-        "it": "a word used in academic English: anymore",
-        "pl": "a word used in academic English: anymore"
+        "en": "no longer",
+        "ko": "더 이상",
+        "zh-Hans": "再也",
+        "ja": "もう",
+        "es": "ya no",
+        "hi": "अब नहीं",
+        "de": "nicht mehr",
+        "vi": "không còn",
+        "pt-BR": "já não",
+        "id": "tidak lagi",
+        "fr": "plus",
+        "ar": "بعد الآن",
+        "tr": "artık",
+        "it": "più",
+        "pl": "już nie"
       },
       "ww": {
-        "sense_id": "anymore.n.s1",
-        "pos": "n",
+        "sense_id": "anymore.s1",
+        "pos": "adv",
         "def": {
-          "en": "an academic term: anymore",
-          "ko": "학술 영어 단어: anymore",
-          "zh-Hans": "an academic term: anymore",
-          "ja": "an academic term: anymore",
-          "es": "an academic term: anymore",
-          "hi": "an academic term: anymore",
-          "de": "an academic term: anymore",
-          "vi": "an academic term: anymore",
-          "pt-BR": "an academic term: anymore",
-          "id": "an academic term: anymore",
-          "fr": "an academic term: anymore",
-          "ar": "an academic term: anymore",
-          "tr": "an academic term: anymore",
-          "it": "an academic term: anymore",
-          "pl": "an academic term: anymore"
+          "en": "at the present time; any longer",
+          "ko": "현재는; 더 이상",
+          "zh-Hans": "现在；再也（不）",
+          "ja": "今は；もう（ない）",
+          "es": "en la actualidad; ya no",
+          "hi": "अब और नहीं",
+          "de": "zurzeit; nicht mehr",
+          "vi": "hiện tại; không còn",
+          "pt-BR": "neste momento; já não",
+          "id": "saat ini; tidak lagi",
+          "fr": "à présent; plus",
+          "ar": "في الوقت الحالي؛ لا بعد الآن",
+          "tr": "şu anda; artık",
+          "it": "al momento; non più",
+          "pl": "obecnie; już nie"
         },
         "example": {
-          "en": "The report uses the word \"anymore\" in an academic context.",
-          "ko": "보고서는 학술 맥락에서 \"anymore\"(을)를 사용한다.",
-          "zh-Hans": "The report uses the word \"anymore\" in an academic context.",
-          "ja": "The report uses the word \"anymore\" in an academic context.",
-          "es": "The report uses the word \"anymore\" in an academic context.",
-          "hi": "The report uses the word \"anymore\" in an academic context.",
-          "de": "The report uses the word \"anymore\" in an academic context.",
-          "vi": "The report uses the word \"anymore\" in an academic context.",
-          "pt-BR": "The report uses the word \"anymore\" in an academic context.",
-          "id": "The report uses the word \"anymore\" in an academic context.",
-          "fr": "The report uses the word \"anymore\" in an academic context.",
-          "ar": "The report uses the word \"anymore\" in an academic context.",
-          "tr": "The report uses the word \"anymore\" in an academic context.",
-          "it": "The report uses the word \"anymore\" in an academic context.",
-          "pl": "The report uses the word \"anymore\" in an academic context."
+          "en": "He does not live here anymore.",
+          "ko": "그는 더 이상 여기에 살지 않는다.",
+          "zh-Hans": "他不再住在这里了。",
+          "ja": "彼はもうここに住んでいない。",
+          "es": "Ya no vive aquí.",
+          "hi": "वह अब यहाँ नहीं रहता।",
+          "de": "Er wohnt nicht mehr hier.",
+          "vi": "Anh ấy không còn sống ở đây.",
+          "pt-BR": "Ele não mora mais aqui.",
+          "id": "Dia tidak tinggal di sini lagi.",
+          "fr": "Il ne vit plus ici.",
+          "ar": "لم يعد يعيش هنا.",
+          "tr": "Artık burada yaşamıyor.",
+          "it": "Non vive più qui.",
+          "pl": "On już tu nie mieszka."
         }
       }
     },
@@ -2895,7 +2895,7 @@
         "pl": "ktokolwiek (Anyo)"
       },
       "ww": {
-        "sense_id": "anyone.pron.s1",
+        "sense_id": "anyone.s1",
         "pos": "pron",
         "def": {
           "en": "any person at all",
@@ -2956,7 +2956,7 @@
         "pl": "cokolwiek"
       },
       "ww": {
-        "sense_id": "anything.pron.s1",
+        "sense_id": "anything.s1",
         "pos": "pron",
         "def": {
           "en": "any thing at all",
@@ -3017,7 +3017,7 @@
         "pl": "i tak"
       },
       "ww": {
-        "sense_id": "anyway.adv.s1",
+        "sense_id": "anyway.s1",
         "pos": "adv",
         "def": {
           "en": "even if something else happens",
@@ -3078,7 +3078,7 @@
         "pl": "gdziekolwiek"
       },
       "ww": {
-        "sense_id": "anywhere.adv.s1",
+        "sense_id": "anywhere.s1",
         "pos": "adv",
         "def": {
           "en": "in or to any place at all",
@@ -3139,7 +3139,7 @@
         "pl": "oddzielnie"
       },
       "ww": {
-        "sense_id": "apart.adv.s1",
+        "sense_id": "apart.s1",
         "pos": "adv",
         "def": {
           "en": "not together",
@@ -3180,122 +3180,122 @@
     {
       "id": "apartment",
       "en": "apartment",
-      "ko": "apartment",
-      "picture_prompt": "Photorealistic photo illustrating the idea of apartment in a university study setting, no text, no letters, no logos",
+      "ko": "아파트",
+      "picture_prompt": "candy picture-book oil-paint of one cosy flat building with warm lights in the windows, one subject, no text no letters no numbers no watermark",
       "l1": {
-        "en": "having the quality of apartment",
-        "ko": "apartment",
-        "zh-Hans": "having the quality of apartment",
-        "ja": "having the quality of apartment",
-        "es": "having the quality of apartment",
-        "hi": "having the quality of apartment",
-        "de": "having the quality of apartment",
-        "vi": "having the quality of apartment",
-        "pt-BR": "having the quality of apartment",
-        "id": "having the quality of apartment",
-        "fr": "having the quality of apartment",
-        "ar": "having the quality of apartment",
-        "tr": "having the quality of apartment",
-        "it": "having the quality of apartment",
-        "pl": "having the quality of apartment"
+        "en": "home in a building",
+        "ko": "아파트",
+        "zh-Hans": "公寓",
+        "ja": "アパート",
+        "es": "apartamento",
+        "hi": "अपार्टमेंट",
+        "de": "Wohnung",
+        "vi": "căn hộ",
+        "pt-BR": "apartamento",
+        "id": "apartemen",
+        "fr": "appartement",
+        "ar": "شقة",
+        "tr": "daire",
+        "it": "appartamento",
+        "pl": "mieszkanie"
       },
       "ww": {
-        "sense_id": "apartment.adj.s1",
-        "pos": "adj",
+        "sense_id": "apartment.s1",
+        "pos": "n",
         "def": {
-          "en": "an academic term: apartment",
-          "ko": "학술 영어 단어: apartment",
-          "zh-Hans": "an academic term: apartment",
-          "ja": "an academic term: apartment",
-          "es": "an academic term: apartment",
-          "hi": "an academic term: apartment",
-          "de": "an academic term: apartment",
-          "vi": "an academic term: apartment",
-          "pt-BR": "an academic term: apartment",
-          "id": "an academic term: apartment",
-          "fr": "an academic term: apartment",
-          "ar": "an academic term: apartment",
-          "tr": "an academic term: apartment",
-          "it": "an academic term: apartment",
-          "pl": "an academic term: apartment"
+          "en": "a set of rooms for living in a larger building",
+          "ko": "큰 건물 안에서 사는 방들",
+          "zh-Hans": "大楼里的一套住房",
+          "ja": "大きな建物の中の住居",
+          "es": "conjunto de habitaciones en un edificio",
+          "hi": "बड़ी इमारत में रहने के कमरे",
+          "de": "Wohnräume in einem größeren Gebäude",
+          "vi": "bộ phòng ở trong tòa nhà lớn",
+          "pt-BR": "conjunto de cômodos em um prédio",
+          "id": "sekumpulan kamar di gedung besar",
+          "fr": "ensemble de pièces dans un grand immeuble",
+          "ar": "مجموعة غرف للسكن في مبنى كبير",
+          "tr": "büyük bir binada yaşamak için odalar",
+          "it": "insieme di stanze in un edificio grande",
+          "pl": "zestaw pokoi w większym budynku"
         },
         "example": {
-          "en": "The report uses the word \"apartment\" in an academic context.",
-          "ko": "보고서는 학술 맥락에서 \"apartment\"(을)를 사용한다.",
-          "zh-Hans": "The report uses the word \"apartment\" in an academic context.",
-          "ja": "The report uses the word \"apartment\" in an academic context.",
-          "es": "The report uses the word \"apartment\" in an academic context.",
-          "hi": "The report uses the word \"apartment\" in an academic context.",
-          "de": "The report uses the word \"apartment\" in an academic context.",
-          "vi": "The report uses the word \"apartment\" in an academic context.",
-          "pt-BR": "The report uses the word \"apartment\" in an academic context.",
-          "id": "The report uses the word \"apartment\" in an academic context.",
-          "fr": "The report uses the word \"apartment\" in an academic context.",
-          "ar": "The report uses the word \"apartment\" in an academic context.",
-          "tr": "The report uses the word \"apartment\" in an academic context.",
-          "it": "The report uses the word \"apartment\" in an academic context.",
-          "pl": "The report uses the word \"apartment\" in an academic context."
+          "en": "They rent a small apartment near campus.",
+          "ko": "그들은 캠퍼스 근처 작은 아파트를 렌트한다.",
+          "zh-Hans": "他们在校园附近租了一间小公寓。",
+          "ja": "彼らはキャンパス近くの小さなアパートを借りている。",
+          "es": "Alquilan un apartamento pequeño cerca del campus.",
+          "hi": "वे कैंपस के पास एक छोटा अपार्टमेंट किराए पर लेते हैं।",
+          "de": "Sie mieten eine kleine Wohnung nahe dem Campus.",
+          "vi": "Họ thuê căn hộ nhỏ gần khuôn viên.",
+          "pt-BR": "Eles alugam um apartamento pequeno perto do campus.",
+          "id": "Mereka menyewa apartemen kecil dekat kampus.",
+          "fr": "Ils louent un petit appartement près du campus.",
+          "ar": "يستأجرون شقة صغيرة قرب الحرم الجامعي.",
+          "tr": "Kampüs yakınında küçük bir daire kiralıyorlar.",
+          "it": "Affittano un piccolo appartamento vicino al campus.",
+          "pl": "Wynajmują małe mieszkanie blisko kampusu."
         }
       }
     },
     {
       "id": "apologize",
       "en": "apologize",
-      "ko": "apologize",
-      "picture_prompt": "Photorealistic photo illustrating the idea of apologize in a university study setting, no text, no letters, no logos",
+      "ko": "사과하다",
+      "picture_prompt": "candy picture-book oil-paint of one child bowing slightly with hands together toward a friend, one subject, no text no letters no numbers no watermark",
       "l1": {
-        "en": "to do something related to apologize",
-        "ko": "apologize",
-        "zh-Hans": "to do something related to apologize",
-        "ja": "to do something related to apologize",
-        "es": "to do something related to apologize",
-        "hi": "to do something related to apologize",
-        "de": "to do something related to apologize",
-        "vi": "to do something related to apologize",
-        "pt-BR": "to do something related to apologize",
-        "id": "to do something related to apologize",
-        "fr": "to do something related to apologize",
-        "ar": "to do something related to apologize",
-        "tr": "to do something related to apologize",
-        "it": "to do something related to apologize",
-        "pl": "to do something related to apologize"
+        "en": "say sorry",
+        "ko": "사과하다",
+        "zh-Hans": "道歉",
+        "ja": "謝る",
+        "es": "disculparse",
+        "hi": "माफी माँगना",
+        "de": "sich entschuldigen",
+        "vi": "xin lỗi",
+        "pt-BR": "pedir desculpas",
+        "id": "meminta maaf",
+        "fr": "s'excuser",
+        "ar": "يعتذر",
+        "tr": "özür dilemek",
+        "it": "scusarsi",
+        "pl": "przepraszać"
       },
       "ww": {
-        "sense_id": "apologize.v.s1",
+        "sense_id": "apologize.s1",
         "pos": "v",
         "def": {
-          "en": "to apologiz (academic sense)",
-          "ko": "학술 영어 단어: apologize",
-          "zh-Hans": "to apologiz (academic sense)",
-          "ja": "to apologiz (academic sense)",
-          "es": "to apologiz (academic sense)",
-          "hi": "to apologiz (academic sense)",
-          "de": "to apologiz (academic sense)",
-          "vi": "to apologiz (academic sense)",
-          "pt-BR": "to apologiz (academic sense)",
-          "id": "to apologiz (academic sense)",
-          "fr": "to apologiz (academic sense)",
-          "ar": "to apologiz (academic sense)",
-          "tr": "to apologiz (academic sense)",
-          "it": "to apologiz (academic sense)",
-          "pl": "to apologiz (academic sense)"
+          "en": "to tell someone you are sorry for something wrong",
+          "ko": "잘못에 대해 미안하다고 말하다",
+          "zh-Hans": "为某件错事向某人道歉",
+          "ja": "間違いについて謝る",
+          "es": "decir a alguien que lamentas algo malo",
+          "hi": "किसी गलती के लिए क्षमा माँगना",
+          "de": "jemandem sagen, dass du etwas bedauerst",
+          "vi": "nói với ai rằng bạn xin lỗi vì sai lầm",
+          "pt-BR": "dizer a alguém que lamenta algo errado",
+          "id": "memberi tahu seseorang bahwa Anda minta maaf",
+          "fr": "dire à quelqu'un que tu es désolé",
+          "ar": "أن تقول لشخص أنك آسف على خطأ",
+          "tr": "birine yanlış bir şey için özür dilediğini söylemek",
+          "it": "dire a qualcuno che ti dispiace per un errore",
+          "pl": "powiedzieć komuś, że przepraszasz za błąd"
         },
         "example": {
-          "en": "The report uses the word \"apologize\" in an academic context.",
-          "ko": "보고서는 학술 맥락에서 \"apologize\"(을)를 사용한다.",
-          "zh-Hans": "The report uses the word \"apologize\" in an academic context.",
-          "ja": "The report uses the word \"apologize\" in an academic context.",
-          "es": "The report uses the word \"apologize\" in an academic context.",
-          "hi": "The report uses the word \"apologize\" in an academic context.",
-          "de": "The report uses the word \"apologize\" in an academic context.",
-          "vi": "The report uses the word \"apologize\" in an academic context.",
-          "pt-BR": "The report uses the word \"apologize\" in an academic context.",
-          "id": "The report uses the word \"apologize\" in an academic context.",
-          "fr": "The report uses the word \"apologize\" in an academic context.",
-          "ar": "The report uses the word \"apologize\" in an academic context.",
-          "tr": "The report uses the word \"apologize\" in an academic context.",
-          "it": "The report uses the word \"apologize\" in an academic context.",
-          "pl": "The report uses the word \"apologize\" in an academic context."
+          "en": "Please apologize to your neighbour for the noise.",
+          "ko": "소음에 대해 이웃에게 사과해 주세요.",
+          "zh-Hans": "请为噪音向邻居道歉。",
+          "ja": "騒音について隣人に謝ってください。",
+          "es": "Por favor discúlpate con tu vecino por el ruido.",
+          "hi": "कृपया शोर के लिए पड़ोसी से माफी माँगें।",
+          "de": "Bitte entschuldige dich beim Nachbarn wegen des Lärms.",
+          "vi": "Xin lỗi hàng xóm vì tiếng ồn.",
+          "pt-BR": "Por favor peça desculpas ao vizinho pelo barulho.",
+          "id": "Tolong minta maaf kepada tetangga atas kebisingan.",
+          "fr": "Veuillez vous excuser auprès du voisin pour le bruit.",
+          "ar": "من فضلك اعتذر للجار عن الضوضاء.",
+          "tr": "Lütfen gürültü için komşundan özür dile.",
+          "it": "Per favore scusati con il vicino per il rumore.",
+          "pl": "Proszę przeprosić sąsiada za hałas."
         }
       }
     },
@@ -3322,7 +3322,7 @@
         "pl": "apel"
       },
       "ww": {
-        "sense_id": "appeal.n.s1",
+        "sense_id": "appeal.s1",
         "pos": "n",
         "def": {
           "en": "a serious request",
@@ -3444,7 +3444,7 @@
         "pl": "wygląd"
       },
       "ww": {
-        "sense_id": "appearance.n.s1",
+        "sense_id": "appearance.s1",
         "pos": "n",
         "def": {
           "en": "the way a person looks",
@@ -3505,7 +3505,7 @@
         "pl": "jabłko"
       },
       "ww": {
-        "sense_id": "apple.n.s1",
+        "sense_id": "apple.s1",
         "pos": "n",
         "def": {
           "en": "a round fruit that is often red or green",
@@ -3566,7 +3566,7 @@
         "pl": "wniosek"
       },
       "ww": {
-        "sense_id": "application.n.s1",
+        "sense_id": "application.s1",
         "pos": "n",
         "def": {
           "en": "to write your name and info on a form",
@@ -3627,7 +3627,7 @@
         "pl": "nakładać"
       },
       "ww": {
-        "sense_id": "apply.v.s1",
+        "sense_id": "apply.s1",
         "pos": "v",
         "def": {
           "en": "to put something onto a surface",
@@ -3688,7 +3688,7 @@
         "pl": "mianować"
       },
       "ww": {
-        "sense_id": "appoint.v.s1",
+        "sense_id": "appoint.s1",
         "pos": "v",
         "def": {
           "en": "to choose someone for a job",
@@ -3749,7 +3749,7 @@
         "pl": "zatwierdzać"
       },
       "ww": {
-        "sense_id": "approve.v.s1",
+        "sense_id": "approve.s1",
         "pos": "v",
         "def": {
           "en": "to say that something is good or okay",
@@ -3810,7 +3810,7 @@
         "pl": "kłócić się"
       },
       "ww": {
-        "sense_id": "argue.v.s1",
+        "sense_id": "argue.s1",
         "pos": "v",
         "def": {
           "en": "to disagree with someone loudly",
@@ -3854,61 +3854,61 @@
     {
       "id": "argument",
       "en": "argument",
-      "ko": "다툼",
-      "picture_prompt": "two children talking loudly and pointing fingers at each other",
+      "ko": "논거",
+      "picture_prompt": "photorealistic student highlighting lines in a printed essay on a desk, thoughtful study scene, no text no letters no numbers no watermark",
       "l1": {
-        "en": "a strong disagreement",
-        "ko": "다툼",
-        "zh-Hans": "争论",
-        "ja": "口論",
-        "es": "discusión (A)",
-        "hi": "झगड़ा",
-        "de": "Streit",
-        "vi": "cãi vã",
-        "pt-BR": "discussão (A)",
-        "id": "pertengkaran",
-        "fr": "dispute",
-        "ar": "جدال",
-        "tr": "tartışma (A)",
-        "it": "litigio",
-        "pl": "kłótnia"
+        "en": "reasons supporting an opinion",
+        "ko": "주장·논거",
+        "zh-Hans": "论点",
+        "ja": "論拠",
+        "es": "argumento",
+        "hi": "तर्क",
+        "de": "Argument",
+        "vi": "luận điểm",
+        "pt-BR": "argumento",
+        "id": "argumen",
+        "fr": "argument",
+        "ar": "حجة",
+        "tr": "argüman",
+        "it": "argomento",
+        "pl": "argument"
       },
       "ww": {
-        "sense_id": "argument.n.s1",
+        "sense_id": "argument.s1",
         "pos": "n",
         "def": {
-          "en": "a strong disagreement between people",
-          "ko": "다툼",
-          "zh-Hans": "争论",
-          "ja": "口論",
-          "es": "discusión (A)",
-          "hi": "झगड़ा",
-          "de": "Streit",
-          "vi": "cãi vã",
-          "pt-BR": "discussão (A)",
-          "id": "pertengkaran",
-          "fr": "dispute",
-          "ar": "جدال",
-          "tr": "tartışma (A)",
-          "it": "litigio",
-          "pl": "kłótnia"
+          "en": "a reason or set of reasons given to support an opinion",
+          "ko": "어떤 의견을 뒷받침하기 위해 제시하는 이유 또는 그 모음",
+          "zh-Hans": "为支持某种观点而提出的一条或若干理由",
+          "ja": "意見を支えるために示される理由、またはそのまとまり",
+          "es": "una razón o conjunto de razones que apoyan una opinión",
+          "hi": "किसी राय का समर्थन करने के लिए दिया गया कारण या कारणों का समूह",
+          "de": "ein Grund oder mehrere Gründe, die eine Meinung stützen",
+          "vi": "lý do hoặc tập hợp lý do đưa ra để ủng hộ một quan điểm",
+          "pt-BR": "uma razão ou conjunto de razões apresentadas para apoiar uma opinião",
+          "id": "alasan atau rangkaian alasan untuk mendukung suatu pendapat",
+          "fr": "une raison ou un ensemble de raisons avancées pour défendre une opinion",
+          "ar": "سبب أو مجموعة أسباب تُقدَّم لدعم رأي",
+          "tr": "bir görüşü desteklemek için sunulan bir veya birden fazla gerekçe",
+          "it": "una ragione o un insieme di ragioni addotte a sostegno di un’opinione",
+          "pl": "powód lub zestaw powodów podanych na poparcie opinii"
         },
         "example": {
-          "en": "They had an argument about the game.",
-          "ko": "그들은 게임에 대해 논쟁을 했어요.",
-          "zh-Hans": "他们就游戏发生了争论。",
-          "ja": "彼らはゲームについて口論しました。",
-          "es": "Tuvieron una discusión sobre el juego.",
-          "hi": "उनका खेल के बारे में झगड़ा हुआ।",
-          "de": "Sie hatten einen Streit über das Spiel.",
-          "vi": "Họ đã có một cuộc tranh cãi về trò chơi.",
-          "pt-BR": "Eles tiveram uma discussão sobre o jogo.",
-          "id": "Mereka bertengkar tentang permainan.",
-          "fr": "Ils ont eu une dispute à propos du jeu.",
-          "ar": "لقد تشاجروا حول اللعبة.",
-          "tr": "Oyun hakkında tartıştılar.",
-          "it": "Hanno avuto una discussione sul gioco.",
-          "pl": "Mieli kłótnię o grę."
+          "en": "Her essay presents a clear argument for free public transport.",
+          "ko": "그녀의 글은 무료 공공 교통에 대한 명확한 논거를 제시한다.",
+          "zh-Hans": "她的文章提出了支持免费公共交通的明确论点。",
+          "ja": "彼女の論文は無料の公共交通を支持する明確な論拠を示している。",
+          "es": "Su ensayo presenta un argumento claro a favor del transporte público gratuito.",
+          "hi": "उसका निबंध मुफ्त सार्वजनिक परिवहन के लिए एक स्पष्ट तर्क प्रस्तुत करता है।",
+          "de": "Ihr Aufsatz legt ein klares Argument für kostenlosen öffentlichen Verkehr dar.",
+          "vi": "Bài luận của cô đưa ra một luận điểm rõ ràng ủng hộ giao thông công cộng miễn phí.",
+          "pt-BR": "O ensaio dela apresenta um argumento claro a favor do transporte público gratuito.",
+          "id": "Esainya menyajikan argumen yang jelas untuk transportasi umum gratis.",
+          "fr": "Son essai présente un argument clair en faveur des transports publics gratuits.",
+          "ar": "تقدّم مقالتها حجة واضحة لدعم النقل العام المجاني.",
+          "tr": "Makalesi ücretsiz toplu taşımayı destekleyen net bir argüman sunuyor.",
+          "it": "Il suo saggio presenta un argomento chiaro a favore del trasporto pubblico gratuito.",
+          "pl": "Jej esej przedstawia jasny argument za darmowym transportem publicznym."
         }
       }
     },
@@ -3935,7 +3935,7 @@
         "pl": "wstawać"
       },
       "ww": {
-        "sense_id": "arise.v.s1",
+        "sense_id": "arise.s1",
         "pos": "v",
         "def": {
           "en": "to get up or happen",
@@ -3996,7 +3996,7 @@
         "pl": "ramię"
       },
       "ww": {
-        "sense_id": "arm.n.s1",
+        "sense_id": "arm.s1",
         "pos": "n",
         "def": {
           "en": "the part of your body from shoulder to hand",
@@ -4057,7 +4057,7 @@
         "pl": "armia"
       },
       "ww": {
-        "sense_id": "army.n.s1",
+        "sense_id": "army.s1",
         "pos": "n",
         "def": {
           "en": "a big group of soldiers who protect a country",
@@ -4118,7 +4118,7 @@
         "pl": "dookoła (A)"
       },
       "ww": {
-        "sense_id": "around.adv.s1",
+        "sense_id": "around.s1",
         "pos": "adv",
         "def": {
           "en": "in a circle nearby",
@@ -4179,7 +4179,7 @@
         "pl": "układać"
       },
       "ww": {
-        "sense_id": "arrange.v.s1",
+        "sense_id": "arrange.s1",
         "pos": "v",
         "def": {
           "en": "to put things in order",
@@ -4240,7 +4240,7 @@
         "pl": "aresztować"
       },
       "ww": {
-        "sense_id": "arrest.v.s1",
+        "sense_id": "arrest.s1",
         "pos": "v",
         "def": {
           "en": "to catch and hold by police",
@@ -4301,7 +4301,7 @@
         "pl": "przybycie"
       },
       "ww": {
-        "sense_id": "arrival.n.s1",
+        "sense_id": "arrival.s1",
         "pos": "n",
         "def": {
           "en": "the act of reaching a place",
@@ -4362,7 +4362,7 @@
         "pl": "przybywać"
       },
       "ww": {
-        "sense_id": "arrive.v.s1",
+        "sense_id": "arrive.s1",
         "pos": "v",
         "def": {
           "en": "to reach a place after traveling",
@@ -4423,7 +4423,7 @@
         "pl": "sztuka"
       },
       "ww": {
-        "sense_id": "art.n.s1",
+        "sense_id": "art.s1",
         "pos": "n",
         "def": {
           "en": "beautiful pictures made by people",
@@ -4484,7 +4484,7 @@
         "pl": "artykuł"
       },
       "ww": {
-        "sense_id": "article.n.s1",
+        "sense_id": "article.s1",
         "pos": "n",
         "def": {
           "en": "a piece of writing in a newspaper",
@@ -4545,7 +4545,7 @@
         "pl": "sztuczny"
       },
       "ww": {
-        "sense_id": "artificial.a.s1",
+        "sense_id": "artificial.s1",
         "pos": "a",
         "def": {
           "en": "to make something not natural",
@@ -4606,7 +4606,7 @@
         "pl": "artysta"
       },
       "ww": {
-        "sense_id": "artist.n.s1",
+        "sense_id": "artist.s1",
         "pos": "n",
         "def": {
           "en": "someone who creates pictures or music",
@@ -4667,7 +4667,7 @@
         "pl": "tak"
       },
       "ww": {
-        "sense_id": "as.adv.s1",
+        "sense_id": "as.s1",
         "pos": "adv",
         "def": {
           "en": "in the same way or degree",
@@ -4728,7 +4728,7 @@
         "pl": "zawstydzony (A)"
       },
       "ww": {
-        "sense_id": "ashamed.a.s1",
+        "sense_id": "ashamed.s1",
         "pos": "a",
         "def": {
           "en": "feeling sorry and embarrassed about something you did wrong",
@@ -4789,7 +4789,7 @@
         "pl": "na bok"
       },
       "ww": {
-        "sense_id": "aside.adv.s1",
+        "sense_id": "aside.s1",
         "pos": "adv",
         "def": {
           "en": "to or on one side",
@@ -4911,7 +4911,7 @@
         "pl": "śpiący"
       },
       "ww": {
-        "sense_id": "asleep.a.s1",
+        "sense_id": "asleep.s1",
         "pos": "a",
         "def": {
           "en": "to be sleeping now",
@@ -4972,7 +4972,7 @@
         "pl": "atut"
       },
       "ww": {
-        "sense_id": "asset.n.s1",
+        "sense_id": "asset.s1",
         "pos": "n",
         "def": {
           "en": "a thing that helps you",
@@ -5033,7 +5033,7 @@
         "pl": "kojarzyć"
       },
       "ww": {
-        "sense_id": "associate.v.s1",
+        "sense_id": "associate.s1",
         "pos": "v",
         "def": {
           "en": "to link one thing with another",
@@ -5094,7 +5094,7 @@
         "pl": "stowarzyszenie"
       },
       "ww": {
-        "sense_id": "association.n.s1",
+        "sense_id": "association.s1",
         "pos": "n",
         "def": {
           "en": "a group of people working together",
@@ -5155,7 +5155,7 @@
         "pl": "założenie"
       },
       "ww": {
-        "sense_id": "assumption.n.s1",
+        "sense_id": "assumption.s1",
         "pos": "n",
         "def": {
           "en": "something you believe is true without proof",
@@ -5216,7 +5216,7 @@
         "pl": "w (A)"
       },
       "ww": {
-        "sense_id": "at.prep.s1",
+        "sense_id": "at.s1",
         "pos": "prep",
         "def": {
           "en": "at a certain place or time",
@@ -5257,61 +5257,61 @@
     {
       "id": "athlete",
       "en": "athlete",
-      "ko": "athlete",
-      "picture_prompt": "Photorealistic photo illustrating the idea of athlete in a university study setting, no text, no letters, no logos",
+      "ko": "운동선수",
+      "picture_prompt": "candy picture-book oil-paint of one child in running shoes crossing a finish ribbon, one subject, no text no letters no numbers no watermark",
       "l1": {
-        "en": "a word used in academic English: athlete",
-        "ko": "athlete",
-        "zh-Hans": "a word used in academic English: athlete",
-        "ja": "a word used in academic English: athlete",
-        "es": "a word used in academic English: athlete",
-        "hi": "a word used in academic English: athlete",
-        "de": "a word used in academic English: athlete",
-        "vi": "a word used in academic English: athlete",
-        "pt-BR": "a word used in academic English: athlete",
-        "id": "a word used in academic English: athlete",
-        "fr": "a word used in academic English: athlete",
-        "ar": "a word used in academic English: athlete",
-        "tr": "a word used in academic English: athlete",
-        "it": "a word used in academic English: athlete",
-        "pl": "a word used in academic English: athlete"
+        "en": "sport competitor",
+        "ko": "운동선수",
+        "zh-Hans": "运动员",
+        "ja": "選手",
+        "es": "atleta",
+        "hi": "एथलीट",
+        "de": "Sportler",
+        "vi": "vận động viên",
+        "pt-BR": "atleta",
+        "id": "atlet",
+        "fr": "athlète",
+        "ar": "رياضي",
+        "tr": "sporcu",
+        "it": "atleta",
+        "pl": "sportowiec"
       },
       "ww": {
-        "sense_id": "athlete.n.s1",
+        "sense_id": "athlete.s1",
         "pos": "n",
         "def": {
-          "en": "an academic term: athlete",
-          "ko": "학술 영어 단어: athlete",
-          "zh-Hans": "an academic term: athlete",
-          "ja": "an academic term: athlete",
-          "es": "an academic term: athlete",
-          "hi": "an academic term: athlete",
-          "de": "an academic term: athlete",
-          "vi": "an academic term: athlete",
-          "pt-BR": "an academic term: athlete",
-          "id": "an academic term: athlete",
-          "fr": "an academic term: athlete",
-          "ar": "an academic term: athlete",
-          "tr": "an academic term: athlete",
-          "it": "an academic term: athlete",
-          "pl": "an academic term: athlete"
+          "en": "a person who is trained to compete in sports",
+          "ko": "운동 경기에 훈련된 사람",
+          "zh-Hans": "受训参加体育比赛的人",
+          "ja": "スポーツ競技に訓練された人",
+          "es": "persona entrenada para competir en deportes",
+          "hi": "खेलों में प्रतिस्पर्धा के लिए प्रशिक्षित व्यक्ति",
+          "de": "Person, die für Wettkampfsport trainiert ist",
+          "vi": "người được đào tạo để thi đấu thể thao",
+          "pt-BR": "pessoa treinada para competir em esportes",
+          "id": "orang yang dilatih untuk bertanding olahraga",
+          "fr": "personne formée pour concourir en sport",
+          "ar": "شخص مدرّب للمنافسة في الرياضة",
+          "tr": "sporda yarışmak için eğitilmiş kişi",
+          "it": "persona allenata a competere nello sport",
+          "pl": "osoba wyszkolona do startów sportowych"
         },
         "example": {
-          "en": "The report uses the word \"athlete\" in an academic context.",
-          "ko": "보고서는 학술 맥락에서 \"athlete\"(을)를 사용한다.",
-          "zh-Hans": "The report uses the word \"athlete\" in an academic context.",
-          "ja": "The report uses the word \"athlete\" in an academic context.",
-          "es": "The report uses the word \"athlete\" in an academic context.",
-          "hi": "The report uses the word \"athlete\" in an academic context.",
-          "de": "The report uses the word \"athlete\" in an academic context.",
-          "vi": "The report uses the word \"athlete\" in an academic context.",
-          "pt-BR": "The report uses the word \"athlete\" in an academic context.",
-          "id": "The report uses the word \"athlete\" in an academic context.",
-          "fr": "The report uses the word \"athlete\" in an academic context.",
-          "ar": "The report uses the word \"athlete\" in an academic context.",
-          "tr": "The report uses the word \"athlete\" in an academic context.",
-          "it": "The report uses the word \"athlete\" in an academic context.",
-          "pl": "The report uses the word \"athlete\" in an academic context."
+          "en": "The athlete trains every morning before school.",
+          "ko": "그 운동선수는 매일 아침 학교 가기 전에 훈련한다.",
+          "zh-Hans": "那位运动员每天上学前早上训练。",
+          "ja": "その選手は毎朝学校の前に練習する。",
+          "es": "El atleta entrena cada mañana antes de clase.",
+          "hi": "एथलीट स्कूल से पहले हर सुबह प्रशिक्षण लेता है।",
+          "de": "Der Sportler trainiert jeden Morgen vor der Schule.",
+          "vi": "Vận động viên tập luyện mỗi sáng trước giờ học.",
+          "pt-BR": "O atleta treina toda manhã antes da escola.",
+          "id": "Atlet itu berlatih setiap pagi sebelum sekolah.",
+          "fr": "L'athlète s'entraîne chaque matin avant l'école.",
+          "ar": "يتدرب الرياضي كل صباح قبل المدرسة.",
+          "tr": "Sporcu her sabah okuldan önce antrenman yapar.",
+          "it": "L'atleta si allena ogni mattina prima di scuola.",
+          "pl": "Sportowiec ćwiczy co rano przed szkołą."
         }
       }
     },
@@ -5338,7 +5338,7 @@
         "pl": "atmosfera"
       },
       "ww": {
-        "sense_id": "atmosphere.n.s1",
+        "sense_id": "atmosphere.s1",
         "pos": "n",
         "def": {
           "en": "the layer of air that surrounds the Earth",
@@ -5399,7 +5399,7 @@
         "pl": "atak"
       },
       "ww": {
-        "sense_id": "attack.n.s1",
+        "sense_id": "attack.s1",
         "pos": "n",
         "def": {
           "en": "an act of trying to hurt or defeat",
@@ -5460,7 +5460,7 @@
         "pl": "próba"
       },
       "ww": {
-        "sense_id": "attempt.n.s1",
+        "sense_id": "attempt.s1",
         "pos": "n",
         "def": {
           "en": "a try to do something",
@@ -5521,7 +5521,7 @@
         "pl": "uczęszczać"
       },
       "ww": {
-        "sense_id": "attend.v.s1",
+        "sense_id": "attend.s1",
         "pos": "v",
         "def": {
           "en": "to go to school or an event",
@@ -5582,7 +5582,7 @@
         "pl": "uwaga"
       },
       "ww": {
-        "sense_id": "attention.n.s1",
+        "sense_id": "attention.s1",
         "pos": "n",
         "def": {
           "en": "to listen or look carefully",
@@ -5643,7 +5643,7 @@
         "pl": "przyciągać"
       },
       "ww": {
-        "sense_id": "attract.v.s1",
+        "sense_id": "attract.s1",
         "pos": "v",
         "def": {
           "en": "to pull things closer",
@@ -5684,61 +5684,61 @@
     {
       "id": "attraction",
       "en": "attraction",
-      "ko": "attraction",
-      "picture_prompt": "Photorealistic photo illustrating the idea of attraction in a university study setting, no text, no letters, no logos",
+      "ko": "매력",
+      "picture_prompt": "candy picture-book oil-paint of one bright ferris wheel glowing at a fairground, one subject, no text no letters no numbers no watermark",
       "l1": {
-        "en": "a word used in academic English: attraction",
-        "ko": "attraction",
-        "zh-Hans": "a word used in academic English: attraction",
-        "ja": "a word used in academic English: attraction",
-        "es": "a word used in academic English: attraction",
-        "hi": "a word used in academic English: attraction",
-        "de": "a word used in academic English: attraction",
-        "vi": "a word used in academic English: attraction",
-        "pt-BR": "a word used in academic English: attraction",
-        "id": "a word used in academic English: attraction",
-        "fr": "a word used in academic English: attraction",
-        "ar": "a word used in academic English: attraction",
-        "tr": "a word used in academic English: attraction",
-        "it": "a word used in academic English: attraction",
-        "pl": "a word used in academic English: attraction"
+        "en": "something that draws interest",
+        "ko": "매력",
+        "zh-Hans": "吸引力",
+        "ja": "魅力",
+        "es": "atracción",
+        "hi": "आकर्षण",
+        "de": "Attraktion",
+        "vi": "điểm thu hút",
+        "pt-BR": "atração",
+        "id": "atraksi",
+        "fr": "attraction",
+        "ar": "جاذبية",
+        "tr": "çekim",
+        "it": "attrazione",
+        "pl": "atrakcja"
       },
       "ww": {
-        "sense_id": "attraction.n.s1",
+        "sense_id": "attraction.s1",
         "pos": "n",
         "def": {
-          "en": "an academic term: attraction",
-          "ko": "학술 영어 단어: attraction",
-          "zh-Hans": "an academic term: attraction",
-          "ja": "an academic term: attraction",
-          "es": "an academic term: attraction",
-          "hi": "an academic term: attraction",
-          "de": "an academic term: attraction",
-          "vi": "an academic term: attraction",
-          "pt-BR": "an academic term: attraction",
-          "id": "an academic term: attraction",
-          "fr": "an academic term: attraction",
-          "ar": "an academic term: attraction",
-          "tr": "an academic term: attraction",
-          "it": "an academic term: attraction",
-          "pl": "an academic term: attraction"
+          "en": "something interesting that people want to see or visit",
+          "ko": "사람들이 보거나 방문하고 싶은 흥미로운 것",
+          "zh-Hans": "人们想看或参观的有趣事物",
+          "ja": "人々が見たい・訪れたい魅力的なもの",
+          "es": "algo interesante que la gente quiere ver o visitar",
+          "hi": "दिलचस्प चीज़ जिसे लोग देखना या जाना चाहते हैं",
+          "de": "etwas Interessantes, das Menschen sehen oder besuchen wollen",
+          "vi": "điều thú vị mà người ta muốn xem hoặc ghé",
+          "pt-BR": "algo interessante que as pessoas querem ver ou visitar",
+          "id": "hal menarik yang ingin dilihat atau dikunjungi orang",
+          "fr": "chose intéressante que les gens veulent voir ou visiter",
+          "ar": "شيء مثير يريد الناس رؤيته أو زيارته",
+          "tr": "insanların görmek veya ziyaret etmek istediği ilginç şey",
+          "it": "qualcosa di interessante che la gente vuole vedere o visitare",
+          "pl": "coś ciekawego, co ludzie chcą zobaczyć lub odwiedzić"
         },
         "example": {
-          "en": "The report uses the word \"attraction\" in an academic context.",
-          "ko": "보고서는 학술 맥락에서 \"attraction\"(을)를 사용한다.",
-          "zh-Hans": "The report uses the word \"attraction\" in an academic context.",
-          "ja": "The report uses the word \"attraction\" in an academic context.",
-          "es": "The report uses the word \"attraction\" in an academic context.",
-          "hi": "The report uses the word \"attraction\" in an academic context.",
-          "de": "The report uses the word \"attraction\" in an academic context.",
-          "vi": "The report uses the word \"attraction\" in an academic context.",
-          "pt-BR": "The report uses the word \"attraction\" in an academic context.",
-          "id": "The report uses the word \"attraction\" in an academic context.",
-          "fr": "The report uses the word \"attraction\" in an academic context.",
-          "ar": "The report uses the word \"attraction\" in an academic context.",
-          "tr": "The report uses the word \"attraction\" in an academic context.",
-          "it": "The report uses the word \"attraction\" in an academic context.",
-          "pl": "The report uses the word \"attraction\" in an academic context."
+          "en": "The museum is the main attraction in town.",
+          "ko": "그 박물관은 이 도시의 주요 명소다.",
+          "zh-Hans": "这座博物馆是城里的主要景点。",
+          "ja": "その博物館は町の主な見どころだ。",
+          "es": "El museo es la principal atracción de la ciudad.",
+          "hi": "यह संग्रहालय शहर का मुख्य आकर्षण है।",
+          "de": "Das Museum ist die Hauptattraktion der Stadt.",
+          "vi": "Bảo tàng là điểm thu hút chính trong thị trấn.",
+          "pt-BR": "O museu é a principal atração da cidade.",
+          "id": "Museum adalah atraksi utama di kota.",
+          "fr": "Le musée est la principale attraction de la ville.",
+          "ar": "المتحف هو الجاذبية الرئيسية في المدينة.",
+          "tr": "Müze şehirdeki ana çekim merkezi.",
+          "it": "Il museo è la principale attrazione della città.",
+          "pl": "Muzeum jest główną atrakcją miasta."
         }
       }
     },
@@ -5765,7 +5765,7 @@
         "pl": "atrakcyjny"
       },
       "ww": {
-        "sense_id": "attractive.a.s1",
+        "sense_id": "attractive.s1",
         "pos": "a",
         "def": {
           "en": "pleasing to see or like",
@@ -5826,7 +5826,7 @@
         "pl": "publiczność"
       },
       "ww": {
-        "sense_id": "audience.n.s1",
+        "sense_id": "audience.s1",
         "pos": "n",
         "def": {
           "en": "people who watch a show",
@@ -5887,7 +5887,7 @@
         "pl": "automatyczny"
       },
       "ww": {
-        "sense_id": "automatic.a.s1",
+        "sense_id": "automatic.s1",
         "pos": "a",
         "def": {
           "en": "to work by itself without people",
@@ -5948,7 +5948,7 @@
         "pl": "przeciętny"
       },
       "ww": {
-        "sense_id": "average.a.s1",
+        "sense_id": "average.s1",
         "pos": "a",
         "def": {
           "en": "not special or unusual",
@@ -6009,7 +6009,7 @@
         "pl": "unikać"
       },
       "ww": {
-        "sense_id": "avoid.v.s1",
+        "sense_id": "avoid.s1",
         "pos": "v",
         "def": {
           "en": "to stay away from something bad",
@@ -6070,7 +6070,7 @@
         "pl": "przytomny"
       },
       "ww": {
-        "sense_id": "awake.a.s1",
+        "sense_id": "awake.s1",
         "pos": "a",
         "def": {
           "en": "not sleeping, with eyes open and noticing things",

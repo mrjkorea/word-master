@@ -1,7 +1,7 @@
 {
   "pack_id": "ielts09",
   "title": "IELTS 801–900",
-  "module_id": "word_master",
+  "module_id": "snow_jump",
   "seconds": 15,
   "items": [
     {
@@ -16,7 +16,7 @@
     },
     {
       "item_id": "broadcast",
-      "question": "a word used in academic English: broadcast",
+      "question": "send on radio or TV",
       "correct": "broadcast",
       "wrong": [
         "brother",
@@ -86,7 +86,7 @@
     },
     {
       "item_id": "bullet",
-      "question": "a word used in academic English: bullet",
+      "question": "gun projectile",
       "correct": "bullet",
       "wrong": [
         "bunch",
@@ -96,7 +96,7 @@
     },
     {
       "item_id": "bunch",
-      "question": "a word used in academic English: bunch",
+      "question": "group held together",
       "correct": "bunch",
       "wrong": [
         "burden",
@@ -186,7 +186,7 @@
     },
     {
       "item_id": "butter",
-      "question": "a word used in academic English: butter",
+      "question": "soft yellow spread",
       "correct": "butter",
       "wrong": [
         "button",
@@ -196,7 +196,7 @@
     },
     {
       "item_id": "button",
-      "question": "a word used in academic English: button",
+      "question": "small fastener",
       "correct": "button",
       "wrong": [
         "buy",
@@ -226,7 +226,7 @@
     },
     {
       "item_id": "cabin",
-      "question": "a word used in academic English: cabin",
+      "question": "small wooden house",
       "correct": "cabin",
       "wrong": [
         "cabinet",
@@ -246,7 +246,7 @@
     },
     {
       "item_id": "cable",
-      "question": "a word used in academic English: cable",
+      "question": "thick wire rope",
       "correct": "cable",
       "wrong": [
         "cake",
@@ -326,7 +326,7 @@
     },
     {
       "item_id": "campus",
-      "question": "a word used in academic English: campus",
+      "question": "school grounds",
       "correct": "campus",
       "wrong": [
         "can",
@@ -376,7 +376,7 @@
     },
     {
       "item_id": "cap",
-      "question": "a word used in academic English: cap",
+      "question": "hat with visor",
       "correct": "cap",
       "wrong": [
         "capital",
@@ -426,7 +426,7 @@
     },
     {
       "item_id": "carbon",
-      "question": "a word used in academic English: carbon",
+      "question": "chemical element C",
       "correct": "carbon",
       "wrong": [
         "card",
@@ -476,7 +476,7 @@
     },
     {
       "item_id": "careless",
-      "question": "a word used in academic English: careless",
+      "question": "not careful",
       "correct": "careless",
       "wrong": [
         "carry",
@@ -556,7 +556,7 @@
     },
     {
       "item_id": "ceiling",
-      "question": "a word used in academic English: ceiling",
+      "question": "top indoor surface",
       "correct": "ceiling",
       "wrong": [
         "celebrate",
@@ -586,7 +586,7 @@
     },
     {
       "item_id": "cent",
-      "question": "having the quality of cent",
+      "question": "hundredth of dollar",
       "correct": "cent",
       "wrong": [
         "center",
@@ -596,7 +596,7 @@
     },
     {
       "item_id": "center",
-      "question": "a word used in academic English: center",
+      "question": "middle point",
       "correct": "center",
       "wrong": [
         "central",
@@ -626,7 +626,7 @@
     },
     {
       "item_id": "ceremony",
-      "question": "a word used in academic English: ceremony",
+      "question": "formal event",
       "correct": "ceremony",
       "wrong": [
         "certain",
@@ -786,7 +786,7 @@
     },
     {
       "item_id": "chicken",
-      "question": "a word used in academic English: chicken",
+      "question": "farm bird",
       "correct": "chicken",
       "wrong": [
         "chief",
@@ -816,7 +816,7 @@
     },
     {
       "item_id": "childhood",
-      "question": "a word used in academic English: childhood",
+      "question": "time as a child",
       "correct": "childhood",
       "wrong": [
         "chip",
@@ -836,7 +836,7 @@
     },
     {
       "item_id": "chocolate",
-      "question": "to do something related to chocolate",
+      "question": "sweet brown candy",
       "correct": "chocolate",
       "wrong": [
         "choice",
@@ -936,7 +936,7 @@
     },
     {
       "item_id": "classroom",
-      "question": "a word used in academic English: classroom",
+      "question": "room for lessons",
       "correct": "classroom",
       "wrong": [
         "clean",
