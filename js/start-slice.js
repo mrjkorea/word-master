@@ -8,12 +8,19 @@
   if (typeof module === "object" && module.exports) module.exports = api;
 })(typeof window !== "undefined" ? window : (typeof globalThis !== "undefined" ? globalThis : this), function () {
   var PASS_PCT = 80;
+  var GROUP = 5;
+
+  /** Student ranges start at 1, 6, 11, … (multiples of 5 plus 1). */
+  function alignedStart(startNumber) {
+    var start = Math.floor(Number(startNumber));
+    if (!(start >= 1)) return 1;
+    return Math.floor((start - 1) / GROUP) * GROUP + 1;
+  }
 
   function sliceFrom(words, startNumber, count) {
     words = Array.isArray(words) ? words : [];
     var total = words.length;
-    var start = Math.floor(Number(startNumber));
-    if (!(start >= 1)) start = 1;
+    var start = alignedStart(startNumber);
     var n = Math.floor(Number(count));
     if (!(n >= 0)) n = 0;
     if (!total) return { startNumber: start, ids: [], words: [] };
@@ -54,6 +61,8 @@
 
   return {
     PASS_PCT: PASS_PCT,
+    GROUP: GROUP,
+    alignedStart: alignedStart,
     sliceFrom: sliceFrom,
     isGreen: isGreen,
     markPassed: markPassed,
