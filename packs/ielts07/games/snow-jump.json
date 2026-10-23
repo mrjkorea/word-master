@@ -636,7 +636,7 @@
     },
     {
       "item_id": "argument",
-      "question": "a strong disagreement",
+      "question": "reasons supporting an opinion",
       "correct": "argument",
       "wrong": [
         "arise",
