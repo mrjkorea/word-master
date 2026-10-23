@@ -1609,10 +1609,22 @@
     return done;
   }
 
+  /* Day 2 packs only ship us_m, us_f, grandma, grandpa, robot audio. A saved UK or
+     Teenager voice made every word silent there (404), so fall back to a voice the pack has. */
+  const DAY2_VOICES = ["us_m", "us_f", "grandma", "grandpa", "robot"];
+  function playVoice() {
+    const v = state.voice || "us_m";
+    const set = currentSet();
+    let list = set && Array.isArray(set.voices) && set.voices.length ? set.voices : null;
+    if (!list && String(packBase()).indexOf("/day2-words/") >= 0) list = DAY2_VOICES;
+    if (!list || list.indexOf(v) >= 0) return v;
+    return v === "uk_f" && list.indexOf("us_f") >= 0 ? "us_f" : "us_m";
+  }
+
   function speak(str) {
     const id = mediaFile(str);
     if (!id) return Promise.resolve();
-    const v = state.voice || "us_m";
+    const v = playVoice();
     return playClip(packBase() + "/audio/" + v + "/" + id + ".mp3", 8000);
   }
 
@@ -4015,7 +4027,7 @@
 
   function memoryPack(set) {
     const words = playWords(set).filter(function (w) { return w && w.en; });
-    const voice = state.voice || "us_m";
+    const voice = playVoice();
     return {
       pack_id: packIdForSet(set),
       title: set.title,
@@ -4036,7 +4048,7 @@
 
   function shooterPack(set) {
     const words = playWords(set).filter(function (w) { return w && w.en && rockLabel(w); });
-    const v = state.voice || "us_m";
+    const v = playVoice();
     return {
       pack_id: packIdForSet(set),
       title: set.title,
@@ -4085,7 +4097,7 @@
     if (!path) return;
     let pack;
     if (kind === "spellfire") {
-      const voice = state.voice || "us_m";
+      const voice = playVoice();
       const spoken = playWords(set).map(function (w) {
         const file = mediaFile(w);
         return {
@@ -4121,7 +4133,7 @@
     } catch (e) { /* ignore */ }
     const frame = gameFrame();
     const name = encodeURIComponent(student);
-    frame.src = path + "?pack=session&packid=" + encodeURIComponent(currentPackId()) + "&words=" + encodeURIComponent((pack && pack._spellWords) || "") + "&voice=" + encodeURIComponent((pack && pack._spellVoice) || state.voice || "us_m") + "&v=1.11&student=" + name + "&locale=" + encodeURIComponent(localeCode());
+    frame.src = path + "?pack=session&packid=" + encodeURIComponent(currentPackId()) + "&words=" + encodeURIComponent((pack && pack._spellWords) || "") + "&voice=" + encodeURIComponent((pack && pack._spellVoice) || playVoice()) + "&v=1.11&student=" + name + "&locale=" + encodeURIComponent(localeCode());
     armGame(kind);
   }
 
