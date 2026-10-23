@@ -2,6 +2,7 @@
 "use strict";
 
 const fs = require("fs");
+const { readBuild, cacheKey, srcAt } = require("./build_id.js");
 const path = require("path");
 const StartSlice = require("../js/start-slice.js");
 const { bootApp } = require("./load_app_for_test.js");
@@ -78,9 +79,9 @@ if (index.indexOf("js/start-slice.js") > index.indexOf("js/app.js")) {
   fail("start-slice.js must load before app.js");
 }
 if (index.indexOf("Tap a number to start there.") === -1) fail("missing tap hint");
-if (index.indexOf("css/app.css?v=20261023-setrange") === -1) fail("css cache");
-if (index.indexOf("js/app.js?v=20261023-setrange") === -1) fail("app cache");
-if (index.indexOf("js/start-slice.js?v=20261023-setrange") === -1) fail("start-slice cache");
+if (cacheKey(index, "css/app.css") !== readBuild()) fail("css cache");
+if (cacheKey(index, "js/app.js") !== readBuild()) fail("app cache");
+if (!cacheKey(index, "js/start-slice.js")) fail("start-slice cache");
 if (index.indexOf('id="set-range-banner"') === -1) fail("set range banner");
 
 const api = bootApp();

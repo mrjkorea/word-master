@@ -2,6 +2,7 @@
 "use strict";
 
 const fs = require("fs");
+const { readBuild, cacheKey, srcAt } = require("./build_id.js");
 const path = require("path");
 const PathLock = require("../js/path-lock.js");
 
@@ -131,8 +132,8 @@ if (index.indexOf("js/path-lock.js") === -1) fail("index.html does not load path
 if (index.indexOf("js/path-lock.js") > index.indexOf("js/app.js")) {
   fail("path-lock.js must load before app.js");
 }
-if (index.indexOf("js/path-lock.js?v=20261001-lock") === -1) fail("path-lock cache");
-if (index.indexOf("js/app.js?v=20261021-fix2") === -1) fail("app cache");
+if (!cacheKey(index, "js/path-lock.js")) fail("path-lock cache");
+if (cacheKey(index, "js/app.js") !== readBuild()) fail("app cache");
 if (index.indexOf('data-game="memorymatch"') === -1) fail("games screen missing memorymatch");
 
 const { bootApp } = require("./load_app_for_test");

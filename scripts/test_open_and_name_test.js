@@ -2,6 +2,7 @@
 "use strict";
 
 const fs = require("fs");
+const { readBuild, cacheKey, srcAt } = require("./build_id.js");
 const path = require("path");
 
 function fail(msg) {
@@ -13,13 +14,13 @@ const root = path.join(__dirname, "..");
 const index = fs.readFileSync(path.join(root, "index.html"), "utf8");
 const app = fs.readFileSync(path.join(root, "js/app.js"), "utf8");
 
-if (index.indexOf("css/app.css?v=20261014-daily") === -1) fail("css cache");
-if (index.indexOf("js/app.js?v=20261021-fix2") === -1) fail("app cache");
-if (index.indexOf("js/progress-merge.js?v=20261013-packpick") === -1) fail("progress-merge cache");
-if (index.indexOf("js/progress.js?v=20261013-cloud") === -1) fail("progress cache");
-if (index.indexOf("js/wm-pack-save.js?v=20261013-cloud") === -1) fail("wm-pack-save cache");
+if (cacheKey(index, "css/app.css") !== readBuild()) fail("css cache");
+if (cacheKey(index, "js/app.js") !== readBuild()) fail("app cache");
+if (!cacheKey(index, "js/progress-merge.js")) fail("progress-merge cache");
+if (!cacheKey(index, "js/progress.js")) fail("progress cache");
+if (!cacheKey(index, "js/wm-pack-save.js")) fail("wm-pack-save cache");
 if (index.indexOf("btn-class-progress") === -1) fail("class progress button");
-if (index.indexOf("mrj-scores.js?v=20261013-scoresrecv") === -1) fail("mrj-scores cache");
+if (!cacheKey(index, "mrj-scores.js")) fail("mrj-scores cache");
 if (index.indexOf('id="btn-student-name"') === -1) fail("missing top-right name button");
 if (index.indexOf("data-mrj-own-record") === -1) fail("name button missing data-mrj-own-record");
 

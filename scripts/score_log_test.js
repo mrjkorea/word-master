@@ -2,9 +2,10 @@
 "use strict";
 
 const fs = require("fs");
+const { readBuild, cacheKey, srcAt } = require("./build_id.js");
 const path = require("path");
 
-const BUILD = "20261022-teacher-mode";
+const BUILD = readBuild();
 const MRJ_SCORES_CACHE = "20261013-scoresrecv";
 const TEST_STUDENT = "zz_test_mrjmetrics";
 
@@ -19,7 +20,7 @@ const version = JSON.parse(fs.readFileSync(path.join(root, "version.json"), "utf
 if (version.build !== BUILD) fail("version.json build mismatch");
 if (index.indexOf('WM_BUILD_ID="' + BUILD + '"') === -1) fail("WM_BUILD_ID mismatch");
 if (index.indexOf("js/app.js?v=" + BUILD) === -1) fail("app.js cache mismatch");
-if (index.indexOf("js/progress.js?v=20261013-cloud") === -1) fail("progress.js cache mismatch");
+if (!cacheKey(index, "js/progress.js")) fail("progress.js cache mismatch");
 if (index.indexOf("mrj-scores.js?v=" + MRJ_SCORES_CACHE) === -1) fail("mrj-scores.js cache mismatch");
 
 const noteScores = [];

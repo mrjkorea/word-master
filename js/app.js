@@ -864,6 +864,7 @@
     set.winsC = merged.winsC || {};
     set.intro = merged.intro || {};
     set.meetLock = merged.meetLock || [];
+    dropStaleMeetLock(set);
     set.startNumber = (Number(merged.startNumber) >= 1) ? Number(merged.startNumber) : null;
     set.testPassed = copyPassed(merged.testPassed);
     set.tapmapKey = merged.tapmapKey || "";
@@ -1065,6 +1066,7 @@
 
   function studyIds(set) {
     if (!set) return [];
+    dropStaleMeetLock(set);
     if (Array.isArray(set.meetLock) && set.meetLock.length) return set.meetLock.slice();
     return playWords(set).map(function (w) { return w && w.id; }).filter(function (id) {
       return id != null && id !== "";
@@ -1884,7 +1886,20 @@
     return map;
   }
 
+  // wm-2 / wm-4: a saved Meet lock whose ids are not all in the current pack
+  // (pack edited, renamed ids, other pack's round) must not leave an empty
+  // round that counts as finished. Drop it so the normal batch words are used.
+  function dropStaleMeetLock(set) {
+    if (!set || !Array.isArray(set.meetLock) || !set.meetLock.length) return false;
+    const ids = Object.create(null);
+    (set.words || []).forEach(function (w) { if (w && w.id != null) ids[w.id] = true; });
+    const stale = set.meetLock.some(function (id) { return !ids[id]; });
+    if (stale) set.meetLock = [];
+    return stale;
+  }
+
   function meetLockHeld(set) {
+    dropStaleMeetLock(set);
     if (!set || !Array.isArray(set.meetLock) || !set.meetLock.length) return false;
     return !window.MeetLock.lockCleared(
       wordMap(set),
@@ -1900,6 +1915,7 @@
   function playWords(set) {
     set = set || currentSet();
     if (!set) return [];
+    dropStaleMeetLock(set);
     if (set.meetLock && set.meetLock.length) {
       return window.MeetLock.wordsForLock(set.words || [], set.meetLock);
     }
@@ -1991,6 +2007,7 @@
 
   function roundReadyForGame(set) {
     if (!set) return false;
+    dropStaleMeetLock(set);
     if (set.meetLock && set.meetLock.length) {
       const locked = window.MeetLock.wordsForLock(set.words || [], set.meetLock);
       if (locked.length && sliceReady(set, locked)) return true;
@@ -2025,7 +2042,7 @@
   function introDone(set) {
     if (!set || !set.intro) set.intro = {};
     const words = playWords(set);
-    if (!words.length) return true;
+    if (!words.length) return false; // an empty word list is never "finished"
     return tapmapDone(set) && words.every(function (w) { return !!set.intro[w.id]; });
   }
 
