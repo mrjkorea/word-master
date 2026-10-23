@@ -1,0 +1,17 @@
+{
+  "unsure_words": [
+    "desert (listed as desert n; could be v in other contexts)",
+    "depression (economic slump vs mental health — pack uses both senses in definition)",
+    "disorder (medical vs mess — IELTS academic sense emphasized)",
+    "firm (company vs hard — reused pack sense may vary)",
+    "figure (number vs shape — check reused entry sense)",
+    "fine (penalty vs good quality — reused entry sense)",
+    "gay (modern inclusive vs dated sense — reused if present)",
+    "depending (gerund/participle — pos marked from reuse)",
+    "flavour (British spelling; US flavor not in list)"
+  ],
+  "picture_gaps": [],
+  "pictures_source": "origin/ielts-pictures branch (500/500 jpg present after fetch)",
+  "audio_engine": "Microsoft Edge neural TTS via edge-tts CLI (en-US/GB voices); copied from existing packs when available. Original Word Master audio pipeline is not in this repo.",
+  "new_word_translations": "Argos Translate offline models for the 83 pack-only lemmas"
+}

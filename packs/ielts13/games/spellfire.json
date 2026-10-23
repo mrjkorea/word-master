@@ -1,0 +1,407 @@
+{
+  "pack_id": "ielts13",
+  "title": "IELTS 1201–1300",
+  "seconds_per_letter": 5,
+  "items": [
+    {
+      "item_id": "egg",
+      "word": "egg"
+    },
+    {
+      "item_id": "eight",
+      "word": "eight"
+    },
+    {
+      "item_id": "either",
+      "word": "either"
+    },
+    {
+      "item_id": "elderly",
+      "word": "elderly"
+    },
+    {
+      "item_id": "elect",
+      "word": "elect"
+    },
+    {
+      "item_id": "election",
+      "word": "election"
+    },
+    {
+      "item_id": "electric",
+      "word": "electric"
+    },
+    {
+      "item_id": "electrical",
+      "word": "electrical"
+    },
+    {
+      "item_id": "electricity",
+      "word": "electricity"
+    },
+    {
+      "item_id": "electronic",
+      "word": "electronic"
+    },
+    {
+      "item_id": "elementary",
+      "word": "elementary"
+    },
+    {
+      "item_id": "elite",
+      "word": "elite"
+    },
+    {
+      "item_id": "else",
+      "word": "else"
+    },
+    {
+      "item_id": "elsewhere",
+      "word": "elsewhere"
+    },
+    {
+      "item_id": "email",
+      "word": "email"
+    },
+    {
+      "item_id": "embarrass",
+      "word": "embarrass"
+    },
+    {
+      "item_id": "emergency",
+      "word": "emergency"
+    },
+    {
+      "item_id": "emotion",
+      "word": "emotion"
+    },
+    {
+      "item_id": "emotional",
+      "word": "emotional"
+    },
+    {
+      "item_id": "emphasize",
+      "word": "emphasize"
+    },
+    {
+      "item_id": "employ",
+      "word": "employ"
+    },
+    {
+      "item_id": "employee",
+      "word": "employee"
+    },
+    {
+      "item_id": "employer",
+      "word": "employer"
+    },
+    {
+      "item_id": "employment",
+      "word": "employment"
+    },
+    {
+      "item_id": "empty",
+      "word": "empty"
+    },
+    {
+      "item_id": "encourage",
+      "word": "encourage"
+    },
+    {
+      "item_id": "end",
+      "word": "end"
+    },
+    {
+      "item_id": "enemy",
+      "word": "enemy"
+    },
+    {
+      "item_id": "engage",
+      "word": "engage"
+    },
+    {
+      "item_id": "engine",
+      "word": "engine"
+    },
+    {
+      "item_id": "engineer",
+      "word": "engineer"
+    },
+    {
+      "item_id": "engineering",
+      "word": "engineering"
+    },
+    {
+      "item_id": "enjoy",
+      "word": "enjoy"
+    },
+    {
+      "item_id": "enough",
+      "word": "enough"
+    },
+    {
+      "item_id": "enter",
+      "word": "enter"
+    },
+    {
+      "item_id": "enterprise",
+      "word": "enterprise"
+    },
+    {
+      "item_id": "entertainment",
+      "word": "entertainment"
+    },
+    {
+      "item_id": "entire",
+      "word": "entire"
+    },
+    {
+      "item_id": "entirely",
+      "word": "entirely"
+    },
+    {
+      "item_id": "entrance",
+      "word": "entrance"
+    },
+    {
+      "item_id": "entry",
+      "word": "entry"
+    },
+    {
+      "item_id": "environmental",
+      "word": "environmental"
+    },
+    {
+      "item_id": "episode",
+      "word": "episode"
+    },
+    {
+      "item_id": "equal",
+      "word": "equal"
+    },
+    {
+      "item_id": "equally",
+      "word": "equally"
+    },
+    {
+      "item_id": "equipment",
+      "word": "equipment"
+    },
+    {
+      "item_id": "era",
+      "word": "era"
+    },
+    {
+      "item_id": "escape",
+      "word": "escape"
+    },
+    {
+      "item_id": "especially",
+      "word": "especially"
+    },
+    {
+      "item_id": "essay",
+      "word": "essay"
+    },
+    {
+      "item_id": "essential",
+      "word": "essential"
+    },
+    {
+      "item_id": "establishment",
+      "word": "establishment"
+    },
+    {
+      "item_id": "evaluation",
+      "word": "evaluation"
+    },
+    {
+      "item_id": "even",
+      "word": "even"
+    },
+    {
+      "item_id": "evening",
+      "word": "evening"
+    },
+    {
+      "item_id": "event",
+      "word": "event"
+    },
+    {
+      "item_id": "eventually",
+      "word": "eventually"
+    },
+    {
+      "item_id": "ever",
+      "word": "ever"
+    },
+    {
+      "item_id": "every",
+      "word": "every"
+    },
+    {
+      "item_id": "everybody",
+      "word": "everybody"
+    },
+    {
+      "item_id": "everyday",
+      "word": "everyday"
+    },
+    {
+      "item_id": "everyone",
+      "word": "everyone"
+    },
+    {
+      "item_id": "everything",
+      "word": "everything"
+    },
+    {
+      "item_id": "everywhere",
+      "word": "everywhere"
+    },
+    {
+      "item_id": "evidence",
+      "word": "evidence"
+    },
+    {
+      "item_id": "evil",
+      "word": "evil"
+    },
+    {
+      "item_id": "evolution",
+      "word": "evolution"
+    },
+    {
+      "item_id": "exact",
+      "word": "exact"
+    },
+    {
+      "item_id": "exactly",
+      "word": "exactly"
+    },
+    {
+      "item_id": "exam",
+      "word": "exam"
+    },
+    {
+      "item_id": "examination",
+      "word": "examination"
+    },
+    {
+      "item_id": "examine",
+      "word": "examine"
+    },
+    {
+      "item_id": "example",
+      "word": "example"
+    },
+    {
+      "item_id": "excellent",
+      "word": "excellent"
+    },
+    {
+      "item_id": "except",
+      "word": "except"
+    },
+    {
+      "item_id": "exception",
+      "word": "exception"
+    },
+    {
+      "item_id": "exchange",
+      "word": "exchange"
+    },
+    {
+      "item_id": "excite",
+      "word": "excite"
+    },
+    {
+      "item_id": "excitement",
+      "word": "excitement"
+    },
+    {
+      "item_id": "exciting",
+      "word": "exciting"
+    },
+    {
+      "item_id": "excuse",
+      "word": "excuse"
+    },
+    {
+      "item_id": "execute",
+      "word": "execute"
+    },
+    {
+      "item_id": "executive",
+      "word": "executive"
+    },
+    {
+      "item_id": "exercise",
+      "word": "exercise"
+    },
+    {
+      "item_id": "exhibition",
+      "word": "exhibition"
+    },
+    {
+      "item_id": "exist",
+      "word": "exist"
+    },
+    {
+      "item_id": "existence",
+      "word": "existence"
+    },
+    {
+      "item_id": "existing",
+      "word": "existing"
+    },
+    {
+      "item_id": "exit",
+      "word": "exit"
+    },
+    {
+      "item_id": "expansion",
+      "word": "expansion"
+    },
+    {
+      "item_id": "expect",
+      "word": "expect"
+    },
+    {
+      "item_id": "expectation",
+      "word": "expectation"
+    },
+    {
+      "item_id": "expense",
+      "word": "expense"
+    },
+    {
+      "item_id": "expensive",
+      "word": "expensive"
+    },
+    {
+      "item_id": "experience",
+      "word": "experience"
+    },
+    {
+      "item_id": "experiment",
+      "word": "experiment"
+    },
+    {
+      "item_id": "explain",
+      "word": "explain"
+    },
+    {
+      "item_id": "explanation",
+      "word": "explanation"
+    },
+    {
+      "item_id": "explode",
+      "word": "explode"
+    },
+    {
+      "item_id": "explore",
+      "word": "explore"
+    }
+  ]
+}

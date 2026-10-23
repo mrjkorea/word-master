@@ -1,0 +1,1008 @@
+{
+  "pack_id": "ielts15",
+  "title": "IELTS 1401–1500",
+  "module_id": "word_master",
+  "seconds": 15,
+  "items": [
+    {
+      "item_id": "frame",
+      "question": "border around a picture",
+      "correct": "frame",
+      "wrong": [
+        "free",
+        "freedom"
+      ],
+      "word": "frame"
+    },
+    {
+      "item_id": "free",
+      "question": "not held or trapped",
+      "correct": "free",
+      "wrong": [
+        "freedom",
+        "freeze"
+      ],
+      "word": "free"
+    },
+    {
+      "item_id": "freedom",
+      "question": "being able to choose",
+      "correct": "freedom",
+      "wrong": [
+        "freeze",
+        "frequency"
+      ],
+      "word": "freedom"
+    },
+    {
+      "item_id": "freeze",
+      "question": "turn into ice",
+      "correct": "freeze",
+      "wrong": [
+        "frequency",
+        "frequent"
+      ],
+      "word": "freeze"
+    },
+    {
+      "item_id": "frequency",
+      "question": "how often something happens",
+      "correct": "frequency",
+      "wrong": [
+        "frequent",
+        "frequently"
+      ],
+      "word": "frequency"
+    },
+    {
+      "item_id": "frequent",
+      "question": "happens often or many times",
+      "correct": "frequent",
+      "wrong": [
+        "frequently",
+        "fresh"
+      ],
+      "word": "frequent"
+    },
+    {
+      "item_id": "frequently",
+      "question": "happening many times",
+      "correct": "frequently",
+      "wrong": [
+        "fresh",
+        "friend"
+      ],
+      "word": "frequently"
+    },
+    {
+      "item_id": "fresh",
+      "question": "newly picked or made",
+      "correct": "fresh",
+      "wrong": [
+        "friend",
+        "friendly"
+      ],
+      "word": "fresh"
+    },
+    {
+      "item_id": "friend",
+      "question": "person you like and trust",
+      "correct": "friend",
+      "wrong": [
+        "friendly",
+        "friendship"
+      ],
+      "word": "friend"
+    },
+    {
+      "item_id": "friendly",
+      "question": "kind and nice to others",
+      "correct": "friendly",
+      "wrong": [
+        "friendship",
+        "from"
+      ],
+      "word": "friendly"
+    },
+    {
+      "item_id": "friendship",
+      "question": "close bond between friends",
+      "correct": "friendship",
+      "wrong": [
+        "from",
+        "front"
+      ],
+      "word": "friendship"
+    },
+    {
+      "item_id": "from",
+      "question": "starting point of movement",
+      "correct": "from",
+      "wrong": [
+        "front",
+        "fruit"
+      ],
+      "word": "from"
+    },
+    {
+      "item_id": "front",
+      "question": "the forward-facing side",
+      "correct": "front",
+      "wrong": [
+        "fruit",
+        "frustrate"
+      ],
+      "word": "front"
+    },
+    {
+      "item_id": "fruit",
+      "question": "sweet food from plants",
+      "correct": "fruit",
+      "wrong": [
+        "frustrate",
+        "fuel"
+      ],
+      "word": "fruit"
+    },
+    {
+      "item_id": "frustrate",
+      "question": "make someone annoyed",
+      "correct": "frustrate",
+      "wrong": [
+        "fuel",
+        "full"
+      ],
+      "word": "frustrate"
+    },
+    {
+      "item_id": "fuel",
+      "question": "energy that runs machines",
+      "correct": "fuel",
+      "wrong": [
+        "full",
+        "fully"
+      ],
+      "word": "fuel"
+    },
+    {
+      "item_id": "full",
+      "question": "completely filled up",
+      "correct": "full",
+      "wrong": [
+        "fully",
+        "fun"
+      ],
+      "word": "full"
+    },
+    {
+      "item_id": "fully",
+      "question": "to the complete amount",
+      "correct": "fully",
+      "wrong": [
+        "fun",
+        "funding"
+      ],
+      "word": "fully"
+    },
+    {
+      "item_id": "fun",
+      "question": "enjoyable and making you happy",
+      "correct": "fun",
+      "wrong": [
+        "funding",
+        "funeral"
+      ],
+      "word": "fun"
+    },
+    {
+      "item_id": "funding",
+      "question": "money for a project",
+      "correct": "funding",
+      "wrong": [
+        "funeral",
+        "funny"
+      ],
+      "word": "funding"
+    },
+    {
+      "item_id": "funeral",
+      "question": "ceremony for someone who died",
+      "correct": "funeral",
+      "wrong": [
+        "funny",
+        "furniture"
+      ],
+      "word": "funeral"
+    },
+    {
+      "item_id": "funny",
+      "question": "makes people laugh",
+      "correct": "funny",
+      "wrong": [
+        "furniture",
+        "further"
+      ],
+      "word": "funny"
+    },
+    {
+      "item_id": "furniture",
+      "question": "tables chairs and beds",
+      "correct": "furniture",
+      "wrong": [
+        "further",
+        "future"
+      ],
+      "word": "furniture"
+    },
+    {
+      "item_id": "further",
+      "question": "to a greater distance",
+      "correct": "further",
+      "wrong": [
+        "future",
+        "gain"
+      ],
+      "word": "further"
+    },
+    {
+      "item_id": "future",
+      "question": "happening after now",
+      "correct": "future",
+      "wrong": [
+        "gain",
+        "galaxy"
+      ],
+      "word": "future"
+    },
+    {
+      "item_id": "gain",
+      "question": "something extra you get",
+      "correct": "gain",
+      "wrong": [
+        "galaxy",
+        "game"
+      ],
+      "word": "gain"
+    },
+    {
+      "item_id": "galaxy",
+      "question": "huge group of stars",
+      "correct": "galaxy",
+      "wrong": [
+        "game",
+        "gap"
+      ],
+      "word": "galaxy"
+    },
+    {
+      "item_id": "game",
+      "question": "an activity with rules you play for fun",
+      "correct": "game",
+      "wrong": [
+        "gap",
+        "garage"
+      ],
+      "word": "game"
+    },
+    {
+      "item_id": "gap",
+      "question": "space between two things",
+      "correct": "gap",
+      "wrong": [
+        "garage",
+        "garden"
+      ],
+      "word": "gap"
+    },
+    {
+      "item_id": "garage",
+      "question": "building for a car",
+      "correct": "garage",
+      "wrong": [
+        "garden",
+        "gas"
+      ],
+      "word": "garage"
+    },
+    {
+      "item_id": "garden",
+      "question": "a place with plants and flowers",
+      "correct": "garden",
+      "wrong": [
+        "gas",
+        "gate"
+      ],
+      "word": "garden"
+    },
+    {
+      "item_id": "gas",
+      "question": "air-like stuff you burn",
+      "correct": "gas",
+      "wrong": [
+        "gate",
+        "gather"
+      ],
+      "word": "gas"
+    },
+    {
+      "item_id": "gate",
+      "question": "door in a fence",
+      "correct": "gate",
+      "wrong": [
+        "gather",
+        "gay"
+      ],
+      "word": "gate"
+    },
+    {
+      "item_id": "gather",
+      "question": "bring things together in one place",
+      "correct": "gather",
+      "wrong": [
+        "gay",
+        "gaze"
+      ],
+      "word": "gather"
+    },
+    {
+      "item_id": "gay",
+      "question": "happy and brightly cheerful",
+      "correct": "gay",
+      "wrong": [
+        "gaze",
+        "gear"
+      ],
+      "word": "gay"
+    },
+    {
+      "item_id": "gaze",
+      "question": "look for a long time",
+      "correct": "gaze",
+      "wrong": [
+        "gear",
+        "gene"
+      ],
+      "word": "gaze"
+    },
+    {
+      "item_id": "gear",
+      "question": "equipment or machine parts",
+      "correct": "gear",
+      "wrong": [
+        "gene",
+        "general"
+      ],
+      "word": "gear"
+    },
+    {
+      "item_id": "gene",
+      "question": "tiny instruction in the body",
+      "correct": "gene",
+      "wrong": [
+        "general",
+        "generally"
+      ],
+      "word": "gene"
+    },
+    {
+      "item_id": "general",
+      "question": "usual or common for many",
+      "correct": "general",
+      "wrong": [
+        "generally",
+        "genetic"
+      ],
+      "word": "general"
+    },
+    {
+      "item_id": "generally",
+      "question": "in most cases or usually",
+      "correct": "generally",
+      "wrong": [
+        "genetic",
+        "gentleman"
+      ],
+      "word": "generally"
+    },
+    {
+      "item_id": "genetic",
+      "question": "passed down in families",
+      "correct": "genetic",
+      "wrong": [
+        "gentleman",
+        "gently"
+      ],
+      "word": "genetic"
+    },
+    {
+      "item_id": "gentleman",
+      "question": "polite and kind man",
+      "correct": "gentleman",
+      "wrong": [
+        "gently",
+        "genuine"
+      ],
+      "word": "gentleman"
+    },
+    {
+      "item_id": "gently",
+      "question": "in a soft, kind way",
+      "correct": "gently",
+      "wrong": [
+        "genuine",
+        "geography"
+      ],
+      "word": "gently"
+    },
+    {
+      "item_id": "genuine",
+      "question": "real and not fake",
+      "correct": "genuine",
+      "wrong": [
+        "geography",
+        "gesture"
+      ],
+      "word": "genuine"
+    },
+    {
+      "item_id": "geography",
+      "question": "study of Earth places",
+      "correct": "geography",
+      "wrong": [
+        "gesture",
+        "get"
+      ],
+      "word": "geography"
+    },
+    {
+      "item_id": "gesture",
+      "question": "movement that shows meaning",
+      "correct": "gesture",
+      "wrong": [
+        "get",
+        "giant"
+      ],
+      "word": "gesture"
+    },
+    {
+      "item_id": "get",
+      "question": "to receive or obtain something",
+      "correct": "get",
+      "wrong": [
+        "giant",
+        "gift"
+      ],
+      "word": "get"
+    },
+    {
+      "item_id": "giant",
+      "question": "very very big",
+      "correct": "giant",
+      "wrong": [
+        "gift",
+        "girl"
+      ],
+      "word": "giant"
+    },
+    {
+      "item_id": "gift",
+      "question": "a wrapped present",
+      "correct": "gift",
+      "wrong": [
+        "girl",
+        "girlfriend"
+      ],
+      "word": "gift"
+    },
+    {
+      "item_id": "girl",
+      "question": "a young female child",
+      "correct": "girl",
+      "wrong": [
+        "girlfriend",
+        "give"
+      ],
+      "word": "girl"
+    },
+    {
+      "item_id": "girlfriend",
+      "question": "woman someone dates",
+      "correct": "girlfriend",
+      "wrong": [
+        "give",
+        "glad"
+      ],
+      "word": "girlfriend"
+    },
+    {
+      "item_id": "give",
+      "question": "hand something to someone",
+      "correct": "give",
+      "wrong": [
+        "glad",
+        "glance"
+      ],
+      "word": "give"
+    },
+    {
+      "item_id": "glad",
+      "question": "happy and pleased",
+      "correct": "glad",
+      "wrong": [
+        "glance",
+        "glass"
+      ],
+      "word": "glad"
+    },
+    {
+      "item_id": "glance",
+      "question": "to look quickly at something",
+      "correct": "glance",
+      "wrong": [
+        "glass",
+        "global"
+      ],
+      "word": "glance"
+    },
+    {
+      "item_id": "glass",
+      "question": "a clear cup made of glass",
+      "correct": "glass",
+      "wrong": [
+        "global",
+        "glove"
+      ],
+      "word": "glass"
+    },
+    {
+      "item_id": "global",
+      "question": "covering the whole world",
+      "correct": "global",
+      "wrong": [
+        "glove",
+        "go"
+      ],
+      "word": "global"
+    },
+    {
+      "item_id": "glove",
+      "question": "covering for the hand",
+      "correct": "glove",
+      "wrong": [
+        "go",
+        "god"
+      ],
+      "word": "glove"
+    },
+    {
+      "item_id": "go",
+      "question": "to move or travel",
+      "correct": "go",
+      "wrong": [
+        "god",
+        "gold"
+      ],
+      "word": "go"
+    },
+    {
+      "item_id": "god",
+      "question": "powerful being people worship",
+      "correct": "god",
+      "wrong": [
+        "gold",
+        "golden"
+      ],
+      "word": "god"
+    },
+    {
+      "item_id": "gold",
+      "question": "shiny yellow like metal",
+      "correct": "gold",
+      "wrong": [
+        "golden",
+        "golf"
+      ],
+      "word": "gold"
+    },
+    {
+      "item_id": "golden",
+      "question": "made of gold or bright yellow",
+      "correct": "golden",
+      "wrong": [
+        "golf",
+        "good"
+      ],
+      "word": "golden"
+    },
+    {
+      "item_id": "golf",
+      "question": "sport with a small ball",
+      "correct": "golf",
+      "wrong": [
+        "good",
+        "government"
+      ],
+      "word": "golf"
+    },
+    {
+      "item_id": "good",
+      "question": "nice or pleasing to have",
+      "correct": "good",
+      "wrong": [
+        "government",
+        "governor"
+      ],
+      "word": "good"
+    },
+    {
+      "item_id": "government",
+      "question": "people who run a country",
+      "correct": "government",
+      "wrong": [
+        "governor",
+        "grab"
+      ],
+      "word": "government"
+    },
+    {
+      "item_id": "governor",
+      "question": "leader of a state",
+      "correct": "governor",
+      "wrong": [
+        "grab",
+        "gradually"
+      ],
+      "word": "governor"
+    },
+    {
+      "item_id": "grab",
+      "question": "take something quickly with your hand",
+      "correct": "grab",
+      "wrong": [
+        "gradually",
+        "graduate"
+      ],
+      "word": "grab"
+    },
+    {
+      "item_id": "gradually",
+      "question": "little by little over time",
+      "correct": "gradually",
+      "wrong": [
+        "graduate",
+        "grain"
+      ],
+      "word": "gradually"
+    },
+    {
+      "item_id": "graduate",
+      "question": "finish a degree",
+      "correct": "graduate",
+      "wrong": [
+        "grain",
+        "grand"
+      ],
+      "word": "graduate"
+    },
+    {
+      "item_id": "grain",
+      "question": "seeds of wheat or rice",
+      "correct": "grain",
+      "wrong": [
+        "grand",
+        "grandfather"
+      ],
+      "word": "grain"
+    },
+    {
+      "item_id": "grand",
+      "question": "very big and nice",
+      "correct": "grand",
+      "wrong": [
+        "grandfather",
+        "grandmother"
+      ],
+      "word": "grand"
+    },
+    {
+      "item_id": "grandfather",
+      "question": "father of your parent",
+      "correct": "grandfather",
+      "wrong": [
+        "grandmother",
+        "grass"
+      ],
+      "word": "grandfather"
+    },
+    {
+      "item_id": "grandmother",
+      "question": "mother of your parent",
+      "correct": "grandmother",
+      "wrong": [
+        "grass",
+        "grave"
+      ],
+      "word": "grandmother"
+    },
+    {
+      "item_id": "grass",
+      "question": "green plants on the ground",
+      "correct": "grass",
+      "wrong": [
+        "grave",
+        "gravity"
+      ],
+      "word": "grass"
+    },
+    {
+      "item_id": "grave",
+      "question": "very serious indeed",
+      "correct": "grave",
+      "wrong": [
+        "gravity",
+        "great"
+      ],
+      "word": "grave"
+    },
+    {
+      "item_id": "gravity",
+      "question": "force that pulls things down",
+      "correct": "gravity",
+      "wrong": [
+        "great",
+        "greatly"
+      ],
+      "word": "gravity"
+    },
+    {
+      "item_id": "great",
+      "question": "very good or excellent",
+      "correct": "great",
+      "wrong": [
+        "greatly",
+        "green"
+      ],
+      "word": "great"
+    },
+    {
+      "item_id": "greatly",
+      "question": "by a large amount",
+      "correct": "greatly",
+      "wrong": [
+        "green",
+        "grocery"
+      ],
+      "word": "greatly"
+    },
+    {
+      "item_id": "green",
+      "question": "color of grass",
+      "correct": "green",
+      "wrong": [
+        "grocery",
+        "ground"
+      ],
+      "word": "green"
+    },
+    {
+      "item_id": "grocery",
+      "question": "food sold in a store",
+      "correct": "grocery",
+      "wrong": [
+        "ground",
+        "group"
+      ],
+      "word": "grocery"
+    },
+    {
+      "item_id": "ground",
+      "question": "the surface we walk on",
+      "correct": "ground",
+      "wrong": [
+        "group",
+        "grow"
+      ],
+      "word": "ground"
+    },
+    {
+      "item_id": "group",
+      "question": "several people together",
+      "correct": "group",
+      "wrong": [
+        "grow",
+        "growth"
+      ],
+      "word": "group"
+    },
+    {
+      "item_id": "grow",
+      "question": "to become bigger or taller",
+      "correct": "grow",
+      "wrong": [
+        "growth",
+        "guard"
+      ],
+      "word": "grow"
+    },
+    {
+      "item_id": "growth",
+      "question": "the process of getting bigger",
+      "correct": "growth",
+      "wrong": [
+        "guard",
+        "guess"
+      ],
+      "word": "growth"
+    },
+    {
+      "item_id": "guard",
+      "question": "person who keeps watch",
+      "correct": "guard",
+      "wrong": [
+        "guess",
+        "guest"
+      ],
+      "word": "guard"
+    },
+    {
+      "item_id": "guess",
+      "question": "to say an answer without knowing",
+      "correct": "guess",
+      "wrong": [
+        "guest",
+        "guide"
+      ],
+      "word": "guess"
+    },
+    {
+      "item_id": "guest",
+      "question": "a person who visits",
+      "correct": "guest",
+      "wrong": [
+        "guide",
+        "guilty"
+      ],
+      "word": "guest"
+    },
+    {
+      "item_id": "guide",
+      "question": "person who shows the way",
+      "correct": "guide",
+      "wrong": [
+        "guilty",
+        "gun"
+      ],
+      "word": "guide"
+    },
+    {
+      "item_id": "guilty",
+      "question": "feeling bad after a wrong act",
+      "correct": "guilty",
+      "wrong": [
+        "gun",
+        "guy"
+      ],
+      "word": "guilty"
+    },
+    {
+      "item_id": "gun",
+      "question": "a tool that shoots",
+      "correct": "gun",
+      "wrong": [
+        "guy",
+        "habit"
+      ],
+      "word": "gun"
+    },
+    {
+      "item_id": "guy",
+      "question": "a man or boy",
+      "correct": "guy",
+      "wrong": [
+        "habit",
+        "hair"
+      ],
+      "word": "guy"
+    },
+    {
+      "item_id": "habit",
+      "question": "thing you do often",
+      "correct": "habit",
+      "wrong": [
+        "hair",
+        "half"
+      ],
+      "word": "habit"
+    },
+    {
+      "item_id": "hair",
+      "question": "thin thread on head",
+      "correct": "hair",
+      "wrong": [
+        "half",
+        "hall"
+      ],
+      "word": "hair"
+    },
+    {
+      "item_id": "half",
+      "question": "partly, not fully",
+      "correct": "half",
+      "wrong": [
+        "hall",
+        "hand"
+      ],
+      "word": "half"
+    },
+    {
+      "item_id": "hall",
+      "question": "long passage in a building",
+      "correct": "hall",
+      "wrong": [
+        "hand",
+        "handle"
+      ],
+      "word": "hall"
+    },
+    {
+      "item_id": "hand",
+      "question": "the part of the body at the end of the arm",
+      "correct": "hand",
+      "wrong": [
+        "handle",
+        "hang"
+      ],
+      "word": "hand"
+    },
+    {
+      "item_id": "handle",
+      "question": "to hold or manage something",
+      "correct": "handle",
+      "wrong": [
+        "hang",
+        "happen"
+      ],
+      "word": "handle"
+    },
+    {
+      "item_id": "hang",
+      "question": "to put something up",
+      "correct": "hang",
+      "wrong": [
+        "happen",
+        "happy"
+      ],
+      "word": "hang"
+    },
+    {
+      "item_id": "happen",
+      "question": "take place or occur",
+      "correct": "happen",
+      "wrong": [
+        "happy",
+        "hard"
+      ],
+      "word": "happen"
+    },
+    {
+      "item_id": "happy",
+      "question": "feeling very glad inside",
+      "correct": "happy",
+      "wrong": [
+        "hard",
+        "frame"
+      ],
+      "word": "happy"
+    },
+    {
+      "item_id": "hard",
+      "question": "not easy to press or break",
+      "correct": "hard",
+      "wrong": [
+        "frame",
+        "free"
+      ],
+      "word": "hard"
+    }
+  ]
+}
