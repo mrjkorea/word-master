@@ -1,0 +1,407 @@
+{
+  "pack_id": "ielts04",
+  "title": "IELTS 301–400",
+  "seconds_per_letter": 5,
+  "items": [
+    {
+      "item_id": "abstract",
+      "word": "abstract"
+    },
+    {
+      "item_id": "accurate",
+      "word": "accurate"
+    },
+    {
+      "item_id": "acknowledge",
+      "word": "acknowledge"
+    },
+    {
+      "item_id": "aggregate",
+      "word": "aggregate"
+    },
+    {
+      "item_id": "allocate",
+      "word": "allocate"
+    },
+    {
+      "item_id": "assign",
+      "word": "assign"
+    },
+    {
+      "item_id": "attach",
+      "word": "attach"
+    },
+    {
+      "item_id": "author",
+      "word": "author"
+    },
+    {
+      "item_id": "bond",
+      "word": "bond"
+    },
+    {
+      "item_id": "brief",
+      "word": "brief"
+    },
+    {
+      "item_id": "capable",
+      "word": "capable"
+    },
+    {
+      "item_id": "cite",
+      "word": "cite"
+    },
+    {
+      "item_id": "cooperate",
+      "word": "cooperate"
+    },
+    {
+      "item_id": "discriminate",
+      "word": "discriminate"
+    },
+    {
+      "item_id": "display",
+      "word": "display"
+    },
+    {
+      "item_id": "diverse",
+      "word": "diverse"
+    },
+    {
+      "item_id": "domain",
+      "word": "domain"
+    },
+    {
+      "item_id": "edit",
+      "word": "edit"
+    },
+    {
+      "item_id": "enhance",
+      "word": "enhance"
+    },
+    {
+      "item_id": "estate",
+      "word": "estate"
+    },
+    {
+      "item_id": "exceed",
+      "word": "exceed"
+    },
+    {
+      "item_id": "expert",
+      "word": "expert"
+    },
+    {
+      "item_id": "explicit",
+      "word": "explicit"
+    },
+    {
+      "item_id": "federal",
+      "word": "federal"
+    },
+    {
+      "item_id": "fee",
+      "word": "fee"
+    },
+    {
+      "item_id": "flexible",
+      "word": "flexible"
+    },
+    {
+      "item_id": "furthermore",
+      "word": "furthermore"
+    },
+    {
+      "item_id": "gender",
+      "word": "gender"
+    },
+    {
+      "item_id": "ignorant",
+      "word": "ignorant"
+    },
+    {
+      "item_id": "incentive",
+      "word": "incentive"
+    },
+    {
+      "item_id": "incidence",
+      "word": "incidence"
+    },
+    {
+      "item_id": "incorporate",
+      "word": "incorporate"
+    },
+    {
+      "item_id": "index",
+      "word": "index"
+    },
+    {
+      "item_id": "inhibit",
+      "word": "inhibit"
+    },
+    {
+      "item_id": "initiate",
+      "word": "initiate"
+    },
+    {
+      "item_id": "input",
+      "word": "input"
+    },
+    {
+      "item_id": "instruct",
+      "word": "instruct"
+    },
+    {
+      "item_id": "intelligent",
+      "word": "intelligent"
+    },
+    {
+      "item_id": "interval",
+      "word": "interval"
+    },
+    {
+      "item_id": "lecture",
+      "word": "lecture"
+    },
+    {
+      "item_id": "migrate",
+      "word": "migrate"
+    },
+    {
+      "item_id": "minimum",
+      "word": "minimum"
+    },
+    {
+      "item_id": "ministry",
+      "word": "ministry"
+    },
+    {
+      "item_id": "motive",
+      "word": "motive"
+    },
+    {
+      "item_id": "neutral",
+      "word": "neutral"
+    },
+    {
+      "item_id": "nevertheless",
+      "word": "nevertheless"
+    },
+    {
+      "item_id": "overseas",
+      "word": "overseas"
+    },
+    {
+      "item_id": "precede",
+      "word": "precede"
+    },
+    {
+      "item_id": "presume",
+      "word": "presume"
+    },
+    {
+      "item_id": "rational",
+      "word": "rational"
+    },
+    {
+      "item_id": "recover",
+      "word": "recover"
+    },
+    {
+      "item_id": "reveal",
+      "word": "reveal"
+    },
+    {
+      "item_id": "scope",
+      "word": "scope"
+    },
+    {
+      "item_id": "subsidy",
+      "word": "subsidy"
+    },
+    {
+      "item_id": "tape",
+      "word": "tape"
+    },
+    {
+      "item_id": "trace",
+      "word": "trace"
+    },
+    {
+      "item_id": "transform",
+      "word": "transform"
+    },
+    {
+      "item_id": "transport",
+      "word": "transport"
+    },
+    {
+      "item_id": "underlie",
+      "word": "underlie"
+    },
+    {
+      "item_id": "utilise",
+      "word": "utilise"
+    },
+    {
+      "item_id": "adapt",
+      "word": "adapt"
+    },
+    {
+      "item_id": "adult",
+      "word": "adult"
+    },
+    {
+      "item_id": "advocate",
+      "word": "advocate"
+    },
+    {
+      "item_id": "aid",
+      "word": "aid"
+    },
+    {
+      "item_id": "channel",
+      "word": "channel"
+    },
+    {
+      "item_id": "chemical",
+      "word": "chemical"
+    },
+    {
+      "item_id": "classic",
+      "word": "classic"
+    },
+    {
+      "item_id": "comprehensive",
+      "word": "comprehensive"
+    },
+    {
+      "item_id": "comprise",
+      "word": "comprise"
+    },
+    {
+      "item_id": "confirm",
+      "word": "confirm"
+    },
+    {
+      "item_id": "contrary",
+      "word": "contrary"
+    },
+    {
+      "item_id": "convert",
+      "word": "convert"
+    },
+    {
+      "item_id": "couple",
+      "word": "couple"
+    },
+    {
+      "item_id": "decade",
+      "word": "decade"
+    },
+    {
+      "item_id": "definite",
+      "word": "definite"
+    },
+    {
+      "item_id": "deny",
+      "word": "deny"
+    },
+    {
+      "item_id": "differentiate",
+      "word": "differentiate"
+    },
+    {
+      "item_id": "dispose",
+      "word": "dispose"
+    },
+    {
+      "item_id": "dynamic",
+      "word": "dynamic"
+    },
+    {
+      "item_id": "eliminate",
+      "word": "eliminate"
+    },
+    {
+      "item_id": "empirical",
+      "word": "empirical"
+    },
+    {
+      "item_id": "equip",
+      "word": "equip"
+    },
+    {
+      "item_id": "extract",
+      "word": "extract"
+    },
+    {
+      "item_id": "file",
+      "word": "file"
+    },
+    {
+      "item_id": "finite",
+      "word": "finite"
+    },
+    {
+      "item_id": "foundation",
+      "word": "foundation"
+    },
+    {
+      "item_id": "globe",
+      "word": "globe"
+    },
+    {
+      "item_id": "grade",
+      "word": "grade"
+    },
+    {
+      "item_id": "guarantee",
+      "word": "guarantee"
+    },
+    {
+      "item_id": "hierarchy",
+      "word": "hierarchy"
+    },
+    {
+      "item_id": "identical",
+      "word": "identical"
+    },
+    {
+      "item_id": "ideology",
+      "word": "ideology"
+    },
+    {
+      "item_id": "infer",
+      "word": "infer"
+    },
+    {
+      "item_id": "innovate",
+      "word": "innovate"
+    },
+    {
+      "item_id": "insert",
+      "word": "insert"
+    },
+    {
+      "item_id": "intervene",
+      "word": "intervene"
+    },
+    {
+      "item_id": "isolate",
+      "word": "isolate"
+    },
+    {
+      "item_id": "media",
+      "word": "media"
+    },
+    {
+      "item_id": "mode",
+      "word": "mode"
+    },
+    {
+      "item_id": "paradigm",
+      "word": "paradigm"
+    }
+  ]
+}

@@ -1,0 +1,1008 @@
+{
+  "pack_id": "ielts01",
+  "title": "IELTS 1–100",
+  "module_id": "word_master",
+  "seconds": 15,
+  "items": [
+    {
+      "item_id": "analyse",
+      "question": "study something carefully to understand it",
+      "correct": "analyse",
+      "wrong": [
+        "approach",
+        "area"
+      ],
+      "word": "analyse"
+    },
+    {
+      "item_id": "approach",
+      "question": "way of coming near something",
+      "correct": "approach",
+      "wrong": [
+        "area",
+        "assess"
+      ],
+      "word": "approach"
+    },
+    {
+      "item_id": "area",
+      "question": "a piece of land or space",
+      "correct": "area",
+      "wrong": [
+        "assess",
+        "assume"
+      ],
+      "word": "area"
+    },
+    {
+      "item_id": "assess",
+      "question": "judge how good something is",
+      "correct": "assess",
+      "wrong": [
+        "assume",
+        "authority"
+      ],
+      "word": "assess"
+    },
+    {
+      "item_id": "assume",
+      "question": "think something is true without proof",
+      "correct": "assume",
+      "wrong": [
+        "authority",
+        "available"
+      ],
+      "word": "assume"
+    },
+    {
+      "item_id": "authority",
+      "question": "power to tell others what to do",
+      "correct": "authority",
+      "wrong": [
+        "available",
+        "benefit"
+      ],
+      "word": "authority"
+    },
+    {
+      "item_id": "available",
+      "question": "ready to be used",
+      "correct": "available",
+      "wrong": [
+        "benefit",
+        "concept"
+      ],
+      "word": "available"
+    },
+    {
+      "item_id": "benefit",
+      "question": "a good or helpful result",
+      "correct": "benefit",
+      "wrong": [
+        "concept",
+        "consist"
+      ],
+      "word": "benefit"
+    },
+    {
+      "item_id": "concept",
+      "question": "an idea or basic understanding",
+      "correct": "concept",
+      "wrong": [
+        "consist",
+        "constitute"
+      ],
+      "word": "concept"
+    },
+    {
+      "item_id": "consist",
+      "question": "be made of parts",
+      "correct": "consist",
+      "wrong": [
+        "constitute",
+        "context"
+      ],
+      "word": "consist"
+    },
+    {
+      "item_id": "constitute",
+      "question": "to make up or form something",
+      "correct": "constitute",
+      "wrong": [
+        "context",
+        "contract"
+      ],
+      "word": "constitute"
+    },
+    {
+      "item_id": "context",
+      "question": "the situation around words",
+      "correct": "context",
+      "wrong": [
+        "contract",
+        "create"
+      ],
+      "word": "context"
+    },
+    {
+      "item_id": "contract",
+      "question": "a written agreement between people",
+      "correct": "contract",
+      "wrong": [
+        "create",
+        "data"
+      ],
+      "word": "contract"
+    },
+    {
+      "item_id": "create",
+      "question": "to make something new",
+      "correct": "create",
+      "wrong": [
+        "data",
+        "define"
+      ],
+      "word": "create"
+    },
+    {
+      "item_id": "data",
+      "question": "information or facts",
+      "correct": "data",
+      "wrong": [
+        "define",
+        "derive"
+      ],
+      "word": "data"
+    },
+    {
+      "item_id": "define",
+      "question": "to explain the meaning of a word",
+      "correct": "define",
+      "wrong": [
+        "derive",
+        "distribute"
+      ],
+      "word": "define"
+    },
+    {
+      "item_id": "derive",
+      "question": "get from a source",
+      "correct": "derive",
+      "wrong": [
+        "distribute",
+        "economy"
+      ],
+      "word": "derive"
+    },
+    {
+      "item_id": "distribute",
+      "question": "to give out to many",
+      "correct": "distribute",
+      "wrong": [
+        "economy",
+        "environment"
+      ],
+      "word": "distribute"
+    },
+    {
+      "item_id": "economy",
+      "question": "how money and goods move",
+      "correct": "economy",
+      "wrong": [
+        "environment",
+        "establish"
+      ],
+      "word": "economy"
+    },
+    {
+      "item_id": "environment",
+      "question": "natural world around us",
+      "correct": "environment",
+      "wrong": [
+        "establish",
+        "estimate"
+      ],
+      "word": "environment"
+    },
+    {
+      "item_id": "establish",
+      "question": "to start or set up something",
+      "correct": "establish",
+      "wrong": [
+        "estimate",
+        "evident"
+      ],
+      "word": "establish"
+    },
+    {
+      "item_id": "estimate",
+      "question": "a smart number guess",
+      "correct": "estimate",
+      "wrong": [
+        "evident",
+        "export"
+      ],
+      "word": "estimate"
+    },
+    {
+      "item_id": "evident",
+      "question": "easy to see and understand",
+      "correct": "evident",
+      "wrong": [
+        "export",
+        "factor"
+      ],
+      "word": "evident"
+    },
+    {
+      "item_id": "export",
+      "question": "goods sent abroad",
+      "correct": "export",
+      "wrong": [
+        "factor",
+        "finance"
+      ],
+      "word": "export"
+    },
+    {
+      "item_id": "factor",
+      "question": "one important part or cause",
+      "correct": "factor",
+      "wrong": [
+        "finance",
+        "formula"
+      ],
+      "word": "factor"
+    },
+    {
+      "item_id": "finance",
+      "question": "money and how it is managed",
+      "correct": "finance",
+      "wrong": [
+        "formula",
+        "function"
+      ],
+      "word": "finance"
+    },
+    {
+      "item_id": "formula",
+      "question": "special mix for making something",
+      "correct": "formula",
+      "wrong": [
+        "function",
+        "identify"
+      ],
+      "word": "formula"
+    },
+    {
+      "item_id": "function",
+      "question": "job a thing does",
+      "correct": "function",
+      "wrong": [
+        "identify",
+        "income"
+      ],
+      "word": "function"
+    },
+    {
+      "item_id": "identify",
+      "question": "to name or recognize something",
+      "correct": "identify",
+      "wrong": [
+        "income",
+        "indicate"
+      ],
+      "word": "identify"
+    },
+    {
+      "item_id": "income",
+      "question": "money you get from work",
+      "correct": "income",
+      "wrong": [
+        "indicate",
+        "individual"
+      ],
+      "word": "income"
+    },
+    {
+      "item_id": "indicate",
+      "question": "point to show something",
+      "correct": "indicate",
+      "wrong": [
+        "individual",
+        "interpret"
+      ],
+      "word": "indicate"
+    },
+    {
+      "item_id": "individual",
+      "question": "one single person",
+      "correct": "individual",
+      "wrong": [
+        "interpret",
+        "involve"
+      ],
+      "word": "individual"
+    },
+    {
+      "item_id": "interpret",
+      "question": "to explain the meaning of something",
+      "correct": "interpret",
+      "wrong": [
+        "involve",
+        "issue"
+      ],
+      "word": "interpret"
+    },
+    {
+      "item_id": "involve",
+      "question": "to include or need something",
+      "correct": "involve",
+      "wrong": [
+        "issue",
+        "labour"
+      ],
+      "word": "involve"
+    },
+    {
+      "item_id": "issue",
+      "question": "a problem or difficulty",
+      "correct": "issue",
+      "wrong": [
+        "labour",
+        "legal"
+      ],
+      "word": "issue"
+    },
+    {
+      "item_id": "labour",
+      "question": "hard work with the body",
+      "correct": "labour",
+      "wrong": [
+        "legal",
+        "legislate"
+      ],
+      "word": "labour"
+    },
+    {
+      "item_id": "legal",
+      "question": "allowed by the law",
+      "correct": "legal",
+      "wrong": [
+        "legislate",
+        "major"
+      ],
+      "word": "legal"
+    },
+    {
+      "item_id": "legislate",
+      "question": "pass or make laws",
+      "correct": "legislate",
+      "wrong": [
+        "major",
+        "method"
+      ],
+      "word": "legislate"
+    },
+    {
+      "item_id": "major",
+      "question": "very important or big",
+      "correct": "major",
+      "wrong": [
+        "method",
+        "occur"
+      ],
+      "word": "major"
+    },
+    {
+      "item_id": "method",
+      "question": "a way to do something",
+      "correct": "method",
+      "wrong": [
+        "occur",
+        "percent"
+      ],
+      "word": "method"
+    },
+    {
+      "item_id": "occur",
+      "question": "to happen suddenly",
+      "correct": "occur",
+      "wrong": [
+        "percent",
+        "period"
+      ],
+      "word": "occur"
+    },
+    {
+      "item_id": "percent",
+      "question": "a part out of one hundred",
+      "correct": "percent",
+      "wrong": [
+        "period",
+        "policy"
+      ],
+      "word": "percent"
+    },
+    {
+      "item_id": "period",
+      "question": "a length of time",
+      "correct": "period",
+      "wrong": [
+        "policy",
+        "principle"
+      ],
+      "word": "period"
+    },
+    {
+      "item_id": "policy",
+      "question": "a rule or plan made by leaders",
+      "correct": "policy",
+      "wrong": [
+        "principle",
+        "proceed"
+      ],
+      "word": "policy"
+    },
+    {
+      "item_id": "principle",
+      "question": "a basic rule or idea",
+      "correct": "principle",
+      "wrong": [
+        "proceed",
+        "process"
+      ],
+      "word": "principle"
+    },
+    {
+      "item_id": "proceed",
+      "question": "to move forward",
+      "correct": "proceed",
+      "wrong": [
+        "process",
+        "require"
+      ],
+      "word": "proceed"
+    },
+    {
+      "item_id": "process",
+      "question": "a series of actions to do something",
+      "correct": "process",
+      "wrong": [
+        "require",
+        "research"
+      ],
+      "word": "process"
+    },
+    {
+      "item_id": "require",
+      "question": "to need something necessary",
+      "correct": "require",
+      "wrong": [
+        "research",
+        "respond"
+      ],
+      "word": "require"
+    },
+    {
+      "item_id": "research",
+      "question": "careful study to find facts",
+      "correct": "research",
+      "wrong": [
+        "respond",
+        "role"
+      ],
+      "word": "research"
+    },
+    {
+      "item_id": "respond",
+      "question": "answer or reply to someone",
+      "correct": "respond",
+      "wrong": [
+        "role",
+        "section"
+      ],
+      "word": "respond"
+    },
+    {
+      "item_id": "role",
+      "question": "a part someone plays",
+      "correct": "role",
+      "wrong": [
+        "section",
+        "sector"
+      ],
+      "word": "role"
+    },
+    {
+      "item_id": "section",
+      "question": "a part of something",
+      "correct": "section",
+      "wrong": [
+        "sector",
+        "significant"
+      ],
+      "word": "section"
+    },
+    {
+      "item_id": "sector",
+      "question": "a part of an area or group",
+      "correct": "sector",
+      "wrong": [
+        "significant",
+        "similar"
+      ],
+      "word": "sector"
+    },
+    {
+      "item_id": "significant",
+      "question": "important and meaningful",
+      "correct": "significant",
+      "wrong": [
+        "similar",
+        "source"
+      ],
+      "word": "significant"
+    },
+    {
+      "item_id": "similar",
+      "question": "almost the same",
+      "correct": "similar",
+      "wrong": [
+        "source",
+        "specific"
+      ],
+      "word": "similar"
+    },
+    {
+      "item_id": "source",
+      "question": "where something comes from",
+      "correct": "source",
+      "wrong": [
+        "specific",
+        "structure"
+      ],
+      "word": "source"
+    },
+    {
+      "item_id": "specific",
+      "question": "one exact thing",
+      "correct": "specific",
+      "wrong": [
+        "structure",
+        "theory"
+      ],
+      "word": "specific"
+    },
+    {
+      "item_id": "structure",
+      "question": "a building or shape",
+      "correct": "structure",
+      "wrong": [
+        "theory",
+        "vary"
+      ],
+      "word": "structure"
+    },
+    {
+      "item_id": "theory",
+      "question": "an idea to explain something",
+      "correct": "theory",
+      "wrong": [
+        "vary",
+        "achieve"
+      ],
+      "word": "theory"
+    },
+    {
+      "item_id": "vary",
+      "question": "be different in some way",
+      "correct": "vary",
+      "wrong": [
+        "achieve",
+        "acquire"
+      ],
+      "word": "vary"
+    },
+    {
+      "item_id": "achieve",
+      "question": "reach a goal you worked for",
+      "correct": "achieve",
+      "wrong": [
+        "acquire",
+        "administrate"
+      ],
+      "word": "achieve"
+    },
+    {
+      "item_id": "acquire",
+      "question": "get or obtain something",
+      "correct": "acquire",
+      "wrong": [
+        "administrate",
+        "affect"
+      ],
+      "word": "acquire"
+    },
+    {
+      "item_id": "administrate",
+      "question": "manage an organisation",
+      "correct": "administrate",
+      "wrong": [
+        "affect",
+        "appropriate"
+      ],
+      "word": "administrate"
+    },
+    {
+      "item_id": "affect",
+      "question": "change how someone feels",
+      "correct": "affect",
+      "wrong": [
+        "appropriate",
+        "aspect"
+      ],
+      "word": "affect"
+    },
+    {
+      "item_id": "appropriate",
+      "question": "right for the time",
+      "correct": "appropriate",
+      "wrong": [
+        "aspect",
+        "assist"
+      ],
+      "word": "appropriate"
+    },
+    {
+      "item_id": "aspect",
+      "question": "one part or side of something",
+      "correct": "aspect",
+      "wrong": [
+        "assist",
+        "category"
+      ],
+      "word": "aspect"
+    },
+    {
+      "item_id": "assist",
+      "question": "to help someone",
+      "correct": "assist",
+      "wrong": [
+        "category",
+        "chapter"
+      ],
+      "word": "assist"
+    },
+    {
+      "item_id": "category",
+      "question": "a group of similar things",
+      "correct": "category",
+      "wrong": [
+        "chapter",
+        "commission"
+      ],
+      "word": "category"
+    },
+    {
+      "item_id": "chapter",
+      "question": "a part of a book",
+      "correct": "chapter",
+      "wrong": [
+        "commission",
+        "community"
+      ],
+      "word": "chapter"
+    },
+    {
+      "item_id": "commission",
+      "question": "a group that makes decisions",
+      "correct": "commission",
+      "wrong": [
+        "community",
+        "complex"
+      ],
+      "word": "commission"
+    },
+    {
+      "item_id": "community",
+      "question": "group of people living together",
+      "correct": "community",
+      "wrong": [
+        "complex",
+        "compute"
+      ],
+      "word": "community"
+    },
+    {
+      "item_id": "complex",
+      "question": "having many parts",
+      "correct": "complex",
+      "wrong": [
+        "compute",
+        "conclude"
+      ],
+      "word": "complex"
+    },
+    {
+      "item_id": "compute",
+      "question": "calculate using a computer",
+      "correct": "compute",
+      "wrong": [
+        "conclude",
+        "conduct"
+      ],
+      "word": "compute"
+    },
+    {
+      "item_id": "conclude",
+      "question": "to finish something with a result",
+      "correct": "conclude",
+      "wrong": [
+        "conduct",
+        "consequent"
+      ],
+      "word": "conclude"
+    },
+    {
+      "item_id": "conduct",
+      "question": "the way you behave",
+      "correct": "conduct",
+      "wrong": [
+        "consequent",
+        "construct"
+      ],
+      "word": "conduct"
+    },
+    {
+      "item_id": "consequent",
+      "question": "following as a result",
+      "correct": "consequent",
+      "wrong": [
+        "construct",
+        "consume"
+      ],
+      "word": "consequent"
+    },
+    {
+      "item_id": "construct",
+      "question": "to build something",
+      "correct": "construct",
+      "wrong": [
+        "consume",
+        "credit"
+      ],
+      "word": "construct"
+    },
+    {
+      "item_id": "consume",
+      "question": "eat or use up",
+      "correct": "consume",
+      "wrong": [
+        "credit",
+        "culture"
+      ],
+      "word": "consume"
+    },
+    {
+      "item_id": "credit",
+      "question": "money you can borrow now",
+      "correct": "credit",
+      "wrong": [
+        "culture",
+        "design"
+      ],
+      "word": "credit"
+    },
+    {
+      "item_id": "culture",
+      "question": "the way people live and celebrate",
+      "correct": "culture",
+      "wrong": [
+        "design",
+        "distinct"
+      ],
+      "word": "culture"
+    },
+    {
+      "item_id": "design",
+      "question": "a plan or drawing for something",
+      "correct": "design",
+      "wrong": [
+        "distinct",
+        "element"
+      ],
+      "word": "design"
+    },
+    {
+      "item_id": "distinct",
+      "question": "clearly different or separate",
+      "correct": "distinct",
+      "wrong": [
+        "element",
+        "equate"
+      ],
+      "word": "distinct"
+    },
+    {
+      "item_id": "element",
+      "question": "one basic part of something",
+      "correct": "element",
+      "wrong": [
+        "equate",
+        "evaluate"
+      ],
+      "word": "element"
+    },
+    {
+      "item_id": "equate",
+      "question": "treat as the same",
+      "correct": "equate",
+      "wrong": [
+        "evaluate",
+        "feature"
+      ],
+      "word": "equate"
+    },
+    {
+      "item_id": "evaluate",
+      "question": "judge how good it is",
+      "correct": "evaluate",
+      "wrong": [
+        "feature",
+        "final"
+      ],
+      "word": "evaluate"
+    },
+    {
+      "item_id": "feature",
+      "question": "a special part or quality",
+      "correct": "feature",
+      "wrong": [
+        "final",
+        "focus"
+      ],
+      "word": "feature"
+    },
+    {
+      "item_id": "final",
+      "question": "last or coming at the end",
+      "correct": "final",
+      "wrong": [
+        "focus",
+        "impact"
+      ],
+      "word": "final"
+    },
+    {
+      "item_id": "focus",
+      "question": "main thing you watch",
+      "correct": "focus",
+      "wrong": [
+        "impact",
+        "injure"
+      ],
+      "word": "focus"
+    },
+    {
+      "item_id": "impact",
+      "question": "the effect something has",
+      "correct": "impact",
+      "wrong": [
+        "injure",
+        "institute"
+      ],
+      "word": "impact"
+    },
+    {
+      "item_id": "injure",
+      "question": "hurt a person's body",
+      "correct": "injure",
+      "wrong": [
+        "institute",
+        "invest"
+      ],
+      "word": "injure"
+    },
+    {
+      "item_id": "institute",
+      "question": "a place for study or research",
+      "correct": "institute",
+      "wrong": [
+        "invest",
+        "item"
+      ],
+      "word": "institute"
+    },
+    {
+      "item_id": "invest",
+      "question": "put money to make more",
+      "correct": "invest",
+      "wrong": [
+        "item",
+        "journal"
+      ],
+      "word": "invest"
+    },
+    {
+      "item_id": "item",
+      "question": "one thing in a list",
+      "correct": "item",
+      "wrong": [
+        "journal",
+        "maintain"
+      ],
+      "word": "item"
+    },
+    {
+      "item_id": "journal",
+      "question": "academic periodical publication",
+      "correct": "journal",
+      "wrong": [
+        "maintain",
+        "normal"
+      ],
+      "word": "journal"
+    },
+    {
+      "item_id": "maintain",
+      "question": "keep something working well",
+      "correct": "maintain",
+      "wrong": [
+        "normal",
+        "obtain"
+      ],
+      "word": "maintain"
+    },
+    {
+      "item_id": "normal",
+      "question": "usual and expected",
+      "correct": "normal",
+      "wrong": [
+        "obtain",
+        "participate"
+      ],
+      "word": "normal"
+    },
+    {
+      "item_id": "obtain",
+      "question": "get something you want",
+      "correct": "obtain",
+      "wrong": [
+        "participate",
+        "perceive"
+      ],
+      "word": "obtain"
+    },
+    {
+      "item_id": "participate",
+      "question": "join in an activity",
+      "correct": "participate",
+      "wrong": [
+        "perceive",
+        "positive"
+      ],
+      "word": "participate"
+    },
+    {
+      "item_id": "perceive",
+      "question": "notice or understand something",
+      "correct": "perceive",
+      "wrong": [
+        "positive",
+        "analyse"
+      ],
+      "word": "perceive"
+    },
+    {
+      "item_id": "positive",
+      "question": "good and hopeful",
+      "correct": "positive",
+      "wrong": [
+        "analyse",
+        "approach"
+      ],
+      "word": "positive"
+    }
+  ]
+}

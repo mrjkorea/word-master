@@ -1,0 +1,1008 @@
+{
+  "pack_id": "ielts04",
+  "title": "IELTS 301–400",
+  "module_id": "word_master",
+  "seconds": 15,
+  "items": [
+    {
+      "item_id": "abstract",
+      "question": "made of shapes only",
+      "correct": "abstract",
+      "wrong": [
+        "accurate",
+        "acknowledge"
+      ],
+      "word": "abstract"
+    },
+    {
+      "item_id": "accurate",
+      "question": "exactly correct or right",
+      "correct": "accurate",
+      "wrong": [
+        "acknowledge",
+        "aggregate"
+      ],
+      "word": "accurate"
+    },
+    {
+      "item_id": "acknowledge",
+      "question": "to show you heard someone",
+      "correct": "acknowledge",
+      "wrong": [
+        "aggregate",
+        "allocate"
+      ],
+      "word": "acknowledge"
+    },
+    {
+      "item_id": "aggregate",
+      "question": "all added together",
+      "correct": "aggregate",
+      "wrong": [
+        "allocate",
+        "assign"
+      ],
+      "word": "aggregate"
+    },
+    {
+      "item_id": "allocate",
+      "question": "give each person a share",
+      "correct": "allocate",
+      "wrong": [
+        "assign",
+        "attach"
+      ],
+      "word": "allocate"
+    },
+    {
+      "item_id": "assign",
+      "question": "give someone a job",
+      "correct": "assign",
+      "wrong": [
+        "attach",
+        "author"
+      ],
+      "word": "assign"
+    },
+    {
+      "item_id": "attach",
+      "question": "stick one thing to another",
+      "correct": "attach",
+      "wrong": [
+        "author",
+        "bond"
+      ],
+      "word": "attach"
+    },
+    {
+      "item_id": "author",
+      "question": "a person who writes books",
+      "correct": "author",
+      "wrong": [
+        "bond",
+        "brief"
+      ],
+      "word": "author"
+    },
+    {
+      "item_id": "bond",
+      "question": "close tie between people",
+      "correct": "bond",
+      "wrong": [
+        "brief",
+        "capable"
+      ],
+      "word": "bond"
+    },
+    {
+      "item_id": "brief",
+      "question": "lasting only a short time",
+      "correct": "brief",
+      "wrong": [
+        "capable",
+        "cite"
+      ],
+      "word": "brief"
+    },
+    {
+      "item_id": "capable",
+      "question": "able to do something well",
+      "correct": "capable",
+      "wrong": [
+        "cite",
+        "cooperate"
+      ],
+      "word": "capable"
+    },
+    {
+      "item_id": "cite",
+      "question": "name the source used",
+      "correct": "cite",
+      "wrong": [
+        "cooperate",
+        "discriminate"
+      ],
+      "word": "cite"
+    },
+    {
+      "item_id": "cooperate",
+      "question": "work together willingly",
+      "correct": "cooperate",
+      "wrong": [
+        "discriminate",
+        "display"
+      ],
+      "word": "cooperate"
+    },
+    {
+      "item_id": "discriminate",
+      "question": "treat unfairly or distinguish",
+      "correct": "discriminate",
+      "wrong": [
+        "display",
+        "diverse"
+      ],
+      "word": "discriminate"
+    },
+    {
+      "item_id": "display",
+      "question": "things shown for looking",
+      "correct": "display",
+      "wrong": [
+        "diverse",
+        "domain"
+      ],
+      "word": "display"
+    },
+    {
+      "item_id": "diverse",
+      "question": "many different kinds",
+      "correct": "diverse",
+      "wrong": [
+        "domain",
+        "edit"
+      ],
+      "word": "diverse"
+    },
+    {
+      "item_id": "domain",
+      "question": "field or area of control",
+      "correct": "domain",
+      "wrong": [
+        "edit",
+        "enhance"
+      ],
+      "word": "domain"
+    },
+    {
+      "item_id": "edit",
+      "question": "change it to improve",
+      "correct": "edit",
+      "wrong": [
+        "enhance",
+        "estate"
+      ],
+      "word": "edit"
+    },
+    {
+      "item_id": "enhance",
+      "question": "make something better",
+      "correct": "enhance",
+      "wrong": [
+        "estate",
+        "exceed"
+      ],
+      "word": "enhance"
+    },
+    {
+      "item_id": "estate",
+      "question": "big house and land",
+      "correct": "estate",
+      "wrong": [
+        "exceed",
+        "expert"
+      ],
+      "word": "estate"
+    },
+    {
+      "item_id": "exceed",
+      "question": "go beyond a limit",
+      "correct": "exceed",
+      "wrong": [
+        "expert",
+        "explicit"
+      ],
+      "word": "exceed"
+    },
+    {
+      "item_id": "expert",
+      "question": "very skilled person",
+      "correct": "expert",
+      "wrong": [
+        "explicit",
+        "federal"
+      ],
+      "word": "expert"
+    },
+    {
+      "item_id": "explicit",
+      "question": "clear and direct",
+      "correct": "explicit",
+      "wrong": [
+        "federal",
+        "fee"
+      ],
+      "word": "explicit"
+    },
+    {
+      "item_id": "federal",
+      "question": "of the whole country",
+      "correct": "federal",
+      "wrong": [
+        "fee",
+        "flexible"
+      ],
+      "word": "federal"
+    },
+    {
+      "item_id": "fee",
+      "question": "money paid for a service",
+      "correct": "fee",
+      "wrong": [
+        "flexible",
+        "furthermore"
+      ],
+      "word": "fee"
+    },
+    {
+      "item_id": "flexible",
+      "question": "can bend or stretch easily",
+      "correct": "flexible",
+      "wrong": [
+        "furthermore",
+        "gender"
+      ],
+      "word": "flexible"
+    },
+    {
+      "item_id": "furthermore",
+      "question": "in addition to what was said",
+      "correct": "furthermore",
+      "wrong": [
+        "gender",
+        "ignorant"
+      ],
+      "word": "furthermore"
+    },
+    {
+      "item_id": "gender",
+      "question": "social category of sex",
+      "correct": "gender",
+      "wrong": [
+        "ignorant",
+        "incentive"
+      ],
+      "word": "gender"
+    },
+    {
+      "item_id": "ignorant",
+      "question": "lacking knowledge",
+      "correct": "ignorant",
+      "wrong": [
+        "incentive",
+        "incidence"
+      ],
+      "word": "ignorant"
+    },
+    {
+      "item_id": "incentive",
+      "question": "motivation or reward",
+      "correct": "incentive",
+      "wrong": [
+        "incidence",
+        "incorporate"
+      ],
+      "word": "incentive"
+    },
+    {
+      "item_id": "incidence",
+      "question": "rate of occurrence",
+      "correct": "incidence",
+      "wrong": [
+        "incorporate",
+        "index"
+      ],
+      "word": "incidence"
+    },
+    {
+      "item_id": "incorporate",
+      "question": "to include or combine things",
+      "correct": "incorporate",
+      "wrong": [
+        "index",
+        "inhibit"
+      ],
+      "word": "incorporate"
+    },
+    {
+      "item_id": "index",
+      "question": "list of topics in a book",
+      "correct": "index",
+      "wrong": [
+        "inhibit",
+        "initiate"
+      ],
+      "word": "index"
+    },
+    {
+      "item_id": "inhibit",
+      "question": "hold back or prevent",
+      "correct": "inhibit",
+      "wrong": [
+        "initiate",
+        "input"
+      ],
+      "word": "inhibit"
+    },
+    {
+      "item_id": "initiate",
+      "question": "start something new",
+      "correct": "initiate",
+      "wrong": [
+        "input",
+        "instruct"
+      ],
+      "word": "initiate"
+    },
+    {
+      "item_id": "input",
+      "question": "what you put in",
+      "correct": "input",
+      "wrong": [
+        "instruct",
+        "intelligent"
+      ],
+      "word": "input"
+    },
+    {
+      "item_id": "instruct",
+      "question": "tell someone how",
+      "correct": "instruct",
+      "wrong": [
+        "intelligent",
+        "interval"
+      ],
+      "word": "instruct"
+    },
+    {
+      "item_id": "intelligent",
+      "question": "quick to understand and learn",
+      "correct": "intelligent",
+      "wrong": [
+        "interval",
+        "lecture"
+      ],
+      "word": "intelligent"
+    },
+    {
+      "item_id": "interval",
+      "question": "time between two things",
+      "correct": "interval",
+      "wrong": [
+        "lecture",
+        "migrate"
+      ],
+      "word": "interval"
+    },
+    {
+      "item_id": "lecture",
+      "question": "talk that teaches people",
+      "correct": "lecture",
+      "wrong": [
+        "migrate",
+        "minimum"
+      ],
+      "word": "lecture"
+    },
+    {
+      "item_id": "migrate",
+      "question": "move to another region",
+      "correct": "migrate",
+      "wrong": [
+        "minimum",
+        "ministry"
+      ],
+      "word": "migrate"
+    },
+    {
+      "item_id": "minimum",
+      "question": "the smallest amount",
+      "correct": "minimum",
+      "wrong": [
+        "ministry",
+        "motive"
+      ],
+      "word": "minimum"
+    },
+    {
+      "item_id": "ministry",
+      "question": "a government office for one job",
+      "correct": "ministry",
+      "wrong": [
+        "motive",
+        "neutral"
+      ],
+      "word": "ministry"
+    },
+    {
+      "item_id": "motive",
+      "question": "reason for action",
+      "correct": "motive",
+      "wrong": [
+        "neutral",
+        "nevertheless"
+      ],
+      "word": "motive"
+    },
+    {
+      "item_id": "neutral",
+      "question": "not on either side",
+      "correct": "neutral",
+      "wrong": [
+        "nevertheless",
+        "overseas"
+      ],
+      "word": "neutral"
+    },
+    {
+      "item_id": "nevertheless",
+      "question": "even so or despite that",
+      "correct": "nevertheless",
+      "wrong": [
+        "overseas",
+        "precede"
+      ],
+      "word": "nevertheless"
+    },
+    {
+      "item_id": "overseas",
+      "question": "in or to a country across the sea",
+      "correct": "overseas",
+      "wrong": [
+        "precede",
+        "presume"
+      ],
+      "word": "overseas"
+    },
+    {
+      "item_id": "precede",
+      "question": "come before something else",
+      "correct": "precede",
+      "wrong": [
+        "presume",
+        "rational"
+      ],
+      "word": "precede"
+    },
+    {
+      "item_id": "presume",
+      "question": "suppose without proof",
+      "correct": "presume",
+      "wrong": [
+        "rational",
+        "recover"
+      ],
+      "word": "presume"
+    },
+    {
+      "item_id": "rational",
+      "question": "thinking with clear reason",
+      "correct": "rational",
+      "wrong": [
+        "recover",
+        "reveal"
+      ],
+      "word": "rational"
+    },
+    {
+      "item_id": "recover",
+      "question": "get well again",
+      "correct": "recover",
+      "wrong": [
+        "reveal",
+        "scope"
+      ],
+      "word": "recover"
+    },
+    {
+      "item_id": "reveal",
+      "question": "show something hidden",
+      "correct": "reveal",
+      "wrong": [
+        "scope",
+        "subsidy"
+      ],
+      "word": "reveal"
+    },
+    {
+      "item_id": "scope",
+      "question": "how far something reaches",
+      "correct": "scope",
+      "wrong": [
+        "subsidy",
+        "tape"
+      ],
+      "word": "scope"
+    },
+    {
+      "item_id": "subsidy",
+      "question": "public financial support",
+      "correct": "subsidy",
+      "wrong": [
+        "tape",
+        "trace"
+      ],
+      "word": "subsidy"
+    },
+    {
+      "item_id": "tape",
+      "question": "sticky clear strip",
+      "correct": "tape",
+      "wrong": [
+        "trace",
+        "transform"
+      ],
+      "word": "tape"
+    },
+    {
+      "item_id": "trace",
+      "question": "copy by following lines",
+      "correct": "trace",
+      "wrong": [
+        "transform",
+        "transport"
+      ],
+      "word": "trace"
+    },
+    {
+      "item_id": "transform",
+      "question": "change something completely",
+      "correct": "transform",
+      "wrong": [
+        "transport",
+        "underlie"
+      ],
+      "word": "transform"
+    },
+    {
+      "item_id": "transport",
+      "question": "moving people or goods",
+      "correct": "transport",
+      "wrong": [
+        "underlie",
+        "utilise"
+      ],
+      "word": "transport"
+    },
+    {
+      "item_id": "underlie",
+      "question": "lie beneath as basis",
+      "correct": "underlie",
+      "wrong": [
+        "utilise",
+        "adapt"
+      ],
+      "word": "underlie"
+    },
+    {
+      "item_id": "utilise",
+      "question": "make practical use of",
+      "correct": "utilise",
+      "wrong": [
+        "adapt",
+        "adult"
+      ],
+      "word": "utilise"
+    },
+    {
+      "item_id": "adapt",
+      "question": "change to fit in",
+      "correct": "adapt",
+      "wrong": [
+        "adult",
+        "advocate"
+      ],
+      "word": "adapt"
+    },
+    {
+      "item_id": "adult",
+      "question": "grown up not a child",
+      "correct": "adult",
+      "wrong": [
+        "advocate",
+        "aid"
+      ],
+      "word": "adult"
+    },
+    {
+      "item_id": "advocate",
+      "question": "speak up for something",
+      "correct": "advocate",
+      "wrong": [
+        "aid",
+        "channel"
+      ],
+      "word": "advocate"
+    },
+    {
+      "item_id": "aid",
+      "question": "help given to someone",
+      "correct": "aid",
+      "wrong": [
+        "channel",
+        "chemical"
+      ],
+      "word": "aid"
+    },
+    {
+      "item_id": "channel",
+      "question": "narrow path for water",
+      "correct": "channel",
+      "wrong": [
+        "chemical",
+        "classic"
+      ],
+      "word": "channel"
+    },
+    {
+      "item_id": "chemical",
+      "question": "about science lab mixtures",
+      "correct": "chemical",
+      "wrong": [
+        "classic",
+        "comprehensive"
+      ],
+      "word": "chemical"
+    },
+    {
+      "item_id": "classic",
+      "question": "simple and always liked",
+      "correct": "classic",
+      "wrong": [
+        "comprehensive",
+        "comprise"
+      ],
+      "word": "classic"
+    },
+    {
+      "item_id": "comprehensive",
+      "question": "covering everything important",
+      "correct": "comprehensive",
+      "wrong": [
+        "comprise",
+        "confirm"
+      ],
+      "word": "comprehensive"
+    },
+    {
+      "item_id": "comprise",
+      "question": "make up a whole",
+      "correct": "comprise",
+      "wrong": [
+        "confirm",
+        "contrary"
+      ],
+      "word": "comprise"
+    },
+    {
+      "item_id": "confirm",
+      "question": "to say something is true",
+      "correct": "confirm",
+      "wrong": [
+        "contrary",
+        "convert"
+      ],
+      "word": "confirm"
+    },
+    {
+      "item_id": "contrary",
+      "question": "opposite to what is expected",
+      "correct": "contrary",
+      "wrong": [
+        "convert",
+        "couple"
+      ],
+      "word": "contrary"
+    },
+    {
+      "item_id": "convert",
+      "question": "change one thing into another",
+      "correct": "convert",
+      "wrong": [
+        "couple",
+        "decade"
+      ],
+      "word": "convert"
+    },
+    {
+      "item_id": "couple",
+      "question": "two people who are married",
+      "correct": "couple",
+      "wrong": [
+        "decade",
+        "definite"
+      ],
+      "word": "couple"
+    },
+    {
+      "item_id": "decade",
+      "question": "ten years together",
+      "correct": "decade",
+      "wrong": [
+        "definite",
+        "deny"
+      ],
+      "word": "decade"
+    },
+    {
+      "item_id": "definite",
+      "question": "sure and very clear",
+      "correct": "definite",
+      "wrong": [
+        "deny",
+        "differentiate"
+      ],
+      "word": "definite"
+    },
+    {
+      "item_id": "deny",
+      "question": "to say something is not true",
+      "correct": "deny",
+      "wrong": [
+        "differentiate",
+        "dispose"
+      ],
+      "word": "deny"
+    },
+    {
+      "item_id": "differentiate",
+      "question": "tell apart or distinguish",
+      "correct": "differentiate",
+      "wrong": [
+        "dispose",
+        "dynamic"
+      ],
+      "word": "differentiate"
+    },
+    {
+      "item_id": "dispose",
+      "question": "throw something away",
+      "correct": "dispose",
+      "wrong": [
+        "dynamic",
+        "eliminate"
+      ],
+      "word": "dispose"
+    },
+    {
+      "item_id": "dynamic",
+      "question": "full of energy",
+      "correct": "dynamic",
+      "wrong": [
+        "eliminate",
+        "empirical"
+      ],
+      "word": "dynamic"
+    },
+    {
+      "item_id": "eliminate",
+      "question": "take away completely",
+      "correct": "eliminate",
+      "wrong": [
+        "empirical",
+        "equip"
+      ],
+      "word": "eliminate"
+    },
+    {
+      "item_id": "empirical",
+      "question": "learned by real tests",
+      "correct": "empirical",
+      "wrong": [
+        "equip",
+        "extract"
+      ],
+      "word": "empirical"
+    },
+    {
+      "item_id": "equip",
+      "question": "give someone needed tools",
+      "correct": "equip",
+      "wrong": [
+        "extract",
+        "file"
+      ],
+      "word": "equip"
+    },
+    {
+      "item_id": "extract",
+      "question": "pull something out carefully",
+      "correct": "extract",
+      "wrong": [
+        "file",
+        "finite"
+      ],
+      "word": "extract"
+    },
+    {
+      "item_id": "file",
+      "question": "a folder that holds papers",
+      "correct": "file",
+      "wrong": [
+        "finite",
+        "foundation"
+      ],
+      "word": "file"
+    },
+    {
+      "item_id": "finite",
+      "question": "having limits",
+      "correct": "finite",
+      "wrong": [
+        "foundation",
+        "globe"
+      ],
+      "word": "finite"
+    },
+    {
+      "item_id": "foundation",
+      "question": "base that holds a building",
+      "correct": "foundation",
+      "wrong": [
+        "globe",
+        "grade"
+      ],
+      "word": "foundation"
+    },
+    {
+      "item_id": "globe",
+      "question": "the Earth",
+      "correct": "globe",
+      "wrong": [
+        "grade",
+        "guarantee"
+      ],
+      "word": "globe"
+    },
+    {
+      "item_id": "grade",
+      "question": "level or mark",
+      "correct": "grade",
+      "wrong": [
+        "guarantee",
+        "hierarchy"
+      ],
+      "word": "grade"
+    },
+    {
+      "item_id": "guarantee",
+      "question": "promise something will happen",
+      "correct": "guarantee",
+      "wrong": [
+        "hierarchy",
+        "identical"
+      ],
+      "word": "guarantee"
+    },
+    {
+      "item_id": "hierarchy",
+      "question": "ranked levels of authority",
+      "correct": "hierarchy",
+      "wrong": [
+        "identical",
+        "ideology"
+      ],
+      "word": "hierarchy"
+    },
+    {
+      "item_id": "identical",
+      "question": "exactly the same",
+      "correct": "identical",
+      "wrong": [
+        "ideology",
+        "infer"
+      ],
+      "word": "identical"
+    },
+    {
+      "item_id": "ideology",
+      "question": "system of beliefs",
+      "correct": "ideology",
+      "wrong": [
+        "infer",
+        "innovate"
+      ],
+      "word": "ideology"
+    },
+    {
+      "item_id": "infer",
+      "question": "conclude from evidence",
+      "correct": "infer",
+      "wrong": [
+        "innovate",
+        "insert"
+      ],
+      "word": "infer"
+    },
+    {
+      "item_id": "innovate",
+      "question": "introduce new ideas",
+      "correct": "innovate",
+      "wrong": [
+        "insert",
+        "intervene"
+      ],
+      "word": "innovate"
+    },
+    {
+      "item_id": "insert",
+      "question": "put something inside",
+      "correct": "insert",
+      "wrong": [
+        "intervene",
+        "isolate"
+      ],
+      "word": "insert"
+    },
+    {
+      "item_id": "intervene",
+      "question": "step in to help",
+      "correct": "intervene",
+      "wrong": [
+        "isolate",
+        "media"
+      ],
+      "word": "intervene"
+    },
+    {
+      "item_id": "isolate",
+      "question": "separate from others",
+      "correct": "isolate",
+      "wrong": [
+        "media",
+        "mode"
+      ],
+      "word": "isolate"
+    },
+    {
+      "item_id": "media",
+      "question": "ways to share news",
+      "correct": "media",
+      "wrong": [
+        "mode",
+        "paradigm"
+      ],
+      "word": "media"
+    },
+    {
+      "item_id": "mode",
+      "question": "way something works",
+      "correct": "mode",
+      "wrong": [
+        "paradigm",
+        "abstract"
+      ],
+      "word": "mode"
+    },
+    {
+      "item_id": "paradigm",
+      "question": "typical model or pattern",
+      "correct": "paradigm",
+      "wrong": [
+        "abstract",
+        "accurate"
+      ],
+      "word": "paradigm"
+    }
+  ]
+}

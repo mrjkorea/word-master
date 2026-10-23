@@ -1,0 +1,1008 @@
+{
+  "pack_id": "ielts05",
+  "title": "IELTS 401–500",
+  "module_id": "word_master",
+  "seconds": 15,
+  "items": [
+    {
+      "item_id": "phenomenon",
+      "question": "strange thing that happens",
+      "correct": "phenomenon",
+      "wrong": [
+        "priority",
+        "prohibit"
+      ],
+      "word": "phenomenon"
+    },
+    {
+      "item_id": "priority",
+      "question": "thing you do first",
+      "correct": "priority",
+      "wrong": [
+        "prohibit",
+        "publication"
+      ],
+      "word": "priority"
+    },
+    {
+      "item_id": "prohibit",
+      "question": "forbid by law or rule",
+      "correct": "prohibit",
+      "wrong": [
+        "publication",
+        "quote"
+      ],
+      "word": "prohibit"
+    },
+    {
+      "item_id": "publication",
+      "question": "a book or magazine that is printed",
+      "correct": "publication",
+      "wrong": [
+        "quote",
+        "release"
+      ],
+      "word": "publication"
+    },
+    {
+      "item_id": "quote",
+      "question": "repeat words someone else said",
+      "correct": "quote",
+      "wrong": [
+        "release",
+        "reverse"
+      ],
+      "word": "quote"
+    },
+    {
+      "item_id": "release",
+      "question": "the act of setting free",
+      "correct": "release",
+      "wrong": [
+        "reverse",
+        "simulate"
+      ],
+      "word": "release"
+    },
+    {
+      "item_id": "reverse",
+      "question": "go backwards instead",
+      "correct": "reverse",
+      "wrong": [
+        "simulate",
+        "sole"
+      ],
+      "word": "reverse"
+    },
+    {
+      "item_id": "simulate",
+      "question": "imitate for study",
+      "correct": "simulate",
+      "wrong": [
+        "sole",
+        "somewhat"
+      ],
+      "word": "simulate"
+    },
+    {
+      "item_id": "sole",
+      "question": "only one",
+      "correct": "sole",
+      "wrong": [
+        "somewhat",
+        "submit"
+      ],
+      "word": "sole"
+    },
+    {
+      "item_id": "somewhat",
+      "question": "to a small degree; a little",
+      "correct": "somewhat",
+      "wrong": [
+        "submit",
+        "successor"
+      ],
+      "word": "somewhat"
+    },
+    {
+      "item_id": "submit",
+      "question": "to give work to a teacher",
+      "correct": "submit",
+      "wrong": [
+        "successor",
+        "survive"
+      ],
+      "word": "submit"
+    },
+    {
+      "item_id": "successor",
+      "question": "person who comes after",
+      "correct": "successor",
+      "wrong": [
+        "survive",
+        "thesis"
+      ],
+      "word": "successor"
+    },
+    {
+      "item_id": "survive",
+      "question": "to stay alive after danger",
+      "correct": "survive",
+      "wrong": [
+        "thesis",
+        "topic"
+      ],
+      "word": "survive"
+    },
+    {
+      "item_id": "thesis",
+      "question": "research paper for degree",
+      "correct": "thesis",
+      "wrong": [
+        "topic",
+        "transmit"
+      ],
+      "word": "thesis"
+    },
+    {
+      "item_id": "topic",
+      "question": "what people talk about",
+      "correct": "topic",
+      "wrong": [
+        "transmit",
+        "ultimate"
+      ],
+      "word": "topic"
+    },
+    {
+      "item_id": "transmit",
+      "question": "send from one place",
+      "correct": "transmit",
+      "wrong": [
+        "ultimate",
+        "unique"
+      ],
+      "word": "transmit"
+    },
+    {
+      "item_id": "ultimate",
+      "question": "being the last or greatest possible",
+      "correct": "ultimate",
+      "wrong": [
+        "unique",
+        "visible"
+      ],
+      "word": "ultimate"
+    },
+    {
+      "item_id": "unique",
+      "question": "one of a kind, not like others",
+      "correct": "unique",
+      "wrong": [
+        "visible",
+        "voluntary"
+      ],
+      "word": "unique"
+    },
+    {
+      "item_id": "visible",
+      "question": "able to be seen",
+      "correct": "visible",
+      "wrong": [
+        "voluntary",
+        "abandon"
+      ],
+      "word": "visible"
+    },
+    {
+      "item_id": "voluntary",
+      "question": "done by free choice, not forced",
+      "correct": "voluntary",
+      "wrong": [
+        "abandon",
+        "accompany"
+      ],
+      "word": "voluntary"
+    },
+    {
+      "item_id": "abandon",
+      "question": "leave something behind",
+      "correct": "abandon",
+      "wrong": [
+        "accompany",
+        "accumulate"
+      ],
+      "word": "abandon"
+    },
+    {
+      "item_id": "accompany",
+      "question": "go with someone",
+      "correct": "accompany",
+      "wrong": [
+        "accumulate",
+        "ambiguous"
+      ],
+      "word": "accompany"
+    },
+    {
+      "item_id": "accumulate",
+      "question": "gather over time",
+      "correct": "accumulate",
+      "wrong": [
+        "ambiguous",
+        "append"
+      ],
+      "word": "accumulate"
+    },
+    {
+      "item_id": "ambiguous",
+      "question": "having more than one meaning",
+      "correct": "ambiguous",
+      "wrong": [
+        "append",
+        "appreciate"
+      ],
+      "word": "ambiguous"
+    },
+    {
+      "item_id": "append",
+      "question": "add at the end",
+      "correct": "append",
+      "wrong": [
+        "appreciate",
+        "arbitrary"
+      ],
+      "word": "append"
+    },
+    {
+      "item_id": "appreciate",
+      "question": "feel thankful for",
+      "correct": "appreciate",
+      "wrong": [
+        "arbitrary",
+        "automate"
+      ],
+      "word": "appreciate"
+    },
+    {
+      "item_id": "arbitrary",
+      "question": "chosen with no reason",
+      "correct": "arbitrary",
+      "wrong": [
+        "automate",
+        "bias"
+      ],
+      "word": "arbitrary"
+    },
+    {
+      "item_id": "automate",
+      "question": "make processes automatic",
+      "correct": "automate",
+      "wrong": [
+        "bias",
+        "chart"
+      ],
+      "word": "automate"
+    },
+    {
+      "item_id": "bias",
+      "question": "unfair preference",
+      "correct": "bias",
+      "wrong": [
+        "chart",
+        "clarify"
+      ],
+      "word": "bias"
+    },
+    {
+      "item_id": "chart",
+      "question": "graph or diagram",
+      "correct": "chart",
+      "wrong": [
+        "clarify",
+        "commodity"
+      ],
+      "word": "chart"
+    },
+    {
+      "item_id": "clarify",
+      "question": "make the meaning clearer",
+      "correct": "clarify",
+      "wrong": [
+        "commodity",
+        "complement"
+      ],
+      "word": "clarify"
+    },
+    {
+      "item_id": "commodity",
+      "question": "tradeable raw material or product",
+      "correct": "commodity",
+      "wrong": [
+        "complement",
+        "conform"
+      ],
+      "word": "commodity"
+    },
+    {
+      "item_id": "complement",
+      "question": "thing that completes",
+      "correct": "complement",
+      "wrong": [
+        "conform",
+        "contemporary"
+      ],
+      "word": "complement"
+    },
+    {
+      "item_id": "conform",
+      "question": "follow rules or norms",
+      "correct": "conform",
+      "wrong": [
+        "contemporary",
+        "contradict"
+      ],
+      "word": "conform"
+    },
+    {
+      "item_id": "contemporary",
+      "question": "happening or made right now",
+      "correct": "contemporary",
+      "wrong": [
+        "contradict",
+        "crucial"
+      ],
+      "word": "contemporary"
+    },
+    {
+      "item_id": "contradict",
+      "question": "say the opposite",
+      "correct": "contradict",
+      "wrong": [
+        "crucial",
+        "currency"
+      ],
+      "word": "contradict"
+    },
+    {
+      "item_id": "crucial",
+      "question": "very important and needed",
+      "correct": "crucial",
+      "wrong": [
+        "currency",
+        "denote"
+      ],
+      "word": "crucial"
+    },
+    {
+      "item_id": "currency",
+      "question": "money used in a country",
+      "correct": "currency",
+      "wrong": [
+        "denote",
+        "detect"
+      ],
+      "word": "currency"
+    },
+    {
+      "item_id": "denote",
+      "question": "be a sign of",
+      "correct": "denote",
+      "wrong": [
+        "detect",
+        "deviate"
+      ],
+      "word": "denote"
+    },
+    {
+      "item_id": "detect",
+      "question": "to find something hidden",
+      "correct": "detect",
+      "wrong": [
+        "deviate",
+        "displace"
+      ],
+      "word": "detect"
+    },
+    {
+      "item_id": "deviate",
+      "question": "move away from standard",
+      "correct": "deviate",
+      "wrong": [
+        "displace",
+        "drama"
+      ],
+      "word": "deviate"
+    },
+    {
+      "item_id": "displace",
+      "question": "move or replace",
+      "correct": "displace",
+      "wrong": [
+        "drama",
+        "eventual"
+      ],
+      "word": "displace"
+    },
+    {
+      "item_id": "drama",
+      "question": "play on a stage",
+      "correct": "drama",
+      "wrong": [
+        "eventual",
+        "exhibit"
+      ],
+      "word": "drama"
+    },
+    {
+      "item_id": "eventual",
+      "question": "happening at the end",
+      "correct": "eventual",
+      "wrong": [
+        "exhibit",
+        "exploit"
+      ],
+      "word": "eventual"
+    },
+    {
+      "item_id": "exhibit",
+      "question": "show for others",
+      "correct": "exhibit",
+      "wrong": [
+        "exploit",
+        "fluctuate"
+      ],
+      "word": "exhibit"
+    },
+    {
+      "item_id": "exploit",
+      "question": "use a chance fully",
+      "correct": "exploit",
+      "wrong": [
+        "fluctuate",
+        "guideline"
+      ],
+      "word": "exploit"
+    },
+    {
+      "item_id": "fluctuate",
+      "question": "rise and fall irregularly",
+      "correct": "fluctuate",
+      "wrong": [
+        "guideline",
+        "highlight"
+      ],
+      "word": "fluctuate"
+    },
+    {
+      "item_id": "guideline",
+      "question": "recommended rule",
+      "correct": "guideline",
+      "wrong": [
+        "highlight",
+        "implicit"
+      ],
+      "word": "guideline"
+    },
+    {
+      "item_id": "highlight",
+      "question": "to mark something important",
+      "correct": "highlight",
+      "wrong": [
+        "implicit",
+        "induce"
+      ],
+      "word": "highlight"
+    },
+    {
+      "item_id": "implicit",
+      "question": "understood without being said",
+      "correct": "implicit",
+      "wrong": [
+        "induce",
+        "inevitable"
+      ],
+      "word": "implicit"
+    },
+    {
+      "item_id": "induce",
+      "question": "cause something to happen",
+      "correct": "induce",
+      "wrong": [
+        "inevitable",
+        "infrastructure"
+      ],
+      "word": "induce"
+    },
+    {
+      "item_id": "inevitable",
+      "question": "cannot be stopped or avoided",
+      "correct": "inevitable",
+      "wrong": [
+        "infrastructure",
+        "inspect"
+      ],
+      "word": "inevitable"
+    },
+    {
+      "item_id": "infrastructure",
+      "question": "basic systems of a country",
+      "correct": "infrastructure",
+      "wrong": [
+        "inspect",
+        "intense"
+      ],
+      "word": "infrastructure"
+    },
+    {
+      "item_id": "inspect",
+      "question": "look at very carefully",
+      "correct": "inspect",
+      "wrong": [
+        "intense",
+        "manipulate"
+      ],
+      "word": "inspect"
+    },
+    {
+      "item_id": "intense",
+      "question": "very strong or powerful",
+      "correct": "intense",
+      "wrong": [
+        "manipulate",
+        "minimise"
+      ],
+      "word": "intense"
+    },
+    {
+      "item_id": "manipulate",
+      "question": "move with careful hands",
+      "correct": "manipulate",
+      "wrong": [
+        "minimise",
+        "nuclear"
+      ],
+      "word": "manipulate"
+    },
+    {
+      "item_id": "minimise",
+      "question": "reduce to the smallest amount",
+      "correct": "minimise",
+      "wrong": [
+        "nuclear",
+        "offset"
+      ],
+      "word": "minimise"
+    },
+    {
+      "item_id": "nuclear",
+      "question": "about atomic energy",
+      "correct": "nuclear",
+      "wrong": [
+        "offset",
+        "paragraph"
+      ],
+      "word": "nuclear"
+    },
+    {
+      "item_id": "offset",
+      "question": "balance or counteract",
+      "correct": "offset",
+      "wrong": [
+        "paragraph",
+        "plus"
+      ],
+      "word": "offset"
+    },
+    {
+      "item_id": "paragraph",
+      "question": "group of sentences together",
+      "correct": "paragraph",
+      "wrong": [
+        "plus",
+        "practitioner"
+      ],
+      "word": "paragraph"
+    },
+    {
+      "item_id": "plus",
+      "question": "added to another number",
+      "correct": "plus",
+      "wrong": [
+        "practitioner",
+        "predominant"
+      ],
+      "word": "plus"
+    },
+    {
+      "item_id": "practitioner",
+      "question": "skilled helper like a doctor",
+      "correct": "practitioner",
+      "wrong": [
+        "predominant",
+        "prospect"
+      ],
+      "word": "practitioner"
+    },
+    {
+      "item_id": "predominant",
+      "question": "most common or influential",
+      "correct": "predominant",
+      "wrong": [
+        "prospect",
+        "radical"
+      ],
+      "word": "predominant"
+    },
+    {
+      "item_id": "prospect",
+      "question": "chance of something good",
+      "correct": "prospect",
+      "wrong": [
+        "radical",
+        "random"
+      ],
+      "word": "prospect"
+    },
+    {
+      "item_id": "radical",
+      "question": "very new and different",
+      "correct": "radical",
+      "wrong": [
+        "random",
+        "reinforce"
+      ],
+      "word": "radical"
+    },
+    {
+      "item_id": "random",
+      "question": "with no special order",
+      "correct": "random",
+      "wrong": [
+        "reinforce",
+        "restore"
+      ],
+      "word": "random"
+    },
+    {
+      "item_id": "reinforce",
+      "question": "make something more strong",
+      "correct": "reinforce",
+      "wrong": [
+        "restore",
+        "revise"
+      ],
+      "word": "reinforce"
+    },
+    {
+      "item_id": "restore",
+      "question": "bring something back to its original state",
+      "correct": "restore",
+      "wrong": [
+        "revise",
+        "schedule"
+      ],
+      "word": "restore"
+    },
+    {
+      "item_id": "revise",
+      "question": "change to improve",
+      "correct": "revise",
+      "wrong": [
+        "schedule",
+        "tense"
+      ],
+      "word": "revise"
+    },
+    {
+      "item_id": "schedule",
+      "question": "plan a time for",
+      "correct": "schedule",
+      "wrong": [
+        "tense",
+        "terminate"
+      ],
+      "word": "schedule"
+    },
+    {
+      "item_id": "tense",
+      "question": "nervous or strained",
+      "correct": "tense",
+      "wrong": [
+        "terminate",
+        "theme"
+      ],
+      "word": "tense"
+    },
+    {
+      "item_id": "terminate",
+      "question": "bring to an end",
+      "correct": "terminate",
+      "wrong": [
+        "theme",
+        "thereby"
+      ],
+      "word": "terminate"
+    },
+    {
+      "item_id": "theme",
+      "question": "the main idea",
+      "correct": "theme",
+      "wrong": [
+        "thereby",
+        "uniform"
+      ],
+      "word": "theme"
+    },
+    {
+      "item_id": "thereby",
+      "question": "by doing that action",
+      "correct": "thereby",
+      "wrong": [
+        "uniform",
+        "vehicle"
+      ],
+      "word": "thereby"
+    },
+    {
+      "item_id": "uniform",
+      "question": "all the same",
+      "correct": "uniform",
+      "wrong": [
+        "vehicle",
+        "via"
+      ],
+      "word": "uniform"
+    },
+    {
+      "item_id": "vehicle",
+      "question": "a thing that moves people",
+      "correct": "vehicle",
+      "wrong": [
+        "via",
+        "virtual"
+      ],
+      "word": "vehicle"
+    },
+    {
+      "item_id": "via",
+      "question": "by way of something",
+      "correct": "via",
+      "wrong": [
+        "virtual",
+        "visual"
+      ],
+      "word": "via"
+    },
+    {
+      "item_id": "virtual",
+      "question": "existing online not physically",
+      "correct": "virtual",
+      "wrong": [
+        "visual",
+        "widespread"
+      ],
+      "word": "virtual"
+    },
+    {
+      "item_id": "visual",
+      "question": "about seeing with eyes",
+      "correct": "visual",
+      "wrong": [
+        "widespread",
+        "accommodate"
+      ],
+      "word": "visual"
+    },
+    {
+      "item_id": "widespread",
+      "question": "found in many places",
+      "correct": "widespread",
+      "wrong": [
+        "accommodate",
+        "analogy"
+      ],
+      "word": "widespread"
+    },
+    {
+      "item_id": "accommodate",
+      "question": "make room for someone",
+      "correct": "accommodate",
+      "wrong": [
+        "analogy",
+        "anticipate"
+      ],
+      "word": "accommodate"
+    },
+    {
+      "item_id": "analogy",
+      "question": "comparison to explain",
+      "correct": "analogy",
+      "wrong": [
+        "anticipate",
+        "assure"
+      ],
+      "word": "analogy"
+    },
+    {
+      "item_id": "anticipate",
+      "question": "expect something to happen",
+      "correct": "anticipate",
+      "wrong": [
+        "assure",
+        "attain"
+      ],
+      "word": "anticipate"
+    },
+    {
+      "item_id": "assure",
+      "question": "make someone feel sure",
+      "correct": "assure",
+      "wrong": [
+        "attain",
+        "behalf"
+      ],
+      "word": "assure"
+    },
+    {
+      "item_id": "attain",
+      "question": "achieve or reach",
+      "correct": "attain",
+      "wrong": [
+        "behalf",
+        "bulk"
+      ],
+      "word": "attain"
+    },
+    {
+      "item_id": "behalf",
+      "question": "acting for another person",
+      "correct": "behalf",
+      "wrong": [
+        "bulk",
+        "cease"
+      ],
+      "word": "behalf"
+    },
+    {
+      "item_id": "bulk",
+      "question": "large mass or majority",
+      "correct": "bulk",
+      "wrong": [
+        "cease",
+        "coherent"
+      ],
+      "word": "bulk"
+    },
+    {
+      "item_id": "cease",
+      "question": "stop doing something",
+      "correct": "cease",
+      "wrong": [
+        "coherent",
+        "coincide"
+      ],
+      "word": "cease"
+    },
+    {
+      "item_id": "coherent",
+      "question": "clear and fitting together",
+      "correct": "coherent",
+      "wrong": [
+        "coincide",
+        "commence"
+      ],
+      "word": "coherent"
+    },
+    {
+      "item_id": "coincide",
+      "question": "happen at same time",
+      "correct": "coincide",
+      "wrong": [
+        "commence",
+        "compatible"
+      ],
+      "word": "coincide"
+    },
+    {
+      "item_id": "commence",
+      "question": "start doing something",
+      "correct": "commence",
+      "wrong": [
+        "compatible",
+        "concurrent"
+      ],
+      "word": "commence"
+    },
+    {
+      "item_id": "compatible",
+      "question": "able to work together",
+      "correct": "compatible",
+      "wrong": [
+        "concurrent",
+        "confine"
+      ],
+      "word": "compatible"
+    },
+    {
+      "item_id": "concurrent",
+      "question": "happening at the same time",
+      "correct": "concurrent",
+      "wrong": [
+        "confine",
+        "controversy"
+      ],
+      "word": "concurrent"
+    },
+    {
+      "item_id": "confine",
+      "question": "keep inside a small space",
+      "correct": "confine",
+      "wrong": [
+        "controversy",
+        "converse"
+      ],
+      "word": "confine"
+    },
+    {
+      "item_id": "controversy",
+      "question": "public disagreement",
+      "correct": "controversy",
+      "wrong": [
+        "converse",
+        "device"
+      ],
+      "word": "controversy"
+    },
+    {
+      "item_id": "converse",
+      "question": "talk formally",
+      "correct": "converse",
+      "wrong": [
+        "device",
+        "devote"
+      ],
+      "word": "converse"
+    },
+    {
+      "item_id": "device",
+      "question": "a machine that helps",
+      "correct": "device",
+      "wrong": [
+        "devote",
+        "diminish"
+      ],
+      "word": "device"
+    },
+    {
+      "item_id": "devote",
+      "question": "give time and care",
+      "correct": "devote",
+      "wrong": [
+        "diminish",
+        "distort"
+      ],
+      "word": "devote"
+    },
+    {
+      "item_id": "diminish",
+      "question": "make something grow smaller",
+      "correct": "diminish",
+      "wrong": [
+        "distort",
+        "phenomenon"
+      ],
+      "word": "diminish"
+    },
+    {
+      "item_id": "distort",
+      "question": "twist out of true shape",
+      "correct": "distort",
+      "wrong": [
+        "phenomenon",
+        "priority"
+      ],
+      "word": "distort"
+    }
+  ]
+}
