@@ -1,0 +1,1008 @@
+{
+  "pack_id": "ielts02",
+  "title": "IELTS 101–200",
+  "module_id": "word_master",
+  "seconds": 15,
+  "items": [
+    {
+      "item_id": "potential",
+      "question": "possible to become something",
+      "correct": "potential",
+      "wrong": [
+        "previous",
+        "primary"
+      ],
+      "word": "potential"
+    },
+    {
+      "item_id": "previous",
+      "question": "happening or coming before",
+      "correct": "previous",
+      "wrong": [
+        "primary",
+        "purchase"
+      ],
+      "word": "previous"
+    },
+    {
+      "item_id": "primary",
+      "question": "most important or main",
+      "correct": "primary",
+      "wrong": [
+        "purchase",
+        "range"
+      ],
+      "word": "primary"
+    },
+    {
+      "item_id": "purchase",
+      "question": "something you have bought",
+      "correct": "purchase",
+      "wrong": [
+        "range",
+        "region"
+      ],
+      "word": "purchase"
+    },
+    {
+      "item_id": "range",
+      "question": "area from one place to another",
+      "correct": "range",
+      "wrong": [
+        "region",
+        "regulate"
+      ],
+      "word": "range"
+    },
+    {
+      "item_id": "region",
+      "question": "a part of a country",
+      "correct": "region",
+      "wrong": [
+        "regulate",
+        "relevant"
+      ],
+      "word": "region"
+    },
+    {
+      "item_id": "regulate",
+      "question": "keep at the right level",
+      "correct": "regulate",
+      "wrong": [
+        "relevant",
+        "reside"
+      ],
+      "word": "regulate"
+    },
+    {
+      "item_id": "relevant",
+      "question": "connected to the topic",
+      "correct": "relevant",
+      "wrong": [
+        "reside",
+        "resource"
+      ],
+      "word": "relevant"
+    },
+    {
+      "item_id": "reside",
+      "question": "live in a place",
+      "correct": "reside",
+      "wrong": [
+        "resource",
+        "restrict"
+      ],
+      "word": "reside"
+    },
+    {
+      "item_id": "resource",
+      "question": "useful thing or supply",
+      "correct": "resource",
+      "wrong": [
+        "restrict",
+        "secure"
+      ],
+      "word": "resource"
+    },
+    {
+      "item_id": "restrict",
+      "question": "to limit or control something",
+      "correct": "restrict",
+      "wrong": [
+        "secure",
+        "seek"
+      ],
+      "word": "restrict"
+    },
+    {
+      "item_id": "secure",
+      "question": "safe and well protected",
+      "correct": "secure",
+      "wrong": [
+        "seek",
+        "select"
+      ],
+      "word": "secure"
+    },
+    {
+      "item_id": "seek",
+      "question": "look for something or someone",
+      "correct": "seek",
+      "wrong": [
+        "select",
+        "site"
+      ],
+      "word": "seek"
+    },
+    {
+      "item_id": "select",
+      "question": "specially chosen as best",
+      "correct": "select",
+      "wrong": [
+        "site",
+        "strategy"
+      ],
+      "word": "select"
+    },
+    {
+      "item_id": "site",
+      "question": "a place for building",
+      "correct": "site",
+      "wrong": [
+        "strategy",
+        "survey"
+      ],
+      "word": "site"
+    },
+    {
+      "item_id": "strategy",
+      "question": "a plan to win",
+      "correct": "strategy",
+      "wrong": [
+        "survey",
+        "text"
+      ],
+      "word": "strategy"
+    },
+    {
+      "item_id": "survey",
+      "question": "questions to collect answers",
+      "correct": "survey",
+      "wrong": [
+        "text",
+        "tradition"
+      ],
+      "word": "survey"
+    },
+    {
+      "item_id": "text",
+      "question": "a written message",
+      "correct": "text",
+      "wrong": [
+        "tradition",
+        "transfer"
+      ],
+      "word": "text"
+    },
+    {
+      "item_id": "tradition",
+      "question": "old custom passed down",
+      "correct": "tradition",
+      "wrong": [
+        "transfer",
+        "alternative"
+      ],
+      "word": "tradition"
+    },
+    {
+      "item_id": "transfer",
+      "question": "moving to another place",
+      "correct": "transfer",
+      "wrong": [
+        "alternative",
+        "circumstance"
+      ],
+      "word": "transfer"
+    },
+    {
+      "item_id": "alternative",
+      "question": "another choice or different option",
+      "correct": "alternative",
+      "wrong": [
+        "circumstance",
+        "comment"
+      ],
+      "word": "alternative"
+    },
+    {
+      "item_id": "circumstance",
+      "question": "the conditions around an event",
+      "correct": "circumstance",
+      "wrong": [
+        "comment",
+        "compensate"
+      ],
+      "word": "circumstance"
+    },
+    {
+      "item_id": "comment",
+      "question": "words someone says or writes about something",
+      "correct": "comment",
+      "wrong": [
+        "compensate",
+        "component"
+      ],
+      "word": "comment"
+    },
+    {
+      "item_id": "compensate",
+      "question": "make up for something",
+      "correct": "compensate",
+      "wrong": [
+        "component",
+        "consent"
+      ],
+      "word": "compensate"
+    },
+    {
+      "item_id": "component",
+      "question": "one piece of something",
+      "correct": "component",
+      "wrong": [
+        "consent",
+        "considerable"
+      ],
+      "word": "component"
+    },
+    {
+      "item_id": "consent",
+      "question": "saying yes to something",
+      "correct": "consent",
+      "wrong": [
+        "considerable",
+        "constant"
+      ],
+      "word": "consent"
+    },
+    {
+      "item_id": "considerable",
+      "question": "quite large or important",
+      "correct": "considerable",
+      "wrong": [
+        "constant",
+        "constrain"
+      ],
+      "word": "considerable"
+    },
+    {
+      "item_id": "constant",
+      "question": "happens again and again",
+      "correct": "constant",
+      "wrong": [
+        "constrain",
+        "contribute"
+      ],
+      "word": "constant"
+    },
+    {
+      "item_id": "constrain",
+      "question": "limit or restrict",
+      "correct": "constrain",
+      "wrong": [
+        "contribute",
+        "convene"
+      ],
+      "word": "constrain"
+    },
+    {
+      "item_id": "contribute",
+      "question": "to give help or money",
+      "correct": "contribute",
+      "wrong": [
+        "convene",
+        "coordinate"
+      ],
+      "word": "contribute"
+    },
+    {
+      "item_id": "convene",
+      "question": "call people to meet",
+      "correct": "convene",
+      "wrong": [
+        "coordinate",
+        "core"
+      ],
+      "word": "convene"
+    },
+    {
+      "item_id": "coordinate",
+      "question": "make things work together",
+      "correct": "coordinate",
+      "wrong": [
+        "core",
+        "corporate"
+      ],
+      "word": "coordinate"
+    },
+    {
+      "item_id": "core",
+      "question": "the center of something",
+      "correct": "core",
+      "wrong": [
+        "corporate",
+        "correspond"
+      ],
+      "word": "core"
+    },
+    {
+      "item_id": "corporate",
+      "question": "of a big company",
+      "correct": "corporate",
+      "wrong": [
+        "correspond",
+        "criteria"
+      ],
+      "word": "corporate"
+    },
+    {
+      "item_id": "correspond",
+      "question": "match and be the same",
+      "correct": "correspond",
+      "wrong": [
+        "criteria",
+        "deduce"
+      ],
+      "word": "correspond"
+    },
+    {
+      "item_id": "criteria",
+      "question": "standards for judging",
+      "correct": "criteria",
+      "wrong": [
+        "deduce",
+        "demonstrate"
+      ],
+      "word": "criteria"
+    },
+    {
+      "item_id": "deduce",
+      "question": "infer from evidence",
+      "correct": "deduce",
+      "wrong": [
+        "demonstrate",
+        "document"
+      ],
+      "word": "deduce"
+    },
+    {
+      "item_id": "demonstrate",
+      "question": "show how something works",
+      "correct": "demonstrate",
+      "wrong": [
+        "document",
+        "dominate"
+      ],
+      "word": "demonstrate"
+    },
+    {
+      "item_id": "document",
+      "question": "a piece of paper with writing",
+      "correct": "document",
+      "wrong": [
+        "dominate",
+        "emphasis"
+      ],
+      "word": "document"
+    },
+    {
+      "item_id": "dominate",
+      "question": "to control or rule over",
+      "correct": "dominate",
+      "wrong": [
+        "emphasis",
+        "ensure"
+      ],
+      "word": "dominate"
+    },
+    {
+      "item_id": "emphasis",
+      "question": "special stress on something",
+      "correct": "emphasis",
+      "wrong": [
+        "ensure",
+        "exclude"
+      ],
+      "word": "emphasis"
+    },
+    {
+      "item_id": "ensure",
+      "question": "make sure something happens",
+      "correct": "ensure",
+      "wrong": [
+        "exclude",
+        "framework"
+      ],
+      "word": "ensure"
+    },
+    {
+      "item_id": "exclude",
+      "question": "leave someone or something out",
+      "correct": "exclude",
+      "wrong": [
+        "framework",
+        "fund"
+      ],
+      "word": "exclude"
+    },
+    {
+      "item_id": "framework",
+      "question": "structure that holds things",
+      "correct": "framework",
+      "wrong": [
+        "fund",
+        "illustrate"
+      ],
+      "word": "framework"
+    },
+    {
+      "item_id": "fund",
+      "question": "money saved for a purpose",
+      "correct": "fund",
+      "wrong": [
+        "illustrate",
+        "immigrate"
+      ],
+      "word": "fund"
+    },
+    {
+      "item_id": "illustrate",
+      "question": "draw pictures to explain something",
+      "correct": "illustrate",
+      "wrong": [
+        "immigrate",
+        "imply"
+      ],
+      "word": "illustrate"
+    },
+    {
+      "item_id": "immigrate",
+      "question": "move to live abroad",
+      "correct": "immigrate",
+      "wrong": [
+        "imply",
+        "initial"
+      ],
+      "word": "immigrate"
+    },
+    {
+      "item_id": "imply",
+      "question": "to suggest something without saying it",
+      "correct": "imply",
+      "wrong": [
+        "initial",
+        "instance"
+      ],
+      "word": "imply"
+    },
+    {
+      "item_id": "initial",
+      "question": "at the very beginning",
+      "correct": "initial",
+      "wrong": [
+        "instance",
+        "interact"
+      ],
+      "word": "initial"
+    },
+    {
+      "item_id": "instance",
+      "question": "one clear example of something",
+      "correct": "instance",
+      "wrong": [
+        "interact",
+        "justify"
+      ],
+      "word": "instance"
+    },
+    {
+      "item_id": "interact",
+      "question": "act together or communicate",
+      "correct": "interact",
+      "wrong": [
+        "justify",
+        "layer"
+      ],
+      "word": "interact"
+    },
+    {
+      "item_id": "justify",
+      "question": "to show something is right",
+      "correct": "justify",
+      "wrong": [
+        "layer",
+        "link"
+      ],
+      "word": "justify"
+    },
+    {
+      "item_id": "layer",
+      "question": "one sheet on top",
+      "correct": "layer",
+      "wrong": [
+        "link",
+        "locate"
+      ],
+      "word": "layer"
+    },
+    {
+      "item_id": "link",
+      "question": "a piece that connects things",
+      "correct": "link",
+      "wrong": [
+        "locate",
+        "maximise"
+      ],
+      "word": "link"
+    },
+    {
+      "item_id": "locate",
+      "question": "find the place of",
+      "correct": "locate",
+      "wrong": [
+        "maximise",
+        "minor"
+      ],
+      "word": "locate"
+    },
+    {
+      "item_id": "maximise",
+      "question": "increase to the greatest degree",
+      "correct": "maximise",
+      "wrong": [
+        "minor",
+        "negate"
+      ],
+      "word": "maximise"
+    },
+    {
+      "item_id": "minor",
+      "question": "small and not important",
+      "correct": "minor",
+      "wrong": [
+        "negate",
+        "outcome"
+      ],
+      "word": "minor"
+    },
+    {
+      "item_id": "negate",
+      "question": "make ineffective or deny",
+      "correct": "negate",
+      "wrong": [
+        "outcome",
+        "partner"
+      ],
+      "word": "negate"
+    },
+    {
+      "item_id": "outcome",
+      "question": "the result at the end",
+      "correct": "outcome",
+      "wrong": [
+        "partner",
+        "philosophy"
+      ],
+      "word": "outcome"
+    },
+    {
+      "item_id": "partner",
+      "question": "a person who works with you",
+      "correct": "partner",
+      "wrong": [
+        "philosophy",
+        "physical"
+      ],
+      "word": "partner"
+    },
+    {
+      "item_id": "philosophy",
+      "question": "big ideas about life",
+      "correct": "philosophy",
+      "wrong": [
+        "physical",
+        "proportion"
+      ],
+      "word": "philosophy"
+    },
+    {
+      "item_id": "physical",
+      "question": "of the body, not the mind",
+      "correct": "physical",
+      "wrong": [
+        "proportion",
+        "publish"
+      ],
+      "word": "physical"
+    },
+    {
+      "item_id": "proportion",
+      "question": "how much of a whole",
+      "correct": "proportion",
+      "wrong": [
+        "publish",
+        "react"
+      ],
+      "word": "proportion"
+    },
+    {
+      "item_id": "publish",
+      "question": "make a book or story ready for people to read",
+      "correct": "publish",
+      "wrong": [
+        "react",
+        "register"
+      ],
+      "word": "publish"
+    },
+    {
+      "item_id": "react",
+      "question": "respond to something",
+      "correct": "react",
+      "wrong": [
+        "register",
+        "rely"
+      ],
+      "word": "react"
+    },
+    {
+      "item_id": "register",
+      "question": "to put your name on a list",
+      "correct": "register",
+      "wrong": [
+        "rely",
+        "remove"
+      ],
+      "word": "register"
+    },
+    {
+      "item_id": "rely",
+      "question": "trust someone to help",
+      "correct": "rely",
+      "wrong": [
+        "remove",
+        "scheme"
+      ],
+      "word": "rely"
+    },
+    {
+      "item_id": "remove",
+      "question": "take something away from a place",
+      "correct": "remove",
+      "wrong": [
+        "scheme",
+        "sequence"
+      ],
+      "word": "remove"
+    },
+    {
+      "item_id": "scheme",
+      "question": "a plan or idea",
+      "correct": "scheme",
+      "wrong": [
+        "sequence",
+        "sex"
+      ],
+      "word": "scheme"
+    },
+    {
+      "item_id": "sequence",
+      "question": "things in a row",
+      "correct": "sequence",
+      "wrong": [
+        "sex",
+        "shift"
+      ],
+      "word": "sequence"
+    },
+    {
+      "item_id": "sex",
+      "question": "male or female",
+      "correct": "sex",
+      "wrong": [
+        "shift",
+        "specify"
+      ],
+      "word": "sex"
+    },
+    {
+      "item_id": "shift",
+      "question": "set hours at work",
+      "correct": "shift",
+      "wrong": [
+        "specify",
+        "sufficient"
+      ],
+      "word": "shift"
+    },
+    {
+      "item_id": "specify",
+      "question": "to say exactly what you want",
+      "correct": "specify",
+      "wrong": [
+        "sufficient",
+        "task"
+      ],
+      "word": "specify"
+    },
+    {
+      "item_id": "sufficient",
+      "question": "enough for the need",
+      "correct": "sufficient",
+      "wrong": [
+        "task",
+        "technical"
+      ],
+      "word": "sufficient"
+    },
+    {
+      "item_id": "task",
+      "question": "job you must finish",
+      "correct": "task",
+      "wrong": [
+        "technical",
+        "technique"
+      ],
+      "word": "task"
+    },
+    {
+      "item_id": "technical",
+      "question": "about machines or science",
+      "correct": "technical",
+      "wrong": [
+        "technique",
+        "technology"
+      ],
+      "word": "technical"
+    },
+    {
+      "item_id": "technique",
+      "question": "a way to do something",
+      "correct": "technique",
+      "wrong": [
+        "technology",
+        "valid"
+      ],
+      "word": "technique"
+    },
+    {
+      "item_id": "technology",
+      "question": "machines and tools that help us",
+      "correct": "technology",
+      "wrong": [
+        "valid",
+        "volume"
+      ],
+      "word": "technology"
+    },
+    {
+      "item_id": "valid",
+      "question": "correct and acceptable",
+      "correct": "valid",
+      "wrong": [
+        "volume",
+        "access"
+      ],
+      "word": "valid"
+    },
+    {
+      "item_id": "volume",
+      "question": "how much space something fills",
+      "correct": "volume",
+      "wrong": [
+        "access",
+        "adequate"
+      ],
+      "word": "volume"
+    },
+    {
+      "item_id": "access",
+      "question": "the ability to enter a place",
+      "correct": "access",
+      "wrong": [
+        "adequate",
+        "annual"
+      ],
+      "word": "access"
+    },
+    {
+      "item_id": "adequate",
+      "question": "enough for the need",
+      "correct": "adequate",
+      "wrong": [
+        "annual",
+        "apparent"
+      ],
+      "word": "adequate"
+    },
+    {
+      "item_id": "annual",
+      "question": "happening once every year",
+      "correct": "annual",
+      "wrong": [
+        "apparent",
+        "approximate"
+      ],
+      "word": "annual"
+    },
+    {
+      "item_id": "apparent",
+      "question": "easy to see or know",
+      "correct": "apparent",
+      "wrong": [
+        "approximate",
+        "attitude"
+      ],
+      "word": "apparent"
+    },
+    {
+      "item_id": "approximate",
+      "question": "come close in amount",
+      "correct": "approximate",
+      "wrong": [
+        "attitude",
+        "attribute"
+      ],
+      "word": "approximate"
+    },
+    {
+      "item_id": "attitude",
+      "question": "how someone feels or acts",
+      "correct": "attitude",
+      "wrong": [
+        "attribute",
+        "civil"
+      ],
+      "word": "attitude"
+    },
+    {
+      "item_id": "attribute",
+      "question": "say what caused it",
+      "correct": "attribute",
+      "wrong": [
+        "civil",
+        "code"
+      ],
+      "word": "attribute"
+    },
+    {
+      "item_id": "civil",
+      "question": "polite and respectful",
+      "correct": "civil",
+      "wrong": [
+        "code",
+        "commit"
+      ],
+      "word": "civil"
+    },
+    {
+      "item_id": "code",
+      "question": "secret message or rules",
+      "correct": "code",
+      "wrong": [
+        "commit",
+        "communicate"
+      ],
+      "word": "code"
+    },
+    {
+      "item_id": "commit",
+      "question": "decide to do something",
+      "correct": "commit",
+      "wrong": [
+        "communicate",
+        "concentrate"
+      ],
+      "word": "commit"
+    },
+    {
+      "item_id": "communicate",
+      "question": "share ideas with others",
+      "correct": "communicate",
+      "wrong": [
+        "concentrate",
+        "confer"
+      ],
+      "word": "communicate"
+    },
+    {
+      "item_id": "concentrate",
+      "question": "focus attention on one thing",
+      "correct": "concentrate",
+      "wrong": [
+        "confer",
+        "contrast"
+      ],
+      "word": "concentrate"
+    },
+    {
+      "item_id": "confer",
+      "question": "grant or discuss formally",
+      "correct": "confer",
+      "wrong": [
+        "contrast",
+        "cycle"
+      ],
+      "word": "confer"
+    },
+    {
+      "item_id": "contrast",
+      "question": "a clear difference between two things",
+      "correct": "contrast",
+      "wrong": [
+        "cycle",
+        "debate"
+      ],
+      "word": "contrast"
+    },
+    {
+      "item_id": "cycle",
+      "question": "repeating set of steps",
+      "correct": "cycle",
+      "wrong": [
+        "debate",
+        "despite"
+      ],
+      "word": "cycle"
+    },
+    {
+      "item_id": "debate",
+      "question": "formal discussion of ideas",
+      "correct": "debate",
+      "wrong": [
+        "despite",
+        "dimension"
+      ],
+      "word": "debate"
+    },
+    {
+      "item_id": "despite",
+      "question": "even though something is true",
+      "correct": "despite",
+      "wrong": [
+        "dimension",
+        "domestic"
+      ],
+      "word": "despite"
+    },
+    {
+      "item_id": "dimension",
+      "question": "how long wide or tall",
+      "correct": "dimension",
+      "wrong": [
+        "domestic",
+        "emerge"
+      ],
+      "word": "dimension"
+    },
+    {
+      "item_id": "domestic",
+      "question": "inside the home",
+      "correct": "domestic",
+      "wrong": [
+        "emerge",
+        "potential"
+      ],
+      "word": "domestic"
+    },
+    {
+      "item_id": "emerge",
+      "question": "to come out from hiding",
+      "correct": "emerge",
+      "wrong": [
+        "potential",
+        "previous"
+      ],
+      "word": "emerge"
+    }
+  ]
+}

@@ -17,6 +17,9 @@
     "verbs500", "adjectives500", "nouns800", "verbs600", "adjectives600",
     "nouns900", "adverbs427", "nouns1000", "verbs700", "adjectives700",
     "verbs800", "adjectives800", "verbs900", "adjectives900", "verbs1000",
+    "ielts01", "ielts02", "ielts03", "ielts04", "ielts05",
+    "ielts06", "ielts07", "ielts08", "ielts09", "ielts10",
+    "ielts11", "ielts12", "ielts13", "ielts14", "ielts15",
   ];
 
   const DEMO_FALLBACK = {

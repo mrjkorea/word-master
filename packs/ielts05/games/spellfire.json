@@ -1,0 +1,407 @@
+{
+  "pack_id": "ielts05",
+  "title": "IELTS 401–500",
+  "seconds_per_letter": 5,
+  "items": [
+    {
+      "item_id": "phenomenon",
+      "word": "phenomenon"
+    },
+    {
+      "item_id": "priority",
+      "word": "priority"
+    },
+    {
+      "item_id": "prohibit",
+      "word": "prohibit"
+    },
+    {
+      "item_id": "publication",
+      "word": "publication"
+    },
+    {
+      "item_id": "quote",
+      "word": "quote"
+    },
+    {
+      "item_id": "release",
+      "word": "release"
+    },
+    {
+      "item_id": "reverse",
+      "word": "reverse"
+    },
+    {
+      "item_id": "simulate",
+      "word": "simulate"
+    },
+    {
+      "item_id": "sole",
+      "word": "sole"
+    },
+    {
+      "item_id": "somewhat",
+      "word": "somewhat"
+    },
+    {
+      "item_id": "submit",
+      "word": "submit"
+    },
+    {
+      "item_id": "successor",
+      "word": "successor"
+    },
+    {
+      "item_id": "survive",
+      "word": "survive"
+    },
+    {
+      "item_id": "thesis",
+      "word": "thesis"
+    },
+    {
+      "item_id": "topic",
+      "word": "topic"
+    },
+    {
+      "item_id": "transmit",
+      "word": "transmit"
+    },
+    {
+      "item_id": "ultimate",
+      "word": "ultimate"
+    },
+    {
+      "item_id": "unique",
+      "word": "unique"
+    },
+    {
+      "item_id": "visible",
+      "word": "visible"
+    },
+    {
+      "item_id": "voluntary",
+      "word": "voluntary"
+    },
+    {
+      "item_id": "abandon",
+      "word": "abandon"
+    },
+    {
+      "item_id": "accompany",
+      "word": "accompany"
+    },
+    {
+      "item_id": "accumulate",
+      "word": "accumulate"
+    },
+    {
+      "item_id": "ambiguous",
+      "word": "ambiguous"
+    },
+    {
+      "item_id": "append",
+      "word": "append"
+    },
+    {
+      "item_id": "appreciate",
+      "word": "appreciate"
+    },
+    {
+      "item_id": "arbitrary",
+      "word": "arbitrary"
+    },
+    {
+      "item_id": "automate",
+      "word": "automate"
+    },
+    {
+      "item_id": "bias",
+      "word": "bias"
+    },
+    {
+      "item_id": "chart",
+      "word": "chart"
+    },
+    {
+      "item_id": "clarify",
+      "word": "clarify"
+    },
+    {
+      "item_id": "commodity",
+      "word": "commodity"
+    },
+    {
+      "item_id": "complement",
+      "word": "complement"
+    },
+    {
+      "item_id": "conform",
+      "word": "conform"
+    },
+    {
+      "item_id": "contemporary",
+      "word": "contemporary"
+    },
+    {
+      "item_id": "contradict",
+      "word": "contradict"
+    },
+    {
+      "item_id": "crucial",
+      "word": "crucial"
+    },
+    {
+      "item_id": "currency",
+      "word": "currency"
+    },
+    {
+      "item_id": "denote",
+      "word": "denote"
+    },
+    {
+      "item_id": "detect",
+      "word": "detect"
+    },
+    {
+      "item_id": "deviate",
+      "word": "deviate"
+    },
+    {
+      "item_id": "displace",
+      "word": "displace"
+    },
+    {
+      "item_id": "drama",
+      "word": "drama"
+    },
+    {
+      "item_id": "eventual",
+      "word": "eventual"
+    },
+    {
+      "item_id": "exhibit",
+      "word": "exhibit"
+    },
+    {
+      "item_id": "exploit",
+      "word": "exploit"
+    },
+    {
+      "item_id": "fluctuate",
+      "word": "fluctuate"
+    },
+    {
+      "item_id": "guideline",
+      "word": "guideline"
+    },
+    {
+      "item_id": "highlight",
+      "word": "highlight"
+    },
+    {
+      "item_id": "implicit",
+      "word": "implicit"
+    },
+    {
+      "item_id": "induce",
+      "word": "induce"
+    },
+    {
+      "item_id": "inevitable",
+      "word": "inevitable"
+    },
+    {
+      "item_id": "infrastructure",
+      "word": "infrastructure"
+    },
+    {
+      "item_id": "inspect",
+      "word": "inspect"
+    },
+    {
+      "item_id": "intense",
+      "word": "intense"
+    },
+    {
+      "item_id": "manipulate",
+      "word": "manipulate"
+    },
+    {
+      "item_id": "minimise",
+      "word": "minimise"
+    },
+    {
+      "item_id": "nuclear",
+      "word": "nuclear"
+    },
+    {
+      "item_id": "offset",
+      "word": "offset"
+    },
+    {
+      "item_id": "paragraph",
+      "word": "paragraph"
+    },
+    {
+      "item_id": "plus",
+      "word": "plus"
+    },
+    {
+      "item_id": "practitioner",
+      "word": "practitioner"
+    },
+    {
+      "item_id": "predominant",
+      "word": "predominant"
+    },
+    {
+      "item_id": "prospect",
+      "word": "prospect"
+    },
+    {
+      "item_id": "radical",
+      "word": "radical"
+    },
+    {
+      "item_id": "random",
+      "word": "random"
+    },
+    {
+      "item_id": "reinforce",
+      "word": "reinforce"
+    },
+    {
+      "item_id": "restore",
+      "word": "restore"
+    },
+    {
+      "item_id": "revise",
+      "word": "revise"
+    },
+    {
+      "item_id": "schedule",
+      "word": "schedule"
+    },
+    {
+      "item_id": "tense",
+      "word": "tense"
+    },
+    {
+      "item_id": "terminate",
+      "word": "terminate"
+    },
+    {
+      "item_id": "theme",
+      "word": "theme"
+    },
+    {
+      "item_id": "thereby",
+      "word": "thereby"
+    },
+    {
+      "item_id": "uniform",
+      "word": "uniform"
+    },
+    {
+      "item_id": "vehicle",
+      "word": "vehicle"
+    },
+    {
+      "item_id": "via",
+      "word": "via"
+    },
+    {
+      "item_id": "virtual",
+      "word": "virtual"
+    },
+    {
+      "item_id": "visual",
+      "word": "visual"
+    },
+    {
+      "item_id": "widespread",
+      "word": "widespread"
+    },
+    {
+      "item_id": "accommodate",
+      "word": "accommodate"
+    },
+    {
+      "item_id": "analogy",
+      "word": "analogy"
+    },
+    {
+      "item_id": "anticipate",
+      "word": "anticipate"
+    },
+    {
+      "item_id": "assure",
+      "word": "assure"
+    },
+    {
+      "item_id": "attain",
+      "word": "attain"
+    },
+    {
+      "item_id": "behalf",
+      "word": "behalf"
+    },
+    {
+      "item_id": "bulk",
+      "word": "bulk"
+    },
+    {
+      "item_id": "cease",
+      "word": "cease"
+    },
+    {
+      "item_id": "coherent",
+      "word": "coherent"
+    },
+    {
+      "item_id": "coincide",
+      "word": "coincide"
+    },
+    {
+      "item_id": "commence",
+      "word": "commence"
+    },
+    {
+      "item_id": "compatible",
+      "word": "compatible"
+    },
+    {
+      "item_id": "concurrent",
+      "word": "concurrent"
+    },
+    {
+      "item_id": "confine",
+      "word": "confine"
+    },
+    {
+      "item_id": "controversy",
+      "word": "controversy"
+    },
+    {
+      "item_id": "converse",
+      "word": "converse"
+    },
+    {
+      "item_id": "device",
+      "word": "device"
+    },
+    {
+      "item_id": "devote",
+      "word": "devote"
+    },
+    {
+      "item_id": "diminish",
+      "word": "diminish"
+    },
+    {
+      "item_id": "distort",
+      "word": "distort"
+    }
+  ]
+}

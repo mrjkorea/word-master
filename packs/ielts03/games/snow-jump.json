@@ -1,0 +1,1008 @@
+{
+  "pack_id": "ielts03",
+  "title": "IELTS 201–300",
+  "module_id": "word_master",
+  "seconds": 15,
+  "items": [
+    {
+      "item_id": "error",
+      "question": "a wrong answer or result",
+      "correct": "error",
+      "wrong": [
+        "ethnic",
+        "goal"
+      ],
+      "word": "error"
+    },
+    {
+      "item_id": "ethnic",
+      "question": "of a certain culture group",
+      "correct": "ethnic",
+      "wrong": [
+        "goal",
+        "grant"
+      ],
+      "word": "ethnic"
+    },
+    {
+      "item_id": "goal",
+      "question": "place to score points",
+      "correct": "goal",
+      "wrong": [
+        "grant",
+        "hence"
+      ],
+      "word": "goal"
+    },
+    {
+      "item_id": "grant",
+      "question": "money given to help",
+      "correct": "grant",
+      "wrong": [
+        "hence",
+        "hypothesis"
+      ],
+      "word": "grant"
+    },
+    {
+      "item_id": "hence",
+      "question": "for this reason; therefore",
+      "correct": "hence",
+      "wrong": [
+        "hypothesis",
+        "implement"
+      ],
+      "word": "hence"
+    },
+    {
+      "item_id": "hypothesis",
+      "question": "testable scientific guess",
+      "correct": "hypothesis",
+      "wrong": [
+        "implement",
+        "implicate"
+      ],
+      "word": "hypothesis"
+    },
+    {
+      "item_id": "implement",
+      "question": "to put a plan into action",
+      "correct": "implement",
+      "wrong": [
+        "implicate",
+        "impose"
+      ],
+      "word": "implement"
+    },
+    {
+      "item_id": "implicate",
+      "question": "show involvement in something",
+      "correct": "implicate",
+      "wrong": [
+        "impose",
+        "integrate"
+      ],
+      "word": "implicate"
+    },
+    {
+      "item_id": "impose",
+      "question": "force someone to accept something",
+      "correct": "impose",
+      "wrong": [
+        "integrate",
+        "internal"
+      ],
+      "word": "impose"
+    },
+    {
+      "item_id": "integrate",
+      "question": "mix into one whole",
+      "correct": "integrate",
+      "wrong": [
+        "internal",
+        "investigate"
+      ],
+      "word": "integrate"
+    },
+    {
+      "item_id": "internal",
+      "question": "inside something",
+      "correct": "internal",
+      "wrong": [
+        "investigate",
+        "job"
+      ],
+      "word": "internal"
+    },
+    {
+      "item_id": "investigate",
+      "question": "look into something carefully",
+      "correct": "investigate",
+      "wrong": [
+        "job",
+        "label"
+      ],
+      "word": "investigate"
+    },
+    {
+      "item_id": "job",
+      "question": "work a person does",
+      "correct": "job",
+      "wrong": [
+        "label",
+        "mechanism"
+      ],
+      "word": "job"
+    },
+    {
+      "item_id": "label",
+      "question": "put a name tag",
+      "correct": "label",
+      "wrong": [
+        "mechanism",
+        "obvious"
+      ],
+      "word": "label"
+    },
+    {
+      "item_id": "mechanism",
+      "question": "moving parts of a machine",
+      "correct": "mechanism",
+      "wrong": [
+        "obvious",
+        "occupy"
+      ],
+      "word": "mechanism"
+    },
+    {
+      "item_id": "obvious",
+      "question": "easy to see or understand",
+      "correct": "obvious",
+      "wrong": [
+        "occupy",
+        "option"
+      ],
+      "word": "obvious"
+    },
+    {
+      "item_id": "occupy",
+      "question": "take and use a space",
+      "correct": "occupy",
+      "wrong": [
+        "option",
+        "output"
+      ],
+      "word": "occupy"
+    },
+    {
+      "item_id": "option",
+      "question": "a choice you can make",
+      "correct": "option",
+      "wrong": [
+        "output",
+        "overall"
+      ],
+      "word": "option"
+    },
+    {
+      "item_id": "output",
+      "question": "amount that is produced",
+      "correct": "output",
+      "wrong": [
+        "overall",
+        "parallel"
+      ],
+      "word": "output"
+    },
+    {
+      "item_id": "overall",
+      "question": "including everything together",
+      "correct": "overall",
+      "wrong": [
+        "parallel",
+        "parameter"
+      ],
+      "word": "overall"
+    },
+    {
+      "item_id": "parallel",
+      "question": "side by side never meeting",
+      "correct": "parallel",
+      "wrong": [
+        "parameter",
+        "phase"
+      ],
+      "word": "parallel"
+    },
+    {
+      "item_id": "parameter",
+      "question": "limit or measurable factor",
+      "correct": "parameter",
+      "wrong": [
+        "phase",
+        "predict"
+      ],
+      "word": "parameter"
+    },
+    {
+      "item_id": "phase",
+      "question": "stage of a process",
+      "correct": "phase",
+      "wrong": [
+        "predict",
+        "principal"
+      ],
+      "word": "phase"
+    },
+    {
+      "item_id": "predict",
+      "question": "say what will happen",
+      "correct": "predict",
+      "wrong": [
+        "principal",
+        "prior"
+      ],
+      "word": "predict"
+    },
+    {
+      "item_id": "principal",
+      "question": "most important or main",
+      "correct": "principal",
+      "wrong": [
+        "prior",
+        "professional"
+      ],
+      "word": "principal"
+    },
+    {
+      "item_id": "prior",
+      "question": "happening before now",
+      "correct": "prior",
+      "wrong": [
+        "professional",
+        "project"
+      ],
+      "word": "prior"
+    },
+    {
+      "item_id": "professional",
+      "question": "skilled at a job",
+      "correct": "professional",
+      "wrong": [
+        "project",
+        "promote"
+      ],
+      "word": "professional"
+    },
+    {
+      "item_id": "project",
+      "question": "a school task",
+      "correct": "project",
+      "wrong": [
+        "promote",
+        "regime"
+      ],
+      "word": "project"
+    },
+    {
+      "item_id": "promote",
+      "question": "give someone a higher job",
+      "correct": "promote",
+      "wrong": [
+        "regime",
+        "resolve"
+      ],
+      "word": "promote"
+    },
+    {
+      "item_id": "regime",
+      "question": "group that runs a country",
+      "correct": "regime",
+      "wrong": [
+        "resolve",
+        "retain"
+      ],
+      "word": "regime"
+    },
+    {
+      "item_id": "resolve",
+      "question": "to find an answer",
+      "correct": "resolve",
+      "wrong": [
+        "retain",
+        "series"
+      ],
+      "word": "resolve"
+    },
+    {
+      "item_id": "retain",
+      "question": "to keep something you have",
+      "correct": "retain",
+      "wrong": [
+        "series",
+        "statistic"
+      ],
+      "word": "retain"
+    },
+    {
+      "item_id": "series",
+      "question": "a group of similar things",
+      "correct": "series",
+      "wrong": [
+        "statistic",
+        "status"
+      ],
+      "word": "series"
+    },
+    {
+      "item_id": "statistic",
+      "question": "numerical fact from data",
+      "correct": "statistic",
+      "wrong": [
+        "status",
+        "stress"
+      ],
+      "word": "statistic"
+    },
+    {
+      "item_id": "status",
+      "question": "the current condition of something",
+      "correct": "status",
+      "wrong": [
+        "stress",
+        "subsequent"
+      ],
+      "word": "status"
+    },
+    {
+      "item_id": "stress",
+      "question": "worry that feels heavy",
+      "correct": "stress",
+      "wrong": [
+        "subsequent",
+        "sum"
+      ],
+      "word": "stress"
+    },
+    {
+      "item_id": "subsequent",
+      "question": "happening after something else",
+      "correct": "subsequent",
+      "wrong": [
+        "sum",
+        "summary"
+      ],
+      "word": "subsequent"
+    },
+    {
+      "item_id": "sum",
+      "question": "the total after adding",
+      "correct": "sum",
+      "wrong": [
+        "summary",
+        "undertake"
+      ],
+      "word": "sum"
+    },
+    {
+      "item_id": "summary",
+      "question": "short overview of main points",
+      "correct": "summary",
+      "wrong": [
+        "undertake",
+        "academy"
+      ],
+      "word": "summary"
+    },
+    {
+      "item_id": "undertake",
+      "question": "to begin a big task",
+      "correct": "undertake",
+      "wrong": [
+        "academy",
+        "adjust"
+      ],
+      "word": "undertake"
+    },
+    {
+      "item_id": "academy",
+      "question": "school for advanced study",
+      "correct": "academy",
+      "wrong": [
+        "adjust",
+        "alter"
+      ],
+      "word": "academy"
+    },
+    {
+      "item_id": "adjust",
+      "question": "change a little bit",
+      "correct": "adjust",
+      "wrong": [
+        "alter",
+        "amend"
+      ],
+      "word": "adjust"
+    },
+    {
+      "item_id": "alter",
+      "question": "to change something slightly",
+      "correct": "alter",
+      "wrong": [
+        "amend",
+        "aware"
+      ],
+      "word": "alter"
+    },
+    {
+      "item_id": "amend",
+      "question": "change it to fix",
+      "correct": "amend",
+      "wrong": [
+        "aware",
+        "capacity"
+      ],
+      "word": "amend"
+    },
+    {
+      "item_id": "aware",
+      "question": "knowing or noticing something",
+      "correct": "aware",
+      "wrong": [
+        "capacity",
+        "challenge"
+      ],
+      "word": "aware"
+    },
+    {
+      "item_id": "capacity",
+      "question": "amount a container can hold",
+      "correct": "capacity",
+      "wrong": [
+        "challenge",
+        "clause"
+      ],
+      "word": "capacity"
+    },
+    {
+      "item_id": "challenge",
+      "question": "a hard thing you try to do",
+      "correct": "challenge",
+      "wrong": [
+        "clause",
+        "compound"
+      ],
+      "word": "challenge"
+    },
+    {
+      "item_id": "clause",
+      "question": "part of a sentence",
+      "correct": "clause",
+      "wrong": [
+        "compound",
+        "conflict"
+      ],
+      "word": "clause"
+    },
+    {
+      "item_id": "compound",
+      "question": "substance of combined elements",
+      "correct": "compound",
+      "wrong": [
+        "conflict",
+        "consult"
+      ],
+      "word": "compound"
+    },
+    {
+      "item_id": "conflict",
+      "question": "a serious disagreement or fight",
+      "correct": "conflict",
+      "wrong": [
+        "consult",
+        "contact"
+      ],
+      "word": "conflict"
+    },
+    {
+      "item_id": "consult",
+      "question": "to ask someone for advice",
+      "correct": "consult",
+      "wrong": [
+        "contact",
+        "decline"
+      ],
+      "word": "consult"
+    },
+    {
+      "item_id": "contact",
+      "question": "the act of touching someone",
+      "correct": "contact",
+      "wrong": [
+        "decline",
+        "discrete"
+      ],
+      "word": "contact"
+    },
+    {
+      "item_id": "decline",
+      "question": "getting smaller over time",
+      "correct": "decline",
+      "wrong": [
+        "discrete",
+        "draft"
+      ],
+      "word": "decline"
+    },
+    {
+      "item_id": "discrete",
+      "question": "separate and distinct",
+      "correct": "discrete",
+      "wrong": [
+        "draft",
+        "enable"
+      ],
+      "word": "discrete"
+    },
+    {
+      "item_id": "draft",
+      "question": "write a first version",
+      "correct": "draft",
+      "wrong": [
+        "enable",
+        "energy"
+      ],
+      "word": "draft"
+    },
+    {
+      "item_id": "enable",
+      "question": "make something possible",
+      "correct": "enable",
+      "wrong": [
+        "energy",
+        "enforce"
+      ],
+      "word": "enable"
+    },
+    {
+      "item_id": "energy",
+      "question": "power to move or work",
+      "correct": "energy",
+      "wrong": [
+        "enforce",
+        "entity"
+      ],
+      "word": "energy"
+    },
+    {
+      "item_id": "enforce",
+      "question": "make people follow rules",
+      "correct": "enforce",
+      "wrong": [
+        "entity",
+        "equivalent"
+      ],
+      "word": "enforce"
+    },
+    {
+      "item_id": "entity",
+      "question": "something that exists",
+      "correct": "entity",
+      "wrong": [
+        "equivalent",
+        "evolve"
+      ],
+      "word": "entity"
+    },
+    {
+      "item_id": "equivalent",
+      "question": "same in value or amount",
+      "correct": "equivalent",
+      "wrong": [
+        "evolve",
+        "expand"
+      ],
+      "word": "equivalent"
+    },
+    {
+      "item_id": "evolve",
+      "question": "change slowly over time",
+      "correct": "evolve",
+      "wrong": [
+        "expand",
+        "expose"
+      ],
+      "word": "evolve"
+    },
+    {
+      "item_id": "expand",
+      "question": "to make something bigger",
+      "correct": "expand",
+      "wrong": [
+        "expose",
+        "external"
+      ],
+      "word": "expand"
+    },
+    {
+      "item_id": "expose",
+      "question": "show something hidden",
+      "correct": "expose",
+      "wrong": [
+        "external",
+        "facilitate"
+      ],
+      "word": "expose"
+    },
+    {
+      "item_id": "external",
+      "question": "outside part",
+      "correct": "external",
+      "wrong": [
+        "facilitate",
+        "fundamental"
+      ],
+      "word": "external"
+    },
+    {
+      "item_id": "facilitate",
+      "question": "make a job easier",
+      "correct": "facilitate",
+      "wrong": [
+        "fundamental",
+        "generate"
+      ],
+      "word": "facilitate"
+    },
+    {
+      "item_id": "fundamental",
+      "question": "basic and very important",
+      "correct": "fundamental",
+      "wrong": [
+        "generate",
+        "generation"
+      ],
+      "word": "fundamental"
+    },
+    {
+      "item_id": "generate",
+      "question": "to make or create something",
+      "correct": "generate",
+      "wrong": [
+        "generation",
+        "image"
+      ],
+      "word": "generate"
+    },
+    {
+      "item_id": "generation",
+      "question": "people born around the same time",
+      "correct": "generation",
+      "wrong": [
+        "image",
+        "liberal"
+      ],
+      "word": "generation"
+    },
+    {
+      "item_id": "image",
+      "question": "a picture of something",
+      "correct": "image",
+      "wrong": [
+        "liberal",
+        "licence"
+      ],
+      "word": "image"
+    },
+    {
+      "item_id": "liberal",
+      "question": "open to new ideas",
+      "correct": "liberal",
+      "wrong": [
+        "licence",
+        "logic"
+      ],
+      "word": "liberal"
+    },
+    {
+      "item_id": "licence",
+      "question": "official paper allowing something",
+      "correct": "licence",
+      "wrong": [
+        "logic",
+        "margin"
+      ],
+      "word": "licence"
+    },
+    {
+      "item_id": "logic",
+      "question": "reasoned thinking",
+      "correct": "logic",
+      "wrong": [
+        "margin",
+        "medical"
+      ],
+      "word": "logic"
+    },
+    {
+      "item_id": "margin",
+      "question": "edge or small difference",
+      "correct": "margin",
+      "wrong": [
+        "medical",
+        "mental"
+      ],
+      "word": "margin"
+    },
+    {
+      "item_id": "medical",
+      "question": "about doctors and health",
+      "correct": "medical",
+      "wrong": [
+        "mental",
+        "modify"
+      ],
+      "word": "medical"
+    },
+    {
+      "item_id": "mental",
+      "question": "of the mind or brain",
+      "correct": "mental",
+      "wrong": [
+        "modify",
+        "monitor"
+      ],
+      "word": "mental"
+    },
+    {
+      "item_id": "modify",
+      "question": "change something a little",
+      "correct": "modify",
+      "wrong": [
+        "monitor",
+        "network"
+      ],
+      "word": "modify"
+    },
+    {
+      "item_id": "monitor",
+      "question": "to watch or check something",
+      "correct": "monitor",
+      "wrong": [
+        "network",
+        "notion"
+      ],
+      "word": "monitor"
+    },
+    {
+      "item_id": "network",
+      "question": "computers joined together",
+      "correct": "network",
+      "wrong": [
+        "notion",
+        "objective"
+      ],
+      "word": "network"
+    },
+    {
+      "item_id": "notion",
+      "question": "an idea in your head",
+      "correct": "notion",
+      "wrong": [
+        "objective",
+        "orient"
+      ],
+      "word": "notion"
+    },
+    {
+      "item_id": "objective",
+      "question": "fair and not personal",
+      "correct": "objective",
+      "wrong": [
+        "orient",
+        "perspective"
+      ],
+      "word": "objective"
+    },
+    {
+      "item_id": "orient",
+      "question": "align or adjust direction",
+      "correct": "orient",
+      "wrong": [
+        "perspective",
+        "precise"
+      ],
+      "word": "orient"
+    },
+    {
+      "item_id": "perspective",
+      "question": "way of seeing things",
+      "correct": "perspective",
+      "wrong": [
+        "precise",
+        "prime"
+      ],
+      "word": "perspective"
+    },
+    {
+      "item_id": "precise",
+      "question": "exactly correct or exact",
+      "correct": "precise",
+      "wrong": [
+        "prime",
+        "psychology"
+      ],
+      "word": "precise"
+    },
+    {
+      "item_id": "prime",
+      "question": "best or first in order",
+      "correct": "prime",
+      "wrong": [
+        "psychology",
+        "pursue"
+      ],
+      "word": "prime"
+    },
+    {
+      "item_id": "psychology",
+      "question": "study of mind and behaviour",
+      "correct": "psychology",
+      "wrong": [
+        "pursue",
+        "ratio"
+      ],
+      "word": "psychology"
+    },
+    {
+      "item_id": "pursue",
+      "question": "chase or follow something",
+      "correct": "pursue",
+      "wrong": [
+        "ratio",
+        "reject"
+      ],
+      "word": "pursue"
+    },
+    {
+      "item_id": "ratio",
+      "question": "how two amounts compare",
+      "correct": "ratio",
+      "wrong": [
+        "reject",
+        "revenue"
+      ],
+      "word": "ratio"
+    },
+    {
+      "item_id": "reject",
+      "question": "to say no to something",
+      "correct": "reject",
+      "wrong": [
+        "revenue",
+        "stable"
+      ],
+      "word": "reject"
+    },
+    {
+      "item_id": "revenue",
+      "question": "money a shop earns",
+      "correct": "revenue",
+      "wrong": [
+        "stable",
+        "style"
+      ],
+      "word": "revenue"
+    },
+    {
+      "item_id": "stable",
+      "question": "steady and not likely to fall",
+      "correct": "stable",
+      "wrong": [
+        "style",
+        "substitute"
+      ],
+      "word": "stable"
+    },
+    {
+      "item_id": "style",
+      "question": "way of doing something",
+      "correct": "style",
+      "wrong": [
+        "substitute",
+        "sustain"
+      ],
+      "word": "style"
+    },
+    {
+      "item_id": "substitute",
+      "question": "use instead of another",
+      "correct": "substitute",
+      "wrong": [
+        "sustain",
+        "symbol"
+      ],
+      "word": "substitute"
+    },
+    {
+      "item_id": "sustain",
+      "question": "keep something going",
+      "correct": "sustain",
+      "wrong": [
+        "symbol",
+        "target"
+      ],
+      "word": "sustain"
+    },
+    {
+      "item_id": "symbol",
+      "question": "picture that means something",
+      "correct": "symbol",
+      "wrong": [
+        "target",
+        "transit"
+      ],
+      "word": "symbol"
+    },
+    {
+      "item_id": "target",
+      "question": "something you aim at",
+      "correct": "target",
+      "wrong": [
+        "transit",
+        "trend"
+      ],
+      "word": "target"
+    },
+    {
+      "item_id": "transit",
+      "question": "passage or public transport",
+      "correct": "transit",
+      "wrong": [
+        "trend",
+        "version"
+      ],
+      "word": "transit"
+    },
+    {
+      "item_id": "trend",
+      "question": "a popular new style",
+      "correct": "trend",
+      "wrong": [
+        "version",
+        "welfare"
+      ],
+      "word": "trend"
+    },
+    {
+      "item_id": "version",
+      "question": "a different form of something",
+      "correct": "version",
+      "wrong": [
+        "welfare",
+        "whereas"
+      ],
+      "word": "version"
+    },
+    {
+      "item_id": "welfare",
+      "question": "help and care for people",
+      "correct": "welfare",
+      "wrong": [
+        "whereas",
+        "error"
+      ],
+      "word": "welfare"
+    },
+    {
+      "item_id": "whereas",
+      "question": "but on the other hand",
+      "correct": "whereas",
+      "wrong": [
+        "error",
+        "ethnic"
+      ],
+      "word": "whereas"
+    }
+  ]
+}

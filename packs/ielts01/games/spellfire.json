@@ -1,0 +1,407 @@
+{
+  "pack_id": "ielts01",
+  "title": "IELTS 1–100",
+  "seconds_per_letter": 5,
+  "items": [
+    {
+      "item_id": "analyse",
+      "word": "analyse"
+    },
+    {
+      "item_id": "approach",
+      "word": "approach"
+    },
+    {
+      "item_id": "area",
+      "word": "area"
+    },
+    {
+      "item_id": "assess",
+      "word": "assess"
+    },
+    {
+      "item_id": "assume",
+      "word": "assume"
+    },
+    {
+      "item_id": "authority",
+      "word": "authority"
+    },
+    {
+      "item_id": "available",
+      "word": "available"
+    },
+    {
+      "item_id": "benefit",
+      "word": "benefit"
+    },
+    {
+      "item_id": "concept",
+      "word": "concept"
+    },
+    {
+      "item_id": "consist",
+      "word": "consist"
+    },
+    {
+      "item_id": "constitute",
+      "word": "constitute"
+    },
+    {
+      "item_id": "context",
+      "word": "context"
+    },
+    {
+      "item_id": "contract",
+      "word": "contract"
+    },
+    {
+      "item_id": "create",
+      "word": "create"
+    },
+    {
+      "item_id": "data",
+      "word": "data"
+    },
+    {
+      "item_id": "define",
+      "word": "define"
+    },
+    {
+      "item_id": "derive",
+      "word": "derive"
+    },
+    {
+      "item_id": "distribute",
+      "word": "distribute"
+    },
+    {
+      "item_id": "economy",
+      "word": "economy"
+    },
+    {
+      "item_id": "environment",
+      "word": "environment"
+    },
+    {
+      "item_id": "establish",
+      "word": "establish"
+    },
+    {
+      "item_id": "estimate",
+      "word": "estimate"
+    },
+    {
+      "item_id": "evident",
+      "word": "evident"
+    },
+    {
+      "item_id": "export",
+      "word": "export"
+    },
+    {
+      "item_id": "factor",
+      "word": "factor"
+    },
+    {
+      "item_id": "finance",
+      "word": "finance"
+    },
+    {
+      "item_id": "formula",
+      "word": "formula"
+    },
+    {
+      "item_id": "function",
+      "word": "function"
+    },
+    {
+      "item_id": "identify",
+      "word": "identify"
+    },
+    {
+      "item_id": "income",
+      "word": "income"
+    },
+    {
+      "item_id": "indicate",
+      "word": "indicate"
+    },
+    {
+      "item_id": "individual",
+      "word": "individual"
+    },
+    {
+      "item_id": "interpret",
+      "word": "interpret"
+    },
+    {
+      "item_id": "involve",
+      "word": "involve"
+    },
+    {
+      "item_id": "issue",
+      "word": "issue"
+    },
+    {
+      "item_id": "labour",
+      "word": "labour"
+    },
+    {
+      "item_id": "legal",
+      "word": "legal"
+    },
+    {
+      "item_id": "legislate",
+      "word": "legislate"
+    },
+    {
+      "item_id": "major",
+      "word": "major"
+    },
+    {
+      "item_id": "method",
+      "word": "method"
+    },
+    {
+      "item_id": "occur",
+      "word": "occur"
+    },
+    {
+      "item_id": "percent",
+      "word": "percent"
+    },
+    {
+      "item_id": "period",
+      "word": "period"
+    },
+    {
+      "item_id": "policy",
+      "word": "policy"
+    },
+    {
+      "item_id": "principle",
+      "word": "principle"
+    },
+    {
+      "item_id": "proceed",
+      "word": "proceed"
+    },
+    {
+      "item_id": "process",
+      "word": "process"
+    },
+    {
+      "item_id": "require",
+      "word": "require"
+    },
+    {
+      "item_id": "research",
+      "word": "research"
+    },
+    {
+      "item_id": "respond",
+      "word": "respond"
+    },
+    {
+      "item_id": "role",
+      "word": "role"
+    },
+    {
+      "item_id": "section",
+      "word": "section"
+    },
+    {
+      "item_id": "sector",
+      "word": "sector"
+    },
+    {
+      "item_id": "significant",
+      "word": "significant"
+    },
+    {
+      "item_id": "similar",
+      "word": "similar"
+    },
+    {
+      "item_id": "source",
+      "word": "source"
+    },
+    {
+      "item_id": "specific",
+      "word": "specific"
+    },
+    {
+      "item_id": "structure",
+      "word": "structure"
+    },
+    {
+      "item_id": "theory",
+      "word": "theory"
+    },
+    {
+      "item_id": "vary",
+      "word": "vary"
+    },
+    {
+      "item_id": "achieve",
+      "word": "achieve"
+    },
+    {
+      "item_id": "acquire",
+      "word": "acquire"
+    },
+    {
+      "item_id": "administrate",
+      "word": "administrate"
+    },
+    {
+      "item_id": "affect",
+      "word": "affect"
+    },
+    {
+      "item_id": "appropriate",
+      "word": "appropriate"
+    },
+    {
+      "item_id": "aspect",
+      "word": "aspect"
+    },
+    {
+      "item_id": "assist",
+      "word": "assist"
+    },
+    {
+      "item_id": "category",
+      "word": "category"
+    },
+    {
+      "item_id": "chapter",
+      "word": "chapter"
+    },
+    {
+      "item_id": "commission",
+      "word": "commission"
+    },
+    {
+      "item_id": "community",
+      "word": "community"
+    },
+    {
+      "item_id": "complex",
+      "word": "complex"
+    },
+    {
+      "item_id": "compute",
+      "word": "compute"
+    },
+    {
+      "item_id": "conclude",
+      "word": "conclude"
+    },
+    {
+      "item_id": "conduct",
+      "word": "conduct"
+    },
+    {
+      "item_id": "consequent",
+      "word": "consequent"
+    },
+    {
+      "item_id": "construct",
+      "word": "construct"
+    },
+    {
+      "item_id": "consume",
+      "word": "consume"
+    },
+    {
+      "item_id": "credit",
+      "word": "credit"
+    },
+    {
+      "item_id": "culture",
+      "word": "culture"
+    },
+    {
+      "item_id": "design",
+      "word": "design"
+    },
+    {
+      "item_id": "distinct",
+      "word": "distinct"
+    },
+    {
+      "item_id": "element",
+      "word": "element"
+    },
+    {
+      "item_id": "equate",
+      "word": "equate"
+    },
+    {
+      "item_id": "evaluate",
+      "word": "evaluate"
+    },
+    {
+      "item_id": "feature",
+      "word": "feature"
+    },
+    {
+      "item_id": "final",
+      "word": "final"
+    },
+    {
+      "item_id": "focus",
+      "word": "focus"
+    },
+    {
+      "item_id": "impact",
+      "word": "impact"
+    },
+    {
+      "item_id": "injure",
+      "word": "injure"
+    },
+    {
+      "item_id": "institute",
+      "word": "institute"
+    },
+    {
+      "item_id": "invest",
+      "word": "invest"
+    },
+    {
+      "item_id": "item",
+      "word": "item"
+    },
+    {
+      "item_id": "journal",
+      "word": "journal"
+    },
+    {
+      "item_id": "maintain",
+      "word": "maintain"
+    },
+    {
+      "item_id": "normal",
+      "word": "normal"
+    },
+    {
+      "item_id": "obtain",
+      "word": "obtain"
+    },
+    {
+      "item_id": "participate",
+      "word": "participate"
+    },
+    {
+      "item_id": "perceive",
+      "word": "perceive"
+    },
+    {
+      "item_id": "positive",
+      "word": "positive"
+    }
+  ]
+}

@@ -1,0 +1,407 @@
+{
+  "pack_id": "ielts09",
+  "title": "IELTS 801–900",
+  "seconds_per_letter": 5,
+  "items": [
+    {
+      "item_id": "broad",
+      "word": "broad"
+    },
+    {
+      "item_id": "broadcast",
+      "word": "broadcast"
+    },
+    {
+      "item_id": "brother",
+      "word": "brother"
+    },
+    {
+      "item_id": "brown",
+      "word": "brown"
+    },
+    {
+      "item_id": "brush",
+      "word": "brush"
+    },
+    {
+      "item_id": "budget",
+      "word": "budget"
+    },
+    {
+      "item_id": "build",
+      "word": "build"
+    },
+    {
+      "item_id": "building",
+      "word": "building"
+    },
+    {
+      "item_id": "bullet",
+      "word": "bullet"
+    },
+    {
+      "item_id": "bunch",
+      "word": "bunch"
+    },
+    {
+      "item_id": "burden",
+      "word": "burden"
+    },
+    {
+      "item_id": "burn",
+      "word": "burn"
+    },
+    {
+      "item_id": "burst",
+      "word": "burst"
+    },
+    {
+      "item_id": "bury",
+      "word": "bury"
+    },
+    {
+      "item_id": "bus",
+      "word": "bus"
+    },
+    {
+      "item_id": "business",
+      "word": "business"
+    },
+    {
+      "item_id": "busy",
+      "word": "busy"
+    },
+    {
+      "item_id": "but",
+      "word": "but"
+    },
+    {
+      "item_id": "butter",
+      "word": "butter"
+    },
+    {
+      "item_id": "button",
+      "word": "button"
+    },
+    {
+      "item_id": "buy",
+      "word": "buy"
+    },
+    {
+      "item_id": "by",
+      "word": "by"
+    },
+    {
+      "item_id": "cabin",
+      "word": "cabin"
+    },
+    {
+      "item_id": "cabinet",
+      "word": "cabinet"
+    },
+    {
+      "item_id": "cable",
+      "word": "cable"
+    },
+    {
+      "item_id": "cake",
+      "word": "cake"
+    },
+    {
+      "item_id": "calculate",
+      "word": "calculate"
+    },
+    {
+      "item_id": "call",
+      "word": "call"
+    },
+    {
+      "item_id": "calm",
+      "word": "calm"
+    },
+    {
+      "item_id": "camera",
+      "word": "camera"
+    },
+    {
+      "item_id": "camp",
+      "word": "camp"
+    },
+    {
+      "item_id": "campaign",
+      "word": "campaign"
+    },
+    {
+      "item_id": "campus",
+      "word": "campus"
+    },
+    {
+      "item_id": "can",
+      "word": "can"
+    },
+    {
+      "item_id": "cancel",
+      "word": "cancel"
+    },
+    {
+      "item_id": "cancer",
+      "word": "cancer"
+    },
+    {
+      "item_id": "candidate",
+      "word": "candidate"
+    },
+    {
+      "item_id": "cap",
+      "word": "cap"
+    },
+    {
+      "item_id": "capital",
+      "word": "capital"
+    },
+    {
+      "item_id": "captain",
+      "word": "captain"
+    },
+    {
+      "item_id": "capture",
+      "word": "capture"
+    },
+    {
+      "item_id": "car",
+      "word": "car"
+    },
+    {
+      "item_id": "carbon",
+      "word": "carbon"
+    },
+    {
+      "item_id": "card",
+      "word": "card"
+    },
+    {
+      "item_id": "care",
+      "word": "care"
+    },
+    {
+      "item_id": "career",
+      "word": "career"
+    },
+    {
+      "item_id": "careful",
+      "word": "careful"
+    },
+    {
+      "item_id": "careless",
+      "word": "careless"
+    },
+    {
+      "item_id": "carry",
+      "word": "carry"
+    },
+    {
+      "item_id": "case",
+      "word": "case"
+    },
+    {
+      "item_id": "cash",
+      "word": "cash"
+    },
+    {
+      "item_id": "cast",
+      "word": "cast"
+    },
+    {
+      "item_id": "cat",
+      "word": "cat"
+    },
+    {
+      "item_id": "catch",
+      "word": "catch"
+    },
+    {
+      "item_id": "cause",
+      "word": "cause"
+    },
+    {
+      "item_id": "ceiling",
+      "word": "ceiling"
+    },
+    {
+      "item_id": "celebrate",
+      "word": "celebrate"
+    },
+    {
+      "item_id": "cell",
+      "word": "cell"
+    },
+    {
+      "item_id": "cent",
+      "word": "cent"
+    },
+    {
+      "item_id": "center",
+      "word": "center"
+    },
+    {
+      "item_id": "central",
+      "word": "central"
+    },
+    {
+      "item_id": "century",
+      "word": "century"
+    },
+    {
+      "item_id": "ceremony",
+      "word": "ceremony"
+    },
+    {
+      "item_id": "certain",
+      "word": "certain"
+    },
+    {
+      "item_id": "chain",
+      "word": "chain"
+    },
+    {
+      "item_id": "chair",
+      "word": "chair"
+    },
+    {
+      "item_id": "chairman",
+      "word": "chairman"
+    },
+    {
+      "item_id": "chamber",
+      "word": "chamber"
+    },
+    {
+      "item_id": "chance",
+      "word": "chance"
+    },
+    {
+      "item_id": "change",
+      "word": "change"
+    },
+    {
+      "item_id": "character",
+      "word": "character"
+    },
+    {
+      "item_id": "characteristic",
+      "word": "characteristic"
+    },
+    {
+      "item_id": "charge",
+      "word": "charge"
+    },
+    {
+      "item_id": "charity",
+      "word": "charity"
+    },
+    {
+      "item_id": "chase",
+      "word": "chase"
+    },
+    {
+      "item_id": "cheap",
+      "word": "cheap"
+    },
+    {
+      "item_id": "check",
+      "word": "check"
+    },
+    {
+      "item_id": "chest",
+      "word": "chest"
+    },
+    {
+      "item_id": "chicken",
+      "word": "chicken"
+    },
+    {
+      "item_id": "chief",
+      "word": "chief"
+    },
+    {
+      "item_id": "child",
+      "word": "child"
+    },
+    {
+      "item_id": "childhood",
+      "word": "childhood"
+    },
+    {
+      "item_id": "chip",
+      "word": "chip"
+    },
+    {
+      "item_id": "chocolate",
+      "word": "chocolate"
+    },
+    {
+      "item_id": "choice",
+      "word": "choice"
+    },
+    {
+      "item_id": "choose",
+      "word": "choose"
+    },
+    {
+      "item_id": "church",
+      "word": "church"
+    },
+    {
+      "item_id": "cigarette",
+      "word": "cigarette"
+    },
+    {
+      "item_id": "circle",
+      "word": "circle"
+    },
+    {
+      "item_id": "citizen",
+      "word": "citizen"
+    },
+    {
+      "item_id": "city",
+      "word": "city"
+    },
+    {
+      "item_id": "claim",
+      "word": "claim"
+    },
+    {
+      "item_id": "class",
+      "word": "class"
+    },
+    {
+      "item_id": "classroom",
+      "word": "classroom"
+    },
+    {
+      "item_id": "clean",
+      "word": "clean"
+    },
+    {
+      "item_id": "clear",
+      "word": "clear"
+    },
+    {
+      "item_id": "clearly",
+      "word": "clearly"
+    },
+    {
+      "item_id": "client",
+      "word": "client"
+    },
+    {
+      "item_id": "climate",
+      "word": "climate"
+    },
+    {
+      "item_id": "climb",
+      "word": "climb"
+    }
+  ]
+}
