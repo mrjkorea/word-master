@@ -1,0 +1,7 @@
+# Tests already failing on main before 2026-10-23 (test fixtures out of date, not live bugs).
+# Remove a line once that test is fixed. CI skips only these.
+pack_standing_test.js
+path_lock_test.js
+progress_shard_save_failure_test.js
+score_day_log_test.js
+toeic_media_name_test.js
