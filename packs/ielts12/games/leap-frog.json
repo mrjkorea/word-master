@@ -1,0 +1,1008 @@
+{
+  "pack_id": "ielts12",
+  "title": "IELTS 1101–1200",
+  "module_id": "word_master",
+  "seconds": 15,
+  "items": [
+    {
+      "item_id": "diet",
+      "question": "the food you eat",
+      "correct": "diet",
+      "wrong": [
+        "differ",
+        "difference"
+      ],
+      "word": "diet"
+    },
+    {
+      "item_id": "differ",
+      "question": "to be not the same",
+      "correct": "differ",
+      "wrong": [
+        "difference",
+        "different"
+      ],
+      "word": "differ"
+    },
+    {
+      "item_id": "difference",
+      "question": "how things are not the same",
+      "correct": "difference",
+      "wrong": [
+        "different",
+        "differently"
+      ],
+      "word": "difference"
+    },
+    {
+      "item_id": "different",
+      "question": "not the same",
+      "correct": "different",
+      "wrong": [
+        "differently",
+        "difficult"
+      ],
+      "word": "different"
+    },
+    {
+      "item_id": "differently",
+      "question": "in another way",
+      "correct": "differently",
+      "wrong": [
+        "difficult",
+        "difficulty"
+      ],
+      "word": "differently"
+    },
+    {
+      "item_id": "difficult",
+      "question": "hard to do",
+      "correct": "difficult",
+      "wrong": [
+        "difficulty",
+        "dig"
+      ],
+      "word": "difficult"
+    },
+    {
+      "item_id": "difficulty",
+      "question": "something that is hard to do",
+      "correct": "difficulty",
+      "wrong": [
+        "dig",
+        "digital"
+      ],
+      "word": "difficulty"
+    },
+    {
+      "item_id": "dig",
+      "question": "make a hole in the ground",
+      "correct": "dig",
+      "wrong": [
+        "digital",
+        "dinner"
+      ],
+      "word": "dig"
+    },
+    {
+      "item_id": "digital",
+      "question": "using computers and screens",
+      "correct": "digital",
+      "wrong": [
+        "dinner",
+        "direct"
+      ],
+      "word": "digital"
+    },
+    {
+      "item_id": "dinner",
+      "question": "evening meal with family",
+      "correct": "dinner",
+      "wrong": [
+        "direct",
+        "direction"
+      ],
+      "word": "dinner"
+    },
+    {
+      "item_id": "direct",
+      "question": "straight and clear way",
+      "correct": "direct",
+      "wrong": [
+        "direction",
+        "directly"
+      ],
+      "word": "direct"
+    },
+    {
+      "item_id": "direction",
+      "question": "the way something moves or faces",
+      "correct": "direction",
+      "wrong": [
+        "directly",
+        "director"
+      ],
+      "word": "direction"
+    },
+    {
+      "item_id": "directly",
+      "question": "in a straight line",
+      "correct": "directly",
+      "wrong": [
+        "director",
+        "dirt"
+      ],
+      "word": "directly"
+    },
+    {
+      "item_id": "director",
+      "question": "person who leads a movie or play",
+      "correct": "director",
+      "wrong": [
+        "dirt",
+        "dirty"
+      ],
+      "word": "director"
+    },
+    {
+      "item_id": "dirt",
+      "question": "a word used in academic English: dirt",
+      "correct": "dirt",
+      "wrong": [
+        "dirty",
+        "disability"
+      ],
+      "word": "dirt"
+    },
+    {
+      "item_id": "dirty",
+      "question": "covered with mud or dust",
+      "correct": "dirty",
+      "wrong": [
+        "disability",
+        "disagree"
+      ],
+      "word": "dirty"
+    },
+    {
+      "item_id": "disability",
+      "question": "a word used in academic English: disability",
+      "correct": "disability",
+      "wrong": [
+        "disagree",
+        "disappear"
+      ],
+      "word": "disability"
+    },
+    {
+      "item_id": "disagree",
+      "question": "have a different opinion",
+      "correct": "disagree",
+      "wrong": [
+        "disappear",
+        "disappoint"
+      ],
+      "word": "disagree"
+    },
+    {
+      "item_id": "disappear",
+      "question": "to go out of sight",
+      "correct": "disappear",
+      "wrong": [
+        "disappoint",
+        "disaster"
+      ],
+      "word": "disappear"
+    },
+    {
+      "item_id": "disappoint",
+      "question": "make someone feel let down",
+      "correct": "disappoint",
+      "wrong": [
+        "disaster",
+        "discipline"
+      ],
+      "word": "disappoint"
+    },
+    {
+      "item_id": "disaster",
+      "question": "a sudden terrible event",
+      "correct": "disaster",
+      "wrong": [
+        "discipline",
+        "discount"
+      ],
+      "word": "disaster"
+    },
+    {
+      "item_id": "discipline",
+      "question": "practice following the rules",
+      "correct": "discipline",
+      "wrong": [
+        "discount",
+        "discover"
+      ],
+      "word": "discipline"
+    },
+    {
+      "item_id": "discount",
+      "question": "a word used in academic English: discount",
+      "correct": "discount",
+      "wrong": [
+        "discover",
+        "discovery"
+      ],
+      "word": "discount"
+    },
+    {
+      "item_id": "discover",
+      "question": "find something new",
+      "correct": "discover",
+      "wrong": [
+        "discovery",
+        "discuss"
+      ],
+      "word": "discover"
+    },
+    {
+      "item_id": "discovery",
+      "question": "finding something new",
+      "correct": "discovery",
+      "wrong": [
+        "discuss",
+        "discussion"
+      ],
+      "word": "discovery"
+    },
+    {
+      "item_id": "discuss",
+      "question": "to talk about something together",
+      "correct": "discuss",
+      "wrong": [
+        "discussion",
+        "disease"
+      ],
+      "word": "discuss"
+    },
+    {
+      "item_id": "discussion",
+      "question": "talking together about a topic",
+      "correct": "discussion",
+      "wrong": [
+        "disease",
+        "dish"
+      ],
+      "word": "discussion"
+    },
+    {
+      "item_id": "disease",
+      "question": "an illness that makes you sick",
+      "correct": "disease",
+      "wrong": [
+        "dish",
+        "dismiss"
+      ],
+      "word": "disease"
+    },
+    {
+      "item_id": "dish",
+      "question": "food served on a plate",
+      "correct": "dish",
+      "wrong": [
+        "dismiss",
+        "disorder"
+      ],
+      "word": "dish"
+    },
+    {
+      "item_id": "dismiss",
+      "question": "to tell someone to leave",
+      "correct": "dismiss",
+      "wrong": [
+        "disorder",
+        "dispute"
+      ],
+      "word": "dismiss"
+    },
+    {
+      "item_id": "disorder",
+      "question": "a word used in academic English: disorder",
+      "correct": "disorder",
+      "wrong": [
+        "dispute",
+        "distance"
+      ],
+      "word": "disorder"
+    },
+    {
+      "item_id": "dispute",
+      "question": "an argument between people",
+      "correct": "dispute",
+      "wrong": [
+        "distance",
+        "distant"
+      ],
+      "word": "dispute"
+    },
+    {
+      "item_id": "distance",
+      "question": "how far apart two places are",
+      "correct": "distance",
+      "wrong": [
+        "distant",
+        "distinction"
+      ],
+      "word": "distance"
+    },
+    {
+      "item_id": "distant",
+      "question": "far away in space",
+      "correct": "distant",
+      "wrong": [
+        "distinction",
+        "distinguish"
+      ],
+      "word": "distant"
+    },
+    {
+      "item_id": "distinction",
+      "question": "clear difference between things",
+      "correct": "distinction",
+      "wrong": [
+        "distinguish",
+        "distribution"
+      ],
+      "word": "distinction"
+    },
+    {
+      "item_id": "distinguish",
+      "question": "to see or show a difference",
+      "correct": "distinguish",
+      "wrong": [
+        "distribution",
+        "district"
+      ],
+      "word": "distinguish"
+    },
+    {
+      "item_id": "distribution",
+      "question": "giving things out to people",
+      "correct": "distribution",
+      "wrong": [
+        "district",
+        "disturb"
+      ],
+      "word": "distribution"
+    },
+    {
+      "item_id": "district",
+      "question": "an area of a city",
+      "correct": "district",
+      "wrong": [
+        "disturb",
+        "diversity"
+      ],
+      "word": "district"
+    },
+    {
+      "item_id": "disturb",
+      "question": "interrupt someone at rest",
+      "correct": "disturb",
+      "wrong": [
+        "diversity",
+        "divide"
+      ],
+      "word": "disturb"
+    },
+    {
+      "item_id": "diversity",
+      "question": "a word used in academic English: diversity",
+      "correct": "diversity",
+      "wrong": [
+        "divide",
+        "division"
+      ],
+      "word": "diversity"
+    },
+    {
+      "item_id": "divide",
+      "question": "to split something into parts",
+      "correct": "divide",
+      "wrong": [
+        "division",
+        "divorce"
+      ],
+      "word": "divide"
+    },
+    {
+      "item_id": "division",
+      "question": "splitting numbers into groups",
+      "correct": "division",
+      "wrong": [
+        "divorce",
+        "do"
+      ],
+      "word": "division"
+    },
+    {
+      "item_id": "divorce",
+      "question": "a word used in academic English: divorce",
+      "correct": "divorce",
+      "wrong": [
+        "do",
+        "doctor"
+      ],
+      "word": "divorce"
+    },
+    {
+      "item_id": "do",
+      "question": "to perform an action",
+      "correct": "do",
+      "wrong": [
+        "doctor",
+        "dog"
+      ],
+      "word": "do"
+    },
+    {
+      "item_id": "doctor",
+      "question": "medical person who helps sick people",
+      "correct": "doctor",
+      "wrong": [
+        "dog",
+        "dollar"
+      ],
+      "word": "doctor"
+    },
+    {
+      "item_id": "dog",
+      "question": "a pet animal with four legs",
+      "correct": "dog",
+      "wrong": [
+        "dollar",
+        "dominant"
+      ],
+      "word": "dog"
+    },
+    {
+      "item_id": "dollar",
+      "question": "American paper money",
+      "correct": "dollar",
+      "wrong": [
+        "dominant",
+        "donate"
+      ],
+      "word": "dollar"
+    },
+    {
+      "item_id": "dominant",
+      "question": "most powerful or important",
+      "correct": "dominant",
+      "wrong": [
+        "donate",
+        "door"
+      ],
+      "word": "dominant"
+    },
+    {
+      "item_id": "donate",
+      "question": "to do something related to donate",
+      "correct": "donate",
+      "wrong": [
+        "door",
+        "double"
+      ],
+      "word": "donate"
+    },
+    {
+      "item_id": "door",
+      "question": "a way to enter a room",
+      "correct": "door",
+      "wrong": [
+        "double",
+        "doubt"
+      ],
+      "word": "door"
+    },
+    {
+      "item_id": "double",
+      "question": "twice as much or two",
+      "correct": "double",
+      "wrong": [
+        "doubt",
+        "down"
+      ],
+      "word": "double"
+    },
+    {
+      "item_id": "doubt",
+      "question": "not being sure",
+      "correct": "doubt",
+      "wrong": [
+        "down",
+        "downtown"
+      ],
+      "word": "doubt"
+    },
+    {
+      "item_id": "down",
+      "question": "from higher to lower",
+      "correct": "down",
+      "wrong": [
+        "downtown",
+        "dozen"
+      ],
+      "word": "down"
+    },
+    {
+      "item_id": "downtown",
+      "question": "a word used in academic English: downtown",
+      "correct": "downtown",
+      "wrong": [
+        "dozen",
+        "drag"
+      ],
+      "word": "downtown"
+    },
+    {
+      "item_id": "dozen",
+      "question": "a word used in academic English: dozen",
+      "correct": "dozen",
+      "wrong": [
+        "drag",
+        "dramatic"
+      ],
+      "word": "dozen"
+    },
+    {
+      "item_id": "drag",
+      "question": "to pull something along",
+      "correct": "drag",
+      "wrong": [
+        "dramatic",
+        "dramatically"
+      ],
+      "word": "drag"
+    },
+    {
+      "item_id": "dramatic",
+      "question": "very surprising or exciting",
+      "correct": "dramatic",
+      "wrong": [
+        "dramatically",
+        "draw"
+      ],
+      "word": "dramatic"
+    },
+    {
+      "item_id": "dramatically",
+      "question": "in a big sudden way",
+      "correct": "dramatically",
+      "wrong": [
+        "draw",
+        "drawing"
+      ],
+      "word": "dramatically"
+    },
+    {
+      "item_id": "draw",
+      "question": "to make a picture",
+      "correct": "draw",
+      "wrong": [
+        "drawing",
+        "dream"
+      ],
+      "word": "draw"
+    },
+    {
+      "item_id": "drawing",
+      "question": "a picture made by hand",
+      "correct": "drawing",
+      "wrong": [
+        "dream",
+        "dress"
+      ],
+      "word": "drawing"
+    },
+    {
+      "item_id": "dream",
+      "question": "pictures in your mind while sleeping",
+      "correct": "dream",
+      "wrong": [
+        "dress",
+        "drink"
+      ],
+      "word": "dream"
+    },
+    {
+      "item_id": "dress",
+      "question": "one-piece clothes for girls",
+      "correct": "dress",
+      "wrong": [
+        "drink",
+        "drive"
+      ],
+      "word": "dress"
+    },
+    {
+      "item_id": "drink",
+      "question": "liquid you swallow",
+      "correct": "drink",
+      "wrong": [
+        "drive",
+        "driver"
+      ],
+      "word": "drink"
+    },
+    {
+      "item_id": "drive",
+      "question": "a trip by car",
+      "correct": "drive",
+      "wrong": [
+        "driver",
+        "drop"
+      ],
+      "word": "drive"
+    },
+    {
+      "item_id": "driver",
+      "question": "person who drives a car",
+      "correct": "driver",
+      "wrong": [
+        "drop",
+        "drug"
+      ],
+      "word": "driver"
+    },
+    {
+      "item_id": "drop",
+      "question": "tiny round bit of liquid",
+      "correct": "drop",
+      "wrong": [
+        "drug",
+        "dry"
+      ],
+      "word": "drop"
+    },
+    {
+      "item_id": "drug",
+      "question": "medicine you take to feel better",
+      "correct": "drug",
+      "wrong": [
+        "dry",
+        "due"
+      ],
+      "word": "drug"
+    },
+    {
+      "item_id": "dry",
+      "question": "has no water or moisture",
+      "correct": "dry",
+      "wrong": [
+        "due",
+        "during"
+      ],
+      "word": "dry"
+    },
+    {
+      "item_id": "due",
+      "question": "expected to happen at a certain time",
+      "correct": "due",
+      "wrong": [
+        "during",
+        "dust"
+      ],
+      "word": "due"
+    },
+    {
+      "item_id": "during",
+      "question": "throughout a period of time",
+      "correct": "during",
+      "wrong": [
+        "dust",
+        "duty"
+      ],
+      "word": "during"
+    },
+    {
+      "item_id": "dust",
+      "question": "a word used in academic English: dust",
+      "correct": "dust",
+      "wrong": [
+        "duty",
+        "each"
+      ],
+      "word": "dust"
+    },
+    {
+      "item_id": "duty",
+      "question": "a job you must do",
+      "correct": "duty",
+      "wrong": [
+        "each",
+        "eager"
+      ],
+      "word": "duty"
+    },
+    {
+      "item_id": "each",
+      "question": "every single one separately",
+      "correct": "each",
+      "wrong": [
+        "eager",
+        "ear"
+      ],
+      "word": "each"
+    },
+    {
+      "item_id": "eager",
+      "question": "wanting to start now",
+      "correct": "eager",
+      "wrong": [
+        "ear",
+        "early"
+      ],
+      "word": "eager"
+    },
+    {
+      "item_id": "ear",
+      "question": "body part for hearing",
+      "correct": "ear",
+      "wrong": [
+        "early",
+        "earn"
+      ],
+      "word": "ear"
+    },
+    {
+      "item_id": "early",
+      "question": "before the usual time",
+      "correct": "early",
+      "wrong": [
+        "earn",
+        "earth"
+      ],
+      "word": "early"
+    },
+    {
+      "item_id": "earn",
+      "question": "get money for work",
+      "correct": "earn",
+      "wrong": [
+        "earth",
+        "ease"
+      ],
+      "word": "earn"
+    },
+    {
+      "item_id": "earth",
+      "question": "the planet we live on",
+      "correct": "earth",
+      "wrong": [
+        "ease",
+        "easily"
+      ],
+      "word": "earth"
+    },
+    {
+      "item_id": "ease",
+      "question": "make something less hard",
+      "correct": "ease",
+      "wrong": [
+        "easily",
+        "east"
+      ],
+      "word": "ease"
+    },
+    {
+      "item_id": "easily",
+      "question": "with little effort",
+      "correct": "easily",
+      "wrong": [
+        "east",
+        "eastern"
+      ],
+      "word": "easily"
+    },
+    {
+      "item_id": "east",
+      "question": "where the sun rises",
+      "correct": "east",
+      "wrong": [
+        "eastern",
+        "easy"
+      ],
+      "word": "east"
+    },
+    {
+      "item_id": "eastern",
+      "question": "from the east side",
+      "correct": "eastern",
+      "wrong": [
+        "easy",
+        "eat"
+      ],
+      "word": "eastern"
+    },
+    {
+      "item_id": "easy",
+      "question": "not hard to do",
+      "correct": "easy",
+      "wrong": [
+        "eat",
+        "economic"
+      ],
+      "word": "easy"
+    },
+    {
+      "item_id": "eat",
+      "question": "to put food in mouth",
+      "correct": "eat",
+      "wrong": [
+        "economic",
+        "economics"
+      ],
+      "word": "eat"
+    },
+    {
+      "item_id": "economic",
+      "question": "about money and trade",
+      "correct": "economic",
+      "wrong": [
+        "economics",
+        "economist"
+      ],
+      "word": "economic"
+    },
+    {
+      "item_id": "economics",
+      "question": "study of money and trade",
+      "correct": "economics",
+      "wrong": [
+        "economist",
+        "edge"
+      ],
+      "word": "economics"
+    },
+    {
+      "item_id": "economist",
+      "question": "a word used in academic English: economist",
+      "correct": "economist",
+      "wrong": [
+        "edge",
+        "edition"
+      ],
+      "word": "economist"
+    },
+    {
+      "item_id": "edge",
+      "question": "the sharp side of something",
+      "correct": "edge",
+      "wrong": [
+        "edition",
+        "editor"
+      ],
+      "word": "edge"
+    },
+    {
+      "item_id": "edition",
+      "question": "one printed book version",
+      "correct": "edition",
+      "wrong": [
+        "editor",
+        "educate"
+      ],
+      "word": "edition"
+    },
+    {
+      "item_id": "editor",
+      "question": "person who checks writing",
+      "correct": "editor",
+      "wrong": [
+        "educate",
+        "education"
+      ],
+      "word": "editor"
+    },
+    {
+      "item_id": "educate",
+      "question": "teach someone new things",
+      "correct": "educate",
+      "wrong": [
+        "education",
+        "educational"
+      ],
+      "word": "educate"
+    },
+    {
+      "item_id": "education",
+      "question": "learning in school or at home",
+      "correct": "education",
+      "wrong": [
+        "educational",
+        "educator"
+      ],
+      "word": "education"
+    },
+    {
+      "item_id": "educational",
+      "question": "helps you learn new things",
+      "correct": "educational",
+      "wrong": [
+        "educator",
+        "effect"
+      ],
+      "word": "educational"
+    },
+    {
+      "item_id": "educator",
+      "question": "a word used in academic English: educator",
+      "correct": "educator",
+      "wrong": [
+        "effect",
+        "effective"
+      ],
+      "word": "educator"
+    },
+    {
+      "item_id": "effect",
+      "question": "result of an action",
+      "correct": "effect",
+      "wrong": [
+        "effective",
+        "effectively"
+      ],
+      "word": "effect"
+    },
+    {
+      "item_id": "effective",
+      "question": "works very well",
+      "correct": "effective",
+      "wrong": [
+        "effectively",
+        "efficiency"
+      ],
+      "word": "effective"
+    },
+    {
+      "item_id": "effectively",
+      "question": "in a way that works well",
+      "correct": "effectively",
+      "wrong": [
+        "efficiency",
+        "efficient"
+      ],
+      "word": "effectively"
+    },
+    {
+      "item_id": "efficiency",
+      "question": "doing work without waste",
+      "correct": "efficiency",
+      "wrong": [
+        "efficient",
+        "effort"
+      ],
+      "word": "efficiency"
+    },
+    {
+      "item_id": "efficient",
+      "question": "working well without waste",
+      "correct": "efficient",
+      "wrong": [
+        "effort",
+        "diet"
+      ],
+      "word": "efficient"
+    },
+    {
+      "item_id": "effort",
+      "question": "trying hard to do something",
+      "correct": "effort",
+      "wrong": [
+        "diet",
+        "differ"
+      ],
+      "word": "effort"
+    }
+  ]
+}

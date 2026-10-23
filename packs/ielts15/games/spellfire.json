@@ -1,0 +1,407 @@
+{
+  "pack_id": "ielts15",
+  "title": "IELTS 1401–1500",
+  "seconds_per_letter": 5,
+  "items": [
+    {
+      "item_id": "frame",
+      "word": "frame"
+    },
+    {
+      "item_id": "free",
+      "word": "free"
+    },
+    {
+      "item_id": "freedom",
+      "word": "freedom"
+    },
+    {
+      "item_id": "freeze",
+      "word": "freeze"
+    },
+    {
+      "item_id": "frequency",
+      "word": "frequency"
+    },
+    {
+      "item_id": "frequent",
+      "word": "frequent"
+    },
+    {
+      "item_id": "frequently",
+      "word": "frequently"
+    },
+    {
+      "item_id": "fresh",
+      "word": "fresh"
+    },
+    {
+      "item_id": "friend",
+      "word": "friend"
+    },
+    {
+      "item_id": "friendly",
+      "word": "friendly"
+    },
+    {
+      "item_id": "friendship",
+      "word": "friendship"
+    },
+    {
+      "item_id": "from",
+      "word": "from"
+    },
+    {
+      "item_id": "front",
+      "word": "front"
+    },
+    {
+      "item_id": "fruit",
+      "word": "fruit"
+    },
+    {
+      "item_id": "frustrate",
+      "word": "frustrate"
+    },
+    {
+      "item_id": "fuel",
+      "word": "fuel"
+    },
+    {
+      "item_id": "full",
+      "word": "full"
+    },
+    {
+      "item_id": "fully",
+      "word": "fully"
+    },
+    {
+      "item_id": "fun",
+      "word": "fun"
+    },
+    {
+      "item_id": "funding",
+      "word": "funding"
+    },
+    {
+      "item_id": "funeral",
+      "word": "funeral"
+    },
+    {
+      "item_id": "funny",
+      "word": "funny"
+    },
+    {
+      "item_id": "furniture",
+      "word": "furniture"
+    },
+    {
+      "item_id": "further",
+      "word": "further"
+    },
+    {
+      "item_id": "future",
+      "word": "future"
+    },
+    {
+      "item_id": "gain",
+      "word": "gain"
+    },
+    {
+      "item_id": "galaxy",
+      "word": "galaxy"
+    },
+    {
+      "item_id": "game",
+      "word": "game"
+    },
+    {
+      "item_id": "gap",
+      "word": "gap"
+    },
+    {
+      "item_id": "garage",
+      "word": "garage"
+    },
+    {
+      "item_id": "garden",
+      "word": "garden"
+    },
+    {
+      "item_id": "gas",
+      "word": "gas"
+    },
+    {
+      "item_id": "gate",
+      "word": "gate"
+    },
+    {
+      "item_id": "gather",
+      "word": "gather"
+    },
+    {
+      "item_id": "gay",
+      "word": "gay"
+    },
+    {
+      "item_id": "gaze",
+      "word": "gaze"
+    },
+    {
+      "item_id": "gear",
+      "word": "gear"
+    },
+    {
+      "item_id": "gene",
+      "word": "gene"
+    },
+    {
+      "item_id": "general",
+      "word": "general"
+    },
+    {
+      "item_id": "generally",
+      "word": "generally"
+    },
+    {
+      "item_id": "genetic",
+      "word": "genetic"
+    },
+    {
+      "item_id": "gentleman",
+      "word": "gentleman"
+    },
+    {
+      "item_id": "gently",
+      "word": "gently"
+    },
+    {
+      "item_id": "genuine",
+      "word": "genuine"
+    },
+    {
+      "item_id": "geography",
+      "word": "geography"
+    },
+    {
+      "item_id": "gesture",
+      "word": "gesture"
+    },
+    {
+      "item_id": "get",
+      "word": "get"
+    },
+    {
+      "item_id": "giant",
+      "word": "giant"
+    },
+    {
+      "item_id": "gift",
+      "word": "gift"
+    },
+    {
+      "item_id": "girl",
+      "word": "girl"
+    },
+    {
+      "item_id": "girlfriend",
+      "word": "girlfriend"
+    },
+    {
+      "item_id": "give",
+      "word": "give"
+    },
+    {
+      "item_id": "glad",
+      "word": "glad"
+    },
+    {
+      "item_id": "glance",
+      "word": "glance"
+    },
+    {
+      "item_id": "glass",
+      "word": "glass"
+    },
+    {
+      "item_id": "global",
+      "word": "global"
+    },
+    {
+      "item_id": "glove",
+      "word": "glove"
+    },
+    {
+      "item_id": "go",
+      "word": "go"
+    },
+    {
+      "item_id": "god",
+      "word": "god"
+    },
+    {
+      "item_id": "gold",
+      "word": "gold"
+    },
+    {
+      "item_id": "golden",
+      "word": "golden"
+    },
+    {
+      "item_id": "golf",
+      "word": "golf"
+    },
+    {
+      "item_id": "good",
+      "word": "good"
+    },
+    {
+      "item_id": "government",
+      "word": "government"
+    },
+    {
+      "item_id": "governor",
+      "word": "governor"
+    },
+    {
+      "item_id": "grab",
+      "word": "grab"
+    },
+    {
+      "item_id": "gradually",
+      "word": "gradually"
+    },
+    {
+      "item_id": "graduate",
+      "word": "graduate"
+    },
+    {
+      "item_id": "grain",
+      "word": "grain"
+    },
+    {
+      "item_id": "grand",
+      "word": "grand"
+    },
+    {
+      "item_id": "grandfather",
+      "word": "grandfather"
+    },
+    {
+      "item_id": "grandmother",
+      "word": "grandmother"
+    },
+    {
+      "item_id": "grass",
+      "word": "grass"
+    },
+    {
+      "item_id": "grave",
+      "word": "grave"
+    },
+    {
+      "item_id": "gravity",
+      "word": "gravity"
+    },
+    {
+      "item_id": "great",
+      "word": "great"
+    },
+    {
+      "item_id": "greatly",
+      "word": "greatly"
+    },
+    {
+      "item_id": "green",
+      "word": "green"
+    },
+    {
+      "item_id": "grocery",
+      "word": "grocery"
+    },
+    {
+      "item_id": "ground",
+      "word": "ground"
+    },
+    {
+      "item_id": "group",
+      "word": "group"
+    },
+    {
+      "item_id": "grow",
+      "word": "grow"
+    },
+    {
+      "item_id": "growth",
+      "word": "growth"
+    },
+    {
+      "item_id": "guard",
+      "word": "guard"
+    },
+    {
+      "item_id": "guess",
+      "word": "guess"
+    },
+    {
+      "item_id": "guest",
+      "word": "guest"
+    },
+    {
+      "item_id": "guide",
+      "word": "guide"
+    },
+    {
+      "item_id": "guilty",
+      "word": "guilty"
+    },
+    {
+      "item_id": "gun",
+      "word": "gun"
+    },
+    {
+      "item_id": "guy",
+      "word": "guy"
+    },
+    {
+      "item_id": "habit",
+      "word": "habit"
+    },
+    {
+      "item_id": "hair",
+      "word": "hair"
+    },
+    {
+      "item_id": "half",
+      "word": "half"
+    },
+    {
+      "item_id": "hall",
+      "word": "hall"
+    },
+    {
+      "item_id": "hand",
+      "word": "hand"
+    },
+    {
+      "item_id": "handle",
+      "word": "handle"
+    },
+    {
+      "item_id": "hang",
+      "word": "hang"
+    },
+    {
+      "item_id": "happen",
+      "word": "happen"
+    },
+    {
+      "item_id": "happy",
+      "word": "happy"
+    },
+    {
+      "item_id": "hard",
+      "word": "hard"
+    }
+  ]
+}

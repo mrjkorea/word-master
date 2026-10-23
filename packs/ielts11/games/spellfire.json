@@ -1,0 +1,407 @@
+{
+  "pack_id": "ielts11",
+  "title": "IELTS 1001–1100",
+  "seconds_per_letter": 5,
+  "items": [
+    {
+      "item_id": "coverage",
+      "word": "coverage"
+    },
+    {
+      "item_id": "cow",
+      "word": "cow"
+    },
+    {
+      "item_id": "crack",
+      "word": "crack"
+    },
+    {
+      "item_id": "craft",
+      "word": "craft"
+    },
+    {
+      "item_id": "crash",
+      "word": "crash"
+    },
+    {
+      "item_id": "crazy",
+      "word": "crazy"
+    },
+    {
+      "item_id": "cream",
+      "word": "cream"
+    },
+    {
+      "item_id": "creation",
+      "word": "creation"
+    },
+    {
+      "item_id": "creative",
+      "word": "creative"
+    },
+    {
+      "item_id": "creature",
+      "word": "creature"
+    },
+    {
+      "item_id": "crew",
+      "word": "crew"
+    },
+    {
+      "item_id": "crime",
+      "word": "crime"
+    },
+    {
+      "item_id": "criminal",
+      "word": "criminal"
+    },
+    {
+      "item_id": "crisis",
+      "word": "crisis"
+    },
+    {
+      "item_id": "critic",
+      "word": "critic"
+    },
+    {
+      "item_id": "critical",
+      "word": "critical"
+    },
+    {
+      "item_id": "criticism",
+      "word": "criticism"
+    },
+    {
+      "item_id": "criticize",
+      "word": "criticize"
+    },
+    {
+      "item_id": "crop",
+      "word": "crop"
+    },
+    {
+      "item_id": "cross",
+      "word": "cross"
+    },
+    {
+      "item_id": "crowd",
+      "word": "crowd"
+    },
+    {
+      "item_id": "cry",
+      "word": "cry"
+    },
+    {
+      "item_id": "cultural",
+      "word": "cultural"
+    },
+    {
+      "item_id": "cup",
+      "word": "cup"
+    },
+    {
+      "item_id": "cure",
+      "word": "cure"
+    },
+    {
+      "item_id": "curious",
+      "word": "curious"
+    },
+    {
+      "item_id": "current",
+      "word": "current"
+    },
+    {
+      "item_id": "currently",
+      "word": "currently"
+    },
+    {
+      "item_id": "curriculum",
+      "word": "curriculum"
+    },
+    {
+      "item_id": "curtain",
+      "word": "curtain"
+    },
+    {
+      "item_id": "curve",
+      "word": "curve"
+    },
+    {
+      "item_id": "custom",
+      "word": "custom"
+    },
+    {
+      "item_id": "customer",
+      "word": "customer"
+    },
+    {
+      "item_id": "cut",
+      "word": "cut"
+    },
+    {
+      "item_id": "dad",
+      "word": "dad"
+    },
+    {
+      "item_id": "daily",
+      "word": "daily"
+    },
+    {
+      "item_id": "damage",
+      "word": "damage"
+    },
+    {
+      "item_id": "dance",
+      "word": "dance"
+    },
+    {
+      "item_id": "danger",
+      "word": "danger"
+    },
+    {
+      "item_id": "dangerous",
+      "word": "dangerous"
+    },
+    {
+      "item_id": "dare",
+      "word": "dare"
+    },
+    {
+      "item_id": "dark",
+      "word": "dark"
+    },
+    {
+      "item_id": "date",
+      "word": "date"
+    },
+    {
+      "item_id": "daughter",
+      "word": "daughter"
+    },
+    {
+      "item_id": "day",
+      "word": "day"
+    },
+    {
+      "item_id": "dead",
+      "word": "dead"
+    },
+    {
+      "item_id": "deal",
+      "word": "deal"
+    },
+    {
+      "item_id": "dealer",
+      "word": "dealer"
+    },
+    {
+      "item_id": "dear",
+      "word": "dear"
+    },
+    {
+      "item_id": "death",
+      "word": "death"
+    },
+    {
+      "item_id": "decide",
+      "word": "decide"
+    },
+    {
+      "item_id": "decision",
+      "word": "decision"
+    },
+    {
+      "item_id": "deck",
+      "word": "deck"
+    },
+    {
+      "item_id": "declare",
+      "word": "declare"
+    },
+    {
+      "item_id": "decrease",
+      "word": "decrease"
+    },
+    {
+      "item_id": "deep",
+      "word": "deep"
+    },
+    {
+      "item_id": "deeply",
+      "word": "deeply"
+    },
+    {
+      "item_id": "deer",
+      "word": "deer"
+    },
+    {
+      "item_id": "defeat",
+      "word": "defeat"
+    },
+    {
+      "item_id": "defend",
+      "word": "defend"
+    },
+    {
+      "item_id": "defense",
+      "word": "defense"
+    },
+    {
+      "item_id": "definitely",
+      "word": "definitely"
+    },
+    {
+      "item_id": "definition",
+      "word": "definition"
+    },
+    {
+      "item_id": "degree",
+      "word": "degree"
+    },
+    {
+      "item_id": "delay",
+      "word": "delay"
+    },
+    {
+      "item_id": "deliver",
+      "word": "deliver"
+    },
+    {
+      "item_id": "delivery",
+      "word": "delivery"
+    },
+    {
+      "item_id": "demand",
+      "word": "demand"
+    },
+    {
+      "item_id": "democracy",
+      "word": "democracy"
+    },
+    {
+      "item_id": "democratic",
+      "word": "democratic"
+    },
+    {
+      "item_id": "demonstration",
+      "word": "demonstration"
+    },
+    {
+      "item_id": "department",
+      "word": "department"
+    },
+    {
+      "item_id": "depend",
+      "word": "depend"
+    },
+    {
+      "item_id": "dependent",
+      "word": "dependent"
+    },
+    {
+      "item_id": "depending",
+      "word": "depending"
+    },
+    {
+      "item_id": "depict",
+      "word": "depict"
+    },
+    {
+      "item_id": "depression",
+      "word": "depression"
+    },
+    {
+      "item_id": "depth",
+      "word": "depth"
+    },
+    {
+      "item_id": "deputy",
+      "word": "deputy"
+    },
+    {
+      "item_id": "describe",
+      "word": "describe"
+    },
+    {
+      "item_id": "description",
+      "word": "description"
+    },
+    {
+      "item_id": "desert",
+      "word": "desert"
+    },
+    {
+      "item_id": "deserve",
+      "word": "deserve"
+    },
+    {
+      "item_id": "designer",
+      "word": "designer"
+    },
+    {
+      "item_id": "desire",
+      "word": "desire"
+    },
+    {
+      "item_id": "desk",
+      "word": "desk"
+    },
+    {
+      "item_id": "desperate",
+      "word": "desperate"
+    },
+    {
+      "item_id": "destroy",
+      "word": "destroy"
+    },
+    {
+      "item_id": "destruction",
+      "word": "destruction"
+    },
+    {
+      "item_id": "detail",
+      "word": "detail"
+    },
+    {
+      "item_id": "detailed",
+      "word": "detailed"
+    },
+    {
+      "item_id": "determine",
+      "word": "determine"
+    },
+    {
+      "item_id": "develop",
+      "word": "develop"
+    },
+    {
+      "item_id": "development",
+      "word": "development"
+    },
+    {
+      "item_id": "diagram",
+      "word": "diagram"
+    },
+    {
+      "item_id": "dialogue",
+      "word": "dialogue"
+    },
+    {
+      "item_id": "diamond",
+      "word": "diamond"
+    },
+    {
+      "item_id": "diary",
+      "word": "diary"
+    },
+    {
+      "item_id": "dictionary",
+      "word": "dictionary"
+    },
+    {
+      "item_id": "die",
+      "word": "die"
+    }
+  ]
+}

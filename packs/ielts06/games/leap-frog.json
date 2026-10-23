@@ -1,0 +1,1008 @@
+{
+  "pack_id": "ielts06",
+  "title": "IELTS 501–600",
+  "module_id": "word_master",
+  "seconds": 15,
+  "items": [
+    {
+      "item_id": "duration",
+      "question": "a word used in academic English: duration",
+      "correct": "duration",
+      "wrong": [
+        "erode",
+        "ethic"
+      ],
+      "word": "duration"
+    },
+    {
+      "item_id": "erode",
+      "question": "a word used in academic English: erode",
+      "correct": "erode",
+      "wrong": [
+        "ethic",
+        "format"
+      ],
+      "word": "erode"
+    },
+    {
+      "item_id": "ethic",
+      "question": "a word used in academic English: ethic",
+      "correct": "ethic",
+      "wrong": [
+        "format",
+        "found"
+      ],
+      "word": "ethic"
+    },
+    {
+      "item_id": "format",
+      "question": "a word used in academic English: format",
+      "correct": "format",
+      "wrong": [
+        "found",
+        "inherent"
+      ],
+      "word": "format"
+    },
+    {
+      "item_id": "found",
+      "question": "start or build something new",
+      "correct": "found",
+      "wrong": [
+        "inherent",
+        "insight"
+      ],
+      "word": "found"
+    },
+    {
+      "item_id": "inherent",
+      "question": "built in from birth",
+      "correct": "inherent",
+      "wrong": [
+        "insight",
+        "integral"
+      ],
+      "word": "inherent"
+    },
+    {
+      "item_id": "insight",
+      "question": "a word used in academic English: insight",
+      "correct": "insight",
+      "wrong": [
+        "integral",
+        "intermediate"
+      ],
+      "word": "insight"
+    },
+    {
+      "item_id": "integral",
+      "question": "needed as a part",
+      "correct": "integral",
+      "wrong": [
+        "intermediate",
+        "manual"
+      ],
+      "word": "integral"
+    },
+    {
+      "item_id": "intermediate",
+      "question": "in the middle level",
+      "correct": "intermediate",
+      "wrong": [
+        "manual",
+        "mature"
+      ],
+      "word": "intermediate"
+    },
+    {
+      "item_id": "manual",
+      "question": "done by hand",
+      "correct": "manual",
+      "wrong": [
+        "mature",
+        "mediate"
+      ],
+      "word": "manual"
+    },
+    {
+      "item_id": "mature",
+      "question": "fully grown and ready",
+      "correct": "mature",
+      "wrong": [
+        "mediate",
+        "medium"
+      ],
+      "word": "mature"
+    },
+    {
+      "item_id": "mediate",
+      "question": "to do something related to mediate",
+      "correct": "mediate",
+      "wrong": [
+        "medium",
+        "military"
+      ],
+      "word": "mediate"
+    },
+    {
+      "item_id": "medium",
+      "question": "in the middle size",
+      "correct": "medium",
+      "wrong": [
+        "military",
+        "minimal"
+      ],
+      "word": "medium"
+    },
+    {
+      "item_id": "military",
+      "question": "related to the army",
+      "correct": "military",
+      "wrong": [
+        "minimal",
+        "mutual"
+      ],
+      "word": "military"
+    },
+    {
+      "item_id": "minimal",
+      "question": "very small amount",
+      "correct": "minimal",
+      "wrong": [
+        "mutual",
+        "norm"
+      ],
+      "word": "minimal"
+    },
+    {
+      "item_id": "mutual",
+      "question": "shared by two people or groups",
+      "correct": "mutual",
+      "wrong": [
+        "norm",
+        "overlap"
+      ],
+      "word": "mutual"
+    },
+    {
+      "item_id": "norm",
+      "question": "a word used in academic English: norm",
+      "correct": "norm",
+      "wrong": [
+        "overlap",
+        "passive"
+      ],
+      "word": "norm"
+    },
+    {
+      "item_id": "overlap",
+      "question": "a word used in academic English: overlap",
+      "correct": "overlap",
+      "wrong": [
+        "passive",
+        "portion"
+      ],
+      "word": "overlap"
+    },
+    {
+      "item_id": "passive",
+      "question": "not taking any action",
+      "correct": "passive",
+      "wrong": [
+        "portion",
+        "preliminary"
+      ],
+      "word": "passive"
+    },
+    {
+      "item_id": "portion",
+      "question": "a word used in academic English: portion",
+      "correct": "portion",
+      "wrong": [
+        "preliminary",
+        "protocol"
+      ],
+      "word": "portion"
+    },
+    {
+      "item_id": "preliminary",
+      "question": "first before the main",
+      "correct": "preliminary",
+      "wrong": [
+        "protocol",
+        "qualitative"
+      ],
+      "word": "preliminary"
+    },
+    {
+      "item_id": "protocol",
+      "question": "a word used in academic English: protocol",
+      "correct": "protocol",
+      "wrong": [
+        "qualitative",
+        "refine"
+      ],
+      "word": "protocol"
+    },
+    {
+      "item_id": "qualitative",
+      "question": "having the quality of qualitative",
+      "correct": "qualitative",
+      "wrong": [
+        "refine",
+        "relax"
+      ],
+      "word": "qualitative"
+    },
+    {
+      "item_id": "refine",
+      "question": "a word used in academic English: refine",
+      "correct": "refine",
+      "wrong": [
+        "relax",
+        "restrain"
+      ],
+      "word": "refine"
+    },
+    {
+      "item_id": "relax",
+      "question": "to rest and feel calm",
+      "correct": "relax",
+      "wrong": [
+        "restrain",
+        "revolution"
+      ],
+      "word": "relax"
+    },
+    {
+      "item_id": "restrain",
+      "question": "a word used in academic English: restrain",
+      "correct": "restrain",
+      "wrong": [
+        "revolution",
+        "rigid"
+      ],
+      "word": "restrain"
+    },
+    {
+      "item_id": "revolution",
+      "question": "a huge turning change",
+      "correct": "revolution",
+      "wrong": [
+        "rigid",
+        "route"
+      ],
+      "word": "revolution"
+    },
+    {
+      "item_id": "rigid",
+      "question": "stiff and not bending",
+      "correct": "rigid",
+      "wrong": [
+        "route",
+        "scenario"
+      ],
+      "word": "rigid"
+    },
+    {
+      "item_id": "route",
+      "question": "a way to go",
+      "correct": "route",
+      "wrong": [
+        "scenario",
+        "sphere"
+      ],
+      "word": "route"
+    },
+    {
+      "item_id": "scenario",
+      "question": "a word used in academic English: scenario",
+      "correct": "scenario",
+      "wrong": [
+        "sphere",
+        "subordinate"
+      ],
+      "word": "scenario"
+    },
+    {
+      "item_id": "sphere",
+      "question": "a word used in academic English: sphere",
+      "correct": "sphere",
+      "wrong": [
+        "subordinate",
+        "supplement"
+      ],
+      "word": "sphere"
+    },
+    {
+      "item_id": "subordinate",
+      "question": "to do something related to subordinate",
+      "correct": "subordinate",
+      "wrong": [
+        "supplement",
+        "suspend"
+      ],
+      "word": "subordinate"
+    },
+    {
+      "item_id": "supplement",
+      "question": "add extra to it",
+      "correct": "supplement",
+      "wrong": [
+        "suspend",
+        "team"
+      ],
+      "word": "supplement"
+    },
+    {
+      "item_id": "suspend",
+      "question": "hang something from above",
+      "correct": "suspend",
+      "wrong": [
+        "team",
+        "temporary"
+      ],
+      "word": "suspend"
+    },
+    {
+      "item_id": "team",
+      "question": "a group working together",
+      "correct": "team",
+      "wrong": [
+        "temporary",
+        "trigger"
+      ],
+      "word": "team"
+    },
+    {
+      "item_id": "temporary",
+      "question": "lasting only for a short time",
+      "correct": "temporary",
+      "wrong": [
+        "trigger",
+        "unify"
+      ],
+      "word": "temporary"
+    },
+    {
+      "item_id": "trigger",
+      "question": "a word used in academic English: trigger",
+      "correct": "trigger",
+      "wrong": [
+        "unify",
+        "violate"
+      ],
+      "word": "trigger"
+    },
+    {
+      "item_id": "unify",
+      "question": "to do something related to unify",
+      "correct": "unify",
+      "wrong": [
+        "violate",
+        "vision"
+      ],
+      "word": "unify"
+    },
+    {
+      "item_id": "violate",
+      "question": "to do something related to violate",
+      "correct": "violate",
+      "wrong": [
+        "vision",
+        "adjacent"
+      ],
+      "word": "violate"
+    },
+    {
+      "item_id": "vision",
+      "question": "the power to see",
+      "correct": "vision",
+      "wrong": [
+        "adjacent",
+        "albeit"
+      ],
+      "word": "vision"
+    },
+    {
+      "item_id": "adjacent",
+      "question": "next to something",
+      "correct": "adjacent",
+      "wrong": [
+        "albeit",
+        "assemble"
+      ],
+      "word": "adjacent"
+    },
+    {
+      "item_id": "albeit",
+      "question": "even though",
+      "correct": "albeit",
+      "wrong": [
+        "assemble",
+        "collapse"
+      ],
+      "word": "albeit"
+    },
+    {
+      "item_id": "assemble",
+      "question": "put the pieces together",
+      "correct": "assemble",
+      "wrong": [
+        "collapse",
+        "colleague"
+      ],
+      "word": "assemble"
+    },
+    {
+      "item_id": "collapse",
+      "question": "fall down all at once",
+      "correct": "collapse",
+      "wrong": [
+        "colleague",
+        "compile"
+      ],
+      "word": "collapse"
+    },
+    {
+      "item_id": "colleague",
+      "question": "a person who works with you",
+      "correct": "colleague",
+      "wrong": [
+        "compile",
+        "conceive"
+      ],
+      "word": "colleague"
+    },
+    {
+      "item_id": "compile",
+      "question": "gather things into one",
+      "correct": "compile",
+      "wrong": [
+        "conceive",
+        "convince"
+      ],
+      "word": "compile"
+    },
+    {
+      "item_id": "conceive",
+      "question": "think of an idea",
+      "correct": "conceive",
+      "wrong": [
+        "convince",
+        "depress"
+      ],
+      "word": "conceive"
+    },
+    {
+      "item_id": "convince",
+      "question": "make someone agree or believe something",
+      "correct": "convince",
+      "wrong": [
+        "depress",
+        "encounter"
+      ],
+      "word": "convince"
+    },
+    {
+      "item_id": "depress",
+      "question": "a word used in academic English: depress",
+      "correct": "depress",
+      "wrong": [
+        "encounter",
+        "enormous"
+      ],
+      "word": "depress"
+    },
+    {
+      "item_id": "encounter",
+      "question": "meet someone by chance",
+      "correct": "encounter",
+      "wrong": [
+        "enormous",
+        "forthcoming"
+      ],
+      "word": "encounter"
+    },
+    {
+      "item_id": "enormous",
+      "question": "very very big",
+      "correct": "enormous",
+      "wrong": [
+        "forthcoming",
+        "incline"
+      ],
+      "word": "enormous"
+    },
+    {
+      "item_id": "forthcoming",
+      "question": "coming very soon",
+      "correct": "forthcoming",
+      "wrong": [
+        "incline",
+        "integrity"
+      ],
+      "word": "forthcoming"
+    },
+    {
+      "item_id": "incline",
+      "question": "a word used in academic English: incline",
+      "correct": "incline",
+      "wrong": [
+        "integrity",
+        "intrinsic"
+      ],
+      "word": "incline"
+    },
+    {
+      "item_id": "integrity",
+      "question": "a word used in academic English: integrity",
+      "correct": "integrity",
+      "wrong": [
+        "intrinsic",
+        "invoke"
+      ],
+      "word": "integrity"
+    },
+    {
+      "item_id": "intrinsic",
+      "question": "a word used in academic English: intrinsic",
+      "correct": "intrinsic",
+      "wrong": [
+        "invoke",
+        "levy"
+      ],
+      "word": "intrinsic"
+    },
+    {
+      "item_id": "invoke",
+      "question": "a word used in academic English: invoke",
+      "correct": "invoke",
+      "wrong": [
+        "levy",
+        "likewise"
+      ],
+      "word": "invoke"
+    },
+    {
+      "item_id": "levy",
+      "question": "a word used in academic English: levy",
+      "correct": "levy",
+      "wrong": [
+        "likewise",
+        "nonetheless"
+      ],
+      "word": "levy"
+    },
+    {
+      "item_id": "likewise",
+      "question": "the same way too",
+      "correct": "likewise",
+      "wrong": [
+        "nonetheless",
+        "notwithstanding"
+      ],
+      "word": "likewise"
+    },
+    {
+      "item_id": "nonetheless",
+      "question": "even so or anyway",
+      "correct": "nonetheless",
+      "wrong": [
+        "notwithstanding",
+        "odd"
+      ],
+      "word": "nonetheless"
+    },
+    {
+      "item_id": "notwithstanding",
+      "question": "a word used in academic English: notwithstanding",
+      "correct": "notwithstanding",
+      "wrong": [
+        "odd",
+        "ongoing"
+      ],
+      "word": "notwithstanding"
+    },
+    {
+      "item_id": "odd",
+      "question": "strange or not normal",
+      "correct": "odd",
+      "wrong": [
+        "ongoing",
+        "panel"
+      ],
+      "word": "odd"
+    },
+    {
+      "item_id": "ongoing",
+      "question": "a word used in academic English: ongoing",
+      "correct": "ongoing",
+      "wrong": [
+        "panel",
+        "persist"
+      ],
+      "word": "ongoing"
+    },
+    {
+      "item_id": "panel",
+      "question": "flat board on a wall",
+      "correct": "panel",
+      "wrong": [
+        "persist",
+        "pose"
+      ],
+      "word": "panel"
+    },
+    {
+      "item_id": "persist",
+      "question": "keep trying without stopping",
+      "correct": "persist",
+      "wrong": [
+        "pose",
+        "reluctance"
+      ],
+      "word": "persist"
+    },
+    {
+      "item_id": "pose",
+      "question": "put your body in a position",
+      "correct": "pose",
+      "wrong": [
+        "reluctance",
+        "so-called"
+      ],
+      "word": "pose"
+    },
+    {
+      "item_id": "reluctance",
+      "question": "a word used in academic English: reluctance",
+      "correct": "reluctance",
+      "wrong": [
+        "so-called",
+        "straightforward"
+      ],
+      "word": "reluctance"
+    },
+    {
+      "item_id": "so-called",
+      "question": "called by that name",
+      "correct": "so-called",
+      "wrong": [
+        "straightforward",
+        "undergo"
+      ],
+      "word": "so-called"
+    },
+    {
+      "item_id": "straightforward",
+      "question": "easy to understand",
+      "correct": "straightforward",
+      "wrong": [
+        "undergo",
+        "whereby"
+      ],
+      "word": "straightforward"
+    },
+    {
+      "item_id": "undergo",
+      "question": "go through something yourself",
+      "correct": "undergo",
+      "wrong": [
+        "whereby",
+        "ability"
+      ],
+      "word": "undergo"
+    },
+    {
+      "item_id": "whereby",
+      "question": "by which something happens",
+      "correct": "whereby",
+      "wrong": [
+        "ability",
+        "able"
+      ],
+      "word": "whereby"
+    },
+    {
+      "item_id": "ability",
+      "question": "the power to do something",
+      "correct": "ability",
+      "wrong": [
+        "able",
+        "abroad"
+      ],
+      "word": "ability"
+    },
+    {
+      "item_id": "able",
+      "question": "having the power to do",
+      "correct": "able",
+      "wrong": [
+        "abroad",
+        "absence"
+      ],
+      "word": "able"
+    },
+    {
+      "item_id": "abroad",
+      "question": "in another country",
+      "correct": "abroad",
+      "wrong": [
+        "absence",
+        "absolute"
+      ],
+      "word": "abroad"
+    },
+    {
+      "item_id": "absence",
+      "question": "state of not being present",
+      "correct": "absence",
+      "wrong": [
+        "absolute",
+        "absorb"
+      ],
+      "word": "absence"
+    },
+    {
+      "item_id": "absolute",
+      "question": "complete and without any limit",
+      "correct": "absolute",
+      "wrong": [
+        "absorb",
+        "abuse"
+      ],
+      "word": "absolute"
+    },
+    {
+      "item_id": "absorb",
+      "question": "soak up the liquid",
+      "correct": "absorb",
+      "wrong": [
+        "abuse",
+        "academic"
+      ],
+      "word": "absorb"
+    },
+    {
+      "item_id": "abuse",
+      "question": "cruel unkind treatment",
+      "correct": "abuse",
+      "wrong": [
+        "academic",
+        "accept"
+      ],
+      "word": "abuse"
+    },
+    {
+      "item_id": "academic",
+      "question": "connected with school or study",
+      "correct": "academic",
+      "wrong": [
+        "accept",
+        "accident"
+      ],
+      "word": "academic"
+    },
+    {
+      "item_id": "accept",
+      "question": "agree to take or receive",
+      "correct": "accept",
+      "wrong": [
+        "accident",
+        "account"
+      ],
+      "word": "accept"
+    },
+    {
+      "item_id": "accident",
+      "question": "something bad that happens by chance",
+      "correct": "accident",
+      "wrong": [
+        "account",
+        "acid"
+      ],
+      "word": "accident"
+    },
+    {
+      "item_id": "account",
+      "question": "record of money",
+      "correct": "account",
+      "wrong": [
+        "acid",
+        "across"
+      ],
+      "word": "account"
+    },
+    {
+      "item_id": "acid",
+      "question": "sour liquid that burns",
+      "correct": "acid",
+      "wrong": [
+        "across",
+        "act"
+      ],
+      "word": "acid"
+    },
+    {
+      "item_id": "across",
+      "question": "from one side to the other",
+      "correct": "across",
+      "wrong": [
+        "act",
+        "action"
+      ],
+      "word": "across"
+    },
+    {
+      "item_id": "act",
+      "question": "something someone does on purpose",
+      "correct": "act",
+      "wrong": [
+        "action",
+        "active"
+      ],
+      "word": "act"
+    },
+    {
+      "item_id": "action",
+      "question": "something someone does",
+      "correct": "action",
+      "wrong": [
+        "active",
+        "activity"
+      ],
+      "word": "action"
+    },
+    {
+      "item_id": "active",
+      "question": "doing lots of things",
+      "correct": "active",
+      "wrong": [
+        "activity",
+        "actual"
+      ],
+      "word": "active"
+    },
+    {
+      "item_id": "activity",
+      "question": "something you do",
+      "correct": "activity",
+      "wrong": [
+        "actual",
+        "actually"
+      ],
+      "word": "activity"
+    },
+    {
+      "item_id": "actual",
+      "question": "real and true",
+      "correct": "actual",
+      "wrong": [
+        "actually",
+        "add"
+      ],
+      "word": "actual"
+    },
+    {
+      "item_id": "actually",
+      "question": "in fact or really",
+      "correct": "actually",
+      "wrong": [
+        "add",
+        "addition"
+      ],
+      "word": "actually"
+    },
+    {
+      "item_id": "add",
+      "question": "to put something with other things",
+      "correct": "add",
+      "wrong": [
+        "addition",
+        "address"
+      ],
+      "word": "add"
+    },
+    {
+      "item_id": "addition",
+      "question": "putting numbers together",
+      "correct": "addition",
+      "wrong": [
+        "address",
+        "administration"
+      ],
+      "word": "addition"
+    },
+    {
+      "item_id": "address",
+      "question": "where someone lives or works",
+      "correct": "address",
+      "wrong": [
+        "administration",
+        "admit"
+      ],
+      "word": "address"
+    },
+    {
+      "item_id": "administration",
+      "question": "running a school or office",
+      "correct": "administration",
+      "wrong": [
+        "admit",
+        "advance"
+      ],
+      "word": "administration"
+    },
+    {
+      "item_id": "admit",
+      "question": "say that something is true",
+      "correct": "admit",
+      "wrong": [
+        "advance",
+        "advantage"
+      ],
+      "word": "admit"
+    },
+    {
+      "item_id": "advance",
+      "question": "a step forward",
+      "correct": "advance",
+      "wrong": [
+        "advantage",
+        "adventure"
+      ],
+      "word": "advance"
+    },
+    {
+      "item_id": "advantage",
+      "question": "something that helps you win",
+      "correct": "advantage",
+      "wrong": [
+        "adventure",
+        "advertise"
+      ],
+      "word": "advantage"
+    },
+    {
+      "item_id": "adventure",
+      "question": "a word used in academic English: adventure",
+      "correct": "adventure",
+      "wrong": [
+        "advertise",
+        "advice"
+      ],
+      "word": "adventure"
+    },
+    {
+      "item_id": "advertise",
+      "question": "tell people about something",
+      "correct": "advertise",
+      "wrong": [
+        "advice",
+        "advise"
+      ],
+      "word": "advertise"
+    },
+    {
+      "item_id": "advice",
+      "question": "words that help decide",
+      "correct": "advice",
+      "wrong": [
+        "advise",
+        "duration"
+      ],
+      "word": "advice"
+    },
+    {
+      "item_id": "advise",
+      "question": "give helpful suggestions",
+      "correct": "advise",
+      "wrong": [
+        "duration",
+        "erode"
+      ],
+      "word": "advise"
+    }
+  ]
+}

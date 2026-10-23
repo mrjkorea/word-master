@@ -1,0 +1,407 @@
+{
+  "pack_id": "ielts06",
+  "title": "IELTS 501–600",
+  "seconds_per_letter": 5,
+  "items": [
+    {
+      "item_id": "duration",
+      "word": "duration"
+    },
+    {
+      "item_id": "erode",
+      "word": "erode"
+    },
+    {
+      "item_id": "ethic",
+      "word": "ethic"
+    },
+    {
+      "item_id": "format",
+      "word": "format"
+    },
+    {
+      "item_id": "found",
+      "word": "found"
+    },
+    {
+      "item_id": "inherent",
+      "word": "inherent"
+    },
+    {
+      "item_id": "insight",
+      "word": "insight"
+    },
+    {
+      "item_id": "integral",
+      "word": "integral"
+    },
+    {
+      "item_id": "intermediate",
+      "word": "intermediate"
+    },
+    {
+      "item_id": "manual",
+      "word": "manual"
+    },
+    {
+      "item_id": "mature",
+      "word": "mature"
+    },
+    {
+      "item_id": "mediate",
+      "word": "mediate"
+    },
+    {
+      "item_id": "medium",
+      "word": "medium"
+    },
+    {
+      "item_id": "military",
+      "word": "military"
+    },
+    {
+      "item_id": "minimal",
+      "word": "minimal"
+    },
+    {
+      "item_id": "mutual",
+      "word": "mutual"
+    },
+    {
+      "item_id": "norm",
+      "word": "norm"
+    },
+    {
+      "item_id": "overlap",
+      "word": "overlap"
+    },
+    {
+      "item_id": "passive",
+      "word": "passive"
+    },
+    {
+      "item_id": "portion",
+      "word": "portion"
+    },
+    {
+      "item_id": "preliminary",
+      "word": "preliminary"
+    },
+    {
+      "item_id": "protocol",
+      "word": "protocol"
+    },
+    {
+      "item_id": "qualitative",
+      "word": "qualitative"
+    },
+    {
+      "item_id": "refine",
+      "word": "refine"
+    },
+    {
+      "item_id": "relax",
+      "word": "relax"
+    },
+    {
+      "item_id": "restrain",
+      "word": "restrain"
+    },
+    {
+      "item_id": "revolution",
+      "word": "revolution"
+    },
+    {
+      "item_id": "rigid",
+      "word": "rigid"
+    },
+    {
+      "item_id": "route",
+      "word": "route"
+    },
+    {
+      "item_id": "scenario",
+      "word": "scenario"
+    },
+    {
+      "item_id": "sphere",
+      "word": "sphere"
+    },
+    {
+      "item_id": "subordinate",
+      "word": "subordinate"
+    },
+    {
+      "item_id": "supplement",
+      "word": "supplement"
+    },
+    {
+      "item_id": "suspend",
+      "word": "suspend"
+    },
+    {
+      "item_id": "team",
+      "word": "team"
+    },
+    {
+      "item_id": "temporary",
+      "word": "temporary"
+    },
+    {
+      "item_id": "trigger",
+      "word": "trigger"
+    },
+    {
+      "item_id": "unify",
+      "word": "unify"
+    },
+    {
+      "item_id": "violate",
+      "word": "violate"
+    },
+    {
+      "item_id": "vision",
+      "word": "vision"
+    },
+    {
+      "item_id": "adjacent",
+      "word": "adjacent"
+    },
+    {
+      "item_id": "albeit",
+      "word": "albeit"
+    },
+    {
+      "item_id": "assemble",
+      "word": "assemble"
+    },
+    {
+      "item_id": "collapse",
+      "word": "collapse"
+    },
+    {
+      "item_id": "colleague",
+      "word": "colleague"
+    },
+    {
+      "item_id": "compile",
+      "word": "compile"
+    },
+    {
+      "item_id": "conceive",
+      "word": "conceive"
+    },
+    {
+      "item_id": "convince",
+      "word": "convince"
+    },
+    {
+      "item_id": "depress",
+      "word": "depress"
+    },
+    {
+      "item_id": "encounter",
+      "word": "encounter"
+    },
+    {
+      "item_id": "enormous",
+      "word": "enormous"
+    },
+    {
+      "item_id": "forthcoming",
+      "word": "forthcoming"
+    },
+    {
+      "item_id": "incline",
+      "word": "incline"
+    },
+    {
+      "item_id": "integrity",
+      "word": "integrity"
+    },
+    {
+      "item_id": "intrinsic",
+      "word": "intrinsic"
+    },
+    {
+      "item_id": "invoke",
+      "word": "invoke"
+    },
+    {
+      "item_id": "levy",
+      "word": "levy"
+    },
+    {
+      "item_id": "likewise",
+      "word": "likewise"
+    },
+    {
+      "item_id": "nonetheless",
+      "word": "nonetheless"
+    },
+    {
+      "item_id": "notwithstanding",
+      "word": "notwithstanding"
+    },
+    {
+      "item_id": "odd",
+      "word": "odd"
+    },
+    {
+      "item_id": "ongoing",
+      "word": "ongoing"
+    },
+    {
+      "item_id": "panel",
+      "word": "panel"
+    },
+    {
+      "item_id": "persist",
+      "word": "persist"
+    },
+    {
+      "item_id": "pose",
+      "word": "pose"
+    },
+    {
+      "item_id": "reluctance",
+      "word": "reluctance"
+    },
+    {
+      "item_id": "so-called",
+      "word": "so-called"
+    },
+    {
+      "item_id": "straightforward",
+      "word": "straightforward"
+    },
+    {
+      "item_id": "undergo",
+      "word": "undergo"
+    },
+    {
+      "item_id": "whereby",
+      "word": "whereby"
+    },
+    {
+      "item_id": "ability",
+      "word": "ability"
+    },
+    {
+      "item_id": "able",
+      "word": "able"
+    },
+    {
+      "item_id": "abroad",
+      "word": "abroad"
+    },
+    {
+      "item_id": "absence",
+      "word": "absence"
+    },
+    {
+      "item_id": "absolute",
+      "word": "absolute"
+    },
+    {
+      "item_id": "absorb",
+      "word": "absorb"
+    },
+    {
+      "item_id": "abuse",
+      "word": "abuse"
+    },
+    {
+      "item_id": "academic",
+      "word": "academic"
+    },
+    {
+      "item_id": "accept",
+      "word": "accept"
+    },
+    {
+      "item_id": "accident",
+      "word": "accident"
+    },
+    {
+      "item_id": "account",
+      "word": "account"
+    },
+    {
+      "item_id": "acid",
+      "word": "acid"
+    },
+    {
+      "item_id": "across",
+      "word": "across"
+    },
+    {
+      "item_id": "act",
+      "word": "act"
+    },
+    {
+      "item_id": "action",
+      "word": "action"
+    },
+    {
+      "item_id": "active",
+      "word": "active"
+    },
+    {
+      "item_id": "activity",
+      "word": "activity"
+    },
+    {
+      "item_id": "actual",
+      "word": "actual"
+    },
+    {
+      "item_id": "actually",
+      "word": "actually"
+    },
+    {
+      "item_id": "add",
+      "word": "add"
+    },
+    {
+      "item_id": "addition",
+      "word": "addition"
+    },
+    {
+      "item_id": "address",
+      "word": "address"
+    },
+    {
+      "item_id": "administration",
+      "word": "administration"
+    },
+    {
+      "item_id": "admit",
+      "word": "admit"
+    },
+    {
+      "item_id": "advance",
+      "word": "advance"
+    },
+    {
+      "item_id": "advantage",
+      "word": "advantage"
+    },
+    {
+      "item_id": "adventure",
+      "word": "adventure"
+    },
+    {
+      "item_id": "advertise",
+      "word": "advertise"
+    },
+    {
+      "item_id": "advice",
+      "word": "advice"
+    },
+    {
+      "item_id": "advise",
+      "word": "advise"
+    }
+  ]
+}

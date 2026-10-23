@@ -1,0 +1,407 @@
+{
+  "pack_id": "ielts14",
+  "title": "IELTS 1301–1400",
+  "seconds_per_letter": 5,
+  "items": [
+    {
+      "item_id": "explosion",
+      "word": "explosion"
+    },
+    {
+      "item_id": "expression",
+      "word": "expression"
+    },
+    {
+      "item_id": "extend",
+      "word": "extend"
+    },
+    {
+      "item_id": "extension",
+      "word": "extension"
+    },
+    {
+      "item_id": "extensive",
+      "word": "extensive"
+    },
+    {
+      "item_id": "extent",
+      "word": "extent"
+    },
+    {
+      "item_id": "extra",
+      "word": "extra"
+    },
+    {
+      "item_id": "extraordinary",
+      "word": "extraordinary"
+    },
+    {
+      "item_id": "extreme",
+      "word": "extreme"
+    },
+    {
+      "item_id": "extremely",
+      "word": "extremely"
+    },
+    {
+      "item_id": "eye",
+      "word": "eye"
+    },
+    {
+      "item_id": "face",
+      "word": "face"
+    },
+    {
+      "item_id": "facility",
+      "word": "facility"
+    },
+    {
+      "item_id": "fact",
+      "word": "fact"
+    },
+    {
+      "item_id": "factory",
+      "word": "factory"
+    },
+    {
+      "item_id": "faculty",
+      "word": "faculty"
+    },
+    {
+      "item_id": "fail",
+      "word": "fail"
+    },
+    {
+      "item_id": "failure",
+      "word": "failure"
+    },
+    {
+      "item_id": "fair",
+      "word": "fair"
+    },
+    {
+      "item_id": "fairly",
+      "word": "fairly"
+    },
+    {
+      "item_id": "faith",
+      "word": "faith"
+    },
+    {
+      "item_id": "fall",
+      "word": "fall"
+    },
+    {
+      "item_id": "false",
+      "word": "false"
+    },
+    {
+      "item_id": "familiar",
+      "word": "familiar"
+    },
+    {
+      "item_id": "family",
+      "word": "family"
+    },
+    {
+      "item_id": "famous",
+      "word": "famous"
+    },
+    {
+      "item_id": "fan",
+      "word": "fan"
+    },
+    {
+      "item_id": "fancy",
+      "word": "fancy"
+    },
+    {
+      "item_id": "far",
+      "word": "far"
+    },
+    {
+      "item_id": "farm",
+      "word": "farm"
+    },
+    {
+      "item_id": "farmer",
+      "word": "farmer"
+    },
+    {
+      "item_id": "fashion",
+      "word": "fashion"
+    },
+    {
+      "item_id": "fast",
+      "word": "fast"
+    },
+    {
+      "item_id": "fat",
+      "word": "fat"
+    },
+    {
+      "item_id": "father",
+      "word": "father"
+    },
+    {
+      "item_id": "fault",
+      "word": "fault"
+    },
+    {
+      "item_id": "favour",
+      "word": "favour"
+    },
+    {
+      "item_id": "favourite",
+      "word": "favourite"
+    },
+    {
+      "item_id": "fear",
+      "word": "fear"
+    },
+    {
+      "item_id": "feed",
+      "word": "feed"
+    },
+    {
+      "item_id": "feel",
+      "word": "feel"
+    },
+    {
+      "item_id": "feeling",
+      "word": "feeling"
+    },
+    {
+      "item_id": "fellow",
+      "word": "fellow"
+    },
+    {
+      "item_id": "female",
+      "word": "female"
+    },
+    {
+      "item_id": "fence",
+      "word": "fence"
+    },
+    {
+      "item_id": "few",
+      "word": "few"
+    },
+    {
+      "item_id": "field",
+      "word": "field"
+    },
+    {
+      "item_id": "fight",
+      "word": "fight"
+    },
+    {
+      "item_id": "figure",
+      "word": "figure"
+    },
+    {
+      "item_id": "fill",
+      "word": "fill"
+    },
+    {
+      "item_id": "film",
+      "word": "film"
+    },
+    {
+      "item_id": "finally",
+      "word": "finally"
+    },
+    {
+      "item_id": "financial",
+      "word": "financial"
+    },
+    {
+      "item_id": "find",
+      "word": "find"
+    },
+    {
+      "item_id": "finding",
+      "word": "finding"
+    },
+    {
+      "item_id": "fine",
+      "word": "fine"
+    },
+    {
+      "item_id": "finger",
+      "word": "finger"
+    },
+    {
+      "item_id": "finish",
+      "word": "finish"
+    },
+    {
+      "item_id": "fire",
+      "word": "fire"
+    },
+    {
+      "item_id": "firm",
+      "word": "firm"
+    },
+    {
+      "item_id": "first",
+      "word": "first"
+    },
+    {
+      "item_id": "fish",
+      "word": "fish"
+    },
+    {
+      "item_id": "fishing",
+      "word": "fishing"
+    },
+    {
+      "item_id": "fit",
+      "word": "fit"
+    },
+    {
+      "item_id": "fitness",
+      "word": "fitness"
+    },
+    {
+      "item_id": "five",
+      "word": "five"
+    },
+    {
+      "item_id": "fix",
+      "word": "fix"
+    },
+    {
+      "item_id": "flag",
+      "word": "flag"
+    },
+    {
+      "item_id": "flame",
+      "word": "flame"
+    },
+    {
+      "item_id": "flat",
+      "word": "flat"
+    },
+    {
+      "item_id": "flavour",
+      "word": "flavour"
+    },
+    {
+      "item_id": "flee",
+      "word": "flee"
+    },
+    {
+      "item_id": "flesh",
+      "word": "flesh"
+    },
+    {
+      "item_id": "flight",
+      "word": "flight"
+    },
+    {
+      "item_id": "float",
+      "word": "float"
+    },
+    {
+      "item_id": "floor",
+      "word": "floor"
+    },
+    {
+      "item_id": "flow",
+      "word": "flow"
+    },
+    {
+      "item_id": "flower",
+      "word": "flower"
+    },
+    {
+      "item_id": "fly",
+      "word": "fly"
+    },
+    {
+      "item_id": "folk",
+      "word": "folk"
+    },
+    {
+      "item_id": "follow",
+      "word": "follow"
+    },
+    {
+      "item_id": "following",
+      "word": "following"
+    },
+    {
+      "item_id": "food",
+      "word": "food"
+    },
+    {
+      "item_id": "foot",
+      "word": "foot"
+    },
+    {
+      "item_id": "football",
+      "word": "football"
+    },
+    {
+      "item_id": "for",
+      "word": "for"
+    },
+    {
+      "item_id": "force",
+      "word": "force"
+    },
+    {
+      "item_id": "foreign",
+      "word": "foreign"
+    },
+    {
+      "item_id": "forest",
+      "word": "forest"
+    },
+    {
+      "item_id": "forever",
+      "word": "forever"
+    },
+    {
+      "item_id": "forget",
+      "word": "forget"
+    },
+    {
+      "item_id": "form",
+      "word": "form"
+    },
+    {
+      "item_id": "formal",
+      "word": "formal"
+    },
+    {
+      "item_id": "formation",
+      "word": "formation"
+    },
+    {
+      "item_id": "former",
+      "word": "former"
+    },
+    {
+      "item_id": "forth",
+      "word": "forth"
+    },
+    {
+      "item_id": "fortune",
+      "word": "fortune"
+    },
+    {
+      "item_id": "forward",
+      "word": "forward"
+    },
+    {
+      "item_id": "founder",
+      "word": "founder"
+    },
+    {
+      "item_id": "four",
+      "word": "four"
+    }
+  ]
+}

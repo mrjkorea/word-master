@@ -1,0 +1,407 @@
+{
+  "pack_id": "ielts12",
+  "title": "IELTS 1101–1200",
+  "seconds_per_letter": 5,
+  "items": [
+    {
+      "item_id": "diet",
+      "word": "diet"
+    },
+    {
+      "item_id": "differ",
+      "word": "differ"
+    },
+    {
+      "item_id": "difference",
+      "word": "difference"
+    },
+    {
+      "item_id": "different",
+      "word": "different"
+    },
+    {
+      "item_id": "differently",
+      "word": "differently"
+    },
+    {
+      "item_id": "difficult",
+      "word": "difficult"
+    },
+    {
+      "item_id": "difficulty",
+      "word": "difficulty"
+    },
+    {
+      "item_id": "dig",
+      "word": "dig"
+    },
+    {
+      "item_id": "digital",
+      "word": "digital"
+    },
+    {
+      "item_id": "dinner",
+      "word": "dinner"
+    },
+    {
+      "item_id": "direct",
+      "word": "direct"
+    },
+    {
+      "item_id": "direction",
+      "word": "direction"
+    },
+    {
+      "item_id": "directly",
+      "word": "directly"
+    },
+    {
+      "item_id": "director",
+      "word": "director"
+    },
+    {
+      "item_id": "dirt",
+      "word": "dirt"
+    },
+    {
+      "item_id": "dirty",
+      "word": "dirty"
+    },
+    {
+      "item_id": "disability",
+      "word": "disability"
+    },
+    {
+      "item_id": "disagree",
+      "word": "disagree"
+    },
+    {
+      "item_id": "disappear",
+      "word": "disappear"
+    },
+    {
+      "item_id": "disappoint",
+      "word": "disappoint"
+    },
+    {
+      "item_id": "disaster",
+      "word": "disaster"
+    },
+    {
+      "item_id": "discipline",
+      "word": "discipline"
+    },
+    {
+      "item_id": "discount",
+      "word": "discount"
+    },
+    {
+      "item_id": "discover",
+      "word": "discover"
+    },
+    {
+      "item_id": "discovery",
+      "word": "discovery"
+    },
+    {
+      "item_id": "discuss",
+      "word": "discuss"
+    },
+    {
+      "item_id": "discussion",
+      "word": "discussion"
+    },
+    {
+      "item_id": "disease",
+      "word": "disease"
+    },
+    {
+      "item_id": "dish",
+      "word": "dish"
+    },
+    {
+      "item_id": "dismiss",
+      "word": "dismiss"
+    },
+    {
+      "item_id": "disorder",
+      "word": "disorder"
+    },
+    {
+      "item_id": "dispute",
+      "word": "dispute"
+    },
+    {
+      "item_id": "distance",
+      "word": "distance"
+    },
+    {
+      "item_id": "distant",
+      "word": "distant"
+    },
+    {
+      "item_id": "distinction",
+      "word": "distinction"
+    },
+    {
+      "item_id": "distinguish",
+      "word": "distinguish"
+    },
+    {
+      "item_id": "distribution",
+      "word": "distribution"
+    },
+    {
+      "item_id": "district",
+      "word": "district"
+    },
+    {
+      "item_id": "disturb",
+      "word": "disturb"
+    },
+    {
+      "item_id": "diversity",
+      "word": "diversity"
+    },
+    {
+      "item_id": "divide",
+      "word": "divide"
+    },
+    {
+      "item_id": "division",
+      "word": "division"
+    },
+    {
+      "item_id": "divorce",
+      "word": "divorce"
+    },
+    {
+      "item_id": "do",
+      "word": "do"
+    },
+    {
+      "item_id": "doctor",
+      "word": "doctor"
+    },
+    {
+      "item_id": "dog",
+      "word": "dog"
+    },
+    {
+      "item_id": "dollar",
+      "word": "dollar"
+    },
+    {
+      "item_id": "dominant",
+      "word": "dominant"
+    },
+    {
+      "item_id": "donate",
+      "word": "donate"
+    },
+    {
+      "item_id": "door",
+      "word": "door"
+    },
+    {
+      "item_id": "double",
+      "word": "double"
+    },
+    {
+      "item_id": "doubt",
+      "word": "doubt"
+    },
+    {
+      "item_id": "down",
+      "word": "down"
+    },
+    {
+      "item_id": "downtown",
+      "word": "downtown"
+    },
+    {
+      "item_id": "dozen",
+      "word": "dozen"
+    },
+    {
+      "item_id": "drag",
+      "word": "drag"
+    },
+    {
+      "item_id": "dramatic",
+      "word": "dramatic"
+    },
+    {
+      "item_id": "dramatically",
+      "word": "dramatically"
+    },
+    {
+      "item_id": "draw",
+      "word": "draw"
+    },
+    {
+      "item_id": "drawing",
+      "word": "drawing"
+    },
+    {
+      "item_id": "dream",
+      "word": "dream"
+    },
+    {
+      "item_id": "dress",
+      "word": "dress"
+    },
+    {
+      "item_id": "drink",
+      "word": "drink"
+    },
+    {
+      "item_id": "drive",
+      "word": "drive"
+    },
+    {
+      "item_id": "driver",
+      "word": "driver"
+    },
+    {
+      "item_id": "drop",
+      "word": "drop"
+    },
+    {
+      "item_id": "drug",
+      "word": "drug"
+    },
+    {
+      "item_id": "dry",
+      "word": "dry"
+    },
+    {
+      "item_id": "due",
+      "word": "due"
+    },
+    {
+      "item_id": "during",
+      "word": "during"
+    },
+    {
+      "item_id": "dust",
+      "word": "dust"
+    },
+    {
+      "item_id": "duty",
+      "word": "duty"
+    },
+    {
+      "item_id": "each",
+      "word": "each"
+    },
+    {
+      "item_id": "eager",
+      "word": "eager"
+    },
+    {
+      "item_id": "ear",
+      "word": "ear"
+    },
+    {
+      "item_id": "early",
+      "word": "early"
+    },
+    {
+      "item_id": "earn",
+      "word": "earn"
+    },
+    {
+      "item_id": "earth",
+      "word": "earth"
+    },
+    {
+      "item_id": "ease",
+      "word": "ease"
+    },
+    {
+      "item_id": "easily",
+      "word": "easily"
+    },
+    {
+      "item_id": "east",
+      "word": "east"
+    },
+    {
+      "item_id": "eastern",
+      "word": "eastern"
+    },
+    {
+      "item_id": "easy",
+      "word": "easy"
+    },
+    {
+      "item_id": "eat",
+      "word": "eat"
+    },
+    {
+      "item_id": "economic",
+      "word": "economic"
+    },
+    {
+      "item_id": "economics",
+      "word": "economics"
+    },
+    {
+      "item_id": "economist",
+      "word": "economist"
+    },
+    {
+      "item_id": "edge",
+      "word": "edge"
+    },
+    {
+      "item_id": "edition",
+      "word": "edition"
+    },
+    {
+      "item_id": "editor",
+      "word": "editor"
+    },
+    {
+      "item_id": "educate",
+      "word": "educate"
+    },
+    {
+      "item_id": "education",
+      "word": "education"
+    },
+    {
+      "item_id": "educational",
+      "word": "educational"
+    },
+    {
+      "item_id": "educator",
+      "word": "educator"
+    },
+    {
+      "item_id": "effect",
+      "word": "effect"
+    },
+    {
+      "item_id": "effective",
+      "word": "effective"
+    },
+    {
+      "item_id": "effectively",
+      "word": "effectively"
+    },
+    {
+      "item_id": "efficiency",
+      "word": "efficiency"
+    },
+    {
+      "item_id": "efficient",
+      "word": "efficient"
+    },
+    {
+      "item_id": "effort",
+      "word": "effort"
+    }
+  ]
+}

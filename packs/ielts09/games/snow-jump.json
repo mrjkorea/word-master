@@ -1,0 +1,1008 @@
+{
+  "pack_id": "ielts09",
+  "title": "IELTS 801–900",
+  "module_id": "word_master",
+  "seconds": 15,
+  "items": [
+    {
+      "item_id": "broad",
+      "question": "wide from side to side",
+      "correct": "broad",
+      "wrong": [
+        "broadcast",
+        "brother"
+      ],
+      "word": "broad"
+    },
+    {
+      "item_id": "broadcast",
+      "question": "a word used in academic English: broadcast",
+      "correct": "broadcast",
+      "wrong": [
+        "brother",
+        "brown"
+      ],
+      "word": "broadcast"
+    },
+    {
+      "item_id": "brother",
+      "question": "a boy who has the same parents",
+      "correct": "brother",
+      "wrong": [
+        "brown",
+        "brush"
+      ],
+      "word": "brother"
+    },
+    {
+      "item_id": "brown",
+      "question": "the color of chocolate or soil",
+      "correct": "brown",
+      "wrong": [
+        "brush",
+        "budget"
+      ],
+      "word": "brown"
+    },
+    {
+      "item_id": "brush",
+      "question": "clean with a brush",
+      "correct": "brush",
+      "wrong": [
+        "budget",
+        "build"
+      ],
+      "word": "brush"
+    },
+    {
+      "item_id": "budget",
+      "question": "plan for spending money",
+      "correct": "budget",
+      "wrong": [
+        "build",
+        "building"
+      ],
+      "word": "budget"
+    },
+    {
+      "item_id": "build",
+      "question": "to make something by putting parts together",
+      "correct": "build",
+      "wrong": [
+        "building",
+        "bullet"
+      ],
+      "word": "build"
+    },
+    {
+      "item_id": "building",
+      "question": "big place with walls and roof",
+      "correct": "building",
+      "wrong": [
+        "bullet",
+        "bunch"
+      ],
+      "word": "building"
+    },
+    {
+      "item_id": "bullet",
+      "question": "a word used in academic English: bullet",
+      "correct": "bullet",
+      "wrong": [
+        "bunch",
+        "burden"
+      ],
+      "word": "bullet"
+    },
+    {
+      "item_id": "bunch",
+      "question": "a word used in academic English: bunch",
+      "correct": "bunch",
+      "wrong": [
+        "burden",
+        "burn"
+      ],
+      "word": "bunch"
+    },
+    {
+      "item_id": "burden",
+      "question": "heavy load to carry",
+      "correct": "burden",
+      "wrong": [
+        "burn",
+        "burst"
+      ],
+      "word": "burden"
+    },
+    {
+      "item_id": "burn",
+      "question": "to destroy with fire",
+      "correct": "burn",
+      "wrong": [
+        "burst",
+        "bury"
+      ],
+      "word": "burn"
+    },
+    {
+      "item_id": "burst",
+      "question": "break open all at once",
+      "correct": "burst",
+      "wrong": [
+        "bury",
+        "bus"
+      ],
+      "word": "burst"
+    },
+    {
+      "item_id": "bury",
+      "question": "put something in the ground",
+      "correct": "bury",
+      "wrong": [
+        "bus",
+        "business"
+      ],
+      "word": "bury"
+    },
+    {
+      "item_id": "bus",
+      "question": "big vehicle for many people",
+      "correct": "bus",
+      "wrong": [
+        "business",
+        "busy"
+      ],
+      "word": "bus"
+    },
+    {
+      "item_id": "business",
+      "question": "work of buying and selling things",
+      "correct": "business",
+      "wrong": [
+        "busy",
+        "but"
+      ],
+      "word": "business"
+    },
+    {
+      "item_id": "busy",
+      "question": "doing many things at once",
+      "correct": "busy",
+      "wrong": [
+        "but",
+        "butter"
+      ],
+      "word": "busy"
+    },
+    {
+      "item_id": "but",
+      "question": "shows a different idea",
+      "correct": "but",
+      "wrong": [
+        "butter",
+        "button"
+      ],
+      "word": "but"
+    },
+    {
+      "item_id": "butter",
+      "question": "a word used in academic English: butter",
+      "correct": "butter",
+      "wrong": [
+        "button",
+        "buy"
+      ],
+      "word": "butter"
+    },
+    {
+      "item_id": "button",
+      "question": "a word used in academic English: button",
+      "correct": "button",
+      "wrong": [
+        "buy",
+        "by"
+      ],
+      "word": "button"
+    },
+    {
+      "item_id": "buy",
+      "question": "to give money for something",
+      "correct": "buy",
+      "wrong": [
+        "by",
+        "cabin"
+      ],
+      "word": "buy"
+    },
+    {
+      "item_id": "by",
+      "question": "close to or beside something",
+      "correct": "by",
+      "wrong": [
+        "cabin",
+        "cabinet"
+      ],
+      "word": "by"
+    },
+    {
+      "item_id": "cabin",
+      "question": "a word used in academic English: cabin",
+      "correct": "cabin",
+      "wrong": [
+        "cabinet",
+        "cable"
+      ],
+      "word": "cabin"
+    },
+    {
+      "item_id": "cabinet",
+      "question": "wooden cupboard for storage",
+      "correct": "cabinet",
+      "wrong": [
+        "cable",
+        "cake"
+      ],
+      "word": "cabinet"
+    },
+    {
+      "item_id": "cable",
+      "question": "a word used in academic English: cable",
+      "correct": "cable",
+      "wrong": [
+        "cake",
+        "calculate"
+      ],
+      "word": "cable"
+    },
+    {
+      "item_id": "cake",
+      "question": "sweet baked dessert",
+      "correct": "cake",
+      "wrong": [
+        "calculate",
+        "call"
+      ],
+      "word": "cake"
+    },
+    {
+      "item_id": "calculate",
+      "question": "to find an answer with math",
+      "correct": "calculate",
+      "wrong": [
+        "call",
+        "calm"
+      ],
+      "word": "calculate"
+    },
+    {
+      "item_id": "call",
+      "question": "a phone conversation",
+      "correct": "call",
+      "wrong": [
+        "calm",
+        "camera"
+      ],
+      "word": "call"
+    },
+    {
+      "item_id": "calm",
+      "question": "quiet and not upset",
+      "correct": "calm",
+      "wrong": [
+        "camera",
+        "camp"
+      ],
+      "word": "calm"
+    },
+    {
+      "item_id": "camera",
+      "question": "machine that takes photos",
+      "correct": "camera",
+      "wrong": [
+        "camp",
+        "campaign"
+      ],
+      "word": "camera"
+    },
+    {
+      "item_id": "camp",
+      "question": "place with outdoor tents",
+      "correct": "camp",
+      "wrong": [
+        "campaign",
+        "campus"
+      ],
+      "word": "camp"
+    },
+    {
+      "item_id": "campaign",
+      "question": "a planned effort for change",
+      "correct": "campaign",
+      "wrong": [
+        "campus",
+        "can"
+      ],
+      "word": "campaign"
+    },
+    {
+      "item_id": "campus",
+      "question": "a word used in academic English: campus",
+      "correct": "campus",
+      "wrong": [
+        "can",
+        "cancel"
+      ],
+      "word": "campus"
+    },
+    {
+      "item_id": "can",
+      "question": "able to do something",
+      "correct": "can",
+      "wrong": [
+        "cancel",
+        "cancer"
+      ],
+      "word": "can"
+    },
+    {
+      "item_id": "cancel",
+      "question": "stop a planned event",
+      "correct": "cancel",
+      "wrong": [
+        "cancer",
+        "candidate"
+      ],
+      "word": "cancel"
+    },
+    {
+      "item_id": "cancer",
+      "question": "serious illness in body",
+      "correct": "cancer",
+      "wrong": [
+        "candidate",
+        "cap"
+      ],
+      "word": "cancer"
+    },
+    {
+      "item_id": "candidate",
+      "question": "a person who wants a job",
+      "correct": "candidate",
+      "wrong": [
+        "cap",
+        "capital"
+      ],
+      "word": "candidate"
+    },
+    {
+      "item_id": "cap",
+      "question": "a word used in academic English: cap",
+      "correct": "cap",
+      "wrong": [
+        "capital",
+        "captain"
+      ],
+      "word": "cap"
+    },
+    {
+      "item_id": "capital",
+      "question": "most important or main",
+      "correct": "capital",
+      "wrong": [
+        "captain",
+        "capture"
+      ],
+      "word": "capital"
+    },
+    {
+      "item_id": "captain",
+      "question": "leader of a ship",
+      "correct": "captain",
+      "wrong": [
+        "capture",
+        "car"
+      ],
+      "word": "captain"
+    },
+    {
+      "item_id": "capture",
+      "question": "catch and hold something",
+      "correct": "capture",
+      "wrong": [
+        "car",
+        "carbon"
+      ],
+      "word": "capture"
+    },
+    {
+      "item_id": "car",
+      "question": "a vehicle with wheels",
+      "correct": "car",
+      "wrong": [
+        "carbon",
+        "card"
+      ],
+      "word": "car"
+    },
+    {
+      "item_id": "carbon",
+      "question": "a word used in academic English: carbon",
+      "correct": "carbon",
+      "wrong": [
+        "card",
+        "care"
+      ],
+      "word": "carbon"
+    },
+    {
+      "item_id": "card",
+      "question": "a small flat piece of stiff paper",
+      "correct": "card",
+      "wrong": [
+        "care",
+        "career"
+      ],
+      "word": "card"
+    },
+    {
+      "item_id": "care",
+      "question": "looking after someone",
+      "correct": "care",
+      "wrong": [
+        "career",
+        "careful"
+      ],
+      "word": "care"
+    },
+    {
+      "item_id": "career",
+      "question": "a person's work life over time",
+      "correct": "career",
+      "wrong": [
+        "careful",
+        "careless"
+      ],
+      "word": "career"
+    },
+    {
+      "item_id": "careful",
+      "question": "paying attention to avoid danger",
+      "correct": "careful",
+      "wrong": [
+        "careless",
+        "carry"
+      ],
+      "word": "careful"
+    },
+    {
+      "item_id": "careless",
+      "question": "a word used in academic English: careless",
+      "correct": "careless",
+      "wrong": [
+        "carry",
+        "case"
+      ],
+      "word": "careless"
+    },
+    {
+      "item_id": "carry",
+      "question": "hold and move something",
+      "correct": "carry",
+      "wrong": [
+        "case",
+        "cash"
+      ],
+      "word": "carry"
+    },
+    {
+      "item_id": "case",
+      "question": "a special situation or example",
+      "correct": "case",
+      "wrong": [
+        "cash",
+        "cast"
+      ],
+      "word": "case"
+    },
+    {
+      "item_id": "cash",
+      "question": "money in coins and bills",
+      "correct": "cash",
+      "wrong": [
+        "cast",
+        "cat"
+      ],
+      "word": "cash"
+    },
+    {
+      "item_id": "cast",
+      "question": "to throw something with your hand",
+      "correct": "cast",
+      "wrong": [
+        "cat",
+        "catch"
+      ],
+      "word": "cast"
+    },
+    {
+      "item_id": "cat",
+      "question": "a furry house pet",
+      "correct": "cat",
+      "wrong": [
+        "catch",
+        "cause"
+      ],
+      "word": "cat"
+    },
+    {
+      "item_id": "catch",
+      "question": "to grab something moving in the air",
+      "correct": "catch",
+      "wrong": [
+        "cause",
+        "ceiling"
+      ],
+      "word": "catch"
+    },
+    {
+      "item_id": "cause",
+      "question": "a thing that makes something happen",
+      "correct": "cause",
+      "wrong": [
+        "ceiling",
+        "celebrate"
+      ],
+      "word": "cause"
+    },
+    {
+      "item_id": "ceiling",
+      "question": "a word used in academic English: ceiling",
+      "correct": "ceiling",
+      "wrong": [
+        "celebrate",
+        "cell"
+      ],
+      "word": "ceiling"
+    },
+    {
+      "item_id": "celebrate",
+      "question": "have a party for something good",
+      "correct": "celebrate",
+      "wrong": [
+        "cell",
+        "cent"
+      ],
+      "word": "celebrate"
+    },
+    {
+      "item_id": "cell",
+      "question": "the smallest living part of the body",
+      "correct": "cell",
+      "wrong": [
+        "cent",
+        "center"
+      ],
+      "word": "cell"
+    },
+    {
+      "item_id": "cent",
+      "question": "having the quality of cent",
+      "correct": "cent",
+      "wrong": [
+        "center",
+        "central"
+      ],
+      "word": "cent"
+    },
+    {
+      "item_id": "center",
+      "question": "a word used in academic English: center",
+      "correct": "center",
+      "wrong": [
+        "central",
+        "century"
+      ],
+      "word": "center"
+    },
+    {
+      "item_id": "central",
+      "question": "in the middle",
+      "correct": "central",
+      "wrong": [
+        "century",
+        "ceremony"
+      ],
+      "word": "central"
+    },
+    {
+      "item_id": "century",
+      "question": "one hundred years",
+      "correct": "century",
+      "wrong": [
+        "ceremony",
+        "certain"
+      ],
+      "word": "century"
+    },
+    {
+      "item_id": "ceremony",
+      "question": "a word used in academic English: ceremony",
+      "correct": "ceremony",
+      "wrong": [
+        "certain",
+        "chain"
+      ],
+      "word": "ceremony"
+    },
+    {
+      "item_id": "certain",
+      "question": "completely sure or true",
+      "correct": "certain",
+      "wrong": [
+        "chain",
+        "chair"
+      ],
+      "word": "certain"
+    },
+    {
+      "item_id": "chain",
+      "question": "linked metal rings",
+      "correct": "chain",
+      "wrong": [
+        "chair",
+        "chairman"
+      ],
+      "word": "chain"
+    },
+    {
+      "item_id": "chair",
+      "question": "a seat with four legs and a back",
+      "correct": "chair",
+      "wrong": [
+        "chairman",
+        "chamber"
+      ],
+      "word": "chair"
+    },
+    {
+      "item_id": "chairman",
+      "question": "leader of a meeting",
+      "correct": "chairman",
+      "wrong": [
+        "chamber",
+        "chance"
+      ],
+      "word": "chairman"
+    },
+    {
+      "item_id": "chamber",
+      "question": "a special inner room",
+      "correct": "chamber",
+      "wrong": [
+        "chance",
+        "change"
+      ],
+      "word": "chamber"
+    },
+    {
+      "item_id": "chance",
+      "question": "a time when you can try something",
+      "correct": "chance",
+      "wrong": [
+        "change",
+        "character"
+      ],
+      "word": "chance"
+    },
+    {
+      "item_id": "change",
+      "question": "money you get back",
+      "correct": "change",
+      "wrong": [
+        "character",
+        "characteristic"
+      ],
+      "word": "change"
+    },
+    {
+      "item_id": "character",
+      "question": "the way a person acts",
+      "correct": "character",
+      "wrong": [
+        "characteristic",
+        "charge"
+      ],
+      "word": "character"
+    },
+    {
+      "item_id": "characteristic",
+      "question": "typical of that thing",
+      "correct": "characteristic",
+      "wrong": [
+        "charge",
+        "charity"
+      ],
+      "word": "characteristic"
+    },
+    {
+      "item_id": "charge",
+      "question": "amount of money to pay",
+      "correct": "charge",
+      "wrong": [
+        "charity",
+        "chase"
+      ],
+      "word": "charge"
+    },
+    {
+      "item_id": "charity",
+      "question": "help given to others",
+      "correct": "charity",
+      "wrong": [
+        "chase",
+        "cheap"
+      ],
+      "word": "charity"
+    },
+    {
+      "item_id": "chase",
+      "question": "run after something",
+      "correct": "chase",
+      "wrong": [
+        "cheap",
+        "check"
+      ],
+      "word": "chase"
+    },
+    {
+      "item_id": "cheap",
+      "question": "low in price or cost",
+      "correct": "cheap",
+      "wrong": [
+        "check",
+        "chest"
+      ],
+      "word": "cheap"
+    },
+    {
+      "item_id": "check",
+      "question": "a careful look to confirm",
+      "correct": "check",
+      "wrong": [
+        "chest",
+        "chicken"
+      ],
+      "word": "check"
+    },
+    {
+      "item_id": "chest",
+      "question": "big box for storing",
+      "correct": "chest",
+      "wrong": [
+        "chicken",
+        "chief"
+      ],
+      "word": "chest"
+    },
+    {
+      "item_id": "chicken",
+      "question": "a word used in academic English: chicken",
+      "correct": "chicken",
+      "wrong": [
+        "chief",
+        "child"
+      ],
+      "word": "chicken"
+    },
+    {
+      "item_id": "chief",
+      "question": "most important",
+      "correct": "chief",
+      "wrong": [
+        "child",
+        "childhood"
+      ],
+      "word": "chief"
+    },
+    {
+      "item_id": "child",
+      "question": "a young boy or girl",
+      "correct": "child",
+      "wrong": [
+        "childhood",
+        "chip"
+      ],
+      "word": "child"
+    },
+    {
+      "item_id": "childhood",
+      "question": "a word used in academic English: childhood",
+      "correct": "childhood",
+      "wrong": [
+        "chip",
+        "chocolate"
+      ],
+      "word": "childhood"
+    },
+    {
+      "item_id": "chip",
+      "question": "tiny computer square piece",
+      "correct": "chip",
+      "wrong": [
+        "chocolate",
+        "choice"
+      ],
+      "word": "chip"
+    },
+    {
+      "item_id": "chocolate",
+      "question": "to do something related to chocolate",
+      "correct": "chocolate",
+      "wrong": [
+        "choice",
+        "choose"
+      ],
+      "word": "chocolate"
+    },
+    {
+      "item_id": "choice",
+      "question": "the act of picking one thing",
+      "correct": "choice",
+      "wrong": [
+        "choose",
+        "church"
+      ],
+      "word": "choice"
+    },
+    {
+      "item_id": "choose",
+      "question": "pick one thing you like",
+      "correct": "choose",
+      "wrong": [
+        "church",
+        "cigarette"
+      ],
+      "word": "choose"
+    },
+    {
+      "item_id": "church",
+      "question": "a building for prayer",
+      "correct": "church",
+      "wrong": [
+        "cigarette",
+        "circle"
+      ],
+      "word": "church"
+    },
+    {
+      "item_id": "cigarette",
+      "question": "thin smoking paper stick",
+      "correct": "cigarette",
+      "wrong": [
+        "circle",
+        "citizen"
+      ],
+      "word": "cigarette"
+    },
+    {
+      "item_id": "circle",
+      "question": "a perfectly round shape",
+      "correct": "circle",
+      "wrong": [
+        "citizen",
+        "city"
+      ],
+      "word": "circle"
+    },
+    {
+      "item_id": "citizen",
+      "question": "a person of a country",
+      "correct": "citizen",
+      "wrong": [
+        "city",
+        "claim"
+      ],
+      "word": "citizen"
+    },
+    {
+      "item_id": "city",
+      "question": "a big town with many people",
+      "correct": "city",
+      "wrong": [
+        "claim",
+        "class"
+      ],
+      "word": "city"
+    },
+    {
+      "item_id": "claim",
+      "question": "a statement you say is true",
+      "correct": "claim",
+      "wrong": [
+        "class",
+        "classroom"
+      ],
+      "word": "claim"
+    },
+    {
+      "item_id": "class",
+      "question": "a group learning together",
+      "correct": "class",
+      "wrong": [
+        "classroom",
+        "clean"
+      ],
+      "word": "class"
+    },
+    {
+      "item_id": "classroom",
+      "question": "a word used in academic English: classroom",
+      "correct": "classroom",
+      "wrong": [
+        "clean",
+        "clear"
+      ],
+      "word": "classroom"
+    },
+    {
+      "item_id": "clean",
+      "question": "not dirty or messy",
+      "correct": "clean",
+      "wrong": [
+        "clear",
+        "clearly"
+      ],
+      "word": "clean"
+    },
+    {
+      "item_id": "clear",
+      "question": "easy to see through",
+      "correct": "clear",
+      "wrong": [
+        "clearly",
+        "client"
+      ],
+      "word": "clear"
+    },
+    {
+      "item_id": "clearly",
+      "question": "easy to see or understand",
+      "correct": "clearly",
+      "wrong": [
+        "client",
+        "climate"
+      ],
+      "word": "clearly"
+    },
+    {
+      "item_id": "client",
+      "question": "a person who buys a service",
+      "correct": "client",
+      "wrong": [
+        "climate",
+        "climb"
+      ],
+      "word": "client"
+    },
+    {
+      "item_id": "climate",
+      "question": "usual weather of a place",
+      "correct": "climate",
+      "wrong": [
+        "climb",
+        "broad"
+      ],
+      "word": "climate"
+    },
+    {
+      "item_id": "climb",
+      "question": "to go up something high",
+      "correct": "climb",
+      "wrong": [
+        "broad",
+        "broadcast"
+      ],
+      "word": "climb"
+    }
+  ]
+}
