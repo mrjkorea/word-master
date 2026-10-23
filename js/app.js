@@ -1299,7 +1299,8 @@
     }
     const from = globalNum(firstIdx);
     const to = globalNum(lastIdx);
-    const shortTitle = String(set.title || "").replace(/\s+\d+.*$/, "").trim() || set.title || "";
+    const rawTitle = String(set.title || "");
+    const shortTitle = (rawTitle.indexOf("·") >= 0 ? rawTitle.trim() : rawTitle.replace(/\s+\d+.*$/, "").trim()) || set.title || "";
     const text = shortTitle + " " + from + "–" + to;
     el.textContent = text;
     el.hidden = false;
