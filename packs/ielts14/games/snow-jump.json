@@ -336,7 +336,7 @@
     },
     {
       "item_id": "fat",
-      "question": "having a lot of body",
+      "question": "having a lot of extra flesh on the body",
       "correct": "fat",
       "wrong": [
         "father",

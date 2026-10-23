@@ -2033,7 +2033,7 @@
       "ko": "뚱뚱한",
       "picture_prompt": "a round, plump orange cat sitting",
       "l1": {
-        "en": "having a lot of body",
+        "en": "having a lot of extra flesh on the body",
         "ko": "뚱뚱한",
         "zh-Hans": "胖的",
         "ja": "太った",
@@ -2053,7 +2053,7 @@
         "sense_id": "fat.s1",
         "pos": "a",
         "def": {
-          "en": "to have a big round body",
+          "en": "having a lot of extra flesh on the body",
           "ko": "뚱뚱한",
           "zh-Hans": "胖的",
           "ja": "太った",
