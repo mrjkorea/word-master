@@ -2,6 +2,7 @@
 "use strict";
 
 const fs = require("fs");
+const { readBuild, cacheKey, srcAt } = require("./build_id.js");
 const path = require("path");
 const SpellStop = require("../js/spell-stop.js");
 
@@ -142,8 +143,8 @@ async function main() {
   }
 
   const index = fs.readFileSync(path.join(root, "index.html"), "utf8");
-  const spellSrc = index.indexOf("js/spell-stop.js?v=20260930-spellstop");
-  const appSrc = index.indexOf("js/app.js?v=20261021-fix2");
+  const spellSrc = srcAt(index, "js/spell-stop.js");
+  const appSrc = srcAt(index, "js/app.js");
   if (spellSrc < 0) fail("index.html missing spell-stop cache");
   if (appSrc < 0) fail("index.html missing app.js cache");
   if (spellSrc > appSrc) fail("spell-stop.js must load before app.js");
