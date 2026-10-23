@@ -32,20 +32,17 @@ function expectIds(label, got, expect) {
 
 const words = wordsOf(100);
 const ten = StartSlice.sliceFrom(words, 10, 5);
-expectIds("word 10 + 5", ten.ids, "w10,w11,w12,w13,w14");
-if (ten.startNumber !== 10 || ten.words.length !== 5) fail("slice 10 length");
+expectIds("word 10 snaps to 6 + 5", ten.ids, "w6,w7,w8,w9,w10");
+if (ten.startNumber !== 6 || ten.words.length !== 5) fail("slice 10 length");
 if (ten.ids.indexOf("w15") !== -1) fail("word 10 + 5 included an extra word");
 
 const mid = StartSlice.sliceFrom(words, 22, 5);
-expectIds("word 22 + 5", mid.ids, "w22,w23,w24,w25,w26");
+expectIds("word 22 snaps to 21 + 5", mid.ids, "w21,w22,w23,w24,w25");
 if (mid.words.length !== 5) fail("slice 22 length");
 
 const tail = StartSlice.sliceFrom(words, 98, 5);
-expectIds("word 98 + 5", tail.ids, "w98,w99,w100");
-if (tail.words.length !== 3) fail("tail length " + tail.words.length);
-if (tail.ids.indexOf("w1") !== -1 || tail.ids.indexOf("w97") !== -1) {
-  fail("tail wrapped or pulled an earlier word");
-}
+expectIds("word 98 snaps to 96 + 5", tail.ids, "w96,w97,w98,w99,w100");
+if (tail.startNumber !== 96 || tail.words.length !== 5) fail("tail length " + tail.words.length);
 
 const fresh = { intro: {}, winsA: {}, winsB: {}, winsC: {}, testPassed: {} };
 StartSlice.markPassed(fresh, ["w10", "w11"], 79);
@@ -81,9 +78,10 @@ if (index.indexOf("js/start-slice.js") > index.indexOf("js/app.js")) {
   fail("start-slice.js must load before app.js");
 }
 if (index.indexOf("Tap a number to start there.") === -1) fail("missing tap hint");
-if (index.indexOf("css/app.css?v=20261014-daily") === -1) fail("css cache");
-if (index.indexOf("js/app.js?v=20261021-fix2") === -1) fail("app cache");
-if (index.indexOf("js/start-slice.js?v=20260930-start") === -1) fail("start-slice cache");
+if (index.indexOf("css/app.css?v=20261023-setrange") === -1) fail("css cache");
+if (index.indexOf("js/app.js?v=20261023-setrange") === -1) fail("app cache");
+if (index.indexOf("js/start-slice.js?v=20261023-setrange") === -1) fail("start-slice cache");
+if (index.indexOf('id="set-range-banner"') === -1) fail("set range banner");
 
 const api = bootApp();
 if (!api.chooseStart || !api.markPassed || !api.renderPackStanding) {
@@ -108,10 +106,10 @@ api.activateSet(set);
 if (api.currentSet().meetLock.join(",") !== held.join(",")) fail("setup lock");
 api.chooseStart(set, 22);
 const chosen = api.currentSet().meetLock.join(",");
-if (chosen !== "w22,w23,w24,w25,w26,w27,w28,w29,w30,w31") {
+if (chosen !== "w21,w22,w23,w24,w25,w26,w27,w28,w29,w30") {
   fail("chooseStart lock " + chosen);
 }
-if (api.currentSet().startNumber !== 22) fail("startNumber " + api.currentSet().startNumber);
+if (api.currentSet().startNumber !== 21) fail("startNumber " + api.currentSet().startNumber);
 if (chosen.indexOf("w1") !== -1) fail("old lock survived the tap");
 ["w22", "w23"].forEach(function (id) {
   const wins = (api.currentSet().winsA[id] || 0) + (api.currentSet().winsB[id] || 0) + (api.currentSet().winsC[id] || 0);
@@ -122,23 +120,23 @@ api.startEasy();
 let quiz = api.getQuiz();
 if (quiz.wide) fail("chosen batch opened the wide test");
 if (quiz.items.map(function (w) { return w.id; }).sort().join(",") !==
-    ["w22", "w23", "w24", "w25", "w26", "w27", "w28", "w29", "w30", "w31"].sort().join(",")) {
+    ["w21", "w22", "w23", "w24", "w25", "w26", "w27", "w28", "w29", "w30"].sort().join(",")) {
   fail("easy test left the chosen slice");
 }
 quiz.score = 8;
 quiz.mistakes = [];
 api.finishQuiz();
-["w22", "w23", "w24", "w25", "w26", "w27", "w28", "w29", "w30", "w31"].forEach(function (id) {
+["w21", "w22", "w23", "w24", "w25", "w26", "w27", "w28", "w29", "w30"].forEach(function (id) {
   if (api.currentSet().testPassed[id] !== 80) fail("finishQuiz did not mark " + id);
 });
 
 let data = api.renderPackStanding(api.currentSet());
-["w22", "w31"].forEach(function (id) {
+["w21", "w30"].forEach(function (id) {
   const seat = data.seats.filter(function (s) { return s.id === id; })[0];
   if (!seat || seat.state !== "done doing") fail(id + " seat " + (seat && seat.state));
 });
-const before = data.seats.filter(function (s) { return s.id === "w21"; })[0];
-if (!before || before.state !== "todo") fail("w21 " + (before && before.state));
+const before = data.seats.filter(function (s) { return s.id === "w20"; })[0];
+if (!before || before.state !== "todo") fail("w20 " + (before && before.state));
 
 api.markPassed(api.currentSet(), api.currentSet().meetLock.slice(), 70);
 api.startEasy();
@@ -146,7 +144,7 @@ quiz = api.getQuiz();
 quiz.score = 7;
 quiz.mistakes = [{ id: "w22", en: "word22", ko: "ko22" }];
 api.finishQuiz();
-["w22", "w31"].forEach(function (id) {
+["w21", "w30"].forEach(function (id) {
   if (api.currentSet().testPassed[id] !== 80) fail("later 70 cleared " + id);
   if (!StartSlice.isGreen({ id: id }, api.currentSet())) fail("later 70 unpainted " + id);
   const wins = api.currentSet().winsA[id] || 0;
@@ -176,12 +174,12 @@ const five = {
   winsA: {},
   winsB: {},
   winsC: {},
-  meetLock: ["w10", "w11", "w12", "w13", "w14"],
-  startNumber: 10,
+  meetLock: ["w6", "w7", "w8", "w9", "w10"],
+  startNumber: 6,
   testPassed: { w10: 80, w11: 80, w12: 80, w13: 80, w14: 80 },
 };
 data = api.renderPackStanding(five);
-if (data.sliceText !== "Starting at 10 · 5 words: apple · bread · carrot · donut · egg") {
+if (data.sliceText !== "Starting at 6 · 5 words: word6 · word7 · word8 · word9 · apple") {
   fail("slice line " + data.sliceText);
 }
 const seat10 = data.seats.filter(function (s) { return s.id === "w10"; })[0];
@@ -201,13 +199,13 @@ if (typeof api.slimProgress === "function" && typeof api.applyRemote === "functi
   api.activateSet(five);
   const slim = JSON.parse(JSON.stringify(api.slimProgress()));
   const pack = slim.sets.nouns100;
-  if (!pack || pack.startNumber !== 10) fail("slim startNumber " + (pack && pack.startNumber));
+  if (!pack || pack.startNumber !== 6) fail("slim startNumber " + (pack && pack.startNumber));
   if (!pack.testPassed || pack.testPassed.w10 !== 80 || pack.testPassed.w14 !== 80) {
     fail("slim testPassed " + JSON.stringify(pack && pack.testPassed));
   }
   api.applyRemote(slim);
   const back = api.currentSet();
-  if (!back || back.startNumber !== 10) fail("round-trip startNumber");
+  if (!back || back.startNumber !== 6) fail("round-trip startNumber");
   if (!back.testPassed || back.testPassed.w10 !== 80 || back.testPassed.w14 !== 80) {
     fail("round-trip testPassed " + JSON.stringify(back && back.testPassed));
   }

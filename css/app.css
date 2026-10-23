@@ -117,6 +117,18 @@ button:disabled:not(.choice) { cursor: not-allowed; opacity: 0.38; }
   overflow: hidden;
   text-overflow: ellipsis;
 }
+.set-range-banner {
+  margin: 2px 0 0;
+  text-align: center;
+  font-size: clamp(15px, 4.2vw, 19px);
+  font-weight: 800;
+  letter-spacing: -0.01em;
+  color: var(--navy);
+  line-height: 1.15;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
 .icon-btn {
   min-height: 44px;
   font-size: 22px;

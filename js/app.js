@@ -1257,12 +1257,70 @@
       .replace(/[^a-z]/g, "");
   }
 
+  function setRangeBannerText(set) {
+    set = set || currentSet();
+    const el = $("#set-range-banner");
+    if (!el) return "";
+    if (!set || !set.packId || !(set.words || []).length) {
+      el.hidden = true;
+      el.textContent = "";
+      return "";
+    }
+    const round = playWords(set);
+    if (!round.length) {
+      el.hidden = true;
+      el.textContent = "";
+      return "";
+    }
+    const SDL = window.MRJ_WM_scoreDayLog;
+    const base = SDL && SDL.packWordBase ? SDL.packWordBase(set.packId) : 1;
+    const wordIndex = SDL && SDL.wordIndexInPack
+      ? function (id) { return SDL.wordIndexInPack(set.words, id); }
+      : function (id) {
+        for (let i = 0; i < set.words.length; i++) {
+          if (set.words[i] && set.words[i].id === id) return i + 1;
+        }
+        return 0;
+      };
+    const globalNum = SDL && SDL.globalWordNumber
+      ? function (idx) { return SDL.globalWordNumber(set.packId, idx); }
+      : function (idx) { return base + idx - 1; };
+    const firstIdx = wordIndex(round[0].id);
+    const lastIdx = wordIndex(round[round.length - 1].id);
+    if (!(firstIdx >= 1) || !(lastIdx >= 1)) {
+      el.hidden = true;
+      el.textContent = "";
+      return "";
+    }
+    const from = globalNum(firstIdx);
+    const to = globalNum(lastIdx);
+    const shortTitle = String(set.title || "").replace(/\s+\d+.*$/, "").trim() || set.title || "";
+    const text = shortTitle + " " + from + "–" + to;
+    el.textContent = text;
+    el.hidden = false;
+    return text;
+  }
+
+  function paintSetRangeBanner(screenName) {
+    const quiet = screenName === "boot" || screenName === "home" || screenName === "name";
+    if (quiet || !currentSet()) {
+      const el = $("#set-range-banner");
+      if (el) {
+        el.hidden = true;
+        el.textContent = "";
+      }
+      return;
+    }
+    setRangeBannerText();
+  }
+
   function showScreen(name) {
     if (currentScreen === "playgame" && name !== "playgame") closeGameFrame();
     currentScreen = name;
     $$(".screen").forEach(function (el) {
       el.classList.toggle("active", el.getAttribute("data-screen") === name);
     });
+    paintSetRangeBanner(name);
     const back = $("#btn-back");
     const voice = $("#voice-toggle");
     const topbar = $("#topbar");
@@ -1906,18 +1964,23 @@
     });
   }
 
+  function currentRoundReadyForGame(set) {
+    if (!set) return false;
+    const words = playWords(set);
+    if (!words.length) return false;
+    return sliceReady(set, words);
+  }
+
   function roundReadyForGame(set) {
     if (!set) return false;
-    if (set.meetLock && set.meetLock.length && window.MeetLock) {
+    if (set.meetLock && set.meetLock.length) {
       const locked = window.MeetLock.wordsForLock(set.words || [], set.meetLock);
-      if (!locked.length) return false;
-      return sliceReady(set, locked);
+      if (locked.length && sliceReady(set, locked)) return true;
     }
     const words = set.words || [];
-    const n = studySize(set) || words.length;
-    if (!n) return false;
-    var i;
-    for (i = 0; i < words.length; i += n) {
+    const n = studySize(set);
+    if (!n || !words.length) return false;
+    for (let i = 0; i < words.length; i += n) {
       const slice = words.slice(i, i + n);
       if (slice.length && sliceReady(set, slice)) return true;
     }
@@ -2316,6 +2379,11 @@
         : t("continue_learn");
     }
     syncPack();
+    if (currentScreen === "set" || currentScreen === "intro" || currentScreen === "learn" ||
+        currentScreen === "test" || currentScreen === "games" || currentScreen === "playgame" ||
+        currentScreen === "match" || currentScreen === "listen") {
+      paintSetRangeBanner(currentScreen);
+    }
   }
 
   function renderStudySize(set) {
@@ -2565,6 +2633,31 @@
     startTapmap();
   }
 
+  function ensureRoundLock(set) {
+    if (!set) return;
+    if (!set.intro) set.intro = {};
+    if (set.startNumber) {
+      if (!Array.isArray(set.meetLock) || !set.meetLock.length) {
+        const slice = window.StartSlice.sliceFrom(set.words || [], set.startNumber, sliceCount(set, set.startNumber));
+        set.startNumber = slice.startNumber;
+        set.meetLock = slice.ids.slice();
+        syncPathRound(set);
+        persist();
+      }
+      return;
+    }
+    if (Array.isArray(set.meetLock) && set.meetLock.length) {
+      const locked = window.MeetLock.wordsForLock(set.words || [], set.meetLock);
+      if (locked.length && sliceReady(set, locked)) return;
+      if (meetLockHeld(set)) return;
+    }
+    if (!meetLockHeld(set)) {
+      set.meetLock = batchWords(set).map(function (w) { return w.id; });
+      syncPathRound(set);
+      persist();
+    }
+  }
+
   function startTapmap() {
     const set = currentSet();
     if (!set) return;
@@ -2575,30 +2668,15 @@
       showScreen("set");
       return;
     }
-    if (roundReadyForGame(set)) return goGames();
+    ensureRoundLock(set);
+    if (currentRoundReadyForGame(set)) return goGames();
     if (introFlagsDone(set)) {
-      const mode = Algo.startMode(playWords(set), winsState(set));
-      if (mode) {
-        learn = blankLearn();
-        showScreen("learn");
-        beginPart(mode);
-        return;
-      }
-      return goGames();
-    }
-    if (!set.intro) set.intro = {};
-    if (set.startNumber) {
-      if (!Array.isArray(set.meetLock) || !set.meetLock.length) {
-        const slice = window.StartSlice.sliceFrom(set.words || [], set.startNumber, sliceCount(set, set.startNumber));
-        set.startNumber = slice.startNumber;
-        set.meetLock = slice.ids.slice();
-        syncPathRound(set);
-        persist();
-      }
-    } else if (!meetLockHeld(set)) {
-      set.meetLock = batchWords(set).map(function (w) { return w.id; });
-      syncPathRound(set);
-      persist();
+      const roundWords = playWords(set);
+      const mode = Algo.startMode(roundWords, winsState(set)) || "A";
+      learn = blankLearn();
+      showScreen("learn");
+      beginPart(mode);
+      return;
     }
     const words = playWords(set);
     if (!words.length) {
@@ -4582,6 +4660,7 @@
       pathOpen: pathOpen,
       studentLocked: studentLocked,
       roundReadyForGame: roundReadyForGame,
+      currentRoundReadyForGame: currentRoundReadyForGame,
       packBase: packBase,
       markRoundGameDone: markRoundGameDone,
       getState: function () { return state; },
@@ -4614,6 +4693,8 @@
       startTapmap: startTapmap,
       onTapTile: onTapTile,
       tapPhase: function () { return tap.phase; },
+      setRangeBannerText: setRangeBannerText,
+      paintSetRangeBanner: paintSetRangeBanner,
     };
   }
   initPackSrcParam();
