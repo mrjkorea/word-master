@@ -59,6 +59,11 @@
       const ww = w.ww && typeof w.ww === "object" ? w.ww : null;
       const enExplanation = (ww && ww.def ? wwEn(ww.def) : "") || String(l1.en || "").trim();
       if (enExplanation) return enExplanation;
+      // Packs without an English definition (Day 2 packs: ko only) used to echo
+      // the English word here, so Learn choices matched the prompt and Write
+      // showed the answer. Show the Korean meaning instead.
+      const koWord = String(l1.ko || w.ko || "").trim();
+      if (koWord) return koWord;
       return String(w.en || "").trim();
     }
     let nativeWord = String(l1[loc] || "").trim();
