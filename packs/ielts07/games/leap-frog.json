@@ -1,0 +1,1008 @@
+{
+  "pack_id": "ielts07",
+  "title": "IELTS 601–700",
+  "module_id": "word_master",
+  "seconds": 15,
+  "items": [
+    {
+      "item_id": "afford",
+      "question": "have enough money for",
+      "correct": "afford",
+      "wrong": [
+        "afraid",
+        "after"
+      ],
+      "word": "afford"
+    },
+    {
+      "item_id": "afraid",
+      "question": "feeling scared",
+      "correct": "afraid",
+      "wrong": [
+        "after",
+        "again"
+      ],
+      "word": "afraid"
+    },
+    {
+      "item_id": "after",
+      "question": "later than something",
+      "correct": "after",
+      "wrong": [
+        "again",
+        "against"
+      ],
+      "word": "after"
+    },
+    {
+      "item_id": "again",
+      "question": "one more time",
+      "correct": "again",
+      "wrong": [
+        "against",
+        "age"
+      ],
+      "word": "again"
+    },
+    {
+      "item_id": "against",
+      "question": "pushing or leaning on something",
+      "correct": "against",
+      "wrong": [
+        "age",
+        "agency"
+      ],
+      "word": "against"
+    },
+    {
+      "item_id": "age",
+      "question": "how old someone is",
+      "correct": "age",
+      "wrong": [
+        "agency",
+        "agent"
+      ],
+      "word": "age"
+    },
+    {
+      "item_id": "agency",
+      "question": "an organization that helps people",
+      "correct": "agency",
+      "wrong": [
+        "agent",
+        "ago"
+      ],
+      "word": "agency"
+    },
+    {
+      "item_id": "agent",
+      "question": "a person who works for someone else",
+      "correct": "agent",
+      "wrong": [
+        "ago",
+        "agree"
+      ],
+      "word": "agent"
+    },
+    {
+      "item_id": "ago",
+      "question": "time before now",
+      "correct": "ago",
+      "wrong": [
+        "agree",
+        "agreement"
+      ],
+      "word": "ago"
+    },
+    {
+      "item_id": "agree",
+      "question": "to say yes together",
+      "correct": "agree",
+      "wrong": [
+        "agreement",
+        "agriculture"
+      ],
+      "word": "agree"
+    },
+    {
+      "item_id": "agreement",
+      "question": "when people decide the same thing",
+      "correct": "agreement",
+      "wrong": [
+        "agriculture",
+        "ahead"
+      ],
+      "word": "agreement"
+    },
+    {
+      "item_id": "agriculture",
+      "question": "farming to grow food",
+      "correct": "agriculture",
+      "wrong": [
+        "ahead",
+        "aim"
+      ],
+      "word": "agriculture"
+    },
+    {
+      "item_id": "ahead",
+      "question": "in front or forward",
+      "correct": "ahead",
+      "wrong": [
+        "aim",
+        "air"
+      ],
+      "word": "ahead"
+    },
+    {
+      "item_id": "aim",
+      "question": "a goal you want to reach",
+      "correct": "aim",
+      "wrong": [
+        "air",
+        "aircraft"
+      ],
+      "word": "aim"
+    },
+    {
+      "item_id": "air",
+      "question": "what we breathe",
+      "correct": "air",
+      "wrong": [
+        "aircraft",
+        "airline"
+      ],
+      "word": "air"
+    },
+    {
+      "item_id": "aircraft",
+      "question": "a flying machine with wings",
+      "correct": "aircraft",
+      "wrong": [
+        "airline",
+        "airport"
+      ],
+      "word": "aircraft"
+    },
+    {
+      "item_id": "airline",
+      "question": "air travel company",
+      "correct": "airline",
+      "wrong": [
+        "airport",
+        "alarm"
+      ],
+      "word": "airline"
+    },
+    {
+      "item_id": "airport",
+      "question": "place for planes",
+      "correct": "airport",
+      "wrong": [
+        "alarm",
+        "album"
+      ],
+      "word": "airport"
+    },
+    {
+      "item_id": "alarm",
+      "question": "make someone feel worried",
+      "correct": "alarm",
+      "wrong": [
+        "album",
+        "alcohol"
+      ],
+      "word": "alarm"
+    },
+    {
+      "item_id": "album",
+      "question": "book of photos or songs",
+      "correct": "album",
+      "wrong": [
+        "alcohol",
+        "alive"
+      ],
+      "word": "album"
+    },
+    {
+      "item_id": "alcohol",
+      "question": "strong drink for adults",
+      "correct": "alcohol",
+      "wrong": [
+        "alive",
+        "all"
+      ],
+      "word": "alcohol"
+    },
+    {
+      "item_id": "alive",
+      "question": "living and breathing",
+      "correct": "alive",
+      "wrong": [
+        "all",
+        "allow"
+      ],
+      "word": "alive"
+    },
+    {
+      "item_id": "all",
+      "question": "the whole amount",
+      "correct": "all",
+      "wrong": [
+        "allow",
+        "almost"
+      ],
+      "word": "all"
+    },
+    {
+      "item_id": "allow",
+      "question": "to let someone do something",
+      "correct": "allow",
+      "wrong": [
+        "almost",
+        "alone"
+      ],
+      "word": "allow"
+    },
+    {
+      "item_id": "almost",
+      "question": "very nearly but not quite",
+      "correct": "almost",
+      "wrong": [
+        "alone",
+        "along"
+      ],
+      "word": "almost"
+    },
+    {
+      "item_id": "alone",
+      "question": "by oneself with no one else",
+      "correct": "alone",
+      "wrong": [
+        "along",
+        "already"
+      ],
+      "word": "alone"
+    },
+    {
+      "item_id": "along",
+      "question": "moving forward beside something",
+      "correct": "along",
+      "wrong": [
+        "already",
+        "also"
+      ],
+      "word": "along"
+    },
+    {
+      "item_id": "already",
+      "question": "before now or expected time",
+      "correct": "already",
+      "wrong": [
+        "also",
+        "always"
+      ],
+      "word": "already"
+    },
+    {
+      "item_id": "also",
+      "question": "in addition to something",
+      "correct": "also",
+      "wrong": [
+        "always",
+        "amaze"
+      ],
+      "word": "also"
+    },
+    {
+      "item_id": "always",
+      "question": "at every time",
+      "correct": "always",
+      "wrong": [
+        "amaze",
+        "ambition"
+      ],
+      "word": "always"
+    },
+    {
+      "item_id": "amaze",
+      "question": "surprise greatly",
+      "correct": "amaze",
+      "wrong": [
+        "ambition",
+        "among"
+      ],
+      "word": "amaze"
+    },
+    {
+      "item_id": "ambition",
+      "question": "strong desire to succeed",
+      "correct": "ambition",
+      "wrong": [
+        "among",
+        "amount"
+      ],
+      "word": "ambition"
+    },
+    {
+      "item_id": "among",
+      "question": "in the middle of a group",
+      "correct": "among",
+      "wrong": [
+        "amount",
+        "ancient"
+      ],
+      "word": "among"
+    },
+    {
+      "item_id": "amount",
+      "question": "how much of something",
+      "correct": "amount",
+      "wrong": [
+        "ancient",
+        "and"
+      ],
+      "word": "amount"
+    },
+    {
+      "item_id": "ancient",
+      "question": "very old and historic",
+      "correct": "ancient",
+      "wrong": [
+        "and",
+        "anger"
+      ],
+      "word": "ancient"
+    },
+    {
+      "item_id": "and",
+      "question": "joins two things together",
+      "correct": "and",
+      "wrong": [
+        "anger",
+        "angle"
+      ],
+      "word": "and"
+    },
+    {
+      "item_id": "anger",
+      "question": "feeling of being very mad",
+      "correct": "anger",
+      "wrong": [
+        "angle",
+        "angry"
+      ],
+      "word": "anger"
+    },
+    {
+      "item_id": "angle",
+      "question": "corner of two lines",
+      "correct": "angle",
+      "wrong": [
+        "angry",
+        "animal"
+      ],
+      "word": "angle"
+    },
+    {
+      "item_id": "angry",
+      "question": "feeling or showing strong anger",
+      "correct": "angry",
+      "wrong": [
+        "animal",
+        "announce"
+      ],
+      "word": "angry"
+    },
+    {
+      "item_id": "animal",
+      "question": "a living creature that is not a plant",
+      "correct": "animal",
+      "wrong": [
+        "announce",
+        "another"
+      ],
+      "word": "animal"
+    },
+    {
+      "item_id": "announce",
+      "question": "tell people something important",
+      "correct": "announce",
+      "wrong": [
+        "another",
+        "answer"
+      ],
+      "word": "announce"
+    },
+    {
+      "item_id": "another",
+      "question": "one more of the same",
+      "correct": "another",
+      "wrong": [
+        "answer",
+        "anxiety"
+      ],
+      "word": "another"
+    },
+    {
+      "item_id": "answer",
+      "question": "reply to a question",
+      "correct": "answer",
+      "wrong": [
+        "anxiety",
+        "any"
+      ],
+      "word": "answer"
+    },
+    {
+      "item_id": "anxiety",
+      "question": "worried nervous feeling inside",
+      "correct": "anxiety",
+      "wrong": [
+        "any",
+        "anybody"
+      ],
+      "word": "anxiety"
+    },
+    {
+      "item_id": "any",
+      "question": "one or more, it does not matter which",
+      "correct": "any",
+      "wrong": [
+        "anybody",
+        "anymore"
+      ],
+      "word": "any"
+    },
+    {
+      "item_id": "anybody",
+      "question": "any person at all",
+      "correct": "anybody",
+      "wrong": [
+        "anymore",
+        "anyone"
+      ],
+      "word": "anybody"
+    },
+    {
+      "item_id": "anymore",
+      "question": "no longer",
+      "correct": "anymore",
+      "wrong": [
+        "anyone",
+        "anything"
+      ],
+      "word": "anymore"
+    },
+    {
+      "item_id": "anyone",
+      "question": "any person at all",
+      "correct": "anyone",
+      "wrong": [
+        "anything",
+        "anyway"
+      ],
+      "word": "anyone"
+    },
+    {
+      "item_id": "anything",
+      "question": "any thing at all",
+      "correct": "anything",
+      "wrong": [
+        "anyway",
+        "anywhere"
+      ],
+      "word": "anything"
+    },
+    {
+      "item_id": "anyway",
+      "question": "no matter what",
+      "correct": "anyway",
+      "wrong": [
+        "anywhere",
+        "apart"
+      ],
+      "word": "anyway"
+    },
+    {
+      "item_id": "anywhere",
+      "question": "in any possible place",
+      "correct": "anywhere",
+      "wrong": [
+        "apart",
+        "apartment"
+      ],
+      "word": "anywhere"
+    },
+    {
+      "item_id": "apart",
+      "question": "separated from each other",
+      "correct": "apart",
+      "wrong": [
+        "apartment",
+        "apologize"
+      ],
+      "word": "apart"
+    },
+    {
+      "item_id": "apartment",
+      "question": "home in a building",
+      "correct": "apartment",
+      "wrong": [
+        "apologize",
+        "appeal"
+      ],
+      "word": "apartment"
+    },
+    {
+      "item_id": "apologize",
+      "question": "say sorry",
+      "correct": "apologize",
+      "wrong": [
+        "appeal",
+        "appear"
+      ],
+      "word": "apologize"
+    },
+    {
+      "item_id": "appeal",
+      "question": "a serious request",
+      "correct": "appeal",
+      "wrong": [
+        "appear",
+        "appearance"
+      ],
+      "word": "appeal"
+    },
+    {
+      "item_id": "appear",
+      "question": "come into sight suddenly",
+      "correct": "appear",
+      "wrong": [
+        "appearance",
+        "apple"
+      ],
+      "word": "appear"
+    },
+    {
+      "item_id": "appearance",
+      "question": "how someone looks",
+      "correct": "appearance",
+      "wrong": [
+        "apple",
+        "application"
+      ],
+      "word": "appearance"
+    },
+    {
+      "item_id": "apple",
+      "question": "round red sweet fruit",
+      "correct": "apple",
+      "wrong": [
+        "application",
+        "apply"
+      ],
+      "word": "apple"
+    },
+    {
+      "item_id": "application",
+      "question": "a paper you fill out to ask for something",
+      "correct": "application",
+      "wrong": [
+        "apply",
+        "appoint"
+      ],
+      "word": "application"
+    },
+    {
+      "item_id": "apply",
+      "question": "put something on a surface",
+      "correct": "apply",
+      "wrong": [
+        "appoint",
+        "approve"
+      ],
+      "word": "apply"
+    },
+    {
+      "item_id": "appoint",
+      "question": "to choose someone for a job",
+      "correct": "appoint",
+      "wrong": [
+        "approve",
+        "argue"
+      ],
+      "word": "appoint"
+    },
+    {
+      "item_id": "approve",
+      "question": "say something is good or okay",
+      "correct": "approve",
+      "wrong": [
+        "argue",
+        "argument"
+      ],
+      "word": "approve"
+    },
+    {
+      "item_id": "argue",
+      "question": "to disagree with someone loudly",
+      "correct": "argue",
+      "wrong": [
+        "argument",
+        "arise"
+      ],
+      "word": "argue"
+    },
+    {
+      "item_id": "argument",
+      "question": "a strong disagreement",
+      "correct": "argument",
+      "wrong": [
+        "arise",
+        "arm"
+      ],
+      "word": "argument"
+    },
+    {
+      "item_id": "arise",
+      "question": "to get up or appear",
+      "correct": "arise",
+      "wrong": [
+        "arm",
+        "army"
+      ],
+      "word": "arise"
+    },
+    {
+      "item_id": "arm",
+      "question": "body part between hand and shoulder",
+      "correct": "arm",
+      "wrong": [
+        "army",
+        "around"
+      ],
+      "word": "arm"
+    },
+    {
+      "item_id": "army",
+      "question": "a large group of soldiers",
+      "correct": "army",
+      "wrong": [
+        "around",
+        "arrange"
+      ],
+      "word": "army"
+    },
+    {
+      "item_id": "around",
+      "question": "in a circle nearby",
+      "correct": "around",
+      "wrong": [
+        "arrange",
+        "arrest"
+      ],
+      "word": "around"
+    },
+    {
+      "item_id": "arrange",
+      "question": "put things in order",
+      "correct": "arrange",
+      "wrong": [
+        "arrest",
+        "arrival"
+      ],
+      "word": "arrange"
+    },
+    {
+      "item_id": "arrest",
+      "question": "to take someone to jail",
+      "correct": "arrest",
+      "wrong": [
+        "arrival",
+        "arrive"
+      ],
+      "word": "arrest"
+    },
+    {
+      "item_id": "arrival",
+      "question": "coming to a place",
+      "correct": "arrival",
+      "wrong": [
+        "arrive",
+        "art"
+      ],
+      "word": "arrival"
+    },
+    {
+      "item_id": "arrive",
+      "question": "reach a place after traveling",
+      "correct": "arrive",
+      "wrong": [
+        "art",
+        "article"
+      ],
+      "word": "arrive"
+    },
+    {
+      "item_id": "art",
+      "question": "pictures made by artists",
+      "correct": "art",
+      "wrong": [
+        "article",
+        "artificial"
+      ],
+      "word": "art"
+    },
+    {
+      "item_id": "article",
+      "question": "a short news story",
+      "correct": "article",
+      "wrong": [
+        "artificial",
+        "artist"
+      ],
+      "word": "article"
+    },
+    {
+      "item_id": "artificial",
+      "question": "made by people not nature",
+      "correct": "artificial",
+      "wrong": [
+        "artist",
+        "as"
+      ],
+      "word": "artificial"
+    },
+    {
+      "item_id": "artist",
+      "question": "a person who makes art",
+      "correct": "artist",
+      "wrong": [
+        "as",
+        "ashamed"
+      ],
+      "word": "artist"
+    },
+    {
+      "item_id": "as",
+      "question": "in the same way",
+      "correct": "as",
+      "wrong": [
+        "ashamed",
+        "aside"
+      ],
+      "word": "as"
+    },
+    {
+      "item_id": "ashamed",
+      "question": "sorry and embarrassed",
+      "correct": "ashamed",
+      "wrong": [
+        "aside",
+        "ask"
+      ],
+      "word": "ashamed"
+    },
+    {
+      "item_id": "aside",
+      "question": "to or on one side",
+      "correct": "aside",
+      "wrong": [
+        "ask",
+        "asleep"
+      ],
+      "word": "aside"
+    },
+    {
+      "item_id": "ask",
+      "question": "to say a question out loud",
+      "correct": "ask",
+      "wrong": [
+        "asleep",
+        "asset"
+      ],
+      "word": "ask"
+    },
+    {
+      "item_id": "asleep",
+      "question": "resting with eyes closed",
+      "correct": "asleep",
+      "wrong": [
+        "asset",
+        "associate"
+      ],
+      "word": "asleep"
+    },
+    {
+      "item_id": "asset",
+      "question": "something useful or valuable",
+      "correct": "asset",
+      "wrong": [
+        "associate",
+        "association"
+      ],
+      "word": "asset"
+    },
+    {
+      "item_id": "associate",
+      "question": "to connect two things",
+      "correct": "associate",
+      "wrong": [
+        "association",
+        "assumption"
+      ],
+      "word": "associate"
+    },
+    {
+      "item_id": "association",
+      "question": "a group of people working together",
+      "correct": "association",
+      "wrong": [
+        "assumption",
+        "at"
+      ],
+      "word": "association"
+    },
+    {
+      "item_id": "assumption",
+      "question": "a belief without checking",
+      "correct": "assumption",
+      "wrong": [
+        "at",
+        "athlete"
+      ],
+      "word": "assumption"
+    },
+    {
+      "item_id": "at",
+      "question": "at a certain place or time",
+      "correct": "at",
+      "wrong": [
+        "athlete",
+        "atmosphere"
+      ],
+      "word": "at"
+    },
+    {
+      "item_id": "athlete",
+      "question": "sport competitor",
+      "correct": "athlete",
+      "wrong": [
+        "atmosphere",
+        "attack"
+      ],
+      "word": "athlete"
+    },
+    {
+      "item_id": "atmosphere",
+      "question": "the air around Earth",
+      "correct": "atmosphere",
+      "wrong": [
+        "attack",
+        "attempt"
+      ],
+      "word": "atmosphere"
+    },
+    {
+      "item_id": "attack",
+      "question": "an act of trying to hurt or defeat",
+      "correct": "attack",
+      "wrong": [
+        "attempt",
+        "attend"
+      ],
+      "word": "attack"
+    },
+    {
+      "item_id": "attempt",
+      "question": "a try to do something",
+      "correct": "attempt",
+      "wrong": [
+        "attend",
+        "attention"
+      ],
+      "word": "attempt"
+    },
+    {
+      "item_id": "attend",
+      "question": "to go to a place",
+      "correct": "attend",
+      "wrong": [
+        "attention",
+        "attract"
+      ],
+      "word": "attend"
+    },
+    {
+      "item_id": "attention",
+      "question": "the act of listening or looking",
+      "correct": "attention",
+      "wrong": [
+        "attract",
+        "attraction"
+      ],
+      "word": "attention"
+    },
+    {
+      "item_id": "attract",
+      "question": "to pull things closer",
+      "correct": "attract",
+      "wrong": [
+        "attraction",
+        "attractive"
+      ],
+      "word": "attract"
+    },
+    {
+      "item_id": "attraction",
+      "question": "something that draws interest",
+      "correct": "attraction",
+      "wrong": [
+        "attractive",
+        "audience"
+      ],
+      "word": "attraction"
+    },
+    {
+      "item_id": "attractive",
+      "question": "nice to look at or pleasing",
+      "correct": "attractive",
+      "wrong": [
+        "audience",
+        "automatic"
+      ],
+      "word": "attractive"
+    },
+    {
+      "item_id": "audience",
+      "question": "people watching a show",
+      "correct": "audience",
+      "wrong": [
+        "automatic",
+        "average"
+      ],
+      "word": "audience"
+    },
+    {
+      "item_id": "automatic",
+      "question": "working by itself without help",
+      "correct": "automatic",
+      "wrong": [
+        "average",
+        "avoid"
+      ],
+      "word": "automatic"
+    },
+    {
+      "item_id": "average",
+      "question": "not special or unusual",
+      "correct": "average",
+      "wrong": [
+        "avoid",
+        "awake"
+      ],
+      "word": "average"
+    },
+    {
+      "item_id": "avoid",
+      "question": "stay away from something bad",
+      "correct": "avoid",
+      "wrong": [
+        "awake",
+        "afford"
+      ],
+      "word": "avoid"
+    },
+    {
+      "item_id": "awake",
+      "question": "not sleeping eyes open",
+      "correct": "awake",
+      "wrong": [
+        "afford",
+        "afraid"
+      ],
+      "word": "awake"
+    }
+  ]
+}

@@ -1,0 +1,407 @@
+{
+  "pack_id": "ielts08",
+  "title": "IELTS 701–800",
+  "seconds_per_letter": 5,
+  "items": [
+    {
+      "item_id": "award",
+      "word": "award"
+    },
+    {
+      "item_id": "away",
+      "word": "away"
+    },
+    {
+      "item_id": "awful",
+      "word": "awful"
+    },
+    {
+      "item_id": "baby",
+      "word": "baby"
+    },
+    {
+      "item_id": "back",
+      "word": "back"
+    },
+    {
+      "item_id": "background",
+      "word": "background"
+    },
+    {
+      "item_id": "bad",
+      "word": "bad"
+    },
+    {
+      "item_id": "bag",
+      "word": "bag"
+    },
+    {
+      "item_id": "balance",
+      "word": "balance"
+    },
+    {
+      "item_id": "ball",
+      "word": "ball"
+    },
+    {
+      "item_id": "ban",
+      "word": "ban"
+    },
+    {
+      "item_id": "band",
+      "word": "band"
+    },
+    {
+      "item_id": "bank",
+      "word": "bank"
+    },
+    {
+      "item_id": "bar",
+      "word": "bar"
+    },
+    {
+      "item_id": "base",
+      "word": "base"
+    },
+    {
+      "item_id": "basic",
+      "word": "basic"
+    },
+    {
+      "item_id": "basis",
+      "word": "basis"
+    },
+    {
+      "item_id": "basket",
+      "word": "basket"
+    },
+    {
+      "item_id": "bath",
+      "word": "bath"
+    },
+    {
+      "item_id": "battle",
+      "word": "battle"
+    },
+    {
+      "item_id": "be",
+      "word": "be"
+    },
+    {
+      "item_id": "beach",
+      "word": "beach"
+    },
+    {
+      "item_id": "bear",
+      "word": "bear"
+    },
+    {
+      "item_id": "beat",
+      "word": "beat"
+    },
+    {
+      "item_id": "beautiful",
+      "word": "beautiful"
+    },
+    {
+      "item_id": "because",
+      "word": "because"
+    },
+    {
+      "item_id": "become",
+      "word": "become"
+    },
+    {
+      "item_id": "bed",
+      "word": "bed"
+    },
+    {
+      "item_id": "before",
+      "word": "before"
+    },
+    {
+      "item_id": "begin",
+      "word": "begin"
+    },
+    {
+      "item_id": "behaviour",
+      "word": "behaviour"
+    },
+    {
+      "item_id": "behind",
+      "word": "behind"
+    },
+    {
+      "item_id": "belief",
+      "word": "belief"
+    },
+    {
+      "item_id": "believe",
+      "word": "believe"
+    },
+    {
+      "item_id": "belong",
+      "word": "belong"
+    },
+    {
+      "item_id": "below",
+      "word": "below"
+    },
+    {
+      "item_id": "belt",
+      "word": "belt"
+    },
+    {
+      "item_id": "bench",
+      "word": "bench"
+    },
+    {
+      "item_id": "bend",
+      "word": "bend"
+    },
+    {
+      "item_id": "beneath",
+      "word": "beneath"
+    },
+    {
+      "item_id": "beside",
+      "word": "beside"
+    },
+    {
+      "item_id": "best",
+      "word": "best"
+    },
+    {
+      "item_id": "better",
+      "word": "better"
+    },
+    {
+      "item_id": "between",
+      "word": "between"
+    },
+    {
+      "item_id": "beyond",
+      "word": "beyond"
+    },
+    {
+      "item_id": "big",
+      "word": "big"
+    },
+    {
+      "item_id": "bill",
+      "word": "bill"
+    },
+    {
+      "item_id": "billion",
+      "word": "billion"
+    },
+    {
+      "item_id": "bind",
+      "word": "bind"
+    },
+    {
+      "item_id": "bird",
+      "word": "bird"
+    },
+    {
+      "item_id": "birth",
+      "word": "birth"
+    },
+    {
+      "item_id": "bit",
+      "word": "bit"
+    },
+    {
+      "item_id": "bite",
+      "word": "bite"
+    },
+    {
+      "item_id": "bitter",
+      "word": "bitter"
+    },
+    {
+      "item_id": "black",
+      "word": "black"
+    },
+    {
+      "item_id": "blade",
+      "word": "blade"
+    },
+    {
+      "item_id": "blame",
+      "word": "blame"
+    },
+    {
+      "item_id": "blank",
+      "word": "blank"
+    },
+    {
+      "item_id": "blind",
+      "word": "blind"
+    },
+    {
+      "item_id": "block",
+      "word": "block"
+    },
+    {
+      "item_id": "blood",
+      "word": "blood"
+    },
+    {
+      "item_id": "blow",
+      "word": "blow"
+    },
+    {
+      "item_id": "blue",
+      "word": "blue"
+    },
+    {
+      "item_id": "board",
+      "word": "board"
+    },
+    {
+      "item_id": "boat",
+      "word": "boat"
+    },
+    {
+      "item_id": "body",
+      "word": "body"
+    },
+    {
+      "item_id": "boil",
+      "word": "boil"
+    },
+    {
+      "item_id": "bomb",
+      "word": "bomb"
+    },
+    {
+      "item_id": "bone",
+      "word": "bone"
+    },
+    {
+      "item_id": "book",
+      "word": "book"
+    },
+    {
+      "item_id": "boom",
+      "word": "boom"
+    },
+    {
+      "item_id": "boot",
+      "word": "boot"
+    },
+    {
+      "item_id": "border",
+      "word": "border"
+    },
+    {
+      "item_id": "bore",
+      "word": "bore"
+    },
+    {
+      "item_id": "born",
+      "word": "born"
+    },
+    {
+      "item_id": "borrow",
+      "word": "borrow"
+    },
+    {
+      "item_id": "boss",
+      "word": "boss"
+    },
+    {
+      "item_id": "both",
+      "word": "both"
+    },
+    {
+      "item_id": "bother",
+      "word": "bother"
+    },
+    {
+      "item_id": "bottle",
+      "word": "bottle"
+    },
+    {
+      "item_id": "bottom",
+      "word": "bottom"
+    },
+    {
+      "item_id": "boundary",
+      "word": "boundary"
+    },
+    {
+      "item_id": "bowl",
+      "word": "bowl"
+    },
+    {
+      "item_id": "box",
+      "word": "box"
+    },
+    {
+      "item_id": "boy",
+      "word": "boy"
+    },
+    {
+      "item_id": "brain",
+      "word": "brain"
+    },
+    {
+      "item_id": "branch",
+      "word": "branch"
+    },
+    {
+      "item_id": "brand",
+      "word": "brand"
+    },
+    {
+      "item_id": "brave",
+      "word": "brave"
+    },
+    {
+      "item_id": "bread",
+      "word": "bread"
+    },
+    {
+      "item_id": "break",
+      "word": "break"
+    },
+    {
+      "item_id": "breakfast",
+      "word": "breakfast"
+    },
+    {
+      "item_id": "breast",
+      "word": "breast"
+    },
+    {
+      "item_id": "breath",
+      "word": "breath"
+    },
+    {
+      "item_id": "breathe",
+      "word": "breathe"
+    },
+    {
+      "item_id": "breed",
+      "word": "breed"
+    },
+    {
+      "item_id": "brick",
+      "word": "brick"
+    },
+    {
+      "item_id": "bridge",
+      "word": "bridge"
+    },
+    {
+      "item_id": "bright",
+      "word": "bright"
+    },
+    {
+      "item_id": "bring",
+      "word": "bring"
+    }
+  ]
+}

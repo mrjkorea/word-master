@@ -1,0 +1,1008 @@
+{
+  "pack_id": "ielts10",
+  "title": "IELTS 901–1000",
+  "module_id": "word_master",
+  "seconds": 15,
+  "items": [
+    {
+      "item_id": "clinic",
+      "question": "small medical centre",
+      "correct": "clinic",
+      "wrong": [
+        "clock",
+        "close"
+      ],
+      "word": "clinic"
+    },
+    {
+      "item_id": "clock",
+      "question": "machine that shows the time",
+      "correct": "clock",
+      "wrong": [
+        "close",
+        "closely"
+      ],
+      "word": "clock"
+    },
+    {
+      "item_id": "close",
+      "question": "near in distance",
+      "correct": "close",
+      "wrong": [
+        "closely",
+        "clothes"
+      ],
+      "word": "close"
+    },
+    {
+      "item_id": "closely",
+      "question": "in a very near way",
+      "correct": "closely",
+      "wrong": [
+        "clothes",
+        "cloud"
+      ],
+      "word": "closely"
+    },
+    {
+      "item_id": "clothes",
+      "question": "things people wear on body",
+      "correct": "clothes",
+      "wrong": [
+        "cloud",
+        "club"
+      ],
+      "word": "clothes"
+    },
+    {
+      "item_id": "cloud",
+      "question": "white fluff in the sky",
+      "correct": "cloud",
+      "wrong": [
+        "club",
+        "clue"
+      ],
+      "word": "cloud"
+    },
+    {
+      "item_id": "club",
+      "question": "long stick for hitting balls",
+      "correct": "club",
+      "wrong": [
+        "clue",
+        "cluster"
+      ],
+      "word": "club"
+    },
+    {
+      "item_id": "clue",
+      "question": "hint to solve",
+      "correct": "clue",
+      "wrong": [
+        "cluster",
+        "coach"
+      ],
+      "word": "clue"
+    },
+    {
+      "item_id": "cluster",
+      "question": "group of similar things",
+      "correct": "cluster",
+      "wrong": [
+        "coach",
+        "coal"
+      ],
+      "word": "cluster"
+    },
+    {
+      "item_id": "coach",
+      "question": "person who trains players",
+      "correct": "coach",
+      "wrong": [
+        "coal",
+        "coast"
+      ],
+      "word": "coach"
+    },
+    {
+      "item_id": "coal",
+      "question": "black rock that burns",
+      "correct": "coal",
+      "wrong": [
+        "coast",
+        "coat"
+      ],
+      "word": "coal"
+    },
+    {
+      "item_id": "coast",
+      "question": "land beside the sea",
+      "correct": "coast",
+      "wrong": [
+        "coat",
+        "coffee"
+      ],
+      "word": "coast"
+    },
+    {
+      "item_id": "coat",
+      "question": "warm outer clothing",
+      "correct": "coat",
+      "wrong": [
+        "coffee",
+        "cognitive"
+      ],
+      "word": "coat"
+    },
+    {
+      "item_id": "coffee",
+      "question": "hot brown drink",
+      "correct": "coffee",
+      "wrong": [
+        "cognitive",
+        "cold"
+      ],
+      "word": "coffee"
+    },
+    {
+      "item_id": "cognitive",
+      "question": "about thinking and mind",
+      "correct": "cognitive",
+      "wrong": [
+        "cold",
+        "collect"
+      ],
+      "word": "cognitive"
+    },
+    {
+      "item_id": "cold",
+      "question": "very cool to touch",
+      "correct": "cold",
+      "wrong": [
+        "collect",
+        "collection"
+      ],
+      "word": "cold"
+    },
+    {
+      "item_id": "collect",
+      "question": "gather things in one place",
+      "correct": "collect",
+      "wrong": [
+        "collection",
+        "college"
+      ],
+      "word": "collect"
+    },
+    {
+      "item_id": "collection",
+      "question": "a group of similar things kept together",
+      "correct": "collection",
+      "wrong": [
+        "college",
+        "colour"
+      ],
+      "word": "collection"
+    },
+    {
+      "item_id": "college",
+      "question": "school after high school",
+      "correct": "college",
+      "wrong": [
+        "colour",
+        "column"
+      ],
+      "word": "college"
+    },
+    {
+      "item_id": "colour",
+      "question": "the look of something’s surface",
+      "correct": "colour",
+      "wrong": [
+        "column",
+        "combination"
+      ],
+      "word": "colour"
+    },
+    {
+      "item_id": "column",
+      "question": "tall round stone post",
+      "correct": "column",
+      "wrong": [
+        "combination",
+        "combine"
+      ],
+      "word": "column"
+    },
+    {
+      "item_id": "combination",
+      "question": "things mixed together",
+      "correct": "combination",
+      "wrong": [
+        "combine",
+        "come"
+      ],
+      "word": "combination"
+    },
+    {
+      "item_id": "combine",
+      "question": "mix two things together",
+      "correct": "combine",
+      "wrong": [
+        "come",
+        "comfort"
+      ],
+      "word": "combine"
+    },
+    {
+      "item_id": "come",
+      "question": "move toward a place",
+      "correct": "come",
+      "wrong": [
+        "comfort",
+        "comfortable"
+      ],
+      "word": "come"
+    },
+    {
+      "item_id": "comfort",
+      "question": "ease and calm",
+      "correct": "comfort",
+      "wrong": [
+        "comfortable",
+        "command"
+      ],
+      "word": "comfort"
+    },
+    {
+      "item_id": "comfortable",
+      "question": "feeling relaxed and easy",
+      "correct": "comfortable",
+      "wrong": [
+        "command",
+        "commercial"
+      ],
+      "word": "comfortable"
+    },
+    {
+      "item_id": "command",
+      "question": "order you must follow",
+      "correct": "command",
+      "wrong": [
+        "commercial",
+        "commitment"
+      ],
+      "word": "command"
+    },
+    {
+      "item_id": "commercial",
+      "question": "about buying and selling",
+      "correct": "commercial",
+      "wrong": [
+        "commitment",
+        "committee"
+      ],
+      "word": "commercial"
+    },
+    {
+      "item_id": "commitment",
+      "question": "a promise to do something",
+      "correct": "commitment",
+      "wrong": [
+        "committee",
+        "common"
+      ],
+      "word": "commitment"
+    },
+    {
+      "item_id": "committee",
+      "question": "a small group that decides things",
+      "correct": "committee",
+      "wrong": [
+        "common",
+        "communication"
+      ],
+      "word": "committee"
+    },
+    {
+      "item_id": "common",
+      "question": "seen very often",
+      "correct": "common",
+      "wrong": [
+        "communication",
+        "company"
+      ],
+      "word": "common"
+    },
+    {
+      "item_id": "communication",
+      "question": "sharing ideas with words",
+      "correct": "communication",
+      "wrong": [
+        "company",
+        "compare"
+      ],
+      "word": "communication"
+    },
+    {
+      "item_id": "company",
+      "question": "a group of people working together",
+      "correct": "company",
+      "wrong": [
+        "compare",
+        "comparison"
+      ],
+      "word": "company"
+    },
+    {
+      "item_id": "compare",
+      "question": "to look at two things together",
+      "correct": "compare",
+      "wrong": [
+        "comparison",
+        "compete"
+      ],
+      "word": "compare"
+    },
+    {
+      "item_id": "comparison",
+      "question": "seeing how two things differ",
+      "correct": "comparison",
+      "wrong": [
+        "compete",
+        "competition"
+      ],
+      "word": "comparison"
+    },
+    {
+      "item_id": "compete",
+      "question": "try to win against others",
+      "correct": "compete",
+      "wrong": [
+        "competition",
+        "competitive"
+      ],
+      "word": "compete"
+    },
+    {
+      "item_id": "competition",
+      "question": "a contest between people",
+      "correct": "competition",
+      "wrong": [
+        "competitive",
+        "complain"
+      ],
+      "word": "competition"
+    },
+    {
+      "item_id": "competitive",
+      "question": "trying to win",
+      "correct": "competitive",
+      "wrong": [
+        "complain",
+        "complaint"
+      ],
+      "word": "competitive"
+    },
+    {
+      "item_id": "complain",
+      "question": "to say you are unhappy",
+      "correct": "complain",
+      "wrong": [
+        "complaint",
+        "complete"
+      ],
+      "word": "complain"
+    },
+    {
+      "item_id": "complaint",
+      "question": "saying something is wrong",
+      "correct": "complaint",
+      "wrong": [
+        "complete",
+        "compose"
+      ],
+      "word": "complaint"
+    },
+    {
+      "item_id": "complete",
+      "question": "having every part",
+      "correct": "complete",
+      "wrong": [
+        "compose",
+        "composition"
+      ],
+      "word": "complete"
+    },
+    {
+      "item_id": "compose",
+      "question": "make a piece of music",
+      "correct": "compose",
+      "wrong": [
+        "composition",
+        "computer"
+      ],
+      "word": "compose"
+    },
+    {
+      "item_id": "composition",
+      "question": "way parts are arranged",
+      "correct": "composition",
+      "wrong": [
+        "computer",
+        "concern"
+      ],
+      "word": "composition"
+    },
+    {
+      "item_id": "computer",
+      "question": "machine that runs programs",
+      "correct": "computer",
+      "wrong": [
+        "concern",
+        "concerned"
+      ],
+      "word": "computer"
+    },
+    {
+      "item_id": "concern",
+      "question": "a feeling of worry or care",
+      "correct": "concern",
+      "wrong": [
+        "concerned",
+        "concert"
+      ],
+      "word": "concern"
+    },
+    {
+      "item_id": "concerned",
+      "question": "feeling worried about something",
+      "correct": "concerned",
+      "wrong": [
+        "concert",
+        "conclusion"
+      ],
+      "word": "concerned"
+    },
+    {
+      "item_id": "concert",
+      "question": "live music show",
+      "correct": "concert",
+      "wrong": [
+        "conclusion",
+        "concrete"
+      ],
+      "word": "concert"
+    },
+    {
+      "item_id": "conclusion",
+      "question": "the final answer after thinking",
+      "correct": "conclusion",
+      "wrong": [
+        "concrete",
+        "condition"
+      ],
+      "word": "conclusion"
+    },
+    {
+      "item_id": "concrete",
+      "question": "made of hard gray stone",
+      "correct": "concrete",
+      "wrong": [
+        "condition",
+        "conference"
+      ],
+      "word": "concrete"
+    },
+    {
+      "item_id": "condition",
+      "question": "the state or quality of something",
+      "correct": "condition",
+      "wrong": [
+        "conference",
+        "confidence"
+      ],
+      "word": "condition"
+    },
+    {
+      "item_id": "conference",
+      "question": "a big meeting of people",
+      "correct": "conference",
+      "wrong": [
+        "confidence",
+        "confident"
+      ],
+      "word": "conference"
+    },
+    {
+      "item_id": "confidence",
+      "question": "feeling sure you can do something",
+      "correct": "confidence",
+      "wrong": [
+        "confident",
+        "confuse"
+      ],
+      "word": "confidence"
+    },
+    {
+      "item_id": "confident",
+      "question": "sure you can do it",
+      "correct": "confident",
+      "wrong": [
+        "confuse",
+        "connect"
+      ],
+      "word": "confident"
+    },
+    {
+      "item_id": "confuse",
+      "question": "to make someone unsure",
+      "correct": "confuse",
+      "wrong": [
+        "connect",
+        "connection"
+      ],
+      "word": "confuse"
+    },
+    {
+      "item_id": "connect",
+      "question": "to join things together",
+      "correct": "connect",
+      "wrong": [
+        "connection",
+        "conscious"
+      ],
+      "word": "connect"
+    },
+    {
+      "item_id": "connection",
+      "question": "a link between two or more things",
+      "correct": "connection",
+      "wrong": [
+        "conscious",
+        "consequence"
+      ],
+      "word": "connection"
+    },
+    {
+      "item_id": "conscious",
+      "question": "aware and thinking clearly",
+      "correct": "conscious",
+      "wrong": [
+        "consequence",
+        "conservative"
+      ],
+      "word": "conscious"
+    },
+    {
+      "item_id": "consequence",
+      "question": "what happens after",
+      "correct": "consequence",
+      "wrong": [
+        "conservative",
+        "consider"
+      ],
+      "word": "consequence"
+    },
+    {
+      "item_id": "conservative",
+      "question": "liking old ways and rules",
+      "correct": "conservative",
+      "wrong": [
+        "consider",
+        "consideration"
+      ],
+      "word": "conservative"
+    },
+    {
+      "item_id": "consider",
+      "question": "to think about something",
+      "correct": "consider",
+      "wrong": [
+        "consideration",
+        "consistent"
+      ],
+      "word": "consider"
+    },
+    {
+      "item_id": "consideration",
+      "question": "careful thought before",
+      "correct": "consideration",
+      "wrong": [
+        "consistent",
+        "constitution"
+      ],
+      "word": "consideration"
+    },
+    {
+      "item_id": "consistent",
+      "question": "always the same way",
+      "correct": "consistent",
+      "wrong": [
+        "constitution",
+        "construction"
+      ],
+      "word": "consistent"
+    },
+    {
+      "item_id": "constitution",
+      "question": "a country's main rules",
+      "correct": "constitution",
+      "wrong": [
+        "construction",
+        "consumer"
+      ],
+      "word": "constitution"
+    },
+    {
+      "item_id": "construction",
+      "question": "building something new",
+      "correct": "construction",
+      "wrong": [
+        "consumer",
+        "consumption"
+      ],
+      "word": "construction"
+    },
+    {
+      "item_id": "consumer",
+      "question": "person who buys things",
+      "correct": "consumer",
+      "wrong": [
+        "consumption",
+        "contain"
+      ],
+      "word": "consumer"
+    },
+    {
+      "item_id": "consumption",
+      "question": "using food or energy",
+      "correct": "consumption",
+      "wrong": [
+        "contain",
+        "container"
+      ],
+      "word": "consumption"
+    },
+    {
+      "item_id": "contain",
+      "question": "to hold something inside",
+      "correct": "contain",
+      "wrong": [
+        "container",
+        "content"
+      ],
+      "word": "contain"
+    },
+    {
+      "item_id": "container",
+      "question": "box for holding things",
+      "correct": "container",
+      "wrong": [
+        "content",
+        "contest"
+      ],
+      "word": "container"
+    },
+    {
+      "item_id": "content",
+      "question": "happy and satisfied",
+      "correct": "content",
+      "wrong": [
+        "contest",
+        "continent"
+      ],
+      "word": "content"
+    },
+    {
+      "item_id": "contest",
+      "question": "competition",
+      "correct": "contest",
+      "wrong": [
+        "continent",
+        "continue"
+      ],
+      "word": "contest"
+    },
+    {
+      "item_id": "continent",
+      "question": "large land mass",
+      "correct": "continent",
+      "wrong": [
+        "continue",
+        "continuous"
+      ],
+      "word": "continent"
+    },
+    {
+      "item_id": "continue",
+      "question": "to keep going on",
+      "correct": "continue",
+      "wrong": [
+        "continuous",
+        "contribution"
+      ],
+      "word": "continue"
+    },
+    {
+      "item_id": "continuous",
+      "question": "going on without stopping",
+      "correct": "continuous",
+      "wrong": [
+        "contribution",
+        "control"
+      ],
+      "word": "continuous"
+    },
+    {
+      "item_id": "contribution",
+      "question": "money or help you give",
+      "correct": "contribution",
+      "wrong": [
+        "control",
+        "convenience"
+      ],
+      "word": "contribution"
+    },
+    {
+      "item_id": "control",
+      "question": "power to make things happen",
+      "correct": "control",
+      "wrong": [
+        "convenience",
+        "convenient"
+      ],
+      "word": "control"
+    },
+    {
+      "item_id": "convenience",
+      "question": "ease and usefulness",
+      "correct": "convenience",
+      "wrong": [
+        "convenient",
+        "convention"
+      ],
+      "word": "convenience"
+    },
+    {
+      "item_id": "convenient",
+      "question": "easy to use or reach",
+      "correct": "convenient",
+      "wrong": [
+        "convention",
+        "conventional"
+      ],
+      "word": "convenient"
+    },
+    {
+      "item_id": "convention",
+      "question": "big meeting of people",
+      "correct": "convention",
+      "wrong": [
+        "conventional",
+        "conversation"
+      ],
+      "word": "convention"
+    },
+    {
+      "item_id": "conventional",
+      "question": "usual and following old ways",
+      "correct": "conventional",
+      "wrong": [
+        "conversation",
+        "cook"
+      ],
+      "word": "conventional"
+    },
+    {
+      "item_id": "conversation",
+      "question": "talking with someone",
+      "correct": "conversation",
+      "wrong": [
+        "cook",
+        "cool"
+      ],
+      "word": "conversation"
+    },
+    {
+      "item_id": "cook",
+      "question": "to prepare food with heat",
+      "correct": "cook",
+      "wrong": [
+        "cool",
+        "cope"
+      ],
+      "word": "cook"
+    },
+    {
+      "item_id": "cool",
+      "question": "a little cold",
+      "correct": "cool",
+      "wrong": [
+        "cope",
+        "copy"
+      ],
+      "word": "cool"
+    },
+    {
+      "item_id": "cope",
+      "question": "to deal with a problem well",
+      "correct": "cope",
+      "wrong": [
+        "copy",
+        "corn"
+      ],
+      "word": "cope"
+    },
+    {
+      "item_id": "copy",
+      "question": "an exact same second thing",
+      "correct": "copy",
+      "wrong": [
+        "corn",
+        "corner"
+      ],
+      "word": "copy"
+    },
+    {
+      "item_id": "corn",
+      "question": "yellow grain crop",
+      "correct": "corn",
+      "wrong": [
+        "corner",
+        "correct"
+      ],
+      "word": "corn"
+    },
+    {
+      "item_id": "corner",
+      "question": "where two walls meet",
+      "correct": "corner",
+      "wrong": [
+        "correct",
+        "cost"
+      ],
+      "word": "corner"
+    },
+    {
+      "item_id": "correct",
+      "question": "right or accurate",
+      "correct": "correct",
+      "wrong": [
+        "cost",
+        "cotton"
+      ],
+      "word": "correct"
+    },
+    {
+      "item_id": "cost",
+      "question": "money you pay for something",
+      "correct": "cost",
+      "wrong": [
+        "cotton",
+        "couch"
+      ],
+      "word": "cost"
+    },
+    {
+      "item_id": "cotton",
+      "question": "soft plant fibre",
+      "correct": "cotton",
+      "wrong": [
+        "couch",
+        "could"
+      ],
+      "word": "cotton"
+    },
+    {
+      "item_id": "couch",
+      "question": "long soft seat",
+      "correct": "couch",
+      "wrong": [
+        "could",
+        "council"
+      ],
+      "word": "couch"
+    },
+    {
+      "item_id": "could",
+      "question": "is able to do something",
+      "correct": "could",
+      "wrong": [
+        "council",
+        "count"
+      ],
+      "word": "could"
+    },
+    {
+      "item_id": "council",
+      "question": "a group of people who make decisions",
+      "correct": "council",
+      "wrong": [
+        "count",
+        "counter"
+      ],
+      "word": "council"
+    },
+    {
+      "item_id": "count",
+      "question": "how many things there are",
+      "correct": "count",
+      "wrong": [
+        "counter",
+        "country"
+      ],
+      "word": "count"
+    },
+    {
+      "item_id": "counter",
+      "question": "shop service desk",
+      "correct": "counter",
+      "wrong": [
+        "country",
+        "county"
+      ],
+      "word": "counter"
+    },
+    {
+      "item_id": "country",
+      "question": "a nation or land",
+      "correct": "country",
+      "wrong": [
+        "county",
+        "course"
+      ],
+      "word": "country"
+    },
+    {
+      "item_id": "county",
+      "question": "a region inside a state",
+      "correct": "county",
+      "wrong": [
+        "course",
+        "court"
+      ],
+      "word": "county"
+    },
+    {
+      "item_id": "course",
+      "question": "as you would expect",
+      "correct": "course",
+      "wrong": [
+        "court",
+        "cousin"
+      ],
+      "word": "course"
+    },
+    {
+      "item_id": "court",
+      "question": "a place where a judge works",
+      "correct": "court",
+      "wrong": [
+        "cousin",
+        "cover"
+      ],
+      "word": "court"
+    },
+    {
+      "item_id": "cousin",
+      "question": "parent's sibling's child",
+      "correct": "cousin",
+      "wrong": [
+        "cover",
+        "clinic"
+      ],
+      "word": "cousin"
+    },
+    {
+      "item_id": "cover",
+      "question": "outer front of a book",
+      "correct": "cover",
+      "wrong": [
+        "clinic",
+        "clock"
+      ],
+      "word": "cover"
+    }
+  ]
+}

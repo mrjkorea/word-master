@@ -1,0 +1,407 @@
+{
+  "pack_id": "ielts10",
+  "title": "IELTS 901–1000",
+  "seconds_per_letter": 5,
+  "items": [
+    {
+      "item_id": "clinic",
+      "word": "clinic"
+    },
+    {
+      "item_id": "clock",
+      "word": "clock"
+    },
+    {
+      "item_id": "close",
+      "word": "close"
+    },
+    {
+      "item_id": "closely",
+      "word": "closely"
+    },
+    {
+      "item_id": "clothes",
+      "word": "clothes"
+    },
+    {
+      "item_id": "cloud",
+      "word": "cloud"
+    },
+    {
+      "item_id": "club",
+      "word": "club"
+    },
+    {
+      "item_id": "clue",
+      "word": "clue"
+    },
+    {
+      "item_id": "cluster",
+      "word": "cluster"
+    },
+    {
+      "item_id": "coach",
+      "word": "coach"
+    },
+    {
+      "item_id": "coal",
+      "word": "coal"
+    },
+    {
+      "item_id": "coast",
+      "word": "coast"
+    },
+    {
+      "item_id": "coat",
+      "word": "coat"
+    },
+    {
+      "item_id": "coffee",
+      "word": "coffee"
+    },
+    {
+      "item_id": "cognitive",
+      "word": "cognitive"
+    },
+    {
+      "item_id": "cold",
+      "word": "cold"
+    },
+    {
+      "item_id": "collect",
+      "word": "collect"
+    },
+    {
+      "item_id": "collection",
+      "word": "collection"
+    },
+    {
+      "item_id": "college",
+      "word": "college"
+    },
+    {
+      "item_id": "colour",
+      "word": "colour"
+    },
+    {
+      "item_id": "column",
+      "word": "column"
+    },
+    {
+      "item_id": "combination",
+      "word": "combination"
+    },
+    {
+      "item_id": "combine",
+      "word": "combine"
+    },
+    {
+      "item_id": "come",
+      "word": "come"
+    },
+    {
+      "item_id": "comfort",
+      "word": "comfort"
+    },
+    {
+      "item_id": "comfortable",
+      "word": "comfortable"
+    },
+    {
+      "item_id": "command",
+      "word": "command"
+    },
+    {
+      "item_id": "commercial",
+      "word": "commercial"
+    },
+    {
+      "item_id": "commitment",
+      "word": "commitment"
+    },
+    {
+      "item_id": "committee",
+      "word": "committee"
+    },
+    {
+      "item_id": "common",
+      "word": "common"
+    },
+    {
+      "item_id": "communication",
+      "word": "communication"
+    },
+    {
+      "item_id": "company",
+      "word": "company"
+    },
+    {
+      "item_id": "compare",
+      "word": "compare"
+    },
+    {
+      "item_id": "comparison",
+      "word": "comparison"
+    },
+    {
+      "item_id": "compete",
+      "word": "compete"
+    },
+    {
+      "item_id": "competition",
+      "word": "competition"
+    },
+    {
+      "item_id": "competitive",
+      "word": "competitive"
+    },
+    {
+      "item_id": "complain",
+      "word": "complain"
+    },
+    {
+      "item_id": "complaint",
+      "word": "complaint"
+    },
+    {
+      "item_id": "complete",
+      "word": "complete"
+    },
+    {
+      "item_id": "compose",
+      "word": "compose"
+    },
+    {
+      "item_id": "composition",
+      "word": "composition"
+    },
+    {
+      "item_id": "computer",
+      "word": "computer"
+    },
+    {
+      "item_id": "concern",
+      "word": "concern"
+    },
+    {
+      "item_id": "concerned",
+      "word": "concerned"
+    },
+    {
+      "item_id": "concert",
+      "word": "concert"
+    },
+    {
+      "item_id": "conclusion",
+      "word": "conclusion"
+    },
+    {
+      "item_id": "concrete",
+      "word": "concrete"
+    },
+    {
+      "item_id": "condition",
+      "word": "condition"
+    },
+    {
+      "item_id": "conference",
+      "word": "conference"
+    },
+    {
+      "item_id": "confidence",
+      "word": "confidence"
+    },
+    {
+      "item_id": "confident",
+      "word": "confident"
+    },
+    {
+      "item_id": "confuse",
+      "word": "confuse"
+    },
+    {
+      "item_id": "connect",
+      "word": "connect"
+    },
+    {
+      "item_id": "connection",
+      "word": "connection"
+    },
+    {
+      "item_id": "conscious",
+      "word": "conscious"
+    },
+    {
+      "item_id": "consequence",
+      "word": "consequence"
+    },
+    {
+      "item_id": "conservative",
+      "word": "conservative"
+    },
+    {
+      "item_id": "consider",
+      "word": "consider"
+    },
+    {
+      "item_id": "consideration",
+      "word": "consideration"
+    },
+    {
+      "item_id": "consistent",
+      "word": "consistent"
+    },
+    {
+      "item_id": "constitution",
+      "word": "constitution"
+    },
+    {
+      "item_id": "construction",
+      "word": "construction"
+    },
+    {
+      "item_id": "consumer",
+      "word": "consumer"
+    },
+    {
+      "item_id": "consumption",
+      "word": "consumption"
+    },
+    {
+      "item_id": "contain",
+      "word": "contain"
+    },
+    {
+      "item_id": "container",
+      "word": "container"
+    },
+    {
+      "item_id": "content",
+      "word": "content"
+    },
+    {
+      "item_id": "contest",
+      "word": "contest"
+    },
+    {
+      "item_id": "continent",
+      "word": "continent"
+    },
+    {
+      "item_id": "continue",
+      "word": "continue"
+    },
+    {
+      "item_id": "continuous",
+      "word": "continuous"
+    },
+    {
+      "item_id": "contribution",
+      "word": "contribution"
+    },
+    {
+      "item_id": "control",
+      "word": "control"
+    },
+    {
+      "item_id": "convenience",
+      "word": "convenience"
+    },
+    {
+      "item_id": "convenient",
+      "word": "convenient"
+    },
+    {
+      "item_id": "convention",
+      "word": "convention"
+    },
+    {
+      "item_id": "conventional",
+      "word": "conventional"
+    },
+    {
+      "item_id": "conversation",
+      "word": "conversation"
+    },
+    {
+      "item_id": "cook",
+      "word": "cook"
+    },
+    {
+      "item_id": "cool",
+      "word": "cool"
+    },
+    {
+      "item_id": "cope",
+      "word": "cope"
+    },
+    {
+      "item_id": "copy",
+      "word": "copy"
+    },
+    {
+      "item_id": "corn",
+      "word": "corn"
+    },
+    {
+      "item_id": "corner",
+      "word": "corner"
+    },
+    {
+      "item_id": "correct",
+      "word": "correct"
+    },
+    {
+      "item_id": "cost",
+      "word": "cost"
+    },
+    {
+      "item_id": "cotton",
+      "word": "cotton"
+    },
+    {
+      "item_id": "couch",
+      "word": "couch"
+    },
+    {
+      "item_id": "could",
+      "word": "could"
+    },
+    {
+      "item_id": "council",
+      "word": "council"
+    },
+    {
+      "item_id": "count",
+      "word": "count"
+    },
+    {
+      "item_id": "counter",
+      "word": "counter"
+    },
+    {
+      "item_id": "country",
+      "word": "country"
+    },
+    {
+      "item_id": "county",
+      "word": "county"
+    },
+    {
+      "item_id": "course",
+      "word": "course"
+    },
+    {
+      "item_id": "court",
+      "word": "court"
+    },
+    {
+      "item_id": "cousin",
+      "word": "cousin"
+    },
+    {
+      "item_id": "cover",
+      "word": "cover"
+    }
+  ]
+}
