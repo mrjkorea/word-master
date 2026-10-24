@@ -4,404 +4,404 @@
   "seconds_per_letter": 5,
   "items": [
     {
-      "item_id": "error",
-      "word": "error"
+      "item_id": "bill",
+      "word": "bill"
     },
     {
-      "item_id": "ethnic",
-      "word": "ethnic"
+      "item_id": "cool",
+      "word": "cool"
     },
     {
-      "item_id": "goal",
-      "word": "goal"
+      "item_id": "director",
+      "word": "director"
     },
     {
-      "item_id": "grant",
-      "word": "grant"
+      "item_id": "exactly",
+      "word": "exactly"
     },
     {
-      "item_id": "hence",
-      "word": "hence"
+      "item_id": "ground",
+      "word": "ground"
     },
     {
-      "item_id": "hypothesis",
-      "word": "hypothesis"
+      "item_id": "source",
+      "word": "source"
     },
     {
-      "item_id": "implement",
-      "word": "implement"
+      "item_id": "evidence",
+      "word": "evidence"
     },
     {
-      "item_id": "implicate",
-      "word": "implicate"
+      "item_id": "follow",
+      "word": "follow"
     },
     {
-      "item_id": "impose",
-      "word": "impose"
+      "item_id": "amount",
+      "word": "amount"
     },
     {
-      "item_id": "integrate",
-      "word": "integrate"
+      "item_id": "blue",
+      "word": "blue"
     },
     {
-      "item_id": "internal",
-      "word": "internal"
+      "item_id": "drive",
+      "word": "drive"
     },
     {
-      "item_id": "investigate",
-      "word": "investigate"
+      "item_id": "eat",
+      "word": "eat"
     },
     {
-      "item_id": "job",
-      "word": "job"
+      "item_id": "fall",
+      "word": "fall"
     },
     {
-      "item_id": "label",
-      "word": "label"
+      "item_id": "fast",
+      "word": "fast"
     },
     {
-      "item_id": "mechanism",
-      "word": "mechanism"
+      "item_id": "federal",
+      "word": "federal"
     },
     {
-      "item_id": "obvious",
-      "word": "obvious"
+      "item_id": "feeling",
+      "word": "feeling"
     },
     {
-      "item_id": "occupy",
-      "word": "occupy"
+      "item_id": "green",
+      "word": "green"
     },
     {
-      "item_id": "option",
-      "word": "option"
+      "item_id": "central",
+      "word": "central"
     },
     {
-      "item_id": "output",
-      "word": "output"
+      "item_id": "forward",
+      "word": "forward"
     },
     {
-      "item_id": "overall",
-      "word": "overall"
+      "item_id": "range",
+      "word": "range"
     },
     {
-      "item_id": "parallel",
-      "word": "parallel"
+      "item_id": "attention",
+      "word": "attention"
     },
     {
-      "item_id": "parameter",
-      "word": "parameter"
+      "item_id": "brother",
+      "word": "brother"
     },
     {
-      "item_id": "phase",
-      "word": "phase"
+      "item_id": "character",
+      "word": "character"
     },
     {
-      "item_id": "predict",
-      "word": "predict"
+      "item_id": "chief",
+      "word": "chief"
     },
     {
-      "item_id": "principal",
-      "word": "principal"
+      "item_id": "cup",
+      "word": "cup"
     },
     {
-      "item_id": "prior",
-      "word": "prior"
-    },
-    {
-      "item_id": "professional",
-      "word": "professional"
-    },
-    {
-      "item_id": "project",
-      "word": "project"
-    },
-    {
-      "item_id": "promote",
-      "word": "promote"
-    },
-    {
-      "item_id": "regime",
-      "word": "regime"
-    },
-    {
-      "item_id": "resolve",
-      "word": "resolve"
-    },
-    {
-      "item_id": "retain",
-      "word": "retain"
-    },
-    {
-      "item_id": "series",
-      "word": "series"
-    },
-    {
-      "item_id": "statistic",
-      "word": "statistic"
-    },
-    {
-      "item_id": "status",
-      "word": "status"
-    },
-    {
-      "item_id": "stress",
-      "word": "stress"
-    },
-    {
-      "item_id": "subsequent",
-      "word": "subsequent"
-    },
-    {
-      "item_id": "sum",
-      "word": "sum"
-    },
-    {
-      "item_id": "summary",
-      "word": "summary"
-    },
-    {
-      "item_id": "undertake",
-      "word": "undertake"
-    },
-    {
-      "item_id": "academy",
-      "word": "academy"
-    },
-    {
-      "item_id": "adjust",
-      "word": "adjust"
-    },
-    {
-      "item_id": "alter",
-      "word": "alter"
-    },
-    {
-      "item_id": "amend",
-      "word": "amend"
-    },
-    {
-      "item_id": "aware",
-      "word": "aware"
-    },
-    {
-      "item_id": "capacity",
-      "word": "capacity"
-    },
-    {
-      "item_id": "challenge",
-      "word": "challenge"
-    },
-    {
-      "item_id": "clause",
-      "word": "clause"
-    },
-    {
-      "item_id": "compound",
-      "word": "compound"
-    },
-    {
-      "item_id": "conflict",
-      "word": "conflict"
-    },
-    {
-      "item_id": "consult",
-      "word": "consult"
-    },
-    {
-      "item_id": "contact",
-      "word": "contact"
-    },
-    {
-      "item_id": "decline",
-      "word": "decline"
-    },
-    {
-      "item_id": "discrete",
-      "word": "discrete"
-    },
-    {
-      "item_id": "draft",
-      "word": "draft"
-    },
-    {
-      "item_id": "enable",
-      "word": "enable"
-    },
-    {
-      "item_id": "energy",
-      "word": "energy"
-    },
-    {
-      "item_id": "enforce",
-      "word": "enforce"
-    },
-    {
-      "item_id": "entity",
-      "word": "entity"
-    },
-    {
-      "item_id": "equivalent",
-      "word": "equivalent"
-    },
-    {
-      "item_id": "evolve",
-      "word": "evolve"
-    },
-    {
-      "item_id": "expand",
-      "word": "expand"
-    },
-    {
-      "item_id": "expose",
-      "word": "expose"
-    },
-    {
-      "item_id": "external",
-      "word": "external"
-    },
-    {
-      "item_id": "facilitate",
-      "word": "facilitate"
-    },
-    {
-      "item_id": "fundamental",
-      "word": "fundamental"
-    },
-    {
-      "item_id": "generate",
-      "word": "generate"
-    },
-    {
-      "item_id": "generation",
-      "word": "generation"
-    },
-    {
-      "item_id": "image",
-      "word": "image"
-    },
-    {
-      "item_id": "liberal",
-      "word": "liberal"
-    },
-    {
-      "item_id": "licence",
-      "word": "licence"
-    },
-    {
-      "item_id": "logic",
-      "word": "logic"
-    },
-    {
-      "item_id": "margin",
-      "word": "margin"
-    },
-    {
-      "item_id": "medical",
-      "word": "medical"
-    },
-    {
-      "item_id": "mental",
-      "word": "mental"
-    },
-    {
-      "item_id": "modify",
-      "word": "modify"
-    },
-    {
-      "item_id": "monitor",
-      "word": "monitor"
-    },
-    {
-      "item_id": "network",
-      "word": "network"
-    },
-    {
-      "item_id": "notion",
-      "word": "notion"
-    },
-    {
-      "item_id": "objective",
-      "word": "objective"
-    },
-    {
-      "item_id": "orient",
-      "word": "orient"
-    },
-    {
-      "item_id": "perspective",
-      "word": "perspective"
-    },
-    {
-      "item_id": "precise",
-      "word": "precise"
-    },
-    {
-      "item_id": "prime",
-      "word": "prime"
-    },
-    {
-      "item_id": "psychology",
-      "word": "psychology"
-    },
-    {
-      "item_id": "pursue",
-      "word": "pursue"
-    },
-    {
-      "item_id": "ratio",
-      "word": "ratio"
-    },
-    {
-      "item_id": "reject",
-      "word": "reject"
-    },
-    {
-      "item_id": "revenue",
-      "word": "revenue"
-    },
-    {
-      "item_id": "stable",
-      "word": "stable"
+      "item_id": "football",
+      "word": "football"
     },
     {
       "item_id": "style",
       "word": "style"
     },
     {
-      "item_id": "substitute",
-      "word": "substitute"
+      "item_id": "blood",
+      "word": "blood"
     },
     {
-      "item_id": "sustain",
-      "word": "sustain"
+      "item_id": "complete",
+      "word": "complete"
     },
     {
-      "item_id": "symbol",
-      "word": "symbol"
+      "item_id": "dog",
+      "word": "dog"
     },
     {
-      "item_id": "target",
-      "word": "target"
+      "item_id": "economic",
+      "word": "economic"
     },
     {
-      "item_id": "transit",
-      "word": "transit"
+      "item_id": "add",
+      "word": "add"
     },
     {
-      "item_id": "trend",
-      "word": "trend"
+      "item_id": "article",
+      "word": "article"
+    },
+    {
+      "item_id": "attack",
+      "word": "attack"
+    },
+    {
+      "item_id": "born",
+      "word": "born"
+    },
+    {
+      "item_id": "decision",
+      "word": "decision"
+    },
+    {
+      "item_id": "enjoy",
+      "word": "enjoy"
+    },
+    {
+      "item_id": "entire",
+      "word": "entire"
+    },
+    {
+      "item_id": "release",
+      "word": "release"
+    },
+    {
+      "item_id": "technology",
+      "word": "technology"
+    },
+    {
+      "item_id": "choice",
+      "word": "choice"
+    },
+    {
+      "item_id": "code",
+      "word": "code"
+    },
+    {
+      "item_id": "continue",
+      "word": "continue"
+    },
+    {
+      "item_id": "council",
+      "word": "council"
+    },
+    {
+      "item_id": "cover",
+      "word": "cover"
+    },
+    {
+      "item_id": "currently",
+      "word": "currently"
+    },
+    {
+      "item_id": "door",
+      "word": "door"
+    },
+    {
+      "item_id": "election",
+      "word": "election"
+    },
+    {
+      "item_id": "financial",
+      "word": "financial"
+    },
+    {
+      "item_id": "foreign",
+      "word": "foreign"
+    },
+    {
+      "item_id": "hair",
+      "word": "hair"
+    },
+    {
+      "item_id": "legal",
+      "word": "legal"
+    },
+    {
+      "item_id": "bed",
+      "word": "bed"
+    },
+    {
+      "item_id": "career",
+      "word": "career"
+    },
+    {
+      "item_id": "crazy",
+      "word": "crazy"
+    },
+    {
+      "item_id": "daily",
+      "word": "daily"
+    },
+    {
+      "item_id": "daughter",
+      "word": "daughter"
+    },
+    {
+      "item_id": "die",
+      "word": "die"
+    },
+    {
+      "item_id": "difficult",
+      "word": "difficult"
+    },
+    {
+      "item_id": "figure",
+      "word": "figure"
     },
     {
       "item_id": "version",
       "word": "version"
     },
     {
-      "item_id": "welfare",
-      "word": "welfare"
+      "item_id": "army",
+      "word": "army"
     },
     {
-      "item_id": "whereas",
-      "word": "whereas"
+      "item_id": "earth",
+      "word": "earth"
+    },
+    {
+      "item_id": "forget",
+      "word": "forget"
+    },
+    {
+      "item_id": "goal",
+      "word": "goal"
+    },
+    {
+      "item_id": "access",
+      "word": "access"
+    },
+    {
+      "item_id": "base",
+      "word": "base"
+    },
+    {
+      "item_id": "below",
+      "word": "below"
+    },
+    {
+      "item_id": "deep",
+      "word": "deep"
+    },
+    {
+      "item_id": "professional",
+      "word": "professional"
+    },
+    {
+      "item_id": "ball",
+      "word": "ball"
+    },
+    {
+      "item_id": "box",
+      "word": "box"
+    },
+    {
+      "item_id": "build",
+      "word": "build"
+    },
+    {
+      "item_id": "card",
+      "word": "card"
+    },
+    {
+      "item_id": "dark",
+      "word": "dark"
+    },
+    {
+      "item_id": "district",
+      "word": "district"
+    },
+    {
+      "item_id": "percent",
+      "word": "percent"
+    },
+    {
+      "item_id": "culture",
+      "word": "culture"
+    },
+    {
+      "item_id": "growth",
+      "word": "growth"
+    },
+    {
+      "item_id": "specific",
+      "word": "specific"
+    },
+    {
+      "item_id": "album",
+      "word": "album"
+    },
+    {
+      "item_id": "century",
+      "word": "century"
+    },
+    {
+      "item_id": "charge",
+      "word": "charge"
+    },
+    {
+      "item_id": "cold",
+      "word": "cold"
+    },
+    {
+      "item_id": "create",
+      "word": "create"
+    },
+    {
+      "item_id": "effect",
+      "word": "effect"
+    },
+    {
+      "item_id": "eight",
+      "word": "eight"
+    },
+    {
+      "item_id": "except",
+      "word": "except"
+    },
+    {
+      "item_id": "eye",
+      "word": "eye"
+    },
+    {
+      "item_id": "funny",
+      "word": "funny"
+    },
+    {
+      "item_id": "network",
+      "word": "network"
+    },
+    {
+      "item_id": "via",
+      "word": "via"
+    },
+    {
+      "item_id": "addition",
+      "word": "addition"
+    },
+    {
+      "item_id": "ahead",
+      "word": "ahead"
+    },
+    {
+      "item_id": "allow",
+      "word": "allow"
+    },
+    {
+      "item_id": "association",
+      "word": "association"
+    },
+    {
+      "item_id": "beat",
+      "word": "beat"
+    },
+    {
+      "item_id": "brown",
+      "word": "brown"
+    },
+    {
+      "item_id": "capital",
+      "word": "capital"
+    },
+    {
+      "item_id": "committee",
+      "word": "committee"
     }
   ]
 }

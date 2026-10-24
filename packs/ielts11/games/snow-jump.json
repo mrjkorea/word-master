@@ -1,1008 +1,1008 @@
 {
   "pack_id": "ielts11",
   "title": "IELTS 1001–1100",
-  "module_id": "snow_jump",
+  "module_id": "word_master",
   "seconds": 15,
   "items": [
     {
-      "item_id": "coverage",
-      "question": "how much news or insurance protects",
-      "correct": "coverage",
+      "item_id": "ease",
+      "question": "make something less hard",
+      "correct": "ease",
       "wrong": [
-        "cow",
-        "crack"
+        "extend",
+        "genetic"
       ],
-      "word": "coverage"
+      "word": "ease"
     },
     {
-      "item_id": "cow",
-      "question": "farm animal that gives milk",
-      "correct": "cow",
+      "item_id": "extend",
+      "question": "make something longer",
+      "correct": "extend",
       "wrong": [
-        "crack",
-        "craft"
+        "genetic",
+        "principle"
       ],
-      "word": "cow"
+      "word": "extend"
     },
     {
-      "item_id": "crack",
-      "question": "break with a line",
-      "correct": "crack",
+      "item_id": "genetic",
+      "question": "passed down in families",
+      "correct": "genetic",
       "wrong": [
-        "craft",
-        "crash"
+        "principle",
+        "sum"
       ],
-      "word": "crack"
+      "word": "genetic"
     },
     {
-      "item_id": "craft",
-      "question": "skill making things by hand",
-      "correct": "craft",
+      "item_id": "principle",
+      "question": "a basic rule or idea",
+      "correct": "principle",
       "wrong": [
-        "crash",
-        "crazy"
+        "sum",
+        "boom"
       ],
-      "word": "craft"
+      "word": "principle"
     },
     {
-      "item_id": "crash",
-      "question": "hit something very hard",
-      "correct": "crash",
+      "item_id": "sum",
+      "question": "the total after adding",
+      "correct": "sum",
       "wrong": [
-        "crazy",
-        "cream"
+        "boom",
+        "brave"
       ],
-      "word": "crash"
+      "word": "sum"
     },
     {
-      "item_id": "crazy",
-      "question": "wild and very silly",
-      "correct": "crazy",
+      "item_id": "boom",
+      "question": "sudden growth",
+      "correct": "boom",
       "wrong": [
-        "cream",
-        "creation"
+        "brave",
+        "column"
       ],
-      "word": "crazy"
+      "word": "boom"
     },
     {
-      "item_id": "cream",
-      "question": "thick white dairy topping",
-      "correct": "cream",
+      "item_id": "brave",
+      "question": "not afraid of danger",
+      "correct": "brave",
       "wrong": [
-        "creation",
-        "creative"
+        "column",
+        "commit"
       ],
-      "word": "cream"
+      "word": "brave"
     },
     {
-      "item_id": "creation",
-      "question": "something someone has made",
-      "correct": "creation",
+      "item_id": "column",
+      "question": "tall round stone post",
+      "correct": "column",
       "wrong": [
-        "creative",
-        "creature"
+        "commit",
+        "composition"
       ],
-      "word": "creation"
+      "word": "column"
     },
     {
-      "item_id": "creative",
-      "question": "good at making new things",
-      "correct": "creative",
+      "item_id": "commit",
+      "question": "decide to do something",
+      "correct": "commit",
       "wrong": [
-        "creature",
-        "crew"
+        "composition",
+        "difficulty"
       ],
-      "word": "creative"
+      "word": "commit"
     },
     {
-      "item_id": "creature",
-      "question": "a living animal",
-      "correct": "creature",
+      "item_id": "composition",
+      "question": "way parts are arranged",
+      "correct": "composition",
       "wrong": [
-        "crew",
-        "crime"
+        "difficulty",
+        "elementary"
       ],
-      "word": "creature"
+      "word": "composition"
     },
     {
-      "item_id": "crew",
-      "question": "team that works together",
-      "correct": "crew",
+      "item_id": "difficulty",
+      "question": "something that is hard to do",
+      "correct": "difficulty",
       "wrong": [
-        "crime",
-        "criminal"
+        "elementary",
+        "ethnic"
       ],
-      "word": "crew"
+      "word": "difficulty"
     },
     {
-      "item_id": "crime",
-      "question": "an act that breaks the law",
-      "correct": "crime",
+      "item_id": "elementary",
+      "question": "basic or for young learners",
+      "correct": "elementary",
       "wrong": [
-        "criminal",
-        "crisis"
+        "ethnic",
+        "fundamental"
       ],
-      "word": "crime"
+      "word": "elementary"
     },
     {
-      "item_id": "criminal",
-      "question": "related to breaking the law",
-      "correct": "criminal",
+      "item_id": "ethnic",
+      "question": "of a certain culture group",
+      "correct": "ethnic",
       "wrong": [
-        "crisis",
-        "critic"
+        "fundamental",
+        "greatly"
       ],
-      "word": "criminal"
+      "word": "ethnic"
     },
     {
-      "item_id": "crisis",
-      "question": "a sudden serious problem",
-      "correct": "crisis",
+      "item_id": "fundamental",
+      "question": "basic and very important",
+      "correct": "fundamental",
       "wrong": [
-        "critic",
-        "critical"
+        "greatly",
+        "radical"
       ],
-      "word": "crisis"
+      "word": "fundamental"
     },
     {
-      "item_id": "critic",
-      "question": "person who judges art",
-      "correct": "critic",
+      "item_id": "greatly",
+      "question": "by a large amount",
+      "correct": "greatly",
       "wrong": [
-        "critical",
-        "criticism"
+        "radical",
+        "uniform"
       ],
-      "word": "critic"
+      "word": "greatly"
     },
     {
-      "item_id": "critical",
-      "question": "finding good and bad points",
-      "correct": "critical",
+      "item_id": "radical",
+      "question": "very new and different",
+      "correct": "radical",
       "wrong": [
-        "criticism",
-        "criticize"
+        "uniform",
+        "apparent"
       ],
-      "word": "critical"
+      "word": "radical"
     },
     {
-      "item_id": "criticism",
-      "question": "words that say what is wrong",
-      "correct": "criticism",
+      "item_id": "uniform",
+      "question": "all the same",
+      "correct": "uniform",
       "wrong": [
-        "criticize",
-        "crop"
+        "apparent",
+        "complaint"
       ],
-      "word": "criticism"
+      "word": "uniform"
     },
     {
-      "item_id": "criticize",
-      "question": "say what is wrong",
-      "correct": "criticize",
+      "item_id": "apparent",
+      "question": "easy to see or know",
+      "correct": "apparent",
       "wrong": [
-        "crop",
-        "cross"
+        "complaint",
+        "component"
       ],
-      "word": "criticize"
+      "word": "apparent"
     },
     {
-      "item_id": "crop",
-      "question": "plants grown on a farm",
-      "correct": "crop",
+      "item_id": "complaint",
+      "question": "saying something is wrong",
+      "correct": "complaint",
       "wrong": [
-        "cross",
-        "crowd"
-      ],
-      "word": "crop"
-    },
-    {
-      "item_id": "cross",
-      "question": "two bars that meet",
-      "correct": "cross",
-      "wrong": [
-        "crowd",
-        "cry"
-      ],
-      "word": "cross"
-    },
-    {
-      "item_id": "crowd",
-      "question": "many people together",
-      "correct": "crowd",
-      "wrong": [
-        "cry",
-        "cultural"
-      ],
-      "word": "crowd"
-    },
-    {
-      "item_id": "cry",
-      "question": "have tears come from eyes",
-      "correct": "cry",
-      "wrong": [
-        "cultural",
-        "cup"
-      ],
-      "word": "cry"
-    },
-    {
-      "item_id": "cultural",
-      "question": "about a group's customs",
-      "correct": "cultural",
-      "wrong": [
-        "cup",
+        "component",
         "cure"
       ],
-      "word": "cultural"
+      "word": "complaint"
     },
     {
-      "item_id": "cup",
-      "question": "a small container for drinking",
-      "correct": "cup",
+      "item_id": "component",
+      "question": "one piece of something",
+      "correct": "component",
       "wrong": [
         "cure",
-        "curious"
+        "desperate"
       ],
-      "word": "cup"
+      "word": "component"
     },
     {
       "item_id": "cure",
       "question": "make a sickness go away",
       "correct": "cure",
       "wrong": [
-        "curious",
-        "current"
+        "desperate",
+        "diversity"
       ],
       "word": "cure"
-    },
-    {
-      "item_id": "curious",
-      "question": "wanting to know more",
-      "correct": "curious",
-      "wrong": [
-        "current",
-        "currently"
-      ],
-      "word": "curious"
-    },
-    {
-      "item_id": "current",
-      "question": "happening right now",
-      "correct": "current",
-      "wrong": [
-        "currently",
-        "curriculum"
-      ],
-      "word": "current"
-    },
-    {
-      "item_id": "currently",
-      "question": "at the present time",
-      "correct": "currently",
-      "wrong": [
-        "curriculum",
-        "curtain"
-      ],
-      "word": "currently"
-    },
-    {
-      "item_id": "curriculum",
-      "question": "school plan of subjects",
-      "correct": "curriculum",
-      "wrong": [
-        "curtain",
-        "curve"
-      ],
-      "word": "curriculum"
-    },
-    {
-      "item_id": "curtain",
-      "question": "cloth covering a window",
-      "correct": "curtain",
-      "wrong": [
-        "curve",
-        "custom"
-      ],
-      "word": "curtain"
-    },
-    {
-      "item_id": "curve",
-      "question": "smooth round bend",
-      "correct": "curve",
-      "wrong": [
-        "custom",
-        "customer"
-      ],
-      "word": "curve"
-    },
-    {
-      "item_id": "custom",
-      "question": "a group's usual way",
-      "correct": "custom",
-      "wrong": [
-        "customer",
-        "cut"
-      ],
-      "word": "custom"
-    },
-    {
-      "item_id": "customer",
-      "question": "person who buys things",
-      "correct": "customer",
-      "wrong": [
-        "cut",
-        "dad"
-      ],
-      "word": "customer"
-    },
-    {
-      "item_id": "cut",
-      "question": "a small open mark on skin",
-      "correct": "cut",
-      "wrong": [
-        "dad",
-        "daily"
-      ],
-      "word": "cut"
-    },
-    {
-      "item_id": "dad",
-      "question": "your father",
-      "correct": "dad",
-      "wrong": [
-        "daily",
-        "damage"
-      ],
-      "word": "dad"
-    },
-    {
-      "item_id": "daily",
-      "question": "happening every day",
-      "correct": "daily",
-      "wrong": [
-        "damage",
-        "dance"
-      ],
-      "word": "daily"
-    },
-    {
-      "item_id": "damage",
-      "question": "harm or break to something",
-      "correct": "damage",
-      "wrong": [
-        "dance",
-        "danger"
-      ],
-      "word": "damage"
-    },
-    {
-      "item_id": "dance",
-      "question": "moving to the music",
-      "correct": "dance",
-      "wrong": [
-        "danger",
-        "dangerous"
-      ],
-      "word": "dance"
-    },
-    {
-      "item_id": "danger",
-      "question": "something that can hurt you",
-      "correct": "danger",
-      "wrong": [
-        "dangerous",
-        "dare"
-      ],
-      "word": "danger"
-    },
-    {
-      "item_id": "dangerous",
-      "question": "can hurt or harm you",
-      "correct": "dangerous",
-      "wrong": [
-        "dare",
-        "dark"
-      ],
-      "word": "dangerous"
-    },
-    {
-      "item_id": "dare",
-      "question": "to be brave enough to try",
-      "correct": "dare",
-      "wrong": [
-        "dark",
-        "date"
-      ],
-      "word": "dare"
-    },
-    {
-      "item_id": "dark",
-      "question": "having little light",
-      "correct": "dark",
-      "wrong": [
-        "date",
-        "daughter"
-      ],
-      "word": "dark"
-    },
-    {
-      "item_id": "date",
-      "question": "a day on the calendar",
-      "correct": "date",
-      "wrong": [
-        "daughter",
-        "day"
-      ],
-      "word": "date"
-    },
-    {
-      "item_id": "daughter",
-      "question": "a parent's female child",
-      "correct": "daughter",
-      "wrong": [
-        "day",
-        "dead"
-      ],
-      "word": "daughter"
-    },
-    {
-      "item_id": "day",
-      "question": "time when the sun shines",
-      "correct": "day",
-      "wrong": [
-        "dead",
-        "deal"
-      ],
-      "word": "day"
-    },
-    {
-      "item_id": "dead",
-      "question": "no longer living",
-      "correct": "dead",
-      "wrong": [
-        "deal",
-        "dealer"
-      ],
-      "word": "dead"
-    },
-    {
-      "item_id": "deal",
-      "question": "an agreement to trade",
-      "correct": "deal",
-      "wrong": [
-        "dealer",
-        "dear"
-      ],
-      "word": "deal"
-    },
-    {
-      "item_id": "dealer",
-      "question": "person who sells goods",
-      "correct": "dealer",
-      "wrong": [
-        "dear",
-        "death"
-      ],
-      "word": "dealer"
-    },
-    {
-      "item_id": "dear",
-      "question": "loved very much",
-      "correct": "dear",
-      "wrong": [
-        "death",
-        "decide"
-      ],
-      "word": "dear"
-    },
-    {
-      "item_id": "death",
-      "question": "when a living thing stops living",
-      "correct": "death",
-      "wrong": [
-        "decide",
-        "decision"
-      ],
-      "word": "death"
-    },
-    {
-      "item_id": "decide",
-      "question": "to choose what to do",
-      "correct": "decide",
-      "wrong": [
-        "decision",
-        "deck"
-      ],
-      "word": "decide"
-    },
-    {
-      "item_id": "decision",
-      "question": "a choice you make",
-      "correct": "decision",
-      "wrong": [
-        "deck",
-        "declare"
-      ],
-      "word": "decision"
-    },
-    {
-      "item_id": "deck",
-      "question": "floor on a ship or outside a house",
-      "correct": "deck",
-      "wrong": [
-        "declare",
-        "decrease"
-      ],
-      "word": "deck"
-    },
-    {
-      "item_id": "declare",
-      "question": "to say something loudly and clearly",
-      "correct": "declare",
-      "wrong": [
-        "decrease",
-        "deep"
-      ],
-      "word": "declare"
-    },
-    {
-      "item_id": "decrease",
-      "question": "make smaller in amount",
-      "correct": "decrease",
-      "wrong": [
-        "deep",
-        "deeply"
-      ],
-      "word": "decrease"
-    },
-    {
-      "item_id": "deep",
-      "question": "going far down from the top",
-      "correct": "deep",
-      "wrong": [
-        "deeply",
-        "deer"
-      ],
-      "word": "deep"
-    },
-    {
-      "item_id": "deeply",
-      "question": "in a strong and full way",
-      "correct": "deeply",
-      "wrong": [
-        "deer",
-        "defeat"
-      ],
-      "word": "deeply"
-    },
-    {
-      "item_id": "deer",
-      "question": "wild animal with antlers",
-      "correct": "deer",
-      "wrong": [
-        "defeat",
-        "defend"
-      ],
-      "word": "deer"
-    },
-    {
-      "item_id": "defeat",
-      "question": "losing a game or fight",
-      "correct": "defeat",
-      "wrong": [
-        "defend",
-        "defense"
-      ],
-      "word": "defeat"
-    },
-    {
-      "item_id": "defend",
-      "question": "to protect from harm",
-      "correct": "defend",
-      "wrong": [
-        "defense",
-        "definitely"
-      ],
-      "word": "defend"
-    },
-    {
-      "item_id": "defense",
-      "question": "protecting against attack",
-      "correct": "defense",
-      "wrong": [
-        "definitely",
-        "definition"
-      ],
-      "word": "defense"
-    },
-    {
-      "item_id": "definitely",
-      "question": "for sure",
-      "correct": "definitely",
-      "wrong": [
-        "definition",
-        "degree"
-      ],
-      "word": "definitely"
-    },
-    {
-      "item_id": "definition",
-      "question": "the meaning of a word",
-      "correct": "definition",
-      "wrong": [
-        "degree",
-        "delay"
-      ],
-      "word": "definition"
-    },
-    {
-      "item_id": "degree",
-      "question": "unit of temperature or angle",
-      "correct": "degree",
-      "wrong": [
-        "delay",
-        "deliver"
-      ],
-      "word": "degree"
-    },
-    {
-      "item_id": "delay",
-      "question": "extra time of waiting",
-      "correct": "delay",
-      "wrong": [
-        "deliver",
-        "delivery"
-      ],
-      "word": "delay"
-    },
-    {
-      "item_id": "deliver",
-      "question": "to bring something to someone",
-      "correct": "deliver",
-      "wrong": [
-        "delivery",
-        "demand"
-      ],
-      "word": "deliver"
-    },
-    {
-      "item_id": "delivery",
-      "question": "bringing a package to someone",
-      "correct": "delivery",
-      "wrong": [
-        "demand",
-        "democracy"
-      ],
-      "word": "delivery"
-    },
-    {
-      "item_id": "demand",
-      "question": "a strong request for something",
-      "correct": "demand",
-      "wrong": [
-        "democracy",
-        "democratic"
-      ],
-      "word": "demand"
-    },
-    {
-      "item_id": "democracy",
-      "question": "people choosing leaders by voting",
-      "correct": "democracy",
-      "wrong": [
-        "democratic",
-        "demonstration"
-      ],
-      "word": "democracy"
-    },
-    {
-      "item_id": "democratic",
-      "question": "people choose their leaders",
-      "correct": "democratic",
-      "wrong": [
-        "demonstration",
-        "department"
-      ],
-      "word": "democratic"
-    },
-    {
-      "item_id": "demonstration",
-      "question": "showing how something works",
-      "correct": "demonstration",
-      "wrong": [
-        "department",
-        "depend"
-      ],
-      "word": "demonstration"
-    },
-    {
-      "item_id": "department",
-      "question": "a part of a big company",
-      "correct": "department",
-      "wrong": [
-        "depend",
-        "dependent"
-      ],
-      "word": "department"
-    },
-    {
-      "item_id": "depend",
-      "question": "to need help from someone",
-      "correct": "depend",
-      "wrong": [
-        "dependent",
-        "depending"
-      ],
-      "word": "depend"
-    },
-    {
-      "item_id": "dependent",
-      "question": "needing help from others",
-      "correct": "dependent",
-      "wrong": [
-        "depending",
-        "depict"
-      ],
-      "word": "dependent"
-    },
-    {
-      "item_id": "depending",
-      "question": "relying on something else",
-      "correct": "depending",
-      "wrong": [
-        "depict",
-        "depression"
-      ],
-      "word": "depending"
-    },
-    {
-      "item_id": "depict",
-      "question": "show in a picture",
-      "correct": "depict",
-      "wrong": [
-        "depression",
-        "depth"
-      ],
-      "word": "depict"
-    },
-    {
-      "item_id": "depression",
-      "question": "long sadness or an economic slump",
-      "correct": "depression",
-      "wrong": [
-        "depth",
-        "deputy"
-      ],
-      "word": "depression"
-    },
-    {
-      "item_id": "depth",
-      "question": "how deep something is",
-      "correct": "depth",
-      "wrong": [
-        "deputy",
-        "describe"
-      ],
-      "word": "depth"
-    },
-    {
-      "item_id": "deputy",
-      "question": "helper to the boss",
-      "correct": "deputy",
-      "wrong": [
-        "describe",
-        "description"
-      ],
-      "word": "deputy"
-    },
-    {
-      "item_id": "describe",
-      "question": "to tell what something is like",
-      "correct": "describe",
-      "wrong": [
-        "description",
-        "desert"
-      ],
-      "word": "describe"
-    },
-    {
-      "item_id": "description",
-      "question": "words that tell about something",
-      "correct": "description",
-      "wrong": [
-        "desert",
-        "deserve"
-      ],
-      "word": "description"
-    },
-    {
-      "item_id": "desert",
-      "question": "very dry sandy land",
-      "correct": "desert",
-      "wrong": [
-        "deserve",
-        "designer"
-      ],
-      "word": "desert"
-    },
-    {
-      "item_id": "deserve",
-      "question": "earn something good",
-      "correct": "deserve",
-      "wrong": [
-        "designer",
-        "desire"
-      ],
-      "word": "deserve"
-    },
-    {
-      "item_id": "designer",
-      "question": "person who plans how things look",
-      "correct": "designer",
-      "wrong": [
-        "desire",
-        "desk"
-      ],
-      "word": "designer"
-    },
-    {
-      "item_id": "desire",
-      "question": "a strong wish",
-      "correct": "desire",
-      "wrong": [
-        "desk",
-        "desperate"
-      ],
-      "word": "desire"
-    },
-    {
-      "item_id": "desk",
-      "question": "table for school work",
-      "correct": "desk",
-      "wrong": [
-        "desperate",
-        "destroy"
-      ],
-      "word": "desk"
     },
     {
       "item_id": "desperate",
       "question": "feeling very worried and hopeless",
       "correct": "desperate",
       "wrong": [
-        "destroy",
-        "destruction"
+        "diversity",
+        "faculty"
       ],
       "word": "desperate"
     },
     {
-      "item_id": "destroy",
-      "question": "to break something completely",
-      "correct": "destroy",
+      "item_id": "diversity",
+      "question": "many different kinds together",
+      "correct": "diversity",
       "wrong": [
-        "destruction",
-        "detail"
+        "faculty",
+        "invest"
       ],
-      "word": "destroy"
+      "word": "diversity"
     },
     {
-      "item_id": "destruction",
-      "question": "great damage or ruin",
-      "correct": "destruction",
+      "item_id": "faculty",
+      "question": "teachers at a college",
+      "correct": "faculty",
       "wrong": [
-        "detail",
-        "detailed"
+        "invest",
+        "manual"
       ],
-      "word": "destruction"
+      "word": "faculty"
     },
     {
-      "item_id": "detail",
-      "question": "small extra part",
-      "correct": "detail",
+      "item_id": "invest",
+      "question": "put money to make more",
+      "correct": "invest",
       "wrong": [
-        "detailed",
-        "determine"
+        "manual",
+        "ongoing"
       ],
-      "word": "detail"
+      "word": "invest"
     },
     {
-      "item_id": "detailed",
-      "question": "full of small facts",
-      "correct": "detailed",
+      "item_id": "manual",
+      "question": "done by hand",
+      "correct": "manual",
       "wrong": [
-        "determine",
-        "develop"
+        "ongoing",
+        "sufficient"
       ],
-      "word": "detailed"
+      "word": "manual"
     },
     {
-      "item_id": "determine",
-      "question": "to decide something after thinking",
-      "correct": "determine",
+      "item_id": "ongoing",
+      "question": "still continuing",
+      "correct": "ongoing",
       "wrong": [
-        "develop",
-        "development"
+        "sufficient",
+        "virtual"
       ],
-      "word": "determine"
+      "word": "ongoing"
     },
     {
-      "item_id": "develop",
-      "question": "to grow or become better",
-      "correct": "develop",
+      "item_id": "sufficient",
+      "question": "enough for the need",
+      "correct": "sufficient",
       "wrong": [
-        "development",
-        "diagram"
+        "virtual",
+        "bite"
       ],
-      "word": "develop"
+      "word": "sufficient"
     },
     {
-      "item_id": "development",
-      "question": "the process of growing bigger",
-      "correct": "development",
+      "item_id": "virtual",
+      "question": "existing online not physically",
+      "correct": "virtual",
       "wrong": [
-        "diagram",
+        "bite",
+        "chip"
+      ],
+      "word": "virtual"
+    },
+    {
+      "item_id": "bite",
+      "question": "use teeth to cut",
+      "correct": "bite",
+      "wrong": [
+        "chip",
+        "dare"
+      ],
+      "word": "bite"
+    },
+    {
+      "item_id": "chip",
+      "question": "tiny computer square piece",
+      "correct": "chip",
+      "wrong": [
+        "dare",
+        "define"
+      ],
+      "word": "chip"
+    },
+    {
+      "item_id": "dare",
+      "question": "to be brave enough to try",
+      "correct": "dare",
+      "wrong": [
+        "define",
+        "disorder"
+      ],
+      "word": "dare"
+    },
+    {
+      "item_id": "define",
+      "question": "to explain the meaning of a word",
+      "correct": "define",
+      "wrong": [
+        "disorder",
+        "domain"
+      ],
+      "word": "define"
+    },
+    {
+      "item_id": "disorder",
+      "question": "illness or messy state",
+      "correct": "disorder",
+      "wrong": [
+        "domain",
+        "dynamic"
+      ],
+      "word": "disorder"
+    },
+    {
+      "item_id": "domain",
+      "question": "field or area of control",
+      "correct": "domain",
+      "wrong": [
+        "dynamic",
+        "explore"
+      ],
+      "word": "domain"
+    },
+    {
+      "item_id": "dynamic",
+      "question": "full of energy",
+      "correct": "dynamic",
+      "wrong": [
+        "explore",
+        "favour"
+      ],
+      "word": "dynamic"
+    },
+    {
+      "item_id": "explore",
+      "question": "go and look around a new place",
+      "correct": "explore",
+      "wrong": [
+        "favour",
+        "grave"
+      ],
+      "word": "explore"
+    },
+    {
+      "item_id": "favour",
+      "question": "kind act or help given",
+      "correct": "favour",
+      "wrong": [
+        "grave",
+        "investigate"
+      ],
+      "word": "favour"
+    },
+    {
+      "item_id": "grave",
+      "question": "very serious indeed",
+      "correct": "grave",
+      "wrong": [
+        "investigate",
+        "psychology"
+      ],
+      "word": "grave"
+    },
+    {
+      "item_id": "investigate",
+      "question": "look into something carefully",
+      "correct": "investigate",
+      "wrong": [
+        "psychology",
+        "symbol"
+      ],
+      "word": "investigate"
+    },
+    {
+      "item_id": "psychology",
+      "question": "study of mind and behaviour",
+      "correct": "psychology",
+      "wrong": [
+        "symbol",
+        "craft"
+      ],
+      "word": "psychology"
+    },
+    {
+      "item_id": "symbol",
+      "question": "picture that means something",
+      "correct": "symbol",
+      "wrong": [
+        "craft",
+        "edit"
+      ],
+      "word": "symbol"
+    },
+    {
+      "item_id": "craft",
+      "question": "skill making things by hand",
+      "correct": "craft",
+      "wrong": [
+        "edit",
+        "enable"
+      ],
+      "word": "craft"
+    },
+    {
+      "item_id": "edit",
+      "question": "change it to improve",
+      "correct": "edit",
+      "wrong": [
+        "enable",
+        "fortune"
+      ],
+      "word": "edit"
+    },
+    {
+      "item_id": "enable",
+      "question": "make something possible",
+      "correct": "enable",
+      "wrong": [
+        "fortune",
+        "regime"
+      ],
+      "word": "enable"
+    },
+    {
+      "item_id": "fortune",
+      "question": "a lot of money",
+      "correct": "fortune",
+      "wrong": [
+        "regime",
         "dialogue"
       ],
-      "word": "development"
+      "word": "fortune"
     },
     {
-      "item_id": "diagram",
-      "question": "simple drawing that explains",
-      "correct": "diagram",
+      "item_id": "regime",
+      "question": "group that runs a country",
+      "correct": "regime",
       "wrong": [
         "dialogue",
-        "diamond"
+        "distinct"
       ],
-      "word": "diagram"
+      "word": "regime"
     },
     {
       "item_id": "dialogue",
       "question": "talk between people",
       "correct": "dialogue",
       "wrong": [
-        "diamond",
-        "diary"
+        "distinct",
+        "drag"
       ],
       "word": "dialogue"
     },
     {
-      "item_id": "diamond",
-      "question": "very hard shiny gem",
-      "correct": "diamond",
+      "item_id": "distinct",
+      "question": "clearly different or separate",
+      "correct": "distinct",
       "wrong": [
-        "diary",
-        "dictionary"
+        "drag",
+        "estimate"
       ],
-      "word": "diamond"
+      "word": "distinct"
     },
     {
-      "item_id": "diary",
-      "question": "book where you write each day",
-      "correct": "diary",
+      "item_id": "drag",
+      "question": "to pull something along",
+      "correct": "drag",
       "wrong": [
-        "dictionary",
-        "die"
+        "estimate",
+        "framework"
       ],
-      "word": "diary"
+      "word": "drag"
     },
     {
-      "item_id": "dictionary",
-      "question": "book of word meanings",
-      "correct": "dictionary",
+      "item_id": "estimate",
+      "question": "a smart number guess",
+      "correct": "estimate",
       "wrong": [
-        "die",
-        "coverage"
+        "framework",
+        "furniture"
       ],
-      "word": "dictionary"
+      "word": "estimate"
     },
     {
-      "item_id": "die",
-      "question": "to stop living",
-      "correct": "die",
+      "item_id": "framework",
+      "question": "structure that holds things",
+      "correct": "framework",
       "wrong": [
-        "coverage",
-        "cow"
+        "furniture",
+        "intelligent"
       ],
-      "word": "die"
+      "word": "framework"
+    },
+    {
+      "item_id": "furniture",
+      "question": "tables chairs and beds",
+      "correct": "furniture",
+      "wrong": [
+        "intelligent",
+        "overseas"
+      ],
+      "word": "furniture"
+    },
+    {
+      "item_id": "intelligent",
+      "question": "quick to understand and learn",
+      "correct": "intelligent",
+      "wrong": [
+        "overseas",
+        "recover"
+      ],
+      "word": "intelligent"
+    },
+    {
+      "item_id": "overseas",
+      "question": "in or to a country across the sea",
+      "correct": "overseas",
+      "wrong": [
+        "recover",
+        "relax"
+      ],
+      "word": "overseas"
+    },
+    {
+      "item_id": "recover",
+      "question": "get well again",
+      "correct": "recover",
+      "wrong": [
+        "relax",
+        "rely"
+      ],
+      "word": "recover"
+    },
+    {
+      "item_id": "relax",
+      "question": "to rest and feel calm",
+      "correct": "relax",
+      "wrong": [
+        "rely",
+        "sole"
+      ],
+      "word": "relax"
+    },
+    {
+      "item_id": "rely",
+      "question": "trust someone to help",
+      "correct": "rely",
+      "wrong": [
+        "sole",
+        "alarm"
+      ],
+      "word": "rely"
+    },
+    {
+      "item_id": "sole",
+      "question": "only one",
+      "correct": "sole",
+      "wrong": [
+        "alarm",
+        "consideration"
+      ],
+      "word": "sole"
+    },
+    {
+      "item_id": "alarm",
+      "question": "make someone feel worried",
+      "correct": "alarm",
+      "wrong": [
+        "consideration",
+        "crucial"
+      ],
+      "word": "alarm"
+    },
+    {
+      "item_id": "consideration",
+      "question": "careful thought before",
+      "correct": "consideration",
+      "wrong": [
+        "crucial",
+        "dependent"
+      ],
+      "word": "consideration"
+    },
+    {
+      "item_id": "crucial",
+      "question": "very important and needed",
+      "correct": "crucial",
+      "wrong": [
+        "dependent",
+        "galaxy"
+      ],
+      "word": "crucial"
+    },
+    {
+      "item_id": "dependent",
+      "question": "needing help from others",
+      "correct": "dependent",
+      "wrong": [
+        "galaxy",
+        "globe"
+      ],
+      "word": "dependent"
+    },
+    {
+      "item_id": "galaxy",
+      "question": "huge group of stars",
+      "correct": "galaxy",
+      "wrong": [
+        "globe",
+        "involve"
+      ],
+      "word": "galaxy"
+    },
+    {
+      "item_id": "globe",
+      "question": "the Earth",
+      "correct": "globe",
+      "wrong": [
+        "involve",
+        "mature"
+      ],
+      "word": "globe"
+    },
+    {
+      "item_id": "involve",
+      "question": "to include or need something",
+      "correct": "involve",
+      "wrong": [
+        "mature",
+        "submit"
+      ],
+      "word": "involve"
+    },
+    {
+      "item_id": "mature",
+      "question": "fully grown and ready",
+      "correct": "mature",
+      "wrong": [
+        "submit",
+        "dispute"
+      ],
+      "word": "mature"
+    },
+    {
+      "item_id": "submit",
+      "question": "to give work to a teacher",
+      "correct": "submit",
+      "wrong": [
+        "dispute",
+        "frequent"
+      ],
+      "word": "submit"
+    },
+    {
+      "item_id": "dispute",
+      "question": "an argument between people",
+      "correct": "dispute",
+      "wrong": [
+        "frequent",
+        "margin"
+      ],
+      "word": "dispute"
+    },
+    {
+      "item_id": "frequent",
+      "question": "happens often or many times",
+      "correct": "frequent",
+      "wrong": [
+        "margin",
+        "mechanism"
+      ],
+      "word": "frequent"
+    },
+    {
+      "item_id": "margin",
+      "question": "edge or small difference",
+      "correct": "margin",
+      "wrong": [
+        "mechanism",
+        "parallel"
+      ],
+      "word": "margin"
+    },
+    {
+      "item_id": "mechanism",
+      "question": "moving parts of a machine",
+      "correct": "mechanism",
+      "wrong": [
+        "parallel",
+        "announce"
+      ],
+      "word": "mechanism"
+    },
+    {
+      "item_id": "parallel",
+      "question": "side by side never meeting",
+      "correct": "parallel",
+      "wrong": [
+        "announce",
+        "breathe"
+      ],
+      "word": "parallel"
+    },
+    {
+      "item_id": "announce",
+      "question": "tell people something important",
+      "correct": "announce",
+      "wrong": [
+        "breathe",
+        "controversy"
+      ],
+      "word": "announce"
+    },
+    {
+      "item_id": "breathe",
+      "question": "to take air into the lungs",
+      "correct": "breathe",
+      "wrong": [
+        "controversy",
+        "convince"
+      ],
+      "word": "breathe"
+    },
+    {
+      "item_id": "controversy",
+      "question": "public disagreement",
+      "correct": "controversy",
+      "wrong": [
+        "convince",
+        "encounter"
+      ],
+      "word": "controversy"
+    },
+    {
+      "item_id": "convince",
+      "question": "make someone agree or believe something",
+      "correct": "convince",
+      "wrong": [
+        "encounter",
+        "exam"
+      ],
+      "word": "convince"
+    },
+    {
+      "item_id": "encounter",
+      "question": "meet someone by chance",
+      "correct": "encounter",
+      "wrong": [
+        "exam",
+        "examination"
+      ],
+      "word": "encounter"
+    },
+    {
+      "item_id": "exam",
+      "question": "formal school test",
+      "correct": "exam",
+      "wrong": [
+        "examination",
+        "mutual"
+      ],
+      "word": "exam"
+    },
+    {
+      "item_id": "examination",
+      "question": "test of what you know",
+      "correct": "examination",
+      "wrong": [
+        "mutual",
+        "pursue"
+      ],
+      "word": "examination"
+    },
+    {
+      "item_id": "mutual",
+      "question": "shared by two people or groups",
+      "correct": "mutual",
+      "wrong": [
+        "pursue",
+        "scope"
+      ],
+      "word": "mutual"
+    },
+    {
+      "item_id": "pursue",
+      "question": "chase or follow something",
+      "correct": "pursue",
+      "wrong": [
+        "scope",
+        "brick"
+      ],
+      "word": "pursue"
+    },
+    {
+      "item_id": "scope",
+      "question": "how far something reaches",
+      "correct": "scope",
+      "wrong": [
+        "brick",
+        "considerable"
+      ],
+      "word": "scope"
+    },
+    {
+      "item_id": "brick",
+      "question": "baked clay block",
+      "correct": "brick",
+      "wrong": [
+        "considerable",
+        "conventional"
+      ],
+      "word": "brick"
+    },
+    {
+      "item_id": "considerable",
+      "question": "quite large or important",
+      "correct": "considerable",
+      "wrong": [
+        "conventional",
+        "enormous"
+      ],
+      "word": "considerable"
+    },
+    {
+      "item_id": "conventional",
+      "question": "usual and following old ways",
+      "correct": "conventional",
+      "wrong": [
+        "enormous",
+        "garage"
+      ],
+      "word": "conventional"
+    },
+    {
+      "item_id": "enormous",
+      "question": "very very big",
+      "correct": "enormous",
+      "wrong": [
+        "garage",
+        "nevertheless"
+      ],
+      "word": "enormous"
+    },
+    {
+      "item_id": "garage",
+      "question": "building for a car",
+      "correct": "garage",
+      "wrong": [
+        "nevertheless",
+        "trigger"
+      ],
+      "word": "garage"
+    },
+    {
+      "item_id": "nevertheless",
+      "question": "even so or despite that",
+      "correct": "nevertheless",
+      "wrong": [
+        "trigger",
+        "vary"
+      ],
+      "word": "nevertheless"
+    },
+    {
+      "item_id": "trigger",
+      "question": "cause to start",
+      "correct": "trigger",
+      "wrong": [
+        "vary",
+        "artificial"
+      ],
+      "word": "trigger"
+    },
+    {
+      "item_id": "vary",
+      "question": "be different in some way",
+      "correct": "vary",
+      "wrong": [
+        "artificial",
+        "beneath"
+      ],
+      "word": "vary"
+    },
+    {
+      "item_id": "artificial",
+      "question": "made by people not nature",
+      "correct": "artificial",
+      "wrong": [
+        "beneath",
+        "bullet"
+      ],
+      "word": "artificial"
+    },
+    {
+      "item_id": "beneath",
+      "question": "under something",
+      "correct": "beneath",
+      "wrong": [
+        "bullet",
+        "dirt"
+      ],
+      "word": "beneath"
+    },
+    {
+      "item_id": "bullet",
+      "question": "gun projectile",
+      "correct": "bullet",
+      "wrong": [
+        "dirt",
+        "diverse"
+      ],
+      "word": "bullet"
+    },
+    {
+      "item_id": "dirt",
+      "question": "soil or dust on the ground",
+      "correct": "dirt",
+      "wrong": [
+        "diverse",
+        "export"
+      ],
+      "word": "dirt"
+    },
+    {
+      "item_id": "diverse",
+      "question": "many different kinds",
+      "correct": "diverse",
+      "wrong": [
+        "export",
+        "gather"
+      ],
+      "word": "diverse"
+    },
+    {
+      "item_id": "export",
+      "question": "goods sent abroad",
+      "correct": "export",
+      "wrong": [
+        "gather",
+        "grandfather"
+      ],
+      "word": "export"
+    },
+    {
+      "item_id": "gather",
+      "question": "bring things together in one place",
+      "correct": "gather",
+      "wrong": [
+        "grandfather",
+        "habit"
+      ],
+      "word": "gather"
+    },
+    {
+      "item_id": "grandfather",
+      "question": "father of your parent",
+      "correct": "grandfather",
+      "wrong": [
+        "habit",
+        "ease"
+      ],
+      "word": "grandfather"
+    },
+    {
+      "item_id": "habit",
+      "question": "thing you do often",
+      "correct": "habit",
+      "wrong": [
+        "ease",
+        "extend"
+      ],
+      "word": "habit"
     }
   ]
 }

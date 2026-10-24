@@ -1,1008 +1,1008 @@
 {
   "pack_id": "ielts15",
   "title": "IELTS 1401–1500",
-  "module_id": "snow_jump",
+  "module_id": "word_master",
   "seconds": 15,
   "items": [
     {
-      "item_id": "frame",
-      "question": "border around a picture",
-      "correct": "frame",
+      "item_id": "assemble",
+      "question": "put the pieces together",
+      "correct": "assemble",
       "wrong": [
-        "free",
-        "freedom"
+        "incidence",
+        "coherent"
       ],
-      "word": "frame"
+      "word": "assemble"
     },
     {
-      "item_id": "free",
-      "question": "not held or trapped",
-      "correct": "free",
+      "item_id": "incidence",
+      "question": "rate of occurrence",
+      "correct": "incidence",
       "wrong": [
-        "freedom",
-        "freeze"
+        "coherent",
+        "criticize"
       ],
-      "word": "free"
+      "word": "incidence"
     },
     {
-      "item_id": "freedom",
-      "question": "being able to choose",
-      "correct": "freedom",
+      "item_id": "coherent",
+      "question": "clear and fitting together",
+      "correct": "coherent",
       "wrong": [
-        "freeze",
-        "frequency"
+        "criticize",
+        "inspect"
       ],
-      "word": "freedom"
+      "word": "coherent"
     },
     {
-      "item_id": "freeze",
-      "question": "turn into ice",
-      "correct": "freeze",
+      "item_id": "criticize",
+      "question": "say what is wrong",
+      "correct": "criticize",
       "wrong": [
-        "frequency",
-        "frequent"
+        "inspect",
+        "practitioner"
       ],
-      "word": "freeze"
+      "word": "criticize"
     },
     {
-      "item_id": "frequency",
-      "question": "how often something happens",
-      "correct": "frequency",
+      "item_id": "inspect",
+      "question": "look at very carefully",
+      "correct": "inspect",
       "wrong": [
-        "frequent",
-        "frequently"
+        "practitioner",
+        "comprise"
       ],
-      "word": "frequency"
+      "word": "inspect"
     },
     {
-      "item_id": "frequent",
-      "question": "happens often or many times",
-      "correct": "frequent",
+      "item_id": "practitioner",
+      "question": "skilled helper like a doctor",
+      "correct": "practitioner",
       "wrong": [
-        "frequently",
-        "fresh"
+        "comprise",
+        "differentiate"
       ],
-      "word": "frequent"
+      "word": "practitioner"
     },
     {
-      "item_id": "frequently",
-      "question": "happening many times",
-      "correct": "frequently",
+      "item_id": "comprise",
+      "question": "make up a whole",
+      "correct": "comprise",
       "wrong": [
-        "fresh",
-        "friend"
+        "differentiate",
+        "empirical"
       ],
-      "word": "frequently"
+      "word": "comprise"
     },
     {
-      "item_id": "fresh",
-      "question": "newly picked or made",
-      "correct": "fresh",
+      "item_id": "differentiate",
+      "question": "tell apart or distinguish",
+      "correct": "differentiate",
       "wrong": [
-        "friend",
-        "friendly"
+        "empirical",
+        "presume"
       ],
-      "word": "fresh"
+      "word": "differentiate"
     },
     {
-      "item_id": "friend",
-      "question": "person you like and trust",
-      "correct": "friend",
+      "item_id": "empirical",
+      "question": "learned by real tests",
+      "correct": "empirical",
       "wrong": [
-        "friendly",
-        "friendship"
+        "presume",
+        "paradigm"
       ],
-      "word": "friend"
+      "word": "empirical"
     },
     {
-      "item_id": "friendly",
-      "question": "kind and nice to others",
-      "correct": "friendly",
+      "item_id": "presume",
+      "question": "suppose without proof",
+      "correct": "presume",
       "wrong": [
-        "friendship",
-        "from"
+        "paradigm",
+        "attain"
       ],
-      "word": "friendly"
+      "word": "presume"
     },
     {
-      "item_id": "friendship",
-      "question": "close bond between friends",
-      "correct": "friendship",
+      "item_id": "paradigm",
+      "question": "typical model or pattern",
+      "correct": "paradigm",
       "wrong": [
-        "from",
-        "front"
+        "attain",
+        "careless"
       ],
-      "word": "friendship"
+      "word": "paradigm"
     },
     {
-      "item_id": "from",
-      "question": "starting point of movement",
-      "correct": "from",
+      "item_id": "attain",
+      "question": "achieve or reach",
+      "correct": "attain",
       "wrong": [
-        "front",
-        "fruit"
+        "careless",
+        "isolate"
       ],
-      "word": "from"
+      "word": "attain"
     },
     {
-      "item_id": "front",
-      "question": "the forward-facing side",
-      "correct": "front",
+      "item_id": "careless",
+      "question": "not careful",
+      "correct": "careless",
       "wrong": [
-        "fruit",
+        "isolate",
+        "commence"
+      ],
+      "word": "careless"
+    },
+    {
+      "item_id": "isolate",
+      "question": "separate from others",
+      "correct": "isolate",
+      "wrong": [
+        "commence",
+        "ambiguous"
+      ],
+      "word": "isolate"
+    },
+    {
+      "item_id": "commence",
+      "question": "start doing something",
+      "correct": "commence",
+      "wrong": [
+        "ambiguous",
+        "parameter"
+      ],
+      "word": "commence"
+    },
+    {
+      "item_id": "ambiguous",
+      "question": "having more than one meaning",
+      "correct": "ambiguous",
+      "wrong": [
+        "parameter",
+        "discrete"
+      ],
+      "word": "ambiguous"
+    },
+    {
+      "item_id": "parameter",
+      "question": "limit or measurable factor",
+      "correct": "parameter",
+      "wrong": [
+        "discrete",
+        "disturb"
+      ],
+      "word": "parameter"
+    },
+    {
+      "item_id": "discrete",
+      "question": "separate and distinct",
+      "correct": "discrete",
+      "wrong": [
+        "disturb",
+        "induce"
+      ],
+      "word": "discrete"
+    },
+    {
+      "item_id": "disturb",
+      "question": "interrupt someone at rest",
+      "correct": "disturb",
+      "wrong": [
+        "induce",
+        "subsidy"
+      ],
+      "word": "disturb"
+    },
+    {
+      "item_id": "induce",
+      "question": "cause something to happen",
+      "correct": "induce",
+      "wrong": [
+        "subsidy",
+        "amend"
+      ],
+      "word": "induce"
+    },
+    {
+      "item_id": "subsidy",
+      "question": "public financial support",
+      "correct": "subsidy",
+      "wrong": [
+        "amend",
+        "educator"
+      ],
+      "word": "subsidy"
+    },
+    {
+      "item_id": "amend",
+      "question": "change it to fix",
+      "correct": "amend",
+      "wrong": [
+        "educator",
+        "ethic"
+      ],
+      "word": "amend"
+    },
+    {
+      "item_id": "educator",
+      "question": "person who teaches professionally",
+      "correct": "educator",
+      "wrong": [
+        "ethic",
+        "conform"
+      ],
+      "word": "educator"
+    },
+    {
+      "item_id": "ethic",
+      "question": "moral standard",
+      "correct": "ethic",
+      "wrong": [
+        "conform",
+        "devote"
+      ],
+      "word": "ethic"
+    },
+    {
+      "item_id": "conform",
+      "question": "follow rules or norms",
+      "correct": "conform",
+      "wrong": [
+        "devote",
+        "dispose"
+      ],
+      "word": "conform"
+    },
+    {
+      "item_id": "devote",
+      "question": "give time and care",
+      "correct": "devote",
+      "wrong": [
+        "dispose",
+        "persist"
+      ],
+      "word": "devote"
+    },
+    {
+      "item_id": "dispose",
+      "question": "throw something away",
+      "correct": "dispose",
+      "wrong": [
+        "persist",
+        "derive"
+      ],
+      "word": "dispose"
+    },
+    {
+      "item_id": "persist",
+      "question": "keep trying without stopping",
+      "correct": "persist",
+      "wrong": [
+        "derive",
+        "discriminate"
+      ],
+      "word": "persist"
+    },
+    {
+      "item_id": "derive",
+      "question": "get from a source",
+      "correct": "derive",
+      "wrong": [
+        "discriminate",
+        "prohibit"
+      ],
+      "word": "derive"
+    },
+    {
+      "item_id": "discriminate",
+      "question": "treat unfairly or distinguish",
+      "correct": "discriminate",
+      "wrong": [
+        "prohibit",
+        "correspond"
+      ],
+      "word": "discriminate"
+    },
+    {
+      "item_id": "prohibit",
+      "question": "forbid by law or rule",
+      "correct": "prohibit",
+      "wrong": [
+        "correspond",
+        "equip"
+      ],
+      "word": "prohibit"
+    },
+    {
+      "item_id": "correspond",
+      "question": "match and be the same",
+      "correct": "correspond",
+      "wrong": [
+        "equip",
+        "coincide"
+      ],
+      "word": "correspond"
+    },
+    {
+      "item_id": "equip",
+      "question": "give someone needed tools",
+      "correct": "equip",
+      "wrong": [
+        "coincide",
+        "concurrent"
+      ],
+      "word": "equip"
+    },
+    {
+      "item_id": "coincide",
+      "question": "happen at same time",
+      "correct": "coincide",
+      "wrong": [
+        "concurrent",
+        "accumulate"
+      ],
+      "word": "coincide"
+    },
+    {
+      "item_id": "concurrent",
+      "question": "happening at the same time",
+      "correct": "concurrent",
+      "wrong": [
+        "accumulate",
+        "converse"
+      ],
+      "word": "concurrent"
+    },
+    {
+      "item_id": "accumulate",
+      "question": "gather over time",
+      "correct": "accumulate",
+      "wrong": [
+        "converse",
+        "notwithstanding"
+      ],
+      "word": "accumulate"
+    },
+    {
+      "item_id": "converse",
+      "question": "talk formally",
+      "correct": "converse",
+      "wrong": [
+        "notwithstanding",
+        "revise"
+      ],
+      "word": "converse"
+    },
+    {
+      "item_id": "notwithstanding",
+      "question": "in spite of",
+      "correct": "notwithstanding",
+      "wrong": [
+        "revise",
+        "analyse"
+      ],
+      "word": "notwithstanding"
+    },
+    {
+      "item_id": "revise",
+      "question": "change to improve",
+      "correct": "revise",
+      "wrong": [
+        "analyse",
+        "intrinsic"
+      ],
+      "word": "revise"
+    },
+    {
+      "item_id": "analyse",
+      "question": "study something carefully to understand it",
+      "correct": "analyse",
+      "wrong": [
+        "intrinsic",
+        "compose"
+      ],
+      "word": "analyse"
+    },
+    {
+      "item_id": "intrinsic",
+      "question": "built-in by nature",
+      "correct": "intrinsic",
+      "wrong": [
+        "compose",
+        "diminish"
+      ],
+      "word": "intrinsic"
+    },
+    {
+      "item_id": "compose",
+      "question": "make a piece of music",
+      "correct": "compose",
+      "wrong": [
+        "diminish",
+        "implicit"
+      ],
+      "word": "compose"
+    },
+    {
+      "item_id": "diminish",
+      "question": "make something grow smaller",
+      "correct": "diminish",
+      "wrong": [
+        "implicit",
+        "qualitative"
+      ],
+      "word": "diminish"
+    },
+    {
+      "item_id": "implicit",
+      "question": "understood without being said",
+      "correct": "implicit",
+      "wrong": [
+        "qualitative",
+        "statistic"
+      ],
+      "word": "implicit"
+    },
+    {
+      "item_id": "qualitative",
+      "question": "about quality not numbers",
+      "correct": "qualitative",
+      "wrong": [
+        "statistic",
+        "subordinate"
+      ],
+      "word": "qualitative"
+    },
+    {
+      "item_id": "statistic",
+      "question": "numerical fact from data",
+      "correct": "statistic",
+      "wrong": [
+        "subordinate",
+        "orient"
+      ],
+      "word": "statistic"
+    },
+    {
+      "item_id": "subordinate",
+      "question": "lower in rank",
+      "correct": "subordinate",
+      "wrong": [
+        "orient",
+        "simulate"
+      ],
+      "word": "subordinate"
+    },
+    {
+      "item_id": "orient",
+      "question": "align or adjust direction",
+      "correct": "orient",
+      "wrong": [
+        "simulate",
+        "migrate"
+      ],
+      "word": "orient"
+    },
+    {
+      "item_id": "simulate",
+      "question": "imitate for study",
+      "correct": "simulate",
+      "wrong": [
+        "migrate",
+        "reluctance"
+      ],
+      "word": "simulate"
+    },
+    {
+      "item_id": "migrate",
+      "question": "move to another region",
+      "correct": "migrate",
+      "wrong": [
+        "reluctance",
+        "compute"
+      ],
+      "word": "migrate"
+    },
+    {
+      "item_id": "reluctance",
+      "question": "unwilling feeling",
+      "correct": "reluctance",
+      "wrong": [
+        "compute",
+        "depict"
+      ],
+      "word": "reluctance"
+    },
+    {
+      "item_id": "compute",
+      "question": "calculate using a computer",
+      "correct": "compute",
+      "wrong": [
+        "depict",
+        "embarrass"
+      ],
+      "word": "compute"
+    },
+    {
+      "item_id": "depict",
+      "question": "show in a picture",
+      "correct": "depict",
+      "wrong": [
+        "embarrass",
+        "conceive"
+      ],
+      "word": "depict"
+    },
+    {
+      "item_id": "embarrass",
+      "question": "make someone feel shy or awkward",
+      "correct": "embarrass",
+      "wrong": [
+        "conceive",
+        "compile"
+      ],
+      "word": "embarrass"
+    },
+    {
+      "item_id": "conceive",
+      "question": "think of an idea",
+      "correct": "conceive",
+      "wrong": [
+        "compile",
+        "contradict"
+      ],
+      "word": "conceive"
+    },
+    {
+      "item_id": "compile",
+      "question": "gather things into one",
+      "correct": "compile",
+      "wrong": [
+        "contradict",
+        "inhibit"
+      ],
+      "word": "compile"
+    },
+    {
+      "item_id": "contradict",
+      "question": "say the opposite",
+      "correct": "contradict",
+      "wrong": [
+        "inhibit",
+        "invoke"
+      ],
+      "word": "contradict"
+    },
+    {
+      "item_id": "inhibit",
+      "question": "hold back or prevent",
+      "correct": "inhibit",
+      "wrong": [
+        "invoke",
+        "allocate"
+      ],
+      "word": "inhibit"
+    },
+    {
+      "item_id": "invoke",
+      "question": "call upon formally",
+      "correct": "invoke",
+      "wrong": [
+        "allocate",
+        "instruct"
+      ],
+      "word": "invoke"
+    },
+    {
+      "item_id": "allocate",
+      "question": "give each person a share",
+      "correct": "allocate",
+      "wrong": [
+        "instruct",
+        "denote"
+      ],
+      "word": "allocate"
+    },
+    {
+      "item_id": "instruct",
+      "question": "tell someone how",
+      "correct": "instruct",
+      "wrong": [
+        "denote",
+        "excite"
+      ],
+      "word": "instruct"
+    },
+    {
+      "item_id": "denote",
+      "question": "be a sign of",
+      "correct": "denote",
+      "wrong": [
+        "excite",
+        "predominant"
+      ],
+      "word": "denote"
+    },
+    {
+      "item_id": "excite",
+      "question": "make someone feel eager",
+      "correct": "excite",
+      "wrong": [
+        "predominant",
+        "refine"
+      ],
+      "word": "excite"
+    },
+    {
+      "item_id": "predominant",
+      "question": "most common or influential",
+      "correct": "predominant",
+      "wrong": [
+        "refine",
+        "injure"
+      ],
+      "word": "predominant"
+    },
+    {
+      "item_id": "refine",
+      "question": "improve by small changes",
+      "correct": "refine",
+      "wrong": [
+        "injure",
+        "restrain"
+      ],
+      "word": "refine"
+    },
+    {
+      "item_id": "injure",
+      "question": "hurt a person's body",
+      "correct": "injure",
+      "wrong": [
+        "restrain",
+        "guideline"
+      ],
+      "word": "injure"
+    },
+    {
+      "item_id": "restrain",
+      "question": "hold back",
+      "correct": "restrain",
+      "wrong": [
+        "guideline",
+        "equate"
+      ],
+      "word": "restrain"
+    },
+    {
+      "item_id": "guideline",
+      "question": "recommended rule",
+      "correct": "guideline",
+      "wrong": [
+        "equate",
+        "amaze"
+      ],
+      "word": "guideline"
+    },
+    {
+      "item_id": "equate",
+      "question": "treat as the same",
+      "correct": "equate",
+      "wrong": [
+        "amaze",
+        "confer"
+      ],
+      "word": "equate"
+    },
+    {
+      "item_id": "amaze",
+      "question": "surprise greatly",
+      "correct": "amaze",
+      "wrong": [
+        "confer",
+        "minimise"
+      ],
+      "word": "amaze"
+    },
+    {
+      "item_id": "confer",
+      "question": "grant or discuss formally",
+      "correct": "confer",
+      "wrong": [
+        "minimise",
+        "infer"
+      ],
+      "word": "confer"
+    },
+    {
+      "item_id": "minimise",
+      "question": "reduce to the smallest amount",
+      "correct": "minimise",
+      "wrong": [
+        "infer",
+        "incline"
+      ],
+      "word": "minimise"
+    },
+    {
+      "item_id": "infer",
+      "question": "conclude from evidence",
+      "correct": "infer",
+      "wrong": [
+        "incline",
+        "innovate"
+      ],
+      "word": "infer"
+    },
+    {
+      "item_id": "incline",
+      "question": "tend toward",
+      "correct": "incline",
+      "wrong": [
+        "innovate",
+        "mediate"
+      ],
+      "word": "incline"
+    },
+    {
+      "item_id": "innovate",
+      "question": "introduce new ideas",
+      "correct": "innovate",
+      "wrong": [
+        "mediate",
+        "maximise"
+      ],
+      "word": "innovate"
+    },
+    {
+      "item_id": "mediate",
+      "question": "help sides agree",
+      "correct": "mediate",
+      "wrong": [
+        "maximise",
+        "automate"
+      ],
+      "word": "mediate"
+    },
+    {
+      "item_id": "maximise",
+      "question": "increase to the greatest degree",
+      "correct": "maximise",
+      "wrong": [
+        "automate",
+        "distort"
+      ],
+      "word": "maximise"
+    },
+    {
+      "item_id": "automate",
+      "question": "make processes automatic",
+      "correct": "automate",
+      "wrong": [
+        "distort",
+        "unify"
+      ],
+      "word": "automate"
+    },
+    {
+      "item_id": "distort",
+      "question": "twist out of true shape",
+      "correct": "distort",
+      "wrong": [
+        "unify",
+        "deviate"
+      ],
+      "word": "distort"
+    },
+    {
+      "item_id": "unify",
+      "question": "bring together",
+      "correct": "unify",
+      "wrong": [
+        "deviate",
+        "convene"
+      ],
+      "word": "unify"
+    },
+    {
+      "item_id": "deviate",
+      "question": "move away from standard",
+      "correct": "deviate",
+      "wrong": [
+        "convene",
+        "erode"
+      ],
+      "word": "deviate"
+    },
+    {
+      "item_id": "convene",
+      "question": "call people to meet",
+      "correct": "convene",
+      "wrong": [
+        "erode",
+        "consequent"
+      ],
+      "word": "convene"
+    },
+    {
+      "item_id": "erode",
+      "question": "wear away gradually",
+      "correct": "erode",
+      "wrong": [
+        "consequent",
+        "legislate"
+      ],
+      "word": "erode"
+    },
+    {
+      "item_id": "consequent",
+      "question": "following as a result",
+      "correct": "consequent",
+      "wrong": [
+        "legislate",
+        "fluctuate"
+      ],
+      "word": "consequent"
+    },
+    {
+      "item_id": "legislate",
+      "question": "pass or make laws",
+      "correct": "legislate",
+      "wrong": [
+        "fluctuate",
         "frustrate"
       ],
-      "word": "front"
+      "word": "legislate"
     },
     {
-      "item_id": "fruit",
-      "question": "sweet food from plants",
-      "correct": "fruit",
+      "item_id": "fluctuate",
+      "question": "rise and fall irregularly",
+      "correct": "fluctuate",
       "wrong": [
         "frustrate",
-        "fuel"
+        "negate"
       ],
-      "word": "fruit"
+      "word": "fluctuate"
     },
     {
       "item_id": "frustrate",
       "question": "make someone annoyed",
       "correct": "frustrate",
       "wrong": [
-        "fuel",
-        "full"
+        "negate",
+        "deduce"
       ],
       "word": "frustrate"
     },
     {
-      "item_id": "fuel",
-      "question": "energy that runs machines",
-      "correct": "fuel",
+      "item_id": "negate",
+      "question": "make ineffective or deny",
+      "correct": "negate",
       "wrong": [
-        "full",
-        "fully"
+        "deduce",
+        "displace"
       ],
-      "word": "fuel"
+      "word": "negate"
     },
     {
-      "item_id": "full",
-      "question": "completely filled up",
-      "correct": "full",
+      "item_id": "deduce",
+      "question": "infer from evidence",
+      "correct": "deduce",
       "wrong": [
-        "fully",
-        "fun"
+        "displace",
+        "utilise"
       ],
-      "word": "full"
+      "word": "deduce"
     },
     {
-      "item_id": "fully",
-      "question": "to the complete amount",
-      "correct": "fully",
+      "item_id": "displace",
+      "question": "move or replace",
+      "correct": "displace",
       "wrong": [
-        "fun",
-        "funding"
+        "utilise",
+        "confine"
       ],
-      "word": "fully"
+      "word": "displace"
     },
     {
-      "item_id": "fun",
-      "question": "enjoyable and making you happy",
-      "correct": "fun",
+      "item_id": "utilise",
+      "question": "make practical use of",
+      "correct": "utilise",
       "wrong": [
-        "funding",
-        "funeral"
+        "confine",
+        "depress"
       ],
-      "word": "fun"
+      "word": "utilise"
     },
     {
-      "item_id": "funding",
-      "question": "money for a project",
-      "correct": "funding",
+      "item_id": "confine",
+      "question": "keep inside a small space",
+      "correct": "confine",
       "wrong": [
-        "funeral",
-        "funny"
+        "depress",
+        "precede"
       ],
-      "word": "funding"
+      "word": "confine"
     },
     {
-      "item_id": "funeral",
-      "question": "ceremony for someone who died",
-      "correct": "funeral",
+      "item_id": "depress",
+      "question": "lower or weaken",
+      "correct": "depress",
       "wrong": [
-        "funny",
-        "furniture"
+        "precede",
+        "implicate"
       ],
-      "word": "funeral"
+      "word": "depress"
     },
     {
-      "item_id": "funny",
-      "question": "makes people laugh",
-      "correct": "funny",
+      "item_id": "precede",
+      "question": "come before something else",
+      "correct": "precede",
       "wrong": [
-        "furniture",
-        "further"
+        "implicate",
+        "constrain"
       ],
-      "word": "funny"
+      "word": "precede"
     },
     {
-      "item_id": "furniture",
-      "question": "tables chairs and beds",
-      "correct": "furniture",
+      "item_id": "implicate",
+      "question": "show involvement in something",
+      "correct": "implicate",
       "wrong": [
-        "further",
-        "future"
+        "constrain",
+        "underlie"
       ],
-      "word": "furniture"
+      "word": "implicate"
     },
     {
-      "item_id": "further",
-      "question": "to a greater distance",
-      "correct": "further",
+      "item_id": "constrain",
+      "question": "limit or restrict",
+      "correct": "constrain",
       "wrong": [
-        "future",
-        "gain"
+        "underlie",
+        "append"
       ],
-      "word": "further"
+      "word": "constrain"
     },
     {
-      "item_id": "future",
-      "question": "happening after now",
-      "correct": "future",
+      "item_id": "underlie",
+      "question": "lie beneath as basis",
+      "correct": "underlie",
       "wrong": [
-        "gain",
-        "galaxy"
+        "append",
+        "immigrate"
       ],
-      "word": "future"
+      "word": "underlie"
     },
     {
-      "item_id": "gain",
-      "question": "something extra you get",
-      "correct": "gain",
+      "item_id": "append",
+      "question": "add at the end",
+      "correct": "append",
       "wrong": [
-        "galaxy",
-        "game"
+        "immigrate",
+        "administrate"
       ],
-      "word": "gain"
+      "word": "append"
     },
     {
-      "item_id": "galaxy",
-      "question": "huge group of stars",
-      "correct": "galaxy",
+      "item_id": "immigrate",
+      "question": "move to live abroad",
+      "correct": "immigrate",
       "wrong": [
-        "game",
-        "gap"
+        "administrate",
+        "assemble"
       ],
-      "word": "galaxy"
+      "word": "immigrate"
     },
     {
-      "item_id": "game",
-      "question": "an activity with rules you play for fun",
-      "correct": "game",
+      "item_id": "administrate",
+      "question": "manage an organisation",
+      "correct": "administrate",
       "wrong": [
-        "gap",
-        "garage"
+        "assemble",
+        "incidence"
       ],
-      "word": "game"
-    },
-    {
-      "item_id": "gap",
-      "question": "space between two things",
-      "correct": "gap",
-      "wrong": [
-        "garage",
-        "garden"
-      ],
-      "word": "gap"
-    },
-    {
-      "item_id": "garage",
-      "question": "building for a car",
-      "correct": "garage",
-      "wrong": [
-        "garden",
-        "gas"
-      ],
-      "word": "garage"
-    },
-    {
-      "item_id": "garden",
-      "question": "a place with plants and flowers",
-      "correct": "garden",
-      "wrong": [
-        "gas",
-        "gate"
-      ],
-      "word": "garden"
-    },
-    {
-      "item_id": "gas",
-      "question": "air-like stuff you burn",
-      "correct": "gas",
-      "wrong": [
-        "gate",
-        "gather"
-      ],
-      "word": "gas"
-    },
-    {
-      "item_id": "gate",
-      "question": "door in a fence",
-      "correct": "gate",
-      "wrong": [
-        "gather",
-        "gay"
-      ],
-      "word": "gate"
-    },
-    {
-      "item_id": "gather",
-      "question": "bring things together in one place",
-      "correct": "gather",
-      "wrong": [
-        "gay",
-        "gaze"
-      ],
-      "word": "gather"
-    },
-    {
-      "item_id": "gay",
-      "question": "happy and brightly cheerful",
-      "correct": "gay",
-      "wrong": [
-        "gaze",
-        "gear"
-      ],
-      "word": "gay"
-    },
-    {
-      "item_id": "gaze",
-      "question": "look for a long time",
-      "correct": "gaze",
-      "wrong": [
-        "gear",
-        "gene"
-      ],
-      "word": "gaze"
-    },
-    {
-      "item_id": "gear",
-      "question": "equipment or machine parts",
-      "correct": "gear",
-      "wrong": [
-        "gene",
-        "general"
-      ],
-      "word": "gear"
-    },
-    {
-      "item_id": "gene",
-      "question": "tiny instruction in the body",
-      "correct": "gene",
-      "wrong": [
-        "general",
-        "generally"
-      ],
-      "word": "gene"
-    },
-    {
-      "item_id": "general",
-      "question": "usual or common for many",
-      "correct": "general",
-      "wrong": [
-        "generally",
-        "genetic"
-      ],
-      "word": "general"
-    },
-    {
-      "item_id": "generally",
-      "question": "in most cases or usually",
-      "correct": "generally",
-      "wrong": [
-        "genetic",
-        "gentleman"
-      ],
-      "word": "generally"
-    },
-    {
-      "item_id": "genetic",
-      "question": "passed down in families",
-      "correct": "genetic",
-      "wrong": [
-        "gentleman",
-        "gently"
-      ],
-      "word": "genetic"
-    },
-    {
-      "item_id": "gentleman",
-      "question": "polite and kind man",
-      "correct": "gentleman",
-      "wrong": [
-        "gently",
-        "genuine"
-      ],
-      "word": "gentleman"
-    },
-    {
-      "item_id": "gently",
-      "question": "in a soft, kind way",
-      "correct": "gently",
-      "wrong": [
-        "genuine",
-        "geography"
-      ],
-      "word": "gently"
-    },
-    {
-      "item_id": "genuine",
-      "question": "real and not fake",
-      "correct": "genuine",
-      "wrong": [
-        "geography",
-        "gesture"
-      ],
-      "word": "genuine"
-    },
-    {
-      "item_id": "geography",
-      "question": "study of Earth places",
-      "correct": "geography",
-      "wrong": [
-        "gesture",
-        "get"
-      ],
-      "word": "geography"
-    },
-    {
-      "item_id": "gesture",
-      "question": "movement that shows meaning",
-      "correct": "gesture",
-      "wrong": [
-        "get",
-        "giant"
-      ],
-      "word": "gesture"
-    },
-    {
-      "item_id": "get",
-      "question": "to receive or obtain something",
-      "correct": "get",
-      "wrong": [
-        "giant",
-        "gift"
-      ],
-      "word": "get"
-    },
-    {
-      "item_id": "giant",
-      "question": "very very big",
-      "correct": "giant",
-      "wrong": [
-        "gift",
-        "girl"
-      ],
-      "word": "giant"
-    },
-    {
-      "item_id": "gift",
-      "question": "a wrapped present",
-      "correct": "gift",
-      "wrong": [
-        "girl",
-        "girlfriend"
-      ],
-      "word": "gift"
-    },
-    {
-      "item_id": "girl",
-      "question": "a young female child",
-      "correct": "girl",
-      "wrong": [
-        "girlfriend",
-        "give"
-      ],
-      "word": "girl"
-    },
-    {
-      "item_id": "girlfriend",
-      "question": "woman someone dates",
-      "correct": "girlfriend",
-      "wrong": [
-        "give",
-        "glad"
-      ],
-      "word": "girlfriend"
-    },
-    {
-      "item_id": "give",
-      "question": "hand something to someone",
-      "correct": "give",
-      "wrong": [
-        "glad",
-        "glance"
-      ],
-      "word": "give"
-    },
-    {
-      "item_id": "glad",
-      "question": "happy and pleased",
-      "correct": "glad",
-      "wrong": [
-        "glance",
-        "glass"
-      ],
-      "word": "glad"
-    },
-    {
-      "item_id": "glance",
-      "question": "to look quickly at something",
-      "correct": "glance",
-      "wrong": [
-        "glass",
-        "global"
-      ],
-      "word": "glance"
-    },
-    {
-      "item_id": "glass",
-      "question": "a clear cup made of glass",
-      "correct": "glass",
-      "wrong": [
-        "global",
-        "glove"
-      ],
-      "word": "glass"
-    },
-    {
-      "item_id": "global",
-      "question": "covering the whole world",
-      "correct": "global",
-      "wrong": [
-        "glove",
-        "go"
-      ],
-      "word": "global"
-    },
-    {
-      "item_id": "glove",
-      "question": "covering for the hand",
-      "correct": "glove",
-      "wrong": [
-        "go",
-        "god"
-      ],
-      "word": "glove"
-    },
-    {
-      "item_id": "go",
-      "question": "to move or travel",
-      "correct": "go",
-      "wrong": [
-        "god",
-        "gold"
-      ],
-      "word": "go"
-    },
-    {
-      "item_id": "god",
-      "question": "powerful being people worship",
-      "correct": "god",
-      "wrong": [
-        "gold",
-        "golden"
-      ],
-      "word": "god"
-    },
-    {
-      "item_id": "gold",
-      "question": "shiny yellow like metal",
-      "correct": "gold",
-      "wrong": [
-        "golden",
-        "golf"
-      ],
-      "word": "gold"
-    },
-    {
-      "item_id": "golden",
-      "question": "made of gold or bright yellow",
-      "correct": "golden",
-      "wrong": [
-        "golf",
-        "good"
-      ],
-      "word": "golden"
-    },
-    {
-      "item_id": "golf",
-      "question": "sport with a small ball",
-      "correct": "golf",
-      "wrong": [
-        "good",
-        "government"
-      ],
-      "word": "golf"
-    },
-    {
-      "item_id": "good",
-      "question": "nice or pleasing to have",
-      "correct": "good",
-      "wrong": [
-        "government",
-        "governor"
-      ],
-      "word": "good"
-    },
-    {
-      "item_id": "government",
-      "question": "people who run a country",
-      "correct": "government",
-      "wrong": [
-        "governor",
-        "grab"
-      ],
-      "word": "government"
-    },
-    {
-      "item_id": "governor",
-      "question": "leader of a state",
-      "correct": "governor",
-      "wrong": [
-        "grab",
-        "gradually"
-      ],
-      "word": "governor"
-    },
-    {
-      "item_id": "grab",
-      "question": "take something quickly with your hand",
-      "correct": "grab",
-      "wrong": [
-        "gradually",
-        "graduate"
-      ],
-      "word": "grab"
-    },
-    {
-      "item_id": "gradually",
-      "question": "little by little over time",
-      "correct": "gradually",
-      "wrong": [
-        "graduate",
-        "grain"
-      ],
-      "word": "gradually"
-    },
-    {
-      "item_id": "graduate",
-      "question": "finish a degree",
-      "correct": "graduate",
-      "wrong": [
-        "grain",
-        "grand"
-      ],
-      "word": "graduate"
-    },
-    {
-      "item_id": "grain",
-      "question": "seeds of wheat or rice",
-      "correct": "grain",
-      "wrong": [
-        "grand",
-        "grandfather"
-      ],
-      "word": "grain"
-    },
-    {
-      "item_id": "grand",
-      "question": "very big and nice",
-      "correct": "grand",
-      "wrong": [
-        "grandfather",
-        "grandmother"
-      ],
-      "word": "grand"
-    },
-    {
-      "item_id": "grandfather",
-      "question": "father of your parent",
-      "correct": "grandfather",
-      "wrong": [
-        "grandmother",
-        "grass"
-      ],
-      "word": "grandfather"
-    },
-    {
-      "item_id": "grandmother",
-      "question": "mother of your parent",
-      "correct": "grandmother",
-      "wrong": [
-        "grass",
-        "grave"
-      ],
-      "word": "grandmother"
-    },
-    {
-      "item_id": "grass",
-      "question": "green plants on the ground",
-      "correct": "grass",
-      "wrong": [
-        "grave",
-        "gravity"
-      ],
-      "word": "grass"
-    },
-    {
-      "item_id": "grave",
-      "question": "very serious indeed",
-      "correct": "grave",
-      "wrong": [
-        "gravity",
-        "great"
-      ],
-      "word": "grave"
-    },
-    {
-      "item_id": "gravity",
-      "question": "force that pulls things down",
-      "correct": "gravity",
-      "wrong": [
-        "great",
-        "greatly"
-      ],
-      "word": "gravity"
-    },
-    {
-      "item_id": "great",
-      "question": "very good or excellent",
-      "correct": "great",
-      "wrong": [
-        "greatly",
-        "green"
-      ],
-      "word": "great"
-    },
-    {
-      "item_id": "greatly",
-      "question": "by a large amount",
-      "correct": "greatly",
-      "wrong": [
-        "green",
-        "grocery"
-      ],
-      "word": "greatly"
-    },
-    {
-      "item_id": "green",
-      "question": "color of grass",
-      "correct": "green",
-      "wrong": [
-        "grocery",
-        "ground"
-      ],
-      "word": "green"
-    },
-    {
-      "item_id": "grocery",
-      "question": "food sold in a store",
-      "correct": "grocery",
-      "wrong": [
-        "ground",
-        "group"
-      ],
-      "word": "grocery"
-    },
-    {
-      "item_id": "ground",
-      "question": "the surface we walk on",
-      "correct": "ground",
-      "wrong": [
-        "group",
-        "grow"
-      ],
-      "word": "ground"
-    },
-    {
-      "item_id": "group",
-      "question": "several people together",
-      "correct": "group",
-      "wrong": [
-        "grow",
-        "growth"
-      ],
-      "word": "group"
-    },
-    {
-      "item_id": "grow",
-      "question": "to become bigger or taller",
-      "correct": "grow",
-      "wrong": [
-        "growth",
-        "guard"
-      ],
-      "word": "grow"
-    },
-    {
-      "item_id": "growth",
-      "question": "the process of getting bigger",
-      "correct": "growth",
-      "wrong": [
-        "guard",
-        "guess"
-      ],
-      "word": "growth"
-    },
-    {
-      "item_id": "guard",
-      "question": "person who keeps watch",
-      "correct": "guard",
-      "wrong": [
-        "guess",
-        "guest"
-      ],
-      "word": "guard"
-    },
-    {
-      "item_id": "guess",
-      "question": "to say an answer without knowing",
-      "correct": "guess",
-      "wrong": [
-        "guest",
-        "guide"
-      ],
-      "word": "guess"
-    },
-    {
-      "item_id": "guest",
-      "question": "a person who visits",
-      "correct": "guest",
-      "wrong": [
-        "guide",
-        "guilty"
-      ],
-      "word": "guest"
-    },
-    {
-      "item_id": "guide",
-      "question": "person who shows the way",
-      "correct": "guide",
-      "wrong": [
-        "guilty",
-        "gun"
-      ],
-      "word": "guide"
-    },
-    {
-      "item_id": "guilty",
-      "question": "feeling bad after a wrong act",
-      "correct": "guilty",
-      "wrong": [
-        "gun",
-        "guy"
-      ],
-      "word": "guilty"
-    },
-    {
-      "item_id": "gun",
-      "question": "a tool that shoots",
-      "correct": "gun",
-      "wrong": [
-        "guy",
-        "habit"
-      ],
-      "word": "gun"
-    },
-    {
-      "item_id": "guy",
-      "question": "a man or boy",
-      "correct": "guy",
-      "wrong": [
-        "habit",
-        "hair"
-      ],
-      "word": "guy"
-    },
-    {
-      "item_id": "habit",
-      "question": "thing you do often",
-      "correct": "habit",
-      "wrong": [
-        "hair",
-        "half"
-      ],
-      "word": "habit"
-    },
-    {
-      "item_id": "hair",
-      "question": "thin thread on head",
-      "correct": "hair",
-      "wrong": [
-        "half",
-        "hall"
-      ],
-      "word": "hair"
-    },
-    {
-      "item_id": "half",
-      "question": "partly, not fully",
-      "correct": "half",
-      "wrong": [
-        "hall",
-        "hand"
-      ],
-      "word": "half"
-    },
-    {
-      "item_id": "hall",
-      "question": "long passage in a building",
-      "correct": "hall",
-      "wrong": [
-        "hand",
-        "handle"
-      ],
-      "word": "hall"
-    },
-    {
-      "item_id": "hand",
-      "question": "the part of the body at the end of the arm",
-      "correct": "hand",
-      "wrong": [
-        "handle",
-        "hang"
-      ],
-      "word": "hand"
-    },
-    {
-      "item_id": "handle",
-      "question": "to hold or manage something",
-      "correct": "handle",
-      "wrong": [
-        "hang",
-        "happen"
-      ],
-      "word": "handle"
-    },
-    {
-      "item_id": "hang",
-      "question": "to put something up",
-      "correct": "hang",
-      "wrong": [
-        "happen",
-        "happy"
-      ],
-      "word": "hang"
-    },
-    {
-      "item_id": "happen",
-      "question": "take place or occur",
-      "correct": "happen",
-      "wrong": [
-        "happy",
-        "hard"
-      ],
-      "word": "happen"
-    },
-    {
-      "item_id": "happy",
-      "question": "feeling very glad inside",
-      "correct": "happy",
-      "wrong": [
-        "hard",
-        "frame"
-      ],
-      "word": "happy"
-    },
-    {
-      "item_id": "hard",
-      "question": "not easy to press or break",
-      "correct": "hard",
-      "wrong": [
-        "frame",
-        "free"
-      ],
-      "word": "hard"
+      "word": "administrate"
     }
   ]
 }

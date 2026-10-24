@@ -4,404 +4,404 @@
   "seconds_per_letter": 5,
   "items": [
     {
-      "item_id": "frame",
-      "word": "frame"
+      "item_id": "assemble",
+      "word": "assemble"
     },
     {
-      "item_id": "free",
-      "word": "free"
+      "item_id": "incidence",
+      "word": "incidence"
     },
     {
-      "item_id": "freedom",
-      "word": "freedom"
+      "item_id": "coherent",
+      "word": "coherent"
     },
     {
-      "item_id": "freeze",
-      "word": "freeze"
+      "item_id": "criticize",
+      "word": "criticize"
     },
     {
-      "item_id": "frequency",
-      "word": "frequency"
+      "item_id": "inspect",
+      "word": "inspect"
     },
     {
-      "item_id": "frequent",
-      "word": "frequent"
+      "item_id": "practitioner",
+      "word": "practitioner"
     },
     {
-      "item_id": "frequently",
-      "word": "frequently"
+      "item_id": "comprise",
+      "word": "comprise"
     },
     {
-      "item_id": "fresh",
-      "word": "fresh"
+      "item_id": "differentiate",
+      "word": "differentiate"
     },
     {
-      "item_id": "friend",
-      "word": "friend"
+      "item_id": "empirical",
+      "word": "empirical"
     },
     {
-      "item_id": "friendly",
-      "word": "friendly"
+      "item_id": "presume",
+      "word": "presume"
     },
     {
-      "item_id": "friendship",
-      "word": "friendship"
+      "item_id": "paradigm",
+      "word": "paradigm"
     },
     {
-      "item_id": "from",
-      "word": "from"
+      "item_id": "attain",
+      "word": "attain"
     },
     {
-      "item_id": "front",
-      "word": "front"
+      "item_id": "careless",
+      "word": "careless"
     },
     {
-      "item_id": "fruit",
-      "word": "fruit"
+      "item_id": "isolate",
+      "word": "isolate"
+    },
+    {
+      "item_id": "commence",
+      "word": "commence"
+    },
+    {
+      "item_id": "ambiguous",
+      "word": "ambiguous"
+    },
+    {
+      "item_id": "parameter",
+      "word": "parameter"
+    },
+    {
+      "item_id": "discrete",
+      "word": "discrete"
+    },
+    {
+      "item_id": "disturb",
+      "word": "disturb"
+    },
+    {
+      "item_id": "induce",
+      "word": "induce"
+    },
+    {
+      "item_id": "subsidy",
+      "word": "subsidy"
+    },
+    {
+      "item_id": "amend",
+      "word": "amend"
+    },
+    {
+      "item_id": "educator",
+      "word": "educator"
+    },
+    {
+      "item_id": "ethic",
+      "word": "ethic"
+    },
+    {
+      "item_id": "conform",
+      "word": "conform"
+    },
+    {
+      "item_id": "devote",
+      "word": "devote"
+    },
+    {
+      "item_id": "dispose",
+      "word": "dispose"
+    },
+    {
+      "item_id": "persist",
+      "word": "persist"
+    },
+    {
+      "item_id": "derive",
+      "word": "derive"
+    },
+    {
+      "item_id": "discriminate",
+      "word": "discriminate"
+    },
+    {
+      "item_id": "prohibit",
+      "word": "prohibit"
+    },
+    {
+      "item_id": "correspond",
+      "word": "correspond"
+    },
+    {
+      "item_id": "equip",
+      "word": "equip"
+    },
+    {
+      "item_id": "coincide",
+      "word": "coincide"
+    },
+    {
+      "item_id": "concurrent",
+      "word": "concurrent"
+    },
+    {
+      "item_id": "accumulate",
+      "word": "accumulate"
+    },
+    {
+      "item_id": "converse",
+      "word": "converse"
+    },
+    {
+      "item_id": "notwithstanding",
+      "word": "notwithstanding"
+    },
+    {
+      "item_id": "revise",
+      "word": "revise"
+    },
+    {
+      "item_id": "analyse",
+      "word": "analyse"
+    },
+    {
+      "item_id": "intrinsic",
+      "word": "intrinsic"
+    },
+    {
+      "item_id": "compose",
+      "word": "compose"
+    },
+    {
+      "item_id": "diminish",
+      "word": "diminish"
+    },
+    {
+      "item_id": "implicit",
+      "word": "implicit"
+    },
+    {
+      "item_id": "qualitative",
+      "word": "qualitative"
+    },
+    {
+      "item_id": "statistic",
+      "word": "statistic"
+    },
+    {
+      "item_id": "subordinate",
+      "word": "subordinate"
+    },
+    {
+      "item_id": "orient",
+      "word": "orient"
+    },
+    {
+      "item_id": "simulate",
+      "word": "simulate"
+    },
+    {
+      "item_id": "migrate",
+      "word": "migrate"
+    },
+    {
+      "item_id": "reluctance",
+      "word": "reluctance"
+    },
+    {
+      "item_id": "compute",
+      "word": "compute"
+    },
+    {
+      "item_id": "depict",
+      "word": "depict"
+    },
+    {
+      "item_id": "embarrass",
+      "word": "embarrass"
+    },
+    {
+      "item_id": "conceive",
+      "word": "conceive"
+    },
+    {
+      "item_id": "compile",
+      "word": "compile"
+    },
+    {
+      "item_id": "contradict",
+      "word": "contradict"
+    },
+    {
+      "item_id": "inhibit",
+      "word": "inhibit"
+    },
+    {
+      "item_id": "invoke",
+      "word": "invoke"
+    },
+    {
+      "item_id": "allocate",
+      "word": "allocate"
+    },
+    {
+      "item_id": "instruct",
+      "word": "instruct"
+    },
+    {
+      "item_id": "denote",
+      "word": "denote"
+    },
+    {
+      "item_id": "excite",
+      "word": "excite"
+    },
+    {
+      "item_id": "predominant",
+      "word": "predominant"
+    },
+    {
+      "item_id": "refine",
+      "word": "refine"
+    },
+    {
+      "item_id": "injure",
+      "word": "injure"
+    },
+    {
+      "item_id": "restrain",
+      "word": "restrain"
+    },
+    {
+      "item_id": "guideline",
+      "word": "guideline"
+    },
+    {
+      "item_id": "equate",
+      "word": "equate"
+    },
+    {
+      "item_id": "amaze",
+      "word": "amaze"
+    },
+    {
+      "item_id": "confer",
+      "word": "confer"
+    },
+    {
+      "item_id": "minimise",
+      "word": "minimise"
+    },
+    {
+      "item_id": "infer",
+      "word": "infer"
+    },
+    {
+      "item_id": "incline",
+      "word": "incline"
+    },
+    {
+      "item_id": "innovate",
+      "word": "innovate"
+    },
+    {
+      "item_id": "mediate",
+      "word": "mediate"
+    },
+    {
+      "item_id": "maximise",
+      "word": "maximise"
+    },
+    {
+      "item_id": "automate",
+      "word": "automate"
+    },
+    {
+      "item_id": "distort",
+      "word": "distort"
+    },
+    {
+      "item_id": "unify",
+      "word": "unify"
+    },
+    {
+      "item_id": "deviate",
+      "word": "deviate"
+    },
+    {
+      "item_id": "convene",
+      "word": "convene"
+    },
+    {
+      "item_id": "erode",
+      "word": "erode"
+    },
+    {
+      "item_id": "consequent",
+      "word": "consequent"
+    },
+    {
+      "item_id": "legislate",
+      "word": "legislate"
+    },
+    {
+      "item_id": "fluctuate",
+      "word": "fluctuate"
     },
     {
       "item_id": "frustrate",
       "word": "frustrate"
     },
     {
-      "item_id": "fuel",
-      "word": "fuel"
+      "item_id": "negate",
+      "word": "negate"
     },
     {
-      "item_id": "full",
-      "word": "full"
+      "item_id": "deduce",
+      "word": "deduce"
     },
     {
-      "item_id": "fully",
-      "word": "fully"
+      "item_id": "displace",
+      "word": "displace"
     },
     {
-      "item_id": "fun",
-      "word": "fun"
+      "item_id": "utilise",
+      "word": "utilise"
     },
     {
-      "item_id": "funding",
-      "word": "funding"
+      "item_id": "confine",
+      "word": "confine"
     },
     {
-      "item_id": "funeral",
-      "word": "funeral"
+      "item_id": "depress",
+      "word": "depress"
     },
     {
-      "item_id": "funny",
-      "word": "funny"
+      "item_id": "precede",
+      "word": "precede"
     },
     {
-      "item_id": "furniture",
-      "word": "furniture"
+      "item_id": "implicate",
+      "word": "implicate"
     },
     {
-      "item_id": "further",
-      "word": "further"
+      "item_id": "constrain",
+      "word": "constrain"
     },
     {
-      "item_id": "future",
-      "word": "future"
+      "item_id": "underlie",
+      "word": "underlie"
     },
     {
-      "item_id": "gain",
-      "word": "gain"
+      "item_id": "append",
+      "word": "append"
     },
     {
-      "item_id": "galaxy",
-      "word": "galaxy"
+      "item_id": "immigrate",
+      "word": "immigrate"
     },
     {
-      "item_id": "game",
-      "word": "game"
-    },
-    {
-      "item_id": "gap",
-      "word": "gap"
-    },
-    {
-      "item_id": "garage",
-      "word": "garage"
-    },
-    {
-      "item_id": "garden",
-      "word": "garden"
-    },
-    {
-      "item_id": "gas",
-      "word": "gas"
-    },
-    {
-      "item_id": "gate",
-      "word": "gate"
-    },
-    {
-      "item_id": "gather",
-      "word": "gather"
-    },
-    {
-      "item_id": "gay",
-      "word": "gay"
-    },
-    {
-      "item_id": "gaze",
-      "word": "gaze"
-    },
-    {
-      "item_id": "gear",
-      "word": "gear"
-    },
-    {
-      "item_id": "gene",
-      "word": "gene"
-    },
-    {
-      "item_id": "general",
-      "word": "general"
-    },
-    {
-      "item_id": "generally",
-      "word": "generally"
-    },
-    {
-      "item_id": "genetic",
-      "word": "genetic"
-    },
-    {
-      "item_id": "gentleman",
-      "word": "gentleman"
-    },
-    {
-      "item_id": "gently",
-      "word": "gently"
-    },
-    {
-      "item_id": "genuine",
-      "word": "genuine"
-    },
-    {
-      "item_id": "geography",
-      "word": "geography"
-    },
-    {
-      "item_id": "gesture",
-      "word": "gesture"
-    },
-    {
-      "item_id": "get",
-      "word": "get"
-    },
-    {
-      "item_id": "giant",
-      "word": "giant"
-    },
-    {
-      "item_id": "gift",
-      "word": "gift"
-    },
-    {
-      "item_id": "girl",
-      "word": "girl"
-    },
-    {
-      "item_id": "girlfriend",
-      "word": "girlfriend"
-    },
-    {
-      "item_id": "give",
-      "word": "give"
-    },
-    {
-      "item_id": "glad",
-      "word": "glad"
-    },
-    {
-      "item_id": "glance",
-      "word": "glance"
-    },
-    {
-      "item_id": "glass",
-      "word": "glass"
-    },
-    {
-      "item_id": "global",
-      "word": "global"
-    },
-    {
-      "item_id": "glove",
-      "word": "glove"
-    },
-    {
-      "item_id": "go",
-      "word": "go"
-    },
-    {
-      "item_id": "god",
-      "word": "god"
-    },
-    {
-      "item_id": "gold",
-      "word": "gold"
-    },
-    {
-      "item_id": "golden",
-      "word": "golden"
-    },
-    {
-      "item_id": "golf",
-      "word": "golf"
-    },
-    {
-      "item_id": "good",
-      "word": "good"
-    },
-    {
-      "item_id": "government",
-      "word": "government"
-    },
-    {
-      "item_id": "governor",
-      "word": "governor"
-    },
-    {
-      "item_id": "grab",
-      "word": "grab"
-    },
-    {
-      "item_id": "gradually",
-      "word": "gradually"
-    },
-    {
-      "item_id": "graduate",
-      "word": "graduate"
-    },
-    {
-      "item_id": "grain",
-      "word": "grain"
-    },
-    {
-      "item_id": "grand",
-      "word": "grand"
-    },
-    {
-      "item_id": "grandfather",
-      "word": "grandfather"
-    },
-    {
-      "item_id": "grandmother",
-      "word": "grandmother"
-    },
-    {
-      "item_id": "grass",
-      "word": "grass"
-    },
-    {
-      "item_id": "grave",
-      "word": "grave"
-    },
-    {
-      "item_id": "gravity",
-      "word": "gravity"
-    },
-    {
-      "item_id": "great",
-      "word": "great"
-    },
-    {
-      "item_id": "greatly",
-      "word": "greatly"
-    },
-    {
-      "item_id": "green",
-      "word": "green"
-    },
-    {
-      "item_id": "grocery",
-      "word": "grocery"
-    },
-    {
-      "item_id": "ground",
-      "word": "ground"
-    },
-    {
-      "item_id": "group",
-      "word": "group"
-    },
-    {
-      "item_id": "grow",
-      "word": "grow"
-    },
-    {
-      "item_id": "growth",
-      "word": "growth"
-    },
-    {
-      "item_id": "guard",
-      "word": "guard"
-    },
-    {
-      "item_id": "guess",
-      "word": "guess"
-    },
-    {
-      "item_id": "guest",
-      "word": "guest"
-    },
-    {
-      "item_id": "guide",
-      "word": "guide"
-    },
-    {
-      "item_id": "guilty",
-      "word": "guilty"
-    },
-    {
-      "item_id": "gun",
-      "word": "gun"
-    },
-    {
-      "item_id": "guy",
-      "word": "guy"
-    },
-    {
-      "item_id": "habit",
-      "word": "habit"
-    },
-    {
-      "item_id": "hair",
-      "word": "hair"
-    },
-    {
-      "item_id": "half",
-      "word": "half"
-    },
-    {
-      "item_id": "hall",
-      "word": "hall"
-    },
-    {
-      "item_id": "hand",
-      "word": "hand"
-    },
-    {
-      "item_id": "handle",
-      "word": "handle"
-    },
-    {
-      "item_id": "hang",
-      "word": "hang"
-    },
-    {
-      "item_id": "happen",
-      "word": "happen"
-    },
-    {
-      "item_id": "happy",
-      "word": "happy"
-    },
-    {
-      "item_id": "hard",
-      "word": "hard"
+      "item_id": "administrate",
+      "word": "administrate"
     }
   ]
 }

@@ -20,6 +20,11 @@
 
   function packWordBase(packId) {
     var id = String(packId || "");
+    var ielts = id.match(/^ielts(\d{2})$/);
+    if (ielts) {
+      var p = parseInt(ielts[1], 10);
+      if (isFinite(p) && p >= 1) return (p - 1) * 100 + 1;
+    }
     var m = id.match(/(\d+)\s*$/);
     if (!m) return 1;
     var n = parseInt(m[1], 10);

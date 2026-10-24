@@ -4,404 +4,404 @@
   "seconds_per_letter": 5,
   "items": [
     {
-      "item_id": "abstract",
-      "word": "abstract"
+      "item_id": "conference",
+      "word": "conference"
     },
     {
-      "item_id": "accurate",
-      "word": "accurate"
+      "item_id": "difference",
+      "word": "difference"
     },
     {
-      "item_id": "acknowledge",
-      "word": "acknowledge"
+      "item_id": "double",
+      "word": "double"
     },
     {
-      "item_id": "aggregate",
-      "word": "aggregate"
+      "item_id": "expect",
+      "word": "expect"
     },
     {
-      "item_id": "allocate",
-      "word": "allocate"
+      "item_id": "gas",
+      "word": "gas"
     },
     {
-      "item_id": "assign",
-      "word": "assign"
+      "item_id": "normal",
+      "word": "normal"
     },
     {
-      "item_id": "attach",
-      "word": "attach"
+      "item_id": "potential",
+      "word": "potential"
+    },
+    {
+      "item_id": "text",
+      "word": "text"
+    },
+    {
+      "item_id": "campaign",
+      "word": "campaign"
+    },
+    {
+      "item_id": "content",
+      "word": "content"
+    },
+    {
+      "item_id": "credit",
+      "word": "credit"
+    },
+    {
+      "item_id": "cross",
+      "word": "cross"
+    },
+    {
+      "item_id": "despite",
+      "word": "despite"
+    },
+    {
+      "item_id": "female",
+      "word": "female"
+    },
+    {
+      "item_id": "focus",
+      "word": "focus"
+    },
+    {
+      "item_id": "individual",
+      "word": "individual"
+    },
+    {
+      "item_id": "previous",
+      "word": "previous"
+    },
+    {
+      "item_id": "region",
+      "word": "region"
+    },
+    {
+      "item_id": "section",
+      "word": "section"
+    },
+    {
+      "item_id": "consider",
+      "word": "consider"
+    },
+    {
+      "item_id": "contact",
+      "word": "contact"
+    },
+    {
+      "item_id": "drop",
+      "word": "drop"
+    },
+    {
+      "item_id": "fair",
+      "word": "fair"
+    },
+    {
+      "item_id": "link",
+      "word": "link"
+    },
+    {
+      "item_id": "positive",
+      "word": "positive"
+    },
+    {
+      "item_id": "beyond",
+      "word": "beyond"
+    },
+    {
+      "item_id": "extra",
+      "word": "extra"
+    },
+    {
+      "item_id": "significant",
+      "word": "significant"
+    },
+    {
+      "item_id": "agree",
+      "word": "agree"
+    },
+    {
+      "item_id": "clean",
+      "word": "clean"
+    },
+    {
+      "item_id": "computer",
+      "word": "computer"
+    },
+    {
+      "item_id": "construction",
+      "word": "construction"
+    },
+    {
+      "item_id": "episode",
+      "word": "episode"
+    },
+    {
+      "item_id": "income",
+      "word": "income"
+    },
+    {
+      "item_id": "ability",
+      "word": "ability"
+    },
+    {
+      "item_id": "coach",
+      "word": "coach"
+    },
+    {
+      "item_id": "collection",
+      "word": "collection"
+    },
+    {
+      "item_id": "definitely",
+      "word": "definitely"
+    },
+    {
+      "item_id": "gun",
+      "word": "gun"
     },
     {
       "item_id": "author",
       "word": "author"
     },
     {
-      "item_id": "bond",
-      "word": "bond"
+      "item_id": "claim",
+      "word": "claim"
     },
     {
-      "item_id": "brief",
-      "word": "brief"
+      "item_id": "dad",
+      "word": "dad"
     },
     {
-      "item_id": "capable",
-      "word": "capable"
+      "item_id": "fear",
+      "word": "fear"
     },
     {
-      "item_id": "cite",
-      "word": "cite"
+      "item_id": "fit",
+      "word": "fit"
     },
     {
-      "item_id": "cooperate",
-      "word": "cooperate"
+      "item_id": "generally",
+      "word": "generally"
     },
     {
-      "item_id": "discriminate",
-      "word": "discriminate"
+      "item_id": "global",
+      "word": "global"
     },
     {
-      "item_id": "display",
-      "word": "display"
+      "item_id": "plus",
+      "word": "plus"
     },
     {
-      "item_id": "diverse",
-      "word": "diverse"
+      "item_id": "annual",
+      "word": "annual"
     },
     {
-      "item_id": "domain",
-      "word": "domain"
+      "item_id": "anymore",
+      "word": "anymore"
     },
     {
-      "item_id": "edit",
-      "word": "edit"
+      "item_id": "bar",
+      "word": "bar"
     },
     {
-      "item_id": "enhance",
-      "word": "enhance"
+      "item_id": "battle",
+      "word": "battle"
     },
     {
-      "item_id": "estate",
-      "word": "estate"
+      "item_id": "brain",
+      "word": "brain"
     },
     {
-      "item_id": "exceed",
-      "word": "exceed"
+      "item_id": "contract",
+      "word": "contract"
     },
     {
-      "item_id": "expert",
-      "word": "expert"
+      "item_id": "degree",
+      "word": "degree"
     },
     {
-      "item_id": "explicit",
-      "word": "explicit"
+      "item_id": "floor",
+      "word": "floor"
     },
     {
-      "item_id": "federal",
-      "word": "federal"
+      "item_id": "image",
+      "word": "image"
     },
     {
-      "item_id": "fee",
-      "word": "fee"
+      "item_id": "physical",
+      "word": "physical"
     },
     {
-      "item_id": "flexible",
-      "word": "flexible"
+      "item_id": "active",
+      "word": "active"
     },
     {
-      "item_id": "furthermore",
-      "word": "furthermore"
+      "item_id": "administration",
+      "word": "administration"
     },
     {
-      "item_id": "gender",
-      "word": "gender"
+      "item_id": "approach",
+      "word": "approach"
     },
     {
-      "item_id": "ignorant",
-      "word": "ignorant"
+      "item_id": "cancer",
+      "word": "cancer"
     },
     {
-      "item_id": "incentive",
-      "word": "incentive"
+      "item_id": "civil",
+      "word": "civil"
     },
     {
-      "item_id": "incidence",
-      "word": "incidence"
+      "item_id": "dance",
+      "word": "dance"
     },
     {
-      "item_id": "incorporate",
-      "word": "incorporate"
+      "item_id": "defense",
+      "word": "defense"
     },
     {
-      "item_id": "index",
-      "word": "index"
+      "item_id": "direction",
+      "word": "direction"
     },
     {
-      "item_id": "inhibit",
-      "word": "inhibit"
+      "item_id": "band",
+      "word": "band"
     },
     {
-      "item_id": "initiate",
-      "word": "initiate"
+      "item_id": "beach",
+      "word": "beach"
     },
     {
-      "item_id": "input",
-      "word": "input"
+      "item_id": "cash",
+      "word": "cash"
     },
     {
-      "item_id": "instruct",
-      "word": "instruct"
+      "item_id": "clearly",
+      "word": "clearly"
     },
     {
-      "item_id": "intelligent",
-      "word": "intelligent"
+      "item_id": "commercial",
+      "word": "commercial"
     },
     {
-      "item_id": "interval",
-      "word": "interval"
+      "item_id": "effort",
+      "word": "effort"
     },
     {
-      "item_id": "lecture",
-      "word": "lecture"
+      "item_id": "fan",
+      "word": "fan"
     },
     {
-      "item_id": "migrate",
-      "word": "migrate"
+      "item_id": "impact",
+      "word": "impact"
     },
     {
-      "item_id": "minimum",
-      "word": "minimum"
+      "item_id": "address",
+      "word": "address"
     },
     {
-      "item_id": "ministry",
-      "word": "ministry"
+      "item_id": "anyway",
+      "word": "anyway"
     },
     {
-      "item_id": "motive",
-      "word": "motive"
+      "item_id": "choose",
+      "word": "choose"
     },
     {
-      "item_id": "neutral",
-      "word": "neutral"
+      "item_id": "commission",
+      "word": "commission"
     },
     {
-      "item_id": "nevertheless",
-      "word": "nevertheless"
+      "item_id": "competition",
+      "word": "competition"
     },
     {
-      "item_id": "overseas",
-      "word": "overseas"
+      "item_id": "direct",
+      "word": "direct"
     },
     {
-      "item_id": "precede",
-      "word": "precede"
+      "item_id": "dream",
+      "word": "dream"
     },
     {
-      "item_id": "presume",
-      "word": "presume"
+      "item_id": "easily",
+      "word": "easily"
     },
     {
-      "item_id": "rational",
-      "word": "rational"
+      "item_id": "finish",
+      "word": "finish"
     },
     {
-      "item_id": "recover",
-      "word": "recover"
+      "item_id": "grand",
+      "word": "grand"
     },
     {
-      "item_id": "reveal",
-      "word": "reveal"
+      "item_id": "damage",
+      "word": "damage"
     },
     {
-      "item_id": "scope",
-      "word": "scope"
+      "item_id": "directly",
+      "word": "directly"
     },
     {
-      "item_id": "subsidy",
-      "word": "subsidy"
+      "item_id": "disease",
+      "word": "disease"
     },
     {
-      "item_id": "tape",
-      "word": "tape"
+      "item_id": "doctor",
+      "word": "doctor"
     },
     {
-      "item_id": "trace",
-      "word": "trace"
+      "item_id": "doubt",
+      "word": "doubt"
     },
     {
-      "item_id": "transform",
-      "word": "transform"
+      "item_id": "drink",
+      "word": "drink"
     },
     {
-      "item_id": "transport",
-      "word": "transport"
+      "item_id": "fish",
+      "word": "fish"
     },
     {
-      "item_id": "underlie",
-      "word": "underlie"
+      "item_id": "gay",
+      "word": "gay"
     },
     {
-      "item_id": "utilise",
-      "word": "utilise"
+      "item_id": "glad",
+      "word": "glad"
     },
     {
-      "item_id": "adapt",
-      "word": "adapt"
+      "item_id": "grow",
+      "word": "grow"
     },
     {
-      "item_id": "adult",
-      "word": "adult"
+      "item_id": "overall",
+      "word": "overall"
     },
     {
-      "item_id": "advocate",
-      "word": "advocate"
+      "item_id": "basic",
+      "word": "basic"
     },
     {
-      "item_id": "aid",
-      "word": "aid"
+      "item_id": "captain",
+      "word": "captain"
     },
     {
-      "item_id": "channel",
-      "word": "channel"
+      "item_id": "carry",
+      "word": "carry"
     },
     {
-      "item_id": "chemical",
-      "word": "chemical"
+      "item_id": "crime",
+      "word": "crime"
     },
     {
-      "item_id": "classic",
-      "word": "classic"
+      "item_id": "effective",
+      "word": "effective"
     },
     {
-      "item_id": "comprehensive",
-      "word": "comprehensive"
-    },
-    {
-      "item_id": "comprise",
-      "word": "comprise"
-    },
-    {
-      "item_id": "confirm",
-      "word": "confirm"
-    },
-    {
-      "item_id": "contrary",
-      "word": "contrary"
-    },
-    {
-      "item_id": "convert",
-      "word": "convert"
-    },
-    {
-      "item_id": "couple",
-      "word": "couple"
-    },
-    {
-      "item_id": "decade",
-      "word": "decade"
-    },
-    {
-      "item_id": "definite",
-      "word": "definite"
-    },
-    {
-      "item_id": "deny",
-      "word": "deny"
-    },
-    {
-      "item_id": "differentiate",
-      "word": "differentiate"
-    },
-    {
-      "item_id": "dispose",
-      "word": "dispose"
-    },
-    {
-      "item_id": "dynamic",
-      "word": "dynamic"
-    },
-    {
-      "item_id": "eliminate",
-      "word": "eliminate"
-    },
-    {
-      "item_id": "empirical",
-      "word": "empirical"
-    },
-    {
-      "item_id": "equip",
-      "word": "equip"
-    },
-    {
-      "item_id": "extract",
-      "word": "extract"
-    },
-    {
-      "item_id": "file",
-      "word": "file"
-    },
-    {
-      "item_id": "finite",
-      "word": "finite"
-    },
-    {
-      "item_id": "foundation",
-      "word": "foundation"
-    },
-    {
-      "item_id": "globe",
-      "word": "globe"
-    },
-    {
-      "item_id": "grade",
-      "word": "grade"
-    },
-    {
-      "item_id": "guarantee",
-      "word": "guarantee"
-    },
-    {
-      "item_id": "hierarchy",
-      "word": "hierarchy"
-    },
-    {
-      "item_id": "identical",
-      "word": "identical"
-    },
-    {
-      "item_id": "ideology",
-      "word": "ideology"
-    },
-    {
-      "item_id": "infer",
-      "word": "infer"
-    },
-    {
-      "item_id": "innovate",
-      "word": "innovate"
-    },
-    {
-      "item_id": "insert",
-      "word": "insert"
-    },
-    {
-      "item_id": "intervene",
-      "word": "intervene"
-    },
-    {
-      "item_id": "isolate",
-      "word": "isolate"
-    },
-    {
-      "item_id": "media",
-      "word": "media"
-    },
-    {
-      "item_id": "mode",
-      "word": "mode"
-    },
-    {
-      "item_id": "paradigm",
-      "word": "paradigm"
+      "item_id": "explain",
+      "word": "explain"
     }
   ]
 }

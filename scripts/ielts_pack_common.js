@@ -353,6 +353,8 @@ module.exports = {
   loadOverrides,
   resolveWord,
   buildPackJson,
+  buildGames,
+  installLetters,
   writePack,
   writeManifest,
   pictureGaps,
