@@ -5,1004 +5,1004 @@
   "seconds": 15,
   "items": [
     {
-      "item_id": "potential",
-      "question": "possible to become something",
-      "correct": "potential",
+      "item_id": "almost",
+      "question": "very nearly but not quite",
+      "correct": "almost",
       "wrong": [
-        "previous",
-        "primary"
+        "research",
+        "along"
       ],
-      "word": "potential"
+      "word": "almost"
     },
     {
-      "item_id": "previous",
-      "question": "happening or coming before",
-      "correct": "previous",
+      "item_id": "research",
+      "question": "careful study to find facts",
+      "correct": "research",
       "wrong": [
-        "primary",
-        "purchase"
+        "along",
+        "anyone"
       ],
-      "word": "previous"
+      "word": "research"
     },
     {
-      "item_id": "primary",
-      "question": "most important or main",
-      "correct": "primary",
+      "item_id": "along",
+      "question": "moving forward beside something",
+      "correct": "along",
       "wrong": [
-        "purchase",
-        "range"
+        "anyone",
+        "else"
       ],
-      "word": "primary"
+      "word": "along"
     },
     {
-      "item_id": "purchase",
-      "question": "something you have bought",
-      "correct": "purchase",
+      "item_id": "anyone",
+      "question": "any person at all",
+      "correct": "anyone",
       "wrong": [
-        "range",
-        "region"
+        "else",
+        "girl"
       ],
-      "word": "purchase"
+      "word": "anyone"
     },
     {
-      "item_id": "range",
-      "question": "area from one place to another",
-      "correct": "range",
+      "item_id": "else",
+      "question": "in a different way",
+      "correct": "else",
       "wrong": [
-        "region",
-        "regulate"
+        "girl",
+        "air"
       ],
-      "word": "range"
+      "word": "else"
     },
     {
-      "item_id": "region",
-      "question": "a part of a country",
-      "correct": "region",
+      "item_id": "girl",
+      "question": "a young female child",
+      "correct": "girl",
       "wrong": [
-        "regulate",
-        "relevant"
+        "air",
+        "bit"
       ],
-      "word": "region"
+      "word": "girl"
     },
     {
-      "item_id": "regulate",
-      "question": "keep at the right level",
-      "correct": "regulate",
+      "item_id": "air",
+      "question": "what we breathe",
+      "correct": "air",
       "wrong": [
-        "relevant",
-        "reside"
+        "bit",
+        "friend"
       ],
-      "word": "regulate"
+      "word": "air"
     },
     {
-      "item_id": "relevant",
-      "question": "connected to the topic",
-      "correct": "relevant",
+      "item_id": "bit",
+      "question": "a very small piece of something",
+      "correct": "bit",
       "wrong": [
-        "reside",
-        "resource"
+        "friend",
+        "class"
       ],
-      "word": "relevant"
+      "word": "bit"
     },
     {
-      "item_id": "reside",
-      "question": "live in a place",
-      "correct": "reside",
+      "item_id": "friend",
+      "question": "person you like and trust",
+      "correct": "friend",
       "wrong": [
-        "resource",
-        "restrict"
+        "class",
+        "close"
       ],
-      "word": "reside"
+      "word": "friend"
     },
     {
-      "item_id": "resource",
-      "question": "useful thing or supply",
-      "correct": "resource",
+      "item_id": "class",
+      "question": "a group learning together",
+      "correct": "class",
       "wrong": [
-        "restrict",
-        "secure"
+        "close",
+        "cause"
       ],
-      "word": "resource"
+      "word": "class"
     },
     {
-      "item_id": "restrict",
-      "question": "to limit or control something",
-      "correct": "restrict",
+      "item_id": "close",
+      "question": "near in distance",
+      "correct": "close",
       "wrong": [
-        "secure",
-        "seek"
+        "cause",
+        "due"
       ],
-      "word": "restrict"
+      "word": "close"
     },
     {
-      "item_id": "secure",
-      "question": "safe and well protected",
-      "correct": "secure",
+      "item_id": "cause",
+      "question": "a thing that makes something happen",
+      "correct": "cause",
       "wrong": [
-        "seek",
-        "select"
+        "due",
+        "happy"
       ],
-      "word": "secure"
+      "word": "cause"
     },
     {
-      "item_id": "seek",
-      "question": "look for something or someone",
-      "correct": "seek",
+      "item_id": "due",
+      "question": "expected to happen at a certain time",
+      "correct": "due",
       "wrong": [
-        "select",
-        "site"
+        "happy",
+        "series"
       ],
-      "word": "seek"
+      "word": "due"
     },
     {
-      "item_id": "select",
-      "question": "specially chosen as best",
-      "correct": "select",
+      "item_id": "happy",
+      "question": "feeling very glad inside",
+      "correct": "happy",
       "wrong": [
-        "site",
-        "strategy"
+        "series",
+        "ask"
       ],
-      "word": "select"
+      "word": "happy"
     },
     {
-      "item_id": "site",
-      "question": "a place for building",
-      "correct": "site",
+      "item_id": "series",
+      "question": "a group of similar things",
+      "correct": "series",
       "wrong": [
-        "strategy",
-        "survey"
+        "ask",
+        "community"
       ],
-      "word": "site"
+      "word": "series"
     },
     {
-      "item_id": "strategy",
-      "question": "a plan to win",
-      "correct": "strategy",
+      "item_id": "ask",
+      "question": "to say a question out loud",
+      "correct": "ask",
       "wrong": [
-        "survey",
-        "text"
+        "community",
+        "data"
       ],
-      "word": "strategy"
+      "word": "ask"
     },
     {
-      "item_id": "survey",
-      "question": "questions to collect answers",
-      "correct": "survey",
+      "item_id": "community",
+      "question": "group of people living together",
+      "correct": "community",
       "wrong": [
-        "text",
-        "tradition"
+        "data",
+        "either"
       ],
-      "word": "survey"
+      "word": "community"
     },
     {
-      "item_id": "text",
-      "question": "a written message",
-      "correct": "text",
+      "item_id": "data",
+      "question": "information or facts",
+      "correct": "data",
       "wrong": [
-        "tradition",
-        "transfer"
+        "either",
+        "future"
       ],
-      "word": "text"
+      "word": "data"
     },
     {
-      "item_id": "tradition",
-      "question": "old custom passed down",
-      "correct": "tradition",
+      "item_id": "either",
+      "question": "also or as well",
+      "correct": "either",
       "wrong": [
-        "transfer",
-        "alternative"
+        "future",
+        "age"
       ],
-      "word": "tradition"
+      "word": "either"
     },
     {
-      "item_id": "transfer",
-      "question": "moving to another place",
-      "correct": "transfer",
+      "item_id": "future",
+      "question": "happening after now",
+      "correct": "future",
       "wrong": [
-        "alternative",
-        "circumstance"
+        "age",
+        "buy"
       ],
-      "word": "transfer"
+      "word": "future"
     },
     {
-      "item_id": "alternative",
-      "question": "another choice or different option",
-      "correct": "alternative",
+      "item_id": "age",
+      "question": "how old someone is",
+      "correct": "age",
       "wrong": [
-        "circumstance",
-        "comment"
+        "buy",
+        "deal"
       ],
-      "word": "alternative"
+      "word": "age"
     },
     {
-      "item_id": "circumstance",
-      "question": "the conditions around an event",
-      "correct": "circumstance",
+      "item_id": "buy",
+      "question": "to give money for something",
+      "correct": "buy",
       "wrong": [
-        "comment",
-        "compensate"
+        "deal",
+        "among"
       ],
-      "word": "circumstance"
+      "word": "buy"
     },
     {
-      "item_id": "comment",
-      "question": "words someone says or writes about something",
-      "correct": "comment",
+      "item_id": "deal",
+      "question": "an agreement to trade",
+      "correct": "deal",
       "wrong": [
-        "compensate",
-        "component"
+        "among",
+        "check"
       ],
-      "word": "comment"
+      "word": "deal"
     },
     {
-      "item_id": "compensate",
-      "question": "make up for something",
-      "correct": "compensate",
+      "item_id": "among",
+      "question": "in the middle of a group",
+      "correct": "among",
       "wrong": [
-        "component",
-        "consent"
+        "check",
+        "development"
       ],
-      "word": "compensate"
+      "word": "among"
     },
     {
-      "item_id": "component",
-      "question": "one piece of something",
-      "correct": "component",
+      "item_id": "check",
+      "question": "a careful look to confirm",
+      "correct": "check",
       "wrong": [
-        "consent",
-        "considerable"
+        "development",
+        "form"
       ],
-      "word": "component"
+      "word": "check"
     },
     {
-      "item_id": "consent",
-      "question": "saying yes to something",
-      "correct": "consent",
+      "item_id": "development",
+      "question": "the process of growing bigger",
+      "correct": "development",
       "wrong": [
-        "considerable",
-        "constant"
+        "form",
+        "further"
       ],
-      "word": "consent"
+      "word": "development"
     },
     {
-      "item_id": "considerable",
-      "question": "quite large or important",
-      "correct": "considerable",
+      "item_id": "form",
+      "question": "a paper with questions",
+      "correct": "form",
       "wrong": [
-        "constant",
-        "constrain"
+        "further",
+        "act"
       ],
-      "word": "considerable"
+      "word": "form"
     },
     {
-      "item_id": "constant",
-      "question": "happens again and again",
-      "correct": "constant",
+      "item_id": "further",
+      "question": "to a greater distance",
+      "correct": "further",
       "wrong": [
-        "constrain",
-        "contribute"
+        "act",
+        "child"
       ],
-      "word": "constant"
+      "word": "further"
     },
     {
-      "item_id": "constrain",
-      "question": "limit or restrict",
-      "correct": "constrain",
+      "item_id": "act",
+      "question": "something someone does on purpose",
+      "correct": "act",
       "wrong": [
-        "contribute",
-        "convene"
+        "child",
+        "fire"
       ],
-      "word": "constrain"
+      "word": "act"
     },
     {
-      "item_id": "contribute",
-      "question": "to give help or money",
-      "correct": "contribute",
+      "item_id": "child",
+      "question": "a young boy or girl",
+      "correct": "child",
       "wrong": [
-        "convene",
-        "coordinate"
+        "fire",
+        "fun"
       ],
-      "word": "contribute"
+      "word": "child"
     },
     {
-      "item_id": "convene",
-      "question": "call people to meet",
-      "correct": "convene",
+      "item_id": "fire",
+      "question": "hot bright flames",
+      "correct": "fire",
       "wrong": [
-        "coordinate",
-        "core"
+        "fun",
+        "major"
       ],
-      "word": "convene"
+      "word": "fire"
     },
     {
-      "item_id": "coordinate",
-      "question": "make things work together",
-      "correct": "coordinate",
+      "item_id": "fun",
+      "question": "enjoyable and making you happy",
+      "correct": "fun",
       "wrong": [
-        "core",
-        "corporate"
+        "major",
+        "media"
       ],
-      "word": "coordinate"
+      "word": "fun"
     },
     {
-      "item_id": "core",
-      "question": "the center of something",
-      "correct": "core",
+      "item_id": "major",
+      "question": "very important or big",
+      "correct": "major",
       "wrong": [
-        "corporate",
-        "correspond"
+        "media",
+        "art"
       ],
-      "word": "core"
+      "word": "major"
     },
     {
-      "item_id": "corporate",
-      "question": "of a big company",
-      "correct": "corporate",
+      "item_id": "media",
+      "question": "ways to share news",
+      "correct": "media",
       "wrong": [
-        "correspond",
-        "criteria"
+        "art",
+        "behind"
       ],
-      "word": "corporate"
+      "word": "media"
     },
     {
-      "item_id": "correspond",
-      "question": "match and be the same",
-      "correct": "correspond",
+      "item_id": "art",
+      "question": "pictures made by artists",
+      "correct": "art",
       "wrong": [
-        "criteria",
-        "deduce"
+        "behind",
+        "building"
       ],
-      "word": "correspond"
+      "word": "art"
     },
     {
-      "item_id": "criteria",
-      "question": "standards for judging",
-      "correct": "criteria",
+      "item_id": "behind",
+      "question": "at the back of something",
+      "correct": "behind",
       "wrong": [
-        "deduce",
-        "demonstrate"
+        "building",
+        "easy"
       ],
-      "word": "criteria"
+      "word": "behind"
     },
     {
-      "item_id": "deduce",
-      "question": "infer from evidence",
-      "correct": "deduce",
+      "item_id": "building",
+      "question": "big place with walls and roof",
+      "correct": "building",
       "wrong": [
-        "demonstrate",
-        "document"
+        "easy",
+        "available"
       ],
-      "word": "deduce"
+      "word": "building"
     },
     {
-      "item_id": "demonstrate",
-      "question": "show how something works",
-      "correct": "demonstrate",
+      "item_id": "easy",
+      "question": "not hard to do",
+      "correct": "easy",
       "wrong": [
-        "document",
-        "dominate"
+        "available",
+        "education"
       ],
-      "word": "demonstrate"
+      "word": "easy"
     },
     {
-      "item_id": "document",
-      "question": "a piece of paper with writing",
-      "correct": "document",
+      "item_id": "available",
+      "question": "ready to be used",
+      "correct": "available",
       "wrong": [
-        "dominate",
-        "emphasis"
+        "education",
+        "final"
       ],
-      "word": "document"
+      "word": "available"
     },
     {
-      "item_id": "dominate",
-      "question": "to control or rule over",
-      "correct": "dominate",
+      "item_id": "education",
+      "question": "learning in school or at home",
+      "correct": "education",
       "wrong": [
-        "emphasis",
-        "ensure"
+        "final",
+        "former"
       ],
-      "word": "dominate"
+      "word": "education"
     },
     {
-      "item_id": "emphasis",
-      "question": "special stress on something",
-      "correct": "emphasis",
+      "item_id": "final",
+      "question": "last or coming at the end",
+      "correct": "final",
       "wrong": [
-        "ensure",
-        "exclude"
+        "former",
+        "front"
       ],
-      "word": "emphasis"
+      "word": "final"
     },
     {
-      "item_id": "ensure",
-      "question": "make sure something happens",
-      "correct": "ensure",
+      "item_id": "former",
+      "question": "from an earlier time",
+      "correct": "former",
       "wrong": [
-        "exclude",
-        "framework"
+        "front",
+        "bring"
       ],
-      "word": "ensure"
+      "word": "former"
     },
     {
-      "item_id": "exclude",
-      "question": "leave someone or something out",
-      "correct": "exclude",
+      "item_id": "front",
+      "question": "the forward-facing side",
+      "correct": "front",
       "wrong": [
-        "framework",
-        "fund"
+        "bring",
+        "college"
       ],
-      "word": "exclude"
+      "word": "front"
     },
     {
-      "item_id": "framework",
-      "question": "structure that holds things",
-      "correct": "framework",
+      "item_id": "bring",
+      "question": "to carry something here",
+      "correct": "bring",
       "wrong": [
-        "fund",
-        "illustrate"
+        "college",
+        "current"
       ],
-      "word": "framework"
+      "word": "bring"
     },
     {
-      "item_id": "fund",
-      "question": "money saved for a purpose",
-      "correct": "fund",
+      "item_id": "college",
+      "question": "school after high school",
+      "correct": "college",
       "wrong": [
-        "illustrate",
-        "immigrate"
+        "current",
+        "example"
       ],
-      "word": "fund"
+      "word": "college"
     },
     {
-      "item_id": "illustrate",
-      "question": "draw pictures to explain something",
-      "correct": "illustrate",
+      "item_id": "current",
+      "question": "happening right now",
+      "correct": "current",
       "wrong": [
-        "immigrate",
-        "imply"
+        "example",
+        "experience"
       ],
-      "word": "illustrate"
+      "word": "current"
     },
     {
-      "item_id": "immigrate",
-      "question": "move to live abroad",
-      "correct": "immigrate",
+      "item_id": "example",
+      "question": "a thing that shows an idea",
+      "correct": "example",
       "wrong": [
-        "imply",
-        "initial"
+        "experience",
+        "baby"
       ],
-      "word": "immigrate"
+      "word": "example"
     },
     {
-      "item_id": "imply",
-      "question": "to suggest something without saying it",
-      "correct": "imply",
+      "item_id": "experience",
+      "question": "something you learn by doing",
+      "correct": "experience",
       "wrong": [
-        "initial",
-        "instance"
+        "baby",
+        "chance"
       ],
-      "word": "imply"
+      "word": "experience"
     },
     {
-      "item_id": "initial",
-      "question": "at the very beginning",
-      "correct": "initial",
+      "item_id": "baby",
+      "question": "a very young child",
+      "correct": "baby",
       "wrong": [
-        "instance",
-        "interact"
+        "chance",
+        "father"
       ],
-      "word": "initial"
+      "word": "baby"
     },
     {
-      "item_id": "instance",
-      "question": "one clear example of something",
-      "correct": "instance",
+      "item_id": "chance",
+      "question": "a time when you can try something",
+      "correct": "chance",
       "wrong": [
-        "interact",
-        "justify"
+        "father",
+        "process"
       ],
-      "word": "instance"
+      "word": "chance"
     },
     {
-      "item_id": "interact",
-      "question": "act together or communicate",
-      "correct": "interact",
+      "item_id": "father",
+      "question": "a male parent",
+      "correct": "father",
       "wrong": [
-        "justify",
-        "layer"
+        "process",
+        "across"
       ],
-      "word": "interact"
+      "word": "father"
     },
     {
-      "item_id": "justify",
-      "question": "to show something is right",
-      "correct": "justify",
+      "item_id": "process",
+      "question": "a series of actions to do something",
+      "correct": "process",
       "wrong": [
-        "layer",
-        "link"
+        "across",
+        "action"
       ],
-      "word": "justify"
+      "word": "process"
     },
     {
-      "item_id": "layer",
-      "question": "one sheet on top",
-      "correct": "layer",
+      "item_id": "across",
+      "question": "from one side to the other",
+      "correct": "across",
       "wrong": [
-        "link",
-        "locate"
+        "action",
+        "clear"
       ],
-      "word": "layer"
+      "word": "across"
     },
     {
-      "item_id": "link",
-      "question": "a piece that connects things",
-      "correct": "link",
+      "item_id": "action",
+      "question": "something someone does",
+      "correct": "action",
       "wrong": [
-        "locate",
-        "maximise"
+        "clear",
+        "board"
       ],
-      "word": "link"
+      "word": "action"
     },
     {
-      "item_id": "locate",
-      "question": "find the place of",
-      "correct": "locate",
+      "item_id": "clear",
+      "question": "easy to see through",
+      "correct": "clear",
       "wrong": [
-        "maximise",
-        "minor"
+        "board",
+        "cost"
       ],
-      "word": "locate"
+      "word": "clear"
     },
     {
-      "item_id": "maximise",
-      "question": "increase to the greatest degree",
-      "correct": "maximise",
+      "item_id": "board",
+      "question": "a flat piece of wood",
+      "correct": "board",
       "wrong": [
-        "minor",
-        "negate"
+        "cost",
+        "cut"
       ],
-      "word": "maximise"
+      "word": "board"
     },
     {
-      "item_id": "minor",
-      "question": "small and not important",
-      "correct": "minor",
+      "item_id": "cost",
+      "question": "money you pay for something",
+      "correct": "cost",
       "wrong": [
-        "negate",
-        "outcome"
+        "cut",
+        "field"
       ],
-      "word": "minor"
+      "word": "cost"
     },
     {
-      "item_id": "negate",
-      "question": "make ineffective or deny",
-      "correct": "negate",
+      "item_id": "cut",
+      "question": "a small open mark on skin",
+      "correct": "cut",
       "wrong": [
-        "outcome",
-        "partner"
+        "field",
+        "department"
       ],
-      "word": "negate"
+      "word": "cut"
     },
     {
-      "item_id": "outcome",
-      "question": "the result at the end",
-      "correct": "outcome",
+      "item_id": "field",
+      "question": "a large open grassy area",
+      "correct": "field",
       "wrong": [
-        "partner",
-        "philosophy"
+        "department",
+        "energy"
       ],
-      "word": "outcome"
+      "word": "field"
     },
     {
-      "item_id": "partner",
-      "question": "a person who works with you",
-      "correct": "partner",
+      "item_id": "department",
+      "question": "a part of a big company",
+      "correct": "department",
       "wrong": [
-        "philosophy",
-        "physical"
+        "energy",
+        "fight"
       ],
-      "word": "partner"
+      "word": "department"
     },
     {
-      "item_id": "philosophy",
-      "question": "big ideas about life",
-      "correct": "philosophy",
+      "item_id": "energy",
+      "question": "power to move or work",
+      "correct": "energy",
       "wrong": [
-        "physical",
-        "proportion"
+        "fight",
+        "fine"
       ],
-      "word": "philosophy"
+      "word": "energy"
     },
     {
-      "item_id": "physical",
-      "question": "of the body, not the mind",
-      "correct": "physical",
+      "item_id": "fight",
+      "question": "a struggle between people",
+      "correct": "fight",
       "wrong": [
-        "proportion",
-        "publish"
+        "fine",
+        "force"
       ],
-      "word": "physical"
+      "word": "fight"
     },
     {
-      "item_id": "proportion",
-      "question": "how much of a whole",
-      "correct": "proportion",
+      "item_id": "fine",
+      "question": "very good or nice",
+      "correct": "fine",
       "wrong": [
-        "publish",
-        "react"
+        "force",
+        "issue"
       ],
-      "word": "proportion"
+      "word": "fine"
     },
     {
-      "item_id": "publish",
-      "question": "make a book or story ready for people to read",
-      "correct": "publish",
+      "item_id": "force",
+      "question": "power or strength used to move things",
+      "correct": "force",
       "wrong": [
-        "react",
-        "register"
+        "issue",
+        "beautiful"
       ],
-      "word": "publish"
+      "word": "force"
     },
     {
-      "item_id": "react",
-      "question": "respond to something",
-      "correct": "react",
+      "item_id": "issue",
+      "question": "a problem or difficulty",
+      "correct": "issue",
       "wrong": [
-        "register",
-        "rely"
+        "beautiful",
+        "date"
       ],
-      "word": "react"
+      "word": "issue"
     },
     {
-      "item_id": "register",
-      "question": "to put your name on a list",
-      "correct": "register",
+      "item_id": "beautiful",
+      "question": "very nice to look at",
+      "correct": "beautiful",
       "wrong": [
-        "rely",
-        "remove"
+        "date",
+        "project"
       ],
-      "word": "register"
+      "word": "beautiful"
     },
     {
-      "item_id": "rely",
-      "question": "trust someone to help",
-      "correct": "rely",
+      "item_id": "date",
+      "question": "a day on the calendar",
+      "correct": "date",
       "wrong": [
-        "remove",
-        "scheme"
-      ],
-      "word": "rely"
-    },
-    {
-      "item_id": "remove",
-      "question": "take something away from a place",
-      "correct": "remove",
-      "wrong": [
-        "scheme",
-        "sequence"
-      ],
-      "word": "remove"
-    },
-    {
-      "item_id": "scheme",
-      "question": "a plan or idea",
-      "correct": "scheme",
-      "wrong": [
-        "sequence",
+        "project",
         "sex"
       ],
-      "word": "scheme"
+      "word": "date"
     },
     {
-      "item_id": "sequence",
-      "question": "things in a row",
-      "correct": "sequence",
+      "item_id": "project",
+      "question": "a school task",
+      "correct": "project",
       "wrong": [
         "sex",
-        "shift"
+        "site"
       ],
-      "word": "sequence"
+      "word": "project"
     },
     {
       "item_id": "sex",
       "question": "male or female",
       "correct": "sex",
       "wrong": [
-        "shift",
-        "specify"
+        "site",
+        "account"
       ],
       "word": "sex"
     },
     {
-      "item_id": "shift",
-      "question": "set hours at work",
-      "correct": "shift",
+      "item_id": "site",
+      "question": "a place for building",
+      "correct": "site",
       "wrong": [
-        "specify",
-        "sufficient"
+        "account",
+        "especially"
       ],
-      "word": "shift"
+      "word": "site"
     },
     {
-      "item_id": "specify",
-      "question": "to say exactly what you want",
-      "correct": "specify",
+      "item_id": "account",
+      "question": "record of money",
+      "correct": "account",
       "wrong": [
-        "sufficient",
-        "task"
+        "especially",
+        "period"
       ],
-      "word": "specify"
+      "word": "account"
     },
     {
-      "item_id": "sufficient",
-      "question": "enough for the need",
-      "correct": "sufficient",
+      "item_id": "especially",
+      "question": "more than other things",
+      "correct": "especially",
       "wrong": [
-        "task",
-        "technical"
+        "period",
+        "similar"
       ],
-      "word": "sufficient"
+      "word": "especially"
     },
     {
-      "item_id": "task",
-      "question": "job you must finish",
-      "correct": "task",
+      "item_id": "period",
+      "question": "a length of time",
+      "correct": "period",
       "wrong": [
-        "technical",
-        "technique"
+        "similar",
+        "club"
       ],
-      "word": "task"
+      "word": "period"
     },
     {
-      "item_id": "technical",
-      "question": "about machines or science",
-      "correct": "technical",
+      "item_id": "similar",
+      "question": "almost the same",
+      "correct": "similar",
       "wrong": [
-        "technique",
-        "technology"
+        "club",
+        "common"
       ],
-      "word": "technical"
+      "word": "similar"
     },
     {
-      "item_id": "technique",
-      "question": "a way to do something",
-      "correct": "technique",
+      "item_id": "club",
+      "question": "long stick for hitting balls",
+      "correct": "club",
       "wrong": [
-        "technology",
-        "valid"
+        "common",
+        "film"
       ],
-      "word": "technique"
+      "word": "club"
     },
     {
-      "item_id": "technology",
-      "question": "machines and tools that help us",
-      "correct": "technology",
+      "item_id": "common",
+      "question": "seen very often",
+      "correct": "common",
       "wrong": [
-        "valid",
-        "volume"
+        "film",
+        "military"
       ],
-      "word": "technology"
+      "word": "common"
     },
     {
-      "item_id": "valid",
-      "question": "correct and acceptable",
-      "correct": "valid",
+      "item_id": "film",
+      "question": "a story shown on a screen",
+      "correct": "film",
       "wrong": [
-        "volume",
-        "access"
+        "military",
+        "center"
       ],
-      "word": "valid"
+      "word": "film"
     },
     {
-      "item_id": "volume",
-      "question": "how much space something fills",
-      "correct": "volume",
+      "item_id": "military",
+      "question": "related to the army",
+      "correct": "military",
       "wrong": [
-        "access",
-        "adequate"
+        "center",
+        "county"
       ],
-      "word": "volume"
+      "word": "military"
     },
     {
-      "item_id": "access",
-      "question": "the ability to enter a place",
-      "correct": "access",
+      "item_id": "center",
+      "question": "middle point",
+      "correct": "center",
       "wrong": [
-        "adequate",
-        "annual"
+        "county",
+        "couple"
       ],
-      "word": "access"
+      "word": "center"
     },
     {
-      "item_id": "adequate",
-      "question": "enough for the need",
-      "correct": "adequate",
+      "item_id": "county",
+      "question": "a region inside a state",
+      "correct": "county",
       "wrong": [
-        "annual",
-        "apparent"
+        "couple",
+        "dead"
       ],
-      "word": "adequate"
+      "word": "county"
     },
     {
-      "item_id": "annual",
-      "question": "happening once every year",
-      "correct": "annual",
+      "item_id": "couple",
+      "question": "two people who are married",
+      "correct": "couple",
       "wrong": [
-        "apparent",
-        "approximate"
+        "dead",
+        "happen"
       ],
-      "word": "annual"
+      "word": "couple"
     },
     {
-      "item_id": "apparent",
-      "question": "easy to see or know",
-      "correct": "apparent",
+      "item_id": "dead",
+      "question": "no longer living",
+      "correct": "dead",
       "wrong": [
-        "approximate",
-        "attitude"
+        "happen",
+        "break"
       ],
-      "word": "apparent"
+      "word": "dead"
     },
     {
-      "item_id": "approximate",
-      "question": "come close in amount",
-      "correct": "approximate",
+      "item_id": "happen",
+      "question": "take place or occur",
+      "correct": "happen",
       "wrong": [
-        "attitude",
-        "attribute"
+        "break",
+        "event"
       ],
-      "word": "approximate"
+      "word": "happen"
     },
     {
-      "item_id": "attitude",
-      "question": "how someone feels or acts",
-      "correct": "attitude",
+      "item_id": "break",
+      "question": "a short rest",
+      "correct": "break",
       "wrong": [
-        "attribute",
-        "civil"
+        "event",
+        "answer"
       ],
-      "word": "attitude"
+      "word": "break"
     },
     {
-      "item_id": "attribute",
-      "question": "say what caused it",
-      "correct": "attribute",
+      "item_id": "event",
+      "question": "special thing that happens",
+      "correct": "event",
       "wrong": [
-        "civil",
-        "code"
+        "answer",
+        "boy"
       ],
-      "word": "attribute"
+      "word": "event"
     },
     {
-      "item_id": "civil",
-      "question": "polite and respectful",
-      "correct": "civil",
+      "item_id": "answer",
+      "question": "reply to a question",
+      "correct": "answer",
       "wrong": [
-        "code",
-        "commit"
+        "boy",
+        "design"
       ],
-      "word": "civil"
+      "word": "answer"
     },
     {
-      "item_id": "code",
-      "question": "secret message or rules",
-      "correct": "code",
+      "item_id": "boy",
+      "question": "a young male child",
+      "correct": "boy",
       "wrong": [
-        "commit",
-        "communicate"
+        "design",
+        "finally"
       ],
-      "word": "code"
+      "word": "boy"
     },
     {
-      "item_id": "commit",
-      "question": "decide to do something",
-      "correct": "commit",
+      "item_id": "design",
+      "question": "a plan or drawing for something",
+      "correct": "design",
       "wrong": [
-        "communicate",
-        "concentrate"
+        "finally",
+        "gold"
       ],
-      "word": "commit"
+      "word": "design"
     },
     {
-      "item_id": "communicate",
-      "question": "share ideas with others",
-      "correct": "communicate",
+      "item_id": "finally",
+      "question": "after a long time or at the end",
+      "correct": "finally",
       "wrong": [
-        "concentrate",
-        "confer"
+        "gold",
+        "guess"
       ],
-      "word": "communicate"
+      "word": "finally"
     },
     {
-      "item_id": "concentrate",
-      "question": "focus attention on one thing",
-      "correct": "concentrate",
+      "item_id": "gold",
+      "question": "shiny yellow like metal",
+      "correct": "gold",
       "wrong": [
-        "confer",
-        "contrast"
+        "guess",
+        "policy"
       ],
-      "word": "concentrate"
+      "word": "gold"
     },
     {
-      "item_id": "confer",
-      "question": "grant or discuss formally",
-      "correct": "confer",
+      "item_id": "guess",
+      "question": "to say an answer without knowing",
+      "correct": "guess",
       "wrong": [
-        "contrast",
-        "cycle"
+        "policy",
+        "alone"
       ],
-      "word": "confer"
+      "word": "guess"
     },
     {
-      "item_id": "contrast",
-      "question": "a clear difference between two things",
-      "correct": "contrast",
+      "item_id": "policy",
+      "question": "a rule or plan made by leaders",
+      "correct": "policy",
       "wrong": [
-        "cycle",
-        "debate"
+        "alone",
+        "average"
       ],
-      "word": "contrast"
+      "word": "policy"
     },
     {
-      "item_id": "cycle",
-      "question": "repeating set of steps",
-      "correct": "cycle",
+      "item_id": "alone",
+      "question": "by oneself with no one else",
+      "correct": "alone",
       "wrong": [
-        "debate",
-        "despite"
+        "average",
+        "bank"
       ],
-      "word": "cycle"
+      "word": "alone"
     },
     {
-      "item_id": "debate",
-      "question": "formal discussion of ideas",
-      "correct": "debate",
+      "item_id": "average",
+      "question": "not special or unusual",
+      "correct": "average",
       "wrong": [
-        "despite",
-        "dimension"
+        "bank",
+        "certain"
       ],
-      "word": "debate"
+      "word": "average"
     },
     {
-      "item_id": "despite",
-      "question": "even though something is true",
-      "correct": "despite",
+      "item_id": "bank",
+      "question": "a place to keep money",
+      "correct": "bank",
       "wrong": [
-        "dimension",
-        "domestic"
+        "certain",
+        "church"
       ],
-      "word": "despite"
+      "word": "bank"
     },
     {
-      "item_id": "dimension",
-      "question": "how long wide or tall",
-      "correct": "dimension",
+      "item_id": "certain",
+      "question": "completely sure or true",
+      "correct": "certain",
       "wrong": [
-        "domestic",
-        "emerge"
+        "church",
+        "east"
       ],
-      "word": "dimension"
+      "word": "certain"
     },
     {
-      "item_id": "domestic",
-      "question": "inside the home",
-      "correct": "domestic",
+      "item_id": "church",
+      "question": "a building for prayer",
+      "correct": "church",
       "wrong": [
-        "emerge",
-        "potential"
+        "east",
+        "medical"
       ],
-      "word": "domestic"
+      "word": "church"
     },
     {
-      "item_id": "emerge",
-      "question": "to come out from hiding",
-      "correct": "emerge",
+      "item_id": "east",
+      "question": "where the sun rises",
+      "correct": "east",
       "wrong": [
-        "potential",
-        "previous"
+        "medical",
+        "role"
       ],
-      "word": "emerge"
+      "word": "east"
+    },
+    {
+      "item_id": "medical",
+      "question": "about doctors and health",
+      "correct": "medical",
+      "wrong": [
+        "role",
+        "almost"
+      ],
+      "word": "medical"
+    },
+    {
+      "item_id": "role",
+      "question": "a part someone plays",
+      "correct": "role",
+      "wrong": [
+        "almost",
+        "research"
+      ],
+      "word": "role"
     }
   ]
 }

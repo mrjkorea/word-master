@@ -5,1004 +5,1004 @@
   "seconds": 15,
   "items": [
     {
-      "item_id": "abstract",
-      "question": "made of shapes only",
-      "correct": "abstract",
+      "item_id": "conference",
+      "question": "a big meeting of people",
+      "correct": "conference",
       "wrong": [
-        "accurate",
-        "acknowledge"
+        "difference",
+        "double"
       ],
-      "word": "abstract"
+      "word": "conference"
     },
     {
-      "item_id": "accurate",
-      "question": "exactly correct or right",
-      "correct": "accurate",
+      "item_id": "difference",
+      "question": "how things are not the same",
+      "correct": "difference",
       "wrong": [
-        "acknowledge",
-        "aggregate"
+        "double",
+        "expect"
       ],
-      "word": "accurate"
+      "word": "difference"
     },
     {
-      "item_id": "acknowledge",
-      "question": "to show you heard someone",
-      "correct": "acknowledge",
+      "item_id": "double",
+      "question": "twice as much or two",
+      "correct": "double",
       "wrong": [
-        "aggregate",
-        "allocate"
+        "expect",
+        "gas"
       ],
-      "word": "acknowledge"
+      "word": "double"
     },
     {
-      "item_id": "aggregate",
-      "question": "all added together",
-      "correct": "aggregate",
+      "item_id": "expect",
+      "question": "to think something will happen",
+      "correct": "expect",
       "wrong": [
-        "allocate",
-        "assign"
+        "gas",
+        "normal"
       ],
-      "word": "aggregate"
+      "word": "expect"
     },
     {
-      "item_id": "allocate",
-      "question": "give each person a share",
-      "correct": "allocate",
+      "item_id": "gas",
+      "question": "air-like stuff you burn",
+      "correct": "gas",
       "wrong": [
-        "assign",
-        "attach"
+        "normal",
+        "potential"
       ],
-      "word": "allocate"
+      "word": "gas"
     },
     {
-      "item_id": "assign",
-      "question": "give someone a job",
-      "correct": "assign",
+      "item_id": "normal",
+      "question": "usual and expected",
+      "correct": "normal",
       "wrong": [
-        "attach",
+        "potential",
+        "text"
+      ],
+      "word": "normal"
+    },
+    {
+      "item_id": "potential",
+      "question": "possible to become something",
+      "correct": "potential",
+      "wrong": [
+        "text",
+        "campaign"
+      ],
+      "word": "potential"
+    },
+    {
+      "item_id": "text",
+      "question": "a written message",
+      "correct": "text",
+      "wrong": [
+        "campaign",
+        "content"
+      ],
+      "word": "text"
+    },
+    {
+      "item_id": "campaign",
+      "question": "a planned effort for change",
+      "correct": "campaign",
+      "wrong": [
+        "content",
+        "credit"
+      ],
+      "word": "campaign"
+    },
+    {
+      "item_id": "content",
+      "question": "happy and satisfied",
+      "correct": "content",
+      "wrong": [
+        "credit",
+        "cross"
+      ],
+      "word": "content"
+    },
+    {
+      "item_id": "credit",
+      "question": "money you can borrow now",
+      "correct": "credit",
+      "wrong": [
+        "cross",
+        "despite"
+      ],
+      "word": "credit"
+    },
+    {
+      "item_id": "cross",
+      "question": "two bars that meet",
+      "correct": "cross",
+      "wrong": [
+        "despite",
+        "female"
+      ],
+      "word": "cross"
+    },
+    {
+      "item_id": "despite",
+      "question": "even though something is true",
+      "correct": "despite",
+      "wrong": [
+        "female",
+        "focus"
+      ],
+      "word": "despite"
+    },
+    {
+      "item_id": "female",
+      "question": "of the girl or woman kind",
+      "correct": "female",
+      "wrong": [
+        "focus",
+        "individual"
+      ],
+      "word": "female"
+    },
+    {
+      "item_id": "focus",
+      "question": "main thing you watch",
+      "correct": "focus",
+      "wrong": [
+        "individual",
+        "previous"
+      ],
+      "word": "focus"
+    },
+    {
+      "item_id": "individual",
+      "question": "one single person",
+      "correct": "individual",
+      "wrong": [
+        "previous",
+        "region"
+      ],
+      "word": "individual"
+    },
+    {
+      "item_id": "previous",
+      "question": "happening or coming before",
+      "correct": "previous",
+      "wrong": [
+        "region",
+        "section"
+      ],
+      "word": "previous"
+    },
+    {
+      "item_id": "region",
+      "question": "a part of a country",
+      "correct": "region",
+      "wrong": [
+        "section",
+        "consider"
+      ],
+      "word": "region"
+    },
+    {
+      "item_id": "section",
+      "question": "a part of something",
+      "correct": "section",
+      "wrong": [
+        "consider",
+        "contact"
+      ],
+      "word": "section"
+    },
+    {
+      "item_id": "consider",
+      "question": "to think about something",
+      "correct": "consider",
+      "wrong": [
+        "contact",
+        "drop"
+      ],
+      "word": "consider"
+    },
+    {
+      "item_id": "contact",
+      "question": "the act of touching someone",
+      "correct": "contact",
+      "wrong": [
+        "drop",
+        "fair"
+      ],
+      "word": "contact"
+    },
+    {
+      "item_id": "drop",
+      "question": "tiny round bit of liquid",
+      "correct": "drop",
+      "wrong": [
+        "fair",
+        "link"
+      ],
+      "word": "drop"
+    },
+    {
+      "item_id": "fair",
+      "question": "treating everyone the same",
+      "correct": "fair",
+      "wrong": [
+        "link",
+        "positive"
+      ],
+      "word": "fair"
+    },
+    {
+      "item_id": "link",
+      "question": "a piece that connects things",
+      "correct": "link",
+      "wrong": [
+        "positive",
+        "beyond"
+      ],
+      "word": "link"
+    },
+    {
+      "item_id": "positive",
+      "question": "good and hopeful",
+      "correct": "positive",
+      "wrong": [
+        "beyond",
+        "extra"
+      ],
+      "word": "positive"
+    },
+    {
+      "item_id": "beyond",
+      "question": "farther than here",
+      "correct": "beyond",
+      "wrong": [
+        "extra",
+        "significant"
+      ],
+      "word": "beyond"
+    },
+    {
+      "item_id": "extra",
+      "question": "more than needed",
+      "correct": "extra",
+      "wrong": [
+        "significant",
+        "agree"
+      ],
+      "word": "extra"
+    },
+    {
+      "item_id": "significant",
+      "question": "important and meaningful",
+      "correct": "significant",
+      "wrong": [
+        "agree",
+        "clean"
+      ],
+      "word": "significant"
+    },
+    {
+      "item_id": "agree",
+      "question": "to say yes together",
+      "correct": "agree",
+      "wrong": [
+        "clean",
+        "computer"
+      ],
+      "word": "agree"
+    },
+    {
+      "item_id": "clean",
+      "question": "not dirty or messy",
+      "correct": "clean",
+      "wrong": [
+        "computer",
+        "construction"
+      ],
+      "word": "clean"
+    },
+    {
+      "item_id": "computer",
+      "question": "machine that runs programs",
+      "correct": "computer",
+      "wrong": [
+        "construction",
+        "episode"
+      ],
+      "word": "computer"
+    },
+    {
+      "item_id": "construction",
+      "question": "building something new",
+      "correct": "construction",
+      "wrong": [
+        "episode",
+        "income"
+      ],
+      "word": "construction"
+    },
+    {
+      "item_id": "episode",
+      "question": "one part of a series",
+      "correct": "episode",
+      "wrong": [
+        "income",
+        "ability"
+      ],
+      "word": "episode"
+    },
+    {
+      "item_id": "income",
+      "question": "money you get from work",
+      "correct": "income",
+      "wrong": [
+        "ability",
+        "coach"
+      ],
+      "word": "income"
+    },
+    {
+      "item_id": "ability",
+      "question": "the power to do something",
+      "correct": "ability",
+      "wrong": [
+        "coach",
+        "collection"
+      ],
+      "word": "ability"
+    },
+    {
+      "item_id": "coach",
+      "question": "person who trains players",
+      "correct": "coach",
+      "wrong": [
+        "collection",
+        "definitely"
+      ],
+      "word": "coach"
+    },
+    {
+      "item_id": "collection",
+      "question": "a group of similar things kept together",
+      "correct": "collection",
+      "wrong": [
+        "definitely",
+        "gun"
+      ],
+      "word": "collection"
+    },
+    {
+      "item_id": "definitely",
+      "question": "for sure",
+      "correct": "definitely",
+      "wrong": [
+        "gun",
         "author"
       ],
-      "word": "assign"
+      "word": "definitely"
     },
     {
-      "item_id": "attach",
-      "question": "stick one thing to another",
-      "correct": "attach",
+      "item_id": "gun",
+      "question": "a tool that shoots",
+      "correct": "gun",
       "wrong": [
         "author",
-        "bond"
+        "claim"
       ],
-      "word": "attach"
+      "word": "gun"
     },
     {
       "item_id": "author",
       "question": "a person who writes books",
       "correct": "author",
       "wrong": [
-        "bond",
-        "brief"
+        "claim",
+        "dad"
       ],
       "word": "author"
     },
     {
-      "item_id": "bond",
-      "question": "close tie between people",
-      "correct": "bond",
+      "item_id": "claim",
+      "question": "a statement you say is true",
+      "correct": "claim",
       "wrong": [
-        "brief",
-        "capable"
+        "dad",
+        "fear"
       ],
-      "word": "bond"
+      "word": "claim"
     },
     {
-      "item_id": "brief",
-      "question": "lasting only a short time",
-      "correct": "brief",
+      "item_id": "dad",
+      "question": "your father",
+      "correct": "dad",
       "wrong": [
-        "capable",
-        "cite"
+        "fear",
+        "fit"
       ],
-      "word": "brief"
+      "word": "dad"
     },
     {
-      "item_id": "capable",
-      "question": "able to do something well",
-      "correct": "capable",
+      "item_id": "fear",
+      "question": "feeling of being scared",
+      "correct": "fear",
       "wrong": [
-        "cite",
-        "cooperate"
+        "fit",
+        "generally"
       ],
-      "word": "capable"
+      "word": "fear"
     },
     {
-      "item_id": "cite",
-      "question": "name the source used",
-      "correct": "cite",
+      "item_id": "fit",
+      "question": "the right size for you",
+      "correct": "fit",
       "wrong": [
-        "cooperate",
-        "discriminate"
+        "generally",
+        "global"
       ],
-      "word": "cite"
+      "word": "fit"
     },
     {
-      "item_id": "cooperate",
-      "question": "work together willingly",
-      "correct": "cooperate",
+      "item_id": "generally",
+      "question": "in most cases or usually",
+      "correct": "generally",
       "wrong": [
-        "discriminate",
-        "display"
+        "global",
+        "plus"
       ],
-      "word": "cooperate"
+      "word": "generally"
     },
     {
-      "item_id": "discriminate",
-      "question": "treat unfairly or distinguish",
-      "correct": "discriminate",
+      "item_id": "global",
+      "question": "covering the whole world",
+      "correct": "global",
       "wrong": [
-        "display",
-        "diverse"
+        "plus",
+        "annual"
       ],
-      "word": "discriminate"
+      "word": "global"
     },
     {
-      "item_id": "display",
-      "question": "things shown for looking",
-      "correct": "display",
+      "item_id": "plus",
+      "question": "added to another number",
+      "correct": "plus",
       "wrong": [
-        "diverse",
-        "domain"
+        "annual",
+        "anymore"
       ],
-      "word": "display"
+      "word": "plus"
     },
     {
-      "item_id": "diverse",
-      "question": "many different kinds",
-      "correct": "diverse",
+      "item_id": "annual",
+      "question": "happening once every year",
+      "correct": "annual",
       "wrong": [
-        "domain",
-        "edit"
+        "anymore",
+        "bar"
       ],
-      "word": "diverse"
+      "word": "annual"
     },
     {
-      "item_id": "domain",
-      "question": "field or area of control",
-      "correct": "domain",
+      "item_id": "anymore",
+      "question": "no longer",
+      "correct": "anymore",
       "wrong": [
-        "edit",
-        "enhance"
+        "bar",
+        "battle"
       ],
-      "word": "domain"
+      "word": "anymore"
     },
     {
-      "item_id": "edit",
-      "question": "change it to improve",
-      "correct": "edit",
+      "item_id": "bar",
+      "question": "a long straight piece of metal or wood",
+      "correct": "bar",
       "wrong": [
-        "enhance",
-        "estate"
+        "battle",
+        "brain"
       ],
-      "word": "edit"
+      "word": "bar"
     },
     {
-      "item_id": "enhance",
-      "question": "make something better",
-      "correct": "enhance",
+      "item_id": "battle",
+      "question": "a big fight between groups",
+      "correct": "battle",
       "wrong": [
-        "estate",
-        "exceed"
+        "brain",
+        "contract"
       ],
-      "word": "enhance"
+      "word": "battle"
     },
     {
-      "item_id": "estate",
-      "question": "big house and land",
-      "correct": "estate",
+      "item_id": "brain",
+      "question": "the thinking part inside the head",
+      "correct": "brain",
       "wrong": [
-        "exceed",
-        "expert"
+        "contract",
+        "degree"
       ],
-      "word": "estate"
+      "word": "brain"
     },
     {
-      "item_id": "exceed",
-      "question": "go beyond a limit",
-      "correct": "exceed",
+      "item_id": "contract",
+      "question": "a written agreement between people",
+      "correct": "contract",
       "wrong": [
-        "expert",
-        "explicit"
+        "degree",
+        "floor"
       ],
-      "word": "exceed"
+      "word": "contract"
     },
     {
-      "item_id": "expert",
-      "question": "very skilled person",
-      "correct": "expert",
+      "item_id": "degree",
+      "question": "unit of temperature or angle",
+      "correct": "degree",
       "wrong": [
-        "explicit",
-        "federal"
+        "floor",
+        "image"
       ],
-      "word": "expert"
+      "word": "degree"
     },
     {
-      "item_id": "explicit",
-      "question": "clear and direct",
-      "correct": "explicit",
+      "item_id": "floor",
+      "question": "the bottom surface of a room",
+      "correct": "floor",
       "wrong": [
-        "federal",
-        "fee"
+        "image",
+        "physical"
       ],
-      "word": "explicit"
+      "word": "floor"
     },
     {
-      "item_id": "federal",
-      "question": "of the whole country",
-      "correct": "federal",
+      "item_id": "image",
+      "question": "a picture of something",
+      "correct": "image",
       "wrong": [
-        "fee",
-        "flexible"
+        "physical",
+        "active"
       ],
-      "word": "federal"
+      "word": "image"
     },
     {
-      "item_id": "fee",
-      "question": "money paid for a service",
-      "correct": "fee",
+      "item_id": "physical",
+      "question": "of the body, not the mind",
+      "correct": "physical",
       "wrong": [
-        "flexible",
-        "furthermore"
+        "active",
+        "administration"
       ],
-      "word": "fee"
+      "word": "physical"
     },
     {
-      "item_id": "flexible",
-      "question": "can bend or stretch easily",
-      "correct": "flexible",
+      "item_id": "active",
+      "question": "doing lots of things",
+      "correct": "active",
       "wrong": [
-        "furthermore",
-        "gender"
+        "administration",
+        "approach"
       ],
-      "word": "flexible"
+      "word": "active"
     },
     {
-      "item_id": "furthermore",
-      "question": "in addition to what was said",
-      "correct": "furthermore",
+      "item_id": "administration",
+      "question": "running a school or office",
+      "correct": "administration",
       "wrong": [
-        "gender",
-        "ignorant"
+        "approach",
+        "cancer"
       ],
-      "word": "furthermore"
+      "word": "administration"
     },
     {
-      "item_id": "gender",
-      "question": "social category of sex",
-      "correct": "gender",
+      "item_id": "approach",
+      "question": "way of coming near something",
+      "correct": "approach",
       "wrong": [
-        "ignorant",
-        "incentive"
+        "cancer",
+        "civil"
       ],
-      "word": "gender"
+      "word": "approach"
     },
     {
-      "item_id": "ignorant",
-      "question": "lacking knowledge",
-      "correct": "ignorant",
+      "item_id": "cancer",
+      "question": "serious illness in body",
+      "correct": "cancer",
       "wrong": [
-        "incentive",
-        "incidence"
+        "civil",
+        "dance"
       ],
-      "word": "ignorant"
+      "word": "cancer"
     },
     {
-      "item_id": "incentive",
-      "question": "motivation or reward",
-      "correct": "incentive",
+      "item_id": "civil",
+      "question": "polite and respectful",
+      "correct": "civil",
       "wrong": [
-        "incidence",
-        "incorporate"
+        "dance",
+        "defense"
       ],
-      "word": "incentive"
+      "word": "civil"
     },
     {
-      "item_id": "incidence",
-      "question": "rate of occurrence",
-      "correct": "incidence",
+      "item_id": "dance",
+      "question": "moving to the music",
+      "correct": "dance",
       "wrong": [
-        "incorporate",
-        "index"
+        "defense",
+        "direction"
       ],
-      "word": "incidence"
+      "word": "dance"
     },
     {
-      "item_id": "incorporate",
-      "question": "to include or combine things",
-      "correct": "incorporate",
+      "item_id": "defense",
+      "question": "protecting against attack",
+      "correct": "defense",
       "wrong": [
-        "index",
-        "inhibit"
+        "direction",
+        "band"
       ],
-      "word": "incorporate"
+      "word": "defense"
     },
     {
-      "item_id": "index",
-      "question": "list of topics in a book",
-      "correct": "index",
+      "item_id": "direction",
+      "question": "the way something moves or faces",
+      "correct": "direction",
       "wrong": [
-        "inhibit",
-        "initiate"
+        "band",
+        "beach"
       ],
-      "word": "index"
+      "word": "direction"
     },
     {
-      "item_id": "inhibit",
-      "question": "hold back or prevent",
-      "correct": "inhibit",
+      "item_id": "band",
+      "question": "a group that plays music",
+      "correct": "band",
       "wrong": [
-        "initiate",
-        "input"
+        "beach",
+        "cash"
       ],
-      "word": "inhibit"
+      "word": "band"
     },
     {
-      "item_id": "initiate",
-      "question": "start something new",
-      "correct": "initiate",
+      "item_id": "beach",
+      "question": "sand next to the sea",
+      "correct": "beach",
       "wrong": [
-        "input",
-        "instruct"
+        "cash",
+        "clearly"
       ],
-      "word": "initiate"
+      "word": "beach"
     },
     {
-      "item_id": "input",
-      "question": "what you put in",
-      "correct": "input",
+      "item_id": "cash",
+      "question": "money in coins and bills",
+      "correct": "cash",
       "wrong": [
-        "instruct",
-        "intelligent"
+        "clearly",
+        "commercial"
       ],
-      "word": "input"
+      "word": "cash"
     },
     {
-      "item_id": "instruct",
-      "question": "tell someone how",
-      "correct": "instruct",
+      "item_id": "clearly",
+      "question": "easy to see or understand",
+      "correct": "clearly",
       "wrong": [
-        "intelligent",
-        "interval"
+        "commercial",
+        "effort"
       ],
-      "word": "instruct"
+      "word": "clearly"
     },
     {
-      "item_id": "intelligent",
-      "question": "quick to understand and learn",
-      "correct": "intelligent",
+      "item_id": "commercial",
+      "question": "about buying and selling",
+      "correct": "commercial",
       "wrong": [
-        "interval",
-        "lecture"
+        "effort",
+        "fan"
       ],
-      "word": "intelligent"
+      "word": "commercial"
     },
     {
-      "item_id": "interval",
-      "question": "time between two things",
-      "correct": "interval",
+      "item_id": "effort",
+      "question": "trying hard to do something",
+      "correct": "effort",
       "wrong": [
-        "lecture",
-        "migrate"
+        "fan",
+        "impact"
       ],
-      "word": "interval"
+      "word": "effort"
     },
     {
-      "item_id": "lecture",
-      "question": "talk that teaches people",
-      "correct": "lecture",
+      "item_id": "fan",
+      "question": "machine that blows air",
+      "correct": "fan",
       "wrong": [
-        "migrate",
-        "minimum"
+        "impact",
+        "address"
       ],
-      "word": "lecture"
+      "word": "fan"
     },
     {
-      "item_id": "migrate",
-      "question": "move to another region",
-      "correct": "migrate",
+      "item_id": "impact",
+      "question": "the effect something has",
+      "correct": "impact",
       "wrong": [
-        "minimum",
-        "ministry"
+        "address",
+        "anyway"
       ],
-      "word": "migrate"
+      "word": "impact"
     },
     {
-      "item_id": "minimum",
-      "question": "the smallest amount",
-      "correct": "minimum",
+      "item_id": "address",
+      "question": "where someone lives or works",
+      "correct": "address",
       "wrong": [
-        "ministry",
-        "motive"
+        "anyway",
+        "choose"
       ],
-      "word": "minimum"
+      "word": "address"
     },
     {
-      "item_id": "ministry",
-      "question": "a government office for one job",
-      "correct": "ministry",
+      "item_id": "anyway",
+      "question": "no matter what",
+      "correct": "anyway",
       "wrong": [
-        "motive",
-        "neutral"
+        "choose",
+        "commission"
       ],
-      "word": "ministry"
+      "word": "anyway"
     },
     {
-      "item_id": "motive",
-      "question": "reason for action",
-      "correct": "motive",
+      "item_id": "choose",
+      "question": "pick one thing you like",
+      "correct": "choose",
       "wrong": [
-        "neutral",
-        "nevertheless"
+        "commission",
+        "competition"
       ],
-      "word": "motive"
+      "word": "choose"
     },
     {
-      "item_id": "neutral",
-      "question": "not on either side",
-      "correct": "neutral",
+      "item_id": "commission",
+      "question": "a group that makes decisions",
+      "correct": "commission",
       "wrong": [
-        "nevertheless",
-        "overseas"
+        "competition",
+        "direct"
       ],
-      "word": "neutral"
+      "word": "commission"
     },
     {
-      "item_id": "nevertheless",
-      "question": "even so or despite that",
-      "correct": "nevertheless",
+      "item_id": "competition",
+      "question": "a contest between people",
+      "correct": "competition",
       "wrong": [
-        "overseas",
-        "precede"
+        "direct",
+        "dream"
       ],
-      "word": "nevertheless"
+      "word": "competition"
     },
     {
-      "item_id": "overseas",
-      "question": "in or to a country across the sea",
-      "correct": "overseas",
+      "item_id": "direct",
+      "question": "straight and clear way",
+      "correct": "direct",
       "wrong": [
-        "precede",
-        "presume"
+        "dream",
+        "easily"
       ],
-      "word": "overseas"
+      "word": "direct"
     },
     {
-      "item_id": "precede",
-      "question": "come before something else",
-      "correct": "precede",
+      "item_id": "dream",
+      "question": "pictures in your mind while sleeping",
+      "correct": "dream",
       "wrong": [
-        "presume",
-        "rational"
+        "easily",
+        "finish"
       ],
-      "word": "precede"
+      "word": "dream"
     },
     {
-      "item_id": "presume",
-      "question": "suppose without proof",
-      "correct": "presume",
+      "item_id": "easily",
+      "question": "with little effort",
+      "correct": "easily",
       "wrong": [
-        "rational",
-        "recover"
+        "finish",
+        "grand"
       ],
-      "word": "presume"
+      "word": "easily"
     },
     {
-      "item_id": "rational",
-      "question": "thinking with clear reason",
-      "correct": "rational",
+      "item_id": "finish",
+      "question": "bring to an end",
+      "correct": "finish",
       "wrong": [
-        "recover",
-        "reveal"
+        "grand",
+        "damage"
       ],
-      "word": "rational"
+      "word": "finish"
     },
     {
-      "item_id": "recover",
-      "question": "get well again",
-      "correct": "recover",
+      "item_id": "grand",
+      "question": "very big and nice",
+      "correct": "grand",
       "wrong": [
-        "reveal",
-        "scope"
+        "damage",
+        "directly"
       ],
-      "word": "recover"
+      "word": "grand"
     },
     {
-      "item_id": "reveal",
-      "question": "show something hidden",
-      "correct": "reveal",
+      "item_id": "damage",
+      "question": "harm or break to something",
+      "correct": "damage",
       "wrong": [
-        "scope",
-        "subsidy"
+        "directly",
+        "disease"
       ],
-      "word": "reveal"
+      "word": "damage"
     },
     {
-      "item_id": "scope",
-      "question": "how far something reaches",
-      "correct": "scope",
+      "item_id": "directly",
+      "question": "in a straight line",
+      "correct": "directly",
       "wrong": [
-        "subsidy",
-        "tape"
+        "disease",
+        "doctor"
       ],
-      "word": "scope"
+      "word": "directly"
     },
     {
-      "item_id": "subsidy",
-      "question": "public financial support",
-      "correct": "subsidy",
+      "item_id": "disease",
+      "question": "an illness that makes you sick",
+      "correct": "disease",
       "wrong": [
-        "tape",
-        "trace"
+        "doctor",
+        "doubt"
       ],
-      "word": "subsidy"
+      "word": "disease"
     },
     {
-      "item_id": "tape",
-      "question": "sticky clear strip",
-      "correct": "tape",
+      "item_id": "doctor",
+      "question": "medical person who helps sick people",
+      "correct": "doctor",
       "wrong": [
-        "trace",
-        "transform"
+        "doubt",
+        "drink"
       ],
-      "word": "tape"
+      "word": "doctor"
     },
     {
-      "item_id": "trace",
-      "question": "copy by following lines",
-      "correct": "trace",
+      "item_id": "doubt",
+      "question": "not being sure",
+      "correct": "doubt",
       "wrong": [
-        "transform",
-        "transport"
+        "drink",
+        "fish"
       ],
-      "word": "trace"
+      "word": "doubt"
     },
     {
-      "item_id": "transform",
-      "question": "change something completely",
-      "correct": "transform",
+      "item_id": "drink",
+      "question": "liquid you swallow",
+      "correct": "drink",
       "wrong": [
-        "transport",
-        "underlie"
+        "fish",
+        "gay"
       ],
-      "word": "transform"
+      "word": "drink"
     },
     {
-      "item_id": "transport",
-      "question": "moving people or goods",
-      "correct": "transport",
+      "item_id": "fish",
+      "question": "animal that swims in water",
+      "correct": "fish",
       "wrong": [
-        "underlie",
-        "utilise"
+        "gay",
+        "glad"
       ],
-      "word": "transport"
+      "word": "fish"
     },
     {
-      "item_id": "underlie",
-      "question": "lie beneath as basis",
-      "correct": "underlie",
+      "item_id": "gay",
+      "question": "happy and brightly cheerful",
+      "correct": "gay",
       "wrong": [
-        "utilise",
-        "adapt"
+        "glad",
+        "grow"
       ],
-      "word": "underlie"
+      "word": "gay"
     },
     {
-      "item_id": "utilise",
-      "question": "make practical use of",
-      "correct": "utilise",
+      "item_id": "glad",
+      "question": "happy and pleased",
+      "correct": "glad",
       "wrong": [
-        "adapt",
-        "adult"
+        "grow",
+        "overall"
       ],
-      "word": "utilise"
+      "word": "glad"
     },
     {
-      "item_id": "adapt",
-      "question": "change to fit in",
-      "correct": "adapt",
+      "item_id": "grow",
+      "question": "to become bigger or taller",
+      "correct": "grow",
       "wrong": [
-        "adult",
-        "advocate"
+        "overall",
+        "basic"
       ],
-      "word": "adapt"
+      "word": "grow"
     },
     {
-      "item_id": "adult",
-      "question": "grown up not a child",
-      "correct": "adult",
+      "item_id": "overall",
+      "question": "including everything together",
+      "correct": "overall",
       "wrong": [
-        "advocate",
-        "aid"
+        "basic",
+        "captain"
       ],
-      "word": "adult"
+      "word": "overall"
     },
     {
-      "item_id": "advocate",
-      "question": "speak up for something",
-      "correct": "advocate",
+      "item_id": "basic",
+      "question": "simple and easy",
+      "correct": "basic",
       "wrong": [
-        "aid",
-        "channel"
+        "captain",
+        "carry"
       ],
-      "word": "advocate"
+      "word": "basic"
     },
     {
-      "item_id": "aid",
-      "question": "help given to someone",
-      "correct": "aid",
+      "item_id": "captain",
+      "question": "leader of a ship",
+      "correct": "captain",
       "wrong": [
-        "channel",
-        "chemical"
+        "carry",
+        "crime"
       ],
-      "word": "aid"
+      "word": "captain"
     },
     {
-      "item_id": "channel",
-      "question": "narrow path for water",
-      "correct": "channel",
+      "item_id": "carry",
+      "question": "hold and move something",
+      "correct": "carry",
       "wrong": [
-        "chemical",
-        "classic"
+        "crime",
+        "effective"
       ],
-      "word": "channel"
+      "word": "carry"
     },
     {
-      "item_id": "chemical",
-      "question": "about science lab mixtures",
-      "correct": "chemical",
+      "item_id": "crime",
+      "question": "an act that breaks the law",
+      "correct": "crime",
       "wrong": [
-        "classic",
-        "comprehensive"
+        "effective",
+        "explain"
       ],
-      "word": "chemical"
+      "word": "crime"
     },
     {
-      "item_id": "classic",
-      "question": "simple and always liked",
-      "correct": "classic",
+      "item_id": "effective",
+      "question": "works very well",
+      "correct": "effective",
       "wrong": [
-        "comprehensive",
-        "comprise"
+        "explain",
+        "conference"
       ],
-      "word": "classic"
+      "word": "effective"
     },
     {
-      "item_id": "comprehensive",
-      "question": "covering everything important",
-      "correct": "comprehensive",
+      "item_id": "explain",
+      "question": "tell how or why something happens",
+      "correct": "explain",
       "wrong": [
-        "comprise",
-        "confirm"
+        "conference",
+        "difference"
       ],
-      "word": "comprehensive"
-    },
-    {
-      "item_id": "comprise",
-      "question": "make up a whole",
-      "correct": "comprise",
-      "wrong": [
-        "confirm",
-        "contrary"
-      ],
-      "word": "comprise"
-    },
-    {
-      "item_id": "confirm",
-      "question": "to say something is true",
-      "correct": "confirm",
-      "wrong": [
-        "contrary",
-        "convert"
-      ],
-      "word": "confirm"
-    },
-    {
-      "item_id": "contrary",
-      "question": "opposite to what is expected",
-      "correct": "contrary",
-      "wrong": [
-        "convert",
-        "couple"
-      ],
-      "word": "contrary"
-    },
-    {
-      "item_id": "convert",
-      "question": "change one thing into another",
-      "correct": "convert",
-      "wrong": [
-        "couple",
-        "decade"
-      ],
-      "word": "convert"
-    },
-    {
-      "item_id": "couple",
-      "question": "two people who are married",
-      "correct": "couple",
-      "wrong": [
-        "decade",
-        "definite"
-      ],
-      "word": "couple"
-    },
-    {
-      "item_id": "decade",
-      "question": "ten years together",
-      "correct": "decade",
-      "wrong": [
-        "definite",
-        "deny"
-      ],
-      "word": "decade"
-    },
-    {
-      "item_id": "definite",
-      "question": "sure and very clear",
-      "correct": "definite",
-      "wrong": [
-        "deny",
-        "differentiate"
-      ],
-      "word": "definite"
-    },
-    {
-      "item_id": "deny",
-      "question": "to say something is not true",
-      "correct": "deny",
-      "wrong": [
-        "differentiate",
-        "dispose"
-      ],
-      "word": "deny"
-    },
-    {
-      "item_id": "differentiate",
-      "question": "tell apart or distinguish",
-      "correct": "differentiate",
-      "wrong": [
-        "dispose",
-        "dynamic"
-      ],
-      "word": "differentiate"
-    },
-    {
-      "item_id": "dispose",
-      "question": "throw something away",
-      "correct": "dispose",
-      "wrong": [
-        "dynamic",
-        "eliminate"
-      ],
-      "word": "dispose"
-    },
-    {
-      "item_id": "dynamic",
-      "question": "full of energy",
-      "correct": "dynamic",
-      "wrong": [
-        "eliminate",
-        "empirical"
-      ],
-      "word": "dynamic"
-    },
-    {
-      "item_id": "eliminate",
-      "question": "take away completely",
-      "correct": "eliminate",
-      "wrong": [
-        "empirical",
-        "equip"
-      ],
-      "word": "eliminate"
-    },
-    {
-      "item_id": "empirical",
-      "question": "learned by real tests",
-      "correct": "empirical",
-      "wrong": [
-        "equip",
-        "extract"
-      ],
-      "word": "empirical"
-    },
-    {
-      "item_id": "equip",
-      "question": "give someone needed tools",
-      "correct": "equip",
-      "wrong": [
-        "extract",
-        "file"
-      ],
-      "word": "equip"
-    },
-    {
-      "item_id": "extract",
-      "question": "pull something out carefully",
-      "correct": "extract",
-      "wrong": [
-        "file",
-        "finite"
-      ],
-      "word": "extract"
-    },
-    {
-      "item_id": "file",
-      "question": "a folder that holds papers",
-      "correct": "file",
-      "wrong": [
-        "finite",
-        "foundation"
-      ],
-      "word": "file"
-    },
-    {
-      "item_id": "finite",
-      "question": "having limits",
-      "correct": "finite",
-      "wrong": [
-        "foundation",
-        "globe"
-      ],
-      "word": "finite"
-    },
-    {
-      "item_id": "foundation",
-      "question": "base that holds a building",
-      "correct": "foundation",
-      "wrong": [
-        "globe",
-        "grade"
-      ],
-      "word": "foundation"
-    },
-    {
-      "item_id": "globe",
-      "question": "the Earth",
-      "correct": "globe",
-      "wrong": [
-        "grade",
-        "guarantee"
-      ],
-      "word": "globe"
-    },
-    {
-      "item_id": "grade",
-      "question": "level or mark",
-      "correct": "grade",
-      "wrong": [
-        "guarantee",
-        "hierarchy"
-      ],
-      "word": "grade"
-    },
-    {
-      "item_id": "guarantee",
-      "question": "promise something will happen",
-      "correct": "guarantee",
-      "wrong": [
-        "hierarchy",
-        "identical"
-      ],
-      "word": "guarantee"
-    },
-    {
-      "item_id": "hierarchy",
-      "question": "ranked levels of authority",
-      "correct": "hierarchy",
-      "wrong": [
-        "identical",
-        "ideology"
-      ],
-      "word": "hierarchy"
-    },
-    {
-      "item_id": "identical",
-      "question": "exactly the same",
-      "correct": "identical",
-      "wrong": [
-        "ideology",
-        "infer"
-      ],
-      "word": "identical"
-    },
-    {
-      "item_id": "ideology",
-      "question": "system of beliefs",
-      "correct": "ideology",
-      "wrong": [
-        "infer",
-        "innovate"
-      ],
-      "word": "ideology"
-    },
-    {
-      "item_id": "infer",
-      "question": "conclude from evidence",
-      "correct": "infer",
-      "wrong": [
-        "innovate",
-        "insert"
-      ],
-      "word": "infer"
-    },
-    {
-      "item_id": "innovate",
-      "question": "introduce new ideas",
-      "correct": "innovate",
-      "wrong": [
-        "insert",
-        "intervene"
-      ],
-      "word": "innovate"
-    },
-    {
-      "item_id": "insert",
-      "question": "put something inside",
-      "correct": "insert",
-      "wrong": [
-        "intervene",
-        "isolate"
-      ],
-      "word": "insert"
-    },
-    {
-      "item_id": "intervene",
-      "question": "step in to help",
-      "correct": "intervene",
-      "wrong": [
-        "isolate",
-        "media"
-      ],
-      "word": "intervene"
-    },
-    {
-      "item_id": "isolate",
-      "question": "separate from others",
-      "correct": "isolate",
-      "wrong": [
-        "media",
-        "mode"
-      ],
-      "word": "isolate"
-    },
-    {
-      "item_id": "media",
-      "question": "ways to share news",
-      "correct": "media",
-      "wrong": [
-        "mode",
-        "paradigm"
-      ],
-      "word": "media"
-    },
-    {
-      "item_id": "mode",
-      "question": "way something works",
-      "correct": "mode",
-      "wrong": [
-        "paradigm",
-        "abstract"
-      ],
-      "word": "mode"
-    },
-    {
-      "item_id": "paradigm",
-      "question": "typical model or pattern",
-      "correct": "paradigm",
-      "wrong": [
-        "abstract",
-        "accurate"
-      ],
-      "word": "paradigm"
+      "word": "explain"
     }
   ]
 }

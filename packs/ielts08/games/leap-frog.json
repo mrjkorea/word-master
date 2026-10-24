@@ -5,1004 +5,1004 @@
   "seconds": 15,
   "items": [
     {
-      "item_id": "award",
-      "question": "a prize given for good work",
-      "correct": "award",
+      "item_id": "danger",
+      "question": "something that can hurt you",
+      "correct": "danger",
       "wrong": [
-        "away",
-        "awful"
+        "delivery",
+        "deserve"
       ],
-      "word": "award"
+      "word": "danger"
     },
     {
-      "item_id": "away",
-      "question": "to a distant place",
-      "correct": "away",
+      "item_id": "delivery",
+      "question": "bringing a package to someone",
+      "correct": "delivery",
       "wrong": [
-        "awful",
-        "baby"
+        "deserve",
+        "dollar"
       ],
-      "word": "away"
+      "word": "delivery"
     },
     {
-      "item_id": "awful",
-      "question": "very bad or unpleasant",
-      "correct": "awful",
+      "item_id": "deserve",
+      "question": "earn something good",
+      "correct": "deserve",
       "wrong": [
-        "baby",
-        "back"
+        "dollar",
+        "empty"
       ],
-      "word": "awful"
+      "word": "deserve"
     },
     {
-      "item_id": "baby",
-      "question": "a very young child",
-      "correct": "baby",
+      "item_id": "dollar",
+      "question": "American paper money",
+      "correct": "dollar",
       "wrong": [
-        "back",
-        "background"
+        "empty",
+        "gender"
       ],
-      "word": "baby"
+      "word": "dollar"
     },
     {
-      "item_id": "back",
-      "question": "at the rear side",
-      "correct": "back",
+      "item_id": "empty",
+      "question": "with nothing inside",
+      "correct": "empty",
       "wrong": [
-        "background",
-        "bad"
+        "gender",
+        "instance"
       ],
-      "word": "back"
+      "word": "empty"
     },
     {
-      "item_id": "background",
-      "question": "area behind the main thing",
-      "correct": "background",
+      "item_id": "gender",
+      "question": "social category of sex",
+      "correct": "gender",
       "wrong": [
-        "bad",
-        "bag"
+        "instance",
+        "register"
       ],
-      "word": "background"
+      "word": "gender"
     },
     {
-      "item_id": "bad",
-      "question": "not good or nice",
-      "correct": "bad",
+      "item_id": "instance",
+      "question": "one clear example of something",
+      "correct": "instance",
       "wrong": [
-        "bag",
-        "balance"
+        "register",
+        "admit"
       ],
-      "word": "bad"
+      "word": "instance"
     },
     {
-      "item_id": "bag",
-      "question": "a container for carrying things",
-      "correct": "bag",
+      "item_id": "register",
+      "question": "to put your name on a list",
+      "correct": "register",
       "wrong": [
-        "balance",
-        "ball"
+        "admit",
+        "attitude"
       ],
-      "word": "bag"
+      "word": "register"
     },
     {
-      "item_id": "balance",
-      "question": "staying steady without falling",
-      "correct": "balance",
+      "item_id": "admit",
+      "question": "say that something is true",
+      "correct": "admit",
       "wrong": [
-        "ball",
-        "ban"
-      ],
-      "word": "balance"
-    },
-    {
-      "item_id": "ball",
-      "question": "a round toy you throw or kick",
-      "correct": "ball",
-      "wrong": [
-        "ban",
-        "band"
-      ],
-      "word": "ball"
-    },
-    {
-      "item_id": "ban",
-      "question": "to say something is not allowed",
-      "correct": "ban",
-      "wrong": [
-        "band",
-        "bank"
-      ],
-      "word": "ban"
-    },
-    {
-      "item_id": "band",
-      "question": "a group that plays music",
-      "correct": "band",
-      "wrong": [
-        "bank",
-        "bar"
-      ],
-      "word": "band"
-    },
-    {
-      "item_id": "bank",
-      "question": "a place to keep money",
-      "correct": "bank",
-      "wrong": [
-        "bar",
-        "base"
-      ],
-      "word": "bank"
-    },
-    {
-      "item_id": "bar",
-      "question": "a long straight piece of metal or wood",
-      "correct": "bar",
-      "wrong": [
-        "base",
-        "basic"
-      ],
-      "word": "bar"
-    },
-    {
-      "item_id": "base",
-      "question": "the bottom part of something",
-      "correct": "base",
-      "wrong": [
-        "basic",
-        "basis"
-      ],
-      "word": "base"
-    },
-    {
-      "item_id": "basic",
-      "question": "simple and easy",
-      "correct": "basic",
-      "wrong": [
-        "basis",
-        "basket"
-      ],
-      "word": "basic"
-    },
-    {
-      "item_id": "basis",
-      "question": "the bottom part that supports",
-      "correct": "basis",
-      "wrong": [
-        "basket",
-        "bath"
-      ],
-      "word": "basis"
-    },
-    {
-      "item_id": "basket",
-      "question": "container with handles",
-      "correct": "basket",
-      "wrong": [
-        "bath",
-        "battle"
-      ],
-      "word": "basket"
-    },
-    {
-      "item_id": "bath",
-      "question": "tub for washing yourself",
-      "correct": "bath",
-      "wrong": [
-        "battle",
-        "be"
-      ],
-      "word": "bath"
-    },
-    {
-      "item_id": "battle",
-      "question": "a big fight between groups",
-      "correct": "battle",
-      "wrong": [
-        "be",
-        "beach"
-      ],
-      "word": "battle"
-    },
-    {
-      "item_id": "be",
-      "question": "to exist or live",
-      "correct": "be",
-      "wrong": [
-        "beach",
-        "bear"
-      ],
-      "word": "be"
-    },
-    {
-      "item_id": "beach",
-      "question": "sand next to the sea",
-      "correct": "beach",
-      "wrong": [
-        "bear",
-        "beat"
-      ],
-      "word": "beach"
-    },
-    {
-      "item_id": "bear",
-      "question": "to carry or hold up",
-      "correct": "bear",
-      "wrong": [
-        "beat",
-        "beautiful"
-      ],
-      "word": "bear"
-    },
-    {
-      "item_id": "beat",
-      "question": "to win against someone",
-      "correct": "beat",
-      "wrong": [
-        "beautiful",
-        "because"
-      ],
-      "word": "beat"
-    },
-    {
-      "item_id": "beautiful",
-      "question": "very nice to look at",
-      "correct": "beautiful",
-      "wrong": [
-        "because",
-        "become"
-      ],
-      "word": "beautiful"
-    },
-    {
-      "item_id": "because",
-      "question": "for the reason that",
-      "correct": "because",
-      "wrong": [
-        "become",
-        "bed"
-      ],
-      "word": "because"
-    },
-    {
-      "item_id": "become",
-      "question": "change into something else",
-      "correct": "become",
-      "wrong": [
-        "bed",
-        "before"
-      ],
-      "word": "become"
-    },
-    {
-      "item_id": "bed",
-      "question": "a place to sleep",
-      "correct": "bed",
-      "wrong": [
-        "before",
-        "begin"
-      ],
-      "word": "bed"
-    },
-    {
-      "item_id": "before",
-      "question": "at an earlier time",
-      "correct": "before",
-      "wrong": [
-        "begin",
-        "behaviour"
-      ],
-      "word": "before"
-    },
-    {
-      "item_id": "begin",
-      "question": "to start doing something",
-      "correct": "begin",
-      "wrong": [
-        "behaviour",
-        "behind"
-      ],
-      "word": "begin"
-    },
-    {
-      "item_id": "behaviour",
-      "question": "way a person acts",
-      "correct": "behaviour",
-      "wrong": [
-        "behind",
-        "belief"
-      ],
-      "word": "behaviour"
-    },
-    {
-      "item_id": "behind",
-      "question": "at the back of something",
-      "correct": "behind",
-      "wrong": [
-        "belief",
-        "believe"
-      ],
-      "word": "behind"
-    },
-    {
-      "item_id": "belief",
-      "question": "something a person thinks is true",
-      "correct": "belief",
-      "wrong": [
-        "believe",
-        "belong"
-      ],
-      "word": "belief"
-    },
-    {
-      "item_id": "believe",
-      "question": "think something is true",
-      "correct": "believe",
-      "wrong": [
-        "belong",
-        "below"
-      ],
-      "word": "believe"
-    },
-    {
-      "item_id": "belong",
-      "question": "be part of a group or place",
-      "correct": "belong",
-      "wrong": [
-        "below",
-        "belt"
-      ],
-      "word": "belong"
-    },
-    {
-      "item_id": "below",
-      "question": "in a lower place",
-      "correct": "below",
-      "wrong": [
-        "belt",
-        "bench"
-      ],
-      "word": "below"
-    },
-    {
-      "item_id": "belt",
-      "question": "strap around waist",
-      "correct": "belt",
-      "wrong": [
-        "bench",
-        "bend"
-      ],
-      "word": "belt"
-    },
-    {
-      "item_id": "bench",
-      "question": "long seat",
-      "correct": "bench",
-      "wrong": [
-        "bend",
-        "beneath"
-      ],
-      "word": "bench"
-    },
-    {
-      "item_id": "bend",
-      "question": "to curve or fold something",
-      "correct": "bend",
-      "wrong": [
-        "beneath",
-        "beside"
-      ],
-      "word": "bend"
-    },
-    {
-      "item_id": "beneath",
-      "question": "under something",
-      "correct": "beneath",
-      "wrong": [
-        "beside",
-        "best"
-      ],
-      "word": "beneath"
-    },
-    {
-      "item_id": "beside",
-      "question": "next to something",
-      "correct": "beside",
-      "wrong": [
-        "best",
-        "better"
-      ],
-      "word": "beside"
-    },
-    {
-      "item_id": "best",
-      "question": "in the most excellent way",
-      "correct": "best",
-      "wrong": [
-        "better",
-        "between"
-      ],
-      "word": "best"
-    },
-    {
-      "item_id": "better",
-      "question": "in a more good way",
-      "correct": "better",
-      "wrong": [
-        "between",
-        "beyond"
-      ],
-      "word": "better"
-    },
-    {
-      "item_id": "between",
-      "question": "in the space separating two things",
-      "correct": "between",
-      "wrong": [
-        "beyond",
-        "big"
-      ],
-      "word": "between"
-    },
-    {
-      "item_id": "beyond",
-      "question": "farther than here",
-      "correct": "beyond",
-      "wrong": [
-        "big",
-        "bill"
-      ],
-      "word": "beyond"
-    },
-    {
-      "item_id": "big",
-      "question": "large in size",
-      "correct": "big",
-      "wrong": [
-        "bill",
-        "billion"
-      ],
-      "word": "big"
-    },
-    {
-      "item_id": "bill",
-      "question": "paper showing money to pay",
-      "correct": "bill",
-      "wrong": [
-        "billion",
-        "bind"
-      ],
-      "word": "bill"
-    },
-    {
-      "item_id": "billion",
-      "question": "thousand million",
-      "correct": "billion",
-      "wrong": [
-        "bind",
-        "bird"
-      ],
-      "word": "billion"
-    },
-    {
-      "item_id": "bind",
-      "question": "tie something tightly",
-      "correct": "bind",
-      "wrong": [
-        "bird",
-        "birth"
-      ],
-      "word": "bind"
-    },
-    {
-      "item_id": "bird",
-      "question": "an animal that can fly",
-      "correct": "bird",
-      "wrong": [
-        "birth",
-        "bit"
-      ],
-      "word": "bird"
-    },
-    {
-      "item_id": "birth",
-      "question": "when a baby is born",
-      "correct": "birth",
-      "wrong": [
-        "bit",
-        "bite"
-      ],
-      "word": "birth"
-    },
-    {
-      "item_id": "bit",
-      "question": "a very small piece of something",
-      "correct": "bit",
-      "wrong": [
-        "bite",
-        "bitter"
-      ],
-      "word": "bit"
-    },
-    {
-      "item_id": "bite",
-      "question": "use teeth to cut",
-      "correct": "bite",
-      "wrong": [
-        "bitter",
-        "black"
-      ],
-      "word": "bite"
-    },
-    {
-      "item_id": "bitter",
-      "question": "having a strong bad taste",
-      "correct": "bitter",
-      "wrong": [
-        "black",
-        "blade"
-      ],
-      "word": "bitter"
-    },
-    {
-      "item_id": "black",
-      "question": "the darkest color",
-      "correct": "black",
-      "wrong": [
-        "blade",
-        "blame"
-      ],
-      "word": "black"
-    },
-    {
-      "item_id": "blade",
-      "question": "sharp cutting edge",
-      "correct": "blade",
-      "wrong": [
-        "blame",
-        "blank"
-      ],
-      "word": "blade"
-    },
-    {
-      "item_id": "blame",
-      "question": "say someone did something wrong",
-      "correct": "blame",
-      "wrong": [
-        "blank",
-        "blind"
-      ],
-      "word": "blame"
-    },
-    {
-      "item_id": "blank",
-      "question": "empty with nothing there",
-      "correct": "blank",
-      "wrong": [
-        "blind",
-        "block"
-      ],
-      "word": "blank"
-    },
-    {
-      "item_id": "blind",
-      "question": "unable to see anything",
-      "correct": "blind",
-      "wrong": [
-        "block",
-        "blood"
-      ],
-      "word": "blind"
-    },
-    {
-      "item_id": "block",
-      "question": "wooden toy cube",
-      "correct": "block",
-      "wrong": [
-        "blood",
-        "blow"
-      ],
-      "word": "block"
-    },
-    {
-      "item_id": "blood",
-      "question": "red liquid inside body",
-      "correct": "blood",
-      "wrong": [
-        "blow",
-        "blue"
-      ],
-      "word": "blood"
-    },
-    {
-      "item_id": "blow",
-      "question": "move air out of the mouth",
-      "correct": "blow",
-      "wrong": [
-        "blue",
-        "board"
-      ],
-      "word": "blow"
-    },
-    {
-      "item_id": "blue",
-      "question": "the color of the sky",
-      "correct": "blue",
-      "wrong": [
-        "board",
-        "boat"
-      ],
-      "word": "blue"
-    },
-    {
-      "item_id": "board",
-      "question": "a flat piece of wood",
-      "correct": "board",
-      "wrong": [
-        "boat",
-        "body"
-      ],
-      "word": "board"
-    },
-    {
-      "item_id": "boat",
-      "question": "small vessel for water",
-      "correct": "boat",
-      "wrong": [
-        "body",
-        "boil"
-      ],
-      "word": "boat"
-    },
-    {
-      "item_id": "body",
-      "question": "whole person or animal",
-      "correct": "body",
-      "wrong": [
-        "boil",
-        "bomb"
-      ],
-      "word": "body"
-    },
-    {
-      "item_id": "boil",
-      "question": "heat until bubbling",
-      "correct": "boil",
-      "wrong": [
-        "bomb",
-        "bone"
-      ],
-      "word": "boil"
-    },
-    {
-      "item_id": "bomb",
-      "question": "thing that blows up",
-      "correct": "bomb",
-      "wrong": [
-        "bone",
-        "book"
-      ],
-      "word": "bomb"
-    },
-    {
-      "item_id": "bone",
-      "question": "hard part inside you",
-      "correct": "bone",
-      "wrong": [
-        "book",
-        "boom"
-      ],
-      "word": "bone"
-    },
-    {
-      "item_id": "book",
-      "question": "pages with words and pictures",
-      "correct": "book",
-      "wrong": [
-        "boom",
-        "boot"
-      ],
-      "word": "book"
-    },
-    {
-      "item_id": "boom",
-      "question": "sudden growth",
-      "correct": "boom",
-      "wrong": [
-        "boot",
-        "border"
-      ],
-      "word": "boom"
-    },
-    {
-      "item_id": "boot",
-      "question": "tall rain shoe",
-      "correct": "boot",
-      "wrong": [
-        "border",
-        "bore"
-      ],
-      "word": "boot"
-    },
-    {
-      "item_id": "border",
-      "question": "line between two lands",
-      "correct": "border",
-      "wrong": [
-        "bore",
-        "born"
-      ],
-      "word": "border"
-    },
-    {
-      "item_id": "bore",
-      "question": "make tired and uninterested",
-      "correct": "bore",
-      "wrong": [
-        "born",
-        "borrow"
-      ],
-      "word": "bore"
-    },
-    {
-      "item_id": "born",
-      "question": "came into life",
-      "correct": "born",
-      "wrong": [
-        "borrow",
-        "boss"
-      ],
-      "word": "born"
-    },
-    {
-      "item_id": "borrow",
-      "question": "take something to return later",
-      "correct": "borrow",
-      "wrong": [
-        "boss",
-        "both"
-      ],
-      "word": "borrow"
-    },
-    {
-      "item_id": "boss",
-      "question": "person in charge at work",
-      "correct": "boss",
-      "wrong": [
-        "both",
-        "bother"
-      ],
-      "word": "boss"
-    },
-    {
-      "item_id": "both",
-      "question": "the two together",
-      "correct": "both",
-      "wrong": [
-        "bother",
-        "bottle"
-      ],
-      "word": "both"
-    },
-    {
-      "item_id": "bother",
-      "question": "to annoy or disturb someone",
-      "correct": "bother",
-      "wrong": [
-        "bottle",
-        "bottom"
-      ],
-      "word": "bother"
-    },
-    {
-      "item_id": "bottle",
-      "question": "a container to hold liquid",
-      "correct": "bottle",
-      "wrong": [
-        "bottom",
-        "boundary"
-      ],
-      "word": "bottle"
-    },
-    {
-      "item_id": "bottom",
-      "question": "at the lowest part",
-      "correct": "bottom",
-      "wrong": [
-        "boundary",
-        "bowl"
-      ],
-      "word": "bottom"
-    },
-    {
-      "item_id": "boundary",
-      "question": "line that marks the edge",
-      "correct": "boundary",
-      "wrong": [
-        "bowl",
-        "box"
-      ],
-      "word": "boundary"
-    },
-    {
-      "item_id": "bowl",
-      "question": "round deep dish",
-      "correct": "bowl",
-      "wrong": [
-        "box",
-        "boy"
-      ],
-      "word": "bowl"
-    },
-    {
-      "item_id": "box",
-      "question": "a container with four sides and a lid",
-      "correct": "box",
-      "wrong": [
-        "boy",
-        "brain"
-      ],
-      "word": "box"
-    },
-    {
-      "item_id": "boy",
-      "question": "a young male child",
-      "correct": "boy",
-      "wrong": [
-        "brain",
+        "attitude",
         "branch"
       ],
-      "word": "boy"
+      "word": "admit"
     },
     {
-      "item_id": "brain",
-      "question": "the thinking part inside the head",
-      "correct": "brain",
+      "item_id": "attitude",
+      "question": "how someone feels or acts",
+      "correct": "attitude",
       "wrong": [
         "branch",
-        "brand"
+        "definition"
       ],
-      "word": "brain"
+      "word": "attitude"
     },
     {
       "item_id": "branch",
       "question": "part of a tree",
       "correct": "branch",
       "wrong": [
-        "brand",
-        "brave"
+        "definition",
+        "drawing"
       ],
       "word": "branch"
     },
     {
-      "item_id": "brand",
-      "question": "product name mark",
-      "correct": "brand",
+      "item_id": "definition",
+      "question": "the meaning of a word",
+      "correct": "definition",
       "wrong": [
-        "brave",
-        "bread"
+        "drawing",
+        "flag"
       ],
-      "word": "brand"
+      "word": "definition"
     },
     {
-      "item_id": "brave",
-      "question": "not afraid of danger",
-      "correct": "brave",
+      "item_id": "drawing",
+      "question": "a picture made by hand",
+      "correct": "drawing",
       "wrong": [
-        "bread",
-        "break"
+        "flag",
+        "frame"
       ],
-      "word": "brave"
+      "word": "drawing"
     },
     {
-      "item_id": "bread",
-      "question": "food baked from flour",
-      "correct": "bread",
+      "item_id": "flag",
+      "question": "cloth symbol on a pole",
+      "correct": "flag",
       "wrong": [
-        "break",
-        "breakfast"
+        "frame",
+        "guest"
       ],
-      "word": "bread"
+      "word": "flag"
     },
     {
-      "item_id": "break",
-      "question": "a short rest",
-      "correct": "break",
+      "item_id": "frame",
+      "question": "border around a picture",
+      "correct": "frame",
       "wrong": [
-        "breakfast",
-        "breast"
+        "guest",
+        "random"
       ],
-      "word": "break"
+      "word": "frame"
     },
     {
-      "item_id": "breakfast",
-      "question": "morning meal you eat",
-      "correct": "breakfast",
+      "item_id": "guest",
+      "question": "a person who visits",
+      "correct": "guest",
       "wrong": [
-        "breast",
+        "random",
+        "academic"
+      ],
+      "word": "guest"
+    },
+    {
+      "item_id": "random",
+      "question": "with no special order",
+      "correct": "random",
+      "wrong": [
+        "academic",
+        "academy"
+      ],
+      "word": "random"
+    },
+    {
+      "item_id": "academic",
+      "question": "connected with school or study",
+      "correct": "academic",
+      "wrong": [
+        "academy",
+        "accurate"
+      ],
+      "word": "academic"
+    },
+    {
+      "item_id": "academy",
+      "question": "school for advanced study",
+      "correct": "academy",
+      "wrong": [
+        "accurate",
+        "achieve"
+      ],
+      "word": "academy"
+    },
+    {
+      "item_id": "accurate",
+      "question": "exactly correct or right",
+      "correct": "accurate",
+      "wrong": [
+        "achieve",
+        "afford"
+      ],
+      "word": "accurate"
+    },
+    {
+      "item_id": "achieve",
+      "question": "reach a goal you worked for",
+      "correct": "achieve",
+      "wrong": [
+        "afford",
+        "assume"
+      ],
+      "word": "achieve"
+    },
+    {
+      "item_id": "afford",
+      "question": "have enough money for",
+      "correct": "afford",
+      "wrong": [
+        "assume",
+        "bottle"
+      ],
+      "word": "afford"
+    },
+    {
+      "item_id": "assume",
+      "question": "think something is true without proof",
+      "correct": "assume",
+      "wrong": [
+        "bottle",
+        "bunch"
+      ],
+      "word": "assume"
+    },
+    {
+      "item_id": "bottle",
+      "question": "a container to hold liquid",
+      "correct": "bottle",
+      "wrong": [
+        "bunch",
+        "category"
+      ],
+      "word": "bottle"
+    },
+    {
+      "item_id": "bunch",
+      "question": "group held together",
+      "correct": "bunch",
+      "wrong": [
+        "category",
+        "chemical"
+      ],
+      "word": "bunch"
+    },
+    {
+      "item_id": "category",
+      "question": "a group of similar things",
+      "correct": "category",
+      "wrong": [
+        "chemical",
+        "competitive"
+      ],
+      "word": "category"
+    },
+    {
+      "item_id": "chemical",
+      "question": "about science lab mixtures",
+      "correct": "chemical",
+      "wrong": [
+        "competitive",
+        "detail"
+      ],
+      "word": "chemical"
+    },
+    {
+      "item_id": "competitive",
+      "question": "trying to win",
+      "correct": "competitive",
+      "wrong": [
+        "detail",
+        "diet"
+      ],
+      "word": "competitive"
+    },
+    {
+      "item_id": "detail",
+      "question": "small extra part",
+      "correct": "detail",
+      "wrong": [
+        "diet",
+        "favourite"
+      ],
+      "word": "detail"
+    },
+    {
+      "item_id": "diet",
+      "question": "the food you eat",
+      "correct": "diet",
+      "wrong": [
+        "favourite",
+        "fruit"
+      ],
+      "word": "diet"
+    },
+    {
+      "item_id": "favourite",
+      "question": "most liked by someone",
+      "correct": "favourite",
+      "wrong": [
+        "fruit",
+        "index"
+      ],
+      "word": "favourite"
+    },
+    {
+      "item_id": "fruit",
+      "question": "sweet food from plants",
+      "correct": "fruit",
+      "wrong": [
+        "index",
+        "item"
+      ],
+      "word": "fruit"
+    },
+    {
+      "item_id": "index",
+      "question": "list of topics in a book",
+      "correct": "index",
+      "wrong": [
+        "item",
+        "scheme"
+      ],
+      "word": "index"
+    },
+    {
+      "item_id": "item",
+      "question": "one thing in a list",
+      "correct": "item",
+      "wrong": [
+        "scheme",
+        "shift"
+      ],
+      "word": "item"
+    },
+    {
+      "item_id": "scheme",
+      "question": "a plan or idea",
+      "correct": "scheme",
+      "wrong": [
+        "shift",
+        "anybody"
+      ],
+      "word": "scheme"
+    },
+    {
+      "item_id": "shift",
+      "question": "set hours at work",
+      "correct": "shift",
+      "wrong": [
+        "anybody",
+        "button"
+      ],
+      "word": "shift"
+    },
+    {
+      "item_id": "anybody",
+      "question": "any person at all",
+      "correct": "anybody",
+      "wrong": [
+        "button",
+        "constitution"
+      ],
+      "word": "anybody"
+    },
+    {
+      "item_id": "button",
+      "question": "small fastener",
+      "correct": "button",
+      "wrong": [
+        "constitution",
+        "consumer"
+      ],
+      "word": "button"
+    },
+    {
+      "item_id": "constitution",
+      "question": "a country's main rules",
+      "correct": "constitution",
+      "wrong": [
+        "consumer",
+        "counter"
+      ],
+      "word": "constitution"
+    },
+    {
+      "item_id": "consumer",
+      "question": "person who buys things",
+      "correct": "consumer",
+      "wrong": [
+        "counter",
+        "creation"
+      ],
+      "word": "consumer"
+    },
+    {
+      "item_id": "counter",
+      "question": "shop service desk",
+      "correct": "counter",
+      "wrong": [
+        "creation",
+        "depending"
+      ],
+      "word": "counter"
+    },
+    {
+      "item_id": "creation",
+      "question": "something someone has made",
+      "correct": "creation",
+      "wrong": [
+        "depending",
+        "depression"
+      ],
+      "word": "creation"
+    },
+    {
+      "item_id": "depending",
+      "question": "relying on something else",
+      "correct": "depending",
+      "wrong": [
+        "depression",
+        "describe"
+      ],
+      "word": "depending"
+    },
+    {
+      "item_id": "depression",
+      "question": "long sadness or an economic slump",
+      "correct": "depression",
+      "wrong": [
+        "describe",
+        "employment"
+      ],
+      "word": "depression"
+    },
+    {
+      "item_id": "describe",
+      "question": "to tell what something is like",
+      "correct": "describe",
+      "wrong": [
+        "employment",
+        "excuse"
+      ],
+      "word": "describe"
+    },
+    {
+      "item_id": "employment",
+      "question": "a paid job",
+      "correct": "employment",
+      "wrong": [
+        "excuse",
+        "expert"
+      ],
+      "word": "employment"
+    },
+    {
+      "item_id": "excuse",
+      "question": "forgive a small mistake",
+      "correct": "excuse",
+      "wrong": [
+        "expert",
+        "frequently"
+      ],
+      "word": "excuse"
+    },
+    {
+      "item_id": "expert",
+      "question": "very skilled person",
+      "correct": "expert",
+      "wrong": [
+        "frequently",
+        "golf"
+      ],
+      "word": "expert"
+    },
+    {
+      "item_id": "frequently",
+      "question": "happening many times",
+      "correct": "frequently",
+      "wrong": [
+        "golf",
+        "identify"
+      ],
+      "word": "frequently"
+    },
+    {
+      "item_id": "golf",
+      "question": "sport with a small ball",
+      "correct": "golf",
+      "wrong": [
+        "identify",
+        "perspective"
+      ],
+      "word": "golf"
+    },
+    {
+      "item_id": "identify",
+      "question": "to name or recognize something",
+      "correct": "identify",
+      "wrong": [
+        "perspective",
+        "promote"
+      ],
+      "word": "identify"
+    },
+    {
+      "item_id": "perspective",
+      "question": "way of seeing things",
+      "correct": "perspective",
+      "wrong": [
+        "promote",
+        "revolution"
+      ],
+      "word": "perspective"
+    },
+    {
+      "item_id": "promote",
+      "question": "give someone a higher job",
+      "correct": "promote",
+      "wrong": [
+        "revolution",
+        "arrest"
+      ],
+      "word": "promote"
+    },
+    {
+      "item_id": "revolution",
+      "question": "a huge turning change",
+      "correct": "revolution",
+      "wrong": [
+        "arrest",
+        "attend"
+      ],
+      "word": "revolution"
+    },
+    {
+      "item_id": "arrest",
+      "question": "to take someone to jail",
+      "correct": "arrest",
+      "wrong": [
+        "attend",
+        "ban"
+      ],
+      "word": "arrest"
+    },
+    {
+      "item_id": "attend",
+      "question": "to go to a place",
+      "correct": "attend",
+      "wrong": [
+        "ban",
+        "carbon"
+      ],
+      "word": "attend"
+    },
+    {
+      "item_id": "ban",
+      "question": "to say something is not allowed",
+      "correct": "ban",
+      "wrong": [
+        "carbon",
+        "circle"
+      ],
+      "word": "ban"
+    },
+    {
+      "item_id": "carbon",
+      "question": "chemical element C",
+      "correct": "carbon",
+      "wrong": [
+        "circle",
+        "concert"
+      ],
+      "word": "carbon"
+    },
+    {
+      "item_id": "circle",
+      "question": "a perfectly round shape",
+      "correct": "circle",
+      "wrong": [
+        "concert",
+        "crash"
+      ],
+      "word": "circle"
+    },
+    {
+      "item_id": "concert",
+      "question": "live music show",
+      "correct": "concert",
+      "wrong": [
+        "crash",
+        "deliver"
+      ],
+      "word": "concert"
+    },
+    {
+      "item_id": "crash",
+      "question": "hit something very hard",
+      "correct": "crash",
+      "wrong": [
+        "deliver",
+        "depth"
+      ],
+      "word": "crash"
+    },
+    {
+      "item_id": "deliver",
+      "question": "to bring something to someone",
+      "correct": "deliver",
+      "wrong": [
+        "depth",
+        "deputy"
+      ],
+      "word": "deliver"
+    },
+    {
+      "item_id": "depth",
+      "question": "how deep something is",
+      "correct": "depth",
+      "wrong": [
+        "deputy",
+        "dirty"
+      ],
+      "word": "depth"
+    },
+    {
+      "item_id": "deputy",
+      "question": "helper to the boss",
+      "correct": "deputy",
+      "wrong": [
+        "dirty",
+        "electronic"
+      ],
+      "word": "deputy"
+    },
+    {
+      "item_id": "dirty",
+      "question": "covered with mud or dust",
+      "correct": "dirty",
+      "wrong": [
+        "electronic",
+        "error"
+      ],
+      "word": "dirty"
+    },
+    {
+      "item_id": "electronic",
+      "question": "using electricity",
+      "correct": "electronic",
+      "wrong": [
+        "error",
+        "existence"
+      ],
+      "word": "electronic"
+    },
+    {
+      "item_id": "error",
+      "question": "a wrong answer or result",
+      "correct": "error",
+      "wrong": [
+        "existence",
+        "expression"
+      ],
+      "word": "error"
+    },
+    {
+      "item_id": "existence",
+      "question": "the state of being real",
+      "correct": "existence",
+      "wrong": [
+        "expression",
+        "factory"
+      ],
+      "word": "existence"
+    },
+    {
+      "item_id": "expression",
+      "question": "look on a face showing feeling",
+      "correct": "expression",
+      "wrong": [
+        "factory",
+        "panel"
+      ],
+      "word": "expression"
+    },
+    {
+      "item_id": "factory",
+      "question": "building where things are made",
+      "correct": "factory",
+      "wrong": [
+        "panel",
+        "somewhat"
+      ],
+      "word": "factory"
+    },
+    {
+      "item_id": "panel",
+      "question": "flat board on a wall",
+      "correct": "panel",
+      "wrong": [
+        "somewhat",
+        "absolute"
+      ],
+      "word": "panel"
+    },
+    {
+      "item_id": "somewhat",
+      "question": "to a small degree; a little",
+      "correct": "somewhat",
+      "wrong": [
+        "absolute",
+        "cable"
+      ],
+      "word": "somewhat"
+    },
+    {
+      "item_id": "absolute",
+      "question": "complete and without any limit",
+      "correct": "absolute",
+      "wrong": [
+        "cable",
+        "calm"
+      ],
+      "word": "absolute"
+    },
+    {
+      "item_id": "cable",
+      "question": "thick wire rope",
+      "correct": "cable",
+      "wrong": [
+        "calm",
+        "client"
+      ],
+      "word": "cable"
+    },
+    {
+      "item_id": "calm",
+      "question": "quiet and not upset",
+      "correct": "calm",
+      "wrong": [
+        "client",
+        "constant"
+      ],
+      "word": "calm"
+    },
+    {
+      "item_id": "client",
+      "question": "a person who buys a service",
+      "correct": "client",
+      "wrong": [
+        "constant",
+        "exciting"
+      ],
+      "word": "client"
+    },
+    {
+      "item_id": "constant",
+      "question": "happens again and again",
+      "correct": "constant",
+      "wrong": [
+        "exciting",
+        "expansion"
+      ],
+      "word": "constant"
+    },
+    {
+      "item_id": "exciting",
+      "question": "making you feel happy and thrilled",
+      "correct": "exciting",
+      "wrong": [
+        "expansion",
+        "attractive"
+      ],
+      "word": "exciting"
+    },
+    {
+      "item_id": "expansion",
+      "question": "growing bigger in size",
+      "correct": "expansion",
+      "wrong": [
+        "attractive",
+        "broad"
+      ],
+      "word": "expansion"
+    },
+    {
+      "item_id": "attractive",
+      "question": "nice to look at or pleasing",
+      "correct": "attractive",
+      "wrong": [
+        "broad",
+        "burn"
+      ],
+      "word": "attractive"
+    },
+    {
+      "item_id": "broad",
+      "question": "wide from side to side",
+      "correct": "broad",
+      "wrong": [
+        "burn",
+        "cake"
+      ],
+      "word": "broad"
+    },
+    {
+      "item_id": "burn",
+      "question": "to destroy with fire",
+      "correct": "burn",
+      "wrong": [
+        "cake",
+        "closely"
+      ],
+      "word": "burn"
+    },
+    {
+      "item_id": "cake",
+      "question": "sweet baked dessert",
+      "correct": "cake",
+      "wrong": [
+        "closely",
+        "contest"
+      ],
+      "word": "cake"
+    },
+    {
+      "item_id": "closely",
+      "question": "in a very near way",
+      "correct": "closely",
+      "wrong": [
+        "contest",
+        "portion"
+      ],
+      "word": "closely"
+    },
+    {
+      "item_id": "contest",
+      "question": "competition",
+      "correct": "contest",
+      "wrong": [
+        "portion",
+        "respond"
+      ],
+      "word": "contest"
+    },
+    {
+      "item_id": "portion",
+      "question": "part of a whole",
+      "correct": "portion",
+      "wrong": [
+        "respond",
+        "ultimate"
+      ],
+      "word": "portion"
+    },
+    {
+      "item_id": "respond",
+      "question": "answer or reply to someone",
+      "correct": "respond",
+      "wrong": [
+        "ultimate",
+        "blind"
+      ],
+      "word": "respond"
+    },
+    {
+      "item_id": "ultimate",
+      "question": "being the last or greatest possible",
+      "correct": "ultimate",
+      "wrong": [
+        "blind",
         "breath"
       ],
-      "word": "breakfast"
+      "word": "ultimate"
     },
     {
-      "item_id": "breast",
-      "question": "chest front part",
-      "correct": "breast",
+      "item_id": "blind",
+      "question": "unable to see anything",
+      "correct": "blind",
       "wrong": [
         "breath",
-        "breathe"
+        "brief"
       ],
-      "word": "breast"
+      "word": "blind"
     },
     {
       "item_id": "breath",
       "question": "air from your lungs",
       "correct": "breath",
       "wrong": [
-        "breathe",
-        "breed"
+        "brief",
+        "chest"
       ],
       "word": "breath"
     },
     {
-      "item_id": "breathe",
-      "question": "to take air into the lungs",
-      "correct": "breathe",
+      "item_id": "brief",
+      "question": "lasting only a short time",
+      "correct": "brief",
       "wrong": [
-        "breed",
-        "brick"
+        "chest",
+        "conduct"
       ],
-      "word": "breathe"
+      "word": "brief"
     },
     {
-      "item_id": "breed",
-      "question": "raise animals for babies",
-      "correct": "breed",
+      "item_id": "chest",
+      "question": "big box for storing",
+      "correct": "chest",
       "wrong": [
-        "brick",
-        "bridge"
+        "conduct",
+        "decade"
       ],
-      "word": "breed"
+      "word": "chest"
     },
     {
-      "item_id": "brick",
-      "question": "baked clay block",
-      "correct": "brick",
+      "item_id": "conduct",
+      "question": "the way you behave",
+      "correct": "conduct",
       "wrong": [
-        "bridge",
-        "bright"
+        "decade",
+        "destroy"
       ],
-      "word": "brick"
+      "word": "conduct"
     },
     {
-      "item_id": "bridge",
-      "question": "a path over water",
-      "correct": "bridge",
+      "item_id": "decade",
+      "question": "ten years together",
+      "correct": "decade",
       "wrong": [
-        "bright",
-        "bring"
+        "destroy",
+        "external"
       ],
-      "word": "bridge"
+      "word": "decade"
     },
     {
-      "item_id": "bright",
-      "question": "full of light",
-      "correct": "bright",
+      "item_id": "destroy",
+      "question": "to break something completely",
+      "correct": "destroy",
       "wrong": [
-        "bring",
-        "award"
+        "external",
+        "grab"
       ],
-      "word": "bright"
+      "word": "destroy"
     },
     {
-      "item_id": "bring",
-      "question": "to carry something here",
-      "correct": "bring",
+      "item_id": "external",
+      "question": "outside part",
+      "correct": "external",
       "wrong": [
-        "award",
-        "away"
+        "grab",
+        "principal"
       ],
-      "word": "bring"
+      "word": "external"
+    },
+    {
+      "item_id": "grab",
+      "question": "take something quickly with your hand",
+      "correct": "grab",
+      "wrong": [
+        "principal",
+        "survive"
+      ],
+      "word": "grab"
+    },
+    {
+      "item_id": "principal",
+      "question": "most important or main",
+      "correct": "principal",
+      "wrong": [
+        "survive",
+        "aim"
+      ],
+      "word": "principal"
+    },
+    {
+      "item_id": "survive",
+      "question": "to stay alive after danger",
+      "correct": "survive",
+      "wrong": [
+        "aim",
+        "danger"
+      ],
+      "word": "survive"
+    },
+    {
+      "item_id": "aim",
+      "question": "a goal you want to reach",
+      "correct": "aim",
+      "wrong": [
+        "danger",
+        "delivery"
+      ],
+      "word": "aim"
     }
   ]
 }

@@ -4,404 +4,404 @@
   "seconds_per_letter": 5,
   "items": [
     {
-      "item_id": "clinic",
-      "word": "clinic"
+      "item_id": "capture",
+      "word": "capture"
     },
     {
-      "item_id": "clock",
-      "word": "clock"
+      "item_id": "ceremony",
+      "word": "ceremony"
     },
     {
-      "item_id": "close",
-      "word": "close"
+      "item_id": "designer",
+      "word": "designer"
     },
     {
-      "item_id": "closely",
-      "word": "closely"
+      "item_id": "diamond",
+      "word": "diamond"
     },
     {
-      "item_id": "clothes",
-      "word": "clothes"
+      "item_id": "economics",
+      "word": "economics"
     },
     {
-      "item_id": "cloud",
-      "word": "cloud"
+      "item_id": "efficient",
+      "word": "efficient"
     },
     {
-      "item_id": "club",
-      "word": "club"
+      "item_id": "electrical",
+      "word": "electrical"
     },
     {
-      "item_id": "clue",
-      "word": "clue"
+      "item_id": "establishment",
+      "word": "establishment"
     },
     {
-      "item_id": "cluster",
-      "word": "cluster"
+      "item_id": "flower",
+      "word": "flower"
     },
     {
-      "item_id": "coach",
-      "word": "coach"
+      "item_id": "odd",
+      "word": "odd"
     },
     {
-      "item_id": "coal",
-      "word": "coal"
+      "item_id": "participate",
+      "word": "participate"
     },
     {
-      "item_id": "coast",
-      "word": "coast"
-    },
-    {
-      "item_id": "coat",
-      "word": "coat"
-    },
-    {
-      "item_id": "coffee",
-      "word": "coffee"
-    },
-    {
-      "item_id": "cognitive",
-      "word": "cognitive"
-    },
-    {
-      "item_id": "cold",
-      "word": "cold"
-    },
-    {
-      "item_id": "collect",
-      "word": "collect"
-    },
-    {
-      "item_id": "collection",
-      "word": "collection"
-    },
-    {
-      "item_id": "college",
-      "word": "college"
-    },
-    {
-      "item_id": "colour",
-      "word": "colour"
-    },
-    {
-      "item_id": "column",
-      "word": "column"
-    },
-    {
-      "item_id": "combination",
-      "word": "combination"
-    },
-    {
-      "item_id": "combine",
-      "word": "combine"
-    },
-    {
-      "item_id": "come",
-      "word": "come"
+      "item_id": "aspect",
+      "word": "aspect"
     },
     {
       "item_id": "comfort",
       "word": "comfort"
     },
     {
-      "item_id": "comfortable",
-      "word": "comfortable"
+      "item_id": "cousin",
+      "word": "cousin"
     },
     {
-      "item_id": "command",
-      "word": "command"
+      "item_id": "crack",
+      "word": "crack"
     },
     {
-      "item_id": "commercial",
-      "word": "commercial"
+      "item_id": "deck",
+      "word": "deck"
     },
     {
-      "item_id": "commitment",
-      "word": "commitment"
+      "item_id": "dramatic",
+      "word": "dramatic"
     },
     {
-      "item_id": "committee",
-      "word": "committee"
+      "item_id": "dust",
+      "word": "dust"
     },
     {
-      "item_id": "common",
-      "word": "common"
+      "item_id": "evolution",
+      "word": "evolution"
     },
     {
-      "item_id": "communication",
-      "word": "communication"
+      "item_id": "priority",
+      "word": "priority"
     },
     {
-      "item_id": "company",
-      "word": "company"
+      "item_id": "whereas",
+      "word": "whereas"
     },
     {
-      "item_id": "compare",
-      "word": "compare"
-    },
-    {
-      "item_id": "comparison",
-      "word": "comparison"
-    },
-    {
-      "item_id": "compete",
-      "word": "compete"
-    },
-    {
-      "item_id": "competition",
-      "word": "competition"
-    },
-    {
-      "item_id": "competitive",
-      "word": "competitive"
-    },
-    {
-      "item_id": "complain",
-      "word": "complain"
-    },
-    {
-      "item_id": "complaint",
-      "word": "complaint"
-    },
-    {
-      "item_id": "complete",
-      "word": "complete"
-    },
-    {
-      "item_id": "compose",
-      "word": "compose"
-    },
-    {
-      "item_id": "composition",
-      "word": "composition"
-    },
-    {
-      "item_id": "computer",
-      "word": "computer"
-    },
-    {
-      "item_id": "concern",
-      "word": "concern"
-    },
-    {
-      "item_id": "concerned",
-      "word": "concerned"
-    },
-    {
-      "item_id": "concert",
-      "word": "concert"
+      "item_id": "butter",
+      "word": "butter"
     },
     {
       "item_id": "conclusion",
       "word": "conclusion"
     },
     {
-      "item_id": "concrete",
-      "word": "concrete"
+      "item_id": "confirm",
+      "word": "confirm"
     },
     {
-      "item_id": "condition",
-      "word": "condition"
+      "item_id": "decline",
+      "word": "decline"
     },
     {
-      "item_id": "conference",
-      "word": "conference"
+      "item_id": "delay",
+      "word": "delay"
     },
     {
-      "item_id": "confidence",
-      "word": "confidence"
+      "item_id": "desert",
+      "word": "desert"
     },
     {
-      "item_id": "confident",
-      "word": "confident"
+      "item_id": "downtown",
+      "word": "downtown"
     },
     {
-      "item_id": "confuse",
-      "word": "confuse"
+      "item_id": "elite",
+      "word": "elite"
+    },
+    {
+      "item_id": "forth",
+      "word": "forth"
+    },
+    {
+      "item_id": "layer",
+      "word": "layer"
+    },
+    {
+      "item_id": "obtain",
+      "word": "obtain"
+    },
+    {
+      "item_id": "abroad",
+      "word": "abroad"
+    },
+    {
+      "item_id": "associate",
+      "word": "associate"
+    },
+    {
+      "item_id": "bench",
+      "word": "bench"
+    },
+    {
+      "item_id": "bother",
+      "word": "bother"
+    },
+    {
+      "item_id": "broadcast",
+      "word": "broadcast"
+    },
+    {
+      "item_id": "citizen",
+      "word": "citizen"
+    },
+    {
+      "item_id": "compete",
+      "word": "compete"
+    },
+    {
+      "item_id": "disaster",
+      "word": "disaster"
+    },
+    {
+      "item_id": "discover",
+      "word": "discover"
+    },
+    {
+      "item_id": "entrance",
+      "word": "entrance"
+    },
+    {
+      "item_id": "equally",
+      "word": "equally"
+    },
+    {
+      "item_id": "fitness",
+      "word": "fitness"
+    },
+    {
+      "item_id": "friendship",
+      "word": "friendship"
+    },
+    {
+      "item_id": "intense",
+      "word": "intense"
+    },
+    {
+      "item_id": "resource",
+      "word": "resource"
+    },
+    {
+      "item_id": "subsequent",
+      "word": "subsequent"
+    },
+    {
+      "item_id": "visible",
+      "word": "visible"
+    },
+    {
+      "item_id": "angle",
+      "word": "angle"
+    },
+    {
+      "item_id": "arrive",
+      "word": "arrive"
+    },
+    {
+      "item_id": "belong",
+      "word": "belong"
     },
     {
       "item_id": "connect",
       "word": "connect"
     },
     {
-      "item_id": "connection",
-      "word": "connection"
+      "item_id": "efficiency",
+      "word": "efficiency"
     },
     {
-      "item_id": "conscious",
-      "word": "conscious"
+      "item_id": "enterprise",
+      "word": "enterprise"
     },
     {
-      "item_id": "consequence",
-      "word": "consequence"
+      "item_id": "experiment",
+      "word": "experiment"
     },
     {
-      "item_id": "conservative",
-      "word": "conservative"
+      "item_id": "grass",
+      "word": "grass"
     },
     {
-      "item_id": "consider",
-      "word": "consider"
+      "item_id": "hence",
+      "word": "hence"
     },
     {
-      "item_id": "consideration",
-      "word": "consideration"
+      "item_id": "valid",
+      "word": "valid"
     },
     {
-      "item_id": "consistent",
-      "word": "consistent"
+      "item_id": "agriculture",
+      "word": "agriculture"
     },
     {
-      "item_id": "constitution",
-      "word": "constitution"
+      "item_id": "collect",
+      "word": "collect"
     },
     {
-      "item_id": "construction",
-      "word": "construction"
+      "item_id": "currency",
+      "word": "currency"
     },
     {
-      "item_id": "consumer",
-      "word": "consumer"
+      "item_id": "exhibition",
+      "word": "exhibition"
+    },
+    {
+      "item_id": "funeral",
+      "word": "funeral"
+    },
+    {
+      "item_id": "genuine",
+      "word": "genuine"
+    },
+    {
+      "item_id": "monitor",
+      "word": "monitor"
+    },
+    {
+      "item_id": "ratio",
+      "word": "ratio"
+    },
+    {
+      "item_id": "reverse",
+      "word": "reverse"
+    },
+    {
+      "item_id": "summary",
+      "word": "summary"
+    },
+    {
+      "item_id": "asleep",
+      "word": "asleep"
+    },
+    {
+      "item_id": "automatic",
+      "word": "automatic"
+    },
+    {
+      "item_id": "behaviour",
+      "word": "behaviour"
+    },
+    {
+      "item_id": "coat",
+      "word": "coat"
+    },
+    {
+      "item_id": "comprehensive",
+      "word": "comprehensive"
+    },
+    {
+      "item_id": "consent",
+      "word": "consent"
+    },
+    {
+      "item_id": "destruction",
+      "word": "destruction"
+    },
+    {
+      "item_id": "divorce",
+      "word": "divorce"
+    },
+    {
+      "item_id": "engage",
+      "word": "engage"
+    },
+    {
+      "item_id": "extraordinary",
+      "word": "extraordinary"
+    },
+    {
+      "item_id": "frequency",
+      "word": "frequency"
+    },
+    {
+      "item_id": "gene",
+      "word": "gene"
+    },
+    {
+      "item_id": "logic",
+      "word": "logic"
+    },
+    {
+      "item_id": "objective",
+      "word": "objective"
+    },
+    {
+      "item_id": "breast",
+      "word": "breast"
     },
     {
       "item_id": "consumption",
       "word": "consumption"
     },
     {
-      "item_id": "contain",
-      "word": "contain"
+      "item_id": "cotton",
+      "word": "cotton"
     },
     {
-      "item_id": "container",
-      "word": "container"
+      "item_id": "discount",
+      "word": "discount"
     },
     {
-      "item_id": "content",
-      "word": "content"
+      "item_id": "dozen",
+      "word": "dozen"
     },
     {
-      "item_id": "contest",
-      "word": "contest"
+      "item_id": "exception",
+      "word": "exception"
     },
     {
-      "item_id": "continent",
-      "word": "continent"
+      "item_id": "exit",
+      "word": "exit"
     },
     {
-      "item_id": "continue",
-      "word": "continue"
+      "item_id": "expand",
+      "word": "expand"
     },
     {
-      "item_id": "continuous",
-      "word": "continuous"
+      "item_id": "fancy",
+      "word": "fancy"
+    },
+    {
+      "item_id": "indicate",
+      "word": "indicate"
+    },
+    {
+      "item_id": "input",
+      "word": "input"
+    },
+    {
+      "item_id": "outcome",
+      "word": "outcome"
+    },
+    {
+      "item_id": "sequence",
+      "word": "sequence"
+    },
+    {
+      "item_id": "absence",
+      "word": "absence"
+    },
+    {
+      "item_id": "contribute",
+      "word": "contribute"
     },
     {
       "item_id": "contribution",
       "word": "contribution"
     },
     {
-      "item_id": "control",
-      "word": "control"
-    },
-    {
-      "item_id": "convenience",
-      "word": "convenience"
-    },
-    {
-      "item_id": "convenient",
-      "word": "convenient"
-    },
-    {
-      "item_id": "convention",
-      "word": "convention"
-    },
-    {
-      "item_id": "conventional",
-      "word": "conventional"
-    },
-    {
-      "item_id": "conversation",
-      "word": "conversation"
-    },
-    {
-      "item_id": "cook",
-      "word": "cook"
-    },
-    {
-      "item_id": "cool",
-      "word": "cool"
-    },
-    {
-      "item_id": "cope",
-      "word": "cope"
-    },
-    {
-      "item_id": "copy",
-      "word": "copy"
-    },
-    {
-      "item_id": "corn",
-      "word": "corn"
-    },
-    {
-      "item_id": "corner",
-      "word": "corner"
-    },
-    {
-      "item_id": "correct",
-      "word": "correct"
-    },
-    {
-      "item_id": "cost",
-      "word": "cost"
-    },
-    {
-      "item_id": "cotton",
-      "word": "cotton"
-    },
-    {
-      "item_id": "couch",
-      "word": "couch"
-    },
-    {
-      "item_id": "could",
-      "word": "could"
-    },
-    {
-      "item_id": "council",
-      "word": "council"
-    },
-    {
-      "item_id": "count",
-      "word": "count"
-    },
-    {
-      "item_id": "counter",
-      "word": "counter"
-    },
-    {
-      "item_id": "country",
-      "word": "country"
-    },
-    {
-      "item_id": "county",
-      "word": "county"
-    },
-    {
-      "item_id": "course",
-      "word": "course"
-    },
-    {
-      "item_id": "court",
-      "word": "court"
-    },
-    {
-      "item_id": "cousin",
-      "word": "cousin"
-    },
-    {
-      "item_id": "cover",
-      "word": "cover"
+      "item_id": "deny",
+      "word": "deny"
     }
   ]
 }

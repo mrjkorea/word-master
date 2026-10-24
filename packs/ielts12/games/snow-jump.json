@@ -1,1008 +1,1008 @@
 {
   "pack_id": "ielts12",
   "title": "IELTS 1101–1200",
-  "module_id": "snow_jump",
+  "module_id": "word_master",
   "seconds": 15,
   "items": [
     {
-      "item_id": "diet",
-      "question": "the food you eat",
-      "correct": "diet",
+      "item_id": "neutral",
+      "question": "not on either side",
+      "correct": "neutral",
       "wrong": [
-        "differ",
-        "difference"
+        "asset",
+        "brush"
       ],
-      "word": "diet"
+      "word": "neutral"
     },
     {
-      "item_id": "differ",
-      "question": "to be not the same",
-      "correct": "differ",
+      "item_id": "asset",
+      "question": "something useful or valuable",
+      "correct": "asset",
       "wrong": [
-        "difference",
-        "different"
+        "brush",
+        "burden"
       ],
-      "word": "differ"
+      "word": "asset"
     },
     {
-      "item_id": "difference",
-      "question": "how things are not the same",
-      "correct": "difference",
+      "item_id": "brush",
+      "question": "clean with a brush",
+      "correct": "brush",
       "wrong": [
-        "different",
+        "burden",
+        "complain"
+      ],
+      "word": "brush"
+    },
+    {
+      "item_id": "burden",
+      "question": "heavy load to carry",
+      "correct": "burden",
+      "wrong": [
+        "complain",
         "differently"
       ],
-      "word": "difference"
+      "word": "burden"
     },
     {
-      "item_id": "different",
-      "question": "not the same",
-      "correct": "different",
+      "item_id": "complain",
+      "question": "to say you are unhappy",
+      "correct": "complain",
       "wrong": [
         "differently",
-        "difficult"
+        "discipline"
       ],
-      "word": "different"
+      "word": "complain"
     },
     {
       "item_id": "differently",
       "question": "in another way",
       "correct": "differently",
       "wrong": [
-        "difficult",
-        "difficulty"
+        "discipline",
+        "dominant"
       ],
       "word": "differently"
-    },
-    {
-      "item_id": "difficult",
-      "question": "hard to do",
-      "correct": "difficult",
-      "wrong": [
-        "difficulty",
-        "dig"
-      ],
-      "word": "difficult"
-    },
-    {
-      "item_id": "difficulty",
-      "question": "something that is hard to do",
-      "correct": "difficulty",
-      "wrong": [
-        "dig",
-        "digital"
-      ],
-      "word": "difficulty"
-    },
-    {
-      "item_id": "dig",
-      "question": "make a hole in the ground",
-      "correct": "dig",
-      "wrong": [
-        "digital",
-        "dinner"
-      ],
-      "word": "dig"
-    },
-    {
-      "item_id": "digital",
-      "question": "using computers and screens",
-      "correct": "digital",
-      "wrong": [
-        "dinner",
-        "direct"
-      ],
-      "word": "digital"
-    },
-    {
-      "item_id": "dinner",
-      "question": "evening meal with family",
-      "correct": "dinner",
-      "wrong": [
-        "direct",
-        "direction"
-      ],
-      "word": "dinner"
-    },
-    {
-      "item_id": "direct",
-      "question": "straight and clear way",
-      "correct": "direct",
-      "wrong": [
-        "direction",
-        "directly"
-      ],
-      "word": "direct"
-    },
-    {
-      "item_id": "direction",
-      "question": "the way something moves or faces",
-      "correct": "direction",
-      "wrong": [
-        "directly",
-        "director"
-      ],
-      "word": "direction"
-    },
-    {
-      "item_id": "directly",
-      "question": "in a straight line",
-      "correct": "directly",
-      "wrong": [
-        "director",
-        "dirt"
-      ],
-      "word": "directly"
-    },
-    {
-      "item_id": "director",
-      "question": "person who leads a movie or play",
-      "correct": "director",
-      "wrong": [
-        "dirt",
-        "dirty"
-      ],
-      "word": "director"
-    },
-    {
-      "item_id": "dirt",
-      "question": "soil or dust on the ground",
-      "correct": "dirt",
-      "wrong": [
-        "dirty",
-        "disability"
-      ],
-      "word": "dirt"
-    },
-    {
-      "item_id": "dirty",
-      "question": "covered with mud or dust",
-      "correct": "dirty",
-      "wrong": [
-        "disability",
-        "disagree"
-      ],
-      "word": "dirty"
-    },
-    {
-      "item_id": "disability",
-      "question": "condition that limits movement or senses",
-      "correct": "disability",
-      "wrong": [
-        "disagree",
-        "disappear"
-      ],
-      "word": "disability"
-    },
-    {
-      "item_id": "disagree",
-      "question": "have a different opinion",
-      "correct": "disagree",
-      "wrong": [
-        "disappear",
-        "disappoint"
-      ],
-      "word": "disagree"
-    },
-    {
-      "item_id": "disappear",
-      "question": "to go out of sight",
-      "correct": "disappear",
-      "wrong": [
-        "disappoint",
-        "disaster"
-      ],
-      "word": "disappear"
-    },
-    {
-      "item_id": "disappoint",
-      "question": "make someone feel let down",
-      "correct": "disappoint",
-      "wrong": [
-        "disaster",
-        "discipline"
-      ],
-      "word": "disappoint"
-    },
-    {
-      "item_id": "disaster",
-      "question": "a sudden terrible event",
-      "correct": "disaster",
-      "wrong": [
-        "discipline",
-        "discount"
-      ],
-      "word": "disaster"
     },
     {
       "item_id": "discipline",
       "question": "practice following the rules",
       "correct": "discipline",
       "wrong": [
-        "discount",
-        "discover"
+        "dominant",
+        "essay"
       ],
       "word": "discipline"
-    },
-    {
-      "item_id": "discount",
-      "question": "lower price than usual",
-      "correct": "discount",
-      "wrong": [
-        "discover",
-        "discovery"
-      ],
-      "word": "discount"
-    },
-    {
-      "item_id": "discover",
-      "question": "find something new",
-      "correct": "discover",
-      "wrong": [
-        "discovery",
-        "discuss"
-      ],
-      "word": "discover"
-    },
-    {
-      "item_id": "discovery",
-      "question": "finding something new",
-      "correct": "discovery",
-      "wrong": [
-        "discuss",
-        "discussion"
-      ],
-      "word": "discovery"
-    },
-    {
-      "item_id": "discuss",
-      "question": "to talk about something together",
-      "correct": "discuss",
-      "wrong": [
-        "discussion",
-        "disease"
-      ],
-      "word": "discuss"
-    },
-    {
-      "item_id": "discussion",
-      "question": "talking together about a topic",
-      "correct": "discussion",
-      "wrong": [
-        "disease",
-        "dish"
-      ],
-      "word": "discussion"
-    },
-    {
-      "item_id": "disease",
-      "question": "an illness that makes you sick",
-      "correct": "disease",
-      "wrong": [
-        "dish",
-        "dismiss"
-      ],
-      "word": "disease"
-    },
-    {
-      "item_id": "dish",
-      "question": "food served on a plate",
-      "correct": "dish",
-      "wrong": [
-        "dismiss",
-        "disorder"
-      ],
-      "word": "dish"
-    },
-    {
-      "item_id": "dismiss",
-      "question": "to tell someone to leave",
-      "correct": "dismiss",
-      "wrong": [
-        "disorder",
-        "dispute"
-      ],
-      "word": "dismiss"
-    },
-    {
-      "item_id": "disorder",
-      "question": "illness or messy state",
-      "correct": "disorder",
-      "wrong": [
-        "dispute",
-        "distance"
-      ],
-      "word": "disorder"
-    },
-    {
-      "item_id": "dispute",
-      "question": "an argument between people",
-      "correct": "dispute",
-      "wrong": [
-        "distance",
-        "distant"
-      ],
-      "word": "dispute"
-    },
-    {
-      "item_id": "distance",
-      "question": "how far apart two places are",
-      "correct": "distance",
-      "wrong": [
-        "distant",
-        "distinction"
-      ],
-      "word": "distance"
-    },
-    {
-      "item_id": "distant",
-      "question": "far away in space",
-      "correct": "distant",
-      "wrong": [
-        "distinction",
-        "distinguish"
-      ],
-      "word": "distant"
-    },
-    {
-      "item_id": "distinction",
-      "question": "clear difference between things",
-      "correct": "distinction",
-      "wrong": [
-        "distinguish",
-        "distribution"
-      ],
-      "word": "distinction"
-    },
-    {
-      "item_id": "distinguish",
-      "question": "to see or show a difference",
-      "correct": "distinguish",
-      "wrong": [
-        "distribution",
-        "district"
-      ],
-      "word": "distinguish"
-    },
-    {
-      "item_id": "distribution",
-      "question": "giving things out to people",
-      "correct": "distribution",
-      "wrong": [
-        "district",
-        "disturb"
-      ],
-      "word": "distribution"
-    },
-    {
-      "item_id": "district",
-      "question": "an area of a city",
-      "correct": "district",
-      "wrong": [
-        "disturb",
-        "diversity"
-      ],
-      "word": "district"
-    },
-    {
-      "item_id": "disturb",
-      "question": "interrupt someone at rest",
-      "correct": "disturb",
-      "wrong": [
-        "diversity",
-        "divide"
-      ],
-      "word": "disturb"
-    },
-    {
-      "item_id": "diversity",
-      "question": "many different kinds together",
-      "correct": "diversity",
-      "wrong": [
-        "divide",
-        "division"
-      ],
-      "word": "diversity"
-    },
-    {
-      "item_id": "divide",
-      "question": "to split something into parts",
-      "correct": "divide",
-      "wrong": [
-        "division",
-        "divorce"
-      ],
-      "word": "divide"
-    },
-    {
-      "item_id": "division",
-      "question": "splitting numbers into groups",
-      "correct": "division",
-      "wrong": [
-        "divorce",
-        "do"
-      ],
-      "word": "division"
-    },
-    {
-      "item_id": "divorce",
-      "question": "legal end of a marriage",
-      "correct": "divorce",
-      "wrong": [
-        "do",
-        "doctor"
-      ],
-      "word": "divorce"
-    },
-    {
-      "item_id": "do",
-      "question": "to perform an action",
-      "correct": "do",
-      "wrong": [
-        "doctor",
-        "dog"
-      ],
-      "word": "do"
-    },
-    {
-      "item_id": "doctor",
-      "question": "medical person who helps sick people",
-      "correct": "doctor",
-      "wrong": [
-        "dog",
-        "dollar"
-      ],
-      "word": "doctor"
-    },
-    {
-      "item_id": "dog",
-      "question": "a pet animal with four legs",
-      "correct": "dog",
-      "wrong": [
-        "dollar",
-        "dominant"
-      ],
-      "word": "dog"
-    },
-    {
-      "item_id": "dollar",
-      "question": "American paper money",
-      "correct": "dollar",
-      "wrong": [
-        "dominant",
-        "donate"
-      ],
-      "word": "dollar"
     },
     {
       "item_id": "dominant",
       "question": "most powerful or important",
       "correct": "dominant",
       "wrong": [
-        "donate",
-        "door"
+        "essay",
+        "expense"
       ],
       "word": "dominant"
     },
     {
-      "item_id": "donate",
-      "question": "give money or goods to help",
-      "correct": "donate",
+      "item_id": "essay",
+      "question": "short piece of writing on a topic",
+      "correct": "essay",
       "wrong": [
-        "door",
-        "double"
+        "expense",
+        "furthermore"
       ],
-      "word": "donate"
+      "word": "essay"
     },
     {
-      "item_id": "door",
-      "question": "a way to enter a room",
-      "correct": "door",
+      "item_id": "expense",
+      "question": "money that you spend",
+      "correct": "expense",
       "wrong": [
-        "double",
-        "doubt"
+        "furthermore",
+        "climb"
       ],
-      "word": "door"
+      "word": "expense"
     },
     {
-      "item_id": "double",
-      "question": "twice as much or two",
-      "correct": "double",
+      "item_id": "furthermore",
+      "question": "in addition to what was said",
+      "correct": "furthermore",
       "wrong": [
-        "doubt",
-        "down"
+        "climb",
+        "dig"
       ],
-      "word": "double"
+      "word": "furthermore"
     },
     {
-      "item_id": "doubt",
-      "question": "not being sure",
-      "correct": "doubt",
+      "item_id": "climb",
+      "question": "to go up something high",
+      "correct": "climb",
       "wrong": [
-        "down",
-        "downtown"
+        "dig",
+        "employer"
       ],
-      "word": "doubt"
+      "word": "climb"
     },
     {
-      "item_id": "down",
-      "question": "from higher to lower",
-      "correct": "down",
+      "item_id": "dig",
+      "question": "make a hole in the ground",
+      "correct": "dig",
       "wrong": [
-        "downtown",
-        "dozen"
+        "employer",
+        "explosion"
       ],
-      "word": "down"
+      "word": "dig"
     },
     {
-      "item_id": "downtown",
-      "question": "center of a city",
-      "correct": "downtown",
+      "item_id": "employer",
+      "question": "person who gives someone a job",
+      "correct": "employer",
       "wrong": [
-        "dozen",
-        "drag"
+        "explosion",
+        "folk"
       ],
-      "word": "downtown"
+      "word": "employer"
     },
     {
-      "item_id": "dozen",
-      "question": "group of twelve",
-      "correct": "dozen",
+      "item_id": "explosion",
+      "question": "sudden burst with loud noise",
+      "correct": "explosion",
       "wrong": [
-        "drag",
-        "dramatic"
+        "folk",
+        "generate"
       ],
-      "word": "dozen"
+      "word": "explosion"
     },
     {
-      "item_id": "drag",
-      "question": "to pull something along",
-      "correct": "drag",
+      "item_id": "folk",
+      "question": "people in general",
+      "correct": "folk",
       "wrong": [
-        "dramatic",
-        "dramatically"
+        "generate",
+        "integrity"
       ],
-      "word": "drag"
+      "word": "folk"
     },
     {
-      "item_id": "dramatic",
-      "question": "very surprising or exciting",
-      "correct": "dramatic",
+      "item_id": "generate",
+      "question": "to make or create something",
+      "correct": "generate",
       "wrong": [
-        "dramatically",
-        "draw"
+        "integrity",
+        "advocate"
       ],
-      "word": "dramatic"
+      "word": "generate"
     },
     {
-      "item_id": "dramatically",
-      "question": "in a big sudden way",
-      "correct": "dramatically",
+      "item_id": "integrity",
+      "question": "honesty and principles",
+      "correct": "integrity",
       "wrong": [
-        "draw",
-        "drawing"
+        "advocate",
+        "bitter"
       ],
-      "word": "dramatically"
+      "word": "integrity"
     },
     {
-      "item_id": "draw",
-      "question": "to make a picture",
-      "correct": "draw",
+      "item_id": "advocate",
+      "question": "speak up for something",
+      "correct": "advocate",
       "wrong": [
-        "drawing",
-        "dream"
+        "bitter",
+        "clinic"
       ],
-      "word": "draw"
+      "word": "advocate"
     },
     {
-      "item_id": "drawing",
-      "question": "a picture made by hand",
-      "correct": "drawing",
+      "item_id": "bitter",
+      "question": "having a strong bad taste",
+      "correct": "bitter",
       "wrong": [
-        "dream",
-        "dress"
+        "clinic",
+        "continuous"
       ],
-      "word": "drawing"
+      "word": "bitter"
     },
     {
-      "item_id": "dream",
-      "question": "pictures in your mind while sleeping",
-      "correct": "dream",
+      "item_id": "clinic",
+      "question": "small medical centre",
+      "correct": "clinic",
       "wrong": [
-        "dress",
-        "drink"
+        "continuous",
+        "criteria"
       ],
-      "word": "dream"
+      "word": "clinic"
     },
     {
-      "item_id": "dress",
-      "question": "one-piece clothes for girls",
-      "correct": "dress",
+      "item_id": "continuous",
+      "question": "going on without stopping",
+      "correct": "continuous",
       "wrong": [
-        "drink",
-        "drive"
+        "criteria",
+        "disability"
       ],
-      "word": "dress"
+      "word": "continuous"
     },
     {
-      "item_id": "drink",
-      "question": "liquid you swallow",
-      "correct": "drink",
+      "item_id": "criteria",
+      "question": "standards for judging",
+      "correct": "criteria",
       "wrong": [
-        "drive",
-        "driver"
+        "disability",
+        "dish"
       ],
-      "word": "drink"
+      "word": "criteria"
     },
     {
-      "item_id": "drive",
-      "question": "a trip by car",
-      "correct": "drive",
+      "item_id": "disability",
+      "question": "condition that limits movement or senses",
+      "correct": "disability",
       "wrong": [
-        "driver",
-        "drop"
+        "dish",
+        "evaluation"
       ],
-      "word": "drive"
+      "word": "disability"
     },
     {
-      "item_id": "driver",
-      "question": "person who drives a car",
-      "correct": "driver",
+      "item_id": "dish",
+      "question": "food served on a plate",
+      "correct": "dish",
       "wrong": [
-        "drop",
-        "drug"
+        "evaluation",
+        "fence"
       ],
-      "word": "driver"
+      "word": "dish"
     },
     {
-      "item_id": "drop",
-      "question": "tiny round bit of liquid",
-      "correct": "drop",
+      "item_id": "evaluation",
+      "question": "judging how good something is",
+      "correct": "evaluation",
       "wrong": [
-        "drug",
-        "dry"
+        "fence",
+        "gradually"
       ],
-      "word": "drop"
+      "word": "evaluation"
     },
     {
-      "item_id": "drug",
-      "question": "medicine you take to feel better",
-      "correct": "drug",
+      "item_id": "fence",
+      "question": "barrier around a yard",
+      "correct": "fence",
       "wrong": [
-        "dry",
-        "due"
+        "gradually",
+        "gravity"
       ],
-      "word": "drug"
+      "word": "fence"
     },
     {
-      "item_id": "dry",
-      "question": "has no water or moisture",
-      "correct": "dry",
+      "item_id": "gradually",
+      "question": "little by little over time",
+      "correct": "gradually",
       "wrong": [
-        "due",
-        "during"
+        "gravity",
+        "highlight"
       ],
-      "word": "dry"
+      "word": "gradually"
     },
     {
-      "item_id": "due",
-      "question": "expected to happen at a certain time",
-      "correct": "due",
+      "item_id": "gravity",
+      "question": "force that pulls things down",
+      "correct": "gravity",
       "wrong": [
-        "during",
-        "dust"
+        "highlight",
+        "identical"
       ],
-      "word": "due"
+      "word": "gravity"
     },
     {
-      "item_id": "during",
-      "question": "through a period of time",
-      "correct": "during",
+      "item_id": "highlight",
+      "question": "to mark something important",
+      "correct": "highlight",
       "wrong": [
-        "dust",
-        "duty"
+        "identical",
+        "attract"
       ],
-      "word": "during"
+      "word": "highlight"
     },
     {
-      "item_id": "dust",
-      "question": "fine dry powder in the air",
-      "correct": "dust",
+      "item_id": "identical",
+      "question": "exactly the same",
+      "correct": "identical",
       "wrong": [
-        "duty",
-        "each"
+        "attract",
+        "communicate"
       ],
-      "word": "dust"
+      "word": "identical"
     },
     {
-      "item_id": "duty",
-      "question": "a job you must do",
-      "correct": "duty",
+      "item_id": "attract",
+      "question": "to pull things closer",
+      "correct": "attract",
       "wrong": [
-        "each",
-        "eager"
+        "communicate",
+        "demonstrate"
       ],
-      "word": "duty"
+      "word": "attract"
     },
     {
-      "item_id": "each",
-      "question": "every one separately",
-      "correct": "each",
+      "item_id": "communicate",
+      "question": "share ideas with others",
+      "correct": "communicate",
       "wrong": [
-        "eager",
-        "ear"
+        "demonstrate",
+        "depend"
       ],
-      "word": "each"
+      "word": "communicate"
     },
     {
-      "item_id": "eager",
-      "question": "wanting to start now",
-      "correct": "eager",
+      "item_id": "demonstrate",
+      "question": "show how something works",
+      "correct": "demonstrate",
       "wrong": [
-        "ear",
-        "early"
+        "depend",
+        "flesh"
       ],
-      "word": "eager"
+      "word": "demonstrate"
     },
     {
-      "item_id": "ear",
-      "question": "body part for hearing",
-      "correct": "ear",
+      "item_id": "depend",
+      "question": "to need help from someone",
+      "correct": "depend",
       "wrong": [
-        "early",
-        "earn"
+        "flesh",
+        "implement"
       ],
-      "word": "ear"
+      "word": "depend"
     },
     {
-      "item_id": "early",
-      "question": "before the usual time",
-      "correct": "early",
+      "item_id": "flesh",
+      "question": "soft body tissue under skin",
+      "correct": "flesh",
       "wrong": [
-        "earn",
-        "earth"
+        "implement",
+        "transit"
       ],
-      "word": "early"
+      "word": "flesh"
     },
     {
-      "item_id": "earn",
-      "question": "get money for work",
-      "correct": "earn",
+      "item_id": "implement",
+      "question": "to put a plan into action",
+      "correct": "implement",
       "wrong": [
-        "earth",
-        "ease"
+        "transit",
+        "beside"
       ],
-      "word": "earn"
+      "word": "implement"
     },
     {
-      "item_id": "earth",
-      "question": "the planet we live on",
-      "correct": "earth",
+      "item_id": "transit",
+      "question": "passage or public transport",
+      "correct": "transit",
       "wrong": [
-        "ease",
-        "easily"
+        "beside",
+        "blade"
       ],
-      "word": "earth"
+      "word": "transit"
     },
     {
-      "item_id": "ease",
-      "question": "make something less hard",
-      "correct": "ease",
+      "item_id": "beside",
+      "question": "next to something",
+      "correct": "beside",
       "wrong": [
-        "easily",
-        "east"
+        "blade",
+        "boot"
       ],
-      "word": "ease"
+      "word": "beside"
     },
     {
-      "item_id": "easily",
-      "question": "with little effort",
-      "correct": "easily",
+      "item_id": "blade",
+      "question": "sharp cutting edge",
+      "correct": "blade",
       "wrong": [
-        "east",
-        "eastern"
+        "boot",
+        "bulk"
       ],
-      "word": "easily"
+      "word": "blade"
     },
     {
-      "item_id": "east",
-      "question": "where the sun rises",
-      "correct": "east",
+      "item_id": "boot",
+      "question": "tall rain shoe",
+      "correct": "boot",
       "wrong": [
-        "eastern",
-        "easy"
+        "bulk",
+        "corn"
       ],
-      "word": "east"
+      "word": "boot"
     },
     {
-      "item_id": "eastern",
-      "question": "from the east side",
-      "correct": "eastern",
+      "item_id": "bulk",
+      "question": "large mass or majority",
+      "correct": "bulk",
       "wrong": [
-        "easy",
-        "eat"
+        "corn",
+        "dealer"
       ],
-      "word": "eastern"
+      "word": "bulk"
     },
     {
-      "item_id": "easy",
-      "question": "not hard to do",
-      "correct": "easy",
+      "item_id": "corn",
+      "question": "yellow grain crop",
+      "correct": "corn",
       "wrong": [
-        "eat",
-        "economic"
+        "dealer",
+        "distant"
       ],
-      "word": "easy"
+      "word": "corn"
     },
     {
-      "item_id": "eat",
-      "question": "to put food in mouth",
-      "correct": "eat",
+      "item_id": "dealer",
+      "question": "person who sells goods",
+      "correct": "dealer",
       "wrong": [
-        "economic",
-        "economics"
+        "distant",
+        "emotion"
       ],
-      "word": "eat"
+      "word": "dealer"
     },
     {
-      "item_id": "economic",
-      "question": "about money and trade",
-      "correct": "economic",
+      "item_id": "distant",
+      "question": "far away in space",
+      "correct": "distant",
       "wrong": [
-        "economics",
-        "economist"
+        "emotion",
+        "emphasis"
       ],
-      "word": "economic"
+      "word": "distant"
     },
     {
-      "item_id": "economics",
-      "question": "study of money and trade",
-      "correct": "economics",
+      "item_id": "emotion",
+      "question": "a strong inner feeling",
+      "correct": "emotion",
       "wrong": [
-        "economist",
-        "edge"
+        "emphasis",
+        "excitement"
       ],
-      "word": "economics"
+      "word": "emotion"
     },
     {
-      "item_id": "economist",
-      "question": "expert on money and markets",
-      "correct": "economist",
+      "item_id": "emphasis",
+      "question": "special stress on something",
+      "correct": "emphasis",
       "wrong": [
-        "edge",
-        "edition"
+        "excitement",
+        "insight"
       ],
-      "word": "economist"
+      "word": "emphasis"
     },
     {
-      "item_id": "edge",
-      "question": "the sharp side of something",
-      "correct": "edge",
+      "item_id": "excitement",
+      "question": "feeling of eager happiness",
+      "correct": "excitement",
       "wrong": [
-        "edition",
-        "editor"
+        "insight",
+        "scenario"
       ],
-      "word": "edge"
+      "word": "excitement"
     },
     {
-      "item_id": "edition",
-      "question": "one printed book version",
-      "correct": "edition",
+      "item_id": "insight",
+      "question": "deep understanding",
+      "correct": "insight",
       "wrong": [
-        "editor",
-        "educate"
+        "scenario",
+        "trace"
       ],
-      "word": "edition"
+      "word": "insight"
     },
     {
-      "item_id": "editor",
-      "question": "person who checks writing",
-      "correct": "editor",
+      "item_id": "scenario",
+      "question": "possible situation",
+      "correct": "scenario",
       "wrong": [
-        "educate",
-        "education"
+        "trace",
+        "widespread"
       ],
-      "word": "editor"
+      "word": "scenario"
     },
     {
-      "item_id": "educate",
-      "question": "teach someone new things",
-      "correct": "educate",
+      "item_id": "trace",
+      "question": "copy by following lines",
+      "correct": "trace",
       "wrong": [
-        "education",
-        "educational"
+        "widespread",
+        "acknowledge"
       ],
-      "word": "educate"
+      "word": "trace"
     },
     {
-      "item_id": "education",
-      "question": "learning in school or at home",
-      "correct": "education",
+      "item_id": "widespread",
+      "question": "found in many places",
+      "correct": "widespread",
       "wrong": [
-        "educational",
-        "educator"
+        "acknowledge",
+        "bias"
       ],
-      "word": "education"
+      "word": "widespread"
     },
     {
-      "item_id": "educational",
-      "question": "helps you learn new things",
-      "correct": "educational",
+      "item_id": "acknowledge",
+      "question": "to show you heard someone",
+      "correct": "acknowledge",
       "wrong": [
-        "educator",
-        "effect"
+        "bias",
+        "cancel"
       ],
-      "word": "educational"
+      "word": "acknowledge"
     },
     {
-      "item_id": "educator",
-      "question": "person who teaches professionally",
-      "correct": "educator",
+      "item_id": "bias",
+      "question": "unfair preference",
+      "correct": "bias",
       "wrong": [
-        "effect",
-        "effective"
+        "cancel",
+        "ceiling"
       ],
-      "word": "educator"
+      "word": "bias"
     },
     {
-      "item_id": "effect",
-      "question": "result of an action",
-      "correct": "effect",
+      "item_id": "cancel",
+      "question": "stop a planned event",
+      "correct": "cancel",
       "wrong": [
-        "effective",
-        "effectively"
+        "ceiling",
+        "clue"
       ],
-      "word": "effect"
+      "word": "cancel"
     },
     {
-      "item_id": "effective",
-      "question": "works very well",
-      "correct": "effective",
+      "item_id": "ceiling",
+      "question": "top indoor surface",
+      "correct": "ceiling",
       "wrong": [
-        "effectively",
-        "efficiency"
+        "clue",
+        "collapse"
       ],
-      "word": "effective"
+      "word": "ceiling"
     },
     {
-      "item_id": "effectively",
-      "question": "in a way that works well",
-      "correct": "effectively",
+      "item_id": "clue",
+      "question": "hint to solve",
+      "correct": "clue",
       "wrong": [
-        "efficiency",
-        "efficient"
+        "collapse",
+        "compound"
       ],
-      "word": "effectively"
+      "word": "clue"
     },
     {
-      "item_id": "efficiency",
-      "question": "doing work without waste",
-      "correct": "efficiency",
+      "item_id": "collapse",
+      "question": "fall down all at once",
+      "correct": "collapse",
       "wrong": [
-        "efficient",
-        "effort"
+        "compound",
+        "conscious"
       ],
-      "word": "efficiency"
+      "word": "collapse"
     },
     {
-      "item_id": "efficient",
-      "question": "working well without waste",
-      "correct": "efficient",
+      "item_id": "compound",
+      "question": "substance of combined elements",
+      "correct": "compound",
       "wrong": [
-        "effort",
-        "diet"
+        "conscious",
+        "examine"
       ],
-      "word": "efficient"
+      "word": "compound"
     },
     {
-      "item_id": "effort",
-      "question": "trying hard to do something",
-      "correct": "effort",
+      "item_id": "conscious",
+      "question": "aware and thinking clearly",
+      "correct": "conscious",
       "wrong": [
-        "diet",
-        "differ"
+        "examine",
+        "grain"
       ],
-      "word": "effort"
+      "word": "conscious"
+    },
+    {
+      "item_id": "examine",
+      "question": "look at something closely",
+      "correct": "examine",
+      "wrong": [
+        "grain",
+        "proceed"
+      ],
+      "word": "examine"
+    },
+    {
+      "item_id": "grain",
+      "question": "seeds of wheat or rice",
+      "correct": "grain",
+      "wrong": [
+        "proceed",
+        "restore"
+      ],
+      "word": "grain"
+    },
+    {
+      "item_id": "proceed",
+      "question": "to move forward",
+      "correct": "proceed",
+      "wrong": [
+        "restore",
+        "contrary"
+      ],
+      "word": "proceed"
+    },
+    {
+      "item_id": "restore",
+      "question": "bring something back to its original state",
+      "correct": "restore",
+      "wrong": [
+        "contrary",
+        "couch"
+      ],
+      "word": "restore"
+    },
+    {
+      "item_id": "contrary",
+      "question": "opposite to what is expected",
+      "correct": "contrary",
+      "wrong": [
+        "couch",
+        "decrease"
+      ],
+      "word": "contrary"
+    },
+    {
+      "item_id": "couch",
+      "question": "long soft seat",
+      "correct": "couch",
+      "wrong": [
+        "decrease",
+        "notion"
+      ],
+      "word": "couch"
+    },
+    {
+      "item_id": "decrease",
+      "question": "make smaller in amount",
+      "correct": "decrease",
+      "wrong": [
+        "notion",
+        "resolve"
+      ],
+      "word": "decrease"
+    },
+    {
+      "item_id": "notion",
+      "question": "an idea in your head",
+      "correct": "notion",
+      "wrong": [
+        "resolve",
+        "substitute"
+      ],
+      "word": "notion"
+    },
+    {
+      "item_id": "resolve",
+      "question": "to find an answer",
+      "correct": "resolve",
+      "wrong": [
+        "substitute",
+        "apologize"
+      ],
+      "word": "resolve"
+    },
+    {
+      "item_id": "substitute",
+      "question": "use instead of another",
+      "correct": "substitute",
+      "wrong": [
+        "apologize",
+        "creature"
+      ],
+      "word": "substitute"
+    },
+    {
+      "item_id": "apologize",
+      "question": "say sorry",
+      "correct": "apologize",
+      "wrong": [
+        "creature",
+        "exhibit"
+      ],
+      "word": "apologize"
+    },
+    {
+      "item_id": "creature",
+      "question": "a living animal",
+      "correct": "creature",
+      "wrong": [
+        "exhibit",
+        "gentleman"
+      ],
+      "word": "creature"
+    },
+    {
+      "item_id": "exhibit",
+      "question": "show for others",
+      "correct": "exhibit",
+      "wrong": [
+        "gentleman",
+        "preliminary"
+      ],
+      "word": "exhibit"
+    },
+    {
+      "item_id": "gentleman",
+      "question": "polite and kind man",
+      "correct": "gentleman",
+      "wrong": [
+        "preliminary",
+        "react"
+      ],
+      "word": "gentleman"
+    },
+    {
+      "item_id": "preliminary",
+      "question": "first before the main",
+      "correct": "preliminary",
+      "wrong": [
+        "react",
+        "retain"
+      ],
+      "word": "preliminary"
+    },
+    {
+      "item_id": "react",
+      "question": "respond to something",
+      "correct": "react",
+      "wrong": [
+        "retain",
+        "burst"
+      ],
+      "word": "react"
+    },
+    {
+      "item_id": "retain",
+      "question": "to keep something you have",
+      "correct": "retain",
+      "wrong": [
+        "burst",
+        "classroom"
+      ],
+      "word": "retain"
+    },
+    {
+      "item_id": "burst",
+      "question": "break open all at once",
+      "correct": "burst",
+      "wrong": [
+        "classroom",
+        "convenient"
+      ],
+      "word": "burst"
+    },
+    {
+      "item_id": "classroom",
+      "question": "room for lessons",
+      "correct": "classroom",
+      "wrong": [
+        "convenient",
+        "crop"
+      ],
+      "word": "classroom"
+    },
+    {
+      "item_id": "convenient",
+      "question": "easy to use or reach",
+      "correct": "convenient",
+      "wrong": [
+        "crop",
+        "elderly"
+      ],
+      "word": "convenient"
+    },
+    {
+      "item_id": "crop",
+      "question": "plants grown on a farm",
+      "correct": "crop",
+      "wrong": [
+        "elderly",
+        "eliminate"
+      ],
+      "word": "crop"
+    },
+    {
+      "item_id": "elderly",
+      "question": "old in age and wise",
+      "correct": "elderly",
+      "wrong": [
+        "eliminate",
+        "farmer"
+      ],
+      "word": "elderly"
+    },
+    {
+      "item_id": "eliminate",
+      "question": "take away completely",
+      "correct": "eliminate",
+      "wrong": [
+        "farmer",
+        "protocol"
+      ],
+      "word": "eliminate"
+    },
+    {
+      "item_id": "farmer",
+      "question": "person who grows food",
+      "correct": "farmer",
+      "wrong": [
+        "protocol",
+        "abstract"
+      ],
+      "word": "farmer"
+    },
+    {
+      "item_id": "protocol",
+      "question": "official procedure",
+      "correct": "protocol",
+      "wrong": [
+        "abstract",
+        "awake"
+      ],
+      "word": "protocol"
+    },
+    {
+      "item_id": "abstract",
+      "question": "made of shapes only",
+      "correct": "abstract",
+      "wrong": [
+        "awake",
+        "blank"
+      ],
+      "word": "abstract"
+    },
+    {
+      "item_id": "awake",
+      "question": "not sleeping eyes open",
+      "correct": "awake",
+      "wrong": [
+        "blank",
+        "cow"
+      ],
+      "word": "awake"
+    },
+    {
+      "item_id": "blank",
+      "question": "empty with nothing there",
+      "correct": "blank",
+      "wrong": [
+        "cow",
+        "curve"
+      ],
+      "word": "blank"
+    },
+    {
+      "item_id": "cow",
+      "question": "farm animal that gives milk",
+      "correct": "cow",
+      "wrong": [
+        "curve",
+        "duration"
+      ],
+      "word": "cow"
+    },
+    {
+      "item_id": "curve",
+      "question": "smooth round bend",
+      "correct": "curve",
+      "wrong": [
+        "duration",
+        "grandmother"
+      ],
+      "word": "curve"
+    },
+    {
+      "item_id": "duration",
+      "question": "length of time",
+      "correct": "duration",
+      "wrong": [
+        "grandmother",
+        "justify"
+      ],
+      "word": "duration"
+    },
+    {
+      "item_id": "grandmother",
+      "question": "mother of your parent",
+      "correct": "grandmother",
+      "wrong": [
+        "justify",
+        "lecture"
+      ],
+      "word": "grandmother"
+    },
+    {
+      "item_id": "justify",
+      "question": "to show something is right",
+      "correct": "justify",
+      "wrong": [
+        "lecture",
+        "acquire"
+      ],
+      "word": "justify"
+    },
+    {
+      "item_id": "lecture",
+      "question": "talk that teaches people",
+      "correct": "lecture",
+      "wrong": [
+        "acquire",
+        "bend"
+      ],
+      "word": "lecture"
+    },
+    {
+      "item_id": "acquire",
+      "question": "get or obtain something",
+      "correct": "acquire",
+      "wrong": [
+        "bend",
+        "boundary"
+      ],
+      "word": "acquire"
+    },
+    {
+      "item_id": "bend",
+      "question": "to curve or fold something",
+      "correct": "bend",
+      "wrong": [
+        "boundary",
+        "cabin"
+      ],
+      "word": "bend"
+    },
+    {
+      "item_id": "boundary",
+      "question": "line that marks the edge",
+      "correct": "boundary",
+      "wrong": [
+        "cabin",
+        "combine"
+      ],
+      "word": "boundary"
+    },
+    {
+      "item_id": "cabin",
+      "question": "small wooden house",
+      "correct": "cabin",
+      "wrong": [
+        "combine",
+        "flexible"
+      ],
+      "word": "cabin"
+    },
+    {
+      "item_id": "combine",
+      "question": "mix two things together",
+      "correct": "combine",
+      "wrong": [
+        "flexible",
+        "neutral"
+      ],
+      "word": "combine"
+    },
+    {
+      "item_id": "flexible",
+      "question": "can bend or stretch easily",
+      "correct": "flexible",
+      "wrong": [
+        "neutral",
+        "asset"
+      ],
+      "word": "flexible"
     }
   ]
 }

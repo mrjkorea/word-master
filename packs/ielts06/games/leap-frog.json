@@ -5,1004 +5,1004 @@
   "seconds": 15,
   "items": [
     {
-      "item_id": "duration",
-      "question": "length of time",
-      "correct": "duration",
+      "item_id": "cat",
+      "question": "a furry house pet",
+      "correct": "cat",
       "wrong": [
-        "erode",
-        "ethic"
+        "decide",
+        "dinner"
       ],
-      "word": "duration"
+      "word": "cat"
     },
     {
-      "item_id": "erode",
-      "question": "wear away gradually",
-      "correct": "erode",
+      "item_id": "decide",
+      "question": "to choose what to do",
+      "correct": "decide",
       "wrong": [
-        "ethic",
-        "format"
+        "dinner",
+        "eastern"
       ],
-      "word": "erode"
+      "word": "decide"
     },
     {
-      "item_id": "ethic",
-      "question": "moral standard",
-      "correct": "ethic",
+      "item_id": "dinner",
+      "question": "evening meal with family",
+      "correct": "dinner",
       "wrong": [
-        "format",
-        "found"
+        "eastern",
+        "function"
       ],
-      "word": "ethic"
+      "word": "dinner"
     },
     {
-      "item_id": "format",
-      "question": "layout or structure",
-      "correct": "format",
+      "item_id": "eastern",
+      "question": "from the east side",
+      "correct": "eastern",
       "wrong": [
-        "found",
-        "inherent"
+        "function",
+        "gift"
       ],
-      "word": "format"
+      "word": "eastern"
     },
     {
-      "item_id": "found",
-      "question": "start or build something new",
-      "correct": "found",
+      "item_id": "function",
+      "question": "job a thing does",
+      "correct": "function",
       "wrong": [
-        "inherent",
-        "insight"
+        "gift",
+        "require"
       ],
-      "word": "found"
+      "word": "function"
     },
     {
-      "item_id": "inherent",
-      "question": "built in from birth",
-      "correct": "inherent",
+      "item_id": "gift",
+      "question": "a wrapped present",
+      "correct": "gift",
       "wrong": [
-        "insight",
-        "integral"
+        "require",
+        "background"
       ],
-      "word": "inherent"
+      "word": "gift"
     },
     {
-      "item_id": "insight",
-      "question": "deep understanding",
-      "correct": "insight",
+      "item_id": "require",
+      "question": "to need something necessary",
+      "correct": "require",
       "wrong": [
-        "integral",
-        "intermediate"
+        "background",
+        "birth"
       ],
-      "word": "insight"
+      "word": "require"
     },
     {
-      "item_id": "integral",
-      "question": "needed as a part",
-      "correct": "integral",
+      "item_id": "background",
+      "question": "area behind the main thing",
+      "correct": "background",
       "wrong": [
-        "intermediate",
-        "manual"
+        "birth",
+        "bridge"
       ],
-      "word": "integral"
+      "word": "background"
     },
     {
-      "item_id": "intermediate",
-      "question": "in the middle level",
-      "correct": "intermediate",
+      "item_id": "birth",
+      "question": "when a baby is born",
+      "correct": "birth",
       "wrong": [
-        "manual",
-        "mature"
+        "bridge",
+        "concept"
       ],
-      "word": "intermediate"
+      "word": "birth"
     },
     {
-      "item_id": "manual",
-      "question": "done by hand",
-      "correct": "manual",
+      "item_id": "bridge",
+      "question": "a path over water",
+      "correct": "bridge",
       "wrong": [
-        "mature",
-        "mediate"
+        "concept",
+        "copy"
       ],
-      "word": "manual"
+      "word": "bridge"
     },
     {
-      "item_id": "mature",
-      "question": "fully grown and ready",
-      "correct": "mature",
+      "item_id": "concept",
+      "question": "an idea or basic understanding",
+      "correct": "concept",
       "wrong": [
-        "mediate",
-        "medium"
+        "copy",
+        "dear"
       ],
-      "word": "mature"
+      "word": "concept"
     },
     {
-      "item_id": "mediate",
-      "question": "help sides agree",
-      "correct": "mediate",
+      "item_id": "copy",
+      "question": "an exact same second thing",
+      "correct": "copy",
       "wrong": [
-        "medium",
-        "military"
+        "dear",
+        "garden"
       ],
-      "word": "mediate"
+      "word": "copy"
     },
     {
-      "item_id": "medium",
-      "question": "in the middle size",
-      "correct": "medium",
+      "item_id": "dear",
+      "question": "loved very much",
+      "correct": "dear",
       "wrong": [
-        "military",
-        "minimal"
+        "garden",
+        "journal"
       ],
-      "word": "medium"
+      "word": "dear"
     },
     {
-      "item_id": "military",
-      "question": "related to the army",
-      "correct": "military",
+      "item_id": "garden",
+      "question": "a place with plants and flowers",
+      "correct": "garden",
       "wrong": [
-        "minimal",
-        "mutual"
+        "journal",
+        "alive"
       ],
-      "word": "military"
+      "word": "garden"
     },
     {
-      "item_id": "minimal",
-      "question": "very small amount",
-      "correct": "minimal",
+      "item_id": "journal",
+      "question": "academic periodical publication",
+      "correct": "journal",
       "wrong": [
-        "mutual",
-        "norm"
+        "alive",
+        "apple"
       ],
-      "word": "minimal"
+      "word": "journal"
     },
     {
-      "item_id": "mutual",
-      "question": "shared by two people or groups",
-      "correct": "mutual",
+      "item_id": "alive",
+      "question": "living and breathing",
+      "correct": "alive",
       "wrong": [
-        "norm",
-        "overlap"
+        "apple",
+        "balance"
       ],
-      "word": "mutual"
+      "word": "alive"
     },
     {
-      "item_id": "norm",
-      "question": "usual standard",
-      "correct": "norm",
+      "item_id": "apple",
+      "question": "round red sweet fruit",
+      "correct": "apple",
       "wrong": [
-        "overlap",
-        "passive"
+        "balance",
+        "boss"
       ],
-      "word": "norm"
+      "word": "apple"
     },
     {
-      "item_id": "overlap",
-      "question": "cover partly at same time",
-      "correct": "overlap",
+      "item_id": "balance",
+      "question": "staying steady without falling",
+      "correct": "balance",
       "wrong": [
-        "passive",
-        "portion"
+        "boss",
+        "connection"
       ],
-      "word": "overlap"
+      "word": "balance"
     },
     {
-      "item_id": "passive",
-      "question": "not taking any action",
-      "correct": "passive",
+      "item_id": "boss",
+      "question": "person in charge at work",
+      "correct": "boss",
       "wrong": [
-        "portion",
-        "preliminary"
+        "connection",
+        "dress"
       ],
-      "word": "passive"
+      "word": "boss"
     },
     {
-      "item_id": "portion",
-      "question": "part of a whole",
-      "correct": "portion",
+      "item_id": "connection",
+      "question": "a link between two or more things",
+      "correct": "connection",
       "wrong": [
-        "preliminary",
-        "protocol"
+        "dress",
+        "fellow"
       ],
-      "word": "portion"
+      "word": "connection"
     },
     {
-      "item_id": "preliminary",
-      "question": "first before the main",
-      "correct": "preliminary",
+      "item_id": "dress",
+      "question": "one-piece clothes for girls",
+      "correct": "dress",
       "wrong": [
-        "protocol",
-        "qualitative"
+        "fellow",
+        "vehicle"
       ],
-      "word": "preliminary"
+      "word": "dress"
     },
     {
-      "item_id": "protocol",
-      "question": "official procedure",
-      "correct": "protocol",
+      "item_id": "fellow",
+      "question": "being a friend or partner",
+      "correct": "fellow",
       "wrong": [
-        "qualitative",
-        "refine"
+        "vehicle",
+        "volume"
       ],
-      "word": "protocol"
+      "word": "fellow"
     },
     {
-      "item_id": "qualitative",
-      "question": "about quality not numbers",
-      "correct": "qualitative",
+      "item_id": "vehicle",
+      "question": "a thing that moves people",
+      "correct": "vehicle",
       "wrong": [
-        "refine",
-        "relax"
+        "volume",
+        "aid"
       ],
-      "word": "qualitative"
+      "word": "vehicle"
     },
     {
-      "item_id": "refine",
-      "question": "improve by small changes",
-      "correct": "refine",
+      "item_id": "volume",
+      "question": "how much space something fills",
+      "correct": "volume",
       "wrong": [
-        "relax",
-        "restrain"
+        "aid",
+        "billion"
       ],
-      "word": "refine"
+      "word": "volume"
     },
     {
-      "item_id": "relax",
-      "question": "to rest and feel calm",
-      "correct": "relax",
+      "item_id": "aid",
+      "question": "help given to someone",
+      "correct": "aid",
       "wrong": [
-        "restrain",
-        "revolution"
+        "billion",
+        "busy"
       ],
-      "word": "relax"
+      "word": "aid"
     },
     {
-      "item_id": "restrain",
-      "question": "hold back",
-      "correct": "restrain",
+      "item_id": "billion",
+      "question": "thousand million",
+      "correct": "billion",
       "wrong": [
-        "revolution",
-        "rigid"
+        "busy",
+        "concerned"
       ],
-      "word": "restrain"
+      "word": "billion"
     },
     {
-      "item_id": "revolution",
-      "question": "a huge turning change",
-      "correct": "revolution",
+      "item_id": "busy",
+      "question": "doing many things at once",
+      "correct": "busy",
       "wrong": [
-        "rigid",
-        "route"
+        "concerned",
+        "conversation"
       ],
-      "word": "revolution"
+      "word": "busy"
     },
     {
-      "item_id": "rigid",
-      "question": "stiff and not bending",
-      "correct": "rigid",
+      "item_id": "concerned",
+      "question": "feeling worried about something",
+      "correct": "concerned",
       "wrong": [
-        "route",
-        "scenario"
+        "conversation",
+        "corner"
       ],
-      "word": "rigid"
+      "word": "concerned"
     },
     {
-      "item_id": "route",
-      "question": "a way to go",
-      "correct": "route",
+      "item_id": "conversation",
+      "question": "talking with someone",
+      "correct": "conversation",
       "wrong": [
-        "scenario",
-        "sphere"
+        "corner",
+        "criminal"
       ],
-      "word": "route"
+      "word": "conversation"
     },
     {
-      "item_id": "scenario",
-      "question": "possible situation",
-      "correct": "scenario",
+      "item_id": "corner",
+      "question": "where two walls meet",
+      "correct": "corner",
       "wrong": [
-        "sphere",
-        "subordinate"
+        "criminal",
+        "cultural"
       ],
-      "word": "scenario"
+      "word": "corner"
     },
     {
-      "item_id": "sphere",
-      "question": "area of activity",
-      "correct": "sphere",
+      "item_id": "criminal",
+      "question": "related to breaking the law",
+      "correct": "criminal",
       "wrong": [
-        "subordinate",
-        "supplement"
+        "cultural",
+        "develop"
       ],
-      "word": "sphere"
+      "word": "criminal"
     },
     {
-      "item_id": "subordinate",
-      "question": "lower in rank",
-      "correct": "subordinate",
+      "item_id": "cultural",
+      "question": "about a group's customs",
+      "correct": "cultural",
       "wrong": [
-        "supplement",
-        "suspend"
+        "develop",
+        "driver"
       ],
-      "word": "subordinate"
+      "word": "cultural"
     },
     {
-      "item_id": "supplement",
-      "question": "add extra to it",
-      "correct": "supplement",
+      "item_id": "develop",
+      "question": "to grow or become better",
+      "correct": "develop",
       "wrong": [
-        "suspend",
-        "team"
+        "driver",
+        "existing"
       ],
-      "word": "supplement"
+      "word": "develop"
     },
     {
-      "item_id": "suspend",
-      "question": "hang something from above",
-      "correct": "suspend",
+      "item_id": "driver",
+      "question": "person who drives a car",
+      "correct": "driver",
       "wrong": [
-        "team",
-        "temporary"
+        "existing",
+        "farm"
       ],
-      "word": "suspend"
+      "word": "driver"
     },
     {
-      "item_id": "team",
-      "question": "a group working together",
-      "correct": "team",
+      "item_id": "existing",
+      "question": "already here now",
+      "correct": "existing",
       "wrong": [
-        "temporary",
-        "trigger"
+        "farm",
+        "file"
       ],
-      "word": "team"
+      "word": "existing"
     },
     {
-      "item_id": "temporary",
-      "question": "lasting only for a short time",
-      "correct": "temporary",
+      "item_id": "farm",
+      "question": "place where crops and animals grow",
+      "correct": "farm",
       "wrong": [
-        "trigger",
-        "unify"
+        "file",
+        "fix"
       ],
-      "word": "temporary"
+      "word": "farm"
     },
     {
-      "item_id": "trigger",
-      "question": "cause to start",
-      "correct": "trigger",
+      "item_id": "file",
+      "question": "a folder that holds papers",
+      "correct": "file",
       "wrong": [
-        "unify",
-        "violate"
+        "fix",
+        "fly"
       ],
-      "word": "trigger"
+      "word": "file"
     },
     {
-      "item_id": "unify",
-      "question": "bring together",
-      "correct": "unify",
+      "item_id": "fix",
+      "question": "make something work again",
+      "correct": "fix",
       "wrong": [
-        "violate",
-        "vision"
+        "fly",
+        "guide"
       ],
-      "word": "unify"
+      "word": "fix"
     },
     {
-      "item_id": "violate",
-      "question": "break a rule",
-      "correct": "violate",
+      "item_id": "fly",
+      "question": "move through the air",
+      "correct": "fly",
       "wrong": [
-        "vision",
-        "adjacent"
+        "guide",
+        "technical"
       ],
-      "word": "violate"
+      "word": "fly"
     },
     {
-      "item_id": "vision",
-      "question": "the power to see",
-      "correct": "vision",
+      "item_id": "guide",
+      "question": "person who shows the way",
+      "correct": "guide",
       "wrong": [
-        "adjacent",
-        "albeit"
+        "technical",
+        "unique"
       ],
-      "word": "vision"
+      "word": "guide"
     },
     {
-      "item_id": "adjacent",
-      "question": "next to something",
-      "correct": "adjacent",
+      "item_id": "technical",
+      "question": "about machines or science",
+      "correct": "technical",
       "wrong": [
-        "albeit",
-        "assemble"
+        "unique",
+        "appreciate"
       ],
-      "word": "adjacent"
+      "word": "technical"
     },
     {
-      "item_id": "albeit",
-      "question": "even though",
-      "correct": "albeit",
+      "item_id": "unique",
+      "question": "one of a kind, not like others",
+      "correct": "unique",
       "wrong": [
-        "assemble",
-        "collapse"
+        "appreciate",
+        "dry"
       ],
-      "word": "albeit"
+      "word": "unique"
     },
     {
-      "item_id": "assemble",
-      "question": "put the pieces together",
-      "correct": "assemble",
+      "item_id": "appreciate",
+      "question": "feel thankful for",
+      "correct": "appreciate",
       "wrong": [
-        "collapse",
-        "colleague"
+        "dry",
+        "edge"
       ],
-      "word": "assemble"
+      "word": "appreciate"
     },
     {
-      "item_id": "collapse",
-      "question": "fall down all at once",
-      "correct": "collapse",
+      "item_id": "dry",
+      "question": "has no water or moisture",
+      "correct": "dry",
       "wrong": [
-        "colleague",
-        "compile"
+        "edge",
+        "evil"
       ],
-      "word": "collapse"
+      "word": "dry"
     },
     {
-      "item_id": "colleague",
-      "question": "a person who works with you",
-      "correct": "colleague",
+      "item_id": "edge",
+      "question": "the sharp side of something",
+      "correct": "edge",
       "wrong": [
-        "compile",
-        "conceive"
+        "evil",
+        "forever"
       ],
-      "word": "colleague"
+      "word": "edge"
     },
     {
-      "item_id": "compile",
-      "question": "gather things into one",
-      "correct": "compile",
+      "item_id": "evil",
+      "question": "very mean and bad",
+      "correct": "evil",
       "wrong": [
-        "conceive",
-        "convince"
+        "forever",
+        "strategy"
       ],
-      "word": "compile"
+      "word": "evil"
     },
     {
-      "item_id": "conceive",
-      "question": "think of an idea",
-      "correct": "conceive",
+      "item_id": "forever",
+      "question": "for all time",
+      "correct": "forever",
       "wrong": [
-        "convince",
-        "depress"
+        "strategy",
+        "arm"
       ],
-      "word": "conceive"
+      "word": "forever"
     },
     {
-      "item_id": "convince",
-      "question": "make someone agree or believe something",
-      "correct": "convince",
+      "item_id": "strategy",
+      "question": "a plan to win",
+      "correct": "strategy",
       "wrong": [
-        "depress",
-        "encounter"
+        "arm",
+        "audience"
       ],
-      "word": "convince"
+      "word": "strategy"
     },
     {
-      "item_id": "depress",
-      "question": "lower or weaken",
-      "correct": "depress",
+      "item_id": "arm",
+      "question": "body part between hand and shoulder",
+      "correct": "arm",
       "wrong": [
-        "encounter",
-        "enormous"
+        "audience",
+        "core"
       ],
-      "word": "depress"
+      "word": "arm"
     },
     {
-      "item_id": "encounter",
-      "question": "meet someone by chance",
-      "correct": "encounter",
+      "item_id": "audience",
+      "question": "people watching a show",
+      "correct": "audience",
       "wrong": [
-        "enormous",
-        "forthcoming"
+        "core",
+        "democratic"
       ],
-      "word": "encounter"
+      "word": "audience"
     },
     {
-      "item_id": "enormous",
-      "question": "very very big",
-      "correct": "enormous",
+      "item_id": "core",
+      "question": "the center of something",
+      "correct": "core",
       "wrong": [
-        "forthcoming",
-        "incline"
+        "democratic",
+        "description"
       ],
-      "word": "enormous"
+      "word": "core"
     },
     {
-      "item_id": "forthcoming",
-      "question": "coming very soon",
-      "correct": "forthcoming",
+      "item_id": "democratic",
+      "question": "people choose their leaders",
+      "correct": "democratic",
       "wrong": [
-        "incline",
-        "integrity"
+        "description",
+        "excellent"
       ],
-      "word": "forthcoming"
+      "word": "democratic"
     },
     {
-      "item_id": "incline",
-      "question": "tend toward",
-      "correct": "incline",
+      "item_id": "description",
+      "question": "words that tell about something",
+      "correct": "description",
       "wrong": [
-        "integrity",
-        "intrinsic"
+        "excellent",
+        "exist"
       ],
-      "word": "incline"
+      "word": "description"
     },
     {
-      "item_id": "integrity",
-      "question": "honesty and principles",
-      "correct": "integrity",
+      "item_id": "excellent",
+      "question": "very very good",
+      "correct": "excellent",
       "wrong": [
-        "intrinsic",
-        "invoke"
+        "exist",
+        "guard"
       ],
-      "word": "integrity"
+      "word": "excellent"
     },
     {
-      "item_id": "intrinsic",
-      "question": "built-in by nature",
-      "correct": "intrinsic",
+      "item_id": "exist",
+      "question": "to be real or to be present",
+      "correct": "exist",
       "wrong": [
-        "invoke",
-        "levy"
+        "guard",
+        "nuclear"
       ],
-      "word": "intrinsic"
+      "word": "exist"
     },
     {
-      "item_id": "invoke",
-      "question": "call upon formally",
-      "correct": "invoke",
+      "item_id": "guard",
+      "question": "person who keeps watch",
+      "correct": "guard",
       "wrong": [
-        "levy",
-        "likewise"
+        "nuclear",
+        "stress"
       ],
-      "word": "invoke"
+      "word": "guard"
     },
     {
-      "item_id": "levy",
-      "question": "impose a tax or fee",
-      "correct": "levy",
+      "item_id": "nuclear",
+      "question": "about atomic energy",
+      "correct": "nuclear",
       "wrong": [
-        "likewise",
-        "nonetheless"
+        "stress",
+        "classic"
       ],
-      "word": "levy"
+      "word": "nuclear"
     },
     {
-      "item_id": "likewise",
-      "question": "the same way too",
-      "correct": "likewise",
+      "item_id": "stress",
+      "question": "worry that feels heavy",
+      "correct": "stress",
       "wrong": [
-        "nonetheless",
-        "notwithstanding"
+        "classic",
+        "clothes"
       ],
-      "word": "likewise"
+      "word": "stress"
     },
     {
-      "item_id": "nonetheless",
-      "question": "even so or anyway",
-      "correct": "nonetheless",
+      "item_id": "classic",
+      "question": "simple and always liked",
+      "correct": "classic",
       "wrong": [
-        "notwithstanding",
-        "odd"
+        "clothes",
+        "electric"
       ],
-      "word": "nonetheless"
+      "word": "classic"
     },
     {
-      "item_id": "notwithstanding",
-      "question": "in spite of",
-      "correct": "notwithstanding",
+      "item_id": "clothes",
+      "question": "things people wear on body",
+      "correct": "clothes",
       "wrong": [
-        "odd",
-        "ongoing"
+        "electric",
+        "emergency"
       ],
-      "word": "notwithstanding"
+      "word": "clothes"
     },
     {
-      "item_id": "odd",
-      "question": "strange or not normal",
-      "correct": "odd",
+      "item_id": "electric",
+      "question": "powered by electricity",
+      "correct": "electric",
       "wrong": [
-        "ongoing",
-        "panel"
+        "emergency",
+        "entirely"
       ],
-      "word": "odd"
+      "word": "electric"
     },
     {
-      "item_id": "ongoing",
-      "question": "still continuing",
-      "correct": "ongoing",
+      "item_id": "emergency",
+      "question": "sudden dangerous problem",
+      "correct": "emergency",
       "wrong": [
-        "panel",
-        "persist"
+        "entirely",
+        "failure"
       ],
-      "word": "ongoing"
+      "word": "emergency"
     },
     {
-      "item_id": "panel",
-      "question": "flat board on a wall",
-      "correct": "panel",
+      "item_id": "entirely",
+      "question": "completely or wholly",
+      "correct": "entirely",
       "wrong": [
-        "persist",
-        "pose"
+        "failure",
+        "flat"
       ],
-      "word": "panel"
+      "word": "entirely"
     },
     {
-      "item_id": "persist",
-      "question": "keep trying without stopping",
-      "correct": "persist",
+      "item_id": "failure",
+      "question": "not succeeding at something",
+      "correct": "failure",
       "wrong": [
-        "pose",
-        "reluctance"
+        "flat",
+        "fuel"
       ],
-      "word": "persist"
+      "word": "failure"
     },
     {
-      "item_id": "pose",
-      "question": "put your body in a position",
-      "correct": "pose",
+      "item_id": "flat",
+      "question": "smooth and level",
+      "correct": "flat",
       "wrong": [
-        "reluctance",
-        "so-called"
+        "fuel",
+        "initial"
       ],
-      "word": "pose"
+      "word": "flat"
     },
     {
-      "item_id": "reluctance",
-      "question": "unwilling feeling",
-      "correct": "reluctance",
+      "item_id": "fuel",
+      "question": "energy that runs machines",
+      "correct": "fuel",
       "wrong": [
-        "so-called",
-        "straightforward"
+        "initial",
+        "transfer"
       ],
-      "word": "reluctance"
+      "word": "fuel"
     },
     {
-      "item_id": "socalled",
-      "question": "called by that name",
-      "correct": "so-called",
+      "item_id": "initial",
+      "question": "at the very beginning",
+      "correct": "initial",
       "wrong": [
-        "straightforward",
-        "undergo"
-      ],
-      "word": "so-called"
-    },
-    {
-      "item_id": "straightforward",
-      "question": "easy to understand",
-      "correct": "straightforward",
-      "wrong": [
-        "undergo",
-        "whereby"
-      ],
-      "word": "straightforward"
-    },
-    {
-      "item_id": "undergo",
-      "question": "go through something yourself",
-      "correct": "undergo",
-      "wrong": [
-        "whereby",
-        "ability"
-      ],
-      "word": "undergo"
-    },
-    {
-      "item_id": "whereby",
-      "question": "by which something happens",
-      "correct": "whereby",
-      "wrong": [
-        "ability",
-        "able"
-      ],
-      "word": "whereby"
-    },
-    {
-      "item_id": "ability",
-      "question": "the power to do something",
-      "correct": "ability",
-      "wrong": [
-        "able",
-        "abroad"
-      ],
-      "word": "ability"
-    },
-    {
-      "item_id": "able",
-      "question": "having the power to do",
-      "correct": "able",
-      "wrong": [
-        "abroad",
-        "absence"
-      ],
-      "word": "able"
-    },
-    {
-      "item_id": "abroad",
-      "question": "in another country",
-      "correct": "abroad",
-      "wrong": [
-        "absence",
-        "absolute"
-      ],
-      "word": "abroad"
-    },
-    {
-      "item_id": "absence",
-      "question": "state of not being present",
-      "correct": "absence",
-      "wrong": [
-        "absolute",
-        "absorb"
-      ],
-      "word": "absence"
-    },
-    {
-      "item_id": "absolute",
-      "question": "complete and without any limit",
-      "correct": "absolute",
-      "wrong": [
-        "absorb",
-        "abuse"
-      ],
-      "word": "absolute"
-    },
-    {
-      "item_id": "absorb",
-      "question": "soak up the liquid",
-      "correct": "absorb",
-      "wrong": [
-        "abuse",
-        "academic"
-      ],
-      "word": "absorb"
-    },
-    {
-      "item_id": "abuse",
-      "question": "cruel unkind treatment",
-      "correct": "abuse",
-      "wrong": [
-        "academic",
-        "accept"
-      ],
-      "word": "abuse"
-    },
-    {
-      "item_id": "academic",
-      "question": "connected with school or study",
-      "correct": "academic",
-      "wrong": [
-        "accept",
+        "transfer",
         "accident"
       ],
-      "word": "academic"
+      "word": "initial"
     },
     {
-      "item_id": "accept",
-      "question": "agree to take or receive",
-      "correct": "accept",
+      "item_id": "transfer",
+      "question": "moving to another place",
+      "correct": "transfer",
       "wrong": [
         "accident",
-        "account"
+        "alternative"
       ],
-      "word": "accept"
+      "word": "transfer"
     },
     {
       "item_id": "accident",
       "question": "something bad that happens by chance",
       "correct": "accident",
       "wrong": [
-        "account",
-        "acid"
+        "alternative",
+        "anywhere"
       ],
       "word": "accident"
     },
     {
-      "item_id": "account",
-      "question": "record of money",
-      "correct": "account",
+      "item_id": "alternative",
+      "question": "another choice or different option",
+      "correct": "alternative",
       "wrong": [
-        "acid",
-        "across"
+        "anywhere",
+        "bear"
       ],
-      "word": "account"
+      "word": "alternative"
     },
     {
-      "item_id": "acid",
-      "question": "sour liquid that burns",
-      "correct": "acid",
+      "item_id": "anywhere",
+      "question": "in any possible place",
+      "correct": "anywhere",
       "wrong": [
-        "across",
-        "act"
+        "bear",
+        "boat"
       ],
-      "word": "acid"
+      "word": "anywhere"
     },
     {
-      "item_id": "across",
-      "question": "from one side to the other",
-      "correct": "across",
+      "item_id": "bear",
+      "question": "to carry or hold up",
+      "correct": "bear",
       "wrong": [
-        "act",
-        "action"
+        "boat",
+        "capacity"
       ],
-      "word": "across"
+      "word": "bear"
     },
     {
-      "item_id": "act",
-      "question": "something someone does on purpose",
-      "correct": "act",
+      "item_id": "boat",
+      "question": "small vessel for water",
+      "correct": "boat",
       "wrong": [
-        "action",
-        "active"
+        "capacity",
+        "cheap"
       ],
-      "word": "act"
+      "word": "boat"
     },
     {
-      "item_id": "action",
-      "question": "something someone does",
-      "correct": "action",
+      "item_id": "capacity",
+      "question": "amount a container can hold",
+      "correct": "capacity",
       "wrong": [
-        "active",
-        "activity"
+        "cheap",
+        "climate"
       ],
-      "word": "action"
+      "word": "capacity"
     },
     {
-      "item_id": "active",
-      "question": "doing lots of things",
-      "correct": "active",
+      "item_id": "cheap",
+      "question": "low in price or cost",
+      "correct": "cheap",
       "wrong": [
-        "activity",
-        "actual"
+        "climate",
+        "discussion"
       ],
-      "word": "active"
+      "word": "cheap"
     },
     {
-      "item_id": "activity",
-      "question": "something you do",
-      "correct": "activity",
+      "item_id": "climate",
+      "question": "usual weather of a place",
+      "correct": "climate",
       "wrong": [
-        "actual",
-        "actually"
+        "discussion",
+        "duty"
       ],
-      "word": "activity"
+      "word": "climate"
     },
     {
-      "item_id": "actual",
-      "question": "real and true",
-      "correct": "actual",
+      "item_id": "discussion",
+      "question": "talking together about a topic",
+      "correct": "discussion",
       "wrong": [
-        "actually",
-        "add"
+        "duty",
+        "governor"
       ],
-      "word": "actual"
+      "word": "discussion"
     },
     {
-      "item_id": "actually",
-      "question": "in fact or really",
-      "correct": "actually",
+      "item_id": "duty",
+      "question": "a job you must do",
+      "correct": "duty",
       "wrong": [
-        "add",
-        "addition"
+        "governor",
+        "purchase"
       ],
-      "word": "actually"
+      "word": "duty"
     },
     {
-      "item_id": "add",
-      "question": "to put something with other things",
-      "correct": "add",
+      "item_id": "governor",
+      "question": "leader of a state",
+      "correct": "governor",
       "wrong": [
-        "addition",
-        "address"
+        "purchase",
+        "remove"
       ],
-      "word": "add"
+      "word": "governor"
     },
     {
-      "item_id": "addition",
-      "question": "putting numbers together",
-      "correct": "addition",
+      "item_id": "purchase",
+      "question": "something you have bought",
+      "correct": "purchase",
       "wrong": [
-        "address",
-        "administration"
+        "remove",
+        "afraid"
       ],
-      "word": "addition"
+      "word": "purchase"
     },
     {
-      "item_id": "address",
-      "question": "where someone lives or works",
-      "correct": "address",
+      "item_id": "remove",
+      "question": "take something away from a place",
+      "correct": "remove",
       "wrong": [
-        "administration",
-        "admit"
+        "afraid",
+        "border"
       ],
-      "word": "address"
+      "word": "remove"
     },
     {
-      "item_id": "administration",
-      "question": "running a school or office",
-      "correct": "administration",
+      "item_id": "afraid",
+      "question": "feeling scared",
+      "correct": "afraid",
       "wrong": [
-        "admit",
-        "advance"
+        "border",
+        "command"
       ],
-      "word": "administration"
+      "word": "afraid"
     },
     {
-      "item_id": "admit",
-      "question": "say that something is true",
-      "correct": "admit",
+      "item_id": "border",
+      "question": "line between two lands",
+      "correct": "border",
       "wrong": [
-        "advance",
-        "advantage"
+        "command",
+        "crew"
       ],
-      "word": "admit"
+      "word": "border"
     },
     {
-      "item_id": "advance",
-      "question": "a step forward",
-      "correct": "advance",
+      "item_id": "command",
+      "question": "order you must follow",
+      "correct": "command",
       "wrong": [
-        "advantage",
-        "adventure"
+        "crew",
+        "crowd"
       ],
-      "word": "advance"
+      "word": "command"
     },
     {
-      "item_id": "advantage",
-      "question": "something that helps you win",
-      "correct": "advantage",
+      "item_id": "crew",
+      "question": "team that works together",
+      "correct": "crew",
       "wrong": [
-        "adventure",
-        "advertise"
+        "crowd",
+        "enemy"
       ],
-      "word": "advantage"
+      "word": "crew"
     },
     {
-      "item_id": "adventure",
-      "question": "exciting experience",
-      "correct": "adventure",
+      "item_id": "crowd",
+      "question": "many people together",
+      "correct": "crowd",
       "wrong": [
-        "advertise",
-        "advice"
+        "enemy",
+        "ensure"
       ],
-      "word": "adventure"
+      "word": "crowd"
     },
     {
-      "item_id": "advertise",
-      "question": "tell people about something",
-      "correct": "advertise",
+      "item_id": "enemy",
+      "question": "someone against you",
+      "correct": "enemy",
       "wrong": [
-        "advice",
-        "advise"
+        "ensure",
+        "environmental"
       ],
-      "word": "advertise"
+      "word": "enemy"
     },
     {
-      "item_id": "advice",
-      "question": "words that help decide",
-      "correct": "advice",
+      "item_id": "ensure",
+      "question": "make sure something happens",
+      "correct": "ensure",
       "wrong": [
-        "advise",
-        "duration"
+        "environmental",
+        "forest"
       ],
-      "word": "advice"
+      "word": "ensure"
     },
     {
-      "item_id": "advise",
-      "question": "give helpful suggestions",
-      "correct": "advise",
+      "item_id": "environmental",
+      "question": "about nature and surroundings",
+      "correct": "environmental",
       "wrong": [
-        "duration",
-        "erode"
+        "forest",
+        "labour"
       ],
-      "word": "advise"
+      "word": "environmental"
+    },
+    {
+      "item_id": "forest",
+      "question": "a large area full of trees",
+      "correct": "forest",
+      "wrong": [
+        "labour",
+        "appearance"
+      ],
+      "word": "forest"
+    },
+    {
+      "item_id": "labour",
+      "question": "hard work with the body",
+      "correct": "labour",
+      "wrong": [
+        "appearance",
+        "chair"
+      ],
+      "word": "labour"
+    },
+    {
+      "item_id": "appearance",
+      "question": "how someone looks",
+      "correct": "appearance",
+      "wrong": [
+        "chair",
+        "domestic"
+      ],
+      "word": "appearance"
+    },
+    {
+      "item_id": "chair",
+      "question": "a seat with four legs and a back",
+      "correct": "chair",
+      "wrong": [
+        "domestic",
+        "expensive"
+      ],
+      "word": "chair"
+    },
+    {
+      "item_id": "domestic",
+      "question": "inside the home",
+      "correct": "domestic",
+      "wrong": [
+        "expensive",
+        "minimum"
+      ],
+      "word": "domestic"
+    },
+    {
+      "item_id": "expensive",
+      "question": "costs a lot of money",
+      "correct": "expensive",
+      "wrong": [
+        "minimum",
+        "survey"
+      ],
+      "word": "expensive"
+    },
+    {
+      "item_id": "minimum",
+      "question": "the smallest amount",
+      "correct": "minimum",
+      "wrong": [
+        "survey",
+        "ancient"
+      ],
+      "word": "minimum"
+    },
+    {
+      "item_id": "survey",
+      "question": "questions to collect answers",
+      "correct": "survey",
+      "wrong": [
+        "ancient",
+        "communication"
+      ],
+      "word": "survey"
+    },
+    {
+      "item_id": "ancient",
+      "question": "very old and historic",
+      "correct": "ancient",
+      "wrong": [
+        "communication",
+        "email"
+      ],
+      "word": "ancient"
+    },
+    {
+      "item_id": "communication",
+      "question": "sharing ideas with words",
+      "correct": "communication",
+      "wrong": [
+        "email",
+        "cat"
+      ],
+      "word": "communication"
+    },
+    {
+      "item_id": "email",
+      "question": "message sent on a computer",
+      "correct": "email",
+      "wrong": [
+        "cat",
+        "decide"
+      ],
+      "word": "email"
     }
   ]
 }

@@ -4,404 +4,404 @@
   "seconds_per_letter": 5,
   "items": [
     {
-      "item_id": "afford",
-      "word": "afford"
+      "item_id": "exercise",
+      "word": "exercise"
     },
     {
-      "item_id": "afraid",
-      "word": "afraid"
+      "item_id": "flow",
+      "word": "flow"
     },
     {
-      "item_id": "after",
-      "word": "after"
+      "item_id": "girlfriend",
+      "word": "girlfriend"
     },
     {
-      "item_id": "again",
-      "word": "again"
-    },
-    {
-      "item_id": "against",
-      "word": "against"
-    },
-    {
-      "item_id": "age",
-      "word": "age"
-    },
-    {
-      "item_id": "agency",
-      "word": "agency"
-    },
-    {
-      "item_id": "agent",
-      "word": "agent"
-    },
-    {
-      "item_id": "ago",
-      "word": "ago"
-    },
-    {
-      "item_id": "agree",
-      "word": "agree"
-    },
-    {
-      "item_id": "agreement",
-      "word": "agreement"
-    },
-    {
-      "item_id": "agriculture",
-      "word": "agriculture"
-    },
-    {
-      "item_id": "ahead",
-      "word": "ahead"
-    },
-    {
-      "item_id": "aim",
-      "word": "aim"
-    },
-    {
-      "item_id": "air",
-      "word": "air"
-    },
-    {
-      "item_id": "aircraft",
-      "word": "aircraft"
-    },
-    {
-      "item_id": "airline",
-      "word": "airline"
-    },
-    {
-      "item_id": "airport",
-      "word": "airport"
-    },
-    {
-      "item_id": "alarm",
-      "word": "alarm"
-    },
-    {
-      "item_id": "album",
-      "word": "album"
-    },
-    {
-      "item_id": "alcohol",
-      "word": "alcohol"
-    },
-    {
-      "item_id": "alive",
-      "word": "alive"
-    },
-    {
-      "item_id": "all",
-      "word": "all"
-    },
-    {
-      "item_id": "allow",
-      "word": "allow"
-    },
-    {
-      "item_id": "almost",
-      "word": "almost"
-    },
-    {
-      "item_id": "alone",
-      "word": "alone"
-    },
-    {
-      "item_id": "along",
-      "word": "along"
-    },
-    {
-      "item_id": "already",
-      "word": "already"
-    },
-    {
-      "item_id": "also",
-      "word": "also"
-    },
-    {
-      "item_id": "always",
-      "word": "always"
-    },
-    {
-      "item_id": "amaze",
-      "word": "amaze"
-    },
-    {
-      "item_id": "ambition",
-      "word": "ambition"
-    },
-    {
-      "item_id": "among",
-      "word": "among"
-    },
-    {
-      "item_id": "amount",
-      "word": "amount"
-    },
-    {
-      "item_id": "ancient",
-      "word": "ancient"
-    },
-    {
-      "item_id": "and",
-      "word": "and"
-    },
-    {
-      "item_id": "anger",
-      "word": "anger"
-    },
-    {
-      "item_id": "angle",
-      "word": "angle"
-    },
-    {
-      "item_id": "angry",
-      "word": "angry"
-    },
-    {
-      "item_id": "animal",
-      "word": "animal"
-    },
-    {
-      "item_id": "announce",
-      "word": "announce"
-    },
-    {
-      "item_id": "another",
-      "word": "another"
-    },
-    {
-      "item_id": "answer",
-      "word": "answer"
-    },
-    {
-      "item_id": "anxiety",
-      "word": "anxiety"
-    },
-    {
-      "item_id": "any",
-      "word": "any"
-    },
-    {
-      "item_id": "anybody",
-      "word": "anybody"
-    },
-    {
-      "item_id": "anymore",
-      "word": "anymore"
-    },
-    {
-      "item_id": "anyone",
-      "word": "anyone"
-    },
-    {
-      "item_id": "anything",
-      "word": "anything"
-    },
-    {
-      "item_id": "anyway",
-      "word": "anyway"
-    },
-    {
-      "item_id": "anywhere",
-      "word": "anywhere"
-    },
-    {
-      "item_id": "apart",
-      "word": "apart"
-    },
-    {
-      "item_id": "apartment",
-      "word": "apartment"
-    },
-    {
-      "item_id": "apologize",
-      "word": "apologize"
+      "item_id": "transport",
+      "word": "transport"
     },
     {
       "item_id": "appeal",
       "word": "appeal"
     },
     {
-      "item_id": "appear",
-      "word": "appear"
+      "item_id": "appropriate",
+      "word": "appropriate"
     },
     {
-      "item_id": "appearance",
-      "word": "appearance"
+      "item_id": "device",
+      "word": "device"
     },
     {
-      "item_id": "apple",
-      "word": "apple"
+      "item_id": "drama",
+      "word": "drama"
     },
     {
-      "item_id": "application",
-      "word": "application"
+      "item_id": "entry",
+      "word": "entry"
     },
     {
-      "item_id": "apply",
-      "word": "apply"
+      "item_id": "era",
+      "word": "era"
     },
     {
-      "item_id": "appoint",
-      "word": "appoint"
+      "item_id": "factor",
+      "word": "factor"
     },
     {
-      "item_id": "approve",
-      "word": "approve"
+      "item_id": "feed",
+      "word": "feed"
     },
     {
-      "item_id": "argue",
-      "word": "argue"
+      "item_id": "golden",
+      "word": "golden"
+    },
+    {
+      "item_id": "grant",
+      "word": "grant"
+    },
+    {
+      "item_id": "route",
+      "word": "route"
+    },
+    {
+      "item_id": "schedule",
+      "word": "schedule"
+    },
+    {
+      "item_id": "abuse",
+      "word": "abuse"
+    },
+    {
+      "item_id": "angry",
+      "word": "angry"
+    },
+    {
+      "item_id": "candidate",
+      "word": "candidate"
+    },
+    {
+      "item_id": "comfortable",
+      "word": "comfortable"
+    },
+    {
+      "item_id": "concern",
+      "word": "concern"
+    },
+    {
+      "item_id": "discuss",
+      "word": "discuss"
+    },
+    {
+      "item_id": "emotional",
+      "word": "emotional"
+    },
+    {
+      "item_id": "everywhere",
+      "word": "everywhere"
+    },
+    {
+      "item_id": "internal",
+      "word": "internal"
+    },
+    {
+      "item_id": "liberal",
+      "word": "liberal"
+    },
+    {
+      "item_id": "sector",
+      "word": "sector"
+    },
+    {
+      "item_id": "advance",
+      "word": "advance"
+    },
+    {
+      "item_id": "apartment",
+      "word": "apartment"
+    },
+    {
+      "item_id": "chain",
+      "word": "chain"
+    },
+    {
+      "item_id": "chapter",
+      "word": "chapter"
+    },
+    {
+      "item_id": "confidence",
+      "word": "confidence"
+    },
+    {
+      "item_id": "cook",
+      "word": "cook"
+    },
+    {
+      "item_id": "equal",
+      "word": "equal"
+    },
+    {
+      "item_id": "finance",
+      "word": "finance"
+    },
+    {
+      "item_id": "maintain",
+      "word": "maintain"
+    },
+    {
+      "item_id": "task",
+      "word": "task"
+    },
+    {
+      "item_id": "aircraft",
+      "word": "aircraft"
     },
     {
       "item_id": "argument",
       "word": "argument"
     },
     {
-      "item_id": "arise",
-      "word": "arise"
+      "item_id": "conflict",
+      "word": "conflict"
     },
     {
-      "item_id": "arm",
-      "word": "arm"
+      "item_id": "corporate",
+      "word": "corporate"
     },
     {
-      "item_id": "army",
-      "word": "army"
+      "item_id": "debate",
+      "word": "debate"
     },
     {
-      "item_id": "around",
-      "word": "around"
+      "item_id": "distribution",
+      "word": "distribution"
     },
     {
-      "item_id": "arrange",
-      "word": "arrange"
+      "item_id": "escape",
+      "word": "escape"
     },
     {
-      "item_id": "arrest",
-      "word": "arrest"
+      "item_id": "fault",
+      "word": "fault"
     },
     {
-      "item_id": "arrival",
-      "word": "arrival"
+      "item_id": "fill",
+      "word": "fill"
     },
     {
-      "item_id": "arrive",
-      "word": "arrive"
+      "item_id": "friendly",
+      "word": "friendly"
     },
     {
-      "item_id": "art",
-      "word": "art"
+      "item_id": "phase",
+      "word": "phase"
     },
     {
-      "item_id": "article",
-      "word": "article"
+      "item_id": "revenue",
+      "word": "revenue"
     },
     {
-      "item_id": "artificial",
-      "word": "artificial"
+      "item_id": "secure",
+      "word": "secure"
     },
     {
-      "item_id": "artist",
-      "word": "artist"
+      "item_id": "bird",
+      "word": "bird"
     },
     {
-      "item_id": "as",
-      "word": "as"
+      "item_id": "blame",
+      "word": "blame"
     },
     {
-      "item_id": "ashamed",
-      "word": "ashamed"
+      "item_id": "bowl",
+      "word": "bowl"
+    },
+    {
+      "item_id": "chicken",
+      "word": "chicken"
+    },
+    {
+      "item_id": "context",
+      "word": "context"
+    },
+    {
+      "item_id": "coverage",
+      "word": "coverage"
+    },
+    {
+      "item_id": "determine",
+      "word": "determine"
+    },
+    {
+      "item_id": "display",
+      "word": "display"
+    },
+    {
+      "item_id": "false",
+      "word": "false"
+    },
+    {
+      "item_id": "funding",
+      "word": "funding"
+    },
+    {
+      "item_id": "ministry",
+      "word": "ministry"
+    },
+    {
+      "item_id": "mode",
+      "word": "mode"
+    },
+    {
+      "item_id": "obvious",
+      "word": "obvious"
+    },
+    {
+      "item_id": "vision",
+      "word": "vision"
+    },
+    {
+      "item_id": "cream",
+      "word": "cream"
+    },
+    {
+      "item_id": "crisis",
+      "word": "crisis"
+    },
+    {
+      "item_id": "editor",
+      "word": "editor"
+    },
+    {
+      "item_id": "giant",
+      "word": "giant"
+    },
+    {
+      "item_id": "minor",
+      "word": "minor"
+    },
+    {
+      "item_id": "theme",
+      "word": "theme"
+    },
+    {
+      "item_id": "alcohol",
+      "word": "alcohol"
+    },
+    {
+      "item_id": "breakfast",
+      "word": "breakfast"
+    },
+    {
+      "item_id": "bright",
+      "word": "bright"
+    },
+    {
+      "item_id": "capable",
+      "word": "capable"
+    },
+    {
+      "item_id": "combination",
+      "word": "combination"
+    },
+    {
+      "item_id": "conservative",
+      "word": "conservative"
+    },
+    {
+      "item_id": "customer",
+      "word": "customer"
+    },
+    {
+      "item_id": "desire",
+      "word": "desire"
+    },
+    {
+      "item_id": "draft",
+      "word": "draft"
+    },
+    {
+      "item_id": "essential",
+      "word": "essential"
+    },
+    {
+      "item_id": "fail",
+      "word": "fail"
+    },
+    {
+      "item_id": "familiar",
+      "word": "familiar"
+    },
+    {
+      "item_id": "guilty",
+      "word": "guilty"
+    },
+    {
+      "item_id": "medium",
+      "word": "medium"
+    },
+    {
+      "item_id": "relevant",
+      "word": "relevant"
+    },
+    {
+      "item_id": "seek",
+      "word": "seek"
+    },
+    {
+      "item_id": "bomb",
+      "word": "bomb"
+    },
+    {
+      "item_id": "creative",
+      "word": "creative"
+    },
+    {
+      "item_id": "cycle",
+      "word": "cycle"
+    },
+    {
+      "item_id": "educational",
+      "word": "educational"
+    },
+    {
+      "item_id": "entertainment",
+      "word": "entertainment"
+    },
+    {
+      "item_id": "extreme",
+      "word": "extreme"
+    },
+    {
+      "item_id": "facility",
+      "word": "facility"
+    },
+    {
+      "item_id": "hang",
+      "word": "hang"
+    },
+    {
+      "item_id": "affect",
+      "word": "affect"
     },
     {
       "item_id": "aside",
       "word": "aside"
     },
     {
-      "item_id": "ask",
-      "word": "ask"
+      "item_id": "blow",
+      "word": "blow"
     },
     {
-      "item_id": "asleep",
-      "word": "asleep"
+      "item_id": "bond",
+      "word": "bond"
     },
     {
-      "item_id": "asset",
-      "word": "asset"
+      "item_id": "careful",
+      "word": "careful"
     },
     {
-      "item_id": "associate",
-      "word": "associate"
-    },
-    {
-      "item_id": "association",
-      "word": "association"
-    },
-    {
-      "item_id": "assumption",
-      "word": "assumption"
-    },
-    {
-      "item_id": "at",
-      "word": "at"
-    },
-    {
-      "item_id": "athlete",
-      "word": "athlete"
-    },
-    {
-      "item_id": "atmosphere",
-      "word": "atmosphere"
-    },
-    {
-      "item_id": "attack",
-      "word": "attack"
-    },
-    {
-      "item_id": "attempt",
-      "word": "attempt"
-    },
-    {
-      "item_id": "attend",
-      "word": "attend"
-    },
-    {
-      "item_id": "attention",
-      "word": "attention"
-    },
-    {
-      "item_id": "attract",
-      "word": "attract"
-    },
-    {
-      "item_id": "attraction",
-      "word": "attraction"
-    },
-    {
-      "item_id": "attractive",
-      "word": "attractive"
-    },
-    {
-      "item_id": "audience",
-      "word": "audience"
-    },
-    {
-      "item_id": "automatic",
-      "word": "automatic"
-    },
-    {
-      "item_id": "average",
-      "word": "average"
-    },
-    {
-      "item_id": "avoid",
-      "word": "avoid"
-    },
-    {
-      "item_id": "awake",
-      "word": "awake"
+      "item_id": "cry",
+      "word": "cry"
     }
   ]
 }
