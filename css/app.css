@@ -1278,6 +1278,7 @@ html[dir="rtl"] .chunk { text-align: right; }
 .lane-little { background: #ffe98a; }
 .lane-adv { background: #ead9ff; }
 .lane-ielts { background: #e8dcf8; }
+.lane-culture { background: #f5e6d3; }
 .lane-toeic { background: #c8f3ea; }
 a.pack-tile { text-decoration: none; color: inherit; }
 @media (min-width: 700px) {
