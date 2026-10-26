@@ -20,6 +20,7 @@
     "ielts01", "ielts02", "ielts03", "ielts04", "ielts05",
     "ielts06", "ielts07", "ielts08", "ielts09", "ielts10",
     "ielts11", "ielts12", "ielts13", "ielts14", "ielts15",
+    "culture_m08",
   ];
 
   const DEMO_FALLBACK = {
