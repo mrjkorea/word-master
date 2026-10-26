@@ -130,6 +130,7 @@
   function studentLocked(set, step) {
     if (teacherNow()) return false;
     if (!set || !window.PathLock) return true;
+    if (allRoundActive(set) && (step === "intro" || step === "A")) return true;
     if (step === "games" && roundReadyForGame(set)) return false;
     try { return !window.PathLock.can(set, step, pathOpts()).ok; } catch (e) { return true; }
   }
@@ -171,6 +172,7 @@
     if (teacherNow()) return true;
     const set = currentSet();
     if (!set || !window.PathLock) return false;
+    if (allRoundActive(set) && (step === "intro" || step === "A")) return false;
     try {
       if (step === "games" && roundReadyForGame(set)) {
         rememberFinishedMeet(set);
@@ -1856,6 +1858,16 @@
     return STUDY_SIZES.indexOf(raw) >= 0 ? raw : 10;
   }
 
+  function allStudyMode() {
+    return Number(state.studySize) === 0;
+  }
+
+  function allRoundActive(set) {
+    set = set || currentSet();
+    if (!allStudyMode() || !set || !set.words || !set.words.length) return false;
+    return playWords(set).length >= set.words.length;
+  }
+
   function sliceCount(set, startNumber) {
     set = set || currentSet();
     const total = set && set.words ? set.words.length : 0;
@@ -2039,6 +2051,7 @@
       },
       partDone: function (words, wins) { return Algo.partDone(words, wins); },
       bucket: function (set, step) { return Algo.bucket(winsState(set), step); },
+      allRound: function (set) { return allRoundActive(set); },
     };
   }
 
@@ -2055,6 +2068,11 @@
     const a = set.winsA || {};
     const b = set.winsB || {};
     const c = set.winsC || {};
+    if (allRoundActive(set)) {
+      return words.every(function (w) {
+        return (b[w.id] || 0) >= 2 && (c[w.id] || 0) >= 2;
+      });
+    }
     return words.every(function (w) {
       return !!intro[w.id] && (a[w.id] || 0) >= 2 && (b[w.id] || 0) >= 2 && (c[w.id] || 0) >= 2;
     });
@@ -2398,7 +2416,7 @@
     $("#set-pct").textContent = t("pct", { n: pct });
     renderStudySize(set);
     renderPackStanding(set);
-    const held = window.PathLock ? window.PathLock.hold(set) : {};
+    const held = window.PathLock ? window.PathLock.hold(set, pathOpts()) : {};
     $$("#progress-ribbon .rib").forEach(function (el) {
       const jump = el.getAttribute("data-jump");
       const locked = studentLocked(set, jump);
@@ -2431,20 +2449,25 @@
     });
     const cleared = factoryCleared(set);
     const met = introDone(set);
+    const allRound = allRoundActive(set);
     const testLocked = studentLocked(set, "test");
+    const sliceTestsHidden = allRound;
     ["#btn-easy", "#btn-hard"].forEach(function (sel) {
       const btn = $(sel);
       if (!btn) return;
-      btn.hidden = false;
+      btn.hidden = sliceTestsHidden;
       btn.disabled = testLocked;
       btn.classList.toggle("locked", testLocked);
     });
     ["#btn-final-easy", "#btn-final-hard"].forEach(function (sel) {
       const btn = $(sel);
-      if (btn) btn.hidden = true;
+      if (!btn) return;
+      btn.hidden = false;
+      btn.disabled = false;
+      btn.classList.remove("locked");
     });
-    $("#btn-easy").classList.toggle("picked", state.testKind === "easy");
-    $("#btn-hard").classList.toggle("picked", state.testKind === "hard");
+    $("#btn-easy").classList.toggle("picked", !allRound && state.testKind === "easy");
+    $("#btn-hard").classList.toggle("picked", !allRound && state.testKind === "hard");
     const easyMeta = $("#final-easy-meta");
     const hardMeta = $("#final-hard-meta");
     const nWords = (set.words || []).length;
@@ -2452,12 +2475,13 @@
     const hardLabel = $("#final-hard-label");
     if (easyLabel) easyLabel.textContent = "All " + nWords + " easy";
     if (hardLabel) hardLabel.textContent = "All " + nWords + " hard";
-    if (easyMeta) easyMeta.textContent = testLocked ? "Finish one game first" : "See English · tap the meaning · every word";
-    if (hardMeta) hardMeta.textContent = testLocked ? "Finish one game first" : "See the meaning · type English · every word";
+    if (easyMeta) easyMeta.textContent = "See English · tap the meaning · every word";
+    if (hardMeta) hardMeta.textContent = "See the meaning · type English · every word";
     const learnBtn = $("#btn-learn");
     if (learnBtn) {
-      learnBtn.disabled = studentLocked(set, "A");
-      learnBtn.classList.toggle("locked", studentLocked(set, "A"));
+      const learnStep = allRound ? "B" : "A";
+      learnBtn.disabled = studentLocked(set, learnStep);
+      learnBtn.classList.toggle("locked", studentLocked(set, learnStep));
     }
     const gamesBtn = $("#btn-games-set");
     if (gamesBtn) {
@@ -2465,13 +2489,20 @@
       gamesBtn.classList.toggle("locked", studentLocked(set, "games"));
     }
     $("#intro-label").textContent = met ? t("intro_again") : t("intro_go");
-    if (cleared) {
+    if (allRound) {
+      $("#learn-label").textContent = studentLocked(set, "B") ? t("continue_learn") : t("part_b");
+    } else if (cleared) {
       $("#learn-label").textContent = t("relearn");
     } else {
       const mode = Algo.startMode(roundWords, ws);
       $("#learn-label").textContent = mode === "A" && Algo.factoryProgress(roundWords, ws) === 0
         ? t("start_learn")
         : t("continue_learn");
+    }
+    const introBtn = $("#btn-intro");
+    if (introBtn) {
+      introBtn.disabled = allRound || studentLocked(set, "intro");
+      introBtn.classList.toggle("locked", allRound || studentLocked(set, "intro"));
     }
     syncPack();
     if (currentScreen === "set" || currentScreen === "intro" || currentScreen === "learn" ||
@@ -2780,6 +2811,10 @@
       return;
     }
     ensureRoundLock(set);
+    if (allRoundActive(set)) {
+      startLearnAt("B");
+      return;
+    }
     if (tapmapDone(set)) {
       const roundWords = playWords(set);
       const mode = Algo.startMode(roundWords, winsState(set)) || "A";
@@ -3074,7 +3109,8 @@
   function startLearnAt(mode) {
     const set = currentSet();
     if (!set) return;
-    if (!tapmapDone(set)) return startTapmap();
+    if (allRoundActive(set) && mode === "A") mode = "B";
+    if (!allRoundActive(set) && !tapmapDone(set)) return startTapmap();
     learn = blankLearn();
     showScreen("learn");
     beginPart(mode);
@@ -3674,8 +3710,9 @@
     const item = quiz.items[quiz.index];
     if (!item) return finishQuiz();
     const choiceRound = quiz.kind === "easy" || quiz.kind === "final";
-    $("#test-kind").textContent = quiz.kind === "final" ? "ALL" : (quiz.kind === "easy" ? "EASY" : "HARD");
-    $("#test-ko").textContent = quiz.kind === "final"
+    const allPack = !!quiz.wide;
+    $("#test-kind").textContent = allPack ? "ALL" : (quiz.kind === "easy" ? "EASY" : "HARD");
+    $("#test-ko").textContent = allPack
       ? ("All " + quiz.items.length + " test")
       : (quiz.kind === "easy" ? t("easy_name") : t("hard_name"));
     $("#test-prog").textContent = quiz.index + 1 + " / " + quiz.items.length;
@@ -4489,8 +4526,10 @@
     });
     $("#btn-learn").addEventListener("click", function () {
       if (!canPlay()) return;
-      if (!pathOpen("A")) return;
-      startLearnAt("A");
+      const set = currentSet();
+      const step = allRoundActive(set) ? "B" : "A";
+      if (!pathOpen(step)) return;
+      startLearnAt(step);
     });
     $$("[data-jump]").forEach(function (btn) {
       btn.addEventListener("click", function () {
@@ -4552,7 +4591,6 @@
     const finalEasy = $("#btn-final-easy");
     if (finalEasy) finalEasy.addEventListener("click", function () {
       if (!canPlay()) return;
-      if (!pathOpen("test")) return;
       state.finalTest = true;
       persist();
       startEasy(true);
@@ -4560,7 +4598,6 @@
     const finalHard = $("#btn-final-hard");
     if (finalHard) finalHard.addEventListener("click", function () {
       if (!canPlay()) return;
-      if (!pathOpen("test")) return;
       state.finalTest = true;
       persist();
       startHard(true);
@@ -4767,8 +4804,11 @@
       chooseStart: chooseStart,
       studySize: studySize,
       sliceCount: sliceCount,
+      allStudyMode: allStudyMode,
+      allRoundActive: allRoundActive,
       pathOpen: pathOpen,
       studentLocked: studentLocked,
+      renderSetHome: renderSetHome,
       roundReadyForGame: roundReadyForGame,
       currentRoundReadyForGame: currentRoundReadyForGame,
       packBase: packBase,

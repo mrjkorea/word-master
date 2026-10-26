@@ -68,7 +68,16 @@
       partDone: opts.partDone || defaultPartDone,
       bucket: opts.bucket || defaultBucket,
       now: opts.now || function () { return Date.now(); },
+      allRound: opts.allRound || function () { return false; },
     };
+  }
+
+  function isAllRound(set, o) {
+    try {
+      return !!(o.allRound && o.allRound(set));
+    } catch (e) {
+      return false;
+    }
   }
 
   function book(set) {
@@ -122,10 +131,15 @@
     if (live.B) latch.B = true;
     if (live.C) latch.C = true;
     if (live.games) latch.games = true;
+    var allRound = isAllRound(set, o);
+    if (allRound) {
+      latch.intro = true;
+      latch.A = true;
+    }
     var games = !!latch.games;
     return {
-      intro: !!latch.intro,
-      A: !!latch.A,
+      intro: allRound ? true : !!latch.intro,
+      A: allRound ? true : !!latch.A,
       B: !!latch.B,
       C: !!latch.C,
       games: games,
@@ -138,6 +152,11 @@
     if (!set) return locked;
     var idx = STEPS.indexOf(step);
     if (idx < 0) return locked;
+    var o;
+    try { o = resolveOpts(opts); } catch (e) { return locked; }
+    if (isAllRound(set, o) && (step === "intro" || step === "A")) {
+      return { ok: false, why: "locked", need: "B" };
+    }
     var done;
     try { done = hold(set, opts); } catch (e) { return locked; }
     for (var i = 0; i < idx; i++) {

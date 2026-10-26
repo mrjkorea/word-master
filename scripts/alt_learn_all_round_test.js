@@ -42,13 +42,21 @@ function bootStudent() {
   });
 }
 
+function assertDictationFirst(api, label) {
+  api.startTapmap();
+  const screen = api.screenName();
+  if (screen !== "learn") fail(label + " should open Dictation (learn), got " + screen);
+  if (!api.pathOpen("B")) fail(label + " should open Dictation step");
+  if (api.pathOpen("intro") || api.pathOpen("A")) fail(label + " must skip Meet/Learn");
+}
+
 function assertMeetFirst(api, label) {
   api.startTapmap();
   const screen = api.screenName();
   if (screen !== "intro") fail(label + " should open Meet (intro), got " + screen);
 }
 
-// (a) All / 100 on a fully mastered pack must open Meet, not games.
+// (a) All / 100 on a fully mastered pack must skip Meet and open Dictation.
 const apiA = bootStudent();
 const verbs100 = wordsOf(100);
 const verbsSet = {
@@ -69,7 +77,7 @@ apiA.chooseStart(verbsSet, 1);
 if (apiA.currentSet().meetLock.length !== 100) {
   fail("All meetLock length " + apiA.currentSet().meetLock.length);
 }
-assertMeetFirst(apiA, "All/100 mastered pack");
+assertDictationFirst(apiA, "All/100 mastered pack");
 
 // (b) Fresh slice after another finished slice: Meet first, not games.
 const apiB = bootStudent();
@@ -96,7 +104,7 @@ apiB.setStudySize(5);
 apiB.chooseStart(sliceSet, 26);
 assertMeetFirst(apiB, "new slice 26–30 after 1–5 done");
 
-// (c) Second pack: adverbs-style 100-word pack, All review.
+// (c) Second pack: adverbs-style 100-word pack, All review skips Meet.
 const apiC = bootStudent();
 const adv100 = wordsOf(100);
 const advSet = {
@@ -118,6 +126,6 @@ apiC.chooseStart(advSet, 1);
 if (apiC.currentSet().meetLock.length !== 100) {
   fail("adverbs All lock " + apiC.currentSet().meetLock.length);
 }
-assertMeetFirst(apiC, "adverbs All after old 5-word lock");
+assertDictationFirst(apiC, "adverbs All after old 5-word lock");
 
 console.log("ALT_LEARN_ALL_ROUND_OK");
