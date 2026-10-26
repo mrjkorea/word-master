@@ -1936,6 +1936,41 @@
     return 1;
   }
 
+  function resetRoundProgress(set) {
+    if (!set) return;
+    set.tapmapKey = "";
+    const key = (set.meetLock || []).join(",");
+    if (set.pathHeld && key) delete set.pathHeld[key];
+    if (set.roundGames && key) delete set.roundGames[key];
+    set.roundGame = { done: false, game: "", at: 0 };
+    set.roundGameKey = key;
+    syncPathRound(set);
+  }
+
+  function expectedRoundIds(set) {
+    set = set || currentSet();
+    if (!set || !set.words || !set.words.length) return [];
+    if (Number(set.startNumber) >= 1) {
+      return window.StartSlice.sliceFrom(
+        set.words,
+        set.startNumber,
+        sliceCount(set, set.startNumber)
+      ).ids.slice();
+    }
+    const n = studySize(set);
+    const ids = window.MeetLock.batchIds(
+      set.words,
+      set.intro || {},
+      set.winsA || {},
+      set.winsB || {},
+      set.winsC || {},
+      n,
+      2
+    );
+    if (ids.length) return ids;
+    return set.words.slice(0, Math.min(n, set.words.length)).map(function (w) { return w.id; });
+  }
+
   function chooseStart(set, startNumber) {
     set = set || currentSet();
     if (!set) return null;
@@ -1943,7 +1978,7 @@
     set.startNumber = slice.startNumber;
     set.meetLock = slice.ids.slice();
     set.lastPlayedAt = Date.now();
-    syncPathRound(set);
+    resetRoundProgress(set);
     persist();
     return slice;
   }
@@ -1976,7 +2011,7 @@
     return {
       playWords: playWords,
       introDone: function (set) {
-        return introFlagsDone(set);
+        return introDone(set);
       },
       partDone: function (words, wins) { return Algo.partDone(words, wins); },
       bucket: function (set, step) { return Algo.bucket(winsState(set), step); },
@@ -2026,17 +2061,15 @@
   }
 
   function rememberFinishedMeet(set) {
-    if (!introFlagsDone(set)) return;
+    if (!tapmapDone(set)) return;
     const key = batchKey(set);
-    if (key && set.tapmapKey !== key) {
-      set.tapmapKey = key;
-      persist();
-    }
+    if (!key || set.tapmapKey === key) return;
+    set.tapmapKey = key;
+    persist();
   }
 
   function tapmapDone(set) {
     if (!set) return true;
-    if (introFlagsDone(set)) return true;
     const key = batchKey(set);
     if (!key) return true;
     return set.tapmapKey === key;
@@ -2674,7 +2707,19 @@
   function ensureRoundLock(set) {
     if (!set) return;
     if (!set.intro) set.intro = {};
-    if (set.startNumber) {
+    dropStaleMeetLock(set);
+    if (Number(set.startNumber) >= 1) {
+      const expected = expectedRoundIds(set);
+      const cur = (set.meetLock || []).join(",");
+      const exp = expected.join(",");
+      if (exp && cur !== exp) {
+        const slice = window.StartSlice.sliceFrom(set.words || [], set.startNumber, sliceCount(set, set.startNumber));
+        set.startNumber = slice.startNumber;
+        set.meetLock = expected.slice();
+        resetRoundProgress(set);
+        persist();
+        return;
+      }
       if (!Array.isArray(set.meetLock) || !set.meetLock.length) {
         const slice = window.StartSlice.sliceFrom(set.words || [], set.startNumber, sliceCount(set, set.startNumber));
         set.startNumber = slice.startNumber;
@@ -2707,8 +2752,7 @@
       return;
     }
     ensureRoundLock(set);
-    if (currentRoundReadyForGame(set)) return goGames();
-    if (introFlagsDone(set)) {
+    if (tapmapDone(set)) {
       const roundWords = playWords(set);
       const mode = Algo.startMode(roundWords, winsState(set)) || "A";
       learn = blankLearn();

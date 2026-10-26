@@ -72,6 +72,7 @@ if (lock !== "w26,w27,w28,w29,w30") fail("meetLock for 26–30: " + lock);
 });
 if (api.currentRoundReadyForGame(api.currentSet())) fail("new slice with intro only should not be round-ready");
 
+api.currentSet().tapmapKey = api.currentSet().meetLock.join(",");
 api.startTapmap();
 if (api.screenName() !== "learn") {
   fail("alt path should open Learn, got screen " + api.screenName());
