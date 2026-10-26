@@ -1936,6 +1936,30 @@
     return 1;
   }
 
+  function migrateRoundProgress(set, fromKey, toKey) {
+    if (!set || !fromKey || !toKey || fromKey === toKey) return;
+    if (set.roundGames && set.roundGames[fromKey]) {
+      if (!set.roundGames) set.roundGames = {};
+      const saved = set.roundGames[fromKey];
+      const dest = set.roundGames[toKey];
+      if (!dest || (saved && saved.done && !dest.done)) set.roundGames[toKey] = saved;
+      delete set.roundGames[fromKey];
+    }
+    if (set.pathHeld && set.pathHeld[fromKey]) {
+      if (!set.pathHeld) set.pathHeld = {};
+      if (!set.pathHeld[toKey]) set.pathHeld[toKey] = {};
+      const from = set.pathHeld[fromKey];
+      const into = set.pathHeld[toKey];
+      Object.keys(from).forEach(function (k) {
+        if (from[k]) into[k] = true;
+      });
+      delete set.pathHeld[fromKey];
+    }
+    if (set.roundGameKey === fromKey && set.roundGame && set.roundGame.done) {
+      set.roundGameKey = toKey;
+    }
+  }
+
   function resetRoundProgress(set) {
     if (!set) return;
     set.tapmapKey = "";
@@ -2715,8 +2739,10 @@
       if (exp && cur !== exp) {
         const slice = window.StartSlice.sliceFrom(set.words || [], set.startNumber, sliceCount(set, set.startNumber));
         set.startNumber = slice.startNumber;
+        const oldKey = cur;
         set.meetLock = expected.slice();
-        resetRoundProgress(set);
+        migrateRoundProgress(set, oldKey, exp);
+        syncPathRound(set);
         persist();
         return;
       }
@@ -2735,7 +2761,9 @@
       if (meetLockHeld(set)) return;
     }
     if (!meetLockHeld(set)) {
+      const oldKey = (set.meetLock || []).join(",");
       set.meetLock = batchWords(set).map(function (w) { return w.id; });
+      migrateRoundProgress(set, oldKey, set.meetLock.join(","));
       syncPathRound(set);
       persist();
     }
