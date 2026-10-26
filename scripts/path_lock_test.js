@@ -81,6 +81,16 @@ if (!rec || rec.done !== true || rec.game !== "leapfrog" || rec.at !== 1000) {
   fail("markGameDone record " + JSON.stringify(rec));
 }
 if (!PathLock.can(round, "test").ok) fail("finished game should open the test");
+const allPack = fresh(words(["w1", "w2", "w3"]));
+allPack.meetLock = ["w1", "w2", "w3"];
+const allOpts = {
+  allRound: function () { return true; },
+  introDone: function () { return false; },
+  partDone: function () { return false; },
+};
+if (!PathLock.can(allPack, "B", allOpts).ok) fail("all round should open Dictation first");
+if (PathLock.can(allPack, "intro", allOpts).ok) fail("all round should not reopen Meet");
+if (PathLock.can(allPack, "A", allOpts).ok) fail("all round should skip Learn");
 const after = PathLock.hold(round);
 if (!after.C || !after.games) fail("C and games must stay held");
 if (PathLock.next(round) !== null) fail("finished path next " + PathLock.next(round));
