@@ -50,11 +50,11 @@ mustGateTest('$("#btn-hard").addEventListener("click"', "btn-hard");
 mustGateTest('$("#btn-test-easy")', "btn-test-easy");
 mustGateTest('$("#btn-test-hard")', "btn-test-hard");
 
-const jumpBlock = app.slice(app.indexOf('$$("[data-jump]")'), app.indexOf('$$("[data-jump]")') + 500);
-if (jumpBlock.indexOf('if (step === "test")') !== -1 && jumpBlock.indexOf("jumpTo(step)") < jumpBlock.indexOf('step === "test"')) {
-  fail("ribbon Test must not bypass pathOpen");
+const jumpBlock = app.slice(app.indexOf('$$("[data-jump]")'), app.indexOf('$$("[data-jump]")') + 700);
+if (jumpBlock.indexOf("onPathJumpClick") === -1) fail("ribbon jumps must use onPathJumpClick");
+if (jumpBlock.indexOf("pathOpen(step)") !== -1 && jumpBlock.indexOf("onPathJumpClick") === -1) {
+  fail("ribbon jumps must not bypass stage nav gates");
 }
-if (jumpBlock.indexOf('pathOpen(step)') === -1) fail("ribbon jumps must use pathOpen(step)");
 
 const { bootApp } = require("./load_app_for_test");
 

@@ -7,7 +7,7 @@
   <meta name="mobile-web-app-capable" content="yes" />
   <meta name="theme-color" content="#f6f3ec" />
   <title>MRJ Word Master</title>
-  <link rel="stylesheet" href="css/app.css?v=20261027-tapmap-unlock-m11" />
+  <link rel="stylesheet" href="css/app.css?v=20261027-stage-nav-m12" />
 </head>
 <body>
   <div id="phone" class="phone">
@@ -23,6 +23,15 @@
       </label>
       <button type="button" class="student-name-btn" id="btn-student-name" data-mrj-own-record hidden></button>
     </header>
+
+    <nav class="ribbon path-stage-strip" id="path-stage-strip" hidden aria-label="Learning path">
+      <button type="button" class="rib" data-jump="intro"><b>1</b><span data-i18n="intro_go">Meet</span></button>
+      <button type="button" class="rib" data-jump="A"><b>2</b><span data-i18n="part_a">Learn</span></button>
+      <button type="button" class="rib" data-jump="B"><b>3</b><span data-i18n="part_b">Dictation</span></button>
+      <button type="button" class="rib" data-jump="C"><b>4</b><span data-i18n="part_c">Write</span></button>
+      <button type="button" class="rib" data-jump="games"><b>5</b><span data-i18n="games">Games</span></button>
+      <button type="button" class="rib" data-jump="test"><b>6</b><span data-i18n="jump_test">Test</span></button>
+    </nav>
 
     <div class="teacher-bar" id="teacher-bar">
       <button type="button" id="btn-skip-word" data-i18n="skip_word">Skip word</button>
@@ -552,7 +561,7 @@
       document.write('<script src="https://mrjkorea.github.io/mrj-signin/mrj-auth-boot.js" data-mrj-app="word-master"><\/script>');
     }
   </script>
-  <script src="js/factory-algo.js?v=20261027-tapmap-unlock-m11"></script>
+  <script src="js/factory-algo.js?v=20261027-stage-nav-m12"></script>
   <script src="js/meet-lock.js?v=20260923-meetlock"></script>
   <script src="js/start-slice.js?v=20261023-setrange"></script>
   <script src="js/i18n.js?v=20260923-l1"></script>
@@ -567,10 +576,10 @@
   <script src="js/class-progress-ui.js?v=20261014-daily"></script>
   <script src="js/score-progress-panel.js?v=20261014-daily"></script>
   <script src="js/mrj-teacher-unlock.js?v=20261022-teacher-mode"></script>
-  <script>window.WM_BUILD_ID="20261027-tapmap-unlock-m11";</script>
-  <script src="js/version-watch.js?v=20261027-tapmap-unlock-m11"></script>
+  <script>window.WM_BUILD_ID="20261027-stage-nav-m12";</script>
+  <script src="js/version-watch.js?v=20261027-stage-nav-m12"></script>
   <script src="js/spell-stop.js?v=20260930-spellstop"></script>
-  <script src="js/path-lock.js?v=20261027-tapmap-unlock-m11"></script>
-  <script src="js/app.js?v=20261027-tapmap-unlock-m11"></script>
+  <script src="js/path-lock.js?v=20261027-stage-nav-m12"></script>
+  <script src="js/app.js?v=20261027-stage-nav-m12"></script>
 </body>
 </html>

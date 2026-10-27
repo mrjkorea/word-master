@@ -526,12 +526,20 @@ body.is-student .teacher-bar { display: none !important; }
 }
 .chunk.primary .chip-tag { background: rgba(255,255,255,.18); color: #fff; }
 
-#progress-ribbon {
+#progress-ribbon,
+#path-stage-strip {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   gap: 6px;
   flex: 0 0 auto;
 }
+#path-stage-strip {
+  padding: 6px 10px 4px;
+  border-bottom: 1px solid var(--line);
+  background: var(--paper);
+}
+#path-stage-strip[hidden] { display: none !important; }
+body.is-student .rib:not(.locked) { cursor: pointer; }
 .rib {
   background: #fff;
   border: 1px solid var(--line);

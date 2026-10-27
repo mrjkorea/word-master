@@ -158,6 +158,184 @@
     return any;
   }
 
+  const PATH_STAGE_SCREENS = {
+    set: true,
+    intro: true,
+    learn: true,
+    test: true,
+    games: true,
+    playgame: true,
+    match: true,
+    listen: true,
+  };
+
+  function pathStageNow(screenName) {
+    if (screenName === "intro") return "intro";
+    if (screenName === "learn" && learn && learn.mode) return learn.mode;
+    if (screenName === "test") return "test";
+    if (screenName === "games" || screenName === "playgame" || screenName === "match" || screenName === "listen") {
+      return "games";
+    }
+    return "";
+  }
+
+  function stageNavAllowed(set, step) {
+    if (teacherNow()) return true;
+    if (!set || !window.PathLock) return false;
+    if (allRoundActive(set) && (step === "intro" || step === "A")) return false;
+    if (step === "games" && roundReadyForGame(set)) return true;
+    let held = {};
+    try { held = window.PathLock.hold(set, pathOpts()); } catch (e) { held = {}; }
+    if (held[step]) return true;
+    try { return window.PathLock.can(set, step, pathOpts()).ok; } catch (e2) { return false; }
+  }
+
+  function stageNavLocked(set, step) {
+    if (teacherNow()) return false;
+    return !stageNavAllowed(set, step);
+  }
+
+  function paintPathStageStrip(screenName) {
+    const set = currentSet();
+    const ws = set ? winsState(set) : null;
+    const held = (set && window.PathLock) ? window.PathLock.hold(set, pathOpts()) : {};
+    const nowStep = pathStageNow(screenName || currentScreen);
+    const round = set ? playWords(set) : [];
+    $$("#path-stage-strip .rib, #progress-ribbon .rib").forEach(function (el) {
+      const jump = el.getAttribute("data-jump");
+      if (!jump) return;
+      const locked = set ? stageNavLocked(set, jump) : true;
+      el.classList.toggle("locked", locked);
+      el.classList.toggle("done", !!(held && held[jump]));
+      el.classList.toggle("now", jump === nowStep);
+      if (jump === "A" || jump === "B" || jump === "C") {
+        if (jump === nowStep) el.classList.add("now");
+        else if (set && ws && !locked && Algo.startMode(round, ws) === jump && screenName === "set") {
+          el.classList.add("now");
+        }
+      }
+    });
+  }
+
+  function testSessionActive() {
+    if (currentScreen !== "test" || !quiz || !quiz.items || !quiz.items.length) return false;
+    const play = $("#test-play");
+    const score = $("#test-score");
+    if (!play || play.hidden) return false;
+    if (score && !score.hidden) return false;
+    return quiz.index < quiz.items.length;
+  }
+
+  function recordSliceTestProgress() {
+    if (!quiz || !quiz.items || !quiz.items.length || quiz.wide) return;
+    const total = quiz.items.length || 1;
+    const pct = Math.round((100 * quiz.score) / total);
+    const misses = quiz.mistakes || [];
+    stampCheck(currentSet(), quiz.score, total);
+    const set = currentSet();
+    if (!set) return;
+    const missIds = misses.map(function (m) {
+      return m && m.id != null ? m.id : null;
+    }).filter(function (id) { return id != null && id !== ""; });
+    appendScoreRow({
+      at: Date.now(),
+      pack: set.packId,
+      kind: quiz.kind === "hard" ? "test_hard" : "test_easy",
+      activity: quiz.kind === "hard" ? "Hard test" : "Easy test",
+      score: quiz.score,
+      total: total,
+      words: (quiz.items || []).map(function (it) {
+        return { id: it.id, en: it.en };
+      }),
+    });
+    logActivityResult({
+      packId: set.packId,
+      packTitle: set.title || "",
+      kind: quiz.kind === "hard" ? "test_hard" : "test_easy",
+      score: quiz.score,
+      total: total,
+      meta: { misses: missIds, passed: pct >= PASS_PCT, leftEarly: true },
+    });
+    if (pct >= PASS_PCT) {
+      window.StartSlice.markPassed(
+        set,
+        (quiz.items || []).map(function (item) { return item && item.id; }),
+        pct
+      );
+    }
+    persist();
+  }
+
+  function recordWideTestProgress() {
+    if (!quiz || !quiz.items || !quiz.items.length || !quiz.wide) return;
+    const total = quiz.items.length || 1;
+    const pct = Math.round((100 * quiz.score) / total);
+    const misses = quiz.mistakes || [];
+    const set = currentSet();
+    if (!set) return;
+    const missIds = [];
+    misses.forEach(function (m) {
+      if (m && m.id != null) missIds.push(m.id);
+    });
+    set.final = {
+      score: quiz.score,
+      total: total,
+      pct: pct,
+      passed: pct >= PASS_PCT,
+      at: Date.now(),
+    };
+    set.finalMiss = missIds;
+    stampCheck(set, quiz.score, total);
+    appendScoreRow({
+      at: set.final.at,
+      pack: set.packId,
+      kind: "final",
+      activity: "All-pack test",
+      score: quiz.score,
+      total: total,
+      words: (quiz.items || []).map(function (it) {
+        return { id: it.id, en: it.en };
+      }),
+    });
+    logActivityResult({
+      packId: set.packId,
+      packTitle: set.title || "",
+      kind: "final",
+      score: quiz.score,
+      total: total,
+      meta: { misses: missIds, passed: pct >= PASS_PCT, leftEarly: true },
+    });
+    persist();
+  }
+
+  function guardLeaveTest(run) {
+    if (teacherNow() || !testSessionActive()) {
+      run();
+      return;
+    }
+    const msg = t("test_leave_warn");
+    if (typeof confirm === "function" && !confirm(msg)) return;
+    if (quiz && quiz.wide) recordWideTestProgress();
+    else recordSliceTestProgress();
+    quiz = blankQuiz();
+    run();
+  }
+
+  function onPathJumpClick(step) {
+    if (!canPlay()) return;
+    const set = currentSet();
+    if (!teacherNow() && !stageNavAllowed(set, step)) {
+      let gate = { need: "intro" };
+      try { gate = window.PathLock.can(set, step, pathOpts()); } catch (e) { /* ignore */ }
+      showPathLock(gate);
+      return;
+    }
+    guardLeaveTest(function () {
+      if (step === "test") repairTapmapKey(set);
+      jumpTo(step);
+    });
+  }
+
   function studentLocked(set, step) {
     if (teacherNow()) return false;
     if (!set || !window.PathLock) return true;
@@ -1370,6 +1548,10 @@
       el.classList.toggle("active", el.getAttribute("data-screen") === name);
     });
     paintSetRangeBanner(name);
+    const strip = $("#path-stage-strip");
+    const quietStrip = name === "boot" || name === "name" || name === "home" || name === "record" || name === "class-progress" || name === "words";
+    if (strip) strip.hidden = quietStrip || !PATH_STAGE_SCREENS[name];
+    paintPathStageStrip(name);
     const back = $("#btn-back");
     const voice = $("#voice-toggle");
     const topbar = $("#topbar");
@@ -2451,20 +2633,7 @@
     $("#set-pct").textContent = t("pct", { n: pct });
     renderStudySize(set);
     renderPackStanding(set);
-    const held = window.PathLock ? window.PathLock.hold(set, pathOpts()) : {};
-    $$("#progress-ribbon .rib").forEach(function (el) {
-      const jump = el.getAttribute("data-jump");
-      const locked = studentLocked(set, jump);
-      el.classList.toggle("locked", locked);
-      el.classList.toggle("done", !!held[jump]);
-      if (jump === "A" || jump === "B" || jump === "C") {
-        const wins = Algo.bucket(ws, jump);
-        const round = playWords(set);
-        el.classList.toggle("now", !locked && Algo.startMode(round, ws) === jump);
-      } else {
-        el.classList.remove("now");
-      }
-    });
+    paintPathStageStrip("set");
     const chips = $("#word-chips");
     chips.innerHTML = "";
     const roundWords = playWords(set);
@@ -2791,7 +2960,9 @@
   }
 
   function startMeet() {
-    startTapmap();
+    const set = currentSet();
+    const review = !!(set && introDone(set));
+    startTapmap(review ? { review: true } : null);
   }
 
   function ensureRoundLock(set) {
@@ -2835,7 +3006,7 @@
     }
   }
 
-  function startTapmap() {
+  function startTapmap(opts) {
     const set = currentSet();
     if (!set) return;
     repairStaleLock(set);
@@ -2845,12 +3016,14 @@
       showScreen("set");
       return;
     }
-    ensureRoundLock(set);
+    const review = !!(opts && opts.review);
+    if (review) repairStaleLock(set);
+    else ensureRoundLock(set);
     if (allRoundActive(set)) {
       startLearnAt("B");
       return;
     }
-    if (tapmapDone(set)) {
+    if (tapmapDone(set) && !review) {
       const roundWords = playWords(set);
       const mode = Algo.startMode(roundWords, winsState(set)) || "A";
       learn = blankLearn();
@@ -2867,6 +3040,10 @@
     }
     tap = blankTap();
     tap.words = words.slice();
+    tap.found = {};
+    if (review) {
+      words.forEach(function (w) { tap.found[w.id] = true; });
+    }
     tap.phase = "explore";
     tap.started = Date.now();
     const card = $("#meet-card");
@@ -4419,8 +4596,10 @@
       return;
     }
     if (currentScreen === "learn" || currentScreen === "test") {
-      renderSetHome();
-      showScreen(currentSet() ? "set" : "home");
+      guardLeaveTest(function () {
+        renderSetHome();
+        showScreen(currentSet() ? "set" : "home");
+      });
       return;
     }
     if (currentScreen === "match" || currentScreen === "listen") {
@@ -4568,10 +4747,13 @@
     });
     $$("[data-jump]").forEach(function (btn) {
       btn.addEventListener("click", function () {
-        if (!canPlay()) return;
         const step = btn.getAttribute("data-jump");
-        if (!teacherNow() && !pathOpen(step)) return;
-        jumpTo(step);
+        if (!step) return;
+        if (teacherNow()) {
+          guardLeaveTest(function () { jumpTo(step); });
+          return;
+        }
+        onPathJumpClick(step);
       });
     });
     const meetEn = $("#meet-en");
@@ -4652,8 +4834,10 @@
     $("#btn-test-del").addEventListener("click", delAz);
     $("#btn-test-check").addEventListener("click", onHardCheck);
     $("#btn-test-home").addEventListener("click", function () {
-      renderSetHome();
-      showScreen("set");
+      guardLeaveTest(function () {
+        renderSetHome();
+        showScreen("set");
+      });
     });
     $$("#game-slots .slot.playable").forEach(function (slot) {
       slot.addEventListener("click", function () {
@@ -4844,6 +5028,12 @@
       pathOpen: pathOpen,
       studentLocked: studentLocked,
       healPathProgress: healPathProgress,
+      stageNavAllowed: stageNavAllowed,
+      stageNavLocked: stageNavLocked,
+      onPathJumpClick: onPathJumpClick,
+      guardLeaveTest: guardLeaveTest,
+      testSessionActive: testSessionActive,
+      paintPathStageStrip: paintPathStageStrip,
       renderSetHome: renderSetHome,
       roundReadyForGame: roundReadyForGame,
       currentRoundReadyForGame: currentRoundReadyForGame,
