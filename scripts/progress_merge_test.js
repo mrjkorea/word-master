@@ -256,5 +256,35 @@ if (allOut.studySize !== 0) {
   process.exit(1);
 }
 
+const mergePack = global.MRJ_WM_mergePack;
+const heldMerge = mergePack(
+  {
+    meetLock: ["w1", "w2"],
+    intro: { w1: true, w2: true },
+    pathHeld: { "w1,w2": { intro: true } },
+    lastPlayedAt: 10,
+  },
+  {
+    meetLock: ["w1", "w2"],
+    intro: { w1: true, w2: true },
+    pathHeld: { "w1,w2": { A: true, B: true, C: true, games: true } },
+    roundGames: { "w1,w2": { done: true, game: "snowjump", at: 20 } },
+    lastPlayedAt: 5,
+  }
+);
+const latch = heldMerge.pathHeld && heldMerge.pathHeld["w1,w2"];
+if (!latch || !latch.intro || !latch.games) {
+  console.error("pathHeld deep merge failed", heldMerge.pathHeld);
+  process.exit(1);
+}
+if (!heldMerge.roundGames || !heldMerge.roundGames["w1,w2"] || !heldMerge.roundGames["w1,w2"].done) {
+  console.error("roundGames merge failed", heldMerge.roundGames);
+  process.exit(1);
+}
+if (heldMerge.tapmapKey !== "w1,w2") {
+  console.error("tapmap heal failed", heldMerge.tapmapKey);
+  process.exit(1);
+}
+
 console.log("PROGRESS_MERGE_OK");
 process.exit(0);

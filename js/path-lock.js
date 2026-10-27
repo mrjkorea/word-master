@@ -15,6 +15,65 @@
     return ids.join(",");
   }
 
+  function canonicalRoundKey(key) {
+    if (key == null || key === "") return "";
+    return String(key).split(",").filter(function (id) { return id; }).sort().join(",");
+  }
+
+  function mergeLatchFlags(into, from) {
+    if (!from || typeof from !== "object") return into;
+    if (!into || typeof into !== "object") into = {};
+    ["intro", "A", "B", "C", "games"].forEach(function (flag) {
+      if (from[flag]) into[flag] = true;
+    });
+    return into;
+  }
+
+  function reconcileRoundStorage(set) {
+    if (!set) return;
+    var key = roundKey(set);
+    var canon = canonicalRoundKey(key);
+    if (!canon) return;
+    if (set.roundGames && typeof set.roundGames === "object") {
+      var best = null;
+      var bestKey = "";
+      Object.keys(set.roundGames).forEach(function (k) {
+        if (canonicalRoundKey(k) !== canon) return;
+        var rec = set.roundGames[k];
+        if (!rec || rec.done !== true) return;
+        if (!best || (Number(rec.at) || 0) >= (Number(best.at) || 0)) {
+          best = rec;
+          bestKey = k;
+        }
+      });
+      if (best && key) {
+        if (!set.roundGames[key] || !set.roundGames[key].done) {
+          set.roundGames[key] = { done: true, game: best.game || "", at: best.at || 0 };
+        }
+      }
+    }
+    if (set.pathHeld && typeof set.pathHeld === "object") {
+      var merged = {};
+      Object.keys(set.pathHeld).forEach(function (k) {
+        if (canonicalRoundKey(k) !== canon) return;
+        mergeLatchFlags(merged, set.pathHeld[k]);
+      });
+      if (key && Object.keys(merged).length) {
+        if (!set.pathHeld[key]) set.pathHeld[key] = {};
+        mergeLatchFlags(set.pathHeld[key], merged);
+      }
+    }
+    if (set.roundGame && set.roundGame.done === true && canonicalRoundKey(set.roundGameKey) === canon) {
+      if (key && set.roundGames && (!set.roundGames[key] || !set.roundGames[key].done)) {
+        set.roundGames[key] = {
+          done: true,
+          game: set.roundGame.game || "",
+          at: set.roundGame.at || 0,
+        };
+      }
+    }
+  }
+
   function playWordsOf(set) {
     if (!set) return [];
     var words = set.words || [];
@@ -84,24 +143,50 @@
   }
 
   function latchFor(set, create) {
+    reconcileRoundStorage(set);
     if (!set.pathHeld || typeof set.pathHeld !== "object") {
       if (!create) return null;
       set.pathHeld = {};
     }
     var key = roundKey(set);
-    if (!set.pathHeld[key]) {
-      if (!create) return null;
-      set.pathHeld[key] = {};
+    var canon = canonicalRoundKey(key);
+    if (set.pathHeld[key]) return set.pathHeld[key];
+    if (canon) {
+      var found = null;
+      Object.keys(set.pathHeld).forEach(function (k) {
+        if (canonicalRoundKey(k) === canon && set.pathHeld[k]) found = set.pathHeld[k];
+      });
+      if (found) {
+        if (create && key) set.pathHeld[key] = found;
+        return found;
+      }
     }
+    if (!create) return null;
+    if (!key) return null;
+    set.pathHeld[key] = {};
     return set.pathHeld[key];
   }
 
   function gamesDone(set) {
     if (!set) return false;
+    reconcileRoundStorage(set);
     var key = roundKey(set);
+    var canon = canonicalRoundKey(key);
+    if (!canon) return false;
     var saved = set.roundGames && set.roundGames[key];
     if (saved && saved.done === true) return true;
-    if (set.roundGame && set.roundGame.done === true && set.roundGameKey === key) return true;
+    if (set.roundGame && set.roundGame.done === true && canonicalRoundKey(set.roundGameKey) === canon) {
+      return true;
+    }
+    if (set.roundGames) {
+      var keys = Object.keys(set.roundGames);
+      for (var i = 0; i < keys.length; i++) {
+        var k = keys[i];
+        if (canonicalRoundKey(k) !== canon) continue;
+        var rec = set.roundGames[k];
+        if (rec && rec.done === true) return true;
+      }
+    }
     return false;
   }
 
@@ -129,6 +214,16 @@
     if (live.B) latch.B = true;
     if (live.C) latch.C = true;
     if (live.games) latch.games = true;
+    if (!latch.intro && live.intro) latch.intro = true;
+    try {
+      if (
+        !latch.intro &&
+        defaultIntroDone(set) &&
+        latch.A && latch.B && latch.C && (latch.games || live.games)
+      ) {
+        latch.intro = true;
+      }
+    } catch (eIntro) { /* ignore */ }
     var allRound = isAllRound(set, o);
     if (allRound) {
       latch.intro = true;
@@ -188,14 +283,32 @@
 
   function syncRound(set) {
     if (!set) return;
+    reconcileRoundStorage(set);
     var key = roundKey(set);
+    var canon = canonicalRoundKey(key);
     set.roundGameKey = key;
     var saved = set.roundGames && set.roundGames[key];
     if (saved && saved.done === true) {
       set.roundGame = { done: true, game: saved.game || "", at: saved.at || 0 };
-    } else {
-      set.roundGame = { done: false, game: "", at: 0 };
+      return;
     }
+    if (set.roundGames && canon) {
+      var keys = Object.keys(set.roundGames);
+      for (var i = 0; i < keys.length; i++) {
+        var k = keys[i];
+        if (canonicalRoundKey(k) !== canon) continue;
+        var rec = set.roundGames[k];
+        if (rec && rec.done === true) {
+          set.roundGame = { done: true, game: rec.game || "", at: rec.at || 0 };
+          if (key) set.roundGames[key] = { done: true, game: rec.game || "", at: rec.at || 0 };
+          return;
+        }
+      }
+    }
+    if (set.roundGame && set.roundGame.done === true && canonicalRoundKey(set.roundGameKey) === canon) {
+      return;
+    }
+    set.roundGame = { done: false, game: "", at: 0 };
   }
 
   function isTeacher(search, saved) {
@@ -244,5 +357,7 @@
     syncRound: syncRound,
     isTeacher: isTeacher,
     roundKey: roundKey,
+    canonicalRoundKey: canonicalRoundKey,
+    reconcileRoundStorage: reconcileRoundStorage,
   };
 });

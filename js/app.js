@@ -895,6 +895,7 @@
     set.roundGames = merged.roundGames && typeof merged.roundGames === "object" ? merged.roundGames : set.roundGames;
     set.pathHeld = merged.pathHeld && typeof merged.pathHeld === "object" ? merged.pathHeld : set.pathHeld;
     if (slim.externalPackSrc && !set.externalPackSrc) set.externalPackSrc = slim.externalPackSrc;
+    syncPathRound(set);
   }
 
   function findSetByPackId(pid) {
@@ -2416,6 +2417,7 @@
   function renderSetHome() {
     const set = currentSet();
     if (!set) return;
+    syncPathRound(set);
     repairStaleLock(set);
     ensurePackWords(set);
     $("#set-title").textContent = set.title;

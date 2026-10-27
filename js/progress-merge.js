@@ -108,6 +108,73 @@
     return out;
   }
 
+  function canonicalRoundKey(key) {
+    if (key == null || key === "") return "";
+    return String(key).split(",").filter(function (id) { return id; }).sort().join(",");
+  }
+
+  function mergeHeldLatch(a, b) {
+    a = a && typeof a === "object" ? a : {};
+    b = b && typeof b === "object" ? b : {};
+    return {
+      intro: !!(a.intro || b.intro),
+      A: !!(a.A || b.A),
+      B: !!(a.B || b.B),
+      C: !!(a.C || b.C),
+      games: !!(a.games || b.games),
+    };
+  }
+
+  function mergePathHeld(a, b) {
+    a = a && typeof a === "object" ? a : {};
+    b = b && typeof b === "object" ? b : {};
+    var byCanon = {};
+    function ingest(src) {
+      Object.keys(src).forEach(function (k) {
+        var c = canonicalRoundKey(k);
+        if (!c) return;
+        if (!byCanon[c]) byCanon[c] = { key: k, latch: {} };
+        byCanon[c].latch = mergeHeldLatch(byCanon[c].latch, src[k]);
+      });
+    }
+    ingest(a);
+    ingest(b);
+    var out = {};
+    Object.keys(byCanon).forEach(function (c) {
+      out[byCanon[c].key] = byCanon[c].latch;
+    });
+    return out;
+  }
+
+  function mergeRoundGames(a, b) {
+    a = a && typeof a === "object" ? a : {};
+    b = b && typeof b === "object" ? b : {};
+    var byCanon = {};
+    function ingest(src) {
+      Object.keys(src).forEach(function (k) {
+        var c = canonicalRoundKey(k);
+        if (!c) return;
+        var rec = src[k];
+        if (!rec || typeof rec !== "object") return;
+        var prev = byCanon[c];
+        if (
+          !prev ||
+          (rec.done === true && prev.rec.done !== true) ||
+          (Number(rec.at) || 0) >= (Number(prev.rec.at) || 0)
+        ) {
+          byCanon[c] = { key: k, rec: rec };
+        }
+      });
+    }
+    ingest(a);
+    ingest(b);
+    var out = {};
+    Object.keys(byCanon).forEach(function (c) {
+      out[byCanon[c].key] = byCanon[c].rec;
+    });
+    return out;
+  }
+
   function pickStartNumber(a, b) {
     var aAt = a && a.lastPlayedAt ? Number(a.lastPlayedAt) : 0;
     var bAt = b && b.lastPlayedAt ? Number(b.lastPlayedAt) : 0;
@@ -165,19 +232,38 @@
     return true;
   }
 
+  function healTapmapKey(pack) {
+    if (!pack || typeof pack !== "object") return "";
+    var lock = Array.isArray(pack.meetLock) ? pack.meetLock : [];
+    if (!lock.length) return pack.tapmapKey || "";
+    var key = lock.join(",");
+    var intro = pack.intro && typeof pack.intro === "object" ? pack.intro : {};
+    for (var i = 0; i < lock.length; i++) {
+      if (!intro[lock[i]]) return pack.tapmapKey || "";
+    }
+    return key;
+  }
+
   function mergePack(a, b) {
     if (!a) return b || {};
     if (!b) return a || {};
+    var meetLock = pickMeetLock(a, b);
+    var intro = mergeIntro(a.intro, b.intro);
+    var slim = {
+      meetLock: meetLock,
+      intro: intro,
+      tapmapKey: b.tapmapKey || a.tapmapKey || "",
+    };
     return {
       title: b.title || a.title || "",
       winsA: mergeCountMaps(a.winsA, b.winsA),
       winsB: mergeCountMaps(a.winsB, b.winsB),
       winsC: mergeCountMaps(a.winsC, b.winsC),
-      intro: mergeIntro(a.intro, b.intro),
-      meetLock: pickMeetLock(a, b),
+      intro: intro,
+      meetLock: meetLock,
       startNumber: pickStartNumber(a, b),
       testPassed: mergeTestPassed(a.testPassed, b.testPassed),
-      tapmapKey: b.tapmapKey || a.tapmapKey || "",
+      tapmapKey: healTapmapKey(slim),
       lastPlayedAt: maxNum(a.lastPlayedAt, b.lastPlayedAt),
       srsTrying: !!(a.srsTrying || b.srsTrying),
       srsForever: !!(a.srsForever || b.srsForever),
@@ -188,8 +274,8 @@
       final: mergeScoreBlock(a.final, b.final),
       check: mergeScoreBlock(a.check, b.check),
       finalMiss: (Array.isArray(b.finalMiss) && b.finalMiss.length ? b.finalMiss : a.finalMiss) || [],
-      roundGames: mergeShallowObjects(a.roundGames, b.roundGames),
-      pathHeld: mergeShallowObjects(a.pathHeld, b.pathHeld),
+      roundGames: mergeRoundGames(a.roundGames, b.roundGames),
+      pathHeld: mergePathHeld(a.pathHeld, b.pathHeld),
     };
   }
 
