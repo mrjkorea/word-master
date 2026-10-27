@@ -1,4 +1,4 @@
 {
-  "build": "20261027-culture-m08",
-  "app": "word-master"
+  "build": "20261027-teacher-btn-m13",
+  "note": "Teacher topbar PIN unlock (study_teacher_check) plus stage nav and test unlock fixes"
 }
