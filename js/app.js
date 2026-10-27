@@ -128,11 +128,20 @@
     try { window.PathLock.syncRound(set); } catch (e) {}
   }
 
+  function repairTapmapKey(set) {
+    if (!set) return;
+    const key = batchKey(set);
+    if (!key || !introFlagsDone(set) || set.tapmapKey === key) return;
+    set.tapmapKey = key;
+    persist();
+  }
+
   function studentLocked(set, step) {
     if (teacherNow()) return false;
     if (!set || !window.PathLock) return true;
     if (allRoundActive(set) && (step === "intro" || step === "A")) return true;
     if (step === "games" && roundReadyForGame(set)) return false;
+    if (step === "test") repairTapmapKey(set);
     try { return !window.PathLock.can(set, step, pathOpts()).ok; } catch (e) { return true; }
   }
 
@@ -180,6 +189,7 @@
         hideGamesLock();
         return true;
       }
+      if (step === "test") repairTapmapKey(set);
       rememberFinishedMeet(set);
       const gate = window.PathLock.can(set, step, pathOpts());
       if (gate && gate.ok) {
@@ -2119,10 +2129,7 @@
   }
 
   function introDone(set) {
-    if (!set || !set.intro) set.intro = {};
-    const words = playWords(set);
-    if (!words.length) return false; // an empty word list is never "finished"
-    return tapmapDone(set) && words.every(function (w) { return !!set.intro[w.id]; });
+    return introFlagsDone(set);
   }
 
   function blankTap() {

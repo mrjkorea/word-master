@@ -36,8 +36,6 @@
     var words = playWordsOf(set);
     if (!words.length) return false;
     var intro = (set && set.intro) || {};
-    var key = words.map(function (w) { return w.id; }).join(",");
-    if (!set || set.tapmapKey !== key) return false;
     for (var i = 0; i < words.length; i++) {
       if (!intro[words[i].id]) return false;
     }
