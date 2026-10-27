@@ -209,6 +209,7 @@
     try { o = resolveOpts(opts); } catch (e) { return empty; }
     var live = liveFlags(set, o);
     var latch = latchFor(set, true);
+    if (!latch) return empty;
     if (live.intro) latch.intro = true;
     if (live.A) latch.A = true;
     if (live.B) latch.B = true;
@@ -279,6 +280,33 @@
     var latch = latchFor(set, true);
     latch.games = true;
     return set.roundGame;
+  }
+
+  function healStudentRound(set, opts) {
+    if (!set) return false;
+    var o = resolveOpts(opts);
+    if (isAllRound(set, o)) {
+      reconcileRoundStorage(set);
+      hold(set, opts);
+      return false;
+    }
+    var key = roundKey(set);
+    var hadIntro = false;
+    if (set.pathHeld && set.pathHeld[key] && set.pathHeld[key].intro) hadIntro = true;
+    reconcileRoundStorage(set);
+    hold(set, opts);
+    var healed = false;
+    if (defaultIntroDone(set)) {
+      var latch = latchFor(set, true);
+      if (latch && !latch.intro) {
+        latch.intro = true;
+        healed = true;
+      }
+    }
+    syncRound(set);
+    hold(set, opts);
+    if (!hadIntro && set.pathHeld && set.pathHeld[key] && set.pathHeld[key].intro) healed = true;
+    return healed;
   }
 
   function syncRound(set) {
@@ -359,5 +387,6 @@
     roundKey: roundKey,
     canonicalRoundKey: canonicalRoundKey,
     reconcileRoundStorage: reconcileRoundStorage,
+    healStudentRound: healStudentRound,
   };
 });

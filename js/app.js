@@ -128,12 +128,34 @@
     try { window.PathLock.syncRound(set); } catch (e) {}
   }
 
-  function repairTapmapKey(set) {
-    if (!set) return;
+  function repairTapmapKey(set, skipPersist) {
+    if (!set) return false;
     const key = batchKey(set);
-    if (!key || !introFlagsDone(set) || set.tapmapKey === key) return;
+    if (!key || !introFlagsDone(set) || set.tapmapKey === key) return false;
     set.tapmapKey = key;
-    persist();
+    if (!skipPersist) persist();
+    return true;
+  }
+
+  function healPathProgress(set) {
+    if (!set || teacherNow() || !window.PathLock) return false;
+    let dirty = false;
+    if (typeof window.PathLock.healStudentRound === "function") {
+      dirty = window.PathLock.healStudentRound(set, pathOpts()) || dirty;
+    }
+    syncPathRound(set);
+    try { window.PathLock.hold(set, pathOpts()); } catch (e) { /* ignore */ }
+    if (dirty) persist();
+    return dirty;
+  }
+
+  function healAllPathProgress() {
+    let any = false;
+    Object.keys(state.sets || {}).forEach(function (id) {
+      const set = state.sets[id];
+      if (set && healPathProgress(set)) any = true;
+    });
+    return any;
   }
 
   function studentLocked(set, step) {
@@ -880,7 +902,7 @@
     set.winsC = merged.winsC || {};
     set.intro = merged.intro || {};
     set.meetLock = merged.meetLock || [];
-    dropStaleMeetLock(set);
+    if (set.words && set.words.length) dropStaleMeetLock(set);
     set.startNumber = (Number(merged.startNumber) >= 1) ? Number(merged.startNumber) : null;
     set.testPassed = copyPassed(merged.testPassed);
     set.tapmapKey = merged.tapmapKey || "";
@@ -895,7 +917,7 @@
     set.roundGames = merged.roundGames && typeof merged.roundGames === "object" ? merged.roundGames : set.roundGames;
     set.pathHeld = merged.pathHeld && typeof merged.pathHeld === "object" ? merged.pathHeld : set.pathHeld;
     if (slim.externalPackSrc && !set.externalPackSrc) set.externalPackSrc = slim.externalPackSrc;
-    syncPathRound(set);
+    healPathProgress(set);
   }
 
   function findSetByPackId(pid) {
@@ -1030,6 +1052,7 @@
       if (obj.currentPackId === pid) state.currentSetId = set.id;
     });
     dedupeSetsByPackId();
+    healAllPathProgress();
   }
 
   function pullSheet() {
@@ -1041,6 +1064,7 @@
       if (gen !== pullGen || currentStudentId() !== id) return;
       if (res && res.found && res.progress_json) mergeRemoteProgress(res.progress_json);
       dedupeSetsByPackId();
+      healAllPathProgress();
       state.studentId = id;
       saveStateToStorage();
       if (
@@ -1918,6 +1942,7 @@
   // round that counts as finished. Drop it so the normal batch words are used.
   function dropStaleMeetLock(set) {
     if (!set || !Array.isArray(set.meetLock) || !set.meetLock.length) return false;
+    if (!set.words || !set.words.length) return false;
     const ids = Object.create(null);
     (set.words || []).forEach(function (w) { if (w && w.id != null) ids[w.id] = true; });
     const stale = set.meetLock.some(function (id) { return !ids[id]; });
@@ -2186,7 +2211,7 @@
     state.sets[set.id] = set;
     state.currentSetId = set.id;
     set.lastPlayedAt = Date.now();
-    syncPathRound(set);
+    healPathProgress(set);
     persist();
     syncPack();
   }
@@ -2417,9 +2442,9 @@
   function renderSetHome() {
     const set = currentSet();
     if (!set) return;
-    syncPathRound(set);
     repairStaleLock(set);
     ensurePackWords(set);
+    healPathProgress(set);
     $("#set-title").textContent = set.title;
     const ws = winsState(set);
     const pct = Algo.factoryProgress(set.words, ws);
@@ -4818,6 +4843,7 @@
       allRoundActive: allRoundActive,
       pathOpen: pathOpen,
       studentLocked: studentLocked,
+      healPathProgress: healPathProgress,
       renderSetHome: renderSetHome,
       roundReadyForGame: roundReadyForGame,
       currentRoundReadyForGame: currentRoundReadyForGame,
