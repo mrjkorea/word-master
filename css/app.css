@@ -74,6 +74,31 @@ button:disabled:not(.choice) { cursor: not-allowed; opacity: 0.38; }
 }
 .topbar.no-back { grid-template-columns: minmax(0, 1fr) auto auto; }
 .topbar.no-back .icon-btn { display: none; }
+.topbar-student-actions {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  min-width: 0;
+  justify-content: flex-end;
+}
+.teacher-top-btn {
+  flex: 0 0 auto;
+  min-height: 36px;
+  padding: 0 10px;
+  border-radius: 980px;
+  border: 1px solid var(--navy);
+  background: var(--navy);
+  color: #fff;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+}
+.teacher-top-btn.is-active {
+  background: #f5c518;
+  border-color: #d4a80f;
+  color: #1d1d1f;
+}
 .student-name-btn {
   max-width: 120px;
   min-height: 36px;
@@ -184,6 +209,64 @@ body.is-student .teacher-bar { display: none !important; }
   font-size: 11px;
   font-weight: 600;
   white-space: nowrap;
+}
+
+.mrj-teacher-unlock-panel {
+  position: fixed;
+  z-index: 12000;
+  width: min(280px, calc(100vw - 24px));
+  padding: 14px 14px 12px;
+  border-radius: 14px;
+  border: 1px solid var(--line);
+  background: #fff;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.18);
+}
+.mrj-teacher-unlock-panel[hidden] { display: none !important; }
+.mrj-teacher-unlock-panel h3 {
+  margin: 0 0 8px;
+  font-size: 16px;
+  color: var(--navy);
+}
+.mrj-teacher-unlock-panel p {
+  margin: 0 0 10px;
+  font-size: 13px;
+  color: var(--muted);
+}
+.mrj-teacher-unlock-panel input {
+  width: 100%;
+  min-height: 40px;
+  margin-bottom: 8px;
+  padding: 0 12px;
+  border-radius: 10px;
+  border: 1px solid var(--line);
+  font-size: 16px;
+}
+.mrj-teacher-unlock-panel .mrj-teacher-unlock-err {
+  min-height: 18px;
+  margin: 0 0 8px;
+  font-size: 12px;
+  color: #c41e1e;
+}
+.mrj-teacher-unlock-panel .mrj-teacher-unlock-acts {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+.mrj-teacher-unlock-panel button.mrj-teacher-unlock-go {
+  flex: 1;
+  min-height: 40px;
+  border-radius: 10px;
+  border: none;
+  background: var(--navy);
+  color: #fff;
+  font-weight: 700;
+}
+.mrj-teacher-unlock-panel button.mrj-teacher-unlock-x {
+  min-height: 40px;
+  min-width: 40px;
+  border-radius: 10px;
+  border: 1px solid var(--line);
+  background: #f5f5f7;
 }
 
 .class-progress-status {

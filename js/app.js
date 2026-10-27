@@ -115,7 +115,9 @@
 
   function teacherNow() {
     try {
-      if (window.MRJTeacherUnlock && window.MRJTeacherUnlock.isMrjTeacher()) return true;
+      const unlock = window.MRJTeacherUnlock;
+      if (unlock && typeof unlock.isUnlocked === "function" && unlock.isUnlocked()) return true;
+      if (unlock && typeof unlock.isMrjTeacher === "function" && unlock.isMrjTeacher()) return true;
       const api = window.MRJSignin || window.MRJ_AUTH;
       return !!(api && typeof api.isTeacher === "function" && api.isTeacher());
     } catch (e) {
@@ -671,16 +673,31 @@
 
   function paintStudentNameBtn() {
     const btn = $("#btn-student-name");
-    if (!btn) return;
+    const teacherBtn = $("#btn-teacher");
     const id = currentStudentId();
-    if (id) {
-      btn.hidden = false;
-      btn.textContent = id;
-      btn.title = "Score record";
-    } else {
-      btn.hidden = true;
-      btn.textContent = "";
-      btn.title = "";
+    if (btn) {
+      if (id) {
+        btn.hidden = false;
+        btn.textContent = id;
+        btn.title = "Score record";
+      } else {
+        btn.hidden = true;
+        btn.textContent = "";
+        btn.title = "";
+      }
+    }
+    if (teacherBtn) {
+      if (id) {
+        teacherBtn.hidden = false;
+        if (window.MRJTeacherUnlock && typeof window.MRJTeacherUnlock.bindTeacherButton === "function") {
+          window.MRJTeacherUnlock.bindTeacherButton(teacherBtn);
+        }
+      } else {
+        teacherBtn.hidden = true;
+      }
+      if (window.MRJTeacherUnlock && typeof window.MRJTeacherUnlock.syncTeacherButton === "function") {
+        window.MRJTeacherUnlock.syncTeacherButton();
+      }
     }
   }
   let currentScreen = "boot";
@@ -983,7 +1000,13 @@
     document.addEventListener("mrj-teacher", function () {
       if (currentScreen === "set") renderSetHome();
       else if (currentScreen === "home") renderHome();
+      showScreen(currentScreen);
     });
+    if (window.MRJTeacherUnlock && typeof window.MRJTeacherUnlock.installRefresh === "function") {
+      window.MRJTeacherUnlock.installRefresh(function () {
+        showScreen(currentScreen);
+      });
+    }
     window.addEventListener("mrj-wm-save-status", function (ev) {
       const ok = !!(ev && ev.detail && ev.detail.ok);
       const err = ev && ev.detail && ev.detail.error ? String(ev.detail.error) : "";

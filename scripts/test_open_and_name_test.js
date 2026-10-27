@@ -22,6 +22,7 @@ if (!cacheKey(index, "js/wm-pack-save.js")) fail("wm-pack-save cache");
 if (index.indexOf("btn-class-progress") === -1) fail("class progress button");
 if (!cacheKey(index, "mrj-scores.js")) fail("mrj-scores cache");
 if (index.indexOf('id="btn-student-name"') === -1) fail("missing top-right name button");
+if (index.indexOf('id="btn-teacher"') === -1) fail("missing top-right Teacher button");
 if (index.indexOf("data-mrj-own-record") === -1) fail("name button missing data-mrj-own-record");
 
 const topbarEnd = index.indexOf("</header>");
