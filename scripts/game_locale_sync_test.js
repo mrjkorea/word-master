@@ -13,6 +13,23 @@ function fail(msg) {
   process.exit(1);
 }
 
+function koFaceText(mg, pairId) {
+  const tile = (mg && mg.tiles || []).find(function (t) {
+    return t.side === "ko" && t.pair === pairId;
+  });
+  return tile ? tile.text : undefined;
+}
+
+function assertMatchKoFaces(mg, expectedByPair) {
+  Object.keys(expectedByPair).forEach(function (pairId) {
+    const want = expectedByPair[pairId];
+    const got = koFaceText(mg, pairId);
+    if (got !== want) {
+      fail("match ko " + pairId + " want " + JSON.stringify(want) + " got " + JSON.stringify(got));
+    }
+  });
+}
+
 function trackingI18n(g) {
   let loc = "en";
   g.WordFactoryI18n = {
@@ -113,14 +130,10 @@ if (pack.ui_locale !== "ko") fail("snow ui_locale " + pack.ui_locale);
 
 api.applyLocale("en");
 api.startMatch();
-const mg0 = api.getMatchGame();
-const ko0 = (mg0 && mg0.tiles || []).find(function (t) { return t.side === "ko"; });
-if (!ko0 || ko0.text !== "a region") fail("match en tile " + JSON.stringify(ko0 && ko0.text));
+assertMatchKoFaces(api.getMatchGame(), { area: "a region", city: "a city" });
 
 api.applyLocale("ko");
-const mg1 = api.getMatchGame();
-const ko1 = (mg1 && mg1.tiles || []).find(function (t) { return t.side === "ko"; });
-if (!ko1 || ko1.text !== "지역") fail("match ko tile " + JSON.stringify(ko1 && ko1.text));
+assertMatchKoFaces(api.getMatchGame(), { area: "지역", city: "도시" });
 
 api.armGame("leapfrog");
 api.applyLocale("en");
