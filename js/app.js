@@ -55,6 +55,16 @@
     return state.locale || "en";
   }
 
+  /** Keep I18n and state.locale aligned (games bake packs using meaning() → localeCode()). */
+  function syncI18nFromState() {
+    if (!I18n || !I18n.setLocale) return state.locale || "en";
+    const code = state.locale || "en";
+    state.locale = I18n.setLocale(code);
+    const langSel = $("#lang-select");
+    if (langSel) langSel.value = state.locale;
+    return state.locale;
+  }
+
   function meaning(w) {
     if (!w) return "";
     const loc = localeCode();
@@ -976,6 +986,7 @@
     state = loadStateForStudent(id);
     state.studentId = id;
     state.displayName = id;
+    syncI18nFromState();
     if (detail.progress) ingestBookProgress(detail.progress);
     if (memorySlim && memorySlim.sets && Object.keys(memorySlim.sets).length) {
       mergeRemoteProgress(memorySlim);
@@ -1217,6 +1228,7 @@
     if (obj.voice) state.voice = obj.voice;
     if (obj.voiceAt != null) state.voiceAt = Number(obj.voiceAt) || 0;
     if (obj.locale) state.locale = obj.locale;
+    syncI18nFromState();
     if (obj.studySize != null) {
       var ss = Number(obj.studySize);
       if (ss === 0 || ss === 5 || ss === 10 || ss === 15 || ss === 20) state.studySize = ss;
@@ -4424,6 +4436,7 @@
       title: set.title,
       module_id: "sound-invaders",
       activity_id: "hear_shoot",
+      ui_locale: localeCode(),
       items: words.map(function (w) {
         const id = mediaFile(w);
         const label = rockLabel(w);
@@ -4495,6 +4508,7 @@
         module_id: kind,
         activity_id: kind,
         seconds: 15,
+        ui_locale: localeCode(),
         items: items,
       };
     }
@@ -4990,13 +5004,32 @@
     }
   }
 
+  function refreshMatchForLocale() {
+    if (!matchGame || currentScreen !== "match") return;
+    const set = currentSet();
+    if (!set) return;
+    const byId = {};
+    playWords(set).forEach(function (w) { byId[w.id] = w; });
+    matchGame.tiles.forEach(function (tile) {
+      if (tile.side !== "ko") return;
+      const w = byId[tile.pair];
+      if (w) tile.text = meaning(w);
+    });
+    drawMatch();
+  }
+
+  function refreshPortableGameForLocale() {
+    if (currentScreen !== "playgame" || !armedGame) return;
+    openPortableGame(armedGame);
+  }
+
   function applyLocale(code) {
     if (!I18n) return;
     state.locale = I18n.setLocale(code || state.locale || "en");
-    persist();
-    I18n.applyDom(document);
     const langSel = $("#lang-select");
     if (langSel) langSel.value = state.locale;
+    persist();
+    I18n.applyDom(document);
     if (currentScreen === "home") renderHome();
     if (currentScreen === "set") renderSetHome();
     if (currentScreen === "learn" && learn.cur) renderLearn(false);
@@ -5004,7 +5037,11 @@
     if (currentScreen === "games" && currentSet()) {
       $("#games-set-hint").textContent = t("games_hint", { title: currentSet().title });
     }
-    if (currentScreen === "match") updateMatchHud();
+    if (currentScreen === "match") {
+      refreshMatchForLocale();
+      updateMatchHud();
+    }
+    refreshPortableGameForLocale();
     if (currentScreen === "listen" && listenGame) {
       $("#listen-prog").textContent =
         listenGame.index + 1 + " / " + listenGame.items.length;
@@ -5088,6 +5125,12 @@
       memoryPack: memoryPack,
       packIdForSet: packIdForSet,
       openPortableGame: openPortableGame,
+      applyLocale: applyLocale,
+      syncI18nFromState: syncI18nFromState,
+      meaning: meaning,
+      localeCode: localeCode,
+      startMatch: startMatch,
+      getMatchGame: function () { return matchGame; },
       gameFrame: function () { return document.querySelector("#game-frame"); },
       startTapmap: startTapmap,
       onTapTile: onTapTile,

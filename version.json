@@ -1,4 +1,4 @@
 {
-  "build": "20261027-teacher-btn-m13",
-  "note": "Teacher topbar PIN unlock (study_teacher_check) plus stage nav and test unlock fixes"
+  "build": "20261028-ko-game-locale-d5ae",
+  "note": "Sync I18n when remote progress sets locale ko; refresh game packs and Match on language change"
 }
