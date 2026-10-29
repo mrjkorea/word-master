@@ -86,6 +86,17 @@ button:disabled:not(.choice) { cursor: not-allowed; opacity: 0.38; }
 .teacher-top-btn {
   display: none !important;
 }
+
+/* Shared mrj-auth chips sit on body (fixed). Keep them above the phone shell. */
+#mrj-auth-chip-chrome,
+.mrj-auth-chip-chrome {
+  z-index: 2147482000;
+}
+.mrj-auth-teacher-btn {
+  /* Undo global `button { background: none }` so the chip stays visible. */
+  border: 2px solid #241c16;
+  background: #e2a122;
+}
 .student-name-btn {
   max-width: 120px;
   min-height: 36px;
