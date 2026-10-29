@@ -1,4 +1,4 @@
 {
-  "build": "20261028-ko-game-locale-d5ae",
-  "note": "Sync I18n when remote progress sets locale ko; refresh game packs and Match on language change"
+  "build": "20261029-lang-cloud-auth-7ff4",
+  "app": "word-master"
 }

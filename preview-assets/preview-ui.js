@@ -130,9 +130,53 @@
   }
 
   var k = 0;
+  var authPortalBound = false;
+
+  function syncAuthLangPortal() {
+    var locked = document.documentElement.classList.contains("mrj-auth-locked");
+    var wrap = document.querySelector(".pv-lang");
+    if (!wrap) return;
+    var portal = document.getElementById("pv-lang-auth-portal");
+    if (locked) {
+      if (!portal) {
+        portal = document.createElement("div");
+        portal.id = "pv-lang-auth-portal";
+        portal.className = "pv-lang-auth-portal";
+        document.body.appendChild(portal);
+      }
+      if (wrap.parentNode !== portal) {
+        if (!wrap.__pvHome) {
+          wrap.__pvHome = { parent: wrap.parentNode, next: wrap.nextSibling };
+        }
+        portal.appendChild(wrap);
+      }
+    } else if (wrap.__pvHome && wrap.__pvHome.parent) {
+      var h = wrap.__pvHome;
+      if (h.next && h.next.parentNode === h.parent) {
+        h.parent.insertBefore(wrap, h.next);
+      } else {
+        h.parent.appendChild(wrap);
+      }
+    }
+  }
+
+  function bindAuthLangPortal() {
+    if (authPortalBound) return;
+    authPortalBound = true;
+    syncAuthLangPortal();
+    if (typeof MutationObserver === "function") {
+      new MutationObserver(syncAuthLangPortal).observe(document.documentElement, {
+        attributes: true,
+        attributeFilter: ["class"],
+      });
+    }
+  }
+
   (function wait() {
     var ok = picker("lang-select");
     howto();
+    if (ok) bindAuthLangPortal();
+    syncAuthLangPortal();
     if (!ok && k++ < 100) setTimeout(wait, 100);
   })();
   if (typeof MutationObserver === "function") {
@@ -140,7 +184,7 @@
     new MutationObserver(function () {
       if (pend) return;
       pend = true;
-      setTimeout(function () { pend = false; picker("lang-select"); howto(); }, 50);
+      setTimeout(function () { pend = false; picker("lang-select"); howto(); syncAuthLangPortal(); }, 50);
     }).observe(document.documentElement, { childList: true, subtree: true });
   }
 })();

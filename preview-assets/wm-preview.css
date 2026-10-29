@@ -107,4 +107,19 @@ html .mrj-auth .mrj-auth-door-login, html .mrj-auth .mrj-auth-submit { backgroun
 .topbar .pv-lang { z-index: 401; }
 .pv-lang-pop { z-index: 402; max-width: calc(100vw - 16px); max-height: calc(100vh - 90px); overflow-y: auto; }
 .pv-lang-chip { cursor: pointer; pointer-events: auto; }
+/* Auth gate is fixed at z-index 2147483000; portal lifts language control above it. */
+.pv-lang-auth-portal {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 2147483001;
+  pointer-events: none;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+  padding: calc(.7rem + env(safe-area-inset-top, 0px)) 1.2rem .7rem;
+  box-sizing: border-box;
+}
+.pv-lang-auth-portal .pv-lang { pointer-events: auto; }
 @media (max-width: 480px) { .pv-lang-pop { grid-template-columns: repeat(2, minmax(0, 1fr)); width: min(340px, calc(100vw - 16px)); } }

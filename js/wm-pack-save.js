@@ -80,6 +80,7 @@
     if (obj.voice) out.voice = obj.voice;
     if (obj.voiceAt != null) out.voiceAt = Number(obj.voiceAt) || 0;
     if (obj.locale) out.locale = obj.locale;
+    if (obj.localeAt != null) out.localeAt = Number(obj.localeAt) || 0;
     if (obj.studySize != null) out.studySize = obj.studySize;
     if (obj.testKind) out.testKind = obj.testKind;
     if (obj.currentPackId) out.currentPackId = String(obj.currentPackId);
@@ -210,6 +211,7 @@
       voice: compact.voice,
       voiceAt: compact.voiceAt,
       locale: compact.locale,
+      localeAt: compact.localeAt,
       studySize: compact.studySize,
       testKind: compact.testKind,
       currentPackId: compact.currentPackId,

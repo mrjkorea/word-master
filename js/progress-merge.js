@@ -95,6 +95,26 @@
     };
   }
 
+  function pickLocale(local, remote) {
+    var la = local && local.localeAt != null ? Number(local.localeAt) : null;
+    var ra = remote && remote.localeAt != null ? Number(remote.localeAt) : null;
+    if (la != null && ra != null) {
+      if (la >= ra) return { locale: local.locale || "en", localeAt: la };
+      return { locale: remote.locale || "en", localeAt: ra };
+    }
+    if (la != null) return { locale: local.locale || "en", localeAt: la };
+    if (ra != null) return { locale: remote.locale || "en", localeAt: ra };
+    var locLocal = (local && local.locale) || "en";
+    var locRemote = (remote && remote.locale) || "en";
+    if (locLocal !== "en" && locRemote === "en") {
+      return { locale: locLocal, localeAt: 0 };
+    }
+    if (locRemote !== "en" && locLocal === "en") {
+      return { locale: locRemote, localeAt: 0 };
+    }
+    return { locale: locRemote || locLocal || "en", localeAt: 0 };
+  }
+
   function mergeShallowObjects(a, b) {
     a = a && typeof a === "object" ? a : {};
     b = b && typeof b === "object" ? b : {};
@@ -360,6 +380,7 @@
     var other = preferRemote ? local : remote;
     var currentPackId = pickCurrentPackId(sets, keys, base, other);
     var voicePick = pickVoice(local, remote);
+    var localePick = pickLocale(local, remote);
     var dailyWordLog = null;
     if (root.MRJ_WM_scoreDayLog && typeof root.MRJ_WM_scoreDayLog.mergeDailyLogs === "function") {
       dailyWordLog = root.MRJ_WM_scoreDayLog.mergeDailyLogs(local.dailyWordLog, remote.dailyWordLog);
@@ -371,7 +392,8 @@
       studentId: base.studentId || other.studentId || "",
       voice: voicePick.voice,
       voiceAt: voicePick.voiceAt,
-      locale: base.locale || other.locale || "en",
+      locale: localePick.locale,
+      localeAt: localePick.localeAt,
       studySize: pickStudySize(local, remote, localAt, remoteAt),
       testKind: base.testKind || other.testKind || "easy",
       currentPackId: currentPackId,
