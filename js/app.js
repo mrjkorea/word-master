@@ -777,6 +777,7 @@
       testKind: "easy",
       studySize: 10,
       locale: "en",
+      localeAt: 0,
       currentSetId: null,
       sets: {},
       scoreRows: [],
@@ -1184,6 +1185,7 @@
       voice: state.voice,
       voiceAt: state.voiceAt || 0,
       locale: state.locale,
+      localeAt: state.localeAt != null ? Number(state.localeAt) || 0 : 0,
       studySize: state.studySize,
       testKind: state.testKind,
       currentPackId: cur ? (cur.packId || "") : "",
@@ -1228,6 +1230,7 @@
     if (obj.voice) state.voice = obj.voice;
     if (obj.voiceAt != null) state.voiceAt = Number(obj.voiceAt) || 0;
     if (obj.locale) state.locale = obj.locale;
+    if (obj.localeAt != null) state.localeAt = Number(obj.localeAt) || 0;
     syncI18nFromState();
     if (obj.studySize != null) {
       var ss = Number(obj.studySize);
@@ -5026,6 +5029,7 @@
   function applyLocale(code) {
     if (!I18n) return;
     state.locale = I18n.setLocale(code || state.locale || "en");
+    state.localeAt = Date.now();
     const langSel = $("#lang-select");
     if (langSel) langSel.value = state.locale;
     persist();

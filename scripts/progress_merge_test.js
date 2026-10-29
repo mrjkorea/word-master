@@ -240,6 +240,43 @@ if (voiceOut.voice !== "grandma" || voiceOut.voiceAt !== 500) {
   process.exit(1);
 }
 
+const localeKoLocal = merge(
+  {
+    v: 1,
+    locale: "ko",
+    localeAt: 9000,
+    sets: { nouns100: { winsA: {}, lastPlayedAt: 100 } },
+  },
+  {
+    v: 1,
+    locale: "en",
+    localeAt: 100,
+    sets: { nouns100: { winsA: { w1: 2 }, lastPlayedAt: 5000 } },
+  }
+);
+if (localeKoLocal.locale !== "ko" || localeKoLocal.localeAt !== 9000) {
+  console.error("localeAt should keep newer local ko", localeKoLocal);
+  process.exit(1);
+}
+
+const localeTiedLegacy = merge(
+  { v: 1, locale: "ko", sets: { nouns100: { winsA: {}, lastPlayedAt: 5000 } } },
+  { v: 1, locale: "en", sets: { nouns100: { winsA: {}, lastPlayedAt: 5000 } } }
+);
+if (localeTiedLegacy.locale !== "ko") {
+  console.error("legacy tie should prefer non-en local", localeTiedLegacy);
+  process.exit(1);
+}
+
+const localeRemoteNewer = merge(
+  { v: 1, locale: "en", localeAt: 100, sets: {} },
+  { v: 1, locale: "ko", localeAt: 500, sets: {} }
+);
+if (localeRemoteNewer.locale !== "ko" || localeRemoteNewer.localeAt !== 500) {
+  console.error("localeAt remote newer should win", localeRemoteNewer);
+  process.exit(1);
+}
+
 const allLocal = {
   v: 1,
   studySize: 0,
