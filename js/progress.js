@@ -126,6 +126,57 @@
     return "";
   }
 
+  function authPackApi() {
+    var auth = root.MRJ_AUTH;
+    if (!auth) return null;
+    if (typeof auth.loadPack === "function" && typeof auth.savePack === "function") {
+      return auth;
+    }
+    return null;
+  }
+
+  function remoteLoadPack(program) {
+    var api = authPackApi();
+    if (api) return api.loadPack(program);
+    return postRemote({
+      action: "load_pack",
+      id: authStudentId(),
+      token: authToken(),
+      program: program,
+    });
+  }
+
+  function remoteSavePack(program, progressJson, transport) {
+    program = program || PROGRAM;
+    if (transport && (transport.beacon || transport.keepalive)) {
+      return postRemote({
+        action: "save_pack",
+        id: authStudentId(),
+        token: authToken(),
+        program: program,
+        progress_json: progressJson,
+      }, transport);
+    }
+    var api = authPackApi();
+    if (api) {
+      return api.savePack(program, progressJson).then(function (res) {
+        if (res && res.error === "pack_not_loaded") {
+          return api.loadPack(program).then(function () {
+            return api.savePack(program, progressJson);
+          });
+        }
+        return res;
+      });
+    }
+    return postRemote({
+      action: "save_pack",
+      id: authStudentId(),
+      token: authToken(),
+      program: program,
+      progress_json: progressJson,
+    }, transport);
+  }
+
   function readLocal() {
     var key = localStorageKeyForStudent();
     if (!key) return null;
@@ -442,13 +493,11 @@
       }
       var part = parts[idx];
       idx += 1;
-      return postRemote({
-        action: "save_pack",
-        id: reqId,
-        token: token,
-        program: part.program || PROGRAM,
-        progress_json: part.progress_json,
-      }, transport).then(saveNext);
+      return remoteSavePack(
+        part.program || PROGRAM,
+        part.progress_json,
+        transport
+      ).then(saveNext);
     }
     return saveNext(null);
   }
@@ -466,13 +515,7 @@
       if (i >= parts.length) return Promise.resolve(prev || { ok: true, saved: true });
       var part = parts[i];
       i += 1;
-      return postRemote({
-        action: "save_pack",
-        id: studentId,
-        token: token,
-        program: part.program,
-        progress_json: part.progress_json,
-      }).then(next);
+      return remoteSavePack(part.program, part.progress_json).then(next);
     }
     return next(null);
   }
@@ -682,12 +725,7 @@
       }
       if (!programs.length) return Promise.resolve(mainRes);
       return Promise.all(programs.map(function (spec) {
-        return postRemote({
-          action: "load_pack",
-          id: loadId,
-          token: token,
-          program: spec.program,
-        }).then(function (row) {
+        return remoteLoadPack(spec.program).then(function (row) {
           return { spec: spec, row: row };
         });
       })).then(function (results) {
@@ -728,12 +766,7 @@
       });
     }
 
-    return postRemote({
-      action: "load_pack",
-      id: id,
-      token: token,
-      program: PROGRAM,
-    }).then(function (res) {
+    return remoteLoadPack(PROGRAM).then(function (res) {
       if (loadSeq !== sessionSeq
         || studentStorageKey(authStudentId()) !== studentStorageKey(loadId)) {
         return { ok: false, error: "stale" };
