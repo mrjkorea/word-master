@@ -23,7 +23,9 @@ if (index.indexOf("btn-class-progress") === -1) fail("class progress button");
 if (!cacheKey(index, "mrj-scores.js")) fail("mrj-scores cache");
 if (index.indexOf('id="btn-student-name"') === -1) fail("missing top-right name button");
 if (index.indexOf('id="btn-teacher"') !== -1) fail("topbar must not include duplicate Teacher button");
-if (index.indexOf("data-mrj-own-record") === -1) fail("name button missing data-mrj-own-record");
+if (index.indexOf("data-mrj-own-record") !== -1) {
+  fail("data-mrj-own-record makes mrj-auth hide the teacher chip; use floating chip chrome");
+}
 
 const topbarEnd = index.indexOf("</header>");
 const helloAt = index.indexOf('id="hello-line"');

@@ -16,6 +16,9 @@ const app = fs.readFileSync(path.join(root, "js/app.js"), "utf8");
 const unlock = fs.readFileSync(path.join(root, "js/mrj-teacher-unlock.js"), "utf8");
 
 if (index.indexOf('id="btn-teacher"') !== -1) fail("index must not include #btn-teacher (use mrj-auth chip)");
+if (index.indexOf("data-mrj-own-record") !== -1) {
+  fail("data-mrj-own-record hides mrj-auth teacher chip chrome");
+}
 if (index.indexOf('id="btn-student-name"') === -1) fail("missing #btn-student-name");
 const nameAt = index.indexOf('id="btn-student-name"');
 const topbarEnd = index.indexOf("</header>");
