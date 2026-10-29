@@ -15,21 +15,21 @@ const index = fs.readFileSync(path.join(root, "index.html"), "utf8");
 const app = fs.readFileSync(path.join(root, "js/app.js"), "utf8");
 const unlock = fs.readFileSync(path.join(root, "js/mrj-teacher-unlock.js"), "utf8");
 
-if (index.indexOf('id="btn-teacher"') === -1) fail("missing #btn-teacher");
+if (index.indexOf('id="btn-teacher"') !== -1) fail("index must not include #btn-teacher (use mrj-auth chip)");
 if (index.indexOf('id="btn-student-name"') === -1) fail("missing #btn-student-name");
-const teacherAt = index.indexOf('id="btn-teacher"');
 const nameAt = index.indexOf('id="btn-student-name"');
 const topbarEnd = index.indexOf("</header>");
-if (teacherAt === -1 || nameAt === -1 || topbarEnd === -1) fail("topbar structure");
-if (teacherAt > topbarEnd || nameAt > topbarEnd) fail("teacher/name must be in topbar");
-if (teacherAt > nameAt) fail("Teacher button should sit before student name");
+if (nameAt === -1 || topbarEnd === -1) fail("topbar structure");
+if (nameAt > topbarEnd) fail("student name must be in topbar");
 
 if (!/study_teacher_check/.test(unlock)) fail("mrj-teacher-unlock must use study_teacher_check");
 if (/localStorage/.test(unlock)) fail("mrj-teacher-unlock must not use localStorage");
-if (!/isUnlocked/.test(app) || !/bindTeacherButton/.test(app)) {
-  fail("app.js must wire teacher unlock");
-}
+if (/openPinPanel/.test(unlock)) fail("mrj-teacher-unlock must not open a second PIN panel");
+if (/bindTeacherButton\(btn\)/.test(unlock)) fail("mrj-teacher-unlock must not bind a topbar teacher button");
+if (!/isUnlocked/.test(app)) fail("app.js must use MRJTeacherUnlock.isUnlocked");
+if (/bindTeacherButton/.test(app)) fail("app.js must not wire #btn-teacher");
 if (!/unlock\.isUnlocked/.test(app)) fail("teacherNow must honor MRJTeacherUnlock.isUnlocked");
+if (!/mrj-teacher/.test(unlock)) fail("mrj-teacher-unlock must listen for mrj-teacher from auth chip");
 
 const sandbox = {
   console,
@@ -43,17 +43,11 @@ const sandbox = {
     });
   },
   document: {
-    body: { classList: { toggle: function () {} }, appendChild: function () {} },
-    createElement: function () {
-      return {
-        hidden: true,
-        style: {},
-        setAttribute: function () {},
-        getAttribute: function () { return null; },
-        addEventListener: function () {},
-        querySelector: function () { return null; },
-        appendChild: function () {},
-      };
+    body: {
+      classList: {
+        toggle: function () {},
+        contains: function () { return false; },
+      },
     },
     addEventListener: function () {},
     dispatchEvent: function () {},

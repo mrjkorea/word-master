@@ -683,7 +683,6 @@
 
   function paintStudentNameBtn() {
     const btn = $("#btn-student-name");
-    const teacherBtn = $("#btn-teacher");
     const id = currentStudentId();
     if (btn) {
       if (id) {
@@ -694,19 +693,6 @@
         btn.hidden = true;
         btn.textContent = "";
         btn.title = "";
-      }
-    }
-    if (teacherBtn) {
-      if (id) {
-        teacherBtn.hidden = false;
-        if (window.MRJTeacherUnlock && typeof window.MRJTeacherUnlock.bindTeacherButton === "function") {
-          window.MRJTeacherUnlock.bindTeacherButton(teacherBtn);
-        }
-      } else {
-        teacherBtn.hidden = true;
-      }
-      if (window.MRJTeacherUnlock && typeof window.MRJTeacherUnlock.syncTeacherButton === "function") {
-        window.MRJTeacherUnlock.syncTeacherButton();
       }
     }
   }
