@@ -25,7 +25,7 @@
         var q = location.search || "";
         var embedded = window.parent !== window || /(?:^|[?&])pack=session(?:&|$)/.test(q);
         if (embedded) return;
-        var mrjAuthV = "20261030-cf-login-1.7.2-gas";
+        var mrjAuthV = "20261030-cf-login-1.7.3";
         var css = document.createElement("link"); css.rel = "stylesheet"; css.href = "https://mrjkorea.github.io/mrj-signin/mrj-auth.css?v=" + mrjAuthV; document.head.appendChild(css);
         var auth = document.createElement("script"); auth.src = "https://mrjkorea.github.io/mrj-signin/mrj-auth.js?v=" + mrjAuthV;
         auth.onload = function () { var boot = document.createElement("script"); boot.src = "https://mrjkorea.github.io/mrj-signin/mrj-auth-boot.js?v=" + mrjAuthV; boot.setAttribute("data-mrj-app", "leap-frog"); document.body.appendChild(boot); };
