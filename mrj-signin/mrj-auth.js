@@ -1,0 +1,3875 @@
+/**
+ * Browser sign-in for every MRJ student app.
+ * Load mrj-auth.css beside this file. GitHub Pages can host both.
+ * POST stays text/plain so the Apps Script web app does not need a CORS preflight.
+ * The endpoint stays a placeholder until the script is deployed by hand.
+ */
+(function (global) {
+  "use strict";
+
+  var AUTH_VERSION = "20261030-cf-login-1.7.2-gas";
+  var ENDPOINT = "https://script.google.com/macros/s/AKfycbwtJTUO3gbcMrlAwsn1feWxyp7Rw2cxpfe1bOT9v2rxmQHa2Tlc6pFNWAjU6ZAdlD6kFQ/exec";
+  var PROGRESS_WORKER_URL = "https://mrj-progress-packs.canadianvegetarian.workers.dev";
+  var PROGRESS_WORKER_KEY = "fe492cacc6396c4afa89768a3678da0d23faaab42741b5a6d4d193e7842ed0cc";
+  var PROGRESS_WORKER_TIMEOUT_MS = 4000;
+  var CF_LOGIN_TIMEOUT_MS = 2500;
+  var LOGIN_MODE_DEFAULT = "gas";
+  var TOKEN_PENDING = "token_pending";
+  var SESSION_KEY = "mrj.auth.session";
+  var NOTE_OUTBOX_PREFIX = "mrj.auth.noteOutbox.";
+  var NOTE_OUTBOX_MAX = 300;
+  var REQUEST_TIMEOUT_MS = 30000;
+
+  var MESSAGES = {
+    blank: "Type an ID and a password.",
+    mismatch: "Those passwords do not match.",
+    user_does_not_exist: "User does not exist.",
+    wrong_password: "Wrong password.",
+    id_taken: "That ID is already used. Log in instead.",
+    server_busy: "The sign-in server is busy, trying again…",
+    checking: "Checking your ID…",
+    loading_place: "Loading your place…",
+    still_signing_in: "Still signing you in… You can wait here or go back and try again in a moment.",
+    resume_busy: "The sign-in server is slow. You are signed in on this device — we are double-checking in the background.",
+    id_blocked: "This ID is not active. Please ask Mr. Jay."
+  };
+
+  var NO_RETRY_ERRORS = {
+    blank: true,
+    wrong_password: true,
+    user_does_not_exist: true,
+    id_taken: true,
+    password_mismatch: true,
+    bad_token: true,
+    id_blocked: true
+  };
+
+  function idKey(id) {
+    return String(id == null ? "" : id)
+      .trim()
+      .toLowerCase()
+      .replace(/\s+/g, " ");
+  }
+
+  function isBlankId(id) {
+    return String(id == null ? "" : id).trim() === "";
+  }
+
+  function isBlankPassword(password) {
+    return password == null || String(password) === "";
+  }
+
+  function rejectBlank(id, password) {
+    if (isBlankId(id) || isBlankPassword(password)) {
+      return { ok: false, error: "blank", message: MESSAGES.blank };
+    }
+    return { ok: true, error: "", message: "" };
+  }
+
+  function passwordAllowed(password) {
+    return !isBlankPassword(password);
+  }
+
+  function passwordsEqual(a, b) {
+    return String(a == null ? "" : a) === String(b == null ? "" : b);
+  }
+
+  function passwordsMatch(password, confirm) {
+    if (!passwordsEqual(password, confirm)) {
+      return { ok: false, error: "password_mismatch", message: MESSAGES.mismatch };
+    }
+    return { ok: true, error: "", message: "" };
+  }
+
+  function decideLogin(account, password) {
+    if (!account) {
+      return {
+        ok: false,
+        error: "user_does_not_exist",
+        message: MESSAGES.user_does_not_exist
+      };
+    }
+    if (!passwordsEqual(account.password, password)) {
+      return {
+        ok: false,
+        error: "wrong_password",
+        message: MESSAGES.wrong_password
+      };
+    }
+    return { ok: true, error: "", message: "" };
+  }
+
+  function decideRegister(existingAccount) {
+    if (existingAccount) {
+      return { ok: false, error: "id_taken", message: MESSAGES.id_taken };
+    }
+    return { ok: true, error: "", message: "" };
+  }
+
+  function localRules() {
+    return {
+      MESSAGES: MESSAGES,
+      idKey: idKey,
+      isBlankId: isBlankId,
+      isBlankPassword: isBlankPassword,
+      rejectBlank: rejectBlank,
+      passwordAllowed: passwordAllowed,
+      passwordsEqual: passwordsEqual,
+      passwordsMatch: passwordsMatch,
+      decideLogin: decideLogin,
+      decideRegister: decideRegister
+    };
+  }
+
+  var rules = global.MRJAuthRules || localRules();
+
+  var rootEl = null;
+  var options = {};
+  var state = { id: "", token: "", role: "", progress: [], progressError: "" };
+  var teacherChromeApplied_ = false;
+  var packState = {};
+  var PROGRESS_PAGE_SIZE = 500;
+  var PROGRESS_MAX_PAGES = 40;
+  var PROGRESS_PANEL_MAX_PAGES = 40;
+  var DAY2_PACK_ITEM_RE = /^(basic_[abc]|int[23][abc])_u\d+:/;
+  var DECODABLE_TRY_ITEM_RE = /^mlr_dec_0(0[1-9]|1\d|20):/;
+  var DECODABLE_21_ITEM_RE = /^mlr_dec_0(2[1-9]|3\d|40):/;
+  var DECODABLE_41_ITEM_RE = /^mlr_dec_0(4[1-9]|5\d|60):/;
+  var DECODABLE_61_ITEM_RE = /^mlr_dec_0(6[1-9]|7\d|80):/;
+  var DECODABLE_81_ITEM_RE = /^mlr_dec_(08[1-9]|09\d|100):/;
+  var DECODABLE_71_ITEM_RE = /^mlr_dec_(07[1-9]|0[89]\d|100):/;
+  var WHISTLE_ITEM_RE = /^whistle:/;
+  var APP_SCORE_PROGRAM_MAP = {
+    "word-master": ["word-master"],
+    "day2-words": ["day2-words", "word-master"],
+    "day3-workbook": ["day3-workbook", "conversation"],
+    "day4-speak": ["day4-speak"],
+    "day5-practice": ["day5-practice"],
+    "day6-talk": ["day6-talk"],
+    "leap-frog": ["leap-frog"],
+    "ski-jump": ["ski-jump"],
+    "firefighter-spelling": ["firefighter-spelling"],
+    "typing-kids": ["typing-kids"],
+    "skill-builder-g1": ["skill-builder-g1"],
+    "mrj-zap-grammar-books": ["greenzap"],
+    "pronounce": ["pronounce"],
+    "pronounce-whistle": ["pronounce"],
+    "mrj-decodable-try": ["decodable"],
+    "mrj-decodable-try-21": ["decodable"],
+    "mrj-decodable-try-41": ["decodable"],
+    "mrj-decodable-try-61": ["decodable"],
+    "mrj-decodable-try-81": ["decodable"],
+    "mrj-decodable-try-71": ["decodable"],
+    "news-words": ["news-words"],
+    "speakpass": ["speakpass"]
+  };
+  var viewGen = 0;
+  var sessionGen = 0;
+  var onlineListenerInstalled = false;
+  var noteSuccessAt_ = {};
+  var noteOutboxFlushChain = null;
+  var chipEl = null;
+  var chipChromeEl = null;
+  var teacherBtnEl = null;
+  var teacherBtnOnPill = false;
+  var teacherUnlockOpen = false;
+  var teacherUnlockKeyHandler = null;
+  var teacherUnlockBusy = false;
+  var panelRootEl = null;
+  var panelBodyEl = null;
+  var panelFetchGen = 0;
+  var panelOpen = false;
+  var panelKeyHandler = null;
+  var panelRowsProvider = null;
+  var panelViewMode = "charts";
+  var chartLibsPromise = null;
+  var chipMutationObserver = null;
+  var chipLayoutLastRun = 0;
+  var chipLayoutTrailingTimer = null;
+  var chipChromeTimer = null;
+  var chipLayoutRunCount = 0;
+  var chipObserverNotifyCount = 0;
+  var chipObserverIgnoredCount = 0;
+  var chipDomWriteCount = 0;
+  var chipIdleMutationCount = 0;
+  var chipIdleMutationObserver = null;
+  var chipBodySlotPx_ = 0;
+  var CHIP_BODY_SLOT_MAX_PX_ = 44;
+  var CHIP_BODY_SLOT_HYSTERESIS_PX_ = 2;
+  var chipApplied_ = {
+    compact: null,
+    top: "",
+    right: "",
+    marginTop: "",
+    marginRight: "",
+    text: "",
+    title: "",
+    ariaLabel: ""
+  };
+  var loadPlaceSeq = 0;
+  var busy = false;
+  var loginFlightSeq = 0;
+  var activeLoginFlight = null;
+  var gasTokenPromise_ = null;
+  var storageListenerInstalled = false;
+
+  function resolveLoginMode_() {
+    try {
+      var search = global.location && global.location.search ? String(global.location.search) : "";
+      var match = search.match(/[?&]mrjlogin=([^&]+)/);
+      if (match) {
+        var fromQs = decodeURIComponent(match[1]).trim().toLowerCase();
+        if (fromQs === "gas" || fromQs === "shadow" || fromQs === "cf_first") return fromQs;
+      }
+    } catch (ignoreQs) {}
+    try {
+      var stored = global.localStorage.getItem("mrj_login_mode");
+      if (stored) {
+        var fromStore = String(stored).trim().toLowerCase();
+        if (fromStore === "gas" || fromStore === "shadow" || fromStore === "cf_first") return fromStore;
+      }
+    } catch (ignoreStore) {}
+    return LOGIN_MODE_DEFAULT;
+  }
+
+  var LOGIN_MODE = resolveLoginMode_();
+
+  function loginMode_() {
+    return LOGIN_MODE;
+  }
+
+  function delay_(ms) {
+    return new Promise(function (resolve) {
+      setTimeout(resolve, ms);
+    });
+  }
+
+  function parseJsonResponse_(text) {
+    var trimmed = String(text == null ? "" : text).trim();
+    if (!trimmed || (trimmed.charAt(0) !== "{" && trimmed.charAt(0) !== "[")) {
+      var err = new Error("bad_response");
+      err.kind = "bad_response";
+      throw err;
+    }
+    try {
+      return JSON.parse(trimmed);
+    } catch (parseErr) {
+      var err = new Error("bad_response");
+      err.kind = "bad_response";
+      throw err;
+    }
+  }
+
+  function postOnce_(body, timeoutMs) {
+    var opts = {
+      method: "POST",
+      redirect: "follow",
+      headers: { "Content-Type": "text/plain;charset=utf-8" },
+      body: JSON.stringify(body)
+    };
+    var ctrl = typeof AbortController !== "undefined" ? new AbortController() : null;
+    if (ctrl) opts.signal = ctrl.signal;
+    var ms = timeoutMs == null ? REQUEST_TIMEOUT_MS : timeoutMs;
+    var timedOut = new Promise(function (_, reject) {
+      setTimeout(function () {
+        if (ctrl) ctrl.abort();
+        var err = new Error("timeout");
+        err.kind = "timeout";
+        reject(err);
+      }, ms);
+    });
+    var req = fetch(ENDPOINT, opts).then(function (res) {
+      return res.text();
+    }).then(function (text) {
+      return parseJsonResponse_(text);
+    });
+    return Promise.race([req, timedOut]);
+  }
+
+  function workerPostJson_(path, body, timeoutMs) {
+    var url = PROGRESS_WORKER_URL + path;
+    var opts = {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        "X-MRJ-Progress-Key": PROGRESS_WORKER_KEY
+      },
+      body: JSON.stringify(body)
+    };
+    var ctrl = typeof AbortController !== "undefined" ? new AbortController() : null;
+    if (ctrl) opts.signal = ctrl.signal;
+    var ms = timeoutMs == null ? PROGRESS_WORKER_TIMEOUT_MS : timeoutMs;
+    var timedOut = new Promise(function (_, reject) {
+      setTimeout(function () {
+        if (ctrl) ctrl.abort();
+        var err = new Error("timeout");
+        err.kind = "timeout";
+        reject(err);
+      }, ms);
+    });
+    var req = fetch(url, opts).then(function (res) {
+      return res.text().then(function (text) {
+        var data = null;
+        var trimmed = String(text == null ? "" : text).trim();
+        if (trimmed && (trimmed.charAt(0) === "{" || trimmed.charAt(0) === "[")) {
+          try {
+            data = JSON.parse(trimmed);
+          } catch (ignoreParse) {}
+        }
+        return { httpOk: res.ok, status: res.status, data: data };
+      });
+    });
+    return Promise.race([req, timedOut]);
+  }
+
+  function shouldRetryResponse_(data) {
+    if (!data || typeof data !== "object") return true;
+    if (data.ok) return false;
+    var code = data.error == null ? "" : String(data.error);
+    if (NO_RETRY_ERRORS[code]) return false;
+    return true;
+  }
+
+  function retryPlan_(action) {
+    if (action === "login" || action === "register") {
+      return { attempts: 3, delays: [0, 2000, 4000] };
+    }
+    return { attempts: 2, delays: [0, 1500] };
+  }
+
+  function collectDeviceForSignin_() {
+    try {
+      if (global.MRJ_DEVICE && typeof global.MRJ_DEVICE.collect === "function") {
+        return global.MRJ_DEVICE.collect();
+      }
+    } catch (ignore) {}
+    var nav = global.navigator || {};
+    var ua = nav.userAgent || "";
+    var sw = 0;
+    var sh = 0;
+    try {
+      if (global.screen) {
+        sw = global.screen.width || 0;
+        sh = global.screen.height || 0;
+      }
+    } catch (ignore2) {}
+    var type = /Mobi|iPhone|Android/i.test(ua) ? "phone" : sw && sw < 768 ? "phone" : "desktop";
+    return { type: type, os: "unknown", browser: "unknown", screenW: sw, screenH: sh };
+  }
+
+  function attachClientMeta_(body) {
+    var out = {};
+    var k;
+    body = body || {};
+    for (k in body) {
+      if (Object.prototype.hasOwnProperty.call(body, k)) out[k] = body[k];
+    }
+    out.client_app = appProgram_() || out.client_app || "";
+    out.device = collectDeviceForSignin_();
+    return out;
+  }
+
+  function signinAssetsBase_() {
+    try {
+      var scripts = global.document && global.document.getElementsByTagName("script");
+      if (scripts) {
+        for (var i = scripts.length - 1; i >= 0; i--) {
+          var src = scripts[i].src || "";
+          if (src.indexOf("mrj-auth.js") !== -1) {
+            return src.replace(/mrj-auth\.js(\?.*)?$/, "");
+          }
+        }
+      }
+    } catch (ignore) {}
+    return "https://mrjkorea.github.io/mrj-signin/";
+  }
+
+  function loadScriptOnce_(url) {
+    return new Promise(function (resolve, reject) {
+      if (!global.document) {
+        resolve();
+        return;
+      }
+      var existing = global.document.querySelector('script[data-mrj-src="' + url + '"]');
+      if (existing) {
+        if (existing.getAttribute("data-mrj-loaded") === "1") {
+          resolve();
+          return;
+        }
+        existing.addEventListener("load", function () { resolve(); });
+        existing.addEventListener("error", function () { reject(new Error("load")); });
+        return;
+      }
+      var tag = global.document.createElement("script");
+      tag.src = url;
+      tag.async = true;
+      tag.setAttribute("data-mrj-src", url);
+      tag.addEventListener("load", function () {
+        tag.setAttribute("data-mrj-loaded", "1");
+        resolve();
+      });
+      tag.addEventListener("error", function () { reject(new Error("load")); });
+      global.document.head.appendChild(tag);
+    });
+  }
+
+  function ensureProgressChartLibs_() {
+    if (global.Chart && global.MRJ_PROGRESS_CHARTS) {
+      return Promise.resolve();
+    }
+    if (chartLibsPromise) return chartLibsPromise;
+    var base = signinAssetsBase_();
+    chartLibsPromise = loadScriptOnce_(base + "lib/chart.umd.min.js")
+      .then(function () {
+        return loadScriptOnce_(base + "lib/mrj-progress-charts.js");
+      });
+    return chartLibsPromise;
+  }
+
+  function whenGasTokenReady_() {
+    if (state.token !== TOKEN_PENDING) return Promise.resolve(state.token);
+    if (gasTokenPromise_) {
+      return gasTokenPromise_.then(function (tok) {
+        return tok || state.token;
+      });
+    }
+    return Promise.resolve(state.token);
+  }
+
+  function startBackgroundGasToken_(id, password, hook) {
+    gasTokenPromise_ = post_(attachClientMeta_({ action: "login", id: id, password: password }), hook || {})
+      .then(function (data) {
+        if (data && data.ok && data.token) {
+          if (state.id && rules.idKey(state.id) === rules.idKey(id)) {
+            state.token = String(data.token);
+            if (data.role) applyServerRole_(data.role);
+            saveSession_();
+          }
+          return String(data.token);
+        }
+        return null;
+      })
+      .catch(function () {
+        return null;
+      });
+    return gasTokenPromise_;
+  }
+
+  function loginResultLabel_(data) {
+    if (!data) return "error";
+    if (data.ok) return "ok";
+    if (data.error != null && String(data.error) !== "") return String(data.error);
+    return "error";
+  }
+
+  function cfShouldFallbackToGas_(cf) {
+    if (!cf) return true;
+    if (cf.ok === true) return false;
+    var err = cf.error == null ? "" : String(cf.error);
+    if (err === "wrong_password" || err === "user_does_not_exist" || err === "id_blocked" || err === "blank") {
+      return false;
+    }
+    return true;
+  }
+
+  function cfLogin_(id, password) {
+    var t0 = Date.now();
+    return workerPostJson_(
+      "/auth/login",
+      { id: id, password: password },
+      CF_LOGIN_TIMEOUT_MS
+    )
+      .then(function (res) {
+        var cfMs = Date.now() - t0;
+        if (!res) return { ok: false, error: "cf_unknown", cf_ms: cfMs };
+        if (res.status >= 500) {
+          return { ok: false, error: "cf_server", cf_ms: cfMs, status: res.status };
+        }
+        var data = res.data;
+        if (!data || typeof data !== "object") {
+          return { ok: false, error: "cf_unknown", cf_ms: cfMs };
+        }
+        if (data.cf_ms == null) data.cf_ms = cfMs;
+        return data;
+      })
+      .catch(function (err) {
+        var cfMs = Date.now() - t0;
+        if (err && err.kind === "timeout") {
+          return { ok: false, error: "cf_timeout", cf_ms: cfMs };
+        }
+        return { ok: false, error: "cf_unknown", cf_ms: cfMs };
+      });
+  }
+
+  function shadowLog_(idKey, cfResult, gasResult, cfMs) {
+    workerPostJson_(
+      "/auth/shadow_log",
+      {
+        id_key: idKey,
+        cf_result: cfResult,
+        gas_result: gasResult,
+        cf_ms: cfMs == null ? 0 : cfMs
+      },
+      CF_LOGIN_TIMEOUT_MS
+    ).catch(function () {});
+  }
+
+  function verifyTeacherPin_(pin) {
+    return workerPostJson_("/auth/teacher_pin", { pin: pin }, CF_LOGIN_TIMEOUT_MS)
+      .then(function (res) {
+        if (res && res.httpOk && res.data && res.data.ok) return res.data;
+        return null;
+      })
+      .catch(function () {
+        return null;
+      })
+      .then(function (cfData) {
+        if (cfData && cfData.ok) return cfData;
+        return post_({ action: "study_teacher_check", pin: pin });
+      });
+  }
+
+  function post_(body, hook) {
+    var action = body && body.action ? String(body.action) : "";
+    if (action === "login" || action === "register") {
+      body = attachClientMeta_(body);
+    }
+    function runPost_(effectiveBody) {
+      var act = effectiveBody && effectiveBody.action ? String(effectiveBody.action) : action;
+      var plan = retryPlan_(act);
+      function runAttempt(index) {
+        return postOnce_(effectiveBody, REQUEST_TIMEOUT_MS).then(function (data) {
+          if (!shouldRetryResponse_(data) || index >= plan.attempts - 1) return data;
+          if (hook && typeof hook.onRetry === "function") hook.onRetry(index + 1, MESSAGES.server_busy);
+          return delay_(plan.delays[index + 1] || 1500).then(function () {
+            return runAttempt(index + 1);
+          });
+        }).catch(function (err) {
+          if (index >= plan.attempts - 1) throw err;
+          if (hook && typeof hook.onRetry === "function") hook.onRetry(index + 1, MESSAGES.server_busy);
+          return delay_(plan.delays[index + 1] || 1500).then(function () {
+            return runAttempt(index + 1);
+          });
+        });
+      }
+      return runAttempt(0);
+    }
+    if (body && String(body.token) === TOKEN_PENDING) {
+      return whenGasTokenReady_().then(function (tok) {
+        if (!tok || String(tok) === TOKEN_PENDING) {
+          return Promise.resolve({ ok: false, error: "bad_token" });
+        }
+        var pendingBody = {};
+        var pk;
+        for (pk in body) {
+          if (Object.prototype.hasOwnProperty.call(body, pk)) pendingBody[pk] = body[pk];
+        }
+        pendingBody.token = tok;
+        return runPost_(pendingBody);
+      });
+    }
+    return runPost_(body);
+  }
+
+  function installStorageListener_() {
+    if (storageListenerInstalled || !global.addEventListener) return;
+    storageListenerInstalled = true;
+    global.addEventListener("storage", function (event) {
+      if (!event || event.key !== SESSION_KEY || !event.newValue) return;
+      try {
+        var parsed = JSON.parse(event.newValue);
+        if (!parsed || !parsed.id || !parsed.token) return;
+        if (!state.id || rules.idKey(parsed.id) !== rules.idKey(state.id)) return;
+        if (String(parsed.token) === String(state.token)) return;
+        state.token = String(parsed.token);
+        saveSession_();
+        if (state.id && rootEl) {
+          fetchAllProgress_(state.id, state.token, appProgram_()).then(function (result) {
+            if (result && result.ok) {
+              if (result.token) state.token = String(result.token);
+              state.progress = result.progress;
+              state.progressError = "";
+              saveSession_();
+              if (typeof options.onReady === "function") {
+                options.onReady({
+                  id: state.id,
+                  token: state.token,
+                  progress: state.progress
+                });
+              }
+            }
+          }).catch(function () {});
+        }
+      } catch (ignore) {}
+    });
+  }
+
+  function installOnlineListener_() {
+    if (onlineListenerInstalled || !global.addEventListener) return;
+    onlineListenerInstalled = true;
+    global.addEventListener("online", function () {
+      if (state.id) flushNoteOutbox_(state.id);
+    });
+  }
+
+  function appProgram_() {
+    if (options && options.app) return String(options.app).trim();
+    return "";
+  }
+
+  function appKey_() {
+    return String(appProgram_() || "").trim().toLowerCase();
+  }
+
+  function chipDisabled_() {
+    try {
+      if (options && options.chipOff === true) return true;
+      var doc = global.document;
+      if (!doc || !doc.documentElement) return false;
+      var script = doc.currentScript;
+      if (script && script.getAttribute && String(script.getAttribute("data-mrj-chip") || "").trim().toLowerCase() === "off") {
+        return true;
+      }
+      var boot = doc.querySelector && doc.querySelector("script[data-mrj-app][src*='mrj-auth-boot']");
+      if (boot && String(boot.getAttribute("data-mrj-chip") || "").trim().toLowerCase() === "off") {
+        return true;
+      }
+      if (String(doc.documentElement.getAttribute("data-mrj-chip") || "").trim().toLowerCase() === "off") {
+        return true;
+      }
+      if (doc.body && String(doc.body.getAttribute("data-mrj-chip") || "").trim().toLowerCase() === "off") {
+        return true;
+      }
+    } catch (ignore) {}
+    return false;
+  }
+
+  function readBootAttr_(name) {
+    try {
+      var doc = global.document;
+      if (!doc) return "";
+      if (options && options.bootAttrs && options.bootAttrs[name]) {
+        return String(options.bootAttrs[name]);
+      }
+      var boot = doc.querySelector && doc.querySelector("script[data-mrj-app][src*='mrj-auth-boot']");
+      if (boot && boot.getAttribute) {
+        var v = boot.getAttribute(name);
+        if (v != null && String(v).trim()) return String(v).trim();
+      }
+      if (doc.documentElement && doc.documentElement.getAttribute) {
+        var hv = doc.documentElement.getAttribute(name);
+        if (hv != null && String(hv).trim()) return String(hv).trim();
+      }
+      if (doc.body && doc.body.getAttribute) {
+        var bv = doc.body.getAttribute(name);
+        if (bv != null && String(bv).trim()) return String(bv).trim();
+      }
+    } catch (ignore) {}
+    return "";
+  }
+
+  function panelAppKey_() {
+    var override = (options && options.panelApp) || readBootAttr_("data-mrj-panel-app");
+    if (override && String(override).trim()) {
+      return String(override).trim().toLowerCase();
+    }
+    var key = appKey_();
+    if (key === "pronounce") {
+      try {
+        var path = global.location && global.location.pathname ? String(global.location.pathname) : "";
+        if (path.indexOf("/pronounce-whistle/") !== -1) return "pronounce-whistle";
+      } catch (ignore) {}
+    }
+    return key;
+  }
+
+  function scoreProgramsForApp_() {
+    var override = options && options.scorePrograms;
+    if (override != null && String(override).trim()) {
+      return String(override)
+        .split(",")
+        .map(function (s) { return String(s).trim(); })
+        .filter(Boolean);
+    }
+    var key = panelAppKey_();
+    if (key && APP_SCORE_PROGRAM_MAP[key]) {
+      return APP_SCORE_PROGRAM_MAP[key].slice();
+    }
+    if (key && APP_SCORE_PROGRAM_MAP[appKey_()]) {
+      return APP_SCORE_PROGRAM_MAP[appKey_()].slice();
+    }
+    if (key) return [key];
+    return [];
+  }
+
+  function compileItemRegex_(source) {
+    if (!source || !String(source).trim()) return null;
+    try {
+      return new RegExp(String(source).trim());
+    } catch (ignore) {
+      return null;
+    }
+  }
+
+  function bootItemInclude_() {
+    var s = (options && options.itemInclude) || readBootAttr_("data-mrj-item-include");
+    return compileItemRegex_(s);
+  }
+
+  function bootItemExclude_() {
+    var s = (options && options.itemExclude) || readBootAttr_("data-mrj-item-exclude");
+    return compileItemRegex_(s);
+  }
+
+  function rowPassesItemFilter_(row) {
+    var itemId = rowItemId_(row);
+    if (!itemId) return false;
+    var prog = rowProgramName_(row).toLowerCase();
+    var key = panelAppKey_();
+
+    if (key === "word-master") {
+      if (DAY2_PACK_ITEM_RE.test(itemId)) return false;
+    } else if (key === "day2-words") {
+      if (prog === "word-master" && !DAY2_PACK_ITEM_RE.test(itemId)) return false;
+    } else if (key === "pronounce-whistle") {
+      if (!WHISTLE_ITEM_RE.test(itemId)) return false;
+    } else if (key === "pronounce") {
+      if (WHISTLE_ITEM_RE.test(itemId)) return false;
+    } else if (key === "mrj-decodable-try") {
+      if (!DECODABLE_TRY_ITEM_RE.test(itemId)) return false;
+    } else if (key === "mrj-decodable-try-21") {
+      if (!DECODABLE_21_ITEM_RE.test(itemId)) return false;
+    } else if (key === "mrj-decodable-try-41") {
+      if (!DECODABLE_41_ITEM_RE.test(itemId)) return false;
+    } else if (key === "mrj-decodable-try-61") {
+      if (!DECODABLE_61_ITEM_RE.test(itemId)) return false;
+    } else if (key === "mrj-decodable-try-81") {
+      if (!DECODABLE_81_ITEM_RE.test(itemId)) return false;
+    } else if (key === "mrj-decodable-try-71") {
+      if (!DECODABLE_71_ITEM_RE.test(itemId)) return false;
+    }
+
+    var inc = bootItemInclude_();
+    if (inc && !inc.test(itemId)) return false;
+    var exc = bootItemExclude_();
+    if (exc && exc.test(itemId)) return false;
+    return true;
+  }
+
+  function programNameSet_() {
+    var set = {};
+    scoreProgramsForApp_().forEach(function (name) {
+      set[String(name).trim().toLowerCase()] = true;
+    });
+    return set;
+  }
+
+  function rowProgramName_(row) {
+    if (!row || typeof row !== "object") return "";
+    return String(row.program || row.curriculum_program || "").trim();
+  }
+
+  function rowItemId_(row) {
+    if (!row || typeof row !== "object") return "";
+    return String(row.item_id || row.itemId || row.item || "").trim();
+  }
+
+  function normalizeProgressRow_(row) {
+    row = row || {};
+    var scoreVal = row.score_value != null ? row.score_value : row.scoreValue;
+    var scoreMax = row.score_max != null ? row.score_max : row.scoreMax;
+    var scorePct = row.score_pct != null ? row.score_pct : row.scorePct;
+    if (scorePct == null && scoreVal != null && scoreMax != null && Number(scoreMax) > 0) {
+      scorePct = Math.round((Number(scoreVal) / Number(scoreMax)) * 100);
+    }
+    var scoreText = "";
+    if (scoreVal != null && scoreMax != null) {
+      scoreText = String(scoreVal) + "/" + String(scoreMax);
+      if (scorePct != null) scoreText += " (" + String(scorePct) + "%)";
+    } else if (scorePct != null) {
+      scoreText = String(scorePct) + "%";
+    } else if (row.score != null) {
+      scoreText = String(row.score);
+    }
+    return {
+      program: rowProgramName_(row),
+      item_id: rowItemId_(row),
+      score_value: scoreVal,
+      score_max: scoreMax,
+      score_pct: scorePct,
+      local_date: row.local_date || row.localDate || row.date || "",
+      updated_at: row.updated_at || row.updatedAt || "",
+      label: row.label != null ? String(row.label) : "",
+      scoreText: scoreText
+    };
+  }
+
+  function rowMatchesAppPrograms_(row, programSet) {
+    var p = rowProgramName_(row).toLowerCase();
+    return !!(p && programSet[p]);
+  }
+
+  function itemIdSortKey_(itemId) {
+    var id = String(itemId || "");
+    var m = id.match(/^(g(\d+):)?(u(\d+)|unit(\d+))?(.*)$/i);
+    if (!m) return { book: 0, unit: 0, rest: id.toLowerCase() };
+    var book = m[2] ? parseInt(m[2], 10) : 1;
+    var unit = 0;
+    if (m[4]) unit = parseInt(m[4], 10);
+    else if (m[5]) unit = parseInt(m[5], 10);
+    return { book: book, unit: unit, rest: (m[6] || id).toLowerCase() };
+  }
+
+  function compareItemIds_(a, b) {
+    var ka = itemIdSortKey_(a);
+    var kb = itemIdSortKey_(b);
+    if (ka.book !== kb.book) return ka.book - kb.book;
+    if (ka.unit !== kb.unit) return ka.unit - kb.unit;
+    if (ka.rest < kb.rest) return -1;
+    if (ka.rest > kb.rest) return 1;
+    return 0;
+  }
+
+  function sortPanelRows_(rows) {
+    rows = rows.slice();
+    rows.sort(function (a, b) {
+      var cmp = compareItemIds_(a.item_id, b.item_id);
+      if (cmp !== 0) return cmp;
+      var da = String(a.local_date || a.updated_at || "");
+      var db = String(b.local_date || b.updated_at || "");
+      if (da < db) return -1;
+      if (da > db) return 1;
+      return 0;
+    });
+    return rows;
+  }
+
+  function averagePct_(rows) {
+    var sum = 0;
+    var n = 0;
+    rows.forEach(function (row) {
+      if (row.score_pct == null || row.score_pct === "") return;
+      var v = Number(row.score_pct);
+      if (!isNaN(v)) {
+        sum += v;
+        n += 1;
+      }
+    });
+    if (!n) return null;
+    return Math.round(sum / n);
+  }
+
+  function itemLabel_(itemId, row) {
+    if (row && row.label != null && String(row.label).trim()) {
+      return String(row.label).trim();
+    }
+    try {
+      var labels = global.MRJ_ITEM_LABELS;
+      if (labels && typeof labels === "object" && labels[itemId] != null) {
+        return String(labels[itemId]);
+      }
+    } catch (ignore) {}
+    return "";
+  }
+
+  function mount(el, opts) {
+    installStorageListener_();
+    installOnlineListener_();
+    var node = resolveEl_(el);
+    if (!node) return;
+    rootEl = node;
+    options = opts || {};
+    packState = {};
+    rootEl.classList.add("mrj-auth");
+    viewGen += 1;
+    busy = false;
+    state = { id: "", token: "", role: "", progress: [], progressError: "" };
+    packState = {};
+    teacherChromeApplied_ = false;
+    var saved = readSession_();
+    if (!saved) {
+      renderDoors_();
+      return;
+    }
+    resumeSession_(saved);
+  }
+
+  function resumeSession_(saved) {
+    var gen = viewGen;
+    finish_(saved.id, saved.token, [], "");
+    fetchAllProgress_(saved.id, saved.token, appProgram_(), {
+      onRetry: function () {
+        if (gen !== viewGen) return;
+        showResumeBusyNote_();
+      }
+    }).then(function (result) {
+      if (gen !== viewGen) return;
+      if (!state.id || rules.idKey(state.id) !== rules.idKey(saved.id)) return;
+      if (signOutIfBlocked_(result)) return;
+      if (sessionRejected_(result)) {
+        clearSession_();
+        renderDoors_();
+        return;
+      }
+      if (mergeProgressResult_(result, saved.id, saved.token, "")) return;
+      resumeProgressSoftFail_(saved, gen);
+    }).catch(function () {
+      if (gen !== viewGen) return;
+      if (!state.id || rules.idKey(state.id) !== rules.idKey(saved.id)) return;
+      resumeProgressSoftFail_(saved, gen);
+    });
+  }
+
+  function showResumeBusyNote_() {
+    if (!rootEl) return;
+    if (rootEl.querySelector && rootEl.querySelector(".mrj-auth-resume-busy")) return;
+    var note = el_("p", "mrj-auth-status mrj-auth-resume-busy");
+    note.textContent = MESSAGES.resume_busy;
+    rootEl.insertBefore(note, rootEl.firstChild);
+  }
+
+  function resumeProgressSoftFail_(saved, gen) {
+    state.progressError = "resume_pending";
+    saveSession_();
+    showResumeBusyNote_();
+    retryProgressInBackground_(saved.id, saved.token, gen);
+  }
+
+  function mergeProgressResult_(result, fallbackId, fallbackToken, fallbackRole) {
+    if (!result || !result.ok) return false;
+    state.id = result.id || fallbackId;
+    state.token = result.token || fallbackToken;
+    state.progress = result.progress;
+    state.progressError = "";
+    if (result.role !== undefined && result.role !== "") {
+      applyServerRole_(result.role);
+    } else if (fallbackRole !== undefined && fallbackRole !== "") {
+      applyServerRole_(fallbackRole);
+    }
+    saveSession_();
+    renderSignedIn_();
+    updateStudentChip_();
+    dispatchReady_();
+    return true;
+  }
+
+  function student() {
+    return state.id || "";
+  }
+
+  function token() {
+    return state.token || "";
+  }
+
+  function isTeacher() {
+    return state.role === "teacher";
+  }
+
+  function applyServerRole_(role) {
+    var next = role === "teacher" ? "teacher" : "";
+    var wasTeacher = state.role === "teacher";
+    state.role = next;
+    syncTeacherChrome_(wasTeacher);
+  }
+
+  function syncTeacherChrome_(wasTeacher) {
+    try {
+      if (global.document && global.document.body) {
+        global.document.body.classList.toggle("mrj-teacher", isTeacher());
+      }
+      if (isTeacher() && !wasTeacher && !teacherChromeApplied_ && global.document) {
+        teacherChromeApplied_ = true;
+        try {
+          global.document.dispatchEvent(new global.CustomEvent("mrj-teacher", { detail: { id: state.id } }));
+        } catch (ignore) {
+          var ev = global.document.createEvent("Event");
+          ev.initEvent("mrj-teacher", true, true);
+          global.document.dispatchEvent(ev);
+        }
+      }
+      if (!isTeacher()) teacherChromeApplied_ = false;
+    } catch (ignore) {}
+  }
+
+  function teacherSaveMetadata_() {
+    return isTeacher() ? { role: "teacher" } : null;
+  }
+
+  function clearTeacherMode_() {
+    if (!isTeacher()) return;
+    applyServerRole_("");
+    updateStudentChip_();
+  }
+
+  function ensureTeacherButton_() {
+    if (!global.document || !global.document.body) return;
+    if (teacherBtnEl) return;
+    teacherBtnEl = button_("Teacher", "mrj-auth-teacher-btn");
+    teacherBtnEl.type = "button";
+    teacherBtnEl.setAttribute("aria-label", "Teacher mode");
+    teacherBtnEl.addEventListener("click", function (ev) {
+      try {
+        if (ev && ev.stopPropagation) ev.stopPropagation();
+        if (isTeacher()) clearTeacherMode_();
+        else openTeacherUnlockDialog_();
+      } catch (ignore) {}
+    });
+  }
+
+  function syncTeacherButton_() {
+    ensureTeacherButton_();
+    if (!teacherBtnEl) return;
+    if (!state.id) {
+      teacherBtnEl.hidden = true;
+      return;
+    }
+    teacherBtnEl.hidden = false;
+    if (isTeacher()) {
+      teacherBtnEl.textContent = "Exit";
+      teacherBtnEl.setAttribute("aria-label", "Exit teacher mode");
+    } else {
+      teacherBtnEl.textContent = "Teacher";
+      teacherBtnEl.setAttribute("aria-label", "Teacher mode");
+    }
+  }
+
+  function attachTeacherButtonToChipChrome_() {
+    ensureChipDom_();
+    ensureTeacherButton_();
+    if (!chipChromeEl || !teacherBtnEl || !chipEl) return;
+    teacherBtnOnPill = false;
+    if (teacherBtnEl.parentNode !== chipChromeEl) {
+      if (teacherBtnEl.parentNode) teacherBtnEl.parentNode.removeChild(teacherBtnEl);
+      chipChromeEl.insertBefore(teacherBtnEl, chipEl);
+    }
+  }
+
+  function attachTeacherButtonNearPill_(pill) {
+    ensureTeacherButton_();
+    if (!pill || !pill.parentNode || !teacherBtnEl) return;
+    teacherBtnOnPill = true;
+    if (teacherBtnEl.parentNode !== pill.parentNode || teacherBtnEl.nextSibling !== pill) {
+      if (teacherBtnEl.parentNode) teacherBtnEl.parentNode.removeChild(teacherBtnEl);
+      pill.parentNode.insertBefore(teacherBtnEl, pill);
+    }
+  }
+
+  function closeTeacherUnlockDialog_() {
+    try {
+      teacherUnlockOpen = false;
+      teacherUnlockBusy = false;
+      if (teacherUnlockKeyHandler && global.removeEventListener) {
+        global.removeEventListener("keydown", teacherUnlockKeyHandler);
+        teacherUnlockKeyHandler = null;
+      }
+      if (panelRootEl) {
+        panelRootEl.hidden = true;
+        panelRootEl.setAttribute("aria-hidden", "true");
+        clear_(panelRootEl);
+      }
+    } catch (ignore) {}
+  }
+
+  function showTeacherUnlockError_(body, message) {
+    if (!body) return;
+    var old = body.querySelector && body.querySelector(".mrj-auth-teacher-unlock-error");
+    if (old && old.parentNode) old.parentNode.removeChild(old);
+    var err = el_("p", "mrj-auth-error mrj-auth-teacher-unlock-error");
+    err.textContent = message || "Wrong password. Try again.";
+    body.insertBefore(err, body.firstChild);
+  }
+
+  function openTeacherUnlockDialog_() {
+    try {
+      if (!state.id || !state.token) return;
+      if (teacherUnlockOpen) return;
+      if (panelOpen) closeProgressPanel();
+      ensureChipDom_();
+      teacherUnlockOpen = true;
+      panelRootEl.hidden = false;
+      panelRootEl.setAttribute("aria-hidden", "false");
+      clear_(panelRootEl);
+      var backdrop = el_("button", "mrj-auth-panel-backdrop");
+      backdrop.type = "button";
+      backdrop.setAttribute("aria-label", "Close teacher password");
+      backdrop.addEventListener("click", function () {
+        closeTeacherUnlockDialog_();
+      });
+      var dialog = el_("div", "mrj-auth-panel mrj-auth-teacher-unlock");
+      dialog.setAttribute("role", "dialog");
+      dialog.setAttribute("aria-modal", "true");
+      dialog.setAttribute("aria-label", "Teacher password");
+      var header = el_("div", "mrj-auth-panel-header");
+      var title = el_("h2", "mrj-auth-panel-title");
+      title.textContent = "Teacher mode";
+      var closeBtn = button_("×", "mrj-auth-panel-close");
+      closeBtn.setAttribute("aria-label", "Close");
+      closeBtn.addEventListener("click", function () {
+        closeTeacherUnlockDialog_();
+      });
+      header.appendChild(title);
+      header.appendChild(closeBtn);
+      var body = el_("div", "mrj-auth-panel-body");
+      var intro = el_("p", "mrj-auth-panel-cap");
+      intro.textContent =
+        "Enter the teacher password to unlock this app while signed in as " + state.id + ".";
+      body.appendChild(intro);
+      var form = el_("form", "mrj-auth-form");
+      form.setAttribute("novalidate", "novalidate");
+      var wrap = el_("label", "mrj-auth-field");
+      var name = el_("span", "mrj-auth-label");
+      name.textContent = "Teacher password";
+      var input = el_("input", "mrj-auth-input");
+      input.type = "password";
+      input.autocomplete = "current-password";
+      input.inputMode = "text";
+      input.setAttribute("aria-label", "Teacher password");
+      wrap.appendChild(name);
+      wrap.appendChild(input);
+      form.appendChild(wrap);
+      var actions = el_("div", "mrj-auth-actions");
+      var submit = button_("Unlock", "mrj-auth-submit");
+      submit.type = "submit";
+      var back = button_("Cancel", "mrj-auth-back");
+      back.type = "button";
+      back.addEventListener("click", function () {
+        closeTeacherUnlockDialog_();
+      });
+      actions.appendChild(submit);
+      actions.appendChild(back);
+      form.appendChild(actions);
+      form.addEventListener("submit", function (event) {
+        event.preventDefault();
+        if (teacherUnlockBusy) return;
+        var secret = input.value;
+        teacherUnlockBusy = true;
+        submit.disabled = true;
+        verifyTeacherPin_(secret).then(function (data) {
+          teacherUnlockBusy = false;
+          submit.disabled = false;
+          if (data && data.ok) {
+            applyServerRole_("teacher");
+            saveSession_();
+            updateStudentChip_();
+            closeTeacherUnlockDialog_();
+            return;
+          }
+          showTeacherUnlockError_(body, (data && data.message) || "Wrong PIN. Try again.");
+        }).catch(function () {
+          teacherUnlockBusy = false;
+          submit.disabled = false;
+          showTeacherUnlockError_(body, "Could not reach the server. Try again.");
+        });
+      });
+      body.appendChild(form);
+      dialog.appendChild(header);
+      dialog.appendChild(body);
+      panelRootEl.appendChild(backdrop);
+      panelRootEl.appendChild(dialog);
+      if (teacherUnlockKeyHandler && global.removeEventListener) {
+        global.removeEventListener("keydown", teacherUnlockKeyHandler);
+      }
+      teacherUnlockKeyHandler = function (ev) {
+        if (!teacherUnlockOpen) return;
+        if (ev && (ev.key === "Escape" || ev.key === "Esc")) closeTeacherUnlockDialog_();
+      };
+      if (global.addEventListener) global.addEventListener("keydown", teacherUnlockKeyHandler);
+      if (input.focus) input.focus();
+    } catch (ignore) {}
+  }
+
+  function signOut(notice) {
+    viewGen += 1;
+    sessionGen += 1;
+    loadPlaceSeq += 1;
+    busy = false;
+    activeLoginFlight = null;
+    gasTokenPromise_ = null;
+    state = { id: "", token: "", role: "", progress: [], progressError: "" };
+    packState = {};
+    teacherChromeApplied_ = false;
+    clearSession_();
+    closeProgressPanel();
+    closeTeacherUnlockDialog_();
+    disconnectChipObserver_();
+    syncTeacherChrome_(true);
+    updateStudentChip_();
+    if (rootEl) renderDoors_(notice);
+  }
+
+  function isIdBlockedError_(data) {
+    return !!(data && String(data.error) === "id_blocked");
+  }
+
+  function signOutIfBlocked_(data) {
+    if (!isIdBlockedError_(data)) return false;
+    signOut(MESSAGES.id_blocked);
+    return true;
+  }
+
+  function renderDoors_(notice) {
+    if (!rootEl) return;
+    clear_(rootEl);
+    if (notice) rootEl.appendChild(errorNode_(notice));
+    var doors = el_("div", "mrj-auth-doors");
+    var have = button_("I already have an ID", "mrj-auth-door mrj-auth-door-login");
+    var make = button_("Make a new ID", "mrj-auth-door mrj-auth-door-new");
+    have.addEventListener("click", function () { renderLogin_(); });
+    make.addEventListener("click", function () { renderCreate_(); });
+    doors.appendChild(have);
+    doors.appendChild(make);
+    rootEl.appendChild(doors);
+  }
+
+  function renderLogin_(message, values) {
+    renderForm_({
+      message: message,
+      values: values,
+      fields: [
+        field_("ID", "text", "username"),
+        field_("Password", "password", "current-password")
+      ],
+      submitLabel: "Log in",
+      onSubmit: function (entered) {
+        var id = entered[0];
+        var password = entered[1];
+        var blank = rules.rejectBlank(id, password);
+        if (!blank.ok) {
+          renderLogin_(blank.message, entered);
+          return;
+        }
+        renderStatus_(MESSAGES.checking);
+        performLoginSubmit_(id, password, entered, function (msg) {
+          renderLogin_(msg, entered);
+        });
+      },
+      onBack: function () { renderDoors_(); }
+    });
+  }
+
+  function renderCreate_(message, values) {
+    renderForm_({
+      message: message,
+      values: values,
+      fields: [
+        field_("ID", "text", "username"),
+        field_("Password", "password", "new-password"),
+        field_("Type password again", "password", "new-password")
+      ],
+      submitLabel: "Make my ID",
+      onSubmit: function (entered) {
+        var id = entered[0];
+        var password = entered[1];
+        var again = entered[2];
+        var blank = rules.rejectBlank(id, password);
+        if (!blank.ok) {
+          renderCreate_(blank.message, entered);
+          return;
+        }
+        var match = rules.passwordsMatch(password, again);
+        if (!match.ok) {
+          renderCreate_(match.message, entered);
+          return;
+        }
+        renderStatus_("Making your ID…");
+        send_({ action: "register", id: id, password: password }, function (data) {
+          finish_(data.id || id, data.token, data.progress, "", data.role);
+        }, function (msg) {
+          renderCreate_(msg, entered);
+        });
+      },
+      onBack: function () { renderDoors_(); }
+    });
+  }
+
+  function renderForm_(spec) {
+    if (!rootEl) return;
+    clear_(rootEl);
+    if (spec.message) rootEl.appendChild(errorNode_(spec.message));
+    var form = el_("form", "mrj-auth-form");
+    form.setAttribute("novalidate", "novalidate");
+    form.autocomplete = "on";
+    var inputs = [];
+    spec.fields.forEach(function (meta, index) {
+      var wrap = el_("label", "mrj-auth-field");
+      var name = el_("span", "mrj-auth-label");
+      name.textContent = meta.label;
+      var input = el_("input", "mrj-auth-input");
+      input.type = meta.type;
+      input.autocomplete = meta.autocomplete;
+      input.spellcheck = false;
+      input.autocapitalize = "off";
+      input.autocorrect = "off";
+      if (meta.type === "text") input.inputMode = "text";
+      if (spec.values && spec.values[index] != null) input.value = spec.values[index];
+      wrap.appendChild(name);
+      wrap.appendChild(input);
+      form.appendChild(wrap);
+      inputs[index] = input;
+    });
+    var actions = el_("div", "mrj-auth-actions");
+    var submit = button_(spec.submitLabel, "mrj-auth-submit");
+    submit.type = "submit";
+    var back = button_("Back", "mrj-auth-back");
+    back.type = "button";
+    back.addEventListener("click", function () {
+      if (busy) return;
+      spec.onBack();
+    });
+    actions.appendChild(submit);
+    actions.appendChild(back);
+    form.appendChild(actions);
+    form.addEventListener("submit", function (event) {
+      event.preventDefault();
+      if (busy) return;
+      var values = inputs.map(function (input) { return input.value; });
+      spec.onSubmit(values);
+    });
+    rootEl.appendChild(form);
+    if (inputs[0]) inputs[0].focus();
+  }
+
+  // Display only: "8/10" -> "8/10 (80%)". Leaves anything else as-is.
+  function scoreWithPct_(score) {
+    if (score == null) return score;
+    var str = String(score);
+    var m = str.match(/^\s*(\d+(?:\.\d+)?)\s*\/\s*(\d+(?:\.\d+)?)\s*$/);
+    if (!m || !(Number(m[2]) > 0)) return score;
+    return str.trim() + " (" + Math.round((Number(m[1]) / Number(m[2])) * 100) + "%)";
+  }
+
+  function renderSignedIn_() {
+    if (!rootEl) return;
+    clear_(rootEl);
+    var title = el_("p", "mrj-auth-signed");
+    title.textContent = "Signed in as " + state.id;
+    rootEl.appendChild(title);
+    var rows = state.progress || [];
+    if (!rows.length) {
+      var empty = el_("p", "mrj-auth-empty");
+      empty.textContent = "No scores in the book yet.";
+      rootEl.appendChild(empty);
+    } else {
+      var list = el_("ul", "mrj-auth-progress");
+      rows.forEach(function (row) {
+        var item = el_("li");
+        var main = el_("span", "mrj-auth-prog-main");
+        main.textContent = [row.program, row.item].filter(Boolean).join(" · ");
+        var detail = el_("span");
+        detail.textContent = [scoreWithPct_(row.score), row.date].filter(Boolean).join(" · ");
+        item.appendChild(main);
+        if (detail.textContent) item.appendChild(detail);
+        list.appendChild(item);
+      });
+      rootEl.appendChild(list);
+    }
+    var out = button_("Sign out", "mrj-auth-signout");
+    out.addEventListener("click", signOut);
+    rootEl.appendChild(out);
+  }
+
+  function waitBar_() {
+    var bar = el_("div", "mrj-auth-wait-bar");
+    bar.setAttribute("role", "progressbar");
+    bar.setAttribute("aria-label", "Working");
+    return bar;
+  }
+
+  function renderStatus_(text, meta) {
+    if (!rootEl) return;
+    clear_(rootEl);
+    var wait = el_("div", "mrj-auth-wait");
+    wait.setAttribute("aria-busy", "true");
+    var status = el_("p", "mrj-auth-status");
+    status.setAttribute("aria-live", "polite");
+    status.textContent = text;
+    wait.appendChild(status);
+    wait.appendChild(waitBar_());
+    rootEl.appendChild(wait);
+    var again = button_("Try again", "mrj-auth-back");
+    again.addEventListener("click", function () {
+      if (activeLoginFlight) {
+        renderDoors_(MESSAGES.still_signing_in);
+        return;
+      }
+      if (meta && meta.resume) {
+        renderDoors_("Could not check the sign-in book. Try again.");
+        return;
+      }
+      loadPlaceSeq += 1;
+      viewGen += 1;
+      busy = false;
+      renderDoors_("Didn't save. Try again.");
+    });
+    rootEl.appendChild(again);
+  }
+
+  function finishLoginFromGas_(data, flightId, id, showError) {
+    var stillCurrent = activeLoginFlight && activeLoginFlight.id === flightId;
+    if (data && data.ok && data.token) {
+      if (activeLoginFlight && activeLoginFlight.id !== flightId) return;
+      activeLoginFlight = null;
+      busy = false;
+      setBusy_(false);
+      loadPlace_(data.id || id, data.token, data.role);
+      return;
+    }
+    if (!stillCurrent) return;
+    activeLoginFlight = null;
+    busy = false;
+    setBusy_(false);
+    showError(errorText_(data));
+  }
+
+  function performLoginSubmit_(id, password, entered, showError) {
+    var mode = loginMode_();
+    if (mode === "gas") {
+      send_({ action: "login", id: id, password: password }, function () {}, showError);
+      return;
+    }
+    var flightId = ++loginFlightSeq;
+    activeLoginFlight = { id: flightId, body: { action: "login", id: id, password: password } };
+    busy = true;
+    setBusy_(true);
+    var hook = {
+      onRetry: function () {
+        if (activeLoginFlight && activeLoginFlight.id === flightId) {
+          renderStatus_(MESSAGES.server_busy);
+        }
+      }
+    };
+    if (mode === "shadow") {
+      var cfPromise = cfLogin_(id, password);
+      var gasPromise = post_(attachClientMeta_({ action: "login", id: id, password: password }), hook);
+      Promise.all([cfPromise, gasPromise])
+        .then(function (pair) {
+          var cf = pair[0];
+          var gas = pair[1];
+          shadowLog_(
+            rules.idKey(id),
+            loginResultLabel_(cf),
+            loginResultLabel_(gas),
+            cf && cf.cf_ms != null ? cf.cf_ms : 0
+          );
+          finishLoginFromGas_(gas, flightId, id, showError);
+        })
+        .catch(function () {
+          var stillCurrent = activeLoginFlight && activeLoginFlight.id === flightId;
+          if (!stillCurrent) return;
+          activeLoginFlight = null;
+          busy = false;
+          setBusy_(false);
+          showError(MESSAGES.server_busy.replace("trying again…", "Please try again in a moment."));
+        });
+      return;
+    }
+    cfLogin_(id, password)
+      .then(function (cf) {
+        if (!activeLoginFlight || activeLoginFlight.id !== flightId) return;
+        if (cf && cf.ok) {
+          activeLoginFlight = null;
+          busy = false;
+          setBusy_(false);
+          startBackgroundGasToken_(id, password, hook);
+          loadPlace_(cf.id || id, TOKEN_PENDING, cf.role || "");
+          return;
+        }
+        if (!cfShouldFallbackToGas_(cf)) {
+          activeLoginFlight = null;
+          busy = false;
+          setBusy_(false);
+          showError(errorText_(cf));
+          return;
+        }
+        post_(attachClientMeta_({ action: "login", id: id, password: password }), hook)
+          .then(function (gas) {
+            finishLoginFromGas_(gas, flightId, id, showError);
+          })
+          .catch(function () {
+            var stillCurrent = activeLoginFlight && activeLoginFlight.id === flightId;
+            if (!stillCurrent) return;
+            activeLoginFlight = null;
+            busy = false;
+            setBusy_(false);
+            showError(MESSAGES.server_busy.replace("trying again…", "Please try again in a moment."));
+          });
+      })
+      .catch(function () {
+        post_(attachClientMeta_({ action: "login", id: id, password: password }), hook)
+          .then(function (gas) {
+            finishLoginFromGas_(gas, flightId, id, showError);
+          })
+          .catch(function () {
+            var stillCurrent = activeLoginFlight && activeLoginFlight.id === flightId;
+            if (!stillCurrent) return;
+            activeLoginFlight = null;
+            busy = false;
+            setBusy_(false);
+            showError(MESSAGES.server_busy.replace("trying again…", "Please try again in a moment."));
+          });
+      });
+  }
+
+  function send_(body, onOk, showError) {
+    var flightId = ++loginFlightSeq;
+    activeLoginFlight = { id: flightId, body: body };
+    busy = true;
+    setBusy_(true);
+    post_(body, {
+      onRetry: function () {
+        if (activeLoginFlight && activeLoginFlight.id === flightId) {
+          renderStatus_(MESSAGES.server_busy);
+        }
+      }
+    }).then(function (data) {
+      var stillCurrent = activeLoginFlight && activeLoginFlight.id === flightId;
+      if (data && data.ok && data.token) {
+        if (activeLoginFlight && activeLoginFlight.id !== flightId) return;
+        activeLoginFlight = null;
+        busy = false;
+        setBusy_(false);
+        if (body && (body.action === "login" || body.action === "register")) {
+          loadPlace_(data.id || body.id, data.token, data.role);
+        } else {
+          finish_(data.id || (body && body.id), data.token, data.progress, "", data.role);
+        }
+        return;
+      }
+      if (!stillCurrent) return;
+      activeLoginFlight = null;
+      busy = false;
+      setBusy_(false);
+      showError(errorText_(data));
+    }).catch(function () {
+      var stillCurrent = activeLoginFlight && activeLoginFlight.id === flightId;
+      if (!stillCurrent) return;
+      activeLoginFlight = null;
+      busy = false;
+      setBusy_(false);
+      showError(MESSAGES.server_busy.replace("trying again…", "Please try again in a moment."));
+    });
+  }
+
+
+  function progressBody_(id, tokenValue, program, offset) {
+    var body = { action: "progress", id: id, token: tokenValue };
+    if (program) body.program = program;
+    if (offset) body.offset = offset;
+    body.limit = PROGRESS_PAGE_SIZE;
+    return body;
+  }
+
+  function fetchAllProgress_(id, tokenValue, program, hook, fetchOpts) {
+    fetchOpts = fetchOpts || {};
+    var maxPages = fetchOpts.panel ? PROGRESS_PANEL_MAX_PAGES : PROGRESS_MAX_PAGES;
+    var all = [];
+    var offset = 0;
+    var nextId = id;
+    var nextToken = tokenValue;
+    var serverRole = "";
+    var pages = 0;
+    var hitCap = false;
+    function pullPage() {
+      if (fetchOpts.cancelCheck && fetchOpts.cancelCheck()) {
+        return Promise.resolve({ ok: false, error: "cancelled" });
+      }
+      pages += 1;
+      return post_(progressBody_(id, tokenValue, program, offset), hook).then(function (data) {
+        if (fetchOpts.cancelCheck && fetchOpts.cancelCheck()) {
+          return { ok: false, error: "cancelled" };
+        }
+        if (!data || !data.ok) {
+          return {
+            ok: false,
+            error: data && data.error ? data.error : "progress_load_failed",
+            message: data && data.message ? data.message : "",
+            id: data && data.id ? data.id : nextId,
+            token: data && data.token ? data.token : nextToken
+          };
+        }
+        if (!fetchOpts.panel) {
+          if (data.id) nextId = data.id;
+          if (data.token) nextToken = data.token;
+        }
+        if (data.role === "teacher") serverRole = "teacher";
+        var chunk = Array.isArray(data.progress) ? data.progress : [];
+        all = all.concat(chunk);
+        var hasMore = data.hasMore === true;
+        if (!hasMore && data.hasMore !== false && chunk.length >= PROGRESS_PAGE_SIZE) {
+          hasMore = true;
+        }
+        if (typeof data.total === "number" && all.length >= data.total) hasMore = false;
+        if (pages >= maxPages) {
+          if (hasMore) hitCap = true;
+          hasMore = false;
+        }
+        if (hasMore && chunk.length > 0) {
+          offset += chunk.length;
+          return pullPage();
+        }
+        return {
+          ok: true,
+          id: nextId,
+          token: nextToken,
+          role: serverRole,
+          progress: all,
+          capped: hitCap
+        };
+      });
+    }
+    return pullPage();
+  }
+
+  function filterProgressForApp_(rows) {
+    var programSet = programNameSet_();
+    var out = [];
+    (rows || []).forEach(function (row) {
+      if (!rowMatchesAppPrograms_(row, programSet)) return;
+      if (!rowPassesItemFilter_(row)) return;
+      out.push(row);
+    });
+    return out;
+  }
+
+  function providerRowToRaw_(row) {
+    row = row || {};
+    return {
+      program: row.program || "",
+      item_id: row.item_id || row.itemId || row.item || "",
+      itemId: row.item_id || row.itemId || row.item || "",
+      score_value: row.score_value != null ? row.score_value : row.scoreValue,
+      score_max: row.score_max != null ? row.score_max : row.scoreMax,
+      score_pct: row.score_pct != null ? row.score_pct : row.scorePct,
+      local_date: row.local_date || row.localDate || row.date || "",
+      label: row.label != null ? String(row.label) : ""
+    };
+  }
+
+  function rowUpdatedMs_(row) {
+    var t = row.updated_at || row.updatedAt || row.local_date || row.localDate || "";
+    var ms = Date.parse(String(t));
+    return isNaN(ms) ? 0 : ms;
+  }
+
+  function primaryScoreProgram_() {
+    var programs = scoreProgramsForApp_();
+    if (programs.length) return String(programs[0]).trim().toLowerCase();
+    return appKey_();
+  }
+
+  function collapseServerRowsByItemId_(rows) {
+    var primary = primaryScoreProgram_();
+    var groups = {};
+    (rows || []).forEach(function (row) {
+      var id = rowItemId_(row);
+      if (!id) return;
+      if (!groups[id]) groups[id] = [];
+      groups[id].push(row);
+    });
+    var out = [];
+    for (var id in groups) {
+      if (!Object.prototype.hasOwnProperty.call(groups, id)) continue;
+      var pool = groups[id];
+      var primaryRows = pool.filter(function (row) {
+        return rowProgramName_(row).toLowerCase() === primary;
+      });
+      var pickFrom = primaryRows.length ? primaryRows : pool;
+      pickFrom.sort(function (a, b) {
+        return rowUpdatedMs_(b) - rowUpdatedMs_(a);
+      });
+      out.push(pickFrom[0]);
+    }
+    return out;
+  }
+
+  function mergeProviderRows_(serverRows, providerRows) {
+    serverRows = collapseServerRowsByItemId_(serverRows || []);
+    var map = {};
+    serverRows.forEach(function (row) {
+      var id = rowItemId_(row);
+      if (!id) return;
+      map[id] = row;
+    });
+    (providerRows || []).forEach(function (row) {
+      var raw = providerRowToRaw_(row);
+      var id = rowItemId_(raw);
+      if (!id) return;
+      map[id] = raw;
+    });
+    var out = [];
+    for (var k in map) {
+      if (Object.prototype.hasOwnProperty.call(map, k)) out.push(map[k]);
+    }
+    return out;
+  }
+
+  function invokePanelRowsProvider_(studentId) {
+    if (!panelRowsProvider) return Promise.resolve([]);
+    try {
+      var out = panelRowsProvider(studentId);
+      if (out && typeof out.then === "function") return out.then(function (rows) {
+        return Array.isArray(rows) ? rows : [];
+      });
+      return Promise.resolve(Array.isArray(out) ? out : []);
+    } catch (ignore) {
+      return Promise.resolve([]);
+    }
+  }
+
+  function setPanelRowsProvider(fn) {
+    try {
+      panelRowsProvider = typeof fn === "function" ? fn : null;
+    } catch (ignore) {
+      panelRowsProvider = null;
+    }
+  }
+
+  function fetchPanelProgress_(snap, fetchOpts) {
+    fetchOpts = fetchOpts || {};
+    var programs = scoreProgramsForApp_();
+    var capped = false;
+
+    function runPrograms(list, index, acc) {
+      if (fetchOpts.cancelCheck && fetchOpts.cancelCheck()) {
+        return Promise.resolve({ ok: false, error: "cancelled" });
+      }
+      if (index >= list.length) {
+        return Promise.resolve({ ok: true, progress: acc, capped: capped });
+      }
+      var prog = list[index];
+      return fetchAllProgress_(snap.id, snap.token, prog, null, {
+        panel: true,
+        cancelCheck: fetchOpts.cancelCheck
+      }).then(function (result) {
+        if (fetchOpts.cancelCheck && fetchOpts.cancelCheck()) {
+          return { ok: false, error: "cancelled" };
+        }
+        if (!result || !result.ok) return result;
+        if (result.capped) capped = true;
+        return runPrograms(list, index + 1, acc.concat(result.progress || []));
+      });
+    }
+
+    var chain;
+    if (programs.length) {
+      chain = runPrograms(programs, 0, []);
+    } else {
+      chain = fetchAllProgress_(snap.id, snap.token, "", null, {
+        panel: true,
+        cancelCheck: fetchOpts.cancelCheck
+      });
+    }
+
+    return chain.then(function (result) {
+      if (!result || !result.ok) return result;
+      var filtered = filterProgressForApp_(result.progress || []);
+      return invokePanelRowsProvider_(snap.id).then(function (providerRows) {
+        if (fetchOpts.cancelCheck && fetchOpts.cancelCheck()) {
+          return { ok: false, error: "cancelled" };
+        }
+        return {
+          ok: true,
+          progress: mergeProviderRows_(filtered, providerRows),
+          capped: !!(result.capped || capped)
+        };
+      });
+    });
+  }
+
+  function retryProgressInBackground_(id, tokenValue, viewGenGuard) {
+    var gen = viewGenGuard == null ? viewGen : viewGenGuard;
+    fetchAllProgress_(id, tokenValue, appProgram_()).then(function (result) {
+      if (gen !== viewGen) return;
+      if (!state.id || rules.idKey(state.id) !== rules.idKey(id)) return;
+      if (signOutIfBlocked_(result)) return;
+      if (sessionRejected_(result)) {
+        signOut();
+        return;
+      }
+      mergeProgressResult_(result, id, tokenValue, "");
+    }).catch(function () {});
+  }
+
+  function loadPlace_(id, tokenValue, loginRole) {
+    var seq = ++loadPlaceSeq;
+    var loadId = id == null ? "" : String(id);
+    var loadToken = tokenValue == null ? "" : String(tokenValue);
+    renderStatus_(MESSAGES.loading_place);
+    finish_(loadId, loadToken, [], "", loginRole);
+    var loadGen = sessionGen;
+    fetchAllProgress_(loadId, loadToken, appProgram_()).then(function (result) {
+      if (seq !== loadPlaceSeq) return;
+      if (loadGen !== sessionGen) return;
+      if (!state.id || rules.idKey(state.id) !== rules.idKey(loadId)) return;
+      if (signOutIfBlocked_(result)) return;
+      if (sessionRejected_(result)) {
+        clearSession_();
+        sessionGen += 1;
+        state.id = "";
+        state.token = "";
+        state.role = "";
+        state.progress = [];
+        state.progressError = "";
+        packState = {};
+        renderLogin_("Sign in again.", [loadId, ""]);
+        return;
+      }
+      if (mergeProgressResult_(result, loadId, loadToken, loginRole)) return;
+      var err = (result && result.error) ? result.error : "progress_load_failed";
+      state.progressError = err;
+      saveSession_();
+      renderSignedIn_();
+      dispatchReady_();
+      retryProgressInBackground_(state.id, state.token);
+    }).catch(function () {
+      if (seq !== loadPlaceSeq) return;
+      if (loadGen !== sessionGen) return;
+      if (!state.id || rules.idKey(state.id) !== rules.idKey(loadId)) return;
+      state.progressError = "network";
+      saveSession_();
+      renderSignedIn_();
+      dispatchReady_();
+      retryProgressInBackground_(state.id, state.token);
+    });
+  }
+
+  function dispatchReady_() {
+    if (typeof options.onReady === "function") {
+      options.onReady({
+        id: state.id,
+        token: state.token,
+        progress: state.progress,
+        progressError: state.progressError
+      });
+    }
+  }
+
+  function captureSession_() {
+    return {
+      gen: sessionGen,
+      id: state.id,
+      token: state.token
+    };
+  }
+
+  function sessionMatches_(snap) {
+    if (!snap) return false;
+    if (snap.gen !== sessionGen) return false;
+    if (!state.id || rules.idKey(state.id) !== rules.idKey(snap.id)) return false;
+    if (String(state.token) !== String(snap.token)) return false;
+    return true;
+  }
+
+  function finish_(id, tokenValue, progress, progressError, serverRole) {
+    sessionGen += 1;
+    state.id = id == null ? "" : String(id);
+    state.token = tokenValue == null ? "" : String(tokenValue);
+    state.progress = Array.isArray(progress) ? progress : [];
+    state.progressError = progressError ? String(progressError) : "";
+    if (serverRole !== undefined) applyServerRole_(serverRole);
+    saveSession_();
+    renderSignedIn_();
+    updateStudentChip_();
+    dispatchReady_();
+    if (state.id) flushNoteOutbox_(state.id);
+  }
+
+  function progressError() {
+    return state.progressError || "";
+  }
+
+  function packKey_(program) {
+    return String(program || appProgram_() || "decodable").trim() || "decodable";
+  }
+
+  function finishLoadPackFromData_(program, snap, data) {
+    if (!sessionMatches_(snap)) {
+      return { ok: false, error: "stale_session" };
+    }
+    if (!data || !data.ok) {
+      if (signOutIfBlocked_(data)) {
+        return { ok: false, error: "id_blocked", message: MESSAGES.id_blocked };
+      }
+      packState[program] = {
+        loaded: false,
+        json: "",
+        error: data && data.error ? data.error : "pack_load_failed"
+      };
+      return data || { ok: false, error: "pack_load_failed" };
+    }
+    var json = data.progress_json != null ? String(data.progress_json) : "";
+    packState[program] = { loaded: true, json: json, error: "" };
+    return { ok: true, found: !!data.found, progress_json: json };
+  }
+
+  function loadPackViaScript_(program, snap) {
+    return post_({
+      action: "load_pack",
+      id: snap.id,
+      token: snap.token,
+      program: program
+    })
+      .then(function (data) {
+        return finishLoadPackFromData_(program, snap, data);
+      })
+      .catch(function () {
+        if (!sessionMatches_(snap)) {
+          return { ok: false, error: "stale_session" };
+        }
+        packState[program] = { loaded: false, json: "", error: "network" };
+        return { ok: false, error: "network" };
+      });
+  }
+
+  function loadPack(program) {
+    program = packKey_(program);
+    if (!state.id || !state.token) {
+      return Promise.resolve({ ok: false, error: "bad_token" });
+    }
+    var snap = captureSession_();
+    packState[program] = { loaded: false, json: "", error: "loading" };
+    return workerPostJson_("/load_pack", { student_id: snap.id, program: program })
+      .then(function (res) {
+        if (res && res.status === 401) {
+          if (!sessionMatches_(snap)) {
+            return { ok: false, error: "stale_session" };
+          }
+          packState[program] = { loaded: false, json: "", error: "unauthorized" };
+          return { ok: false, error: "unauthorized" };
+        }
+        if (res && res.httpOk && res.data && res.data.ok === true) {
+          if (!sessionMatches_(snap)) {
+            return { ok: false, error: "stale_session" };
+          }
+          var json =
+            res.data.progress_json != null ? String(res.data.progress_json) : "";
+          packState[program] = { loaded: true, json: json, error: "" };
+          return { ok: true, found: !!res.data.found, progress_json: json };
+        }
+        return loadPackViaScript_(program, snap);
+      })
+      .catch(function () {
+        return loadPackViaScript_(program, snap);
+      });
+  }
+
+  function buildSavePackBody_(program, progressStr, snap) {
+    var saveBody = {
+      action: "save_pack",
+      id: snap.id,
+      token: snap.token,
+      program: program,
+      progress_json: progressStr
+    };
+    var saveMeta = teacherSaveMetadata_();
+    if (saveMeta) saveBody.metadata_json = saveMeta;
+    return saveBody;
+  }
+
+  function shadowSavePackViaScript_(program, progressStr, snap) {
+    post_(buildSavePackBody_(program, progressStr, snap)).catch(function () {});
+  }
+
+  function savePackViaScript_(program, progressStr, snap, ps) {
+    return post_(buildSavePackBody_(program, progressStr, snap))
+      .then(function (data) {
+        if (!sessionMatches_(snap)) {
+          return { ok: false, error: "stale_session" };
+        }
+        if (data && data.ok) {
+          packState[program] = {
+            loaded: true,
+            json: progressStr,
+            error: ""
+          };
+        } else if (ps) {
+          ps.loaded = false;
+          ps.error = data && data.error ? data.error : "save_failed";
+        }
+        if (signOutIfBlocked_(data)) {
+          return { ok: false, error: "id_blocked", message: MESSAGES.id_blocked };
+        }
+        return data || { ok: false, error: "save_failed" };
+      })
+      .catch(function () {
+        if (!sessionMatches_(snap)) {
+          return { ok: false, error: "stale_session" };
+        }
+        if (packState[program]) {
+          packState[program].loaded = false;
+          packState[program].error = "network";
+        }
+        return { ok: false, error: "network" };
+      });
+  }
+
+  function savePack(program, progressJson) {
+    program = packKey_(program);
+    if (!state.id || !state.token) {
+      return Promise.resolve({ ok: false, error: "bad_token" });
+    }
+    var ps = packState[program];
+    if (!ps || !ps.loaded) {
+      return Promise.resolve({ ok: false, error: "pack_not_loaded" });
+    }
+    var snap = captureSession_();
+    var progressStr = progressJson == null ? "{}" : String(progressJson);
+    return workerPostJson_("/save_pack", {
+      student_id: snap.id,
+      program: program,
+      progress_json: progressStr
+    })
+      .then(function (res) {
+        if (res && res.httpOk && res.data && res.data.ok === true) {
+          if (!sessionMatches_(snap)) {
+            return { ok: false, error: "stale_session" };
+          }
+          packState[program] = {
+            loaded: true,
+            json: progressStr,
+            error: ""
+          };
+          shadowSavePackViaScript_(program, progressStr, snap);
+          return { ok: true, saved: !!res.data.saved };
+        }
+        return savePackViaScript_(program, progressStr, snap, ps);
+      })
+      .catch(function () {
+        return savePackViaScript_(program, progressStr, snap, ps);
+      });
+  }
+
+  function packReady(program) {
+    program = packKey_(program);
+    var ps = packState[program];
+    return !!(ps && ps.loaded && !ps.error);
+  }
+
+  function loadProgressForApp(program) {
+    program = packKey_(program);
+    if (!state.id || !state.token) {
+      return Promise.resolve({ ok: false, error: "bad_token", progress: [] });
+    }
+    var snap = captureSession_();
+    return fetchAllProgress_(snap.id, snap.token, program).then(function (result) {
+      if (!sessionMatches_(snap)) {
+        return { ok: false, error: "stale_session", progress: [] };
+      }
+      if (signOutIfBlocked_(result)) {
+        return { ok: false, error: "id_blocked", message: MESSAGES.id_blocked, progress: [] };
+      }
+      return result;
+    });
+  }
+
+  function idKey(id) {
+    return String(id == null ? "" : id).trim().toLowerCase();
+  }
+
+  function errorText_(data) {
+    if (data && data.message) return String(data.message);
+    var code = data && data.error;
+    if (code && rules.MESSAGES[code]) return rules.MESSAGES[code];
+    if (code && MESSAGES[code]) return MESSAGES[code];
+    return "Something went wrong.";
+  }
+
+  function sessionRejected_(data) {
+    if (!data) return false;
+    if (isIdBlockedError_(data)) return true;
+    if (data.error === "user_does_not_exist" || data.error === "bad_token") return true;
+    return data.message === rules.MESSAGES.user_does_not_exist;
+  }
+
+  function readSession_() {
+    try {
+      var raw = global.localStorage.getItem(SESSION_KEY);
+      if (!raw) return null;
+      var parsed = JSON.parse(raw);
+      if (!parsed || !parsed.id || !parsed.token) return null;
+      return { id: String(parsed.id), token: String(parsed.token) };
+    } catch (ignore) {
+      return null;
+    }
+  }
+
+  function saveSession_() {
+    try {
+      global.localStorage.setItem(SESSION_KEY, JSON.stringify({
+        id: state.id,
+        token: state.token
+      }));
+    } catch (ignore) {}
+  }
+
+  function clearSession_() {
+    try {
+      global.localStorage.removeItem(SESSION_KEY);
+    } catch (ignore) {}
+  }
+
+  function resolveEl_(el) {
+    if (!el) return null;
+    if (typeof el === "string") return global.document.querySelector(el);
+    return el;
+  }
+
+  function clear_(node) {
+    while (node.firstChild) node.removeChild(node.firstChild);
+  }
+
+  function el_(tag, className) {
+    var node = global.document.createElement(tag);
+    if (className) node.className = className;
+    return node;
+  }
+
+  function button_(label, className) {
+    var node = el_("button", className);
+    node.type = "button";
+    node.textContent = label;
+    return node;
+  }
+
+  function errorNode_(message) {
+    var node = el_("p", "mrj-auth-error");
+    node.setAttribute("role", "alert");
+    node.textContent = message;
+    return node;
+  }
+
+  function field_(label, type, autocomplete) {
+    return { label: label, type: type, autocomplete: autocomplete };
+  }
+
+  function disconnectChipObserver_() {
+    try {
+      if (chipMutationObserver && chipMutationObserver.disconnect) {
+        chipMutationObserver.disconnect();
+      }
+    } catch (ignore) {}
+    chipMutationObserver = null;
+    if (chipLayoutTrailingTimer) {
+      clearTimeout(chipLayoutTrailingTimer);
+      chipLayoutTrailingTimer = null;
+    }
+    chipChromeTimer = null;
+    if (chipIdleMutationObserver && chipIdleMutationObserver.disconnect) {
+      try {
+        chipIdleMutationObserver.disconnect();
+      } catch (ignore) {}
+    }
+    chipIdleMutationObserver = null;
+  }
+
+  function isInsideAuthChrome_(node) {
+    if (!node || node.nodeType !== 1) return false;
+    if (chipChromeEl && (node === chipChromeEl || (chipChromeEl.contains && chipChromeEl.contains(node)))) {
+      return true;
+    }
+    if (chipEl && (node === chipEl || (chipEl.contains && chipEl.contains(node)))) return true;
+    if (teacherBtnEl && (node === teacherBtnEl || (teacherBtnEl.contains && teacherBtnEl.contains(node)))) {
+      return true;
+    }
+    if (panelRootEl && (node === panelRootEl || (panelRootEl.contains && panelRootEl.contains(node)))) {
+      return true;
+    }
+    if (node.closest) {
+      if (
+        node.closest(
+          "#mrj-auth-gate, .mrj-auth, #mrj-auth-chip-chrome, #mrj-auth-student-chip, .mrj-auth-teacher-btn, .mrj-auth-panel-root"
+        )
+      ) {
+        return true;
+      }
+    }
+    return false;
+  }
+
+  function isChipSlotMutation_(record) {
+    if (!record || record.type !== "attributes") return false;
+    var t = record.target;
+    if (!t || !t.getAttribute) return false;
+    if (t.getAttribute("data-mrj-chip-slot") !== "1") return false;
+    var name = record.attributeName || "";
+    return name === "data-mrj-chip-slot" || name === "style";
+  }
+
+  function isPillWiringMutation_(record) {
+    if (!record || record.type !== "attributes") return false;
+    var t = record.target;
+    if (!t || !t.getAttribute) return false;
+    if (t.getAttribute("data-mrj-pill-wired") !== "1") return false;
+    var name = record.attributeName || "";
+    return (
+      name === "data-mrj-pill-wired" ||
+      name === "role" ||
+      name === "tabindex" ||
+      name === "aria-label" ||
+      name === "style" ||
+      name === "class"
+    );
+  }
+
+  function mutationRecordsNeedLayout_(records) {
+    if (!records || !records.length) return false;
+    for (var i = 0; i < records.length; i++) {
+      var r = records[i];
+      var t = r.target;
+      if (!t || t.nodeType !== 1) continue;
+      if (isInsideAuthChrome_(t)) continue;
+      if (isPillWiringMutation_(r)) continue;
+      if (isChipSlotMutation_(r)) continue;
+      return true;
+    }
+    return false;
+  }
+
+  function scheduleStudentChrome_() {
+    if (chipChromeTimer) return;
+    var raf = global.requestAnimationFrame || function (fn) { setTimeout(fn, 16); };
+    chipChromeTimer = raf(function () {
+      chipChromeTimer = null;
+      applyStudentChrome_();
+      scheduleChipLayout_();
+    });
+  }
+
+  function installChipObserver_() {
+    if (!global.document || !global.document.body || chipMutationObserver) return;
+    if (typeof MutationObserver !== "function") return;
+    chipMutationObserver = new MutationObserver(function (records) {
+      if (!mutationRecordsNeedLayout_(records)) {
+        chipObserverIgnoredCount += 1;
+        return;
+      }
+      chipObserverNotifyCount += 1;
+      scheduleStudentChrome_();
+    });
+    try {
+      chipMutationObserver.observe(global.document.body, {
+        childList: true,
+        subtree: true,
+        attributes: true,
+        attributeFilter: ["class", "style", "hidden"]
+      });
+    } catch (ignore) {}
+  }
+
+  function installChipIdleMutationWatcher_() {
+    if (!global.MRJ_AUTH_TEST_MODE || !chipEl || chipIdleMutationObserver) return;
+    if (typeof MutationObserver !== "function") return;
+    chipIdleMutationObserver = new MutationObserver(function () {
+      chipIdleMutationCount += 1;
+    });
+    try {
+      chipIdleMutationObserver.observe(chipEl, {
+        attributes: true,
+        childList: true,
+        characterData: true,
+        subtree: true
+      });
+    } catch (ignore) {}
+  }
+
+  function scheduleChipLayout_() {
+    if (!chipEl || !chipLayoutAllowed_()) return;
+    var now = Date.now();
+    var since = now - chipLayoutLastRun;
+    if (since >= 500) {
+      if (chipLayoutTrailingTimer) {
+        clearTimeout(chipLayoutTrailingTimer);
+        chipLayoutTrailingTimer = null;
+      }
+      var raf = global.requestAnimationFrame || function (fn) { setTimeout(fn, 16); };
+      raf(function () {
+        chipLayoutLastRun = Date.now();
+        applyChipLayout_();
+      });
+      return;
+    }
+    if (chipLayoutTrailingTimer) return;
+    chipLayoutTrailingTimer = setTimeout(function () {
+      chipLayoutTrailingTimer = null;
+      chipLayoutLastRun = Date.now();
+      applyChipLayout_();
+    }, 500 - since);
+  }
+
+  function chipOffsetStyles_() {
+    var top = readBootAttr_("data-mrj-chip-top") || (options && options.chipTop) || "";
+    var right = readBootAttr_("data-mrj-chip-right") || (options && options.chipRight) || "";
+    return { top: top, right: right };
+  }
+
+  function rectsOverlap_(a, b) {
+    return a.left < b.right && a.right > b.left && a.top < b.bottom && a.bottom > b.top;
+  }
+
+  function isChipObstacle_(node) {
+    if (!node || node.nodeType !== 1) return false;
+    if (node === chipEl || node === chipChromeEl || node === teacherBtnEl || node === panelRootEl) {
+      return false;
+    }
+    if (
+      node.closest &&
+      node.closest(
+        "#mrj-auth-chip-chrome, #mrj-auth-student-chip, .mrj-auth-teacher-btn, .mrj-auth-panel-root, #mrj-auth-gate, .mrj-auth"
+      )
+    ) {
+      return false;
+    }
+    try {
+      var style = global.getComputedStyle ? global.getComputedStyle(node) : null;
+      if (style) {
+        if (style.display === "none" || style.visibility === "hidden" || style.opacity === "0") return false;
+      }
+      if (node.hidden) return false;
+      var r = node.getBoundingClientRect();
+      if (!r || r.width < 2 || r.height < 2) return false;
+      if (r.bottom < 0 || r.top > (global.innerHeight || 800)) return false;
+    } catch (ignore) {
+      return false;
+    }
+    var tag = (node.tagName || "").toLowerCase();
+    if (tag === "button" || tag === "a" || tag === "select" || tag === "input" || tag === "textarea") {
+      return true;
+    }
+    if (node.getAttribute && node.getAttribute("role") === "button") return true;
+    if (node.getAttribute && node.getAttribute("onclick")) return true;
+    if (node.classList) {
+      if (node.classList.contains("pill")) return true;
+      var cls = node.className && String(node.className);
+      if (cls && (cls.indexOf("pill") !== -1 || cls.indexOf("badge") !== -1)) return true;
+    }
+    return false;
+  }
+
+  function collectChipObstacles_() {
+    var out = [];
+    if (!global.document || !global.document.querySelectorAll) return out;
+    var nodes = global.document.querySelectorAll(
+      "button, a, select, input, textarea, [role='button'], [onclick], .pill, [class*='pill'], [class*='badge']"
+    );
+    for (var i = 0; i < nodes.length; i++) {
+      if (isChipObstacle_(nodes[i])) out.push(nodes[i]);
+    }
+    return out;
+  }
+
+  function isCanvasRelatedNode_(node) {
+    if (!node || node.nodeType !== 1) return false;
+    var tag = (node.tagName || "").toLowerCase();
+    if (tag === "canvas") return true;
+    if (node.closest && node.closest("canvas")) return true;
+    return false;
+  }
+
+  function isChipMarginValidationTarget_(node) {
+    if (!node || node.nodeType !== 1) return false;
+    if (node === chipEl || node === chipChromeEl || node === teacherBtnEl || node === panelRootEl) {
+      return false;
+    }
+    if (isCanvasRelatedNode_(node)) return false;
+    if (
+      node.closest &&
+      node.closest(
+        "#mrj-auth-chip-chrome, #mrj-auth-student-chip, .mrj-auth-teacher-btn, .mrj-auth-panel-root, #mrj-auth-gate, .mrj-auth"
+      )
+    ) {
+      return false;
+    }
+    try {
+      var style = global.getComputedStyle ? global.getComputedStyle(node) : null;
+      if (style) {
+        if (style.display === "none" || style.visibility === "hidden" || style.opacity === "0") return false;
+      }
+      if (node.hidden) return false;
+      var r = node.getBoundingClientRect();
+      if (!r || r.width < 2 || r.height < 2) return false;
+    } catch (ignore) {
+      return false;
+    }
+    if (isChipObstacle_(node)) return true;
+    var cls = node.className && String(node.className).toLowerCase();
+    if (cls && cls.indexOf("card") !== -1) return true;
+    return false;
+  }
+
+  function collectChipMarginValidationTargets_() {
+    var out = [];
+    if (!global.document || !global.document.querySelectorAll) return out;
+    var nodes = global.document.querySelectorAll(
+      "button, a, select, input, textarea, [role='button'], [onclick], [class*='card']"
+    );
+    for (var i = 0; i < nodes.length; i++) {
+      if (isChipMarginValidationTarget_(nodes[i])) out.push(nodes[i]);
+    }
+    return out;
+  }
+
+  function chipMarginTopOverlapsTarget_(chipRect, node) {
+    if (!chipRect || !node) return false;
+    try {
+      var r = node.getBoundingClientRect();
+      if (!r || !r.width) return false;
+      return rectsOverlap_(chipRect, r);
+    } catch (ignore) {
+      return false;
+    }
+  }
+
+  function chipMarginLandingClear_(chipRect) {
+    if (!chipMarginTopFitsViewport_(chipRect)) return false;
+    var validationTargets = collectChipMarginValidationTargets_();
+    for (var v = 0; v < validationTargets.length; v++) {
+      if (chipMarginTopOverlapsTarget_(chipRect, validationTargets[v])) return false;
+    }
+    return true;
+  }
+
+  function chipMarginBumpForOverlaps_(chipRect, compact) {
+    var bump = 0;
+    var controlObs = collectChipObstacles_();
+    for (var c = 0; c < controlObs.length; c++) {
+      var cor = controlObs[c].getBoundingClientRect();
+      if (!cor || !cor.width) continue;
+      if (rectsOverlap_(chipRect, cor)) {
+        var cneed = cor.bottom - chipRect.top + 6;
+        if (cneed > bump) bump = cneed;
+      }
+    }
+    if (!compact || chipBodySlotPx_ === 0) {
+      var textObs = collectChipTextObstacles_(compact);
+      for (var t = 0; t < textObs.length; t++) {
+        var tor = textObs[t].getBoundingClientRect();
+        if (!tor || !tor.width) continue;
+        if (!verticalOverlapChip_(chipRect, tor)) continue;
+        if (compact && !obstacleOverlapsChipColumn_(chipRect, tor)) continue;
+        if (rectsOverlap_(chipRect, tor)) {
+          var tneed = tor.bottom - chipRect.top + 6;
+          if (tneed > bump) bump = tneed;
+        }
+      }
+    }
+    return bump;
+  }
+
+  function chipLayoutAllowed_() {
+    if (!chipEl || !global.document || !state.id) return false;
+    if (findOwnRecord_()) return false;
+    if (!chipDisabled_() && findNamePill_()) return false;
+    if (chipDisabled_()) return false;
+    return true;
+  }
+
+  function computeChipMarginLayout_(compact) {
+    var anchorRect = chipLayoutRectWithMargin_(0);
+    if (!anchorRect || !anchorRect.width) {
+      return { marginTop: "", hide: false };
+    }
+    var maxMarginPx = compact ? 100 : 64;
+    var extraTop = 0;
+    var maxIter = 16;
+    var overCap = false;
+    var lastControlClearMargin = null;
+    var lastFullClearMargin = null;
+    var baseRect = chipLayoutRectWithMargin_(0);
+    var baseLandingClear = chipMarginLandingClear_(baseRect);
+    var baseBump = chipMarginBumpForOverlaps_(baseRect, compact);
+    if (baseLandingClear && baseBump <= 0) {
+      return { marginTop: "", hide: false };
+    }
+    while (maxIter-- > 0) {
+      var trialRect = chipLayoutRectWithMargin_(extraTop);
+      var bump = chipMarginBumpForOverlaps_(trialRect, compact);
+      if (chipMarginLandingClear_(trialRect) && chipMarginTopFitsViewport_(trialRect)) {
+        lastControlClearMargin = extraTop;
+        if (bump <= 0) {
+          lastFullClearMargin = extraTop;
+          break;
+        }
+      }
+      if (bump <= 0) break;
+      extraTop += bump;
+      if (extraTop > maxMarginPx) {
+        overCap = true;
+        break;
+      }
+      trialRect = chipLayoutRectWithMargin_(extraTop);
+      if (!chipMarginTopFitsViewport_(trialRect)) {
+        overCap = true;
+        break;
+      }
+    }
+    if (lastFullClearMargin == null) {
+      var finalRect = chipLayoutRectWithMargin_(extraTop);
+      var finalBump = chipMarginBumpForOverlaps_(finalRect, compact);
+      if (chipMarginLandingClear_(finalRect) && chipMarginTopFitsViewport_(finalRect)) {
+        lastControlClearMargin = extraTop;
+        if (finalBump <= 0) {
+          lastFullClearMargin = extraTop;
+        }
+      }
+    }
+    if (lastFullClearMargin != null) {
+      return {
+        marginTop: lastFullClearMargin > 0 ? lastFullClearMargin + "px" : "",
+        hide: false
+      };
+    }
+    // Phone cap (100px) may be exceeded in the walk; keep the last control-clear
+    // margin from the loop (e.g. Ski Jump two-row score bar ~151px) instead of hiding.
+    if ((overCap || extraTop > maxMarginPx) && lastControlClearMargin != null) {
+      return {
+        marginTop: lastControlClearMargin > 0 ? lastControlClearMargin + "px" : "",
+        hide: false
+      };
+    }
+    if (!baseLandingClear) {
+      return { marginTop: "", hide: true };
+    }
+    return { marginTop: "", hide: false };
+  }
+
+  function chipMarginTopFitsViewport_(chipRect) {
+    if (!chipRect) return false;
+    var vh = global.innerHeight || 800;
+    if (chipRect.top < -2) return false;
+    if (chipRect.bottom > vh - 8) return false;
+    return true;
+  }
+
+  function isChipTextObstacle_(node, compact) {
+    if (!compact) return false;
+    if (!node || node.nodeType !== 1) return false;
+    if (isChipObstacle_(node)) return false;
+    if (node === chipEl || node === chipChromeEl || node === teacherBtnEl || node === panelRootEl) {
+      return false;
+    }
+    if (
+      node.closest &&
+      node.closest(
+        "#mrj-auth-chip-chrome, #mrj-auth-student-chip, .mrj-auth-teacher-btn, .mrj-auth-panel-root, #mrj-auth-gate, .mrj-auth"
+      )
+    ) {
+      return false;
+    }
+    try {
+      var style = global.getComputedStyle ? global.getComputedStyle(node) : null;
+      if (style) {
+        if (style.display === "none" || style.visibility === "hidden" || style.opacity === "0") return false;
+      }
+      if (node.hidden) return false;
+      var text = String(node.innerText || node.textContent || "").replace(/\s+/g, " ").trim();
+      if (!text || text.length < 2) return false;
+      var tag = (node.tagName || "").toLowerCase();
+      var isHeading = tag.length === 2 && tag.charAt(0) === "h" && tag.charAt(1) >= "1" && tag.charAt(1) <= "6";
+      var cls = node.className && String(node.className).toLowerCase();
+      var id = node.id && String(node.id).toLowerCase();
+      var hudLike =
+        (id && (id === "lf-left" || id.indexOf("lf-") === 0)) ||
+        (cls &&
+          (cls.indexOf("hud") !== -1 ||
+            cls.indexOf("score") !== -1 ||
+            cls.indexOf("points") !== -1));
+      var titleLike =
+        cls &&
+        (cls.indexOf("title") !== -1 ||
+          cls.indexOf("heading") !== -1 ||
+          cls.indexOf("subtitle") !== -1 ||
+          cls.indexOf("hero") !== -1 ||
+          cls.indexOf("greeting") !== -1);
+      if (!isHeading && tag !== "p" && tag !== "legend" && tag !== "header" && !titleLike && !hudLike) {
+        return false;
+      }
+      var r = node.getBoundingClientRect();
+      if (!r || r.width < 2 || r.height < 2) return false;
+      var vh = global.innerHeight || 800;
+      var vw = global.innerWidth || 800;
+      if (r.height > vh * 0.28) return false;
+      if (!isHeading && r.width > vw * 0.94) return false;
+      if (r.bottom < 0 || r.top > vh * 0.55) return false;
+    } catch (ignore) {
+      return false;
+    }
+    return true;
+  }
+
+  function collectChipTextObstacles_(compact) {
+    var out = [];
+    if (!compact || !global.document || !global.document.querySelectorAll) return out;
+    var nodes = global.document.querySelectorAll(
+      "header, h1, h2, h3, h4, h5, h6, p, legend, [class*='title'], [class*='heading'], [class*='subtitle'], [class*='hero'], [class*='greeting'], [class*='points'], [class*='hud'], [class*='score'], #lf-left, [id^='lf-']"
+    );
+    for (var i = 0; i < nodes.length; i++) {
+      if (isChipTextObstacle_(nodes[i], compact)) out.push(nodes[i]);
+    }
+    return out;
+  }
+
+  function parseChipMarginTopPx_(margin) {
+    if (!margin) return 0;
+    var m = String(margin).match(/^([\d.]+)px$/);
+    return m ? parseFloat(m[1]) : 0;
+  }
+
+  function chipCssPosition_(node) {
+    if (!node || node.nodeType !== 1 || !global.getComputedStyle) return "";
+    try {
+      return global.getComputedStyle(node).position || "";
+    } catch (ignore) {
+      return "";
+    }
+  }
+
+  function isOutOfFlowForChipPad_(node) {
+    if (!node || node.nodeType !== 1) return true;
+    if (node === chipEl || node === chipChromeEl || node === teacherBtnEl) return true;
+    if (
+      node.closest &&
+      node.closest(
+        "#mrj-auth-chip-chrome, #mrj-auth-student-chip, .mrj-auth-teacher-btn, .mrj-auth-panel-root, #mrj-auth-gate, .mrj-auth"
+      )
+    ) {
+      return true;
+    }
+    var cur = node;
+    while (cur && cur.nodeType === 1) {
+      var pos = chipCssPosition_(cur);
+      if (pos === "fixed" || pos === "sticky" || pos === "absolute") return true;
+      if (cur === global.document.body || cur === global.document.documentElement) break;
+      cur = cur.parentElement;
+    }
+    return false;
+  }
+
+  function verticalOverlapChip_(anchorRect, obstacleRect) {
+    if (!anchorRect || !obstacleRect) return false;
+    return (
+      obstacleRect.top < anchorRect.bottom + 2 &&
+      obstacleRect.bottom > anchorRect.top - 2
+    );
+  }
+
+  function paddingToClearObstacleTop_(anchorRect, obstacleTop) {
+    var need = anchorRect.bottom + 6 - obstacleTop;
+    return need > 0 ? need : 0;
+  }
+
+  function obstacleRectSansBodyPad_(node, slotPx) {
+    if (isOutOfFlowForChipPad_(node)) return null;
+    var r = node.getBoundingClientRect();
+    if (!r || r.width < 2 || r.height < 2) return null;
+    var shift = slotPx || 0;
+    return {
+      left: r.left,
+      right: r.right,
+      top: r.top - shift,
+      bottom: r.bottom - shift,
+      width: r.width,
+      height: r.height
+    };
+  }
+
+  function isFullScreenNoBodyPadPage_(anchorRect, obstacleNodes) {
+    var doc = global.document;
+    if (!doc) return false;
+    var html = doc.documentElement;
+    var body = doc.body;
+    var vh = global.innerHeight || 800;
+    function overflowClipped(el) {
+      if (!el || !global.getComputedStyle) return false;
+      try {
+        var st = global.getComputedStyle(el);
+        var ov = (st.overflow || "") + " " + (st.overflowY || "") + " " + (st.overflowX || "");
+        return /hidden|clip/.test(ov);
+      } catch (ignore) {
+        return false;
+      }
+    }
+    function heightLocksViewport(el) {
+      if (!el || !el.style) return false;
+      var h = String(el.style.height || "") + " " + String(el.style.minHeight || "");
+      if (/100vh|100dvh|100svh/.test(h)) return true;
+      if (!global.getComputedStyle) return false;
+      try {
+        var st = global.getComputedStyle(el);
+        var ch = (st.height || "") + " " + (st.minHeight || "");
+        return /100vh|100dvh|100svh/.test(ch);
+      } catch (ignore) {
+        return false;
+      }
+    }
+    var viewportFilled = false;
+    if (html && html.scrollHeight > 0 && html.scrollHeight <= vh + 1) viewportFilled = true;
+    if (body && body.scrollHeight > 0 && body.scrollHeight <= vh + 1) viewportFilled = true;
+    if (html && (overflowClipped(html) || heightLocksViewport(html))) return true;
+    if (body && (overflowClipped(body) || heightLocksViewport(body))) return true;
+    if (viewportFilled && doc.querySelector && doc.querySelector("canvas")) return true;
+    if (!anchorRect || !obstacleNodes || !obstacleNodes.length) return false;
+    for (var i = 0; i < obstacleNodes.length; i++) {
+      var node = obstacleNodes[i];
+      if (!node || node.nodeType !== 1) continue;
+      var tag = (node.tagName || "").toLowerCase();
+      if (tag === "canvas") {
+        var cr = node.getBoundingClientRect();
+        if (cr && cr.width && verticalOverlapChip_(anchorRect, cr) && obstacleOverlapsChipColumn_(anchorRect, cr)) {
+          return true;
+        }
+      }
+      if (node.querySelector) {
+        var canvas = node.querySelector("canvas");
+        if (canvas) {
+          var or = obstacleRectSansBodyPad_(node, chipBodySlotPx_);
+          if (or && verticalOverlapChip_(anchorRect, or) && obstacleOverlapsChipColumn_(anchorRect, or)) {
+            return true;
+          }
+        }
+      }
+    }
+    return false;
+  }
+
+  function applyChipBodySlot_(px) {
+    if (!global.document) return;
+    var next = Math.max(0, Math.round(px || 0));
+    if (next > CHIP_BODY_SLOT_MAX_PX_) next = CHIP_BODY_SLOT_MAX_PX_;
+    if (Math.abs(next - chipBodySlotPx_) < CHIP_BODY_SLOT_HYSTERESIS_PX_) return;
+    chipBodySlotPx_ = next;
+    var body = global.document.body;
+    if (!body || !body.style) return;
+    if (next > 0) {
+      body.setAttribute("data-mrj-chip-slot", "1");
+      if (body.style.paddingTop !== next + "px") {
+        body.style.paddingTop = next + "px";
+        chipDomWriteCount += 1;
+      }
+    } else {
+      body.removeAttribute("data-mrj-chip-slot");
+      if (body.style.paddingTop) {
+        body.style.paddingTop = "";
+        chipDomWriteCount += 1;
+      }
+    }
+  }
+
+  function obstacleOverlapsChipColumn_(anchorRect, obstacleRect) {
+    if (!anchorRect || !obstacleRect) return false;
+    return (
+      obstacleRect.right > anchorRect.left - 8 &&
+      obstacleRect.left < anchorRect.right + 8
+    );
+  }
+
+  function computeCompactChipBodySlot_(anchorRect) {
+    if (!anchorRect || !anchorRect.width) return 0;
+    var textObs = collectChipTextObstacles_(true);
+    var controlObs = collectChipObstacles_();
+    var all = textObs.concat(controlObs);
+    if (isFullScreenNoBodyPadPage_(anchorRect, all)) return 0;
+    var measureSlot = chipBodySlotPx_;
+    var minPad = 0;
+    for (var i = 0; i < all.length; i++) {
+      var or = obstacleRectSansBodyPad_(all[i], measureSlot);
+      if (!or) continue;
+      if (!obstacleOverlapsChipColumn_(anchorRect, or)) continue;
+      if (!verticalOverlapChip_(anchorRect, or)) continue;
+      var need = paddingToClearObstacleTop_(anchorRect, or.top);
+      if (need > minPad) minPad = need;
+    }
+    if (minPad > CHIP_BODY_SLOT_MAX_PX_) minPad = CHIP_BODY_SLOT_MAX_PX_;
+    return minPad;
+  }
+
+  function chipLayoutHost_() {
+    return chipChromeEl || chipEl;
+  }
+
+  function chipLayoutRectWithMargin_(extraTopPx) {
+    var host = chipLayoutHost_();
+    if (!host) return { left: 0, right: 0, top: 0, bottom: 0, width: 0, height: 0 };
+    var r = host.getBoundingClientRect();
+    var appliedMt = parseChipMarginTopPx_(host.style.marginTop);
+    var top = r.top - appliedMt + (extraTopPx || 0);
+    return {
+      left: r.left,
+      right: r.right,
+      top: top,
+      bottom: top + r.height,
+      width: r.width,
+      height: r.height
+    };
+  }
+
+  function chipWriteStyle_(prop, value) {
+    var host = chipLayoutHost_();
+    if (!host || !host.style) return;
+    if (host.style[prop] !== value) {
+      host.style[prop] = value;
+      chipDomWriteCount += 1;
+    }
+  }
+
+  function chipChildByClass_(root, className) {
+    if (!root) return null;
+    if (root.querySelector) {
+      var hit = root.querySelector("." + className);
+      if (hit) return hit;
+    }
+    var kids = root.children || [];
+    for (var i = 0; i < kids.length; i++) {
+      var c = kids[i];
+      if (!c) continue;
+      var cn = String(c.className || "");
+      if (cn === className || cn.indexOf(className) !== -1) return c;
+      if (c.classList && c.classList.contains(className)) return c;
+    }
+    return null;
+  }
+
+  function chipWriteText_(text, title) {
+    if (!chipEl) return;
+    var teacher = isTeacher();
+    var hasBadge = !!chipChildByClass_(chipEl, "mrj-auth-teacher-badge");
+    if (!teacher && !hasBadge) {
+      if (chipEl.textContent !== text) {
+        chipEl.textContent = text;
+        chipDomWriteCount += 1;
+      }
+    } else {
+      var labelEl = chipChildByClass_(chipEl, "mrj-auth-chip-label");
+      if (!labelEl) {
+        chipEl.textContent = "";
+        labelEl = el_("span", "mrj-auth-chip-label");
+        chipEl.appendChild(labelEl);
+        chipDomWriteCount += 1;
+      }
+      if (labelEl.textContent !== text) {
+        labelEl.textContent = text;
+        chipDomWriteCount += 1;
+      }
+      var badgeEl = chipChildByClass_(chipEl, "mrj-auth-teacher-badge");
+      if (teacher && !badgeEl) {
+        badgeEl = el_("span", "mrj-auth-teacher-badge");
+        badgeEl.textContent = "TEACHER";
+        chipEl.appendChild(badgeEl);
+        chipDomWriteCount += 1;
+      }
+      if (!teacher && badgeEl && badgeEl.parentNode) {
+        badgeEl.parentNode.removeChild(badgeEl);
+        chipDomWriteCount += 1;
+      }
+    }
+    var t = title == null ? "" : String(title);
+    if (chipEl.title !== t) {
+      chipEl.title = t;
+      chipDomWriteCount += 1;
+    }
+  }
+
+  function chipWriteCompact_(compact) {
+    if (!chipEl || !chipEl.classList) return;
+    var has = chipEl.classList.contains("mrj-auth-chip-compact");
+    if (compact === has) return;
+    chipEl.classList.toggle("mrj-auth-chip-compact", compact);
+    chipDomWriteCount += 1;
+  }
+
+  function chipWriteAriaLabel_(label) {
+    if (!chipEl) return;
+    var cur = chipEl.getAttribute("aria-label") || "";
+    if (cur === label) return;
+    chipEl.setAttribute("aria-label", label);
+    chipDomWriteCount += 1;
+  }
+
+  function computeChipCollisionMarginTop_(compact) {
+    return computeChipMarginLayout_(compact).marginTop;
+  }
+
+  function applyChipLayout_() {
+    if (!chipLayoutAllowed_()) return;
+    chipLayoutRunCount += 1;
+    try {
+      if (chipEl.hidden) chipEl.hidden = false;
+      var vw = global.innerWidth || 800;
+      var compact = vw < 480;
+      var offsets = chipOffsetStyles_();
+      var baseTop = offsets.top
+        ? offsets.top
+        : "calc(0.55rem + env(safe-area-inset-top, 0px))";
+      var baseRight = offsets.right
+        ? offsets.right
+        : "calc(0.55rem + env(safe-area-inset-right, 0px))";
+      var displayId = state.id || "";
+      var text =
+        compact && displayId.length > 10 ? displayId.slice(0, 8) + "\u2026" : displayId;
+      var title = compact && displayId.length > 10 ? displayId : "";
+      var ariaLabel = "My progress for " + displayId;
+
+      chipWriteStyle_("top", baseTop);
+      chipWriteStyle_("right", baseRight);
+      chipWriteStyle_("marginRight", "");
+      chipWriteText_(text, title);
+      chipWriteCompact_(compact);
+      chipWriteAriaLabel_(ariaLabel);
+
+      var anchorRect = chipLayoutRectWithMargin_(0);
+      if (compact && anchorRect && anchorRect.width) {
+        applyChipBodySlot_(computeCompactChipBodySlot_(anchorRect));
+      } else {
+        applyChipBodySlot_(0);
+      }
+
+      var marginLayout = computeChipMarginLayout_(compact);
+      if (marginLayout.hide) {
+        chipWriteStyle_("marginTop", "");
+        setChipHidden_(true);
+        chipApplied_.compact = compact;
+        chipApplied_.top = baseTop;
+        chipApplied_.right = baseRight;
+        chipApplied_.marginTop = "";
+        chipApplied_.marginRight = "";
+        chipApplied_.text = text;
+        chipApplied_.title = title;
+        chipApplied_.ariaLabel = ariaLabel;
+        return;
+      }
+      setChipHidden_(false);
+      chipWriteStyle_("marginTop", marginLayout.marginTop);
+
+      chipApplied_.compact = compact;
+      chipApplied_.top = baseTop;
+      chipApplied_.right = baseRight;
+      chipApplied_.marginTop = marginLayout.marginTop;
+      chipApplied_.marginRight = "";
+      chipApplied_.text = text;
+      chipApplied_.title = title;
+      chipApplied_.ariaLabel = ariaLabel;
+    } catch (ignore) {}
+  }
+
+  function adjustChipPosition_() {
+    applyChipLayout_();
+  }
+
+  function isElementVisible_(node) {
+    if (!node || node.nodeType !== 1) return false;
+    try {
+      if (node.hidden) return false;
+      var style = global.getComputedStyle ? global.getComputedStyle(node) : null;
+      if (style) {
+        if (style.display === "none" || style.visibility === "hidden" || style.opacity === "0") {
+          return false;
+        }
+      }
+      var r = node.getBoundingClientRect();
+      return !!(r && r.width > 1 && r.height > 1);
+    } catch (ignore) {
+      return false;
+    }
+  }
+
+  function findOwnRecord_() {
+    if (!global.document) return null;
+    var node = null;
+    if (global.document.querySelector) {
+      node = global.document.querySelector("[data-mrj-own-record]");
+    }
+    if ((!node || !isElementVisible_(node)) && global.document.querySelectorAll) {
+      var nodes = global.document.querySelectorAll("[data-mrj-own-record]");
+      for (var o = 0; o < nodes.length; o++) {
+        if (isElementVisible_(nodes[o])) {
+          node = nodes[o];
+          break;
+        }
+      }
+    }
+    if (!node || !isElementVisible_(node)) return null;
+    return node;
+  }
+
+  function findNamePill_() {
+    if (!global.document) return null;
+    var pill = null;
+    if (global.document.querySelector) {
+      pill = global.document.querySelector(".student-pill, [data-mrj-name-pill]");
+    }
+    if ((!pill || !isElementVisible_(pill)) && global.document.querySelectorAll) {
+      var nodes = global.document.querySelectorAll(".student-pill, [data-mrj-name-pill]");
+      for (var i = 0; i < nodes.length; i++) {
+        if (isElementVisible_(nodes[i])) {
+          pill = nodes[i];
+          break;
+        }
+      }
+    }
+    if ((!pill || !isElementVisible_(pill)) && global.document.body && global.document.body.children) {
+      var kids = global.document.body.children;
+      for (var j = 0; j < kids.length; j++) {
+        var node = kids[j];
+        if (!node || node.nodeType !== 1) continue;
+        var isPill = false;
+        if (node.classList && node.classList.contains("student-pill")) isPill = true;
+        if (node.getAttribute && node.getAttribute("data-mrj-name-pill")) isPill = true;
+        if (node.className && String(node.className).indexOf("student-pill") !== -1) isPill = true;
+        if (isPill && isElementVisible_(node)) {
+          pill = node;
+          break;
+        }
+      }
+    }
+    if (!pill || !isElementVisible_(pill)) return null;
+    return pill;
+  }
+
+  function syncPillLabel_(pill) {
+    if (!pill) return;
+    var label = "My progress for " + (state.id || "");
+    var cur = pill.getAttribute("aria-label") || "";
+    if (cur !== label) pill.setAttribute("aria-label", label);
+    if (pill.title !== label) pill.title = label;
+    var badge = pill.querySelector && pill.querySelector(".mrj-auth-teacher-badge");
+    if (isTeacher()) {
+      if (!badge) {
+        badge = el_("span", "mrj-auth-teacher-badge");
+        badge.textContent = "TEACHER";
+        pill.appendChild(badge);
+      }
+    } else if (badge) {
+      badge.parentNode.removeChild(badge);
+    }
+  }
+
+  function wireNamePill_(pill) {
+    if (!pill) return;
+    if (pill.getAttribute("data-mrj-pill-wired") === "1") {
+      syncPillLabel_(pill);
+      return;
+    }
+    pill.setAttribute("data-mrj-pill-wired", "1");
+    pill.setAttribute("role", "button");
+    pill.setAttribute("tabindex", "0");
+    try {
+      if (pill.style.cursor !== "pointer") pill.style.cursor = "pointer";
+    } catch (ignore) {}
+    syncPillLabel_(pill);
+    attachTeacherButtonNearPill_(pill);
+    syncTeacherButton_();
+    pill.addEventListener("click", function () {
+      try {
+        openProgressPanel();
+      } catch (ignore) {}
+    });
+    pill.addEventListener("keydown", function (ev) {
+      if (!ev) return;
+      if (ev.key === "Enter" || ev.key === " ") {
+        ev.preventDefault();
+        try {
+          openProgressPanel();
+        } catch (ignore) {}
+      }
+    });
+  }
+
+  function ensureChipDom_() {
+    if (!global.document || !global.document.body) return;
+    if (!chipChromeEl) {
+      chipChromeEl = el_("div", "mrj-auth-chip-chrome");
+      chipChromeEl.id = "mrj-auth-chip-chrome";
+      global.document.body.appendChild(chipChromeEl);
+    }
+    if (!chipEl) {
+      chipEl = el_("button", "mrj-auth-chip");
+      chipEl.type = "button";
+      chipEl.id = "mrj-auth-student-chip";
+      chipEl.setAttribute("aria-haspopup", "dialog");
+      chipEl.addEventListener("click", function () {
+        try {
+          openProgressPanel();
+        } catch (ignore) {}
+      });
+      chipChromeEl.appendChild(chipEl);
+      attachTeacherButtonToChipChrome_();
+      if (global.addEventListener) {
+        global.addEventListener("resize", function () { scheduleStudentChrome_(); });
+        global.addEventListener("orientationchange", function () { scheduleStudentChrome_(); });
+      }
+    }
+    if (!panelRootEl) {
+      panelRootEl = el_("div", "mrj-auth-panel-root");
+      panelRootEl.id = "mrj-auth-progress-panel-root";
+      panelRootEl.hidden = true;
+      panelRootEl.setAttribute("aria-hidden", "true");
+      global.document.body.appendChild(panelRootEl);
+    }
+  }
+
+  function setChipHidden_(hidden) {
+    if (!chipEl) return;
+    var chromeHidden = teacherBtnOnPill ? true : hidden;
+    if (!!chipEl.hidden === !!hidden && (!chipChromeEl || chipChromeEl.hidden === chromeHidden)) return;
+    chipEl.hidden = hidden;
+    if (chipChromeEl && !teacherBtnOnPill) chipChromeEl.hidden = hidden;
+  }
+
+  function applyStudentChrome_() {
+    try {
+      if (!global.document || !global.document.body) return;
+      ensureChipDom_();
+      if (!state.id) {
+        setChipHidden_(true);
+        applyChipBodySlot_(0);
+        if (teacherBtnEl) teacherBtnEl.hidden = true;
+        return;
+      }
+      installChipObserver_();
+      if (findOwnRecord_()) {
+        setChipHidden_(true);
+        applyChipBodySlot_(0);
+        return;
+      }
+      if (!chipDisabled_()) {
+        var pill = findNamePill_();
+        if (pill) {
+          setChipHidden_(true);
+          applyChipBodySlot_(0);
+          wireNamePill_(pill);
+          attachTeacherButtonNearPill_(pill);
+          syncTeacherButton_();
+          return;
+        }
+      }
+      if (chipDisabled_()) {
+        setChipHidden_(true);
+        applyChipBodySlot_(0);
+        return;
+      }
+      setChipHidden_(false);
+      attachTeacherButtonToChipChrome_();
+      syncTeacherButton_();
+      installChipIdleMutationWatcher_();
+    } catch (ignore) {}
+  }
+
+  function updateStudentChip_() {
+    applyStudentChrome_();
+    scheduleChipLayout_();
+  }
+
+  function panelTabs_(active, onPick) {
+    var row = el_("div", "mrj-auth-panel-tabs");
+    function tab(id, label) {
+      var btn = button_(label, "mrj-auth-panel-tab");
+      btn.type = "button";
+      if (id === active) btn.setAttribute("aria-current", "true");
+      btn.addEventListener("click", function () {
+        if (typeof onPick === "function") onPick(id);
+      });
+      row.appendChild(btn);
+      return btn;
+    }
+    tab("charts", "Charts");
+    tab("scores", "Scores");
+    return row;
+  }
+
+  function chartBlock_(title, heightPx) {
+    var wrap = el_("div", "mrj-auth-chart-block");
+    var h = el_("h3", "mrj-auth-chart-title");
+    h.textContent = title;
+    var box = el_("div", "mrj-auth-chart-canvas-wrap");
+    box.style.height = (heightPx || 220) + "px";
+    var canvas = global.document.createElement("canvas");
+    canvas.setAttribute("role", "img");
+    canvas.setAttribute("aria-label", title);
+    box.appendChild(canvas);
+    wrap.appendChild(h);
+    wrap.appendChild(box);
+    return { wrap: wrap, canvas: canvas };
+  }
+
+  function renderPanelDashboard_(body, dash, meta) {
+    meta = meta || {};
+    clear_(body);
+    if (meta.incomplete) {
+      var warn = el_("p", "mrj-auth-panel-cap");
+      warn.textContent =
+        "Some saved packs are still syncing (" +
+        (meta.missingShards || []).join(", ") +
+        "). Charts may be incomplete.";
+      body.appendChild(warn);
+    }
+    var summary = el_("p", "mrj-auth-panel-summary");
+    var overall = dash && dash.completion ? dash.completion.overallPct : null;
+    summary.textContent =
+      overall != null ? "Overall completion · " + overall + "%" : "Pack progress and scores for this app";
+    body.appendChild(summary);
+
+    var completion = dash && dash.completion ? dash.completion : { units: [], remaining: [] };
+    if (completion.units && completion.units.length) {
+      var comp = chartBlock_("Completion by unit", completion.units.length > 4 ? 280 : 220);
+      body.appendChild(comp.wrap);
+      if (global.MRJ_PROGRESS_CHARTS) {
+        global.MRJ_PROGRESS_CHARTS.renderCompletionBarChart(comp.canvas, completion.units);
+      }
+    } else {
+      var noPack = el_("p", "mrj-auth-empty");
+      noPack.textContent = "No pack progress saved in this app yet.";
+      body.appendChild(noPack);
+    }
+
+    var trend = dash && dash.scoreTrend ? dash.scoreTrend : [];
+    if (trend.length) {
+      var tr = chartBlock_("Scores over time", 220);
+      body.appendChild(tr.wrap);
+      if (global.MRJ_PROGRESS_CHARTS) {
+        global.MRJ_PROGRESS_CHARTS.renderScoreTrendChart(tr.canvas, trend);
+      }
+    }
+
+    if (completion.remaining && completion.remaining.length) {
+      var left = el_("div", "mrj-auth-panel-remaining");
+      var leftTitle = el_("h3", "mrj-auth-chart-title");
+      leftTitle.textContent = "Still to finish";
+      left.appendChild(leftTitle);
+      var chips = el_("div", "mrj-auth-chip-row");
+      completion.remaining.slice(0, 8).forEach(function (id) {
+        var chip = el_("span", "mrj-auth-tag");
+        chip.textContent = id;
+        chips.appendChild(chip);
+      });
+      left.appendChild(chips);
+      body.appendChild(left);
+    }
+
+    var recent = dash && dash.recentActivity ? dash.recentActivity : [];
+    if (recent.length) {
+      var rec = el_("div", "mrj-auth-panel-recent");
+      var recTitle = el_("h3", "mrj-auth-chart-title");
+      recTitle.textContent = "Recent activity";
+      rec.appendChild(recTitle);
+      var list = el_("ul", "mrj-auth-panel-list");
+      recent.forEach(function (row) {
+        var item = el_("li", "mrj-auth-panel-row");
+        var main = el_("span", "mrj-auth-prog-main");
+        main.textContent = row.item_id || "—";
+        var scoreLine = el_("span", "mrj-auth-panel-score");
+        scoreLine.textContent = [row.score_pct != null ? row.score_pct + "%" : "", row.local_date]
+          .filter(Boolean)
+          .join(" · ");
+        item.appendChild(main);
+        item.appendChild(scoreLine);
+        list.appendChild(item);
+      });
+      rec.appendChild(list);
+      body.appendChild(rec);
+    }
+
+    var dailyWords = dash && dash.dailyWords ? dash.dailyWords : [];
+    if (dailyWords.length) {
+      var dwc = el_("div", "mrj-auth-panel-daily-words");
+      var dwcTitle = el_("h3", "mrj-auth-chart-title");
+      dwcTitle.textContent = "Words by day";
+      dwc.appendChild(dwcTitle);
+      dailyWords.forEach(function (day) {
+        var dayHead = el_("p", "mrj-auth-panel-cap");
+        dayHead.textContent = day.date || "";
+        dwc.appendChild(dayHead);
+        var packs = day.packs || [];
+        if (packs.length) {
+          var dayList = el_("ul", "mrj-auth-panel-list");
+          packs.forEach(function (row) {
+            var li = el_("li", "mrj-auth-panel-row");
+            li.textContent = row.line || "";
+            dayList.appendChild(li);
+          });
+          dwc.appendChild(dayList);
+        }
+      });
+      body.appendChild(dwc);
+    }
+
+    var foot = el_("div", "mrj-auth-panel-foot");
+    var signOutBtn = button_("Sign out", "mrj-auth-signout");
+    signOutBtn.addEventListener("click", function () {
+      closeProgressPanel();
+      signOut();
+    });
+    foot.appendChild(signOutBtn);
+    body.appendChild(foot);
+  }
+
+  function fetchStudentDashboard_(snap) {
+    var program = appProgram_();
+    return post_({
+      action: "student_dashboard",
+      id: snap.id,
+      token: snap.token,
+      program: program,
+      app: program
+    }).then(function (data) {
+      if (!sessionMatches_(snap)) {
+        return { ok: false, error: "stale_session" };
+      }
+      return data;
+    });
+  }
+
+  function loadPanelDashboard_(fetchGen, snap) {
+    if (!panelRootEl || panelRootEl.hidden) return;
+    var body = panelBodyEl;
+    if (!body) return;
+    renderPanelLoading_(body);
+    function cancelled() {
+      return !panelOpen || fetchGen !== panelFetchGen || !sessionMatches_(snap);
+    }
+    ensureProgressChartLibs_()
+      .then(function () {
+        if (cancelled()) return null;
+        return fetchStudentDashboard_(snap);
+      })
+      .then(function (result) {
+        if (cancelled() || !result) return;
+        if (!result.ok) {
+          renderPanelError_(body, result.message || "Could not load progress charts.", function () {
+            loadPanelDashboard_(fetchGen, captureSession_());
+          });
+          return;
+        }
+        renderPanelDashboard_(body, result.dashboard || {}, {
+          incomplete: result.incomplete,
+          missingShards: result.missingShards
+        });
+      })
+      .catch(function () {
+        if (cancelled()) return;
+        renderPanelError_(body, "Could not load progress charts.", function () {
+          loadPanelDashboard_(fetchGen, captureSession_());
+        });
+      });
+  }
+
+  function panelShell_(titleText) {
+    clear_(panelRootEl);
+    var backdrop = el_("button", "mrj-auth-panel-backdrop");
+    backdrop.type = "button";
+    backdrop.setAttribute("aria-label", "Close progress");
+    backdrop.addEventListener("click", function () {
+      closeProgressPanel();
+    });
+    var dialog = el_("div", "mrj-auth-panel");
+    dialog.setAttribute("role", "dialog");
+    dialog.setAttribute("aria-modal", "true");
+    dialog.setAttribute("aria-label", titleText || "My progress");
+    var header = el_("div", "mrj-auth-panel-header");
+    var title = el_("h2", "mrj-auth-panel-title");
+    title.textContent = titleText || "My progress";
+    var closeBtn = button_("×", "mrj-auth-panel-close");
+    closeBtn.setAttribute("aria-label", "Close");
+    closeBtn.addEventListener("click", function () {
+      closeProgressPanel();
+    });
+    header.appendChild(title);
+    header.appendChild(closeBtn);
+    var body = el_("div", "mrj-auth-panel-body");
+    dialog.appendChild(header);
+    dialog.appendChild(body);
+    panelRootEl.appendChild(backdrop);
+    panelRootEl.appendChild(dialog);
+    return { body: body, dialog: dialog };
+  }
+
+  function renderPanelLoading_(body) {
+    clear_(body);
+    var wait = el_("div", "mrj-auth-wait");
+    wait.setAttribute("aria-busy", "true");
+    var status = el_("p", "mrj-auth-status");
+    status.textContent = "Loading your scores…";
+    wait.appendChild(status);
+    wait.appendChild(waitBar_());
+    body.appendChild(wait);
+  }
+
+  function renderPanelError_(body, message, onRetry) {
+    clear_(body);
+    var err = el_("p", "mrj-auth-error");
+    err.textContent = message || "Could not load scores.";
+    body.appendChild(err);
+    var retry = button_("Retry", "mrj-auth-submit");
+    retry.addEventListener("click", function () {
+      if (typeof onRetry === "function") onRetry();
+    });
+    body.appendChild(retry);
+  }
+
+  function renderPanelRows_(body, rows, meta) {
+    meta = meta || {};
+    clear_(body);
+    var normalized = sortPanelRows_(rows.map(normalizeProgressRow_));
+    var avg = averagePct_(normalized);
+    var summary = el_("p", "mrj-auth-panel-summary");
+    summary.textContent =
+      normalized.length +
+      " score" +
+      (normalized.length === 1 ? "" : "s") +
+      (avg != null ? " · average " + avg + "%" : "");
+    body.appendChild(summary);
+    if (meta.capped) {
+      var cap = el_("p", "mrj-auth-panel-cap");
+      cap.textContent = "Showing the most recent scores we could load. Ask your teacher if something is missing.";
+      body.appendChild(cap);
+    }
+    if (!normalized.length) {
+      var empty = el_("p", "mrj-auth-empty");
+      empty.textContent = "No scores yet.";
+      body.appendChild(empty);
+      return;
+    }
+    var list = el_("ul", "mrj-auth-panel-list");
+    normalized.forEach(function (row) {
+      var item = el_("li", "mrj-auth-panel-row");
+      var label = itemLabel_(row.item_id, row);
+      if (label) {
+        var main = el_("span", "mrj-auth-prog-main");
+        main.textContent = label;
+        var sub = el_("span", "mrj-auth-panel-item-id");
+        sub.textContent = row.item_id;
+        item.appendChild(main);
+        item.appendChild(sub);
+      } else {
+        var mainOnly = el_("span", "mrj-auth-prog-main");
+        mainOnly.textContent = row.item_id || "—";
+        item.appendChild(mainOnly);
+      }
+      var scoreLine = el_("span", "mrj-auth-panel-score");
+      scoreLine.textContent = [row.scoreText, row.local_date].filter(Boolean).join(" · ");
+      item.appendChild(scoreLine);
+      list.appendChild(item);
+    });
+    body.appendChild(list);
+    var foot = el_("div", "mrj-auth-panel-foot");
+    var signOutBtn = button_("Sign out", "mrj-auth-signout");
+    signOutBtn.addEventListener("click", function () {
+      closeProgressPanel();
+      signOut();
+    });
+    foot.appendChild(signOutBtn);
+    body.appendChild(foot);
+  }
+
+  function loadPanelProgress_(fetchGen, snap) {
+    if (!panelRootEl || panelRootEl.hidden) return;
+    var body = panelBodyEl;
+    if (!body && panelRootEl.querySelector) {
+      body = panelRootEl.querySelector(".mrj-auth-panel-body");
+    }
+    if (!body) return;
+    renderPanelLoading_(body);
+    function cancelled() {
+      return !panelOpen || fetchGen !== panelFetchGen || !sessionMatches_(snap);
+    }
+    fetchPanelProgress_(snap, { cancelCheck: cancelled }).then(function (result) {
+      if (cancelled()) return;
+      if (!result || !result.ok) {
+        if (result && result.error === "cancelled") return;
+        renderPanelError_(body, (result && result.message) || "Could not load scores.", function () {
+          if (!state.id || !state.token) return;
+          loadPanelProgress_(fetchGen, captureSession_());
+        });
+        return;
+      }
+      renderPanelRows_(body, result.progress || [], { capped: result.capped });
+    }).catch(function () {
+      if (cancelled()) return;
+      renderPanelError_(body, "Could not load scores.", function () {
+        if (!state.id || !state.token) return;
+        loadPanelProgress_(fetchGen, captureSession_());
+      });
+    });
+  }
+
+  function switchPanelView_(mode, fetchGen, snap) {
+    panelViewMode = mode === "scores" ? "scores" : "charts";
+    if (!panelBodyEl || !panelBodyEl.parentNode) return;
+    var dialog = panelBodyEl.parentNode;
+    var oldTabs = dialog.querySelector(".mrj-auth-panel-tabs");
+    if (oldTabs && oldTabs.parentNode) oldTabs.parentNode.removeChild(oldTabs);
+    var tabs = panelTabs_(panelViewMode, function (next) {
+      switchPanelView_(next, fetchGen, snap);
+    });
+    dialog.insertBefore(tabs, panelBodyEl);
+    if (panelViewMode === "scores") {
+      loadPanelProgress_(fetchGen, snap);
+    } else {
+      loadPanelDashboard_(fetchGen, snap);
+    }
+  }
+
+  function openProgressPanel() {
+    try {
+      if (!state.id || !state.token) return;
+      if (panelOpen && panelRootEl && !panelRootEl.hidden) return;
+      ensureChipDom_();
+      panelOpen = true;
+      panelViewMode = global.MRJ_AUTH_TEST_MODE ? "scores" : "charts";
+      panelFetchGen += 1;
+      var fetchGen = panelFetchGen;
+      var snap = captureSession_();
+      panelRootEl.hidden = false;
+      panelRootEl.setAttribute("aria-hidden", "false");
+      var shell = panelShell_("My progress");
+      panelBodyEl = shell.body;
+      var tabs = panelTabs_(panelViewMode, function (next) {
+        switchPanelView_(next, panelFetchGen, captureSession_());
+      });
+      shell.dialog.insertBefore(tabs, shell.body);
+      renderPanelLoading_(shell.body);
+      if (panelKeyHandler && global.removeEventListener) {
+        global.removeEventListener("keydown", panelKeyHandler);
+      }
+      panelKeyHandler = function (ev) {
+        if (!panelOpen) return;
+        if (ev && (ev.key === "Escape" || ev.key === "Esc")) closeProgressPanel();
+      };
+      if (global.addEventListener) global.addEventListener("keydown", panelKeyHandler);
+      if (panelViewMode === "scores") {
+        loadPanelProgress_(fetchGen, snap);
+      } else {
+        loadPanelDashboard_(fetchGen, snap);
+      }
+      if (shell.dialog && shell.dialog.focus) shell.dialog.focus();
+    } catch (ignore) {}
+  }
+
+  function closeProgressPanel() {
+    try {
+      panelOpen = false;
+      panelFetchGen += 1;
+      if (panelKeyHandler && global.removeEventListener) {
+        global.removeEventListener("keydown", panelKeyHandler);
+        panelKeyHandler = null;
+      }
+      if (panelRootEl) {
+        panelRootEl.hidden = true;
+        panelRootEl.setAttribute("aria-hidden", "true");
+        clear_(panelRootEl);
+      }
+      panelBodyEl = null;
+    } catch (ignore) {}
+  }
+
+  function setBusy_(on) {
+    if (!rootEl) return;
+    var buttons = rootEl.querySelectorAll("button");
+    for (var i = 0; i < buttons.length; i++) buttons[i].disabled = on;
+  }
+
+  function localDate_(when) {
+    var d = when ? new Date(when) : new Date();
+    var y = d.getFullYear();
+    var m = d.getMonth() + 1;
+    var day = d.getDate();
+    return (
+      y +
+      "-" +
+      (m < 10 ? "0" : "") +
+      m +
+      "-" +
+      (day < 10 ? "0" : "") +
+      day
+    );
+  }
+
+  function noteOutboxStorageKey_(studentId) {
+    return NOTE_OUTBOX_PREFIX + rules.idKey(studentId);
+  }
+
+  function noteItemKey_(program, itemId) {
+    return String(program || "") + "\0" + String(itemId || "");
+  }
+
+  function readNoteOutbox_(studentKey) {
+    try {
+      var raw = global.localStorage.getItem(NOTE_OUTBOX_PREFIX + studentKey);
+      if (!raw) return [];
+      var arr = JSON.parse(raw);
+      return Array.isArray(arr) ? arr : [];
+    } catch (ignore) {
+      return [];
+    }
+  }
+
+  function writeNoteOutbox_(studentKey, entries) {
+    try {
+      if (!entries || !entries.length) {
+        global.localStorage.removeItem(NOTE_OUTBOX_PREFIX + studentKey);
+        return;
+      }
+      global.localStorage.setItem(NOTE_OUTBOX_PREFIX + studentKey, JSON.stringify(entries));
+    } catch (ignore) {}
+  }
+
+  function isNoteRetryableError_(code) {
+    return (
+      code === "network" ||
+      code === "timeout" ||
+      code === "server_busy" ||
+      code === "server"
+    );
+  }
+
+  function isNoteNoQueueError_(code) {
+    return (
+      code === "bad_token" ||
+      code === "user_does_not_exist" ||
+      code === "stale_session"
+    );
+  }
+
+  function recordNoteSuccess_(studentKey, program, itemId) {
+    noteSuccessAt_[studentKey + "|" + noteItemKey_(program, itemId)] = Date.now();
+  }
+
+  function shouldDropOutboxEntry_(entry, studentKey) {
+    var k = studentKey + "|" + noteItemKey_(entry.program, entry.itemId);
+    var successAt = noteSuccessAt_[k];
+    return !!(successAt && successAt > entry.at);
+  }
+
+  function removeOutboxEntry_(list, entry) {
+    var out = [];
+    for (var i = 0; i < list.length; i++) {
+      var e = list[i];
+      if (e.at === entry.at && e.program === entry.program && e.itemId === entry.itemId) continue;
+      out.push(e);
+    }
+    return out;
+  }
+
+  function enqueueNoteScore_(studentKey, entry) {
+    studentKey = studentKey == null ? "" : String(studentKey);
+    if (!studentKey) return;
+    var list = readNoteOutbox_(studentKey);
+    var ik = noteItemKey_(entry.program, entry.itemId);
+    var next = [];
+    for (var i = 0; i < list.length; i++) {
+      if (noteItemKey_(list[i].program, list[i].itemId) !== ik) next.push(list[i]);
+    }
+    next.push(entry);
+    while (next.length > NOTE_OUTBOX_MAX) next.shift();
+    writeNoteOutbox_(studentKey, next);
+  }
+
+  function flushNoteOutboxInner_(studentKey) {
+    var snap = captureSession_();
+    function loop() {
+      if (!sessionMatches_(snap)) return Promise.resolve();
+      var list = readNoteOutbox_(studentKey);
+      while (list.length > 0 && shouldDropOutboxEntry_(list[0], studentKey)) {
+        list.shift();
+      }
+      if (!list.length) {
+        writeNoteOutbox_(studentKey, list);
+        return Promise.resolve();
+      }
+      writeNoteOutbox_(studentKey, list);
+      var entry = list[0];
+      if (!sessionMatches_(snap)) return Promise.resolve();
+      return post_({
+        action: "note_score",
+        id: snap.id,
+        token: snap.token,
+        program: entry.program,
+        itemId: entry.itemId,
+        scoreValue: entry.scoreValue,
+        scoreMax: entry.scoreMax,
+        scorePct: entry.scorePct,
+        localDate: entry.localDate || localDate_()
+      })
+        .then(function (data) {
+          if (!sessionMatches_(snap)) return;
+          var code = data && data.error != null ? String(data.error) : "";
+          if (data && data.ok) {
+            recordNoteSuccess_(studentKey, entry.program, entry.itemId);
+            var cur = removeOutboxEntry_(readNoteOutbox_(studentKey), entry);
+            writeNoteOutbox_(studentKey, cur);
+            return loop();
+          }
+          if (isNoteNoQueueError_(code) || isNoteRetryableError_(code)) return;
+          var cur2 = removeOutboxEntry_(readNoteOutbox_(studentKey), entry);
+          writeNoteOutbox_(studentKey, cur2);
+          return loop();
+        })
+        .catch(function () {});
+    }
+    return loop();
+  }
+
+  function flushNoteOutbox_(studentId) {
+    if (!studentId || !state.id || !state.token) return Promise.resolve();
+    if (rules.idKey(state.id) !== rules.idKey(studentId)) return Promise.resolve();
+    var studentKey = rules.idKey(studentId);
+    noteOutboxFlushChain = (noteOutboxFlushChain || Promise.resolve()).then(function () {
+      return flushNoteOutboxInner_(studentKey);
+    });
+    return noteOutboxFlushChain;
+  }
+
+  function noteScore(fields) {
+    fields = fields || {};
+    if (!state.id || !state.token) return Promise.resolve({ ok: false, error: "bad_token" });
+    var snap = captureSession_();
+    var studentKey = rules.idKey(snap.id);
+    if (!snap.id || !snap.token) return Promise.resolve({ ok: false, error: "bad_token" });
+    var localDate = fields.localDate || localDate_();
+    var payload = {
+      action: "note_score",
+      id: snap.id,
+      token: snap.token,
+      program: fields.program || "",
+      itemId: fields.itemId || "",
+      scoreValue: fields.scoreValue,
+      scoreMax: fields.scoreMax,
+      scorePct: fields.scorePct,
+      localDate: localDate
+    };
+    var noteMeta = teacherSaveMetadata_();
+    if (noteMeta) payload.metadata_json = noteMeta;
+    function queueFailed_(errorCode) {
+      var entry = {
+        program: payload.program,
+        itemId: payload.itemId,
+        scoreValue: payload.scoreValue,
+        scoreMax: payload.scoreMax,
+        scorePct: payload.scorePct,
+        localDate: localDate,
+        at: Date.now()
+      };
+      if (sessionMatches_(snap)) {
+        enqueueNoteScore_(studentKey, entry);
+        return { ok: false, error: errorCode, queued: true };
+      }
+      enqueueNoteScore_(studentKey, entry);
+      return { ok: false, error: errorCode };
+    }
+    return post_(payload)
+      .then(function (data) {
+        if (!data) data = { ok: false, error: "network" };
+        var code = data.error == null ? "" : String(data.error);
+        if (data.ok) {
+          if (sessionMatches_(snap)) {
+            recordNoteSuccess_(studentKey, payload.program, payload.itemId);
+            flushNoteOutbox_(snap.id);
+          }
+          return data;
+        }
+        if (isNoteRetryableError_(code)) {
+          return queueFailed_(code);
+        }
+        return data;
+      })
+      .catch(function () {
+        return queueFailed_("network");
+      });
+  }
+
+  var api = {
+    AUTH_VERSION: AUTH_VERSION,
+    ENDPOINT: ENDPOINT,
+    mount: mount,
+    student: student,
+    token: token,
+    signOut: signOut,
+    noteScore: noteScore,
+    localDate: localDate_,
+    app: appProgram_,
+    loadProgressForApp: loadProgressForApp,
+    loadPack: loadPack,
+    savePack: savePack,
+    packReady: packReady,
+    progressError: progressError,
+    idKey: idKey,
+    openProgressPanel: openProgressPanel,
+    closeProgressPanel: closeProgressPanel,
+    setPanelRowsProvider: setPanelRowsProvider,
+    isTeacher: isTeacher
+  };
+
+  if (global.MRJ_AUTH_TEST_MODE) {
+    api._test = {
+      post: post_,
+      postOnce: postOnce_,
+      send: send_,
+      sessionRejected: sessionRejected_,
+      fetchAllProgress: fetchAllProgress_,
+      fetchPanelProgress: fetchPanelProgress_,
+      retryProgressInBackground: retryProgressInBackground_,
+      progressBody: progressBody_,
+      scoreProgramsForApp: scoreProgramsForApp_,
+      filterProgressForApp: filterProgressForApp_,
+      rowPassesItemFilter: rowPassesItemFilter_,
+      panelAppKey: panelAppKey_,
+      chipDisabled: chipDisabled_,
+      updateStudentChip: updateStudentChip_,
+      adjustChipPosition: adjustChipPosition_,
+      mergeProviderRows: mergeProviderRows_,
+      collapseServerRowsByItemId: collapseServerRowsByItemId_,
+      loadPlace: loadPlace_,
+      scheduleChipLayout: scheduleChipLayout_,
+      setChipLayoutLastRun: function (t) {
+        chipLayoutLastRun = t;
+      },
+      chipTrailingPending: function () {
+        return !!chipLayoutTrailingTimer;
+      },
+      applyStudentChrome: applyStudentChrome_,
+      findNamePill: findNamePill_,
+      findOwnRecord: findOwnRecord_,
+      resetChipIdleMetrics: function () {
+        chipLayoutRunCount = 0;
+        chipObserverNotifyCount = 0;
+        chipObserverIgnoredCount = 0;
+        chipDomWriteCount = 0;
+        chipIdleMutationCount = 0;
+      },
+      getChipIdleMetrics: function () {
+        return {
+          layoutRuns: chipLayoutRunCount,
+          observerNotifies: chipObserverNotifyCount,
+          observerIgnored: chipObserverIgnoredCount,
+          domWrites: chipDomWriteCount,
+          chipMutations: chipIdleMutationCount
+        };
+      },
+      getChipBodySlotPx: function () {
+        return chipBodySlotPx_;
+      },
+      computeChipMarginLayout: function (compact) {
+        return computeChipMarginLayout_(compact);
+      },
+      REQUEST_TIMEOUT_MS: REQUEST_TIMEOUT_MS,
+      AUTH_VERSION: AUTH_VERSION,
+      APP_SCORE_PROGRAM_MAP: APP_SCORE_PROGRAM_MAP,
+      DAY2_PACK_ITEM_RE: DAY2_PACK_ITEM_RE,
+      finish: finish_,
+      applyServerRole: applyServerRole_,
+      isTeacher: isTeacher,
+      noteOutboxKey: noteOutboxStorageKey_,
+      readNoteOutbox: readNoteOutbox_,
+      cfLogin: cfLogin_,
+      cfShouldFallbackToGas: cfShouldFallbackToGas_,
+      loginMode: loginMode_,
+      performLoginSubmit: performLoginSubmit_,
+      shadowLog: shadowLog_,
+      verifyTeacherPin: verifyTeacherPin_,
+      whenGasTokenReady: whenGasTokenReady_,
+      TOKEN_PENDING: TOKEN_PENDING,
+      LOGIN_MODE: LOGIN_MODE
+    };
+  }
+
+  global.MRJ_AUTH = api;
+  global.MRJSignin = api;
+})(typeof globalThis !== "undefined" ? globalThis : this);
