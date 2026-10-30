@@ -1,0 +1,599 @@
+@import url("https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Fraunces:opsz,wght@9..144,560;9..144,700&display=swap");
+
+/* Full-screen door. The app stays behind this until a real login. */
+#mrj-auth-gate {
+  position: fixed;
+  inset: 0;
+  z-index: 2147483000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  overflow: auto;
+  background: #f3eadc;
+}
+#mrj-auth-gate[hidden] {
+  display: none !important;
+}
+html.mrj-auth-locked,
+html.mrj-auth-locked body {
+  overflow: hidden;
+}
+
+/* Two classroom doors. Phone first. Errors stay large enough to read at arm's length. */
+.mrj-auth {
+  --mrj-ink: #241c16;
+  --mrj-plaster: #f3eadc;
+  --mrj-paper: #fffaf3;
+  --mrj-have: #1e5c45;
+  --mrj-have-press: #143f30;
+  --mrj-new: #c4552a;
+  --mrj-new-press: #8d3918;
+  --mrj-error: #6d1814;
+  --mrj-error-line: #8d2b24;
+  --mrj-line: #241c16;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 26rem;
+  margin: 0 auto;
+  padding: 1.1rem 1rem 1.25rem;
+  color: var(--mrj-ink);
+  background:
+    radial-gradient(circle at 12% 0%, rgba(255, 255, 255, 0.7), transparent 42%),
+    repeating-linear-gradient(0deg, rgba(36, 28, 22, 0.03) 0 1px, transparent 1px 7px),
+    var(--mrj-plaster);
+  border: 3px solid var(--mrj-line);
+  border-radius: 1.4rem;
+  box-shadow: 0 14px 0 rgba(36, 28, 22, 0.08);
+  font-family: "Atkinson Hyperlegible", "Iowan Old Style", Palatino, Georgia, serif;
+  line-height: 1.35;
+}
+
+.mrj-auth *,
+.mrj-auth *::before,
+.mrj-auth *::after {
+  box-sizing: border-box;
+}
+
+.mrj-auth button,
+.mrj-auth input {
+  font-family: inherit;
+  color: inherit;
+}
+
+.mrj-auth-doors,
+.mrj-auth-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+
+.mrj-auth-door,
+.mrj-auth-submit,
+.mrj-auth-back,
+.mrj-auth-signout {
+  display: block;
+  width: 100%;
+  min-height: 4.25rem;
+  padding: 0.9rem 1rem;
+  border-radius: 1rem;
+  border: 3px solid var(--mrj-line);
+  cursor: pointer;
+  text-align: center;
+  letter-spacing: 0.01em;
+}
+
+.mrj-auth button.mrj-auth-door,
+.mrj-auth button.mrj-auth-submit,
+.mrj-auth button.mrj-auth-signout {
+  font-family: Fraunces, "Iowan Old Style", Palatino, Georgia, serif;
+  font-size: 1.45rem;
+  font-weight: 700;
+  line-height: 1.15;
+  color: #fffaf3;
+}
+
+.mrj-auth-door-login,
+.mrj-auth-submit {
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.16), transparent 42%),
+    var(--mrj-have);
+  box-shadow: inset 0 -8px 0 var(--mrj-have-press);
+}
+
+.mrj-auth-door-new {
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.18), transparent 42%),
+    var(--mrj-new);
+  box-shadow: inset 0 -8px 0 var(--mrj-new-press);
+}
+
+.mrj-auth-door:active,
+.mrj-auth-submit:active,
+.mrj-auth-signout:active {
+  transform: translateY(2px);
+}
+
+.mrj-auth button.mrj-auth-back,
+.mrj-auth button.mrj-auth-signout {
+  min-height: 3.5rem;
+  background: transparent;
+  color: var(--mrj-ink);
+  font-family: "Atkinson Hyperlegible", Palatino, Georgia, serif;
+  font-size: 1.15rem;
+  font-weight: 700;
+  box-shadow: none;
+}
+
+.mrj-auth-signout {
+  margin-top: 0.9rem;
+}
+
+.mrj-auth button:focus-visible,
+.mrj-auth input:focus-visible {
+  outline: 3px solid #e2a122;
+  outline-offset: 3px;
+}
+
+.mrj-auth button:disabled {
+  cursor: wait;
+  opacity: 0.72;
+}
+
+.mrj-auth-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  margin: 0 0 0.9rem;
+}
+
+.mrj-auth-label {
+  font-size: 1.05rem;
+  font-weight: 700;
+}
+
+.mrj-auth input.mrj-auth-input {
+  width: 100%;
+  min-height: 3.5rem;
+  padding: 0.75rem 0.9rem;
+  border: 3px solid var(--mrj-line);
+  border-radius: 0.9rem;
+  background: var(--mrj-paper);
+  color: var(--mrj-ink);
+  font-size: 1.2rem;
+}
+
+.mrj-auth .mrj-auth-error {
+  margin: 0 0 0.95rem;
+  padding: 0.9rem 1rem;
+  border: 3px solid var(--mrj-error-line);
+  border-radius: 0.9rem;
+  background: #fff6f1;
+  color: var(--mrj-error);
+  font-size: 1.28rem;
+  font-weight: 700;
+  line-height: 1.35;
+}
+
+.mrj-auth-status,
+.mrj-auth-signed {
+  margin: 0 0 0.85rem;
+  font-family: Fraunces, Palatino, Georgia, serif;
+  font-size: 1.55rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.mrj-auth-wait .mrj-auth-status {
+  margin-bottom: 0.75rem;
+}
+
+/* Large indeterminate bar — visible from arm's length on a Chromebook. */
+.mrj-auth-wait-bar {
+  position: relative;
+  width: 100%;
+  height: 1.15rem;
+  margin: 0 0 1rem;
+  border: 3px solid var(--mrj-line);
+  border-radius: 0.75rem;
+  background: var(--mrj-paper);
+  overflow: hidden;
+}
+
+.mrj-auth-wait-bar::before {
+  content: "";
+  position: absolute;
+  inset: 0.12rem 0.12rem;
+  border-radius: 0.45rem;
+  background: repeating-linear-gradient(
+    -12deg,
+    rgba(36, 28, 22, 0.04) 0 4px,
+    transparent 4px 10px
+  );
+  opacity: 0.55;
+}
+
+.mrj-auth-wait-bar::after {
+  content: "";
+  position: absolute;
+  top: 0.12rem;
+  bottom: 0.12rem;
+  left: -45%;
+  width: 45%;
+  border-radius: 0.45rem;
+  background:
+    linear-gradient(
+      90deg,
+      transparent 0%,
+      rgba(30, 92, 69, 0.35) 18%,
+      var(--mrj-have) 50%,
+      rgba(30, 92, 69, 0.35) 82%,
+      transparent 100%
+    );
+  animation: mrj-auth-wait-slide 1.15s ease-in-out infinite;
+}
+
+.mrj-auth-progress {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.mrj-auth-progress li {
+  margin: 0 0 0.55rem;
+  padding: 0.75rem 0.8rem;
+  background: var(--mrj-paper);
+  border: 2px solid var(--mrj-line);
+  border-radius: 0.8rem;
+  font-size: 1.05rem;
+}
+
+.mrj-auth-progress li span {
+  display: block;
+}
+
+.mrj-auth-prog-main {
+  font-weight: 700;
+}
+
+.mrj-auth-empty {
+  margin: 0;
+  padding: 0.85rem 0.9rem;
+  background: var(--mrj-paper);
+  border: 2px dashed var(--mrj-line);
+  border-radius: 0.8rem;
+  font-size: 1.15rem;
+  font-weight: 700;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .mrj-auth-door {
+    animation: mrj-auth-rise 380ms ease both;
+  }
+
+  .mrj-auth-door-new {
+    animation-delay: 80ms;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .mrj-auth-wait-bar::after {
+    left: 0;
+    width: 100%;
+    animation: mrj-auth-wait-pulse 1.4s ease-in-out infinite;
+    background: var(--mrj-have);
+    opacity: 0.45;
+  }
+}
+
+@keyframes mrj-auth-rise {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes mrj-auth-wait-slide {
+  from {
+    left: -45%;
+  }
+  to {
+    left: 100%;
+  }
+}
+
+@keyframes mrj-auth-wait-pulse {
+  0%,
+  100% {
+    opacity: 0.35;
+  }
+  50% {
+    opacity: 0.75;
+  }
+}
+
+@media (min-width: 40rem) {
+  .mrj-auth {
+    padding: 1.4rem 1.3rem 1.5rem;
+  }
+}
+
+/* Fixed student chip — visible on every signed-in app page */
+.mrj-auth-chip-label {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.mrj-auth-teacher-badge {
+  flex-shrink: 0;
+  margin-left: 0.35rem;
+  padding: 0.05rem 0.35rem;
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  line-height: 1.2;
+  color: #fffaf3;
+  background: #1e5c45;
+  border: 1px solid #241c16;
+  border-radius: 0.35rem;
+}
+
+.mrj-auth-chip-chrome {
+  position: fixed;
+  top: calc(0.55rem + env(safe-area-inset-top, 0px));
+  right: calc(0.55rem + env(safe-area-inset-right, 0px));
+  z-index: 2147482000;
+  display: inline-flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.35rem;
+  max-width: min(18rem, 92vw);
+}
+
+.mrj-auth-teacher-btn {
+  flex-shrink: 0;
+  min-height: 2.5rem;
+  padding: 0.4rem 0.7rem;
+  border: 2px solid #241c16;
+  border-radius: 999px;
+  background: #e2a122;
+  color: #241c16;
+  font-family: "Atkinson Hyperlegible", system-ui, sans-serif;
+  font-size: 0.88rem;
+  font-weight: 700;
+  line-height: 1.2;
+  cursor: pointer;
+  box-shadow: 0 4px 14px rgba(36, 28, 22, 0.12);
+}
+
+.mrj-auth-teacher-btn:focus-visible {
+  outline: 3px solid #1e5c45;
+  outline-offset: 2px;
+}
+
+.mrj-auth-teacher-btn-pill {
+  margin-right: 0.35rem;
+  vertical-align: middle;
+}
+
+.mrj-auth-chip {
+  position: relative;
+  top: auto;
+  right: auto;
+  z-index: auto;
+  display: inline-flex;
+  align-items: center;
+  max-width: min(12rem, 42vw);
+  padding: 0.45rem 0.75rem;
+  border: 2px solid #241c16;
+  border-radius: 999px;
+  background: #fffaf3;
+  color: #241c16;
+  font-family: "Atkinson Hyperlegible", system-ui, sans-serif;
+  font-size: 0.95rem;
+  font-weight: 700;
+  line-height: 1.2;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  cursor: pointer;
+  box-shadow: 0 4px 14px rgba(36, 28, 22, 0.12);
+}
+
+.mrj-auth-chip:focus-visible {
+  outline: 3px solid #e2a122;
+  outline-offset: 2px;
+}
+
+.mrj-auth-chip-compact {
+  max-width: 40vw;
+  font-size: 0.85rem;
+  padding: 0.35rem 0.55rem;
+}
+
+.mrj-auth-panel-cap {
+  margin: 0 0 0.65rem;
+  font-size: 0.92rem;
+  line-height: 1.35;
+  opacity: 0.85;
+}
+
+.mrj-auth-panel-root {
+  position: fixed;
+  inset: 0;
+  z-index: 2147482500;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: calc(0.75rem + env(safe-area-inset-top, 0px)) 0.75rem 1rem;
+  overflow: auto;
+}
+
+.mrj-auth-panel-root[hidden] {
+  display: none !important;
+}
+
+.mrj-auth-panel-backdrop {
+  position: fixed;
+  inset: 0;
+  border: 0;
+  margin: 0;
+  padding: 0;
+  background: rgba(36, 28, 22, 0.45);
+  cursor: pointer;
+}
+
+.mrj-auth-panel {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 28rem;
+  max-height: min(85vh, 36rem);
+  display: flex;
+  flex-direction: column;
+  margin-top: 0.5rem;
+  border: 3px solid #241c16;
+  border-radius: 1rem;
+  background: #f3eadc;
+  color: #241c16;
+  box-shadow: 0 18px 40px rgba(36, 28, 22, 0.2);
+  font-family: "Atkinson Hyperlegible", Palatino, Georgia, serif;
+}
+
+.mrj-auth-panel-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  padding: 0.85rem 1rem 0.65rem;
+  border-bottom: 2px solid rgba(36, 28, 22, 0.12);
+}
+
+.mrj-auth-panel-title {
+  margin: 0;
+  font-family: Fraunces, Palatino, Georgia, serif;
+  font-size: 1.35rem;
+  font-weight: 700;
+}
+
+.mrj-auth-panel-close {
+  min-width: 2.5rem;
+  min-height: 2.5rem;
+  padding: 0;
+  border: 2px solid #241c16;
+  border-radius: 0.65rem;
+  background: #fffaf3;
+  font-size: 1.5rem;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.mrj-auth-panel-tabs {
+  display: flex;
+  gap: 0.45rem;
+  padding: 0.55rem 1rem 0;
+}
+
+.mrj-auth-panel-tab {
+  flex: 1;
+  min-height: 2.6rem;
+  border: 2px solid #241c16;
+  border-radius: 0.65rem;
+  background: #fffaf3;
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.mrj-auth-panel-tab[aria-current="true"] {
+  background: #1e5c45;
+  color: #fffaf3;
+}
+
+.mrj-auth-chart-block {
+  margin: 0.75rem 0 0.35rem;
+}
+
+.mrj-auth-chart-title {
+  margin: 0 0 0.35rem;
+  font-size: 1.05rem;
+  font-weight: 700;
+}
+
+.mrj-auth-chart-canvas-wrap {
+  position: relative;
+  width: 100%;
+  min-height: 11rem;
+}
+
+.mrj-auth-chip-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+}
+
+.mrj-auth-tag {
+  display: inline-block;
+  padding: 0.35rem 0.55rem;
+  border-radius: 999px;
+  border: 2px solid rgba(36, 28, 22, 0.2);
+  background: #fffaf3;
+  font-size: 0.95rem;
+  font-weight: 700;
+}
+
+.mrj-auth-panel-body {
+  padding: 0.75rem 1rem 1rem;
+  overflow: auto;
+}
+
+.mrj-auth-panel-summary {
+  margin: 0 0 0.75rem;
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+.mrj-auth-panel-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.mrj-auth-panel-row {
+  margin: 0 0 0.55rem;
+  padding: 0.7rem 0.75rem;
+  background: #fffaf3;
+  border: 2px solid #241c16;
+  border-radius: 0.75rem;
+  font-size: 0.98rem;
+}
+
+.mrj-auth-panel-row span {
+  display: block;
+}
+
+.mrj-auth-panel-item-id {
+  margin-top: 0.15rem;
+  font-size: 0.82rem;
+  font-weight: 400;
+  opacity: 0.75;
+}
+
+.mrj-auth-panel-score {
+  margin-top: 0.25rem;
+  font-size: 0.92rem;
+}
+
+.mrj-auth-panel-foot {
+  margin-top: 0.85rem;
+}
+
+.mrj-auth-panel-foot .mrj-auth-signout {
+  width: 100%;
+}
