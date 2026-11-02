@@ -1370,6 +1370,135 @@ html[dir="rtl"] .chunk { text-align: right; }
 .lane-culture { background: #f5e6d3; }
 .lane-toeic { background: #c8f3ea; }
 a.pack-tile { text-decoration: none; color: inherit; }
+.pack-tile.locked {
+  opacity: 0.45;
+  pointer-events: auto;
+}
+.pack-tile.locked strong::after {
+  content: " 🔒";
+}
+
+.seat-wrap-boundary {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 2px;
+}
+.teacher-start-here-btn {
+  min-height: 32px;
+  padding: 4px 6px;
+  border-radius: 8px;
+  border: 2px solid #1d4ed8;
+  background: #eff6ff;
+  color: #1e3a8a;
+  font-size: 11px;
+  font-weight: 800;
+  line-height: 1.1;
+}
+body.is-teacher .rib .teacher-start-here-btn {
+  display: block;
+  width: 100%;
+  margin-top: 4px;
+  min-height: 36px;
+  font-size: 12px;
+}
+#teacher-start-panel-root {
+  position: fixed;
+  inset: 0;
+  z-index: 10050;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding: 12px;
+  pointer-events: none;
+}
+#teacher-start-panel-root:not([hidden]) { pointer-events: auto; }
+.teacher-start-backdrop {
+  position: absolute;
+  inset: 0;
+  border: 0;
+  background: rgba(0, 0, 0, 0.45);
+}
+.teacher-start-dialog {
+  position: relative;
+  z-index: 1;
+  width: min(520px, 100%);
+  max-height: min(88vh, 720px);
+  overflow: auto;
+  border-radius: 16px;
+  background: #fff;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.25);
+  padding: 16px;
+}
+.teacher-start-header h2 {
+  margin: 0 0 4px;
+  font-size: 1.35rem;
+}
+.teacher-start-sub {
+  margin: 0 0 8px;
+  color: #555;
+  font-size: 0.9rem;
+}
+.teacher-start-close {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  width: 40px;
+  height: 40px;
+  border: 0;
+  border-radius: 999px;
+  background: #eee;
+  font-size: 1.4rem;
+  line-height: 1;
+}
+.teacher-start-section h3 {
+  margin: 16px 0 8px;
+  font-size: 1rem;
+}
+.teacher-start-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.teacher-start-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+  padding: 10px 0;
+  border-bottom: 1px solid #eee;
+}
+.teacher-start-row span {
+  flex: 1 1 140px;
+  font-weight: 600;
+}
+.teacher-start-action {
+  min-height: 44px;
+  min-width: 88px;
+  padding: 8px 12px;
+  border-radius: 10px;
+  border: 2px solid #ccc;
+  background: #f7f7f7;
+  font-weight: 700;
+}
+.teacher-start-action.primary {
+  border-color: #1d4ed8;
+  background: #2563eb;
+  color: #fff;
+}
+.teacher-start-footer {
+  margin-top: 12px;
+  display: flex;
+  justify-content: flex-end;
+}
+.teacher-start-note {
+  margin: 0 0 8px;
+  padding: 8px 10px;
+  border-radius: 10px;
+  background: #fef9c3;
+  font-weight: 600;
+}
+
 @media (min-width: 700px) {
   .index-lanes { grid-template-columns: 1fr 1fr; }
   .lane-little, .lane-adv { grid-column: span 1; }

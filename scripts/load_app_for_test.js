@@ -95,6 +95,7 @@ function bootApp(opts) {
   g.StartSlice = require("../js/start-slice.js");
   g.SpellStop = require("../js/spell-stop.js");
   g.PathLock = require("../js/path-lock.js");
+  g.WMTeacherStart = require("../js/teacher-start-unlock.js");
   g.PackSrc = require("../js/pack-src.js");
   g.WM_TEST_HOOK = true;
   require("../mrj-scores.js");

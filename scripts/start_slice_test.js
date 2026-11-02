@@ -84,6 +84,7 @@ if (cacheKey(index, "js/app.js") !== readBuild()) fail("app cache");
 if (!cacheKey(index, "js/start-slice.js")) fail("start-slice cache");
 if (index.indexOf('id="set-range-banner"') === -1) fail("set range banner");
 
+global.WM_TEMP_UNLOCK_ALL = true;
 const api = bootApp();
 if (!api.chooseStart || !api.markPassed || !api.renderPackStanding) {
   fail("WM_TEST missing chooseStart, markPassed, or renderPackStanding");
@@ -186,7 +187,8 @@ if (data.sliceText !== "Starting at 6 · 5 words: word6 · word7 · word8 · wor
 const seat10 = data.seats.filter(function (s) { return s.id === "w10"; })[0];
 if (!seat10 || seat10.state !== "done doing") fail("w10 both " + (seat10 && seat10.state));
 const host = document.querySelector("#stand-seats");
-const node10 = host.children[9];
+const wrap10 = host.children[9];
+const node10 = wrap10 && wrap10.children && wrap10.children.length ? wrap10.children[0] : wrap10;
 if (!node10 || node10.getAttribute("aria-label") !== "Start at word 10, apple") {
   fail("aria " + (node10 && node10.getAttribute("aria-label")));
 }
