@@ -2122,9 +2122,29 @@
   function sliceCount(set, startNumber) {
     set = set || currentSet();
     const total = set && set.words ? set.words.length : 0;
+    if (Number(state.studySize) === 0) return Math.max(0, total);
     const start = Math.max(1, Math.floor(Number(startNumber)) || 1);
-    if (Number(state.studySize) === 0) return Math.max(0, total - start + 1);
     return studySize(set);
+  }
+
+  /** All chip (studySize 0): always the full pack, never a tail slice from startNumber. */
+  function ensureAllPackLock(set) {
+    set = set || currentSet();
+    if (!allStudyMode() || !set || !set.words || !set.words.length) return false;
+    const total = set.words.length;
+    const lock = Array.isArray(set.meetLock) ? set.meetLock : [];
+    if (Number(set.startNumber) === 1 && lock.length === total) {
+      let match = true;
+      for (let i = 0; i < total; i++) {
+        if (set.words[i].id !== lock[i]) {
+          match = false;
+          break;
+        }
+      }
+      if (match) return false;
+    }
+    chooseStart(set, 1);
+    return true;
   }
 
   function batchWords(set) {
@@ -2262,6 +2282,7 @@
   function chooseStart(set, startNumber) {
     set = set || currentSet();
     if (!set) return null;
+    if (allStudyMode()) startNumber = 1;
     const slice = window.StartSlice.sliceFrom(set.words || [], startNumber, sliceCount(set, startNumber));
     set.startNumber = slice.startNumber;
     set.meetLock = slice.ids.slice();
@@ -2274,6 +2295,10 @@
   function ensureMeetLock(set) {
     set = set || currentSet();
     if (!set) return;
+    if (allStudyMode()) {
+      ensureAllPackLock(set);
+      return;
+    }
     if (set.startNumber) {
       if (!Array.isArray(set.meetLock) || !set.meetLock.length) {
         const slice = window.StartSlice.sliceFrom(set.words || [], set.startNumber, sliceCount(set, set.startNumber));
@@ -2426,6 +2451,7 @@
     state.sets[set.id] = set;
     state.currentSetId = set.id;
     set.lastPlayedAt = Date.now();
+    ensureAllPackLock(set);
     healPathProgress(set);
     persist();
     syncPack();
@@ -2925,6 +2951,10 @@
         btn.title = seat.en || "";
         btn.setAttribute("aria-label", "Start at word " + seat.n + ", " + (seat.en || ""));
         btn.addEventListener("click", function () {
+          if (Number(state.studySize) === 0) {
+            state.studySize = 10;
+            persist();
+          }
           chooseStart(set, seat.n);
           const w = ((set.words) || []).filter(function (word) { return word.id === seat.id; })[0];
           if (w) {
@@ -3002,6 +3032,10 @@
     if (!set) return;
     if (!set.intro) set.intro = {};
     dropStaleMeetLock(set);
+    if (allStudyMode()) {
+      ensureAllPackLock(set);
+      return;
+    }
     if (Number(set.startNumber) >= 1) {
       const expected = expectedRoundIds(set);
       const cur = (set.meetLock || []).join(",");
@@ -5084,6 +5118,8 @@
       sliceCount: sliceCount,
       allStudyMode: allStudyMode,
       allRoundActive: allRoundActive,
+      ensureAllPackLock: ensureAllPackLock,
+      playWords: playWords,
       pathOpen: pathOpen,
       studentLocked: studentLocked,
       healPathProgress: healPathProgress,
