@@ -135,9 +135,41 @@
     }
   }
 
-  /** Jay temporary unlock until proper teacher unlock UI (js/temp-unlock-all.js). */
+  /** Jay temporary unlock until teacher start-here UI (js/temp-unlock-all.js). Set WM_TEMP_UNLOCK_ALL false to enforce locks. */
   function tempUnlockAll() {
     try { return !!window.WM_TEMP_UNLOCK_ALL; } catch (e) { return false; }
+  }
+
+  function rootTeacherUnlock() {
+    if (!state.teacherUnlock || typeof state.teacherUnlock !== "object") {
+      state.teacherUnlock = { packs: {} };
+    }
+    if (window.WMTeacherStart && typeof window.WMTeacherStart.normRootUnlock === "function") {
+      return window.WMTeacherStart.normRootUnlock(state.teacherUnlock);
+    }
+    return state.teacherUnlock;
+  }
+
+  function teacherPathAllows(set, step) {
+    if (tempUnlockAll()) return true;
+    const TU = window.WMTeacherStart;
+    return !!(TU && set && typeof TU.isPathStepUnlocked === "function" && TU.isPathStepUnlocked(set, step));
+  }
+
+  function teacherGroupAllows(set, startNumber) {
+    if (tempUnlockAll()) return true;
+    const TU = window.WMTeacherStart;
+    return !!(TU && set && typeof TU.isGroupUnlocked === "function" && TU.isGroupUnlocked(set, startNumber));
+  }
+
+  function packAllowedForStudent(pid) {
+    if (tempUnlockAll()) return true;
+    const TU = window.WMTeacherStart;
+    if (!TU || typeof TU.curriculumPackOpen !== "function") return true;
+    return TU.curriculumPackOpen(pid, rootTeacherUnlock(), function (otherId) {
+      const s = findSetByPackId(otherId);
+      return !!(s && factoryCleared(s));
+    });
   }
 
   function locksBypassed() {
@@ -202,6 +234,7 @@
 
   function stageNavAllowed(set, step) {
     if (locksBypassed()) return true;
+    if (teacherPathAllows(set, step)) return true;
     if (!set || !window.PathLock) return false;
     if (allRoundActive(set) && (step === "intro" || step === "A")) return false;
     if (step === "games" && roundReadyForGame(set)) return true;
@@ -235,7 +268,44 @@
           el.classList.add("now");
         }
       }
+      const oldHere = el.querySelector(".teacher-start-here-btn");
+      if (oldHere) oldHere.remove();
+      if (teacherNow() && set) {
+        const here = document.createElement("button");
+        here.type = "button";
+        here.className = "teacher-start-here-btn";
+        here.textContent = "Start here";
+        here.addEventListener("click", function (ev) {
+          ev.preventDefault();
+          ev.stopPropagation();
+          teacherUnlockPathAndRefresh(set, jump);
+        });
+        el.appendChild(here);
+      }
     });
+  }
+
+  function teacherUnlockPathAndRefresh(set, step) {
+    const TU = window.WMTeacherStart;
+    if (!TU || !set || !step) return;
+    TU.unlockPathStep(set, step);
+    persist();
+    renderSetHome();
+    if (window.WMTeacherStartPanel && typeof window.WMTeacherStartPanel.render === "function") {
+      window.WMTeacherStartPanel.render();
+    }
+  }
+
+  function teacherStartFromGroup(set, startNumber) {
+    const TU = window.WMTeacherStart;
+    if (!TU || !set) return;
+    TU.unlockGroup(set, startNumber);
+    chooseStart(set, startNumber);
+    persist();
+    renderSetHome();
+    if (window.WMTeacherStartPanel && typeof window.WMTeacherStartPanel.render === "function") {
+      window.WMTeacherStartPanel.render();
+    }
   }
 
   function testSessionActive() {
@@ -359,6 +429,7 @@
 
   function studentLocked(set, step) {
     if (locksBypassed()) return false;
+    if (teacherPathAllows(set, step)) return false;
     if (!set || !window.PathLock) return true;
     if (!tempUnlockAll() && allRoundActive(set) && (step === "intro" || step === "A")) return true;
     if (step === "games" && roundReadyForGame(set)) return false;
@@ -402,6 +473,11 @@
   function pathOpen(step) {
     if (locksBypassed()) return true;
     const set = currentSet();
+    if (teacherPathAllows(set, step)) {
+      rememberFinishedMeet(set);
+      if (step === "games") hideGamesLock();
+      return true;
+    }
     if (!set || !window.PathLock) return false;
     if (!tempUnlockAll() && allRoundActive(set) && (step === "intro" || step === "A")) return false;
     try {
@@ -776,6 +852,7 @@
       currentSetId: null,
       sets: {},
       scoreRows: [],
+      teacherUnlock: { packs: {} },
     };
   }
 
@@ -794,6 +871,9 @@
     }
     if (!parsed.sets || typeof parsed.sets !== "object") parsed.sets = {};
     if (!Array.isArray(parsed.scoreRows)) parsed.scoreRows = [];
+    if (!parsed.teacherUnlock || typeof parsed.teacherUnlock !== "object") {
+      parsed.teacherUnlock = { packs: {} };
+    }
     return parsed;
   }
 
@@ -1098,6 +1178,9 @@
       roundGames: s.roundGames && typeof s.roundGames === "object" ? s.roundGames : {},
       pathHeld: s.pathHeld && typeof s.pathHeld === "object" ? s.pathHeld : {},
       externalPackSrc: s.externalPackSrc || "",
+      teacherUnlock: s.teacherUnlock && typeof s.teacherUnlock === "object"
+        ? s.teacherUnlock
+        : { startAt: null, groups: {}, steps: {} },
     };
   }
 
@@ -1124,6 +1207,9 @@
     set.finalMiss = Array.isArray(merged.finalMiss) ? merged.finalMiss.slice() : set.finalMiss;
     set.roundGames = merged.roundGames && typeof merged.roundGames === "object" ? merged.roundGames : set.roundGames;
     set.pathHeld = merged.pathHeld && typeof merged.pathHeld === "object" ? merged.pathHeld : set.pathHeld;
+    if (merged.teacherUnlock && typeof merged.teacherUnlock === "object") {
+      set.teacherUnlock = merged.teacherUnlock;
+    }
     if (slim.externalPackSrc && !set.externalPackSrc) set.externalPackSrc = slim.externalPackSrc;
     healPathProgress(set);
   }
@@ -1186,6 +1272,7 @@
       currentPackId: cur ? (cur.packId || "") : "",
       sets: sets,
       scoreRows: mergeScoreRows(state.scoreRows || [], []),
+      teacherUnlock: rootTeacherUnlock(),
     };
     if (state.dailyWordLog && state.dailyWordLog.days && Object.keys(state.dailyWordLog.days).length) {
       out.dailyWordLog = state.dailyWordLog;
@@ -1232,6 +1319,11 @@
       if (ss === 0 || ss === 5 || ss === 10 || ss === 15 || ss === 20) state.studySize = ss;
     }
     if (obj.testKind) state.testKind = obj.testKind;
+    if (obj.teacherUnlock && typeof obj.teacherUnlock === "object") {
+      state.teacherUnlock = window.WMTeacherStart && window.WMTeacherStart.mergeRootUnlock
+        ? window.WMTeacherStart.mergeRootUnlock(state.teacherUnlock, obj.teacherUnlock)
+        : obj.teacherUnlock;
+    }
     if (!obj.v && obj.currentSetId) {
       state.sets = obj.sets;
       state.currentSetId = obj.currentSetId;
@@ -2282,6 +2374,7 @@
   function chooseStart(set, startNumber) {
     set = set || currentSet();
     if (!set) return null;
+    if (!teacherNow() && !teacherGroupAllows(set, startNumber)) return null;
     if (allStudyMode()) startNumber = 1;
     const slice = window.StartSlice.sliceFrom(set.words || [], startNumber, sliceCount(set, startNumber));
     set.startNumber = slice.startNumber;
@@ -2544,6 +2637,10 @@
   }
 
   async function openPack(pid) {
+    if (!packAllowedForStudent(pid)) {
+      alert(t("finish_step_first", { n: 1 }) || "Finish the earlier pack first, or ask your teacher to unlock it.");
+      return;
+    }
     const pack = await loadPackFile(pid);
     if (!pack || !pack.words.length) return;
     const existing = Object.keys(state.sets)
@@ -2658,6 +2755,9 @@
       const pid = el.getAttribute("data-pack");
       el.classList.toggle("is-next", pid === next);
       el.classList.toggle("is-done", done(pid));
+      const locked = pid && !packAllowedForStudent(pid);
+      el.classList.toggle("locked", locked);
+      el.setAttribute("aria-disabled", locked ? "true" : "false");
     });
   }
 
@@ -2944,13 +3044,23 @@
     if (host) {
       host.innerHTML = "";
       data.seats.forEach(function (seat) {
+        const aligned = window.StartSlice && window.StartSlice.alignedStart(seat.n) === seat.n;
+        const wrap = document.createElement("div");
+        wrap.className = "seat-wrap" + (aligned ? " seat-wrap-boundary" : "");
         const btn = document.createElement("button");
         btn.type = "button";
         btn.className = "seat " + seat.state;
+        if (!teacherNow() && !teacherGroupAllows(set, seat.n)) {
+          btn.classList.add("locked");
+        }
         btn.textContent = String(seat.n);
         btn.title = seat.en || "";
         btn.setAttribute("aria-label", "Start at word " + seat.n + ", " + (seat.en || ""));
         btn.addEventListener("click", function () {
+          if (!teacherNow() && !teacherGroupAllows(set, seat.n)) {
+            showPathLock({ need: "intro" });
+            return;
+          }
           if (Number(state.studySize) === 0) {
             state.studySize = 10;
             persist();
@@ -2964,7 +3074,19 @@
           if (currentSet() === set) renderSetHome();
           else renderPackStanding(set);
         });
-        host.appendChild(btn);
+        wrap.appendChild(btn);
+        if (teacherNow() && aligned) {
+          const here = document.createElement("button");
+          here.type = "button";
+          here.className = "teacher-start-here-btn";
+          here.textContent = "Start here";
+          here.addEventListener("click", function (ev) {
+            ev.stopPropagation();
+            teacherStartFromGroup(set, seat.n);
+          });
+          wrap.appendChild(here);
+        }
+        host.appendChild(wrap);
       });
     }
     renderAllTile();
@@ -4791,6 +4913,10 @@
       const el = $("#btn-pack-" + pid);
       if (el) el.addEventListener("click", function () {
         if (!canPlay()) return;
+        if (!packAllowedForStudent(pid)) {
+          alert(t("finish_step_first", { n: 1 }) || "Finish the earlier pack first, or ask your teacher to unlock it.");
+          return;
+        }
         openPack(pid);
       });
     });
@@ -5094,6 +5220,61 @@
     return state.dailyWordLog;
   };
 
+  window.WMTeacherStartHooks = {
+    getContext: function () {
+      const set = currentSet();
+      const setsByPack = {};
+      Object.keys(state.sets || {}).forEach(function (k) {
+        const s = state.sets[k];
+        if (s && s.packId) setsByPack[s.packId] = s;
+      });
+      return {
+        studentId: currentStudentId(),
+        packTitle: set ? set.title : "",
+        set: set,
+        rootUnlock: rootTeacherUnlock(),
+        setsByPack: setsByPack,
+      };
+    },
+    listHomePacks: function () {
+      const out = [];
+      $$(".pack-tile[data-pack]").forEach(function (el) {
+        const id = el.getAttribute("data-pack");
+        if (!id) return;
+        const strong = el.querySelector("strong");
+        out.push({ id: id, label: strong ? strong.textContent : id });
+      });
+      return out;
+    },
+    startFromGroup: teacherStartFromGroup,
+    unlockGroupOnly: function (set, startN) {
+      if (window.WMTeacherStart) window.WMTeacherStart.unlockGroupOnly(set, startN);
+    },
+    relockGroup: function (set, startN) {
+      if (window.WMTeacherStart) window.WMTeacherStart.relockGroup(set, startN);
+    },
+    unlockPathStep: function (set, step) {
+      if (window.WMTeacherStart) window.WMTeacherStart.unlockPathStep(set, step);
+    },
+    relockPathStep: function (set, step) {
+      if (window.WMTeacherStart) window.WMTeacherStart.relockPathStep(set, step);
+    },
+    unlockPackLevel: function (packId) {
+      if (!window.WMTeacherStart) return;
+      state.teacherUnlock = window.WMTeacherStart.unlockPackLevel(state.teacherUnlock, packId);
+    },
+    relockPackLevel: function (packId) {
+      if (!window.WMTeacherStart) return;
+      state.teacherUnlock = window.WMTeacherStart.relockPackLevel(state.teacherUnlock, packId);
+    },
+    persistAndRefresh: function () {
+      persist();
+      if (currentScreen === "home") renderHome();
+      if (currentScreen === "set") renderSetHome();
+      paintStudentNameBtn();
+    },
+  };
+
   if (window.WM_TEST_HOOK) {
     window.WM_TEST = {
       isPublicMode: isPublicMode,
@@ -5125,6 +5306,10 @@
       healPathProgress: healPathProgress,
       stageNavAllowed: stageNavAllowed,
       stageNavLocked: stageNavLocked,
+      teacherPathAllows: teacherPathAllows,
+      teacherGroupAllows: teacherGroupAllows,
+      packAllowedForStudent: packAllowedForStudent,
+      rootTeacherUnlock: rootTeacherUnlock,
       onPathJumpClick: onPathJumpClick,
       guardLeaveTest: guardLeaveTest,
       testSessionActive: testSessionActive,

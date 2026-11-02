@@ -51,8 +51,10 @@ const api = bootApp();
     fail("number tiles " + (host && host.children.length));
   }
   for (let i = 0; i < n; i++) {
-    if (host.children[i].textContent !== String(i + 1)) {
-      fail("seat " + (i + 1) + " text " + host.children[i].textContent);
+    const wrap = host.children[i];
+    const seat = wrap && wrap.children && wrap.children.length ? wrap.children[0] : wrap;
+    if (!seat || seat.textContent !== String(i + 1)) {
+      fail("seat " + (i + 1) + " text " + (seat && seat.textContent));
     }
   }
   const slot = document.querySelector("#seat-all-slot");

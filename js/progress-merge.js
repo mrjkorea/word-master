@@ -264,6 +264,39 @@
     return key;
   }
 
+  function mergeTeacherUnlockPack(a, b) {
+    a = a && typeof a === "object" ? a : {};
+    b = b && typeof b === "object" ? b : {};
+    var groups = {};
+    var steps = {};
+    function ingest(g) {
+      if (!g || typeof g !== "object") return;
+      var gm = g.groups && typeof g.groups === "object" ? g.groups : {};
+      var sm = g.steps && typeof g.steps === "object" ? g.steps : {};
+      Object.keys(gm).forEach(function (k) { if (gm[k]) groups[String(k)] = true; });
+      Object.keys(sm).forEach(function (k) { if (sm[k]) steps[String(k)] = true; });
+    }
+    ingest(a);
+    ingest(b);
+    var startAt = null;
+    var aStart = Number(a.startAt);
+    var bStart = Number(b.startAt);
+    if (aStart >= 1) startAt = aStart;
+    if (bStart >= 1 && (startAt == null || bStart < startAt)) startAt = bStart;
+    return { startAt: startAt, groups: groups, steps: steps };
+  }
+
+  function mergeTeacherUnlockRoot(a, b) {
+    a = a && typeof a === "object" ? a : {};
+    b = b && typeof b === "object" ? b : {};
+    var packs = {};
+    var ap = a.packs && typeof a.packs === "object" ? a.packs : {};
+    var bp = b.packs && typeof b.packs === "object" ? b.packs : {};
+    Object.keys(ap).forEach(function (k) { if (ap[k]) packs[String(k)] = true; });
+    Object.keys(bp).forEach(function (k) { if (bp[k]) packs[String(k)] = true; });
+    return { packs: packs };
+  }
+
   function mergePack(a, b) {
     if (!a) return b || {};
     if (!b) return a || {};
@@ -296,6 +329,7 @@
       finalMiss: (Array.isArray(b.finalMiss) && b.finalMiss.length ? b.finalMiss : a.finalMiss) || [],
       roundGames: mergeRoundGames(a.roundGames, b.roundGames),
       pathHeld: mergePathHeld(a.pathHeld, b.pathHeld),
+      teacherUnlock: mergeTeacherUnlockPack(a.teacherUnlock, b.teacherUnlock),
     };
   }
 
@@ -403,6 +437,7 @@
     if (dailyWordLog && dailyWordLog.days && Object.keys(dailyWordLog.days).length) {
       merged.dailyWordLog = dailyWordLog;
     }
+    merged.teacherUnlock = mergeTeacherUnlockRoot(local.teacherUnlock, remote.teacherUnlock);
     return merged;
   }
 

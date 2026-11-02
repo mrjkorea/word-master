@@ -40,7 +40,7 @@ const set = {
 
 const data = api.renderPackStanding(set);
 if (!data) fail("renderPackStanding returned nothing");
-if (data.countText !== "30 / 100 words finished") {
+if (data.countText !== "30 / 100 (30%) words finished") {
   fail("count text " + data.countText);
 }
 if (data.leftText.indexOf("70 to go") !== 0) fail("left text " + data.leftText);
@@ -68,11 +68,20 @@ if (doneSeats !== 30 || doingSeats !== 10 || todoSeats !== 60) {
 const countEl = document.querySelector("#stand-count");
 const leftEl = document.querySelector("#stand-left");
 const seatsEl = document.querySelector("#stand-seats");
-if (!countEl || countEl.textContent !== "30 / 100 words finished") fail("stand-count DOM");
+if (!countEl || countEl.textContent !== "30 / 100 (30%) words finished") fail("stand-count DOM");
 if (!leftEl || leftEl.textContent.indexOf("70 to go") !== 0) fail("stand-left DOM");
 if (!seatsEl || seatsEl.children.length !== 100) fail("seat nodes " + (seatsEl && seatsEl.children.length));
-const domDone = seatsEl.children.filter(function (n) { return n.className.indexOf("done") !== -1; }).length;
-const domDoing = seatsEl.children.filter(function (n) { return n.className.indexOf("doing") !== -1; }).length;
+function seatNode(wrap) {
+  return wrap && wrap.children && wrap.children.length ? wrap.children[0] : wrap;
+}
+const domDone = seatsEl.children.filter(function (n) {
+  const seat = seatNode(n);
+  return seat && seat.className.indexOf("done") !== -1;
+}).length;
+const domDoing = seatsEl.children.filter(function (n) {
+  const seat = seatNode(n);
+  return seat && seat.className.indexOf("doing") !== -1;
+}).length;
 if (domDone !== 30 || domDoing !== 10) fail("DOM seats done=" + domDone + " doing=" + domDoing);
 
 console.log("PACK_STANDING_OK 30/100 next w31-w40 seats 30 done + 10 doing");
