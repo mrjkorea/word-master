@@ -135,6 +135,15 @@
     }
   }
 
+  /** Jay temporary unlock until proper teacher unlock UI (js/temp-unlock-all.js). */
+  function tempUnlockAll() {
+    try { return !!window.WM_TEMP_UNLOCK_ALL; } catch (e) { return false; }
+  }
+
+  function locksBypassed() {
+    return teacherNow() || tempUnlockAll();
+  }
+
   function syncPathRound(set) {
     if (!set || !window.PathLock || typeof window.PathLock.syncRound !== "function") return;
     try { window.PathLock.syncRound(set); } catch (e) {}
@@ -150,7 +159,7 @@
   }
 
   function healPathProgress(set) {
-    if (!set || teacherNow() || !window.PathLock) return false;
+    if (!set || locksBypassed() || !window.PathLock) return false;
     let dirty = false;
     if (typeof window.PathLock.healStudentRound === "function") {
       dirty = window.PathLock.healStudentRound(set, pathOpts()) || dirty;
@@ -192,7 +201,7 @@
   }
 
   function stageNavAllowed(set, step) {
-    if (teacherNow()) return true;
+    if (locksBypassed()) return true;
     if (!set || !window.PathLock) return false;
     if (allRoundActive(set) && (step === "intro" || step === "A")) return false;
     if (step === "games" && roundReadyForGame(set)) return true;
@@ -203,7 +212,7 @@
   }
 
   function stageNavLocked(set, step) {
-    if (teacherNow()) return false;
+    if (locksBypassed()) return false;
     return !stageNavAllowed(set, step);
   }
 
@@ -336,7 +345,7 @@
   function onPathJumpClick(step) {
     if (!canPlay()) return;
     const set = currentSet();
-    if (!teacherNow() && !stageNavAllowed(set, step)) {
+    if (!locksBypassed() && !stageNavAllowed(set, step)) {
       let gate = { need: "intro" };
       try { gate = window.PathLock.can(set, step, pathOpts()); } catch (e) { /* ignore */ }
       showPathLock(gate);
@@ -349,9 +358,9 @@
   }
 
   function studentLocked(set, step) {
-    if (teacherNow()) return false;
+    if (locksBypassed()) return false;
     if (!set || !window.PathLock) return true;
-    if (allRoundActive(set) && (step === "intro" || step === "A")) return true;
+    if (!tempUnlockAll() && allRoundActive(set) && (step === "intro" || step === "A")) return true;
     if (step === "games" && roundReadyForGame(set)) return false;
     if (step === "test") repairTapmapKey(set);
     try { return !window.PathLock.can(set, step, pathOpts()).ok; } catch (e) { return true; }
@@ -391,10 +400,10 @@
   }
 
   function pathOpen(step) {
-    if (teacherNow()) return true;
+    if (locksBypassed()) return true;
     const set = currentSet();
     if (!set || !window.PathLock) return false;
-    if (allRoundActive(set) && (step === "intro" || step === "A")) return false;
+    if (!tempUnlockAll() && allRoundActive(set) && (step === "intro" || step === "A")) return false;
     try {
       if (step === "games" && roundReadyForGame(set)) {
         rememberFinishedMeet(set);
@@ -2729,8 +2738,8 @@
     }
     const introBtn = $("#btn-intro");
     if (introBtn) {
-      introBtn.disabled = allRound || studentLocked(set, "intro");
-      introBtn.classList.toggle("locked", allRound || studentLocked(set, "intro"));
+      introBtn.disabled = (!tempUnlockAll() && allRound) || studentLocked(set, "intro");
+      introBtn.classList.toggle("locked", (!tempUnlockAll() && allRound) || studentLocked(set, "intro"));
     }
     syncPack();
     if (currentScreen === "set" || currentScreen === "intro" || currentScreen === "learn" ||
@@ -3512,7 +3521,7 @@
   function startLearn(reset) {
     const set = currentSet();
     if (!set) return;
-    if (!teacherNow() && !introDone(set)) {
+    if (!locksBypassed() && !introDone(set)) {
       startTapmap();
       return;
     }

@@ -9,6 +9,15 @@
 })(typeof window !== "undefined" ? window : (typeof globalThis !== "undefined" ? globalThis : this), function () {
   var STEPS = ["intro", "A", "B", "C", "games", "test"];
 
+  function tempUnlockAll() {
+    try {
+      var g = typeof window !== "undefined" ? window : null;
+      return !!(g && g.WM_TEMP_UNLOCK_ALL);
+    } catch (e) {
+      return false;
+    }
+  }
+
   function roundKey(set) {
     var ids = [];
     if (set && Array.isArray(set.meetLock) && set.meetLock.length) ids = set.meetLock;
@@ -243,6 +252,7 @@
 
   function can(set, step, opts) {
     var locked = { ok: false, why: "locked", need: "intro" };
+    if (tempUnlockAll()) return { ok: true, why: "ok", need: "" };
     if (!set) return locked;
     var idx = STEPS.indexOf(step);
     if (idx < 0) return locked;
