@@ -22,6 +22,8 @@ const root = path.join(__dirname, "..");
 const index = fs.readFileSync(path.join(root, "index.html"), "utf8");
 if (index.indexOf('id="set-range-banner"') === -1) fail("missing set-range-banner in index.html");
 
+global.WM_TEMP_UNLOCK_ALL = true;
+
 const api = bootApp({
   mode: "student",
   beforeApp: function (g) {
