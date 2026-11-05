@@ -286,10 +286,11 @@
     var packId = String(r.packId || "").trim();
     var kind = String(r.kind || "").trim();
     if (!packId || !kind) return;
-    // A re-attempt gets its own item id, so the score book appends a second row and never
-    // overwrites try 1 (TRY_AGAIN_SPEC). Try 1 keeps the old id exactly as before.
+    // One row per finished try, ALWAYS the same canonical item id (house rule, Fujimoto
+    // 2026-11-06): a suffix would turn one activity into two items and drift the activity
+    // count. attempt / re_attempt in metadata say which try a row is.
     var attempt = Number(r.attempt) > 1 ? Number(r.attempt) : 1;
-    var itemId = packId + ":" + kind + (attempt > 1 ? "#t" + attempt : "");
+    var itemId = packId + ":" + kind;
     var pct = Math.round(100 * score / total);
     var localDateStr =
       root.MRJ_SCORES && typeof root.MRJ_SCORES.localDate === "function"
