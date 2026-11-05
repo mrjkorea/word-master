@@ -2,8 +2,8 @@
 /**
  * Day 2 Words "Try again" (TRY_AGAIN_SPEC).
  * Proves the two halves that are pure logic:
- *   1. progress.logResult posts every try and gives try 2+ its own item id,
- *      so the score book appends a row and never overwrites try 1.
+ *   1. progress.logResult posts one row per finished try with the SAME canonical
+ *      item id every time (no #t2 suffix), marking each row with attempt / re_attempt.
  *   2. the cloud save keeps the try log (tryN / tryRows) instead of dropping it.
  *
  * Run: node scripts/test-day2-try-again.mjs
@@ -87,9 +87,9 @@ function loadPackSave() {
 }
 
 (async function main() {
-  await t('try 1 keeps the old item id, so no existing row changes', () => {
+  await t('try 1 posts the canonical item id', () => {
     const { api, posts, notes } = loadProgress();
-    api.logResult({ packId: 'basic_a_u1', packTitle: 'Numbers 1 to 10', kind: 'final', score: 9, total: 10, meta: {} });
+    api.logResult({ packId: 'basic_a_u1', packTitle: 'Numbers 1 to 10', kind: 'final', score: 9, total: 10, attempt: 1, meta: {} });
     assert.equal(posts.length, 1);
     assert.equal(posts[0].itemId, 'basic_a_u1:final');
     assert.equal(posts[0].metadata.attempt, 1);
@@ -97,14 +97,16 @@ function loadPackSave() {
     assert.equal(notes[0].itemId, 'basic_a_u1:final');
   });
 
-  await t('try 2 gets its own item id and says re_attempt', () => {
+  await t('try 2 is a second row on the SAME item id, no #t2 suffix', () => {
     const { api, posts } = loadProgress();
     api.logResult({ packId: 'basic_a_u1', kind: 'final', score: 9, total: 10, attempt: 1, meta: {} });
     api.logResult({ packId: 'basic_a_u1', kind: 'final', score: 8, total: 10, attempt: 2, meta: { misses: ['c'] } });
-    assert.equal(posts.length, 2);
+    assert.equal(posts.length, 2, 'two finished tries = two rows');
     assert.equal(posts[0].itemId, 'basic_a_u1:final');
-    assert.equal(posts[1].itemId, 'basic_a_u1:final#t2');
-    assert.notEqual(posts[0].itemId, posts[1].itemId, 'try 1 cannot be overwritten by try 2');
+    assert.equal(posts[1].itemId, 'basic_a_u1:final', 'same canonical item id, so the activity count stays 1');
+    assert.equal(posts[1].itemId.includes('#'), false, 'no suffix');
+    assert.equal(posts[0].metadata.attempt, 1);
+    assert.equal(posts[0].metadata.re_attempt, false);
     assert.equal(posts[1].metadata.attempt, 2);
     assert.equal(posts[1].metadata.re_attempt, true);
     assert.deepEqual(posts[1].metadata.misses, ['c'], 'the old metadata is kept');
@@ -112,10 +114,11 @@ function loadPackSave() {
     assert.equal(posts[1].correctness, 'correct');
   });
 
-  await t('try 3 keeps counting up, never back to an earlier id', () => {
+  await t('try 3 is a third row on the same id, attempt 3', () => {
     const { api, posts } = loadProgress();
     api.logResult({ packId: 'int2a_u3', kind: 'test_hard', score: 10, total: 10, attempt: 3, meta: {} });
-    assert.equal(posts[0].itemId, 'int2a_u3:test_hard#t3');
+    assert.equal(posts[0].itemId, 'int2a_u3:test_hard');
+    assert.equal(posts[0].metadata.attempt, 3);
     assert.equal(posts[0].metadata.re_attempt, true);
   });
 
