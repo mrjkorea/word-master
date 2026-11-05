@@ -286,7 +286,10 @@
     var packId = String(r.packId || "").trim();
     var kind = String(r.kind || "").trim();
     if (!packId || !kind) return;
-    var itemId = packId + ":" + kind;
+    // A re-attempt gets its own item id, so the score book appends a second row and never
+    // overwrites try 1 (TRY_AGAIN_SPEC). Try 1 keeps the old id exactly as before.
+    var attempt = Number(r.attempt) > 1 ? Number(r.attempt) : 1;
+    var itemId = packId + ":" + kind + (attempt > 1 ? "#t" + attempt : "");
     var pct = Math.round(100 * score / total);
     var localDateStr =
       root.MRJ_SCORES && typeof root.MRJ_SCORES.localDate === "function"
@@ -321,7 +324,10 @@
             scoreValue: score,
             scoreMax: total,
             correctness: pct >= 80 ? "correct" : "incorrect",
-            metadata: r.meta || {},
+            metadata: Object.assign({}, r.meta || {}, {
+              attempt: attempt,
+              re_attempt: attempt > 1,
+            }),
           })
           .catch(function () {});
       } catch (e) {}

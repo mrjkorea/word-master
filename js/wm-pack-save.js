@@ -62,6 +62,9 @@
     if (p.srsStage) out.srsStage = Number(p.srsStage) || 0;
     if (p.srsNextAt != null) out.srsNextAt = p.srsNextAt;
     if (p.final) out.final = p.final;
+    // Try again keeps every finished try, so the try log has to survive the cloud save.
+    if (Number(p.tryN) >= 1) out.tryN = Number(p.tryN);
+    if (isNonEmptyArray(p.tryRows)) out.tryRows = p.tryRows.slice(-40);
     if (p.check) out.check = p.check;
     if (isNonEmptyArray(p.finalMiss)) out.finalMiss = p.finalMiss.slice();
     if (!aggressive) {

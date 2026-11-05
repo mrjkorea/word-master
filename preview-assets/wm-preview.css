@@ -123,3 +123,20 @@ html .mrj-auth .mrj-auth-door-login, html .mrj-auth .mrj-auth-submit { backgroun
 }
 .pv-lang-auth-portal .pv-lang { pointer-events: auto; }
 @media (max-width: 480px) { .pv-lang-pop { grid-template-columns: repeat(2, minmax(0, 1fr)); width: min(340px, calc(100vw - 16px)); } }
+/* Try again (TRY_AGAIN_SPEC): blue secondary button beside Done, warning card, Try N chip. */
+.result-row { display: flex; flex-wrap: nowrap; gap: .6rem; justify-content: center; align-items: stretch; margin-top: .5rem; }
+.result-row .chunk { width: auto !important; flex: 1 1 0; min-width: 0; min-height: 56px; text-align: center !important; place-content: center; }
+.chunk.trybtn { background: #fff !important; color: #0b4bb8 !important; border: 3px solid #1b6ef3 !important; box-shadow: 0 5px 0 #b9d4ff !important; }
+.chunk.trybtn strong, .chunk.trybtn em { color: #0b4bb8 !important; }
+.chunk.yesbtn { background: linear-gradient(180deg, #1b6ef3, #0b4bb8) !important; color: #fff !important; border: 0 !important; box-shadow: 0 5px 0 #082f78 !important; }
+.chunk.yesbtn strong, .chunk.yesbtn em { color: #fff !important; }
+.chunk.ghost { background: #eef1f6 !important; color: var(--ink) !important; box-shadow: 0 5px 0 #c8d0da !important; }
+.trychip { display: inline-block; background: #1b6ef3; color: #fff; font: 800 .8rem var(--font-ui); padding: .18rem .6rem; border-radius: 999px; margin-left: .4rem; vertical-align: middle; }
+.trychip[hidden] { display: none; }
+.tries { font-weight: 800; margin: .35rem 0 0; }
+.bestpct { font-size: .9rem; color: #6b7b70; margin: .1rem 0 .35rem; }
+.trymodal { position: fixed; inset: 0; background: #0006; display: grid; place-items: center; z-index: 4000; padding: 16px; }
+.trycard { background: #fff; border-radius: 22px; padding: 18px 16px; max-width: 360px; width: 100%; text-align: center; box-shadow: 0 12px 34px #0005; }
+.trycard b { font-size: 1.35rem; }
+.trycard p { margin: .5rem 0 .9rem; font-size: 1.05rem; color: #333; }
+.tryrow { display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; }

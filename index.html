@@ -446,6 +446,7 @@
             <span id="test-ko">Easy test</span>
           </div>
           <p class="prog-text" id="test-prog">1 / 10</p>
+          <span class="trychip" id="test-try-chip" hidden>Try 2</span>
         </div>
         <article class="sticker-card" id="test-card">
           <button type="button" class="speaker" id="btn-test-speak" data-i18n-aria="speak_word">🔊</button>
@@ -464,12 +465,17 @@
         <div class="scoreboard" id="test-score" hidden>
           <h3 id="test-score-title"></h3>
           <p id="test-score-line"></p>
+          <p class="tries" id="test-tries" hidden></p>
+          <p class="bestpct" id="test-best" hidden></p>
           <ul class="miss-list" id="test-misses" hidden></ul>
           <label class="forever-box" id="forever-box" hidden>
             <input type="checkbox" id="chk-forever" />
             <span data-i18n="forever_help">Remember forever — we’ll remind you on this phone later (1 day, then 3, 7, 21, 60).</span>
           </label>
-          <button type="button" class="chunk primary" id="btn-test-home" data-i18n="back_set">Back to set</button>
+          <div class="result-row">
+            <button type="button" class="chunk trybtn" id="btn-test-tryagain">🔁 Try again</button>
+            <button type="button" class="chunk primary" id="btn-test-home" data-i18n="back_set">Back to set</button>
+          </div>
         </div>
         </div>
       </section>
@@ -552,7 +558,7 @@
 
   <link rel="stylesheet" href="https://mrjkorea.github.io/mrj-signin/mrj-auth.css?v=20261030-cf-login-1.7.3">
   <link rel="stylesheet" href="preview-assets/mrj-theme.css?v=live4">
-  <link rel="stylesheet" href="preview-assets/wm-preview.css?v=live4">
+  <link rel="stylesheet" href="preview-assets/wm-preview.css?v=20261106-try-again">
   <script src="preview-assets/preview-ui.js?v=live4" defer></script>
   <script src="js/pack-src.js?v=20261016-public"></script>
   <script src="js/public-pack.js?v=20261016-public"></script>
@@ -571,20 +577,20 @@
   <script src="js/progress-config.js?v=20261006-pack"></script>
   <script src="js/progress-merge.js?v=20261029-auth-teacher-chip-visible-dd5b"></script>
   <script src="js/score-day-log.js?v=20261014-daily"></script>
-  <script src="js/wm-pack-save.js?v=20261102-teacher-start-here"></script>
-  <script src="js/progress.js?v=20261102-teacher-start-here"></script>
+  <script src="js/wm-pack-save.js?v=20261106-try-again"></script>
+  <script src="js/progress.js?v=20261106-try-again"></script>
   <script src="js/class-progress.js?v=20261102-teacher-start-here"></script>
   <script src="js/teacher-classroom.js?v=20261013-cloud"></script>
   <script src="js/class-progress-ui.js?v=20261014-daily"></script>
   <script src="js/score-progress-panel.js?v=20261014-daily"></script>
   <script src="js/mrj-teacher-unlock.js?v=20261029-auth-teacher-chip-visible-dd5b"></script>
-  <script>window.WM_BUILD_ID="20261104-j2donga-bekbal-packs";</script>
+  <script>window.WM_BUILD_ID="20261106-try-again";</script>
   <script src="js/version-watch.js?v=20261102-teacher-start-here"></script>
   <script src="js/spell-stop.js?v=20260930-spellstop"></script>
   <script src="js/temp-unlock-all.js?v=20261102-teacher-start-here"></script>
   <script src="js/teacher-start-unlock.js?v=20261102-teacher-start-here"></script>
   <script src="js/teacher-start-panel.js?v=20261102-teacher-start-here"></script>
   <script src="js/path-lock.js?v=20261102-teacher-start-here"></script>
-  <script src="js/app.js?v=20261104-j2donga-bekbal-packs"></script>
+  <script src="js/app.js?v=20261106-try-again"></script>
 </body>
 </html>

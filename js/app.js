@@ -4073,6 +4073,7 @@
     quiz.index = 0;
     quiz.score = 0;
     quiz.mistakes = [];
+    quiz.tryNo = nextTryNo(set);
     if (!wide) state.finalTest = false;
     const pick = $("#test-pick");
     const play = $("#test-play");
@@ -4096,6 +4097,7 @@
     quiz.score = 0;
     quiz.typed = "";
     quiz.mistakes = [];
+    quiz.tryNo = nextTryNo(set);
     if (!wide) state.finalTest = false;
     const pick = $("#test-pick");
     const play = $("#test-play");
@@ -4104,6 +4106,93 @@
     showScreen("test");
     $("#test-score").hidden = true;
     renderQuiz();
+  }
+
+  // ---------- tries: Try again keeps every finished try (TRY_AGAIN_SPEC) ----------
+  let lastTest = null;
+
+  function packTries(set) {
+    if (!set) return [];
+    return Array.isArray(set.tryRows) ? set.tryRows : [];
+  }
+
+  function nextTryNo(set) {
+    return packTries(set).length + 1;
+  }
+
+  /** Append one finished try. Nothing earlier is edited, so best score and pass are kept. */
+  function notePackTry(set, kind, score, total, passed) {
+    if (!set) return 1;
+    const rows = packTries(set).slice();
+    const n = rows.length + 1;
+    rows.push({
+      n: n,
+      kind: String(kind || ""),
+      at: Date.now(),
+      score: Number(score) || 0,
+      total: Number(total) || 0,
+      pct: total ? Math.round((100 * score) / total) : 0,
+      pass: !!passed,
+      source: teacherNow() ? "teacher" : "student",
+    });
+    set.tryRows = rows;
+    set.tryN = n;
+    return n;
+  }
+
+  /** Try N line and Best line under a finished result. */
+  function paintTries(set, attempt) {
+    const tries = $("#test-tries");
+    const best = $("#test-best");
+    if (!tries || !best) return;
+    if (!attempt || attempt < 2) {
+      tries.hidden = true;
+      best.hidden = true;
+      return;
+    }
+    tries.hidden = false;
+    tries.textContent = "Try " + attempt + " \u00b7 every try is kept";
+    let top = null;
+    packTries(set).forEach(function (r) {
+      if (!top || r.pct > top.pct) top = r;
+    });
+    if (top) {
+      best.hidden = false;
+      best.textContent = "Best " + top.pct + "% (try " + top.n + ")";
+    } else {
+      best.hidden = true;
+    }
+  }
+
+  /** One card, one sentence, two answers. Yes restarts the same test at its first item. */
+  function askTryAgain(yes) {
+    if ($("#try-again-layer")) return;
+    const layer = document.createElement("div");
+    layer.className = "trymodal";
+    layer.id = "try-again-layer";
+    layer.innerHTML =
+      '<div class="trycard"><b>Try again?</b><p>Your result now is saved. Nothing is erased.</p>' +
+      '<div class="tryrow"><button type="button" class="chunk yesbtn" id="try-yes">Yes, try again</button>' +
+      '<button type="button" class="chunk ghost" id="try-no">No, keep this</button></div></div>';
+    document.body.appendChild(layer);
+    $("#try-no").addEventListener("click", function () { layer.remove(); });
+    $("#try-yes").addEventListener("click", function () {
+      layer.remove();
+      yes();
+    });
+    layer.addEventListener("click", function (e) {
+      if (e.target === layer) layer.remove();
+    });
+  }
+
+  function retryTest() {
+    const set = currentSet();
+    const t2 = lastTest || (set && set.final ? { kind: "final", wide: true } : null);
+    if (!t2) return;
+    askTryAgain(function () {
+      if (t2.kind === "hard") startHard(t2.wide);
+      else startEasy(t2.wide);
+    });
   }
 
   function renderQuiz() {
@@ -4117,6 +4206,15 @@
       ? ("All " + quiz.items.length + " test")
       : (quiz.kind === "easy" ? t("easy_name") : t("hard_name"));
     $("#test-prog").textContent = quiz.index + 1 + " / " + quiz.items.length;
+    const tryChip = $("#test-try-chip");
+    if (tryChip) {
+      if (quiz.tryNo > 1) {
+        tryChip.textContent = "Try " + quiz.tryNo;
+        tryChip.hidden = false;
+      } else {
+        tryChip.hidden = true;
+      }
+    }
     $("#test-score").hidden = true;
     const en = $("#test-en-word");
     const ko = $("#test-ko-word");
@@ -4217,6 +4315,8 @@
     const pct = Math.round((100 * quiz.score) / total);
     const passed = pct >= PASS_PCT;
     const misses = quiz.mistakes || [];
+    const attemptNo = notePackTry(currentSet(), "final", quiz.score, total, passed);
+    lastTest = { kind: quiz.kind, wide: true };
     $("#test-score-title").textContent = pct + "%";
     $("#test-score-line").textContent = quiz.score + " / " + total + " right  ·  " + (passed
       ? "Passed ✅ Pack finished."
@@ -4266,10 +4366,12 @@
         kind: "final",
         score: quiz.score,
         total: total,
-        meta: { misses: missIds, passed: !!passed },
+        attempt: attemptNo,
+        meta: { misses: missIds, passed: !!passed, attempt: attemptNo, re_attempt: attemptNo > 1 },
       });
       persist();
     }
+    paintTries(currentSet(), attemptNo);
   }
 
   function finishQuiz() {
@@ -4288,6 +4390,8 @@
     const total = quiz.items.length || 1;
     const pct = Math.round((100 * quiz.score) / total);
     const misses = quiz.mistakes || [];
+    const attemptNo = notePackTry(currentSet(), quiz.kind, quiz.score, total, pct >= PASS_PCT);
+    lastTest = { kind: quiz.kind, wide: false };
     stampCheck(currentSet(), quiz.score, quiz.items.length);
     $("#test-score-title").textContent = pct + "%";
     if (pct < PASS_PCT) {
@@ -4323,10 +4427,12 @@
           kind: quiz.kind === "hard" ? "test_hard" : "test_easy",
           score: quiz.score,
           total: total,
-          meta: { misses: missIds, passed: false },
+          attempt: attemptNo,
+          meta: { misses: missIds, passed: false, attempt: attemptNo, re_attempt: attemptNo > 1 },
         });
         persist();
       }
+      paintTries(currentSet(), attemptNo);
       setTimeout(function () { startLearnAt("A"); }, 1600);
       return;
     }
@@ -4357,7 +4463,8 @@
         kind: quiz.kind === "hard" ? "test_hard" : "test_easy",
         score: quiz.score,
         total: total,
-        meta: { misses: missIds, passed: true },
+        attempt: attemptNo,
+        meta: { misses: missIds, passed: true, attempt: attemptNo, re_attempt: attemptNo > 1 },
       });
       persist();
     }
@@ -4371,6 +4478,7 @@
       box.hidden = false;
       if (chk) chk.checked = !!(currentSet() && currentSet().srsTrying);
     }
+    paintTries(currentSet(), attemptNo);
   }
 
   function showGamesScreen() {
@@ -5034,6 +5142,8 @@
         showScreen("set");
       });
     });
+    const testTryAgain = $("#btn-test-tryagain");
+    if (testTryAgain) testTryAgain.addEventListener("click", retryTest);
     $$("#game-slots .slot.playable").forEach(function (slot) {
       slot.addEventListener("click", function () {
         if (!canPlay()) return;
