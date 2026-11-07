@@ -25,3 +25,8 @@ question cues: audio/q/<item_id>.mp3 (3,562 items, 2026-11-08)
   48 kbps to keep the repo small. Mean level about -21 dB.
   Where one word has a different question in two packs, the cue uses the question
   most packs use.
+
+Word Master copy only
+  This copy has no cue mp3 files. index.html sets <meta name="lf-cue-base"> so the game loads
+  every cue from https://mrjkorea.github.io/leap-frog/audio/q/ (GitHub Pages sends CORS *).
+  Reason: a second copy of 3,573 files made the Pages deploy time out on 2026-11-08.
