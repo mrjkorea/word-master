@@ -7,6 +7,7 @@
  *   "skipSteps": ["meet","learn","match"]          steps this pack must not show
  *   "uiLang": "ko"            Korean interface; the language picker is hidden
  *   "langs": ["en","ko"]      the only interface languages allowed
+ *   "tts": true              no mp3 files: speak with the device English voice
  *   "kind": "sentence"        one English sentence plus Korean per card; no Match game
  *
  * Used by the mrj-pack packs (Middle School Tests) and any pack that carries the flags.
@@ -30,7 +31,7 @@
   };
 
   function empty() {
-    return { noPictures: false, startAt: "", uiLang: "", sentence: false, allow: [], skip: [], langs: [] };
+    return { noPictures: false, startAt: "", uiLang: "", sentence: false, allow: [], skip: [], langs: [], tts: false };
   }
 
   function truthy(v) {
@@ -75,13 +76,20 @@
       allow: stepList(data.steps),
       skip: stepList(data.skipSteps),
       langs: langList(data.langs),
+      tts: truthy(data.tts),
     };
   }
 
   function any(flags) {
-    return !!(flags && (flags.noPictures || flags.startAt || flags.uiLang || flags.sentence
+    return !!(flags && (flags.noPictures || flags.startAt || flags.uiLang || flags.sentence || flags.tts
       || (flags.allow && flags.allow.length) || (flags.skip && flags.skip.length)
       || (flags.langs && flags.langs.length)));
+  }
+
+  /** A pack with no mp3 files says so with tts, or is a noPictures pack as before. */
+  function usesDeviceSpeech(flags) {
+    if (!flags) return false;
+    return !!(flags.tts || flags.noPictures);
   }
 
   /** True when the student path must not use this step for this pack. */
@@ -146,5 +154,6 @@
     language: language,
     langLocked: langLocked,
     langAllowed: langAllowed,
+    usesDeviceSpeech: usesDeviceSpeech,
   };
 });

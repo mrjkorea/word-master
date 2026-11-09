@@ -1989,12 +1989,12 @@
     return playClip(packBase() + "/audio/" + v + "/" + id + ".mp3", 8000);
   }
 
-  /* School test packs ship no audio files, so Dictation would be silent.
-     Only a pack with noPictures (English and Korean only) uses the device voice. */
+  /* Packs with no mp3 files say so with tts, or carry noPictures (school test packs),
+     and are spoken with the device voice instead of a 404 audio file. */
   function packUsesDeviceSpeech() {
     const set = currentSet();
     if (!set) return false;
-    if (!packFlagsOf(set).noPictures) return false;
+    if (!PackFlags || !PackFlags.usesDeviceSpeech(packFlagsOf(set))) return false;
     return hasSpeech();
   }
 
@@ -2465,9 +2465,9 @@
     return playWords(set).map(function (w) { return w.id; }).join(",");
   }
 
-  /** Flags that travel inside the pack JSON (noPictures, startAt, steps, skipSteps, uiLang, langs, kind). */
+  /** Flags that travel inside the pack JSON (noPictures, startAt, steps, skipSteps, uiLang, langs, tts, kind). */
   function packFlagsOf(set) {
-    if (!PackFlags) return { noPictures: false, startAt: "", uiLang: "", sentence: false, allow: [], skip: [], langs: [] };
+    if (!PackFlags) return { noPictures: false, startAt: "", uiLang: "", sentence: false, allow: [], skip: [], langs: [], tts: false };
     return (set && set.packFlags) || PackFlags.empty();
   }
 
