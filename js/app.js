@@ -2497,11 +2497,12 @@
     const locked = PackFlags.langLocked(f);
     if (want) {
       if (!state.localeBefore) state.localeBefore = state.locale || "en";
-      if (state.locale !== want) {
-        state.locale = want;
-        syncI18nFromState();
-        if (I18n && I18n.applyDom && typeof document !== "undefined") I18n.applyDom(document);
-      }
+      if (state.locale !== want) state.locale = want;
+      // Always repaint the static labels. A pack opened while the locale was
+      // ALREADY ko used to skip the repaint and keep its English path labels,
+      // which broke Jay's Korean-only rule for the middle-school packs.
+      syncI18nFromState();
+      if (I18n && I18n.applyDom && typeof document !== "undefined") I18n.applyDom(document);
     }
     if (locked) {
       if (root) {

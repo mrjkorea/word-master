@@ -80,6 +80,7 @@ function bootApp(opts) {
     createElement: function () { return makeEl(); },
     addEventListener: function () {},
     body: el("body"),
+    documentElement: el("html"),
     activeElement: null,
   };
   g.Audio = function () {

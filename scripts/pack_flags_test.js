@@ -113,10 +113,23 @@ const PACKS = {
   },
 };
 
+let applyDomCalls = 0;
 const api = bootApp({
   mode: "student",
   beforeApp: function (g) {
     g.PackFlags = PackFlags;
+    // The real i18n, wrapped so the test can see the DOM repaint that turns the
+    // static path labels Korean. Bug this guards: a pack opened while the
+    // locale was already ko skipped the repaint and kept English labels.
+    require("../js/i18n.js");
+    const realI18n = g.WordFactoryI18n;
+    if (!realI18n) fail("i18n module did not expose WordFactoryI18n");
+    const origApplyDom = realI18n.applyDom;
+    realI18n.applyDom = function (root) {
+      applyDomCalls += 1;
+      return origApplyDom.call(realI18n, root);
+    };
+    g.WordFactoryI18n = realI18n;
     g.fetch = function (url) {
       const body = PACKS[url];
       if (!body) return Promise.reject(new Error("offline: " + url));
@@ -156,6 +169,19 @@ const PLAIN_SRC = "https://mrjkorea.github.io/news-words/packs/news-test.json";
 
   const state = api.getState();
   if (state.locale !== "ko") fail("uiLang ko was not applied, locale is " + state.locale);
+
+  // Regression: reload the flagged pack while the locale is ALREADY ko. The
+  // static labels must still be repainted, so a student never sees English
+  // path labels beside Korean text.
+  api.getState().locale = "ko";
+  const applyBefore = applyDomCalls;
+  const againOk = await api.loadExternalPackFromSrc(SRC);
+  if (!againOk) fail("flagged pack did not reload");
+  if (applyDomCalls <= applyBefore) {
+    fail("redraw skipped: a pack opened while the locale was already ko kept its English labels");
+  }
+  if (api.getState().locale !== "ko") fail("reload lost the ko locale");
+  if (api.packFirstStep(api.currentSet()) !== "B") fail("reload lost the Dictation start");
 
   const plainOk = await api.loadExternalPackFromSrc(PLAIN_SRC);
   if (!plainOk) fail("plain pack did not load");
