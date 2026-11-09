@@ -140,3 +140,7 @@ html .mrj-auth .mrj-auth-door-login, html .mrj-auth .mrj-auth-submit { backgroun
 .trycard b { font-size: 1.35rem; }
 .trycard p { margin: .5rem 0 .9rem; font-size: 1.05rem; color: #333; }
 .tryrow { display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; }
+
+/* The top bar is a dark accent gradient, so the pack banner needs light text.
+   app.css kept --navy here, which made "중2능률 U07 · Words 01" almost invisible. */
+html[data-book] .topbar .set-range-banner { color: rgba(255,255,255,.95); }

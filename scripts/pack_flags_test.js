@@ -28,6 +28,44 @@ if (flagged.uiLang !== "ko") fail("uiLang not read");
 if (!flagged.sentence) fail("kind sentence not read");
 if (!PackFlags.any(flagged)) fail("any() should see flags");
 
+/* Jay's full field set, as Middle School Tests sends it. */
+const full = PackFlags.read({
+  noPictures: true,
+  startAt: "dictation",
+  steps: ["dictation", "writing", "test"],
+  skipSteps: ["meet", "learn", "match"],
+  uiLang: "ko",
+  langs: ["en", "ko"],
+});
+if (full.allow.join(",") !== "B,C,test") fail("steps should map to B,C,test, got " + full.allow.join(","));
+if (full.skip.join(",") !== "intro,A,games") fail("skipSteps should map to intro,A,games, got " + full.skip.join(","));
+if (full.langs.join(",") !== "en,ko") fail("langs not read");
+if (!PackFlags.langLocked(full)) fail("langs en+ko must lock the picker");
+if (!PackFlags.langAllowed(full, "ko")) fail("ko must be allowed");
+if (PackFlags.langAllowed(full, "ja")) fail("ja must not be allowed");
+if (PackFlags.language(full) !== "ko") fail("language should be ko");
+["intro", "A", "games"].forEach(function (step) {
+  if (!PackFlags.skips(full, step)) fail("skipSteps/steps must skip " + step);
+});
+["B", "C", "test"].forEach(function (step) {
+  if (PackFlags.skips(full, step)) fail("jay field set must keep " + step);
+});
+if (PackFlags.firstStep(full) !== "B") fail("first step should be Dictation");
+
+/* A steps list alone, with no startAt, still hides every other step. */
+const allowOnly = PackFlags.read({ steps: ["writing", "test"] });
+if (!PackFlags.skips(allowOnly, "intro")) fail("steps list must hide Meet");
+if (!PackFlags.skips(allowOnly, "B")) fail("steps list must hide Dictation when it is not listed");
+if (PackFlags.skips(allowOnly, "C")) fail("steps list must keep Write");
+if (PackFlags.firstStep(allowOnly) !== "C") fail("first step should be the first listed step");
+if (!PackFlags.skips(allowOnly, "games")) fail("steps list without games must hide games");
+
+const skipOnly = PackFlags.read({ skipSteps: ["meet", "match"] });
+if (!PackFlags.skips(skipOnly, "intro")) fail("skipSteps meet must skip Meet");
+if (!PackFlags.skips(skipOnly, "games")) fail("skipSteps match must skip games");
+if (PackFlags.skips(skipOnly, "B")) fail("skipSteps must not touch Dictation");
+if (PackFlags.langLocked(skipOnly)) fail("no language field must keep the picker");
+
 const plain = PackFlags.read({ id: "nouns100", words: [] });
 if (PackFlags.any(plain)) fail("a pack without flags must stay plain");
 ["intro", "A", "B", "C", "games", "test"].forEach(function (step) {
@@ -62,7 +100,10 @@ const PACKS = {
     kind: "sentence",
     noPictures: true,
     startAt: "dictation",
+    steps: ["dictation", "writing", "test"],
+    skipSteps: ["meet", "learn", "match"],
     uiLang: "ko",
+    langs: ["en", "ko"],
     words: WORDS,
   },
   "https://mrjkorea.github.io/news-words/packs/news-test.json": {
@@ -104,6 +145,7 @@ const PLAIN_SRC = "https://mrjkorea.github.io/news-words/packs/news-test.json";
   if (api.packStepSkipped(set, "B")) fail("Dictation itself must not be skipped");
   if (!api.packStepSkipped(set, "games")) fail("games still in a sentence pack");
   if (api.packFirstStep(set) !== "B") fail("first step is not Dictation");
+  if (!api.packFlagsOf(set).allow.length) fail("steps list was not kept on the set");
 
   if (api.tapmapDone(set) !== true) fail("picture step is still pending");
   if (api.studentLocked(set, "B")) fail("Dictation is locked: the student cannot start");

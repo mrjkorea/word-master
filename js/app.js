@@ -2465,9 +2465,9 @@
     return playWords(set).map(function (w) { return w.id; }).join(",");
   }
 
-  /** Flags that travel inside the pack JSON (noPictures, startAt, uiLang, kind). */
+  /** Flags that travel inside the pack JSON (noPictures, startAt, steps, skipSteps, uiLang, langs, kind). */
   function packFlagsOf(set) {
-    if (!PackFlags) return { noPictures: false, startAt: "", uiLang: "", sentence: false };
+    if (!PackFlags) return { noPictures: false, startAt: "", uiLang: "", sentence: false, allow: [], skip: [], langs: [] };
     return (set && set.packFlags) || PackFlags.empty();
   }
 
@@ -2493,16 +2493,20 @@
     if (!set || !PackFlags) return;
     const f = packFlagsOf(set);
     const root = typeof document !== "undefined" ? document.documentElement : null;
-    if (f.uiLang) {
+    const want = PackFlags.language(f);
+    const locked = PackFlags.langLocked(f);
+    if (want) {
       if (!state.localeBefore) state.localeBefore = state.locale || "en";
-      if (state.locale !== f.uiLang) {
-        state.locale = f.uiLang;
+      if (state.locale !== want) {
+        state.locale = want;
         syncI18nFromState();
         if (I18n && I18n.applyDom && typeof document !== "undefined") I18n.applyDom(document);
       }
+    }
+    if (locked) {
       if (root) {
         if (root.classList) root.classList.add("wm-lang-locked");
-        root.lang = f.uiLang;
+        if (want) root.lang = want;
       }
     } else {
       if (root) {
@@ -2511,12 +2515,10 @@
       }
       if (state.localeBefore && state.locale !== state.localeBefore) {
         state.locale = state.localeBefore;
-        state.localeBefore = "";
         syncI18nFromState();
         if (I18n && I18n.applyDom && typeof document !== "undefined") I18n.applyDom(document);
-      } else if (state.localeBefore) {
-        state.localeBefore = "";
       }
+      state.localeBefore = "";
     }
     if (f.sentence && window.PathLock && typeof window.PathLock.markGameDone === "function") {
       try {
