@@ -48,6 +48,7 @@
   };
 
   const I18n = window.WordFactoryI18n;
+  const PackFlags = window.PackFlags;
   const t = function (key, vars) { return I18n ? I18n.t(key, vars) : key; };
 
   function localeCode() {
@@ -234,6 +235,7 @@
 
   function stageNavAllowed(set, step) {
     if (locksBypassed()) return true;
+    if (packStepSkipped(set, step)) return true;
     if (teacherPathAllows(set, step)) return true;
     if (!set || !window.PathLock) return false;
     if (allRoundActive(set) && (step === "intro" || step === "A")) return false;
@@ -258,6 +260,7 @@
     $$("#path-stage-strip .rib, #progress-ribbon .rib").forEach(function (el) {
       const jump = el.getAttribute("data-jump");
       if (!jump) return;
+      el.hidden = !!(set && packStepSkipped(set, jump));
       const locked = set ? stageNavLocked(set, jump) : true;
       el.classList.toggle("locked", locked);
       el.classList.toggle("done", !!(held && held[jump]));
@@ -429,6 +432,7 @@
 
   function studentLocked(set, step) {
     if (locksBypassed()) return false;
+    if (packStepSkipped(set, step)) return false;
     if (teacherPathAllows(set, step)) return false;
     if (!set || !window.PathLock) return true;
     if (!tempUnlockAll() && allRoundActive(set) && (step === "intro" || step === "A")) return true;
@@ -1980,8 +1984,56 @@
   function speak(str) {
     const id = mediaFile(str);
     if (!id) return Promise.resolve();
+    if (packUsesDeviceSpeech()) return speakDevice(str);
     const v = playVoice();
     return playClip(packBase() + "/audio/" + v + "/" + id + ".mp3", 8000);
+  }
+
+  /* School test packs ship no audio files, so Dictation would be silent.
+     Only a pack with noPictures (English and Korean only) uses the device voice. */
+  function packUsesDeviceSpeech() {
+    const set = currentSet();
+    if (!set) return false;
+    if (!packFlagsOf(set).noPictures) return false;
+    return hasSpeech();
+  }
+
+  function cancelDeviceSpeech() {
+    try {
+      if (hasSpeech()) speechSynthesis.cancel();
+    } catch (e) { /* ignore */ }
+  }
+
+  function speakDevice(text) {
+    const line = String(text == null ? "" : text).trim();
+    if (!line || !hasSpeech()) return Promise.resolve();
+    cancelDeviceSpeech();
+    return new Promise(function (resolve) {
+      let done = false;
+      const fin = function () {
+        if (done) return;
+        done = true;
+        resolve();
+      };
+      try {
+        const u = new SpeechSynthesisUtterance(line);
+        const v = pickVoice();
+        if (v) {
+          u.voice = v;
+          u.lang = v.lang || "en-US";
+        } else {
+          u.lang = "en-US";
+        }
+        u.rate = 0.92;
+        u.pitch = 1;
+        u.onend = fin;
+        u.onerror = fin;
+        speechSynthesis.speak(u);
+        setTimeout(fin, 7000);
+      } catch (e) {
+        fin();
+      }
+    });
   }
 
   function speakWW(w) {
@@ -2413,14 +2465,81 @@
     return playWords(set).map(function (w) { return w.id; }).join(",");
   }
 
+  /** Flags that travel inside the pack JSON (noPictures, startAt, uiLang, kind). */
+  function packFlagsOf(set) {
+    if (!PackFlags) return { noPictures: false, startAt: "", uiLang: "", sentence: false };
+    return (set && set.packFlags) || PackFlags.empty();
+  }
+
+  function packStepSkipped(set, step) {
+    if (!PackFlags) return false;
+    return PackFlags.skips(packFlagsOf(set), step);
+  }
+
+  function packFirstStep(set) {
+    if (!PackFlags) return "intro";
+    return PackFlags.firstStep(packFlagsOf(set));
+  }
+
+  /** Every word already at 2 wins: a skipped step must not gate the next one. */
+  function skippedStepWins(set) {
+    const out = {};
+    playWords(set).forEach(function (w) { if (w && w.id != null) out[w.id] = 2; });
+    return out;
+  }
+
+  /** Apply the pack language rule and the path shape once a pack is open. */
+  function applyPackFlags(set) {
+    if (!set || !PackFlags) return;
+    const f = packFlagsOf(set);
+    const root = typeof document !== "undefined" ? document.documentElement : null;
+    if (f.uiLang) {
+      if (!state.localeBefore) state.localeBefore = state.locale || "en";
+      if (state.locale !== f.uiLang) {
+        state.locale = f.uiLang;
+        syncI18nFromState();
+        if (I18n && I18n.applyDom && typeof document !== "undefined") I18n.applyDom(document);
+      }
+      if (root) {
+        if (root.classList) root.classList.add("wm-lang-locked");
+        root.lang = f.uiLang;
+      }
+    } else {
+      if (root) {
+        if (root.classList) root.classList.remove("wm-lang-locked");
+        root.lang = "en";
+      }
+      if (state.localeBefore && state.locale !== state.localeBefore) {
+        state.locale = state.localeBefore;
+        state.localeBefore = "";
+        syncI18nFromState();
+        if (I18n && I18n.applyDom && typeof document !== "undefined") I18n.applyDom(document);
+      } else if (state.localeBefore) {
+        state.localeBefore = "";
+      }
+    }
+    if (f.sentence && window.PathLock && typeof window.PathLock.markGameDone === "function") {
+      try {
+        ensureMeetLock(set);
+        window.PathLock.markGameDone(set, "pack-flag");
+      } catch (e) { /* the round lock builds later; pathOpts.gamesDone covers it */ }
+    }
+    paintPathStageStrip(currentScreen);
+  }
+
   function pathOpts() {
     return {
       playWords: playWords,
       introDone: function (set) {
+        if (packStepSkipped(set, "intro")) return true;
         return introDone(set);
       },
       partDone: function (words, wins) { return Algo.partDone(words, wins); },
-      bucket: function (set, step) { return Algo.bucket(winsState(set), step); },
+      bucket: function (set, step) {
+        if (packStepSkipped(set, step)) return skippedStepWins(set);
+        return Algo.bucket(winsState(set), step);
+      },
+      gamesDone: function (set) { return packStepSkipped(set, "games"); },
       allRound: function (set) { return allRoundActive(set); },
     };
   }
@@ -2482,6 +2601,7 @@
 
   function tapmapDone(set) {
     if (!set) return true;
+    if (packStepSkipped(set, "intro")) return true;
     const key = batchKey(set);
     if (!key) return true;
     return set.tapmapKey === key;
@@ -2583,6 +2703,7 @@
           return {
             id: data.id || pid,
             title: data.title || pid,
+            flags: PackFlags ? PackFlags.read(data) : null,
             words: data.words.map(packWord).filter(function (w) { return w.en && w.ko; }),
           };
         }
@@ -2610,6 +2731,7 @@
         pictureExt: PackSrc.pictureExtFromSrc(src),
         sharedLetters: PackSrc.resolveSharedLettersBase(src, data) || PackSrc.defaultSharedLetters(src),
       };
+      const flags = PackFlags ? PackFlags.read(data) : null;
       const words = data.words.map(packWord).filter(function (w) { return w.en && w.ko; });
       if (!words.length) return false;
       const existing = Object.keys(state.sets)
@@ -2622,11 +2744,15 @@
         existing.words = words;
         existing.packId = pid;
         existing.externalPackSrc = src;
+        existing.packFlags = flags;
         activateSet(existing);
+        applyPackFlags(existing);
       } else {
         const set = makeSet(data.title || pid, words, pid);
         set.externalPackSrc = src;
+        set.packFlags = flags;
         activateSet(set);
+        applyPackFlags(set);
       }
       const lanes = document.querySelector(".index-lanes");
       if (lanes) lanes.hidden = true;
@@ -2649,14 +2775,18 @@
     if (existing) {
       existing.title = pack.title;
       existing.words = pack.words;
+      existing.packFlags = pack.flags || null;
       activateSet(existing);
+      applyPackFlags(existing);
       renderSetHome();
       showScreen("set");
       persist();
       return;
     }
     const set = makeSet(pack.title, pack.words, pid);
+    set.packFlags = pack.flags || null;
     activateSet(set);
+    applyPackFlags(set);
     renderSetHome();
     showScreen("set");
   }
@@ -3146,6 +3276,7 @@
 
   function startMeet() {
     const set = currentSet();
+    if (set && packStepSkipped(set, "intro")) return startLearnAt(packFirstStep(set));
     const review = !!(set && introDone(set));
     startTapmap(review ? { review: true } : null);
   }
@@ -4683,7 +4814,7 @@
         const item = { id: w.id, en: w.en, l1: l1 };
         if (file) {
           item.audio_id = mediaUrl(packBase() + "/audio/" + voice + "/" + file + ".mp3");
-          item.picture = mediaUrl(wordPic(w));
+          if (!packFlagsOf(set).noPictures) item.picture = mediaUrl(wordPic(w));
         }
         return item;
       }),
@@ -4924,7 +5055,14 @@
       setVoice(state.voice);
       if (externalPackSrc) {
         loadExternalPackFromSrc(externalPackSrc).then(function () {
+          const set = currentSet();
+          const start = set && packStepSkipped(set, "intro") ? packFirstStep(set) : "intro";
           renderHome();
+          if (set && start !== "intro") {
+            renderSetHome();
+            jumpTo(start);
+            return;
+          }
           showScreen("home");
         });
         return;
@@ -5450,6 +5588,8 @@
       ingestBookProgress: ingestBookProgress,
       wordPic: wordPic,
       speak: speak,
+      speakDevice: speakDevice,
+      packUsesDeviceSpeech: packUsesDeviceSpeech,
       speakWW: speakWW,
       shooterPack: shooterPack,
       memoryPack: memoryPack,
@@ -5467,6 +5607,16 @@
       tapPhase: function () { return tap.phase; },
       setRangeBannerText: setRangeBannerText,
       paintSetRangeBanner: paintSetRangeBanner,
+      packFlagsOf: packFlagsOf,
+      packStepSkipped: packStepSkipped,
+      packFirstStep: packFirstStep,
+      applyPackFlags: applyPackFlags,
+      loadExternalPackFromSrc: loadExternalPackFromSrc,
+      loadPackFile: loadPackFile,
+      openPack: openPack,
+      startLearnAt: startLearnAt,
+      startMeet: startMeet,
+      tapmapDone: tapmapDone,
     };
   }
   initPackSrcParam();

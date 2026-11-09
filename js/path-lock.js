@@ -135,6 +135,7 @@
       bucket: opts.bucket || defaultBucket,
       now: opts.now || function () { return Date.now(); },
       allRound: opts.allRound || function () { return false; },
+      gamesDone: opts.gamesDone || function () { return false; },
     };
   }
 
@@ -203,6 +204,9 @@
     var words = [];
     try { words = o.playWords(set) || []; } catch (e) { words = []; }
     var flags = { intro: false, A: false, B: false, C: false, games: gamesDone(set) };
+    if (!flags.games) {
+      try { if (o.gamesDone && o.gamesDone(set)) flags.games = true; } catch (eg) { /* ignore */ }
+    }
     if (!words.length) return flags;
     try { flags.intro = !!o.introDone(set); } catch (e1) { flags.intro = false; }
     try { flags.A = !!o.partDone(words, o.bucket(set, "A")); } catch (e2) { flags.A = false; }
