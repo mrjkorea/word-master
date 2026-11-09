@@ -66,6 +66,17 @@ if (!PackFlags.skips(skipOnly, "games")) fail("skipSteps match must skip games")
 if (PackFlags.skips(skipOnly, "B")) fail("skipSteps must not touch Dictation");
 if (PackFlags.langLocked(skipOnly)) fail("no language field must keep the picker");
 
+/* tts: a normal-flow pack that ships no mp3 files. */
+const ttsPack = PackFlags.read({ tts: true, uiLang: "ko", langs: ["en", "ko"] });
+if (!PackFlags.usesDeviceSpeech(ttsPack)) fail("tts pack must use the device voice");
+if (PackFlags.usesDeviceSpeech(PackFlags.read({ id: "nouns100", words: [] }))) fail("a plain pack must keep its mp3 files");
+if (!PackFlags.usesDeviceSpeech(PackFlags.read({ noPictures: true }))) fail("noPictures must still use the device voice");
+["intro", "A", "B", "C", "games", "test"].forEach(function (step) {
+  if (PackFlags.skips(ttsPack, step)) fail("tts must not skip " + step);
+});
+if (PackFlags.langLocked(ttsPack) !== true) fail("tts pack with langs must lock the picker");
+if (PackFlags.firstStep(ttsPack) !== "intro") fail("tts pack must start at Meet, like a normal pack");
+
 const plain = PackFlags.read({ id: "nouns100", words: [] });
 if (PackFlags.any(plain)) fail("a pack without flags must stay plain");
 ["intro", "A", "B", "C", "games", "test"].forEach(function (step) {
