@@ -1050,8 +1050,10 @@
     state.accountPin = "";
     if (!id) {
       state.displayName = "";
-      showSharedDoor();
-      showScreen("boot");
+      if (!publicPackOpen()) {
+        showSharedDoor();
+        showScreen("boot");
+      }
       return;
     }
     let memorySlim = null;
@@ -1118,10 +1120,16 @@
     return !!currentStudentId();
   }
 
-  /** Public news pack (js/public-pack.js): play with no sign-in, save nothing. */
-  function isPublicMode() {
+  /** News pack URL. True even after the student signs in. */
+  function publicPackOpen() {
     return !!window.WM_PUBLIC_PACK && !!externalPackSrc
       && !!(window.PackSrc && window.PackSrc.isPublicPackSrc && window.PackSrc.isPublicPackSrc(externalPackSrc));
+  }
+
+  /** News pack with nobody signed in. Play is open. Scores are not saved.
+   *  A signed-in student leaves this mode, so their scores save. */
+  function isPublicMode() {
+    return publicPackOpen() && !currentStudentId();
   }
 
   function canPlay() {
@@ -1994,6 +2002,7 @@
   function packUsesDeviceSpeech() {
     const set = currentSet();
     if (!set) return false;
+    if (Array.isArray(set.voices) && set.voices.length) return false;
     if (!PackFlags || !PackFlags.usesDeviceSpeech(packFlagsOf(set))) return false;
     return hasSpeech();
   }
@@ -2697,6 +2706,16 @@
     return words;
   }
 
+  function voiceList(data) {
+    if (!data || !Array.isArray(data.voices)) return null;
+    const out = [];
+    data.voices.forEach(function (name) {
+      const id = String(name || "").trim();
+      if (id && out.indexOf(id) < 0) out.push(id);
+    });
+    return out.length ? out : null;
+  }
+
   async function loadPackFile(pid) {
     try {
       const res = await fetch("packs/" + pid + ".json", { cache: "no-store" });
@@ -2708,6 +2727,7 @@
             title: data.title || pid,
             flags: PackFlags ? PackFlags.read(data) : null,
             words: data.words.map(packWord).filter(function (w) { return w.en && w.ko; }),
+            voices: voiceList(data),
           };
         }
       }
@@ -2735,6 +2755,7 @@
         sharedLetters: PackSrc.resolveSharedLettersBase(src, data) || PackSrc.defaultSharedLetters(src),
       };
       const flags = PackFlags ? PackFlags.read(data) : null;
+      const voices = voiceList(data);
       const words = data.words.map(packWord).filter(function (w) { return w.en && w.ko; });
       if (!words.length) return false;
       const existing = Object.keys(state.sets)
@@ -2748,12 +2769,14 @@
         existing.packId = pid;
         existing.externalPackSrc = src;
         existing.packFlags = flags;
+        existing.voices = voices;
         activateSet(existing);
         applyPackFlags(existing);
       } else {
         const set = makeSet(data.title || pid, words, pid);
         set.externalPackSrc = src;
         set.packFlags = flags;
+        set.voices = voices;
         activateSet(set);
         applyPackFlags(set);
       }
@@ -2779,6 +2802,7 @@
       existing.title = pack.title;
       existing.words = pack.words;
       existing.packFlags = pack.flags || null;
+      existing.voices = pack.voices || null;
       activateSet(existing);
       applyPackFlags(existing);
       renderSetHome();
@@ -2788,6 +2812,7 @@
     }
     const set = makeSet(pack.title, pack.words, pid);
     set.packFlags = pack.flags || null;
+    set.voices = pack.voices || null;
     activateSet(set);
     applyPackFlags(set);
     renderSetHome();
@@ -5088,6 +5113,11 @@
         window.MRJ_AUTH.signOut();
       }
       paintSaveWarn(false);
+      if (publicPackOpen()) {
+        paintStudentNameBtn();
+        showScreen("boot");
+        return;
+      }
       showSharedDoor();
       showScreen("boot");
     });

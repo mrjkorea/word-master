@@ -1,8 +1,8 @@
 #!/usr/bin/env node
 /**
  * Pack flags: noPictures / startAt / uiLang / kind from the pack JSON.
- * Jay's rule for the middle-school test packs: English and Korean only, no
- * pictures, start at Dictation. Sentence packs: no Match game.
+ * A word pack always starts at Meet the Words, then Learn. It cannot skip them.
+ * A sentence pack keeps the short path: Dictation first, no Match game.
  */
 "use strict";
 
@@ -44,24 +44,26 @@ if (!PackFlags.langLocked(full)) fail("langs en+ko must lock the picker");
 if (!PackFlags.langAllowed(full, "ko")) fail("ko must be allowed");
 if (PackFlags.langAllowed(full, "ja")) fail("ja must not be allowed");
 if (PackFlags.language(full) !== "ko") fail("language should be ko");
-["intro", "A", "games"].forEach(function (step) {
-  if (!PackFlags.skips(full, step)) fail("skipSteps/steps must skip " + step);
-});
+if (PackFlags.skips(full, "intro")) fail("a word pack must not skip Meet");
+if (PackFlags.skips(full, "A")) fail("a word pack must not skip Learn");
+if (!PackFlags.skips(full, "games")) fail("skipSteps match must still skip games");
 ["B", "C", "test"].forEach(function (step) {
   if (PackFlags.skips(full, step)) fail("jay field set must keep " + step);
 });
-if (PackFlags.firstStep(full) !== "B") fail("first step should be Dictation");
+if (PackFlags.firstStep(full) !== "intro") fail("a word pack starts at Meet");
 
-/* A steps list alone, with no startAt, still hides every other step. */
+/* A steps list on a word pack still cannot hide Meet or Learn. */
 const allowOnly = PackFlags.read({ steps: ["writing", "test"] });
-if (!PackFlags.skips(allowOnly, "intro")) fail("steps list must hide Meet");
+if (PackFlags.skips(allowOnly, "intro")) fail("a word pack steps list must not hide Meet");
+if (PackFlags.skips(allowOnly, "A")) fail("a word pack steps list must not hide Learn");
 if (!PackFlags.skips(allowOnly, "B")) fail("steps list must hide Dictation when it is not listed");
 if (PackFlags.skips(allowOnly, "C")) fail("steps list must keep Write");
-if (PackFlags.firstStep(allowOnly) !== "C") fail("first step should be the first listed step");
+if (PackFlags.firstStep(allowOnly) !== "intro") fail("a word pack starts at Meet");
 if (!PackFlags.skips(allowOnly, "games")) fail("steps list without games must hide games");
 
 const skipOnly = PackFlags.read({ skipSteps: ["meet", "match"] });
-if (!PackFlags.skips(skipOnly, "intro")) fail("skipSteps meet must skip Meet");
+if (PackFlags.skips(skipOnly, "intro")) fail("a word pack must not skip Meet");
+if (PackFlags.skips(skipOnly, "A")) fail("a word pack must not skip Learn");
 if (!PackFlags.skips(skipOnly, "games")) fail("skipSteps match must skip games");
 if (PackFlags.skips(skipOnly, "B")) fail("skipSteps must not touch Dictation");
 if (PackFlags.langLocked(skipOnly)) fail("no language field must keep the picker");
@@ -94,8 +96,9 @@ if (!PackFlags.skips(flagged, "games")) fail("sentence pack must skip games");
 if (PackFlags.firstStep(flagged) !== "B") fail("flagged pack starts at Dictation");
 
 const picturesOnly = PackFlags.read({ noPictures: true });
-if (!PackFlags.skips(picturesOnly, "intro")) fail("noPictures must skip the picture step");
+if (PackFlags.skips(picturesOnly, "intro")) fail("a word pack must keep Meet even with noPictures");
 if (PackFlags.skips(picturesOnly, "A")) fail("noPictures alone must not skip Learn");
+if (PackFlags.firstStep(picturesOnly) !== "intro") fail("a word pack with noPictures still starts at Meet");
 
 /* ---- integration: the app itself ---- */
 
@@ -120,6 +123,18 @@ const PACKS = {
   "https://mrjkorea.github.io/news-words/packs/news-test.json": {
     id: "news-test",
     title: "News words",
+    words: WORDS,
+  },
+  "https://mrjkorea.github.io/bekbal-unit-practice/packs/j1neung_u06_words01.json": {
+    id: "j1neung_u06_words01",
+    title: "중1능률 U06 · Words 01",
+    noPictures: true,
+    startAt: "dictation",
+    steps: ["dictation", "writing", "test"],
+    skipSteps: ["meet", "learn", "match"],
+    uiLang: "ko",
+    langs: ["en", "ko"],
+    voices: ["us_m", "us_f", "uk_m", "uk_f", "grandma", "leo", "grandpa", "robot"],
     words: WORDS,
   },
 };
@@ -202,6 +217,20 @@ const PLAIN_SRC = "https://mrjkorea.github.io/news-words/packs/news-test.json";
   });
   if (api.packFirstStep(plainSet) !== "intro") fail("plain pack no longer starts at Meet");
   if (api.getState().locale !== "en") fail("locale did not come back to en, it is " + api.getState().locale);
+
+  const WORD_SRC = "https://mrjkorea.github.io/bekbal-unit-practice/packs/j1neung_u06_words01.json";
+  const wordOk = await api.loadExternalPackFromSrc(WORD_SRC);
+  if (!wordOk) fail("word pack did not load");
+  const wordSet = api.currentSet();
+  if (api.packFlagsOf(wordSet).sentence) fail("word pack was treated as a sentence pack");
+  if (api.packStepSkipped(wordSet, "intro")) fail("word pack still skips Meet");
+  if (api.packStepSkipped(wordSet, "A")) fail("word pack still skips Learn");
+  if (api.packFirstStep(wordSet) !== "intro") fail("word pack does not start at Meet");
+  if (api.tapmapDone(wordSet)) fail("Meet is marked done before the student sees the pictures");
+  if (api.studentLocked(wordSet, "intro")) fail("Meet is locked on a word pack");
+  if (!api.studentLocked(wordSet, "B")) fail("spelling is open before Meet and Learn");
+  if (!wordSet.voices || wordSet.voices.length !== 8) fail("word pack did not keep the eight voices");
+  if (api.getState().locale !== "ko") fail("word pack lost Korean labels, locale is " + api.getState().locale);
 
   console.log("PACK_FLAGS_OK");
   process.exit(0);

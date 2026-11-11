@@ -7,7 +7,7 @@
   <meta name="mobile-web-app-capable" content="yes" />
   <meta name="theme-color" content="#f6f3ec" />
   <title>MRJ Word Master</title>
-  <link rel="stylesheet" href="css/app.css?v=20261110-pack-tts2" />
+  <link rel="stylesheet" href="css/app.css?v=20261111-word-voices" />
 </head>
 <body>
   <div id="phone" class="phone">
@@ -69,6 +69,7 @@
           <span class="tap-big" data-i18n="tap_start">Tap to start</span>
           <span class="tap-ko" data-i18n="tap_hint">Turns sound on</span>
         </button>
+        <button type="button" class="signout-link" id="wm-public-signin" data-wm-signin hidden>Sign in</button>
       </section>
 
       <section class="screen" id="screen-record" data-screen="record">
@@ -92,6 +93,7 @@
       <section class="screen" id="screen-home" data-screen="home">
         <p class="hello" id="hello-line"></p>
         <p class="progress-too-large-warn" id="progress-too-large-warn" hidden>Your saved work is very big. Please tell your teacher.</p>
+        <button type="button" class="signout-link" id="wm-public-signin-home" data-wm-signin hidden>Sign in</button>
         <button type="button" class="signout-link" id="btn-signout" hidden>Sign out</button>
         <div class="stats-card" id="stats-card">
           <p id="stats-line"></p>
@@ -547,6 +549,12 @@
       </section>
     </main>
 
+    <div id="wm-public-signin-panel" hidden>
+      <div class="wm-public-signin-card">
+        <button type="button" class="signout-link" id="wm-public-signin-close">Keep practicing</button>
+        <div id="wm-public-signin-slot"></div>
+      </div>
+    </div>
     <canvas id="confetti" class="confetti" hidden></canvas>
     <div class="flash" id="flash" hidden>
       <div class="mark" id="flash-mark">✓</div>
@@ -558,40 +566,41 @@
 
   <link rel="stylesheet" href="https://mrjkorea.github.io/mrj-signin/mrj-auth.css?v=20261030-cf-login-1.7.3">
   <link rel="stylesheet" href="preview-assets/mrj-theme.css?v=live4">
-  <link rel="stylesheet" href="preview-assets/wm-preview.css?v=20261110-pack-tts2">
+  <link rel="stylesheet" href="preview-assets/wm-preview.css?v=20261111-word-voices">
   <script src="preview-assets/preview-ui.js?v=live4" defer></script>
-  <script src="js/pack-src.js?v=20261016-public"></script>
-  <script src="js/public-pack.js?v=20261016-public"></script>
+  <script src="js/pack-src.js?v=20261111-word-voices"></script>
+  <script src="js/public-pack.js?v=20261111-word-voices"></script>
   <script>
-    /* News packs (public mode) skip the sign-in door. Everything else signs in as before. */
+    /* News packs skip the locking door. The account book still loads so Sign in can save scores. */
+    document.write('<script src="https://mrjkorea.github.io/mrj-signin/mrj-auth.js?v=20261030-cf-login-1.7.3"><\/script>');
     if (!window.WM_PUBLIC_PACK) {
-      document.write('<script src="https://mrjkorea.github.io/mrj-signin/mrj-auth.js?v=20261030-cf-login-1.7.3"><\/script>');
       document.write('<script src="https://mrjkorea.github.io/mrj-signin/mrj-auth-boot.js?v=20261030-cf-login-1.7.3" data-mrj-app="word-master"><\/script>');
     }
   </script>
   <script src="js/factory-algo.js?v=20261029-auth-teacher-chip-visible-dd5b"></script>
   <script src="js/meet-lock.js?v=20260923-meetlock"></script>
   <script src="js/start-slice.js?v=20261023-setrange"></script>
-  <script src="js/i18n.js?v=20261110-pack-tts2"></script>
+  <script src="js/i18n.js?v=20261111-word-voices"></script>
   <script src="mrj-scores.js?v=20261013-scoresrecv"></script>
   <script src="js/progress-config.js?v=20261006-pack"></script>
   <script src="js/progress-merge.js?v=20261029-auth-teacher-chip-visible-dd5b"></script>
   <script src="js/score-day-log.js?v=20261014-daily"></script>
-  <script src="js/wm-pack-save.js?v=20261110-pack-tts2"></script>
-  <script src="js/progress.js?v=20261110-pack-tts2"></script>
+  <script src="js/wm-pack-save.js?v=20261111-word-voices"></script>
+  <script src="js/progress.js?v=20261111-word-voices"></script>
   <script src="js/class-progress.js?v=20261102-teacher-start-here"></script>
   <script src="js/teacher-classroom.js?v=20261013-cloud"></script>
   <script src="js/class-progress-ui.js?v=20261014-daily"></script>
   <script src="js/score-progress-panel.js?v=20261014-daily"></script>
   <script src="js/mrj-teacher-unlock.js?v=20261029-auth-teacher-chip-visible-dd5b"></script>
-  <script>window.WM_BUILD_ID="20261110-pack-tts2";</script>
-  <script src="js/version-watch.js?v=20261110-pack-tts2"></script>
+  <script>window.WM_BUILD_ID="20261111-word-voices";</script>
+  <script src="js/version-watch.js?v=20261111-word-voices"></script>
   <script src="js/spell-stop.js?v=20260930-spellstop"></script>
   <script src="js/temp-unlock-all.js?v=20261102-teacher-start-here"></script>
   <script src="js/teacher-start-unlock.js?v=20261102-teacher-start-here"></script>
   <script src="js/teacher-start-panel.js?v=20261102-teacher-start-here"></script>
-  <script src="js/path-lock.js?v=20261110-pack-tts2"></script>
-  <script src="js/pack-flags.js?v=20261110-pack-tts2"></script>
-  <script src="js/app.js?v=20261110-pack-tts2"></script>
+  <script src="js/path-lock.js?v=20261111-word-voices"></script>
+  <script src="js/pack-flags.js?v=20261111-word-voices"></script>
+  <script src="js/app.js?v=20261111-word-voices"></script>
+  <script src="js/public-signin.js?v=20261111-word-voices"></script>
 </body>
 </html>

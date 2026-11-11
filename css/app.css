@@ -1509,3 +1509,23 @@ body.is-teacher .rib .teacher-start-here-btn {
 /* Pack flag uiLang: the pack fixes the interface language, so no picker. */
 .wm-lang-locked .lang-wrap,
 .wm-lang-locked .boot-lang { display: none !important; }
+
+/* News Sign in. The page stays usable. This panel is not the locking door. */
+#wm-public-signin-panel {
+  position: fixed;
+  inset: 0;
+  z-index: 40;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  background: rgba(36, 28, 22, 0.35);
+}
+#wm-public-signin-panel[hidden] { display: none !important; }
+.wm-public-signin-card {
+  width: 100%;
+  max-width: 26rem;
+  background: #fffaf3;
+  border-radius: 18px;
+  padding: 12px;
+}

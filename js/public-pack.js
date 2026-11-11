@@ -1,9 +1,11 @@
 /**
  * Public mode for Word Master.
  * ?packsrc=https://mrjkorea.github.io/news-words/packs/<file>.json opens with no
- * sign-in, no assignment and no saved progress: the page gets an in-memory
- * localStorage, so nothing is written to this device, and the sign-in door
- * (mrj-auth-boot.js) is not loaded. Load after pack-src.js, before everything else.
+ * sign-in wall. Play is allowed with no account. The sign-in door
+ * (mrj-auth-boot.js) is not loaded. A Sign in button can still open the
+ * account form. This page keeps the real localStorage so a signed-in student
+ * can save. Game frames may still call WM_useMemoryStorage. Load after
+ * pack-src.js, before everything else.
  */
 (function (root) {
   "use strict";
@@ -38,7 +40,6 @@
   root.WM_PUBLIC_PACK = pub;
   root.WM_useMemoryStorage = useMemoryStorage;
   if (pub) {
-    useMemoryStorage(root);
     try { root.document.documentElement.classList.add("wm-public"); } catch (e) {}
   }
 })(typeof window !== "undefined" ? window : globalThis);

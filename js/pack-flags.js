@@ -92,11 +92,14 @@
     return !!(flags.tts || flags.noPictures);
   }
 
-  /** True when the student path must not use this step for this pack. */
+  /** True when the student path must not use this step for this pack.
+   *  A word pack always keeps Meet the Words (intro) and Learn (A).
+   *  A sentence pack keeps the short path. */
   function skips(flags, step) {
     if (!flags) return false;
     var idx = ORDER.indexOf(step);
     if (idx < 0) return false;
+    if (!flags.sentence && (step === "intro" || step === "A")) return false;
     if (flags.skip && flags.skip.indexOf(step) >= 0) return true;
     if (flags.allow && flags.allow.length && flags.allow.indexOf(step) < 0) return true;
     if (flags.noPictures && step === "intro") return true;
@@ -109,15 +112,16 @@
     return false;
   }
 
-  /** First step the student sees. */
+  /** First step the student sees. A word pack always starts at Meet the Words. */
   function firstStep(flags) {
-    if (flags && flags.startAt) return flags.startAt;
-    if (flags && flags.allow && flags.allow.length) {
+    if (!flags || !flags.sentence) return "intro";
+    if (flags.startAt) return flags.startAt;
+    if (flags.allow && flags.allow.length) {
       for (var i = 0; i < ORDER.length; i++) {
         if (flags.allow.indexOf(ORDER[i]) >= 0) return ORDER[i];
       }
     }
-    if (flags && flags.noPictures) return "A";
+    if (flags.noPictures) return "A";
     return "intro";
   }
 
