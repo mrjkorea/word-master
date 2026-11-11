@@ -6,7 +6,7 @@ const { readBuild, cacheKey, srcAt } = require("./build_id.js");
 const path = require("path");
 
 const BUILD = readBuild();
-const MRJ_SCORES_CACHE = "20261013-scoresrecv";
+const MRJ_SCORES_CACHE = "20261112-canonical";
 const TEST_STUDENT = "zz_test_mrjmetrics";
 
 function fail(msg) {
