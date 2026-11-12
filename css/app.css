@@ -951,8 +951,7 @@ button.seat.seat-all-choice {
   padding: 3px 6px;
   text-align: center;
 }
-.tap-tile.found { border-color: var(--ok); }
-.tap-tile.on { border-color: var(--gold); box-shadow: 0 0 0 3px rgba(255,214,10,.45); }
+.tap-tile.found { border-color: var(--ok); }.tap-tile.on { border-color: var(--gold); box-shadow: 0 0 0 3px rgba(255,214,10,.45); }
 .tap-tile.wrong { border-color: var(--bad); }
 
 .meet-card {
@@ -1193,6 +1192,76 @@ body.kb-desk .az-pad {
   font-size: 17px;
 }
 .az-fn.ok { background: var(--ok); color: #003d16; }
+
+/* Jay 2026-11-12: a space key, because an expression needs its space typed. */
+.az-fn.space {
+  grid-column: 1 / -1;
+  margin-top: 8px;
+  min-height: 40px;
+  font-size: 15px;
+  background: #fff;
+  border: 1px solid var(--line);
+}
+
+/* Jay 2026-11-12: 1 / 5 / 10 plays in Dictation. */
+.repeat-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 4px 0 6px;
+}
+.repeat-row[hidden] { display: none; }
+.repeat-label {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.repeat-btn {
+  min-width: 44px;
+  min-height: 34px;
+  border-radius: 10px;
+  background: #f0f0f4;
+  color: var(--ink);
+  font-weight: 800;
+  font-size: 15px;
+}
+.repeat-btn.on { background: var(--navy); color: #fff; }
+
+/* Jay 2026-11-12: the set's words, under the pictures in Meet the Words. */
+.meet-list {
+  flex: 0 0 auto;
+  max-height: 34vh;
+  overflow: auto;
+  margin-top: 8px;
+  padding: 8px 10px;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  text-align: left;
+}
+.meet-list[hidden] { display: none; }
+.meet-list-head {
+  margin: 0 0 6px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.meet-list-ul { margin: 0; padding: 0; list-style: none; }
+.meet-list-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.2fr);
+  gap: 10px;
+  padding: 4px 0;
+  border-bottom: 1px solid var(--line);
+  font-size: 15px;
+}
+.meet-list-row:last-child { border-bottom: 0; }
+.meet-list-en { font-weight: 700; }
+.meet-list-mean { color: var(--muted); }
 
 .game-slots { display: grid; gap: 10px; overflow: auto; flex: 1; min-height: 0; }
 .slot {

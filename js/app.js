@@ -853,6 +853,7 @@
       studySize: 10,
       locale: "en",
       localeAt: 0,
+      dictRepeat: 1,
       currentSetId: null,
       sets: {},
       scoreRows: [],
@@ -866,6 +867,8 @@
     if (!parsed.accountName) parsed.accountName = "";
     if (!parsed.accountPin) parsed.accountPin = "";
     if (!parsed.testKind) parsed.testKind = "easy";
+    var dr = Number(parsed.dictRepeat);
+    parsed.dictRepeat = (dr === 5 || dr === 10) ? dr : 1;
     var ss = Number(parsed.studySize);
     if (!(ss === 0 || ss === 5 || ss === 10 || ss === 15 || ss === 20)) parsed.studySize = 10;
     if (!parsed.voice || parsed.voice === "man") parsed.voice = "us_m";
@@ -1615,9 +1618,27 @@
   }
 
   function norm(s) {
+    /* A two-word expression needs its space typed (Jay 2026-11-12).
+       Apostrophes and hyphens are still forgiving: o'clock = oclock. */
     return String(s || "")
       .toLowerCase()
-      .replace(/[^a-z]/g, "");
+      .replace(/[\u2019']/g, "")
+      .replace(/[^a-z\s]/g, "")
+      .replace(/\s+/g, " ")
+      .trim();
+  }
+
+  /* Capitals to build or spell, with a space kept as a space. */
+  function buildTarget(en) {
+    return String(en || "")
+      .replace(/[^a-zA-Z\s]/g, "")
+      .replace(/\s+/g, " ")
+      .trim()
+      .toUpperCase();
+  }
+
+  function shownTile(ch) {
+    return ch === " " ? "\u2423" : ch;
   }
 
   function setRangeBannerText(set) {
@@ -3293,7 +3314,7 @@
   }
 
   function scramble(en) {
-    const chars = String(en || "").replace(/[^a-zA-Z]/g, "").toUpperCase().split("");
+    const chars = buildTarget(en).split("");
     let pool = chars.map(function (ch, i) { return { id: i, ch: ch }; });
     for (let n = 0; n < 12; n++) {
       pool = shuffle(pool);
@@ -3465,7 +3486,37 @@
       btn.addEventListener("click", function () { onTapTile(w, btn); });
       grid.appendChild(btn);
     });
+    renderMeetList(tap.words);
     showScreen("intro");
+  }
+
+  /* Jay 2026-11-12: under the pictures, the words of this set with their meaning
+     in the language the student chose, so they can look them over first. */
+  function renderMeetList(words) {
+    const box = $("#meet-list");
+    const ul = $("#meet-list-ul");
+    const head = $("#meet-list-head");
+    if (!box || !ul) return;
+    if (!words || !words.length) {
+      box.hidden = true;
+      return;
+    }
+    if (head) head.textContent = t("meet_list_head");
+    ul.innerHTML = "";
+    words.forEach(function (w) {
+      const li = document.createElement("li");
+      li.className = "meet-list-row";
+      const en = document.createElement("b");
+      en.className = "meet-list-en";
+      en.textContent = w.en;
+      const mean = document.createElement("span");
+      mean.className = "meet-list-mean";
+      mean.textContent = meaning(w);
+      li.appendChild(en);
+      li.appendChild(mean);
+      ul.appendChild(li);
+    });
+    box.hidden = false;
   }
 
   function pulseTile(el, cls) {
@@ -3620,7 +3671,7 @@
       const b = document.createElement("button");
       b.type = "button";
       b.className = "tile";
-      b.textContent = tile.ch;
+      b.textContent = shownTile(tile.ch);
       b.addEventListener("click", function () {
         meetBuilt.splice(idx, 1);
         meetPool.push(tile);
@@ -3632,12 +3683,12 @@
       const b = document.createElement("button");
       b.type = "button";
       b.className = "tile";
-      b.textContent = tile.ch;
+      b.textContent = shownTile(tile.ch);
       b.addEventListener("click", function () {
         meetPool.splice(idx, 1);
         meetBuilt.push(tile);
         const got = meetBuilt.map(function (x) { return x.ch; }).join("");
-        const want = String(w.en).replace(/[^a-zA-Z]/g, "").toUpperCase();
+        const want = buildTarget(w.en);
         if (got.length === want.length) {
           const ok = got === want;
           flashMark(ok).then(function () {
@@ -3754,6 +3805,12 @@
   }
 
   function onAz(ch) {
+    if (ch === " ") {
+      const typedNow = currentScreen === "learn" ? learn.typed
+        : currentScreen === "test" ? quiz.typed
+        : currentScreen === "intro" ? introTyped : "";
+      if (!typedNow || typedNow.charAt(typedNow.length - 1) === " ") return;
+    }
     if (currentScreen === "intro") {
       const set = currentSet();
       if (!introCurId && set && playWords(set)[0]) introCurId = playWords(set)[0].id;
@@ -3954,7 +4011,7 @@
         cap.hidden = true;
         cap.textContent = "";
       }
-      if (doSpeak) speak(learn.cur.en);
+      if (doSpeak) speakRepeat(learn.cur.en, dictRepeat());
     } else {
       en.hidden = true;
       ko.hidden = false;
@@ -3965,6 +4022,21 @@
       choices.innerHTML = "";
     }
     learn.startedAt = Date.now();
+    renderRepeatRow();
+  }
+
+  function renderRepeatRow() {
+    const row = $("#repeat-row");
+    if (!row) return;
+    const dictation = learn.mode === "B";
+    row.hidden = !dictation;
+    if (!dictation) return;
+    const n = dictRepeat();
+    $$("#repeat-row .repeat-btn").forEach(function (b) {
+      const on = Number(b.getAttribute("data-repeat")) === n;
+      b.classList.toggle("on", on);
+      b.setAttribute("aria-pressed", on ? "true" : "false");
+    });
   }
 
   function onLearnChoice(word, btn) {
@@ -4004,6 +4076,20 @@
     }
     const ok = norm(learn.typed) === norm(learn.cur.en);
     gradeLearn(ok, learn.typed);
+  }
+
+  function dictRepeat() {
+    const n = Number(state.dictRepeat);
+    return (n === 5 || n === 10) ? n : 1;
+  }
+
+  /* Jay 2026-11-12: Dictation can play the word 1, 5 or 10 times in a row. */
+  async function speakRepeat(word, times) {
+    const n = Math.max(1, Math.min(10, Number(times) || 1));
+    for (let i = 0; i < n; i++) {
+      await speak(word);
+      if (i < n - 1) await wait(420);
+    }
   }
 
   async function gradeLearn(ok, response) {
@@ -4141,7 +4227,7 @@
   async function teachSpelling(word) {
     learn.missTeach = true;
     const typed = String(learn.typed || "").toUpperCase();
-    const want = String(word).replace(/[^a-zA-Z]/g, "").toUpperCase();
+    const want = buildTarget(word);
     const en = $("#prompt-en");
     en.hidden = false;
     en.textContent = word;
@@ -4150,7 +4236,8 @@
     rail.innerHTML = "";
     want.split("").forEach(function (ch, i) {
       const s = document.createElement("span");
-      s.textContent = ch;
+      s.textContent = shownTile(ch);
+      if (ch === " ") s.className = "space";
       if (typed[i] !== ch) s.classList.add("bad");
       rail.appendChild(s);
     });
@@ -5294,8 +5381,23 @@
       startHard(true);
     });
     $("#btn-speak").addEventListener("click", function () {
-      if (learn.cur) speak(learn.cur.en);
+      if (!learn.cur) return;
+      if (learn.mode === "B") speakRepeat(learn.cur.en, dictRepeat());
+      else speak(learn.cur.en);
     });
+    $$("#repeat-row .repeat-btn").forEach(function (b) {
+      b.addEventListener("click", function () {
+        const n = Number(b.getAttribute("data-repeat"));
+        state.dictRepeat = (n === 5 || n === 10) ? n : 1;
+        persist();
+        renderRepeatRow();
+        if (learn.mode === "B" && learn.cur) speakRepeat(learn.cur.en, dictRepeat());
+      });
+    });
+    const spaceBtn = $("#btn-space");
+    if (spaceBtn) spaceBtn.addEventListener("click", function () { onAz(" "); });
+    const testSpaceBtn = $("#btn-test-space");
+    if (testSpaceBtn) testSpaceBtn.addEventListener("click", function () { onAz(" "); });
     $("#btn-del").addEventListener("click", delAz);
     $("#btn-check").addEventListener("click", onLearnCheck);
     $("#btn-skip-word").addEventListener("click", skipWord);
@@ -5370,6 +5472,11 @@
         if (letter) {
           e.preventDefault();
           onAz(letter);
+          return;
+        }
+        if (e.code === "Space" || e.key === " ") {
+          e.preventDefault();
+          onAz(" ");
           return;
         }
         if (e.code === "Backspace") {
@@ -5650,6 +5757,12 @@
       startLearnAt: startLearnAt,
       startMeet: startMeet,
       tapmapDone: tapmapDone,
+      normText: norm,
+      buildTargetText: buildTarget,
+      shownTileText: shownTile,
+      dictRepeat: dictRepeat,
+      renderRepeatRow: renderRepeatRow,
+      renderMeetList: renderMeetList,
     };
   }
   initPackSrcParam();
