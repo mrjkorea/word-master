@@ -58,24 +58,44 @@ if (api.dictRepeat() !== 1) fail("a stray count must fall back to 1");
 api.getState().dictRepeat = 5;
 api.renderRepeatRow();
 
-/* 1. the list under the pictures */
+/* 1. the list opens from one button and never squeezes the pictures */
+const html = require("fs").readFileSync(require("path").join(__dirname, "..", "index.html"), "utf8");
+if (html.indexOf('id="meet-list" hidden') < 0) fail("the sheet must ship hidden in index.html");
+if (html.indexOf('id="btn-meet-words"') < 0) fail("the Words button must be in index.html");
+global.document.querySelector("#meet-list").hidden = true;   // as the page ships it
 api.renderMeetList([
   { id: "a", en: "get up", ko: "일어나다" },
   { id: "b", en: "contest", ko: "대회" },
 ]);
 const box = global.document.querySelector("#meet-list");
-if (!box) fail("meet-list element missing");
-if (box.hidden) fail("meet-list must show when a set has words");
+if (!box) fail("meet-sheet element missing");
+if (!box.hidden) fail("the sheet must start closed so the pictures keep the screen");
+const btn = global.document.querySelector("#btn-meet-words");
+if (!btn) fail("Words button missing");
+if (btn.hidden) fail("Words button must show when the set has words");
+if (btn.getAttribute("data-count") !== "2") fail("button must carry the count: " + btn.getAttribute("data-count"));
 const ul = global.document.querySelector("#meet-list-ul");
 if (!ul) fail("meet-list-ul missing");
 if (ul.children.length !== 2) fail("one row per word, got " + ul.children.length);
 const row0 = ul.children[0];
-if (!row0.children.length) fail("row has no cells");
 if (String(row0.children[0].textContent) !== "get up") fail("English cell: " + row0.children[0].textContent);
 if (!String(row0.children[1].textContent)) fail("meaning cell empty");
 
-/* an empty set hides the box again */
+api.openMeetList();
+if (box.hidden) fail("the button must open the sheet");
+api.closeMeetList();
+if (!box.hidden) fail("Close must hide the sheet again");
+
+/* an empty set hides button and sheet */
 api.renderMeetList([]);
-if (!box.hidden) fail("meet-list must hide with no words");
+if (!box.hidden) fail("sheet must hide with no words");
+if (!btn.hidden) fail("Words button must hide with no words");
+
+/* a hundred words still get one row each, in the sheet that scrolls */
+const hundred = [];
+for (let i = 1; i <= 100; i++) hundred.push({ id: "w" + i, en: "word " + i, ko: "뜻 " + i });
+api.renderMeetList(hundred);
+if (ul.children.length !== 100) fail("100 words must list 100 rows, got " + ul.children.length);
+if (btn.getAttribute("data-count") !== "100") fail("button must say 100: " + btn.getAttribute("data-count"));
 
 console.log("PASS three changes: list under pictures, repeat 1/5/10, space needed");

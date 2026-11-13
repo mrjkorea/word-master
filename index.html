@@ -7,7 +7,7 @@
   <meta name="mobile-web-app-capable" content="yes" />
   <meta name="theme-color" content="#f6f3ec" />
   <title>MRJ Word Master</title>
-  <link rel="stylesheet" href="css/app.css?v=20261112-three-changes" />
+  <link rel="stylesheet" href="css/app.css?v=20261113-big-pictures" />
 </head>
 <body>
   <div id="phone" class="phone">
@@ -382,9 +382,15 @@
             <p class="prompt-en" id="tap-word" hidden></p>
           </div>
           <div class="tap-grid" id="tap-grid"></div>
-          <div class="meet-list" id="meet-list" hidden>
+          <button type="button" class="meet-words-btn" id="btn-meet-words" hidden>Words</button>
+        </div>
+        <div class="meet-sheet" id="meet-list" hidden>
+          <div class="meet-sheet-head">
             <p class="meet-list-head" id="meet-list-head">All words in this set</p>
-            <ul class="meet-list-ul" id="meet-list-ul"></ul>
+          </div>
+          <ul class="meet-list-ul" id="meet-list-ul"></ul>
+          <div class="meet-sheet-foot">
+            <button type="button" class="meet-sheet-close" id="btn-meet-list-close" data-i18n="meet_list_close">Close</button>
           </div>
         </div>
         <article class="meet-card" id="meet-card" hidden>
@@ -592,7 +598,7 @@
   <script src="js/factory-algo.js?v=20261029-auth-teacher-chip-visible-dd5b"></script>
   <script src="js/meet-lock.js?v=20260923-meetlock"></script>
   <script src="js/start-slice.js?v=20261023-setrange"></script>
-  <script src="js/i18n.js?v=20261112-three-changes"></script>
+  <script src="js/i18n.js?v=20261113-big-pictures"></script>
   <script src="mrj-scores.js?v=20261112-canonical"></script>
   <script src="js/progress-config.js?v=20261006-pack"></script>
   <script src="js/progress-merge.js?v=20261029-auth-teacher-chip-visible-dd5b"></script>
@@ -604,7 +610,7 @@
   <script src="js/class-progress-ui.js?v=20261014-daily"></script>
   <script src="js/score-progress-panel.js?v=20261014-daily"></script>
   <script src="js/mrj-teacher-unlock.js?v=20261029-auth-teacher-chip-visible-dd5b"></script>
-  <script>window.WM_BUILD_ID="20261112-three-changes";</script>
+  <script>window.WM_BUILD_ID="20261113-big-pictures";</script>
   <script src="js/version-watch.js?v=20261111-word-voices"></script>
   <script src="js/spell-stop.js?v=20260930-spellstop"></script>
   <script src="js/temp-unlock-all.js?v=20261102-teacher-start-here"></script>
@@ -612,7 +618,7 @@
   <script src="js/teacher-start-panel.js?v=20261102-teacher-start-here"></script>
   <script src="js/path-lock.js?v=20261111-word-voices"></script>
   <script src="js/pack-flags.js?v=20261111-word-voices"></script>
-  <script src="js/app.js?v=20261112-three-changes"></script>
+  <script src="js/app.js?v=20261113-big-pictures"></script>
   <script src="js/public-signin.js?v=20261111-word-voices"></script>
 </body>
 </html>

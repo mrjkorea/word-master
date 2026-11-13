@@ -3487,23 +3487,23 @@
       grid.appendChild(btn);
     });
     renderMeetList(tap.words);
+    closeMeetList();
     showScreen("intro");
   }
 
   /* Jay 2026-11-12: under the pictures, the words of this set with their meaning
      in the language the student chose, so they can look them over first. */
+  /* Jay 2026-11-12 (second pass): the list lives in a full-size sheet. The button
+     under the pictures opens it, so the pictures keep the whole screen. */
   function renderMeetList(words) {
-    const box = $("#meet-list");
     const ul = $("#meet-list-ul");
     const head = $("#meet-list-head");
-    if (!box || !ul) return;
-    if (!words || !words.length) {
-      box.hidden = true;
-      return;
-    }
+    const btn = $("#btn-meet-words");
+    if (!ul) return;
+    const list = Array.isArray(words) ? words : [];
     if (head) head.textContent = t("meet_list_head");
     ul.innerHTML = "";
-    words.forEach(function (w) {
+    list.forEach(function (w) {
       const li = document.createElement("li");
       li.className = "meet-list-row";
       const en = document.createElement("b");
@@ -3516,7 +3516,25 @@
       li.appendChild(mean);
       ul.appendChild(li);
     });
+    if (btn) {
+      btn.hidden = !list.length;
+      btn.setAttribute("data-count", String(list.length));
+      btn.textContent = t("meet_words_btn", { n: list.length });
+    }
+    if (!list.length) closeMeetList();
+  }
+
+  function openMeetList() {
+    const box = $("#meet-list");
+    if (!box) return;
+    const ul = $("#meet-list-ul");
+    if (!ul || !ul.children.length) return;
     box.hidden = false;
+  }
+
+  function closeMeetList() {
+    const box = $("#meet-list");
+    if (box) box.hidden = true;
   }
 
   function pulseTile(el, cls) {
@@ -3655,6 +3673,7 @@
   }
 
   function renderMeet() {
+    closeMeetList();
     const w = currentMeetWord();
     if (!w) return;
     const pic = $("#meet-pic");
@@ -5396,6 +5415,10 @@
     });
     const spaceBtn = $("#btn-space");
     if (spaceBtn) spaceBtn.addEventListener("click", function () { onAz(" "); });
+    const meetWordsBtn = $("#btn-meet-words");
+    if (meetWordsBtn) meetWordsBtn.addEventListener("click", openMeetList);
+    const meetListClose = $("#btn-meet-list-close");
+    if (meetListClose) meetListClose.addEventListener("click", closeMeetList);
     const testSpaceBtn = $("#btn-test-space");
     if (testSpaceBtn) testSpaceBtn.addEventListener("click", function () { onAz(" "); });
     $("#btn-del").addEventListener("click", delAz);
@@ -5466,6 +5489,15 @@
 
     document.addEventListener("keydown", function (e) {
       if (e.ctrlKey || e.metaKey || e.altKey) return;
+
+      if (e.key === "Escape") {
+        const sheet = $("#meet-list");
+        if (sheet && !sheet.hidden) {
+          e.preventDefault();
+          closeMeetList();
+          return;
+        }
+      }
 
       if (isTypingScreenActive() && !keydownInFormField()) {
         const letter = azLetterFromCode(e.code);
@@ -5763,6 +5795,8 @@
       dictRepeat: dictRepeat,
       renderRepeatRow: renderRepeatRow,
       renderMeetList: renderMeetList,
+      openMeetList: openMeetList,
+      closeMeetList: closeMeetList,
     };
   }
   initPackSrcParam();

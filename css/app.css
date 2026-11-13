@@ -889,6 +889,8 @@ button.seat.seat-all-choice {
   gap: 8px;
   flex: 1;
   min-height: 0;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
 }
 .tap-prompt {
   display: flex;
@@ -909,15 +911,27 @@ button.seat.seat-all-choice {
   flex: 1;
   min-height: 0;
   align-content: stretch;
+  /* Jay 2026-11-12: a picture keeps a size a student can see. With many words
+     the grid scrolls instead of shrinking every tile. */
+  grid-auto-rows: minmax(112px, 1fr);
 }
 .tap-grid[data-n="5"] { grid-template-columns: repeat(2, 1fr); }
 .tap-grid[data-n="10"] { grid-template-columns: repeat(2, 1fr); }
 .tap-grid[data-n="15"] { grid-template-columns: repeat(3, 1fr); }
-.tap-grid[data-n="20"] { grid-template-columns: repeat(4, 1fr); }
+.tap-grid[data-n="20"] { grid-template-columns: repeat(3, 1fr); }   /* phone: three wide pictures, not four narrow ones */
+/* many words: a fixed row keeps every picture big, and the grid scrolls */
+.tap-grid[data-n="15"],
+.tap-grid[data-n="20"] {
+  grid-auto-rows: 118px;
+  align-content: start;
+  flex: 0 0 auto;
+}
 @media (min-width: 420px) {
   .tap-grid[data-n="10"] { grid-template-columns: repeat(5, 1fr); }
   .tap-grid[data-n="15"] { grid-template-columns: repeat(5, 1fr); }
   .tap-grid[data-n="20"] { grid-template-columns: repeat(5, 1fr); }
+  .tap-grid[data-n="15"],
+  .tap-grid[data-n="20"] { grid-auto-rows: 128px; }
 }
 .tap-tile {
   position: relative;
@@ -1229,35 +1243,83 @@ body.kb-desk .az-pad {
 }
 .repeat-btn.on { background: var(--navy); color: #fff; }
 
-/* Jay 2026-11-12: the set's words, under the pictures in Meet the Words. */
-.meet-list {
+/* Jay 2026-11-12 (second pass): the list must not squeeze the pictures. It is
+   now a full-size sheet that opens from one small button and closes again. */
+.meet-sheet {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 15000;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 14px 16px calc(14px + env(safe-area-inset-bottom));
+  background: #fff;
+  overflow: hidden;
+}
+.meet-sheet[hidden] { display: none; }
+.meet-sheet-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
   flex: 0 0 auto;
-  max-height: 34vh;
-  overflow: auto;
-  margin-top: 8px;
-  padding: 8px 10px;
+}
+.meet-sheet-foot {
+  flex: 0 0 auto;
+  padding-top: 8px;
+  border-top: 1px solid var(--line);
+}
+.meet-sheet-close {
+  width: 100%;
+  min-height: 48px;
+  border-radius: 14px;
+  background: var(--navy);
+  color: #fff;
+  font-weight: 700;
+  font-size: 16px;
+}
+.meet-words-btn {
+  flex: 0 0 auto;
+  align-self: center;
+  min-height: 38px;
+  margin-top: 6px;
+  padding: 0 18px;
+  border-radius: 999px;
   background: #fff;
   border: 1px solid var(--line);
-  border-radius: 14px;
-  text-align: left;
+  color: var(--navy);
+  font-weight: 700;
+  font-size: 14px;
 }
-.meet-list[hidden] { display: none; }
+.meet-words-btn[hidden] { display: none; }
 .meet-list-head {
-  margin: 0 0 6px;
+  margin: 0;
   font-size: 12px;
   font-weight: 700;
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: var(--muted);
 }
-.meet-list-ul { margin: 0; padding: 0; list-style: none; }
+.meet-list-ul {
+  margin: 0;
+  padding: 0 2px 12px;
+  list-style: none;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  flex: 1;
+  min-height: 0;
+  text-align: left;
+}
 .meet-list-row {
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(0, 1.2fr);
   gap: 10px;
-  padding: 4px 0;
+  padding: 10px 0;
   border-bottom: 1px solid var(--line);
-  font-size: 15px;
+  font-size: 17px;
 }
 .meet-list-row:last-child { border-bottom: 0; }
 .meet-list-en { font-weight: 700; }
